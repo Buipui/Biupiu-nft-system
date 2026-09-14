@@ -1,44 +1,43 @@
-# Biupiu NFT System — Master Record Template
+# Biupiu NFT Master Record Template v0.2
 
 **Record ID:** BPU-NFT-YYYY-###  
-**Version:** 0.1  
-**Status:** Draft / Research / Prototype / Verified / Released  
+**Version:** 0.2  
+**Status:** Concept / Research / Prototype / Verified / Released / Archived  
 **Date Created:** YYYY-MM-DD  
-**Creator / Rights Holder:**  
+**Creator / Rights Holder:** Biupiu / __________________
 
 ## 1. Work Identity
 
 **Title:**  
 **Collection:**  
+**Record Type:** Artwork / Invention / Concept / NFT Release  
 **Medium:** Physical / Digital / Generative / Hybrid  
 **Edition:**  
 **Edition Size:**  
-**Physical Object ID (if applicable):**  
-**NFT Token ID (when minted):**  
+**Physical Object ID:**  
+**NFT Token ID:**  
 **Blockchain / Network:**  
 
-## 2. Concept
+## 2. Concept & Research
 
 **Short Description:**  
-
 **Concept Statement:**  
-
 **Ancient-Technology Reference:**  
-
 **Computational-Geometry Reference:**  
-
 **Biupiu Research Theme:**  
+**Research Questions:**  
 
 ## 3. Computational / Technical Record
 
 **Generative Method:**  
 **Geometry / Mathematical System:**  
 **Software / Tools:**  
-**Algorithm or Process Version:**  
+**Algorithm / Process Version:**  
 **Input Data / Parameters:**  
+**Source Code Reference:**  
 **Hash / Integrity Reference:**  
 
-## 4. Physical Artwork Record
+## 4. Physical Artwork & Provenance
 
 **Materials:**  
 **Dimensions:**  
@@ -47,16 +46,20 @@
 **Signature / Certificate Reference:**  
 **Condition:**  
 **Storage / Custody Record:**  
+**Physical Artwork Photos:**  
+**Art Book Reference:**  
 
-## 5. Provenance & IP
+## 5. IP / Invention Linkage
 
 **Original Creator:**  
 **Creation Date:**  
 **Prior Publication:**  
 **Prior Sale / Transfer:**  
-**Associated Invention Register ID:**  
+**Invention Register ID:**  
+**Related Artwork IDs:**  
 **Supporting Research References:**  
 **Rights / Licence:**  
+**IP Notes:**  
 
 ## 6. NFT Metadata
 
@@ -66,6 +69,8 @@
 **Image / Animation URI:**  
 **Metadata URI:**  
 **Attributes:**  
+**Metadata Version:**  
+**Metadata Hash:**  
 
 ## 7. Release / Crowdfunding
 
@@ -76,6 +81,7 @@
 **Royalty Policy:**  
 **Crowdfunding Purpose:**  
 **Funding Allocation:**  
+**Utility / Collector Benefits:**  
 
 ## 8. Verification Checklist
 
@@ -84,13 +90,16 @@
 - [ ] Provenance record created
 - [ ] Research references recorded
 - [ ] Computational process archived
+- [ ] Source code archived where applicable
 - [ ] Artwork hash recorded where applicable
 - [ ] Physical certificate prepared where applicable
 - [ ] NFT metadata reviewed
+- [ ] Rights / licence reviewed
 - [ ] Final release approval recorded
 
 ## 9. Change Log
 
 | Version | Date | Change | Author |
 |---|---|---|---|
-| 0.1 | YYYY-MM-DD | Initial record | Biupiu |
+| 0.1 | YYYY-MM-DD | Initial template | Biupiu |
+| 0.2 | 2026-09-14 | Expanded IP, provenance, technical and release fields | Biupiu |
