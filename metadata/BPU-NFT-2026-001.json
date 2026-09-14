@@ -1,29 +1,35 @@
 {
-  "name": "Biupiu Genesis Geometry Study 001",
-  "description": "Foundational Biupiu computational artwork exploring geometric order, repetition, symmetry, proportion and pattern formation, linked to the Ancient Geometry Genesis Collection.",
+  "name": "Genesis Geometry Study 001",
+  "description": "Foundational Biupiu computational-art study exploring geometric repetition, radial structure, symmetry, proportion and layered pattern formation.",
   "record_id": "BPU-NFT-2026-001",
   "artwork_id": "BPU-ART-001",
   "collection_id": "BPU-COL-001",
   "invention_reference": "BPU-IP-001",
+  "research_reference": "BPU-RES-001",
   "creator": "Biupiu",
-  "version": "0.1",
-  "status": "Draft / Pre-mint",
+  "version": "0.2",
+  "status": "Pre-release",
+  "minted": false,
   "attributes": [
     {"trait_type": "Research Track", "value": "Computational Geometry"},
     {"trait_type": "Art System", "value": "Generative / Algorithmic"},
-    {"trait_type": "Research Theme", "value": "Ancient Technology"},
+    {"trait_type": "Research Theme", "value": "Ancient Technology & Mathematical Pattern Systems"},
     {"trait_type": "Series", "value": "Genesis"},
     {"trait_type": "Release Status", "value": "Not Minted"}
   ],
   "media": {
     "image": null,
-    "animation": null
+    "animation": null,
+    "source_file": null
   },
   "provenance": {
     "source_artwork_record": "artworks/BPU-ART-001.md",
     "collection_record": "collections/BPU-COL-001.md",
     "ip_record": "INVENTION-REGISTER.md",
-    "research_status": "Pending attachment before release"
+    "research_record": "research/BPU-RES-001.md",
+    "source_file_hash": null,
+    "metadata_hash": null,
+    "research_status": "Foundation record created; source references pending"
   },
   "blockchain": {
     "network": null,
@@ -32,9 +38,19 @@
     "mint_status": "Not minted"
   },
   "release": {
+    "edition": null,
+    "collector_tier": null,
     "primary_sale_price": null,
     "royalty_policy": null,
-    "crowdfunding_purpose": "Reserved for future approved Biupiu creative/IP crowdfunding strategy",
+    "crowdfunding_purpose": null,
+    "funding_allocation": null,
     "release_approval": "Not approved"
+  },
+  "verification": {
+    "artwork_finalized": false,
+    "research_verified": false,
+    "provenance_complete": false,
+    "metadata_locked": false,
+    "release_approved": false
   }
 }
