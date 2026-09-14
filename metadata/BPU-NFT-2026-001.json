@@ -1,0 +1,40 @@
+{
+  "name": "Biupiu Genesis Geometry Study 001",
+  "description": "Foundational Biupiu computational artwork exploring geometric order, repetition, symmetry, proportion and pattern formation, linked to the Ancient Geometry Genesis Collection.",
+  "record_id": "BPU-NFT-2026-001",
+  "artwork_id": "BPU-ART-001",
+  "collection_id": "BPU-COL-001",
+  "invention_reference": "BPU-IP-001",
+  "creator": "Biupiu",
+  "version": "0.1",
+  "status": "Draft / Pre-mint",
+  "attributes": [
+    {"trait_type": "Research Track", "value": "Computational Geometry"},
+    {"trait_type": "Art System", "value": "Generative / Algorithmic"},
+    {"trait_type": "Research Theme", "value": "Ancient Technology"},
+    {"trait_type": "Series", "value": "Genesis"},
+    {"trait_type": "Release Status", "value": "Not Minted"}
+  ],
+  "media": {
+    "image": null,
+    "animation": null
+  },
+  "provenance": {
+    "source_artwork_record": "artworks/BPU-ART-001.md",
+    "collection_record": "collections/BPU-COL-001.md",
+    "ip_record": "INVENTION-REGISTER.md",
+    "research_status": "Pending attachment before release"
+  },
+  "blockchain": {
+    "network": null,
+    "contract_address": null,
+    "token_id": null,
+    "mint_status": "Not minted"
+  },
+  "release": {
+    "primary_sale_price": null,
+    "royalty_policy": null,
+    "crowdfunding_purpose": "Reserved for future approved Biupiu creative/IP crowdfunding strategy",
+    "release_approval": "Not approved"
+  }
+}
