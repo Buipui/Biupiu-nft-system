@@ -1,63 +1,58 @@
 # BPU-ART-001 — Genesis Geometry Study 001
 
-**Record Type:** Foundational computational artwork  
-**Status:** Concept / Development  
+**Record Status:** Concept / Pre-production  
 **Collection:** BPU-COL-001 — Ancient Geometry Genesis Collection  
-**Created:** 2026-09  
+**NFT Reservation:** BPU-NFT-2026-001  
+**Related IP:** BPU-IP-001  
+**Created:** 2026-09
 
-## Concept
+## Creative Direction
 
-A first-generation Biupiu computational artwork exploring geometric order, repetition, symmetry, proportion and pattern formation. The work is intended to become the reference artwork for testing the Biupiu provenance, invention-register and NFT metadata workflow.
+A foundational Biupiu computational-art study exploring geometric repetition, radial structure, symmetry, proportion and layered pattern formation. The visual system is intended to create a bridge between mathematical construction and historical engineering/pattern research.
 
-## Research Direction
+## Research Basis
 
 - Computational geometry
-- Generative / algorithmic art
+- Generative pattern systems
+- Mathematical symmetry and repetition
 - Ancient architectural and engineering pattern research
-- Mathematical pattern systems
-- Material and cultural reference studies
+
+No historical claim is made by this record until supporting research sources are formally documented.
 
 ## Technical Record
 
-**Generative Method:** To be documented during production.  
-**Geometry / Mathematical System:** To be documented.  
-**Software / Tools:** To be documented.  
-**Parameters:** To be archived with the final work.  
-**Source File Hash:** To be recorded after finalization.
+**Generation Method:** Parameterized computational geometry / generative design  
+**Primary Parameters:** symmetry, radial divisions, scale, repetition, line density, layer depth  
+**Software:** To be recorded with final production workflow  
+**Source File:** To be archived after final artwork generation  
+**Integrity Hash:** To be calculated from final source/output files
 
 ## Physical / Digital Record
 
-**Medium:** Digital / Hybrid — final determination pending.  
-**Edition:** Pending.  
-**Physical Object ID:** Pending if physical edition is produced.  
-**Certificate:** Pending.  
+**Medium:** Digital / optional physical edition  
+**Dimensions:** To be determined  
+**Edition:** To be determined  
+**Signature / Certificate:** Required for physical edition  
+**Provenance:** To be completed before release
 
-## Provenance & IP
+## Release Gate
 
-**Related Invention Record:** BPU-IP-001 — Computational Geometry.  
-**Supporting Research:** To be attached before release.  
-**Public Disclosure:** No public mint or commercial release authorized at this stage.
+This artwork remains **pre-release**. No NFT has been minted and no sale is represented by this record.
 
-## NFT Linkage
+Before release:
 
-**NFT ID:** BPU-NFT-2026-001 — reserved.  
-**Metadata Version:** Draft 0.1.  
-**Blockchain:** Not selected.  
-**Mint Status:** Not minted.
-
-## Verification Gate
-
-- [ ] Final artwork produced
-- [ ] Source/project files archived
+- [ ] Final artwork generated
+- [ ] Source/generative parameters archived
 - [ ] Research references attached
-- [ ] Invention record linked
 - [ ] Provenance completed
-- [ ] Hash recorded
-- [ ] Metadata finalized
-- [ ] Release approval obtained
+- [ ] Hashes calculated
+- [ ] Metadata locked
+- [ ] Physical edition decision completed
+- [ ] IP/public-disclosure review completed where appropriate
 
 ## Change Log
 
 | Version | Date | Change | Author |
 |---|---|---|---|
 | 0.1 | 2026-09 | Initial artwork record | Biupiu |
+| 0.2 | 2026-09 | Expanded creative, technical and release controls | Biupiu |
