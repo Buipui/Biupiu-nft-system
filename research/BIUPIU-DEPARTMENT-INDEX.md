@@ -1,12 +1,12 @@
 # BIUPIU MASTER DEPARTMENT INDEX
 
-**Version:** 1.0  
+**Version:** 2.0  
 **Date:** 15 September 2026  
 **Status:** Active — integrated Biupiu R&D / computational-art / IP architecture
 
 ## Purpose
 
-This is the master departmental map for Biupiu. It consolidates the biotechnology, regenerative agriculture, industrial hemp, advanced materials, energy, mobility, photonics, computation, automation, biomedical, geospatial/ancient-technology, IP and digital-art streams already established across the research portfolio.
+This is the master departmental map for Biupiu. It consolidates biotechnology, regenerative agriculture, industrial hemp, advanced materials, energy, mobility, photonics, computation, automation, biomedical, geospatial/ancient-technology, anthropology/human-material systems, IP and digital-art streams.
 
 The repository remains a personal R&D/IP and computational-art environment. The immediate commercial DTIC/InvestSA library remains a separate operating/funding layer unless a stream is explicitly transferred.
 
@@ -56,13 +56,21 @@ The repository remains a personal R&D/IP and computational-art environment. The 
 | NFT-ART | NFT / Generative Art | research-derived artwork, collections, generation pipelines |
 | NFT-PROV | Digital Provenance | source IDs, algorithms, parameters, hashes, metadata and blockchain provenance |
 
+## New source-routing layer
+
+AnthroSource is now a permanent evidence layer for AAT/AAT-H and related archaeology, craft, materiality, technology-transmission and cultural-ecology research. See `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md`.
+
+Emerald Insight remains the complementary systems/implementation layer for water, agriculture, sustainability, infrastructure, engineering management and optimisation. See `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`.
+
+GitHub/BIUPIU CODEX is the reproducibility and computational implementation layer. Every computationally testable claim should link to a CODEX queue/model and eventually a versioned commit.
+
 ## Cross-disciplinary strategic layers
 
 ### CLEAN-CIRCULAR
-Circular bioeconomy and clean technology is a cross-disciplinary layer rather than a standalone silo. It connects HEMP, BIOCARBON, BIOCHEM, AGRI, WATER, ENERGY, MATERIALS, ADV-MFG and TEXTILES for resource recovery, waste minimisation and localisation.
+Connects HEMP, BIOCARBON, BIOCHEM, AGRI, WATER, ENERGY, MATERIALS, ADV-MFG and TEXTILES for resource recovery, waste minimisation and localisation.
 
 ### BIUPIU-MANUFACTURING
-Manufacturing connects ADV-MFG, ROBOTICS, AI, COMPUTE, GEOMETRY, MATERIALS, COMPOSITES, TEXTILES, COAT, ENERGY and DIGITAL-TWIN.
+Connects ADV-MFG, ROBOTICS, AI, COMPUTE, GEOMETRY, MATERIALS, COMPOSITES, TEXTILES, COAT, ENERGY and DIGITAL-TWIN.
 
 ### BIUPIU-RESEARCH-TO-PRODUCT
 `research → computational model → validated experiment → prototype → manufacturing process → IP review → product → market`
@@ -70,13 +78,11 @@ Manufacturing connects ADV-MFG, ROBOTICS, AI, COMPUTE, GEOMETRY, MATERIALS, COMP
 ### BIUPIU-RESEARCH-TO-NFT
 `validated/original research output → original computational artwork → provenance record → collection → crowdfunding / digital asset`
 
-Speculative or unverified historical claims must remain clearly labelled in NFT metadata and cannot be presented as established facts.
-
 ## Department integration map
 
 `BIO/BIO-GEN → AGRI → HEMP → BIOCARBON/BIOCHEM → MATERIALS/COMPOSITES/TEXTILES/COAT`
 
-`AGRI ↔ WATER ↔ GEOARCH ↔ LAND-GIS ↔ ALA/AAT`
+`AGRI ↔ WATER ↔ GEOARCH ↔ LAND-GIS ↔ ALA/AAT/AAT-H`
 
 `HEMP ↔ ELECTROMAG ↔ BIOCARBON ↔ ENERGY ↔ MATERIALS`
 
@@ -88,9 +94,21 @@ Speculative or unverified historical claims must remain clearly labelled in NFT 
 
 `BIOMED ↔ BIO ↔ MATERIALS ↔ PHOTONICS ↔ AI ↔ ADV-MFG`
 
-`AAT/AAT-H ↔ GEOARCH/LAND-GIS/ALA/PALAEO-COAST ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
+`AAT/AAT-H ↔ ANTHROSOURCE/JSTOR/PRIMARY ↔ GEOARCH/LAND-GIS/ALA/PALAEO-COAST ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
 
 `IP ↔ every department`
+
+## Evidence and status controls
+
+- **Established** — directly documented or demonstrated.
+- **Supported Research** — strong independent support.
+- **Plausible Model** — technically coherent but incomplete.
+- **Unresolved** — evidence insufficient to decide.
+- **Speculative** — hypothesis requiring testing.
+- **Mythological-Cultural** — tradition or cultural narrative without a corresponding established physical claim.
+- **Inspirational** — useful for research/art generation but not factual evidence.
+
+For speculative source material, use the controlled `SPEC` workflow and `CODEX-SPEC-EXECUTION.md`. Repetition across videos or derivative sources is not independent corroboration.
 
 ## Core department outputs
 
@@ -106,42 +124,6 @@ Each department should maintain, where applicable:
 8. Commercialisation pathway.
 9. Original artwork/IP pathway where relevant.
 
-## Evidence and status controls
+## Status
 
-Use the repository evidence system:
-
-- **Established** — directly documented or demonstrated.
-- **Supported Research** — strong independent support.
-- **Plausible Model** — technically coherent but incomplete.
-- **Unresolved** — evidence insufficient to decide.
-- **Speculative** — hypothesis requiring testing.
-- **Mythological-Cultural** — tradition or cultural narrative without a corresponding established physical claim.
-- **Inspirational** — useful for research/art generation but not factual evidence.
-
-For speculative source material, use the controlled `SPEC` workflow and `CODEX-SPEC-EXECUTION.md`. Repetition across videos or derivative sources is not independent corroboration.
-
-## Commercial alignment layer
-
-The departmental structure is intentionally compatible with the sectors currently presented by InvestSA/the dtic, including agribusiness, clothing/textiles/leather/footwear, digital economy/ICT, healthcare/life sciences, clean-technology manufacturing, automotive/components and transport/industrial sectors. InvestSA identifies itself as part of the Department of Trade, Industry and Competition. 
-
-InvestSA also highlights clean-energy manufacturing, advanced manufacturing and digitalisation opportunities, while its Western Cape material identifies Atlantis SEZ for green technologies and Freeport Saldanha IDZ for marine/engineering-related opportunities. These are alignment references, not a claim that every Biupiu department is currently commercially active or funded. 
-
-Official references:
-- InvestSA Key Sectors: https://www.investsa.gov.za/key-sectors/
-- InvestSA Agribusiness: https://www.investsa.gov.za/key-sectors/agribusiness/
-- InvestSA Clothing/Textiles/Footwear/Leather: https://www.investsa.gov.za/key-sectors/clothing-textiles-footwear-and-leather/
-- InvestSA Healthcare & Life Sciences: https://www.investsa.gov.za/key-sectors/healthcare-life-sciences/
-- InvestSA Digital Economy & ICT: https://www.investsa.gov.za/key-sectors/digital-economy-ict/
-- InvestSA Clean Technology Component Manufacturing: https://www.investsa.gov.za/key-sectors/clean-technology-component-manufacturing/
-- InvestSA About: https://www.investsa.gov.za/about-investsa/
-- InvestSA Western Cape / provincial overview: https://www.investsa.gov.za/invest-in-provinces/
-
-## Repository boundary
-The master department architecture covers the full Biupiu R&D and IP portfolio, while the business/funding library may activate only selected departments at any given stage. The current commercial library should therefore be treated as a deployment subset of this larger research architecture rather than the whole company.
-
-## Next implementation state
-- `INDEX.md` links to this master department architecture.
-- `README.md` points researchers to the department map before individual technical tracks.
-- Existing research files retain their specialist IDs and are cross-linked to the department codes.
-- CODEX remains the computational backbone across departments.
-- IP is a transversal control across all departments.
+**Master department architecture upgraded to v2.0.** AnthroSource, Emerald and GitHub/CODEX are now explicitly integrated into department routing and cross-linking. The commercial/funding library remains a deployment subset of this broader R&D architecture.
