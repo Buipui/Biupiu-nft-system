@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 0.6  
+**Version:** 0.7  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -21,7 +21,7 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `PHO` — Wits photonics, FSO, LiFi, OAM, structured/topological light, turbulence and optical computing.
 - `TORUS` — toroidal/electromagnetic geometry, resonant structures and axial-flux machines.
 - `LES` — light/energy storage, quantum-dot solar cells and crystal/material research.
-- `MM` — **official dedicated metamaterials branch**, including EM/optical/acoustic/mechanical metamaterials, simulation and prior art.
+- `MM` — official dedicated metamaterials branch, including EM/optical/acoustic/mechanical metamaterials, simulation and prior art.
 - `MM-NASA` — NASA/public technical literature cross-reference for metamaterials and related geometry.
 - `STEALTH-GEO` — public/historical SR-71 and stealth/low-observable geometry research; no restricted material.
 - `IP-PA` — patents/prior-art registry covering turbines, hydro, aerospace, automotive, marine, geometry and materials.
@@ -53,6 +53,92 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `BIT` — BitChute/video prototype intelligence for real-world engineering discovery.
 - `SPEC` — Sepehr, Atlantean Gardens, Divergent Libertalia and Vibes of Cosmos hypothesis research.
 - `NFT-IP` — NFT, provenance, artwork and invention IP.
+- `NFT-CF` — **Founding NFT crowdfunding programme** for establishing the Biupiu R&D and digital-art ecosystem.
+- `NFT-ATH-GEO` — **Ancient Systems × Computational Geometry artwork stream**, connecting archaeology/ancient technology with computational reconstruction and generative art.
+- `NFT-GEN` — generative-art and algorithmic artwork production.
+- `NFT-PROV` — digital-art provenance, research IDs, algorithms, generation parameters, hashes and blockchain records.
+
+## Founding NFT crowdfunding architecture
+The NFT system begins as a collector/crowdfunding project intended to help establish the Biupiu research and development ecosystem. The founding collection is **BIUPIU / ORIGIN**.
+
+Initial themes:
+1. Genesis
+2. Ancient Systems
+3. Geometry
+4. Regenerative Earth
+5. Biological Geometry
+6. HempCarbon
+7. Energy
+8. Water
+9. Computational Engineering
+10. Future Systems
+
+Crowdfunding may support research and development, computational resources, software, experimental development, agricultural/materials research, prototyping, digital infrastructure, research documentation, generative-art development, website/archive infrastructure and IP development.
+
+The NFT project is not automatically an equity or investment offering. NFT ownership does not automatically transfer Biupiu patents, inventions, trademarks, proprietary research, confidential information, biological materials, source code or underlying scientific discoveries.
+
+## NFT Research-to-Art Pipeline
+**Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector.**
+
+Every serious artwork should receive a Biupiu Research ID and a separate NFT ID. One research project may generate multiple editions/artworks.
+
+## NFT evidence controls
+Ancient-technology and archaeological artwork uses explicit classifications:
+- `DOCUMENTED` — supported by reliable historical, archaeological or scientific evidence.
+- `RECONSTRUCTED` — computational or physical reconstruction based on available evidence.
+- `EXPERIMENTAL` — Biupiu experiment testing a proposed mechanism/model.
+- `HYPOTHESIS` — interpretation requiring further investigation.
+- `SPECULATIVE` — creative exploration inspired by a subject.
+
+Artistic interpretation must not be represented as archaeological or scientific proof.
+
+## Ancient Systems × Computational Geometry — NFT stream
+Dedicated record: `research/NFT-ANCIENT-SYSTEMS-COMPUTATIONAL-GEOMETRY.md`
+
+Planned series:
+1. `WATER` — ancient hydraulic systems transformed into computational flow geometry.
+2. `EARTH` — agricultural terraces, soil and landscape geometry.
+3. `STONE` — architectural and megalithic geometry.
+4. `METAL` — metallurgy, minerals and transformation.
+5. `SKY` — astronomical orientation and geometric patterns.
+6. `NETWORK` — ancient settlements, trade and transport networks.
+7. `LIFE` — biological geometry and traditional ecological systems.
+8. `TRANSFORMATION` — ancient systems reinterpreted as futuristic computational structures.
+
+Potential geometry systems include circles, spirals, fractals, Voronoi structures, tessellation, symmetry, topology, polyhedra, flow fields, networks, phyllotaxis, recursion, parametric surfaces/meshes and geometry-to-wavefront representations.
+
+## NFT provenance standard
+Each computational artwork should preserve, where applicable:
+- Research ID
+- NFT ID
+- source/reference genealogy
+- evidence classification
+- algorithm name and version
+- software and dependencies
+- input data
+- parameters
+- generation seed
+- Git commit/version
+- artwork version
+- asset hash
+- metadata hash
+- blockchain/contract/token information
+- applicable licence
+
+Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Blockchain Token.**
+
+## NFT classes
+- `CLASS-A ART` — primarily aesthetic digital/generative artwork.
+- `CLASS-B RESEARCH ART` — artwork linked to documented Biupiu research.
+- `CLASS-C COMPUTATIONAL ARTIFACT` — artwork with algorithm, parameters and reproducible-generation record where appropriate.
+
+## NFT rarity model
+Rarity should be tied to meaningful research characteristics rather than arbitrary traits. Possible fields include algorithm complexity, number of geometry systems, historical-source breadth, computational complexity and edition size.
+
+## NFT identity model
+Research IDs use forms such as `BIU-ANC-001`, `BIU-GEO-001`, `BIU-BIO-001`, `BIU-AGR-001`, `BIU-MAT-001`, `BIU-ENE-001`, `BIU-WAT-001` and `BIU-COD-001`.
+
+NFT IDs use a separate sequence such as `BIU-NFT-0001`.
 
 ## CODEX structure
 `CODEX-01` Core Python; `02` Geometry; `03` CFD; `04` FEA/FEM; `05` Multiphysics; `06` Optimisation/NSGA-II/topology; `07` AI/ML; `08` Digital Twin; `09` Data; `10` Experimental Data; `11` AI Geometry Lab; `12` Open-Source Research/licence control.
@@ -84,9 +170,9 @@ Workflow: **video → mechanism → geometry → physics → prior art → liter
 Sepehr, Atlantean Gardens, Divergent Libertalia and VOC remain hypothesis-generation layers. Preserve source genealogy and compare claims with primary evidence, mainstream interpretations, independent research and testable predictions. Alternative maps remain analytical layers, never replacements for geodetic/satellite/archaeological baselines.
 
 ## IP control
-Each record should include source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. IP values: **OPEN / PUBLIC-DOMAIN / OPEN-SOURCE / UNCLEAR / THIRD-PARTY / PRIOR ART / DERIVATIVE / ORIGINAL BIUPIU**.
+Each record should include source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. IP values: **OPEN / PUBLIC-DOMAIN / OPEN-SOURCE / UNCLEAR / THIRD-PARTY / PRIOR ART / DERIVATIVE / ORIGINAL BIUPIU / IP-SENSITIVE**.
 
 ## Current priority integration
-1. Hybrid VAWT demonstrator; 2. low-head micro-hydro; 3. HempCarbon supercapacitor programme; 4. hemp composites; 5. CODEX geometry/CFD engine; 6. ancient water reconstruction; 7. Ancient Landscape Atlas; 8. controlled geomagnetic/hemp-electromagnetics experiments; 9. AAT metallurgy/materials; 10. integrated digital twin.
+1. Founding NFT crowdfunding architecture and first release; 2. Ancient Systems × Computational Geometry artwork prototype; 3. Hybrid VAWT demonstrator; 4. low-head micro-hydro; 5. HempCarbon supercapacitor programme; 6. hemp composites; 7. CODEX geometry/CFD engine; 8. ancient water reconstruction; 9. Ancient Landscape Atlas; 10. integrated digital twin.
 
-**Status:** Index architecture updated; detailed source records and experimental notebooks remain versioned work items.
+**Status:** Index architecture updated to v0.7; founding crowdfunding brief, NFT master template and Ancient Systems × Computational Geometry research stream added. Detailed artwork records, metadata, source/licence checks and minting remain versioned work items.
