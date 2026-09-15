@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -54,6 +54,7 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `BIT` — BitChute/video prototype intelligence for real-world engineering discovery.
 - `SPEC` — Sepehr, Atlantean Gardens, Divergent Libertalia and Vibes of Cosmos hypothesis research.
 - `SPEC-VIDEO` — controlled video/source index for speculative-history, geography and cosmology claims.
+- `SPEC-SEP` — dedicated Robert Sepehr / Atlantean Gardens source registry and claim families.
 - `SPEC-CONVERGENCE` — source-genealogy and independent-convergence testing; copied sources are not counted as independent corroboration.
 - `CARTOFORENSICS` — historical/alternative-map provenance, projection, georeferencing and claim-to-coordinate analysis.
 - `SPEC-COSMOLOGY` — controlled alternative-cosmology claim testing, including Plasma Moon and celestial-motion claims.
@@ -61,6 +62,9 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `SPEC-CATASTROPHE` — event-specific ancient catastrophe/reset hypotheses; no global-reset assumption.
 - `SPEC-UNDERGROUND` — speculative subterranean-network claims cross-linked to the documented UNDERGROUND atlas.
 - `SPEC-HUMAN-ORIGINS` — alternative human-origins claims cross-linked to fossil, genomic and archaeological evidence.
+- `SPEC-OLMEC` — speculative Olmec/contact claims cross-linked to the established Olmec archaeological record.
+- `SPEC-ANTARCTICA` — alternative Antarctic geography claims cross-linked to satellite/geodetic/bathymetric baselines.
+- `SPEC-VIS` — historical photographic/video visual-forensics and architectural anomaly analysis.
 - `ALA-ATLANTIS` — dedicated hypothesis layer for Atlantis-related geographic predictions; separate from accepted archaeological geography.
 - `ALA-HYPERBOREA` — dedicated hypothesis layer for Hyperborea/northern ancient-geography claims.
 - `ALA-HIDDEN-LANDS` — analytical layer for hidden-land/Antarctica claims; never replaces satellite/geodetic baselines.
@@ -75,16 +79,13 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `NFT-ORIGIN` — BIUPIU / ORIGIN founding collection, including Genesis, Ancient Systems, Geometry, Regenerative Earth, Biological Geometry, HempCarbon, Energy, Water, Computational Engineering and Future Systems.
 
 ## Speculative video/source index
-`research/SPEC-VIDEO-INDEX.md` is the controlled index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. It contains claim-specific records, evidence statuses, source-genealogy controls and proposed CODEX tests.
+`research/SPEC-VIDEO-INDEX.md` is the controlled index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. `research/SPEC-SEP-SOURCE.md` is the dedicated Sepehr/Atlantean Gardens source registry. These records contain claim-specific evidence statuses, source-genealogy controls and proposed CODEX tests.
+
+## Speculative convergence and verification
+`research/SPEC-CONVERGENCE.md` tracks apparent convergence between channels without treating repeated claims as independent corroboration. `research/SPEC-CLAIM-REGISTRY.md` converts priority claims into explicit null/alternative tests, including Atlantis, catastrophe/reset, underground networks, alternative maps, Hyperborea/Thule, human origins, architectural anomalies, Olmec/contact hypotheses and Antarctica claims.
 
 ## Vibes of Cosmos Atlas integration
-`research/SPEC-VOC-ATLAS-INTEGRATION.md` is the dedicated BIUPIU-VOC cartographic layer. VOC maps are preserved as third-party speculative source material and separated from the authoritative physical Earth baseline. The Atlas now maintains five analytical tiers: physical Earth, historical Earth, palaeogeography, archaeological/cultural geography, and BIUPIU-VOC speculative cartography.
-
-New VOC Atlas records: `VOC-ATLAS-001..012`, covering World Map/Plasma Moon projection, Physical/Extended/2025 map versions, Pangaia/Selenographic geometry, Antarctica/Terra Vista/hidden-land claims, oceanography/seabed/crater layers, magnetic/celestial claims, lunar-image reconstruction, cosmic epochs and Pangaia/Middle Earth/Narnia provenance.
-
-Workflow: **VOC map → provenance/version capture → feature extraction → claim-to-coordinate conversion → projection/georeferencing → modern geodetic comparison → bathymetry/geology → palaeogeography → archaeology → statistical/physical test → evidence update.**
-
-VOC is cross-linked to Sepehr/Atlantean Gardens and Divergent, but repeated claims are not treated as independent corroboration until source genealogy establishes independent derivation. Copyrighted maps remain third-party material; Biupiu should create original analytical GIS/statistical outputs rather than copy protected artwork.
+`research/SPEC-VOC-ATLAS-INTEGRATION.md` is the dedicated BIUPIU-VOC cartographic layer. VOC maps are preserved as third-party speculative source material and separated from the authoritative physical Earth baseline. The Atlas maintains analytical tiers for physical Earth, historical Earth, palaeogeography, archaeological/cultural geography and speculative cartography.
 
 ## CODEX speculative integration
 - `CODEX-SPEC-GIS` — claim-to-coordinate mapping.
@@ -120,6 +121,8 @@ Each record includes source, evidence status, technical question, reproducibilit
 5. Alternative-cartography/CODEX-MOONMAP testing.
 6. Ancient Landscape Atlas hypothesis layers.
 7. CODEX geometry/GIS/statistics integration.
-8. Only after validation: research-to-art/NFT translation.
+8. Olmec/Mesoamerican contact-evidence audit.
+9. Antarctica/alternative-geography coordinate tests.
+10. Only after validation: research-to-art/NFT translation.
 
-**Status:** Research index upgraded to **v1.1**. BIUPIU-VOC is now an official indexed Atlas branch and dedicated research record, integrated with the existing Sepehr/Atlantean Gardens and Divergent speculative-source network, with controlled cartographic, provenance, geodetic and CODEX testing boundaries.
+**Status:** Research index upgraded to **v1.2**. Robert Sepehr/Atlantean Gardens now has a dedicated permanent source registry and expanded claim families; Divergent has a formal visual-forensics branch; claim verification and source-genealogy records have been expanded; all speculative layers remain linked to ALA and CODEX while preserving the distinction between speculation and evidence.
