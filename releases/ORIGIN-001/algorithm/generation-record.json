@@ -1,0 +1,24 @@
+{
+  "algorithm_id": "FLOW-GEOMETRY-001",
+  "version": "0.1",
+  "research_id": "BIU-ANC-001",
+  "secondary_research_id": "BIU-GEO-001",
+  "nft_id": "BIU-NFT-0001",
+  "status": "PROTOTYPE",
+  "seed": 20260915,
+  "parameters": {
+    "width": 1600,
+    "height": 1600,
+    "paths": 120,
+    "steps": 180,
+    "step_size": 5.0
+  },
+  "field_model": "tangential + radial field with bounded seeded perturbation",
+  "historical_input": "None embedded in code; archaeological/water-system inputs remain a documented research layer",
+  "output_format": "SVG",
+  "output_path": "artwork/origin-001-prototype.svg",
+  "reproducibility": "Deterministic for the recorded seed and parameters",
+  "validation_status": "Artistic/computational prototype; not an archaeological validation",
+  "generated_at": "2026-09-15",
+  "git_commit": "ae6c62dccc29b1ad7b7c708784a1afe838881c07"
+}
