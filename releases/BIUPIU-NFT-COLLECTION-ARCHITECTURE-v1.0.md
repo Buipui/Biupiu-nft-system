@@ -20,11 +20,9 @@ The two images are related but never interchangeable.
 ## Asset pair standard
 
 ### A. Provenance image
-
 Required: approved BIUPIU logo/emblem; approved BIUPIU colour system; research title and Research ID; evidence classification; computational method/algorithm ID; generation/version information where appropriate; restrained provenance panel; artwork preview; and no invented blockchain, token, hash or licence data.
 
 ### B. Stand-alone NFT image
-
 Required principles: artwork-first composition; computational geometry meaningful to the research theme; subtle BIUPIU branding; no unnecessary provenance panel; no fake technical metadata embedded in the artwork; no unsupported archaeological claims; original composition derived from the recorded computational process.
 
 ## Brand lock
@@ -68,16 +66,16 @@ Materials, energy, photonics, metamaterials, aerodynamics and other advanced com
 
 ## Web3 / smart-contract architecture
 
-The repository now contains an EVM minting layer under:
+The repository now contains an EVM minting layer:
 
 - `contracts/BiupiuNFT.sol` — ERC-721 reference contract with capped supply, owner-controlled minting, batch minting, per-token URI and ERC-2981 royalty signalling.
 - `hardhat.config.js` — development/testnet configuration.
 - `package.json` — Hardhat, ethers, OpenZeppelin and dotenv tooling.
 - `.env.example` — local-only configuration template; private keys must never be committed.
-- `scripts/deploy.js` — deployment workflow.
-- `scripts/mint.js` — mint workflow.
-- `docs/WEB3-MINTING-LAYER-v1.0.md` — operational Web3 documentation.
-- `docs/NFT-MINTING-ARCHITECTURE-v2.0.md` — blockchain architecture and governance.
+- `deploy-nft.js` — deployment workflow.
+- `mint-nft.js` — mint workflow.
+- `WEB3-MINTING.md` — operational Web3 documentation.
+- `NFT-MINTING-ARCHITECTURE-v2.0.md` — blockchain architecture and governance.
 
 ### Initial development networks
 
