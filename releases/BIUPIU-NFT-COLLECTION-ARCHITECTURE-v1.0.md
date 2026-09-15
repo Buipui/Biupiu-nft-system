@@ -1,7 +1,7 @@
-# BIUPIU NFT COLLECTION ARCHITECTURE v2.0
+# BIUPIU NFT COLLECTION ARCHITECTURE v2.1
 
 **Effective:** 2026-09-16  
-**Status:** ACTIVE COLLECTION + WEB3 MINTING STANDARD  
+**Status:** ACTIVE COLLECTION + WEB3 + ALGORITHM NETWORK STANDARD  
 **Image generation:** PAUSED UNTIL AVAILABLE
 
 ## Purpose
@@ -15,7 +15,31 @@ The two images are related but never interchangeable.
 
 ## Master pipeline
 
-`RESEARCH → EVIDENCE → RESEARCH ID → COMPUTATIONAL MODEL → GENERATIVE ALGORITHM → PARAMETERS/SEED → STAND-ALONE ARTWORK → PROVENANCE ARTWORK → HASHES → METADATA → IP/LICENCE GATE → SMART CONTRACT → TESTNET DEPLOYMENT → TEST MINT → VERIFICATION → PRODUCTION MINT → BLOCKCHAIN PROVENANCE`
+`RESEARCH → EVIDENCE → RESEARCH ID → COMPUTATIONAL MODEL → ALGORITHM FAMILY/VERSION → PARAMETERS/SEED → STAND-ALONE ARTWORK → PROVENANCE ARTWORK → RELEASE MANIFEST → HASHES → METADATA → IP/LICENCE GATE → RESEARCH REGISTRY ANCHOR → SMART CONTRACT → TESTNET DEPLOYMENT → TEST MINT → VERIFICATION → PRODUCTION MINT → BLOCKCHAIN PROVENANCE`
+
+## Company algorithm network
+
+Future computational-geometry NFTs are connected through a reusable Biupiu Algorithm Network rather than independent scripts.
+
+Architecture record: `research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md`  
+Algorithm registry: `research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md`
+
+The algorithm network has five development layers:
+
+- **L0:** geometry primitives.
+- **L1:** fields, graphs and structural systems.
+- **L2:** research/domain models.
+- **L3:** generative and transformation operators.
+- **L4:** optimisation/AI where explicitly documented.
+- **L5:** release renderer/export pipeline.
+
+Algorithms evolve by version. Historical NFT releases retain the exact version used to generate them.
+
+### ORIGIN-001 anchor
+
+The first registered family is `BIU-ALG-GEO-FLOW-001`, the lineage of the existing `FLOW-GEOMETRY-001` prototype used by ORIGIN-001 / `BIU-NFT-0001`.
+
+**Network rule: algorithms evolve; released records do not.**
 
 ## Asset pair standard
 
@@ -66,7 +90,7 @@ Materials, energy, photonics, metamaterials, aerodynamics and other advanced com
 
 ## Web3 / smart-contract architecture
 
-The repository now contains an EVM minting layer:
+The repository contains an EVM minting layer:
 
 - `contracts/BiupiuNFT.sol` — ERC-721 reference contract with capped supply, owner-controlled minting, batch minting, per-token URI and ERC-2981 royalty signalling.
 - `hardhat.config.js` — development/testnet configuration.
@@ -84,9 +108,23 @@ The repository now contains an EVM minting layer:
 
 These are development/testnet targets. Mainnet deployment requires a separate release decision and verification gate.
 
-### On-chain vs off-chain
+## Biupiu blockchain network
 
-On-chain: token ownership, token URI, supply constraints, mint events and royalty signalling.
+The initial blockchain network is an EVM anchoring/registry layer, not a claim that Biupiu has launched an independent Layer-1 blockchain.
+
+Architecture record: `research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md`
+
+Planned separation:
+
+1. **BiupiuNFT** — ownership, token IDs and token metadata.
+2. **BiupiuResearchRegistry** — planned registry for research/algorithm/release hash commitments.
+3. **GitHub** — canonical source, algorithm, documentation, release and reproducibility record.
+
+The registry should anchor identifiers and hashes rather than confidential research or unpublished IP.
+
+## On-chain vs off-chain
+
+On-chain: token ownership, token URI, supply constraints, mint events, royalty signalling and, when implemented, approved research/release hash anchors.
 
 Off-chain/content-addressed: research, source genealogy, artwork files, provenance records, algorithms, datasets, licences and detailed IP documentation.
 
@@ -95,6 +133,8 @@ Off-chain/content-addressed: research, source genealogy, artwork files, provenan
 NFT IDs remain globally sequential: `BIU-NFT-0001`, `BIU-NFT-0002`, etc.
 
 Collection release IDs use: `ORIGIN-001`, `ANCIENT-001`, `GEOMETRY-001`, etc.
+
+Algorithm families are separately versioned and reusable across releases.
 
 Every release must have at least one Research ID and may cross-link multiple Research IDs.
 
@@ -118,16 +158,19 @@ Before public minting:
 4. evidence classification confirmed;
 5. source/code/image licences cleared;
 6. IP/patent sensitivity reviewed;
-7. metadata frozen;
-8. both asset hashes recorded;
-9. token URI/content-addressed files pinned;
-10. contract reviewed/tested;
-11. testnet deployment completed;
-12. test mint completed and metadata resolved;
-13. contract source verified where supported;
-14. deployment address and chain ID recorded;
-15. final licence and collector terms approved;
-16. production mint authorised.
+7. algorithm family/version frozen;
+8. parameters and seed recorded;
+9. metadata/release manifest frozen;
+10. both asset hashes recorded;
+11. token URI/content-addressed files pinned;
+12. contract reviewed/tested;
+13. research registry anchor prepared/verified where implemented;
+14. testnet deployment completed;
+15. test mint completed and metadata resolved;
+16. contract source verified where supported;
+17. deployment address and chain ID recorded;
+18. final licence and collector terms approved;
+19. production mint authorised.
 
 ## Image generation rule
 
@@ -139,4 +182,6 @@ Both receive separate hashes and are linked to the same release record. If eithe
 
 ## Current implementation
 
-ORIGIN-001 / BIU-NFT-0001 remains the pilot. Its deterministic SVG is the canonical computational prototype. The two-image architecture and Web3 layer now govern its future finalisation and all subsequent releases.
+ORIGIN-001 / BIU-NFT-0001 remains the pilot. Its deterministic SVG is the canonical computational prototype. The two-image architecture, reusable algorithm network and planned blockchain registry now govern its future finalisation and all subsequent releases.
+
+**No production blockchain deployment or mint is represented by this architecture update.**
