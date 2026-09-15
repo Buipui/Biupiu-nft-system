@@ -1,6 +1,6 @@
 # BIUPIU SPEC — Claim-by-Claim Verification Registry
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Date:** 15 September 2026  
 **Purpose:** Convert the highest-priority speculative-source claims into traceable verification records.
 
@@ -68,7 +68,7 @@ Creator ≠ source ≠ original evidence. A repeated claim is not independent co
 ### SPEC-CLAIM-008 — Alternative human-origins models
 **Source family:** modern alternative-history claims, including Sepehr/Atlantean Gardens.  
 **Status:** Speculative where they contradict established fossil/genomic evidence.  
-**Test:** compare explicit predictions with primary fossil, archaeological and ancient-DNA datasets; separate valid population-complexity observations from unsupported species/race claims.  
+**Test:** compare explicit predictions with primary fossil, archaeological and ancient-DNA datasets; separate valid population-complexity observations from unsupported species/race interpretations.  
 **Null:** model does not improve explanatory power over current models.  
 **Alternative:** model produces independently testable predictions supported by new evidence.  
 **CODEX:** `SPEC-HUMAN-ORIGINS`, `ATH-HO-AFRICA`.
@@ -97,6 +97,22 @@ Creator ≠ source ≠ original evidence. A repeated claim is not independent co
 **Alternative:** independently reproduced physical feature matches the prediction and survives baseline controls.  
 **CODEX:** `CODEX-ANTARCTICA`, `CODEX-BATHY`, `ALA-HIDDEN-LANDS`.
 
+### SPEC-CLAIM-012 — Ancient sacred-geometry / technology / energy claims
+**Source family:** Sepehr/Atlantean Gardens, Divergent and related speculative engineering traditions.  
+**Status:** D/E by individual claim.  
+**Test:** translate claimed geometry or device into measurable dimensions, material assumptions, energy inputs and predicted outputs; compare against known physics and archaeological manufacturing evidence.  
+**Null:** effect is explained by conventional structural, hydraulic, acoustic, thermal, optical or electromagnetic mechanisms, or the claimed effect is not reproducible.  
+**Alternative:** independently reproducible effect exceeds the conventional model within controlled uncertainty.  
+**CODEX:** `CG-3D`, `CODEX`, `MATERIALS`, `ENERGY`, `CODEX-VIS`.
+
+### SPEC-CLAIM-013 — Ancient Naga/Himalayan subterranean traditions
+**Source family:** Sepehr/Atlantean Gardens where applicable + Indian/Sri Lankan/Himalayan textual, oral and archaeological traditions.  
+**Status:** M/D until individual historical/geophysical evidence is established.  
+**Test:** separate Naga peoples from Nāga religious traditions; identify named temples/caves/tunnels; compare historical surveys, cadastral/topographic records, geology, hydrology, GPR/resistivity and archaeological documentation.  
+**Null:** tradition is cultural/mythological or the feature is natural/unrelated.  
+**Alternative:** independently dated artificial subterranean structures or documented cultural networks support a specific historical claim.  
+**CODEX:** `NAGA`, `HIM`, `UNDERGROUND`, `LAND-GIS`, `CODEX-UNDERGROUND`.
+
 ## Execution order
 1. Atlantis textual/geographic extraction.
 2. Named underground sites only; no network inference before segment verification.
@@ -108,7 +124,9 @@ Creator ≠ source ≠ original evidence. A repeated claim is not independent co
 8. Architectural anomaly provenance and measurement.
 9. Olmec/contact evidence audit.
 10. Antarctica/alternative-geography coordinate tests.
-11. Vril/free-energy mechanism gate.
+11. Ancient sacred-geometry/technology claims.
+12. Naga/Himalayan subterranean traditions.
+13. Vril/free-energy mechanism gate.
 
 ## Result states
 `UNTESTED` → `DATA GATHERING` → `TESTED-POSITIVE` / `TESTED-NEGATIVE` / `INCONCLUSIVE` → evidence-status update.
