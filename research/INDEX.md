@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 1.5  
+**Version:** 1.6  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -8,9 +8,15 @@
 This is the personal Biupiu computational-art, invention, speculative-research and R&D/IP track. It remains separate from the immediate commercial DTIC/InvestSA library unless explicitly transferred.
 
 ## Master department architecture
-`research/BIUPIU-DEPARTMENT-INDEX.md` is now the authoritative department map for the full Biupiu R&D/IP portfolio. It integrates biotechnology, regenerative agriculture, genetics/seed breeding, industrial hemp, biochar/biocarbon, biochemical engineering, textiles/fibres, adhesives/coatings, composites, advanced materials, water, energy, electrical/electromagnetics, photonics, quantum/photonic materials, metamaterials, aerospace, marine, computational engineering, AI, computational geometry, digital twins, robotics/automation, advanced manufacturing, biomedical/life sciences, geoarchaeology, historical GIS, Ancient Applied Technology, geomagnetics, controlled speculative research, IP and NFT/generative art.
+`research/BIUPIU-DEPARTMENT-INDEX.md` is the authoritative department map for the full Biupiu R&D/IP portfolio. It integrates biotechnology, regenerative agriculture, genetics/seed breeding, industrial hemp, biochar/biocarbon, biochemical engineering, textiles/fibres, adhesives/coatings, composites, advanced materials, water, energy, electrical/electromagnetics, photonics, quantum/photonic materials, metamaterials, aerospace, marine, computational engineering, AI, computational geometry, digital twins, robotics/automation, advanced manufacturing, biomedical/life sciences, geoarchaeology, historical GIS, Ancient Applied Technology, geomagnetics, controlled speculative research, IP and NFT/generative art.
 
 The department map is the portfolio architecture; specialist research files retain their existing IDs. The commercial/funding library may activate only selected departments at any stage.
+
+## Department-to-record map
+`research/BIUPIU-DEPARTMENT-MAP.md` is the active cross-linking layer that assigns existing research families, Wits/ResearchGate and Emerald cross-references, public/declassified IP material, commercial/R&D records and NFT streams to department codes. It explicitly marks source relationships that still require file verification rather than inventing missing records.
+
+## Department-specific CODEX queues
+`research/CODEX-DEPARTMENT-QUEUES.md` is the active simulation queue. It assigns model types, datasets, first executable tests, validation requirements, IP gates, priorities and queue states across the department architecture.
 
 ## Evidence doctrine
 > Ancient knowledge generates the question. Archaeology establishes the evidence. Science identifies the mechanism. Engineering makes it measurable. Computation optimises it. Biupiu builds it.
@@ -49,6 +55,20 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `SPEC` / `SPEC-VIDEO` / `SPEC-SEP` / `SPEC-CONVERGENCE` — controlled speculative-source research.
 - `NFT-IP` / `NFT-CF` / `NFT-ATH-GEO` / `NFT-GEN` / `NFT-PROV` / `NFT-ARCH` / `NFT-ORIGIN` — research-to-art, crowdfunding, generative art, provenance and NFT architecture.
 
+## ResearchGate / Emerald / Wits evidence layer
+
+ResearchGate is retained as a literature-discovery and cross-reference layer; the original publisher, institutional repository or dataset remains preferred where available. Emerald Insight is also a complementary literature-discovery layer and must be indexed at publication/DOI level before being treated as independent evidence.
+
+The Wits structured-light stream is now explicitly mapped to `PHOTONICS → PH-QPM → COMPUTE/CODEX → AI → DIGITAL-TWIN`, with secondary links to `ELECTROMAG` and `GEOMETRY`. The current public Wits record includes structured-light research, atmospheric-turbulence mitigation, long-range free-space optical links and a 2026 report on an experiment using topological information in light under atmospheric turbulence. citehttps://www.wits.ac.za/oclab/research/https://www.wits.ac.za/news/latest-news/research-news/2026/--2026-08/wits-researchers-use-lights-topology-to-beat-atmospheric-distortion.html
+
+## IP, patent and declassified-document layer
+
+`IP-PA / IP / DECLASS` is a transversal control across all departments. Patent documents are treated as prior-art records rather than proof of performance. Public/declassified engineering documents are historical/public technical sources and require independent engineering validation. Aerospace-related work remains restricted to public, officially released/declassified, licensed or independently generated information.
+
+## Payment/resource register governance
+
+Prior project work referred to payment-register and resource-register updates. A standalone historical register file was not identified in the current Library/GitHub verification pass, so no missing entries are fabricated. `BIUPIU-DEPARTMENT-MAP.md` records this as **VERIFY SOURCE FILE** and defines the normalisation fields for when the original register is located.
+
 ## Cross-department integration
 
 `BIO/BIO-GEN → AGRI → HEMP → BIOCARBON/BIOCHEM → MATERIALS/COMPOSITES/TEXTILES/COAT`
@@ -70,7 +90,7 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 `IP ↔ every department`
 
 ## CODEX execution layer
-`research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. CODEX is the computational backbone across departments.
+`research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. `research/CODEX-DEPARTMENT-QUEUES.md` now operationalises the department-specific simulation backlog.
 
 ## Speculative video/source index
 `research/SPEC-VIDEO-INDEX.md` controls VOC, Robert Sepehr/Atlantean Gardens and Divergent material. `research/SPEC-SEP-SOURCE.md` is the Sepehr source registry. `research/SPEC-SEP-CLAIM-EXTRACTION.md` is the claim-level extraction layer.
@@ -92,11 +112,12 @@ Each record includes source, evidence status, technical question, reproducibilit
 The department architecture is compatible with relevant InvestSA/dtic opportunity categories including agribusiness, textiles, digital economy/ICT, healthcare/life sciences, clean-technology manufacturing, advanced manufacturing and transport/industrial sectors. InvestSA is part of the dtic ecosystem. These are alignment references, not claims that every department is currently commercially active or funded.
 
 ## Current execution priorities
-1. Activate department-to-research-record cross-links.
-2. Build department-specific CODEX simulation queues.
-3. Map each department to IP/prior-art records and commercialisation status.
+1. Department-to-record cross-links — **EXECUTED v1.0**.
+2. Department-specific CODEX simulation queues — **EXECUTED v1.0**.
+3. Map each department to IP/prior-art records and commercialisation status — active through `BIUPIU-DEPARTMENT-MAP.md`.
 4. Build robotics/AI/advanced-manufacturing integration layer.
 5. Continue Sepehr/Atlantis claim extraction and independent evidence testing.
 6. Link validated research outputs to NFT provenance only after evidence/licence review.
+7. Resolve the historical payment/resource register source-file references when the original files are located.
 
-**Status:** Master R&D index upgraded to **v1.5**. The full Biupiu departmental architecture is now integrated and cross-linked to the existing technical, speculative, computational, IP and NFT research streams.
+**Status:** Master R&D index upgraded to **v1.6**. Department-to-record mapping and department-specific CODEX queues are now active. Wits/ResearchGate and Emerald are explicit cross-reference layers, while patent/declassified records and payment/resource-register references remain controlled by provenance and verification gates.
