@@ -10,6 +10,7 @@ The system connects:
 - 3D computational geometry and generative design
 - 3D holography and quantitative-phase modelling
 - Ancient-technology research themes
+- Ancient Africa, human origins and comparative civilization research
 - Invention and concept records
 - NFT metadata and provenance
 - Signed physical works and associated art-book records
@@ -26,12 +27,44 @@ This repository is a dedicated NFT / computational-art / IP track. It is separat
 - `INVENTION-REGISTER.md` — controlled register for inventions, concepts and research-linked IP records.
 - `metadata/` — future NFT metadata records.
 - `artworks/` — future artwork records and provenance references.
-- `research/` — indexed research supporting computational geometry, 3D holography, Wits photonics, electrical engineering, photovoltaic systems, ancient-technology hypotheses and experimental validation.
+- `research/` — indexed research supporting computational geometry, 3D holography, Wits photonics, electrical engineering, photovoltaic systems, ancient-technology hypotheses, ancient African archaeology, human origins and experimental validation.
 - `releases/` — future collection and crowdfunding release plans.
 
-## Completed R&D Research Integration
+## Master Research Index
 
-### 3D Computational Geometry — CG-3D
+`research/INDEX.md`
+
+The master index now includes dedicated streams for CG-3D, PH-QPM, PHO, TORUS, light/energy storage, Thunderbolts hypothesis research, metamaterials, Ancient Technology, Ancient Africa/Human Origins and NFT/IP.
+
+## Ancient Africa / Human Origins — ATH-HO-AFRICA
+
+Dedicated record:
+
+`research/ANCIENT-AFRICA-HUMAN-ORIGINS-CROSS-REFERENCE.md`
+
+This branch indexes and cross-references:
+
+- Adam's Calendar and disputed chronology
+- Bokoni/Koni stone-walled landscapes
+- Lydenburg Heads / Early Iron Age archaeology
+- Mapungubwe, Great Zimbabwe and Mutapa/Monomotapa
+- southern African gold production and Indian Ocean trade
+- Sofala and Arabic/Islamic historical records
+- biblical Ophir hypotheses
+- Islamic/Sufi comparative research
+- Anunnaki, Nibiru and Mesopotamian Deluge traditions
+- Adapa / Adam / Adama comparative study
+- Sumerian, Egyptian, Hebrew, Islamic and southern African creation motifs
+- speculative Noah/Shem/Ham/Japheth haplogroup proposals, explicitly evidence-controlled
+- deep African Y-DNA and mtDNA lineages, including A00/A/B and L0 branches
+- Amazigh/Berber population genetics
+- Cheddar Man and Early European Modern Humans / Cro-Magnon
+- Neanderthal and Denisovan relationships
+- Jebel Irhoud, Omo Kibish and Herto early Homo sapiens fossils
+
+These topics are cross-referenced without assuming that parallel motifs prove common origin. Archaeological, genetic, linguistic, textual, geographic and material evidence remain the controlling standards.
+
+## 3D Computational Geometry — CG-3D
 
 The repository now treats 3D computational geometry as a core engineering and artwork-generation layer, including:
 
@@ -44,7 +77,7 @@ The repository now treats 3D computational geometry as a core engineering and ar
 - optical and electromagnetic simulation geometry
 - geometry-driven NFT visualisation
 
-### 3D Holography — PH-QPM
+## 3D Holography — PH-QPM
 
 The PH-QPM branch now covers:
 
@@ -59,9 +92,9 @@ The PH-QPM branch now covers:
 - structured-light visualisation
 - holographic representations of toroidal and other parametric forms
 
-### Wits Photonics Cross-Reference — PHO
+## Wits Photonics Cross-Reference — PHO
 
-Wits University research is now explicitly cross-referenced as a primary evidence stream for:
+Wits University research is explicitly cross-referenced as a primary evidence stream for:
 
 - long-range free-space optical communications
 - visible-light communication / LiFi
@@ -79,9 +112,9 @@ The dedicated record is:
 
 `research/WITS-PHOTONICS-3D-HOLOGRAPHY-CROSS-REFERENCE.md`
 
-### Thunderbolts Hypothesis Research — TB
+## Thunderbolts Hypothesis Research — TB
 
-Thunderbolts Project / Thunderbolts.info is now a dedicated **exploratory hypothesis stream**, separated from established research. It may be used to generate questions concerning plasma physics, electromagnetism, ancient-technology interpretations and computational geometry.
+Thunderbolts Project / Thunderbolts.info is a dedicated **exploratory hypothesis stream**, separated from established research. It may be used to generate questions concerning plasma physics, electromagnetism, ancient-technology interpretations and computational geometry.
 
 Dedicated validation path:
 
@@ -89,7 +122,7 @@ Dedicated validation path:
 
 Thunderbolts material is **not** treated as scientific proof.
 
-### TORUS / Electrical / PV Integration
+## TORUS / Electrical / PV Integration
 
 The TORUS branch connects:
 
@@ -111,9 +144,11 @@ The TORUS branch connects:
 
 **ResearchGate:** literature discovery and cross-reference.
 
-**Emerald Insight:** complementary engineering/electrical/PV literature cross-reference.
+**Emerald Insight:** complementary engineering/electrical/PV/technology literature cross-reference.
 
 **Thunderbolts Project:** exploratory hypothesis source only.
+
+**Ancient primary texts / archaeological literature:** evidence base for the ATH and ATH-HO-AFRICA streams.
 
 ## Validation Framework
 
@@ -134,6 +169,6 @@ Unconventional claims require comparison against established physical constraint
 
 ## Version
 
-**Biupiu NFT System v0.3 — Wits / 3D Holography / CG-3D / Thunderbolts Research Integration Complete**
+**Biupiu NFT System v0.4 — Master Research Index + Ancient Africa / Human Origins Integration**
 
 Updated September 2026.
