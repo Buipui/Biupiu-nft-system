@@ -1,6 +1,6 @@
-# Biupiu NFT Research Index v0.3
+# Biupiu NFT Research Index v0.4
 
-**Purpose:** Cross-index research, computational models and experimental hypotheses supporting the Biupiu NFT / computational-art portfolio.
+**Purpose:** Cross-index research, computational models and experimental hypotheses supporting the Biupiu NFT / computational-art portfolio and its linked personal R&D research streams.
 
 ## Evidence Classification
 
@@ -27,7 +27,7 @@ All research is classified before use:
 - optical metrology
 - materials and crystal characterisation
 
-**Cross-links:** 3D Computational Geometry; Crystal & Materials Research; Photonics; Ancient-Technology Reconstruction.
+**Cross-links:** 3D Computational Geometry; Crystal & Materials Research; Photonics; Toroidal Geometry; Ancient-Technology Reconstruction.
 
 ### CG-3D — 3D Computational Geometry
 
@@ -38,6 +38,47 @@ All research is classified before use:
 - wave/field modelling on geometric structures
 - numerical optical and electromagnetic simulations
 - generative geometry for NFT artwork
+- **torus / toroidal geometry**
+- parametric toroidal surfaces and meshes
+- toroidal coordinate systems
+- toroidal field and wave simulations
+- toroidal optical concentrators and waveguides
+- toroidal electromagnetic and resonant structures
+
+**New branch:** `TORUS` — cross-disciplinary toroidal geometry for computational, optical, electromagnetic, electrical-machine and photovoltaic modelling.
+
+### TORUS — Toroidal Geometry, Electromagnetics & Energy Systems
+
+- toroidal electromagnetic structures and toroidal dipole research
+- toroidal metamaterials / metasurfaces
+- toroidal magnetic cores and windings
+- toroidal electrical-machine topologies
+- axial-flux/permanent-magnet machine geometries with toroidal winding variants
+- toroidal solar concentrators
+- toroidal optical waveguides
+- PV receiver illumination optimisation
+- optical-to-electrical conversion modelling
+- toroidal geometry for thermal management and packaging
+- computational parameter sweeps and conventional-geometry controls
+
+**Primary record:** `research/TOROIDAL-GEOMETRY-ELECTRICAL-PV-RD.md`
+
+### EEE — Electrical & Electromagnetic Engineering
+
+- electromagnetic field modelling
+- circuit and power-electronics modelling
+- inductors, transformers and magnetic cores
+- electrical-machine geometry
+- axial-flux/permanent-magnet machines
+- winding topology and Joule-loss modelling
+- FEM/FDTD electromagnetic simulation
+- resonance and multipole analysis
+- electrical energy conversion
+- MPPT and photovoltaic power conditioning
+- battery/supercapacitor interfaces
+- thermal/electromagnetic co-simulation
+
+**Cross-links:** TORUS; CG-3D; LES; CRM; PHO; PSL.
 
 ### CRM — Crystal & Materials Research
 
@@ -48,6 +89,7 @@ All research is classified before use:
 - quantum-dot materials
 - composites and advanced materials
 - energy-storage materials
+- toroidal metamaterial / resonant-material structures
 
 ### PHO — Photonics, Optical Communications & Atmospheric Systems
 
@@ -60,6 +102,7 @@ All research is classified before use:
 - AI-assisted optical communications
 - optical/photonic computing
 - optical energy delivery
+- toroidal optical waveguides and resonant photonic structures
 
 ### LES — Light-Based Energy Storage & Conversion
 
@@ -73,6 +116,9 @@ All research is classified before use:
 - photovoltaic-thermal systems
 - optical energy delivery and conversion
 - quantum-dot solar-cell concepts
+- toroidal solar concentrators
+- toroidal optical-to-PV coupling
+- PV irradiance uniformity and thermal-management modelling
 
 ### ACT — Ancient Civilizations & Technology
 
@@ -93,10 +139,15 @@ Workflow:
 
 `Claim → precise proposition → established physical constraints → variables → simulation → parameter sweep → null/conventional model → measurable prediction → validation plan`
 
-Initial simulation branches:
+Current simulation branches:
 
 - **PH-QPM-01:** 3D holographic reconstruction and phase retrieval.
 - **CG-01:** Ancient-geometry electromagnetic/optical modelling.
+- **TORUS-01:** Parameterised torus geometry, optical and electromagnetic field modelling.
+- **TORUS-PV-01:** Toroidal solar concentration versus conventional-control geometry.
+- **TORUS-EM-01:** Toroidal/electric/magnetic multipole and resonant-mode analysis.
+- **TORUS-MAG-01:** Toroidal-core versus conventional-core magnetic-loss comparison.
+- **TORUS-AFPM-01:** Toroidal winding variants for axial-flux/permanent-magnet machines.
 - **CRYSTAL-01:** Crystal/material optical interaction modelling.
 - **ENERGY-01:** Light → electricity → storage modelling.
 - **ATM-01:** Atmospheric optical propagation and turbulence.
@@ -112,7 +163,15 @@ A simulation result does not establish that a proposed phenomenon exists in natu
 - Wits University research on structured light and atmospheric turbulence
 - ResearchGate literature and theses
 - Emerald Insight literature
-- Peer-reviewed optics, photonics, materials and energy-storage literature
+- Peer-reviewed optics, photonics, materials, electrical-engineering and energy-storage literature
+
+### Current toroidal cross-reference set
+
+**ResearchGate:** toroidal electromagnetically induced transparency/metasurfaces; dual-band toroidal-dipole research; nonlinear torus-metasurface research; solar-energy toroidal concentrators; torus waveguides for solar-energy transmission.
+
+**Emerald Insight:** torus-type axial-flux permanent-magnet electrical-machine FEM research; toroidal winding topology and loss/thermal analysis; toroidal-coordinate multipole expansions; toroidal-core magnetic-loss modelling; photovoltaic-generator equivalent-circuit modelling.
+
+These source classes are used for literature discovery and cross-validation. A source is not treated as proof merely because it appears in ResearchGate or Emerald Insight.
 
 ### Hypothesis / exploratory sources
 
@@ -127,13 +186,15 @@ Research can be connected to NFT records through:
 
 `Research source → hypothesis/model → computational reconstruction → simulation output → artwork → NFT metadata/provenance`
 
-Potential NFT themes include:
+Potential NFT themes now include:
 
 - ancient architecture reconstructed in 3D
 - computational/sacred geometry
+- toroidal and parametric geometry
 - holographic and phase-based visualisations
 - crystal/material structures
 - photonics and atmospheric optical systems
+- photovoltaic and energy-conversion geometries
 - ancient-technology hypotheses
 - experimentally tested versus untested concepts.
 
@@ -143,4 +204,4 @@ Every NFT or research record should identify whether an idea is established, sup
 
 ## Version
 
-**Biupiu NFT Research Index v0.3 — September 2026**
+**Biupiu NFT Research Index v0.4 — September 2026**
