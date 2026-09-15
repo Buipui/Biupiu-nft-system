@@ -1,4 +1,4 @@
-# Biupiu NFT Research Index v0.6
+# Biupiu NFT Research Index v0.7
 
 **Purpose:** Cross-index research, computational models and experimental hypotheses supporting the Biupiu NFT / computational-art portfolio and its linked personal R&D research streams.
 
@@ -28,7 +28,7 @@
 - computational propagation and inverse problems
 - holographic visualisation of toroidal and other parametric geometries
 
-**Cross-links:** CG-3D; TORUS; PHO; CRM; MM; EEE; LES; PSL; Ancient-Technology Reconstruction.
+**Cross-links:** CG-3D; TORUS; PHO; CRM; MM; EEE; LES; PSL; AERO-STEALTH.
 
 ### CG-3D — 3D Computational Geometry
 
@@ -45,8 +45,9 @@
 - structured-light geometry and spatial-mode modelling
 - geometry generation for NFT artwork
 - geometry-to-physics parameter sweeps
+- computational aircraft and stealth-surface geometry
 
-**Cross-disciplinary rule:** CG-3D is the geometry layer for PH-QPM, TORUS, EEE, PHO, MM, LES and PSL. A geometric visualisation is not itself evidence of a physical effect.
+**Cross-disciplinary rule:** CG-3D is the geometry layer for PH-QPM, TORUS, EEE, PHO, MM, LES, PSL and AERO-STEALTH. A geometric visualisation is not itself evidence of a physical effect.
 
 ### TORUS — Toroidal Geometry, Electromagnetics & Energy Systems
 
@@ -79,7 +80,7 @@
 - battery/supercapacitor interfaces
 - thermal/electromagnetic co-simulation
 
-**Cross-links:** TORUS; CG-3D; LES; PHO; CRM; MM; PSL.
+**Cross-links:** TORUS; CG-3D; LES; PHO; CRM; MM; AERO-STEALTH; PSL.
 
 ### CRM — Crystal & Materials Research
 
@@ -93,6 +94,7 @@
 - engineered materials and functional structures
 - metamaterial constituent materials
 - toroidal metamaterial / resonant-material structures
+- high-temperature aerospace materials and composites
 
 ### MM — Metamaterials & Metasurfaces — OFFICIAL INDEXED BRANCH
 
@@ -100,30 +102,34 @@
 **Primary record:** `research/METAMATERIALS-METASURFACES-RD.md`  
 **Record:** `BPU-RES-MM-001`
 
-MM is now an official dedicated R&D branch. It remains structurally connected to CRM and composite/advanced-material research, but receives its own research record, prior-art workflow and simulation branches because engineered geometry, interfaces and unit-cell architecture are central research variables.
+MM is an official dedicated R&D branch for engineered electromagnetic, optical, mechanical and multifunctional materials.
+
+**Cross-links:** CRM; CG-3D; PH-QPM; PHO; TORUS; EEE; LES; PSL; PAT; AERO-STEALTH.
+
+### AERO-STEALTH — Stealth / High-Speed Aircraft Geometry
+
+**Primary record:** `research/STEALTH-CRAFT-SR71-GEOMETRY-RD.md`  
+**Record:** `BPU-RES-AERO-STEALTH-001`
+
+Dedicated historical/computational branch consolidating the previous Biupiu stealth-craft geometry work and SR-71/Blackbird design studies using publicly released material.
 
 Research scope:
 
-- electromagnetic metamaterials
-- optical metamaterials
-- metasurfaces / flat optics
-- photonic and phononic crystals
-- resonant and subwavelength unit cells
-- negative-index / near-zero-index concepts
-- anisotropic and hyperbolic media
-- reconfigurable/tunable metamaterials
-- mechanical and structural metamaterials
-- architected and programmable materials
-- metamaterial antennas and beam steering
-- metamaterial absorbers and filters
-- metamaterial waveguides
-- metamaterial solar/light-management concepts
-- toroidal metamaterials and toroidal metasurfaces
-- inverse design and topology optimisation
+- SR-71 / Blackbird family geometry and design history
+- A-12/YF-12/D-21 historical geometry where public documentation supports it
+- declassified Have Blue / F-117 geometry history
+- Tacit Blue curved stealth geometry
+- faceted versus curved stealth-surface analysis
+- high-speed aircraft planform geometry
+- aerodynamic heating and thermal-geometry coupling
+- electromagnetic scattering and surface-current modelling
+- chine/edge/discontinuity sensitivity
+- parametric aircraft CAD and computational reconstruction
+- metamaterial/metasurface aircraft-surface concepts
 
-**Cross-links:** CRM; CG-3D; PH-QPM; PHO; TORUS; EEE; LES; PSL; PAT.
+**Security boundary:** This branch contains only public, officially released, licensed or independently generated information. It does not claim access to classified designs, classified performance data or non-public military information.
 
-**Dedicated NASA resource rule:** Future MM searches must explicitly cross-reference NASA TechPort, NASA NTRS, NASA JPL, NASA Langley, NASA Ames, NASA Goddard and NASA NIAC where relevant. NASA records are classified individually by evidence level; a NASA concept or project is not automatically experimental validation.
+**Cross-links:** CG-3D; MM; EEE; CRM; PH-QPM; PHO; PSL; PAT.
 
 ### PHO — Photonics, Optical Communications & Atmospheric Systems
 
@@ -177,8 +183,6 @@ Research scope:
 
 The Thunderbolts Project is explicitly indexed as an **exploratory hypothesis source**, not as scientific validation. Its stated focus is the Electric Universe paradigm, plasma/electromagnetic interpretations of cosmic phenomena and proposed connections between plasma phenomena and ancient-world narratives.
 
-The repository may use Thunderbolts material to generate testable questions in plasma physics, electromagnetism, computational geometry and ancient-technology reconstruction. Claims must be separated from established plasma physics and checked independently.
-
 ### PSL — Plausibility & Simulation Laboratory
 
 Workflow:
@@ -204,6 +208,16 @@ Current simulation branches:
 - **MM-06:** Metamaterial/metasurface optical-energy and PV light-management modelling.
 - **MM-07:** Toroidal metamaterial and toroidal metasurface modelling.
 - **MM-08:** Inverse design and topology-optimisation studies.
+- **AERO-01:** Parametric high-speed aircraft geometry.
+- **AERO-02:** Public-source SR-71 geometry study.
+- **AERO-03:** Aerodynamic heating / thermal-geometry coupling.
+- **STEALTH-01:** Idealised faceted stealth scattering study.
+- **STEALTH-02:** Curved stealth-surface scattering study.
+- **STEALTH-03:** Edge/chine sensitivity analysis.
+- **STEALTH-04:** Geometry perturbation / robustness analysis.
+- **EM-AERO-01:** Electromagnetic surface-current and scattering model.
+- **MM-AERO-01:** Metamaterial/metasurface aircraft-surface concept study.
+- **CG-AERO-01:** 3D computational aircraft reconstruction.
 - **CRYSTAL-01:** Crystal/material optical interaction modelling.
 - **ENERGY-01:** Light → electricity → storage modelling.
 - **PHO-01:** FSO propagation and structured-light channel modelling.
@@ -217,28 +231,25 @@ A simulation result does not establish that a proposed phenomenon exists in natu
 ## External Research Source Network
 
 ### Wits University
+Primary research cross-reference for the Biupiu photonics stream.
 
-Wits is a primary research cross-reference for the Biupiu photonics stream.
+### NASA — Dedicated MM / Aerospace Resource Family
+NASA TechPort, NASA NTRS, NASA JPL and relevant NASA aeronautics/history resources are preferred official references for MM and aerospace research.
 
-### NASA — Dedicated MM Resource Family
-
-NASA is a dedicated cross-reference source for metamaterials/metasurfaces. Future searches should include NASA TechPort, NASA NTRS, NASA JPL, NASA Langley, NASA Ames, NASA Goddard and NASA NIAC where relevant.
+### U.S. Air Force / U.S. Government Historical Sources
+Official releases and museum/government historical records are used for declassified stealth-craft and Blackbird programme history.
 
 ### ResearchGate
-
-ResearchGate remains a literature-discovery and cross-reference layer for toroidal electromagnetics, metamaterials, metasurfaces, solar-energy structures, photonics and related energy research.
+Literature-discovery and cross-reference layer for electromagnetics, aerospace geometry, metamaterials, photonics and related engineering research.
 
 ### Emerald Insight
-
-Emerald Insight remains a complementary scholarly source network for electrical machines, engineered materials, metamaterials, photonics, electromagnetic modelling and related engineering research.
+Complementary scholarly source network for engineering, materials, electromagnetic modelling and related research.
 
 ### Patent / Prior-Art / Declassified Research
-
-See `research/PATENT-PRIOR-ART-AND-DECLASSIFIED-RESEARCH-REGISTRY.md`. Future MM development must cross-reference patent claims, patent families, government technical records and appropriate declassified historical material before public disclosure or commercial prototype work.
+See `research/PATENT-PRIOR-ART-AND-DECLASSIFIED-RESEARCH-REGISTRY.md`. AERO-STEALTH and MM concepts must be cross-referenced against public patent claims and officially released technical records before disclosure or commercial development.
 
 ### Thunderbolts Project
-
-Exploratory hypothesis source only. It is not treated as proof or as equivalent to NASA, Wits or peer-reviewed evidence.
+Exploratory hypothesis source only. It is not treated as proof or as equivalent to official or peer-reviewed evidence.
 
 ## NFT Integration
 
@@ -254,19 +265,22 @@ Potential NFT themes now include:
 - 3D holographic and phase-based visualisations
 - structured-light and topological-light visualisations
 - metamaterial and metasurface geometry
+- SR-71 / Blackbird-inspired high-speed geometry
+- declassified stealth-craft geometry studies
+- faceted versus curved stealth geometry
+- aerospace thermal/aerodynamic visualisations
 - crystal/material structures
 - photonics and atmospheric optical systems
 - photovoltaic and energy-conversion geometries
 - ancient-technology hypotheses
 - experimentally tested versus untested concepts
-- plasma/electromagnetic visualisations clearly labelled as hypothesis or established physics where appropriate.
 
 ## Research Integrity Rule
 
 Every NFT or research record should identify whether an idea is established, supported, plausible, unresolved, inconsistent, or speculative. Artistic representation of a hypothesis must not be presented as proof of the hypothesis.
 
-**Important:** NASA and Wits research records, patents, NTRS/TechPort documentation and peer-reviewed literature are evidence/reference sources according to their individual evidence level. Funded concepts and proposals are not automatically experimental validation. Declassified material is historical/technical source material unless independently validated. Thunderbolts material is an exploratory hypothesis source. These evidence classes must never be conflated.
+Historical aircraft records are treated as established only where supported by official/public documentation. Reconstructed aircraft geometry is a model. Classified or unreleased design claims are excluded from factual conclusions. Declassified material is historical/technical source material unless independently validated.
 
 ## Version
 
-**Biupiu NFT Research Index v0.6 — Official MM Branch + Simulation Branches — September 2026**
+**Biupiu NFT Research Index v0.7 — AERO-STEALTH / SR-71 Geometry Integration — September 2026**
