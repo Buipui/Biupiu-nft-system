@@ -1,6 +1,6 @@
 {
   "name": "BIUPIU — Ancient Water / Computational Flow I",
-  "description": "Original computational artwork exploring ancient water-management principles through flow fields, terrain/network geometry and parametric transformation. This work is a reconstructed artistic/computational interpretation and is not presented as an exact archaeological reconstruction.",
+  "description": "Original computational artwork exploring ancient water-management principles through flow fields, terrain/network geometry and parametric transformation. This is a reconstructed artistic/computational interpretation and is not presented as an exact archaeological reconstruction.",
   "collection": "BIUPIU / ORIGIN",
   "nft_id": "BIU-NFT-0001",
   "research_id": "BIU-ANC-001",
@@ -9,29 +9,22 @@
   "class": "CLASS-C — Computational Artifact",
   "evidence_classification": "RECONSTRUCTED",
   "artwork_type": "Generative Computational Art",
-  "algorithm": {
-    "id": "FLOW-GEOMETRY-001",
-    "version": "0.1"
-  },
-  "generation": {
-    "seed": null,
-    "parameters_status": "TBD"
-  },
-  "edition": {
-    "number": 1,
-    "size": 25,
-    "status": "PROPOSED"
-  },
+  "brand": {"brand_lock": "brand/BIUPIU-NFT-BRAND-LOCK-v1.0.md", "logo_reference": "User-supplied BIUPIU DNA/leaf/orbital-node emblem", "banner_reference": "User-supplied BIUPIU wide biotechnology/regenerative-innovation banner", "palette": {"deep_forest": "#063D2C", "biotech_emerald": "#0E5A45", "teal_flow": "#0F8C86", "warm_gold": "#D4AF5A", "pale_gold": "#E7D8A8", "soft_ivory": "#F2EBDD", "carbon_black": "#07110D"}},
+  "algorithm": {"id": "FLOW-GEOMETRY-001", "version": "0.1"},
+  "generation": {"seed": 20260915, "parameters_status": "RECORDED_PROTOTYPE", "parameters": {"width": 1600, "height": 1600, "paths": 120, "steps": 180, "step_size": 5.0}, "field_model": "tangential + radial field with bounded seeded perturbation", "output_format": "SVG"},
+  "visual_reference": {"status": "REFERENCE_ONLY", "record": "releases/ORIGIN-001/visual/AI-VISUAL-REFERENCE-2026-09-16.md", "ai_visual_is_canonical_asset": false},
+  "edition": {"number": 1, "size": 25, "status": "PROPOSED"},
   "creator": "Biupiu",
   "creation_year": 2026,
   "artwork_uri": null,
   "metadata_uri": null,
   "git_commit": null,
-  "asset_hash": null,
+  "asset_hash": "fdb756b572bf260edb1fc0e1d9f1ed890f1c561d866fc769dfe8d6640b052a4e",
   "metadata_hash": null,
   "blockchain": null,
   "contract_address": null,
   "token_id": null,
   "license": "To be approved before minting",
-  "ip_sensitivity": "IP review required before release"
+  "ip_sensitivity": "IP review required before release",
+  "mint_status": "NOT_MINTED"
 }
