@@ -1,6 +1,6 @@
 # BIUPIU Speculative Video Research Index
 
-**Version:** 1.2  
+**Version:** 1.3  
 **Date:** 15 September 2026  
 **Status:** Indexed for hypothesis generation and controlled research
 
@@ -26,7 +26,8 @@ Creator ≠ source ≠ original evidence. Each record should trace the claim bac
 ## VOC — Vibes of Cosmos
 
 Dedicated source record: `research/SPEC-VOC-SOURCE.md`  
-Dedicated YouTube index: `research/SPEC-VOC-YOUTUBE-INDEX.md`
+Dedicated YouTube index: `research/SPEC-VOC-YOUTUBE-INDEX.md`  
+Dedicated Atlas integration: `research/SPEC-VOC-ATLAS-INTEGRATION.md`
 
 - `SPEC-VOC-001` World Map by Plasma Moon — D — reconstruct projection and compare with geodetic/satellite/bathymetric baselines.
 - `SPEC-VOC-002` Extended World Map — D/E by claim — classify conventional, historical, hypothetical and fictional features separately.
@@ -46,6 +47,7 @@ Dedicated YouTube index: `research/SPEC-VOC-YOUTUBE-INDEX.md`
 - `SPEC-VOC-016` Alternative map-version comparison — D — preserve versions and compare changed geography/projection/claims.
 - `SPEC-VOC-017` Pangaia/Middle Earth/Narnia provenance — M/D depending on feature — separate physical, historical, mythological and fictional geography.
 - `SPEC-VOC-YT-001..010` — YouTube source-family records; see `SPEC-VOC-YOUTUBE-INDEX.md`.
+- `VOC-ATLAS-001..012` — dedicated map/Atlas analytical records; see `SPEC-VOC-ATLAS-INTEGRATION.md`.
 
 ## ROBERT SEPEHR / ATLANTEAN GARDENS
 
@@ -87,6 +89,8 @@ Dedicated YouTube index: `research/SPEC-VOC-YOUTUBE-INDEX.md`
 - `SPEC-CON-006` Alternative world maps/Pangaia — VOC + other cartographic traditions — D.
 - `SPEC-CON-007` Magnetic/celestial geography — VOC + sacred-geography hypotheses — D.
 - `SPEC-CON-008` VOC/Sepehr/Divergent shared claims — D — apply `CODEX-SOURCEGRAPH` before treating convergence as corroboration.
+- `SPEC-CON-009` VOC map versions versus Sepehr/Atlantean Gardens geography — D — compare feature genealogy, chronology and independent derivation.
+- `SPEC-CON-010` VOC Pangaia versus scientifically reconstructed Pangaea — D — separate geological reconstruction from alternative cartography.
 
 See `research/SPEC-CONVERGENCE.md` for source genealogy and independence rules.
 
@@ -113,6 +117,6 @@ Source videos, maps, photographs, thumbnails and artwork remain third-party mate
 
 ## Execution status
 
-**Executed:** Vibes of Cosmos YouTube/source layer formally expanded into a dedicated permanent source record and YouTube index; VOC was integrated with the existing Sepehr/Atlantean Gardens and Divergent speculative layers; cross-source convergence and CODEX controls were updated.
+**Executed:** Vibes of Cosmos YouTube/source layer formally expanded into a dedicated permanent source record and YouTube index; VOC was integrated with the existing Sepehr/Atlantean Gardens and Divergent speculative layers; a dedicated `BIUPIU-VOC` Atlas integration was added with versioned map records, alternative-cartography layers, Antarctica/hidden-land controls, Pangaia separation, map-forensics workflow and CODEX integration; cross-source convergence controls were updated.
 
 **Next:** claim-by-claim extraction from highest-priority videos, primary-source verification and individual CODEX test records.
