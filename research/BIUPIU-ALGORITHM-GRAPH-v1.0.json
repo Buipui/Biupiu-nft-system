@@ -1,0 +1,27 @@
+{
+  "schema_version": "1.0.0",
+  "status": "ACTIVE",
+  "principle": "Algorithms evolve; released records do not.",
+  "nodes": [
+    {
+      "id": "BIU-ALG-GEO-FLOW-001@0.1.0",
+      "family_id": "BIU-ALG-GEO-FLOW-001",
+      "version": "0.1.0",
+      "research_ids": ["BIU-ANC-001", "BIU-GEO-001"],
+      "release_ids": ["ORIGIN-001"],
+      "nft_ids": ["BIU-NFT-0001"],
+      "status": "PROTOTYPE",
+      "parent": null,
+      "source": "releases/ORIGIN-001/algorithm/flow_geometry_001.py"
+    }
+  ],
+  "edges": [],
+  "future_edge_types": [
+    "EVOLVES_FROM",
+    "COMPOSES_WITH",
+    "VALIDATES",
+    "DERIVES_FROM_RESEARCH",
+    "GENERATES_RELEASE",
+    "FORKS_FROM"
+  ]
+}
