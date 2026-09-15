@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 0.4  
+**Version:** 0.5  
 **Updated:** September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -17,11 +17,43 @@
 | MM | Metamaterials | Dedicated metamaterials research and simulation branch; cross-reference NASA, patents and stealth geometry |
 | ATH | Ancient Technology / Computational Geometry | Ancient-technology research themes linked to computational modelling |
 | ATH-HO-AFRICA | Ancient Africa / Human Origins | Southern African archaeology, Indian Ocean trade, comparative traditions, archaeogenetics and human evolution |
+| WOL-KNY | Water-of-Life / Knysna–Millwood Geohydrology | Springs, rivers, gold-bearing geology, water chemistry, archaeology, cultural water traditions and testable geochemical hypotheses |
 | NFT-IP | NFT / Provenance / Art IP | Artwork records, invention register, provenance and crowdfunding releases |
 
-## New indexed record
+## New indexed record — WOL-KNY
 
-### ATH-HO-AFRICA — Ancient Africa, Human Origins & Comparative Traditions
+`research/WATER-OF-LIFE-KNYSNA-MILLWOOD-GEOHYDROLOGY.md`
+
+The WOL-KNY branch integrates the previously developed water-of-life/Fountain-of-Youth research model with the Knysna–Millwood landscape. It cross-references:
+
+- Millwood goldfield and historical gold workings
+- Karatara River and historical alluvial-gold observations
+- Homtini and Knysna drainage systems
+- Millwood/Jubilee Creek and upstream/downstream sampling logic
+- freshwater springs and groundwater/surface-water interaction
+- Knysna Estuary and the Milkwood/Knysna Heads endpoint
+- Millwood/Goudveld San rock-art and archaeological context
+- medicinal/ecological landscape research
+- Barberton and Witwatersrand comparison sites
+- dissolved, colloidal and particulate geochemistry
+- strict validation requirements for any claim involving unusual gold/material signatures
+
+### Sampling priority hierarchy
+
+1. Millwood goldfield upper creek/spring zone
+2. Millwood/Jubilee Creek immediately downstream of historic workings
+3. Upper Karatara River / gold-bearing tributaries
+4. Karatara historical alluvial-gold area
+5. Homtini tributaries around Millwood/Goudveld
+6. Upper Knysna River below tributary inputs
+7. Freshwater springs/seeps feeding the catchment
+8. Freshwater–estuary transition
+9. Upper/middle Knysna Estuary
+10. Milkwood / lower Knysna Heads endpoint/control
+
+Exact spring coordinates remain a field/GIS verification task; no unverified coordinates are stored as established facts.
+
+## Ancient Africa / Human Origins — ATH-HO-AFRICA
 
 `research/ANCIENT-AFRICA-HUMAN-ORIGINS-CROSS-REFERENCE.md`
 
