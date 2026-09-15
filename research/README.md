@@ -11,6 +11,8 @@ This directory is for research supporting the Biupiu NFT / computational-art por
 - **PHO** — Wits-linked photonics, FSO, LiFi/VLC, structured/topological light, turbulence and optical computing
 - **LES** — photovoltaic conversion, light-based energy systems and storage
 - **CRM** — crystals, photonic materials, quantum-dot materials and advanced materials
+- **MM** — metamaterials and metasurfaces, including electromagnetic, optical, mechanical and engineered-material systems
+- **AERO-STEALTH** — public-source stealth-craft, SR-71/Blackbird and computational high-speed aircraft geometry research
 - **ACT** — ancient civilizations, engineering and technology reconstruction
 - **TB** — Thunderbolts / Electric-Universe material as an exploratory hypothesis source
 - **PSL** — plausibility, simulation and experimental-control methodology
@@ -21,9 +23,13 @@ This directory is for research supporting the Biupiu NFT / computational-art por
 
 ## Key Cross-Reference
 
-`Wits → PHO → PH-QPM → CG-3D → TORUS → EEE/LES/CRM → PSL → NFT artwork/IP`
+`Wits → PHO → PH-QPM → CG-3D → TORUS → EEE/LES/CRM/MM → AERO-STEALTH → PSL → NFT artwork/IP`
 
-ResearchGate and Emerald Insight provide complementary literature discovery and cross-reference. Thunderbolts material is kept in a separate exploratory evidence class and is never treated as equivalent to peer-reviewed or experimental evidence.
+ResearchGate and Emerald Insight provide complementary literature discovery and cross-reference. NASA, U.S. Air Force and other official public/declassified government sources are preferred for aerospace-history verification. Thunderbolts material is kept in a separate exploratory evidence class and is never treated as equivalent to peer-reviewed or experimental evidence.
+
+## Aerospace Research Boundary
+
+AERO-STEALTH uses only public, officially released, licensed or independently generated information. It does not claim access to classified aircraft designs, classified performance data or non-public military information. Reconstructed geometry is treated as a computational model, not as a verified reproduction of a classified signature or system.
 
 ## Research Record Template
 
