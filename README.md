@@ -6,6 +6,20 @@ The Biupiu NFT System is a structured digital-asset, computational-art, crowdfun
 
 The founding phase is designed as a **crowdfunding project to help launch and establish the Biupiu research and development ecosystem**. It connects original artwork and computational outputs to documented research while maintaining a clear boundary between NFT ownership and underlying Biupiu intellectual property.
 
+## Research Architecture
+
+Biupiu now uses a permanent multi-layer research stack:
+
+**Primary archaeology/history → JSTOR → AnthroSource → ResearchGate → Emerald Insight → ancient texts/scientific data → patents/prior art → public/declassified engineering → GitHub/BIUPIU CODEX → computational validation → physical validation → IP/NFT gate.**
+
+- **AnthroSource** — anthropology, archaeology, craft, technology transmission, human-material systems and cultural ecology.
+- **ResearchGate** — scientific/engineering literature discovery and cross-reference.
+- **Emerald Insight** — sustainability, water, agriculture, infrastructure, engineering management, optimisation and implementation.
+- **GitHub / BIUPIU CODEX** — reproducible code, algorithms, simulation, datasets and computational engineering.
+- **Patents/declassified sources** — prior art and historical public engineering context.
+
+See `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`, `research/BIUPIU-EVIDENCE-LAYER-ARCHITECTURE.md` and `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`.
+
 ## Core Connections
 
 - Original physical and digital artworks
@@ -37,14 +51,6 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `research/` — indexed research and cross-references.
 - `releases/` — collection and crowdfunding release plans.
 
-## Founding Collection
-
-### BIUPIU / ORIGIN
-
-The first collector-facing collection documents the beginning of the Biupiu ecosystem. Initial themes are Genesis, Ancient Systems, Geometry, Regenerative Earth, Biological Geometry, HempCarbon, Energy, Water, Computational Engineering and Future Systems.
-
-The initial specialist artwork stream is **BIUPIU / ANCIENT SYSTEMS × COMPUTATIONAL GEOMETRY**.
-
 ## Research → NFT Pipeline
 
 `Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector`
@@ -57,6 +63,8 @@ Dedicated stream: `NFT-ATH-GEO`
 Record: `research/NFT-ANCIENT-SYSTEMS-COMPUTATIONAL-GEOMETRY.md`
 
 Planned themes include ancient water engineering, agricultural terraces and waru-waru systems, mining and metallurgy, ceramics, stone construction, architectural geometry, archaeoastronomy, ancient transport/trade networks and southern African archaeological technologies.
+
+AnthroSource is now specifically included for ancient-technology research, alongside primary archaeology, JSTOR, ResearchGate and Emerald. Anthropology sources help distinguish artefact/process evidence from interpretations about human behaviour, technology transmission and social organisation.
 
 Potential computational systems include circles, spirals, fractals, Voronoi structures, tessellation, symmetry, topology, polyhedra, flow fields, networks, phyllotaxis, recursion and parametric surfaces/meshes.
 
@@ -94,11 +102,11 @@ NFT ownership does not automatically transfer Biupiu patents, inventions, tradem
 
 Third-party images, code, datasets and research outputs require rights/licence review before commercial use. Potentially patentable or IP-sensitive information may remain private until appropriate protection has been considered.
 
-## Existing Research Index
+## Master Research Index
 
-`research/INDEX.md` contains the wider Biupiu research streams, including CG-3D, CODEX, PH-QPM, PHO, TORUS, LES, MM/MM-NASA, STEALTH-GEO, IP-PA, DECLASS, ATH, ATH-H, ATH-HO-AFRICA, GEOARCH, LAND-GIS, ALA, PALAEO/COAST, GEO-MAG, HEMP-EM, HEMPCARBON, MATERIALS, ENERGY, MARINE, AERO, WATER, WOL-KNY, BIT, speculative-source controls and NFT/IP.
+`research/INDEX.md` is now v2.0 and contains the master Biupiu research streams and evidence-source architecture. The department architecture is `research/BIUPIU-DEPARTMENT-INDEX.md` v2.0. AnthroSource records are maintained in `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md`; source-to-department routing is in `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`; computational queues remain in `research/CODEX-DEPARTMENT-QUEUES.md`.
 
 ## Version
 
-**Biupiu NFT System v1.0 — Founding Crowdfunding + Ancient Systems × Computational Geometry Integration**  
+**Biupiu NFT System v1.1 — Research Evidence Stack + AnthroSource + Emerald + GitHub/CODEX Integration**  
 **Updated:** 15 September 2026
