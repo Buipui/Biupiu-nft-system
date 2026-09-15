@@ -1,14 +1,17 @@
 {
   "name": "biupiu-nft-system",
-  "version": "1.2.1",
+  "version": "1.3.0",
   "private": true,
   "description": "Biupiu NFT smart contracts, deployment tooling, minting scripts and research-linked provenance architecture.",
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
     "deploy:local": "hardhat run deploy-nft.js --network hardhat",
+    "deploy:registry:local": "hardhat run deploy-registry.js --network hardhat",
     "deploy:sepolia": "hardhat run deploy-nft.js --network sepolia",
+    "deploy:registry:sepolia": "hardhat run deploy-registry.js --network sepolia",
     "deploy:amoy": "hardhat run deploy-nft.js --network polygonAmoy",
+    "deploy:registry:amoy": "hardhat run deploy-registry.js --network polygonAmoy",
     "mint:sepolia": "hardhat run mint-nft.js --network sepolia",
     "mint:amoy": "hardhat run mint-nft.js --network polygonAmoy"
   },
