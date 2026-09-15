@@ -27,6 +27,8 @@ Biupiu uses a permanent multi-layer research stack:
 - Invention and concept records
 - NFT metadata and provenance
 - EVM smart contracts and controlled minting
+- **Biupiu Company Algorithm Network** — reusable, versioned computational families
+- **Biupiu Blockchain Registry Network** — planned hash/identity anchoring layer
 - Signed physical works and art-book records
 - Founding crowdfunding releases
 
@@ -41,7 +43,7 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `FOUNDING-CROWDFUNDING-BRIEF.md` — public project brief for the founding NFT crowdfunding campaign.
 - `metadata/` — NFT metadata records.
 - `artworks/` — artwork records and provenance references.
-- `research/` — indexed research and cross-references.
+- `research/` — indexed research, algorithm and blockchain network records.
 - `releases/` — collection and crowdfunding release plans.
 - `contracts/BiupiuNFT.sol` — EVM ERC-721 reference contract.
 - `hardhat.config.js` — Hardhat network/solidity configuration.
@@ -50,12 +52,21 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `.env.example` — local configuration template; never commit `.env` or private keys.
 - `WEB3-MINTING.md` — deployment and minting guide.
 - `NFT-MINTING-ARCHITECTURE-v2.0.md` — blockchain architecture and release gate.
+- `research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md` — reusable company algorithm-network architecture.
+- `research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md` — immutable algorithm-family/version registry.
+- `research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md` — planned research/release blockchain anchoring architecture.
 
-## Research → NFT → Blockchain Pipeline
+## Research → Algorithm → NFT → Blockchain Pipeline
 
-`Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → stand-alone artwork + provenance artwork → metadata → asset hashes → smart contract → testnet → test mint → blockchain record → collector`
+`Research → source/evidence → Research ID → computational model → algorithm family/version → parameters + seed → 01_PROVENANCE + 02_STANDALONE → release manifest → hashes → metadata → IP/licence gate → blockchain registry anchor → smart contract → testnet → test mint → verification → production record`
 
-Every serious artwork receives a Biupiu Research ID and a separate NFT ID. One research project may generate multiple artworks or editions.
+Every serious artwork receives a Biupiu Research ID and a separate NFT ID. One research project may generate multiple artworks or editions, and one algorithm family may generate multiple releases.
+
+## Algorithm network rule
+
+**Algorithms evolve; released records do not.**
+
+Future NFTs should reuse the computational kernel where appropriate. A change to an algorithm creates a new version and never silently changes the historical algorithm used by an earlier NFT. Every release records the exact algorithm version, parameters, seed, source commit and asset hashes.
 
 ## Two-Image NFT Standard
 
@@ -77,7 +88,11 @@ Development/testnet targets:
 
 The reference contract provides capped supply, controlled minting, batch minting, token URI storage and ERC-2981 royalty signalling. Production use remains gated by contract testing, testnet deployment, verification, IP/licence review and final release approval.
 
-**Never commit private keys, seed phrases or `.env` files.**
+## Blockchain Network Rule
+
+The initial Biupiu blockchain architecture is an **EVM anchoring/registry network**, not an independently launched Biupiu Layer-1. GitHub remains the canonical detailed provenance record; approved hashes and release identities can later be anchored on-chain through a dedicated `BiupiuResearchRegistry` contract.
+
+The registry should record commitments such as release ID, Research ID, algorithm ID/version, manifest/artwork/metadata hashes and optional NFT contract/token references. Confidential research, private datasets, secrets and unpublished IP remain off-chain.
 
 ## Ancient Systems × Computational Geometry
 
@@ -108,7 +123,7 @@ Artistic interpretation must not be presented as archaeological or scientific pr
 
 Where applicable, each computational artwork preserves Research ID, NFT ID, source/reference genealogy, evidence classification, algorithm name/version, software/dependencies, input data, parameters, generation seed, Git version/commit, artwork version, asset hash, metadata hash, blockchain information and applicable licence.
 
-Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Smart Contract → Blockchain Token.**
+Provenance chain: **Research Source → Evidence Classification → Model → Algorithm Family/Version → Parameters → Artwork Pair → Metadata → Release Manifest Hash → Registry Anchor → Smart Contract → Blockchain Token.**
 
 ## Crowdfunding
 
@@ -124,9 +139,9 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 ## Master Research Index
 
-`research/INDEX.md` is the master Biupiu research index. It now includes `NFT-WEB3`, `NFT-MINT` and `NFT-EVM` routing and connects the research-to-art pipeline to the smart-contract/minting layer.
+`research/INDEX.md` remains the master R&D research index. The new algorithm and blockchain network specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry releases.
 
 ## Version
 
-**Biupiu NFT System v1.2 — EVM Smart Contract + Web3 Minting Architecture + Two-Image NFT Standard**  
+**Biupiu NFT System v1.3 — Company Algorithm Network + Blockchain Registry Architecture + EVM Minting + Two-Image NFT Standard**  
 **Updated:** 16 September 2026
