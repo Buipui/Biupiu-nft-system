@@ -1,4 +1,4 @@
-# BIUPIU NFT COLLECTION RELEASE INDEX v1.0
+# BIUPIU NFT COLLECTION RELEASE INDEX v1.1
 
 **Updated:** 2026-09-16  
 **Status:** ACTIVE MASTER INDEX
@@ -10,13 +10,38 @@ Every future BIUPIU NFT release follows the two-image standard:
 - `01_PROVENANCE` — research/provenance presentation image.
 - `02_STANDALONE` — independent collector artwork.
 
-Image generation is currently paused due to tool availability/rate limits; no final visual asset is being represented as generated in this update.
+Image generation is currently paused; no final visual asset is being represented as generated in this update.
+
+## Company algorithm network rule
+
+Every computational NFT is now a node in the reusable **Biupiu Company Algorithm Network**.
+
+Primary architecture: `research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md`  
+Algorithm registry: `research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md`
+
+Release lineage:
+
+`Research ID → Algorithm Family → Algorithm Version → Parameters/Seed → Artwork Pair → Release Manifest → Hashes`
+
+**Algorithms evolve; released records do not.** If an algorithm changes, a new version is registered. Historical NFT records continue to reference the exact version used for their generation.
+
+## Blockchain network rule
+
+The initial Biupiu blockchain layer is an EVM anchoring/registry architecture rather than an independent Biupiu Layer-1.
+
+Registry architecture: `research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md`
+
+Planned chain of custody:
+
+`GitHub release record → release manifest/hash → BiupiuResearchRegistry → BiupiuNFT token → blockchain transaction`
+
+Confidential IP and private research remain off-chain. On-chain records should contain only approved identifiers, hashes and release references.
 
 ## Current releases
 
-| Release | NFT ID | Collection | Subject | Research linkage | Status |
-|---|---|---|---|---|---|
-| ORIGIN-001 | BIU-NFT-0001 | BIUPIU / ORIGIN | Ancient Water / Computational Flow I | BIU-ANC-001 + BIU-GEO-001 | Prototype / two-image architecture applied |
+| Release | NFT ID | Collection | Subject | Research linkage | Algorithm | Status |
+|---|---|---|---|---|---|---|
+| ORIGIN-001 | BIU-NFT-0001 | BIUPIU / ORIGIN | Ancient Water / Computational Flow I | BIU-ANC-001 + BIU-GEO-001 | BIU-ALG-GEO-FLOW-001@0.1.0 | Prototype / two-image architecture applied |
 
 ## Planned release queue
 
@@ -36,7 +61,7 @@ Image generation is currently paused due to tool availability/rate limits; no fi
 
 Each release must identify:
 
-`Research ID → evidence level → source record → model → algorithm → parameters → seed → artwork pair → hashes → metadata → licence → IP gate`
+`Research ID → evidence level → source record → model → algorithm family/version → parameters → seed → artwork pair → hashes → release manifest → licence → IP gate → blockchain anchor → token`
 
 Research records may cross-link to the established Biupiu department map, CODEX/computational queues and evidence-source layers including ResearchGate, Emerald Insight, JSTOR, AnthroSource, primary texts, patents/declassified records and GitHub where relevant. Claims from speculative or non-peer-reviewed sources must remain clearly classified and require independent validation before being presented as factual research.
 
