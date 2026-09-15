@@ -8,17 +8,9 @@ The founding phase is designed as a **crowdfunding project to help launch and es
 
 ## Research Architecture
 
-Biupiu now uses a permanent multi-layer research stack:
+Biupiu uses a permanent multi-layer research stack:
 
 **Primary archaeology/history → JSTOR → AnthroSource → ResearchGate → Emerald Insight → ancient texts/scientific data → patents/prior art → public/declassified engineering → GitHub/BIUPIU CODEX → computational validation → physical validation → IP/NFT gate.**
-
-- **AnthroSource** — anthropology, archaeology, craft, technology transmission, human-material systems and cultural ecology.
-- **ResearchGate** — scientific/engineering literature discovery and cross-reference.
-- **Emerald Insight** — sustainability, water, agriculture, infrastructure, engineering management, optimisation and implementation.
-- **GitHub / BIUPIU CODEX** — reproducible code, algorithms, simulation, datasets and computational engineering.
-- **Patents/declassified sources** — prior art and historical public engineering context.
-
-See `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`, `research/BIUPIU-EVIDENCE-LAYER-ARCHITECTURE.md` and `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`.
 
 ## Core Connections
 
@@ -34,6 +26,7 @@ See `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`, `research/BIUPIU-EVID
 - Energy, water and biological systems
 - Invention and concept records
 - NFT metadata and provenance
+- EVM smart contracts and controlled minting
 - Signed physical works and art-book records
 - Founding crowdfunding releases
 
@@ -50,12 +43,41 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `artworks/` — artwork records and provenance references.
 - `research/` — indexed research and cross-references.
 - `releases/` — collection and crowdfunding release plans.
+- `contracts/BiupiuNFT.sol` — EVM ERC-721 reference contract.
+- `hardhat.config.js` — Hardhat network/solidity configuration.
+- `deploy-nft.js` — deployment script.
+- `mint-nft.js` — minting script.
+- `.env.example` — local configuration template; never commit `.env` or private keys.
+- `WEB3-MINTING.md` — deployment and minting guide.
+- `NFT-MINTING-ARCHITECTURE-v2.0.md` — blockchain architecture and release gate.
 
-## Research → NFT Pipeline
+## Research → NFT → Blockchain Pipeline
 
-`Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector`
+`Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → stand-alone artwork + provenance artwork → metadata → asset hashes → smart contract → testnet → test mint → blockchain record → collector`
 
 Every serious artwork receives a Biupiu Research ID and a separate NFT ID. One research project may generate multiple artworks or editions.
+
+## Two-Image NFT Standard
+
+Every future NFT release is designed as a pair:
+
+1. **01_PROVENANCE** — BIUPIU branded research/provenance presentation.
+2. **02_STANDALONE** — independent collector-facing computational artwork.
+
+The pair shares the research/release record but receives independent versions and hashes.
+
+## Web3 / EVM Minting Layer
+
+The current development stack uses Solidity, OpenZeppelin Contracts, Hardhat and ethers.js.
+
+Development/testnet targets:
+
+- Ethereum Sepolia — chain ID 11155111.
+- Polygon Amoy — chain ID 80002.
+
+The reference contract provides capped supply, controlled minting, batch minting, token URI storage and ERC-2981 royalty signalling. Production use remains gated by contract testing, testnet deployment, verification, IP/licence review and final release approval.
+
+**Never commit private keys, seed phrases or `.env` files.**
 
 ## Ancient Systems × Computational Geometry
 
@@ -63,8 +85,6 @@ Dedicated stream: `NFT-ATH-GEO`
 Record: `research/NFT-ANCIENT-SYSTEMS-COMPUTATIONAL-GEOMETRY.md`
 
 Planned themes include ancient water engineering, agricultural terraces and waru-waru systems, mining and metallurgy, ceramics, stone construction, architectural geometry, archaeoastronomy, ancient transport/trade networks and southern African archaeological technologies.
-
-AnthroSource is now specifically included for ancient-technology research, alongside primary archaeology, JSTOR, ResearchGate and Emerald. Anthropology sources help distinguish artefact/process evidence from interpretations about human behaviour, technology transmission and social organisation.
 
 Potential computational systems include circles, spirals, fractals, Voronoi structures, tessellation, symmetry, topology, polyhedra, flow fields, networks, phyllotaxis, recursion and parametric surfaces/meshes.
 
@@ -88,7 +108,7 @@ Artistic interpretation must not be presented as archaeological or scientific pr
 
 Where applicable, each computational artwork preserves Research ID, NFT ID, source/reference genealogy, evidence classification, algorithm name/version, software/dependencies, input data, parameters, generation seed, Git version/commit, artwork version, asset hash, metadata hash, blockchain information and applicable licence.
 
-Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Blockchain Token.**
+Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Smart Contract → Blockchain Token.**
 
 ## Crowdfunding
 
@@ -104,9 +124,9 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 ## Master Research Index
 
-`research/INDEX.md` is now v2.0 and contains the master Biupiu research streams and evidence-source architecture. The department architecture is `research/BIUPIU-DEPARTMENT-INDEX.md` v2.0. AnthroSource records are maintained in `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md`; source-to-department routing is in `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`; computational queues remain in `research/CODEX-DEPARTMENT-QUEUES.md`.
+`research/INDEX.md` is the master Biupiu research index. It now includes `NFT-WEB3`, `NFT-MINT` and `NFT-EVM` routing and connects the research-to-art pipeline to the smart-contract/minting layer.
 
 ## Version
 
-**Biupiu NFT System v1.1 — Research Evidence Stack + AnthroSource + Emerald + GitHub/CODEX Integration**  
-**Updated:** 15 September 2026
+**Biupiu NFT System v1.2 — EVM Smart Contract + Web3 Minting Architecture + Two-Image NFT Standard**  
+**Updated:** 16 September 2026
