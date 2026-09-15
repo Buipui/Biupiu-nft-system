@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.0  
+**Version:** 2.1  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -10,7 +10,9 @@
 **Core doctrine:** No idea is rejected merely because it is unconventional. No idea is accepted merely because it is fascinating. Every important claim becomes a testable research object.
 
 ## Permanent research operating protocol
-`research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md` is now the default workflow. `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md` routes each source layer into relevant Biupiu departments.
+`research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md` is the default workflow. `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md` routes each source layer into relevant Biupiu departments.
+
+**Ancient-technology rule:** ancient knowledge generates the question; archaeology establishes the historical record; anthropology explains human-material context; science tests mechanisms; engineering converts validated mechanisms into designs; computation models and optimises them; experiments decide what works; IP review determines what can be protected or commercialised.
 
 ## Repository boundary
 This is the personal Biupiu computational-art, invention, speculative-research and R&D/IP track. It remains separate from the immediate commercial DTIC/InvestSA library unless explicitly transferred.
@@ -37,7 +39,7 @@ This is the personal Biupiu computational-art, invention, speculative-research a
 - `DIGITAL-TWIN` — physical systems, sensor data, models and optimisation loops.
 - `ROBOTICS` / `ADV-MFG` — automation, robotics, machine vision, additive/digital manufacturing and manufacturing constraints.
 - `BIOMED` — biomedical and life-science technology R&D.
-- `ATH` / `ATH-H` — Ancient Applied Technology and anthropology/human-material systems.
+- `AAT` / `AAT-H` — Ancient Applied Technology and anthropology/human-material systems.
 - `GEOARCH` / `LAND-GIS` / `ALA` — geoarchaeology, historical GIS and Ancient Landscape Atlas.
 - `PALAEO` / `COAST` — palaeogeography, ancient coastlines and submerged landscapes.
 - `EMPIRE` / `CULTURE` — ancient political geography and comparative culture/technology.
@@ -58,7 +60,11 @@ Highest-priority layer for direct claims about physical sites, artefacts, chrono
 Core scholarly layer for archaeology, anthropology, history, material culture, technology, environment and ancient civilisations.
 
 ### `SRC-ANTHROSOURCE` — AnthroSource / American Anthropological Association
-Core anthropology/archaeology layer for craft production, technology transmission, human-material relationships, cultural ecology and social organisation. See `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md` for initial indexed records and exact source metadata.
+Core anthropology/archaeology layer for craft production, technology transmission, human-material relationships, cultural ecology, social organisation and ancient agricultural landscapes. See `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md` for indexed records and exact source metadata.
+
+**Mandatory use cases:** ancient technology process studies; craft and materiality; technology transmission; human-material interaction; cultural ecology; agricultural landscapes; archaeological landscape methods; and anthropology-led interpretation of technological behaviour.
+
+**Important boundary:** AnthroSource supports anthropological/archaeological propositions and research framing. It does not automatically prove an engineering performance claim. Engineering mechanisms must be independently tested through scientific, computational or experimental evidence.
 
 ### `SRC-RESEARCHGATE` — ResearchGate/scientific literature
 Scientific and engineering discovery layer for archaeometry, metallurgy, materials, genetics, experimental archaeology, computational research and engineering. Prefer publisher/institutional/DOI versions for final evidence records.
@@ -87,6 +93,19 @@ GIS/CAD/CFD/FEA/EM/thermal/acoustic/statistical/network/optimisation and digital
 ### `SRC-EXPERIMENT` — Physical validation
 Biupiu laboratory/field reconstruction, prototypes, sensor measurements and repeatability studies.
 
+## AnthroSource master register integration
+`research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md` is now a formal sub-index of this master index.
+
+Current indexed records include:
+
+1. **AS-AAT-001 — Agricultural landscapes and relict field systems:** Casana (2024), *The state of the field: Emerging approaches to the archaeology of agricultural landscapes*, DOI 10.1111/apaa.12181. Routes to `AAT/AGRI/GEOARCH/LAND-GIS/ALA/WATER/CODEX`. Use for landscape-scale agricultural archaeology and modern archaeological methods; not as proof of a particular Biupiu technology.
+2. **AS-AAT-002 — Technology as material and behavioural selection:** Bleed (1997), *Content as Variability, Result as Selection: Toward a Behavioral Definition of Technology*, DOI 10.1525/ap3a.1997.7.1.95. Routes to `AAT/AAT-H/MATERIALS/GEOMETRY/CODEX/IP`. Supports process/skill/selection/context-aware technology records.
+3. **AS-AAT-003 — Craft production, fibres and metals:** Hendon (2015), *Producing Goods, Shaping People: The Materiality of Crafting*, DOI 10.1111/apaa.12068. Routes to `AAT/AAT-H/HEMP/TEXTILES/MATERIALS/BIOCARBON/COMPOSITES`. Bridges ancient craft/process research with modern material and process engineering questions.
+4. **AS-AAT-004 — Early blade technologies:** Bar-Yosef (1999), *The Big Deal about Blades: Laminar Technologies and Human Evolution*, DOI 10.1525/aa.1999.101.2.322. Routes to `AAT/AAT-H/MATERIALS/GEOMETRY/PALAEO/CODEX`. Supports comparative study of geometry/process evolution without assuming a single technological origin.
+5. **AS-AAT-005 — Stone-tool making and materiality:** Efrati (2026), *Reframing the Chipped Edge: Combining Materiality, Ontology, and Embodiment to Rethink Stone Tool-Making and Human Conscious Behavior in the Paleolithic Past*, DOI 10.1111/anoc.70016. Routes to `AAT/AAT-H/GEOMETRY/MATERIALS/PALAEO`. Use for contemporary anthropology of stone-tool making and embodied human-material interaction; do not infer untested engineering mechanisms.
+
+**Methodological extensions now required:** future ancient-agriculture searches should cross-reference agricultural-landscape archaeology, LiDAR/aerial imagery, ecological datasets and Indigenous/traditional ecological knowledge where relevant; future ancient-craft searches should record materials, skills, process, labour/social context and output; future ancient-technology claims must distinguish archaeological evidence from modern engineering reconstruction.
+
 ## Evidence workflow
 `hypothesis/source → exact claim → source genealogy → PRIMARY → JSTOR → ANTHROSOURCE → RESEARCHGATE → EMERALD → TEXTS/SCIENCE → patents/declassified → GIS/CODEX → experiment → evidence status → IP/NFT gate`
 
@@ -98,6 +117,8 @@ Three videos repeating the same source count as one source lineage, not three in
 `AAT/AAT-H ↔ GEOARCH/LAND-GIS/ALA/PALAEO ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
 
 `JSTOR/ANTHROSOURCE/RESEARCHGATE/EMERALD/PRIMARY/TEXTS ↔ every relevant AAT division`
+
+`ANTHROSOURCE → AAT/AAT-H → AGRI/WATER/GEOARCH/LAND-GIS → MATERIALS/HEMP/TEXTILES → CODEX/GEOMETRY`
 
 `BIO/BIO-GEN → AGRI → HEMP → BIOCARBON/BIOCHEM → MATERIALS/COMPOSITES/TEXTILES/COAT`
 
@@ -120,6 +141,7 @@ Three videos repeating the same source count as one source lineage, not three in
 5. **Digital Ancient Technology Atlas:** AAT ↔ AAT-H ↔ GEOARCH ↔ ALA ↔ GEOMETRY ↔ CODEX ↔ NFT-ATH-GEO.
 6. **Photonics / Structured Light:** PHOTONICS ↔ PH-QPM ↔ COMPUTE ↔ AI ↔ DIGITAL-TWIN ↔ ELECTROMAG.
 7. **Metamaterials:** METAMATERIALS ↔ MM-NASA ↔ MATERIALS ↔ PHOTONICS/ELECTROMAG ↔ GEOMETRY ↔ CODEX.
+8. **Anthropology of Technology / Human-Material Systems:** AAT-H ↔ ANTHROSOURCE ↔ AAT ↔ MATERIALS ↔ AGRI ↔ HEMP/TEXTILES ↔ GEOARCH ↔ CODEX. This programme explicitly studies technology as practice, skill, material selection, social organisation and landscape interaction before translating validated mechanisms into modern engineering.
 
 ## CODEX execution layer
 `research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. `research/CODEX-DEPARTMENT-QUEUES.md` operationalises department-specific simulation backlogs.
@@ -129,6 +151,11 @@ Three videos repeating the same source count as one source lineage, not three in
 - `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`
 - `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`
 
+## Repository correlation rule
+Every newly indexed AnthroSource record must be correlated against: primary archaeology/history; JSTOR where relevant; ResearchGate/scientific literature; Emerald for implementation/system context where relevant; patents/prior art for modern implementations; public/declassified technical records where relevant; GitHub/CODEX for reproducibility; and a defined experimental question where the claim can be tested.
+
+Each resulting research object should carry: source ID, exact claim, source genealogy, evidence status, department codes, computational/CODEX queue, experimental path, IP status and NFT relevance.
+
 ## Status
 
-**Master R&D index upgraded from v1.7 to v2.0.** AnthroSource is now a permanent ancient-technology/anthropology evidence layer; Emerald remains a permanent systems/implementation layer; GitHub/BIUPIU CODEX remains the reproducibility and computational implementation layer. Department assignments and source genealogy are now explicitly cross-linked.
+**Master R&D index upgraded from v2.0 to v2.1.** The AnthroSource register is now explicitly incorporated into the master index, its five initial records are mapped into Biupiu departments, and anthropology/human-material systems are formally connected to Ancient Applied Technology, agricultural landscapes, materials, geometry, CODEX and the research-to-NFT/IP pipeline. Future ancient-technology research will use AnthroSource as a mandatory evidence layer where relevant, while preserving strict separation between anthropological evidence, engineering claims and controlled speculation.
