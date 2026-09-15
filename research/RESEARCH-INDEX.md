@@ -1,10 +1,8 @@
-# Biupiu NFT Research Index v0.4
+# Biupiu NFT Research Index v0.5
 
 **Purpose:** Cross-index research, computational models and experimental hypotheses supporting the Biupiu NFT / computational-art portfolio and its linked personal R&D research streams.
 
 ## Evidence Classification
-
-All research is classified before use:
 
 - **Established** — supported by reliable experimental and/or peer-reviewed evidence.
 - **Supported Research** — active research with meaningful evidence, but not a settled conclusion.
@@ -26,26 +24,29 @@ All research is classified before use:
 - AI-assisted holography
 - optical metrology
 - materials and crystal characterisation
+- structured-light wavefront reconstruction
+- computational propagation and inverse problems
+- holographic visualisation of toroidal and other parametric geometries
 
-**Cross-links:** 3D Computational Geometry; Crystal & Materials Research; Photonics; Toroidal Geometry; Ancient-Technology Reconstruction.
+**Cross-links:** CG-3D; TORUS; PHO; CRM; EEE; LES; PSL; Ancient-Technology Reconstruction.
 
 ### CG-3D — 3D Computational Geometry
 
 - ancient architectural reconstruction
 - geometric proportions and symmetry
-- 3D meshes and CAD models
-- computational geometry
-- wave/field modelling on geometric structures
-- numerical optical and electromagnetic simulations
-- generative geometry for NFT artwork
-- **torus / toroidal geometry**
-- parametric toroidal surfaces and meshes
+- parametric 3D meshes and CAD models
+- computational geometry and generative design
+- torus/toroidal surfaces and meshes
 - toroidal coordinate systems
-- toroidal field and wave simulations
-- toroidal optical concentrators and waveguides
-- toroidal electromagnetic and resonant structures
+- topology-preserving geometric transformations
+- wave/field modelling on 3D geometric structures
+- numerical optical and electromagnetic simulations
+- computational holography and 3D reconstruction
+- structured-light geometry and spatial-mode modelling
+- geometry generation for NFT artwork
+- geometry-to-physics parameter sweeps
 
-**New branch:** `TORUS` — cross-disciplinary toroidal geometry for computational, optical, electromagnetic, electrical-machine and photovoltaic modelling.
+**Cross-disciplinary rule:** CG-3D is the geometry layer for PH-QPM, TORUS, EEE, PHO, LES and PSL. A geometric visualisation is not itself evidence of a physical effect.
 
 ### TORUS — Toroidal Geometry, Electromagnetics & Energy Systems
 
@@ -53,12 +54,12 @@ All research is classified before use:
 - toroidal metamaterials / metasurfaces
 - toroidal magnetic cores and windings
 - toroidal electrical-machine topologies
-- axial-flux/permanent-magnet machine geometries with toroidal winding variants
+- axial-flux/permanent-magnet machine geometries
 - toroidal solar concentrators
 - toroidal optical waveguides
 - PV receiver illumination optimisation
 - optical-to-electrical conversion modelling
-- toroidal geometry for thermal management and packaging
+- thermal management and packaging
 - computational parameter sweeps and conventional-geometry controls
 
 **Primary record:** `research/TOROIDAL-GEOMETRY-ELECTRICAL-PV-RD.md`
@@ -78,7 +79,7 @@ All research is classified before use:
 - battery/supercapacitor interfaces
 - thermal/electromagnetic co-simulation
 
-**Cross-links:** TORUS; CG-3D; LES; CRM; PHO; PSL.
+**Cross-links:** TORUS; CG-3D; LES; PHO; CRM; PSL.
 
 ### CRM — Crystal & Materials Research
 
@@ -93,16 +94,23 @@ All research is classified before use:
 
 ### PHO — Photonics, Optical Communications & Atmospheric Systems
 
+**Wits cross-reference — established research stream:**
+
 - free-space optical communications
-- laser/optical internet concepts
-- structured light
-- OAM/spatial modes
-- atmospheric turbulence
-- turbulence mitigation
+- long-range FSO and optical-link engineering
+- visible-light communications (VLC/LiFi)
+- structured light and spatial-mode encoding
+- orbital angular momentum and topological information
+- skyrmion light / topology-based encoding
+- atmospheric turbulence and channel modelling
+- turbulence-resistant eigenmodes
 - AI-assisted optical communications
-- optical/photonic computing
+- optical/photonic computing and all-optical AI
 - optical energy delivery
+- optical V2X and hybrid optical/RF concepts
 - toroidal optical waveguides and resonant photonic structures
+
+Wits Optical Communications Laboratory explicitly works on long-range FSO links, VLC systems, optical turbulence, signal processing and machine intelligence for controlling light propagation. citeturn0search0 Wits research has also experimentally demonstrated topology-encoded information surviving naturally occurring atmospheric turbulence across a campus optical link, using skyrmion-structured light. citeturn0search2 Earlier Wits work demonstrated robust structured-light eigenmodes in atmospheric turbulence and experimentally validated their invariance. citeturn0search4turn0search35
 
 ### LES — Light-Based Energy Storage & Conversion
 
@@ -128,12 +136,17 @@ All research is classified before use:
 - computational reconstruction
 - geometry and proportional analysis
 - ancient energy-system hypotheses
+- plasma-discharge interpretations of ancient imagery as a hypothesis stream
+- comparative mythology / archaeoastronomy hypothesis testing
+- visual reconstruction of proposed ancient-sky phenomena
 
-Thunderbolts Project and Thunderbolts.info are indexed here as **hypothesis/inspiration sources**, not as proof of scientific claims.
+### TB — Thunderbolts / Electric-Universe Hypothesis Research
+
+The Thunderbolts Project is explicitly indexed as an **exploratory hypothesis source**, not as scientific validation. Its stated focus is the Electric Universe paradigm, plasma/electromagnetic interpretations of cosmic phenomena and proposed connections between plasma phenomena and ancient-world narratives. citeturn0search1turn0search3
+
+The repository may use Thunderbolts material to generate testable questions in plasma physics, electromagnetism, computational geometry and ancient-technology reconstruction. Claims must be separated from established plasma physics and checked independently.
 
 ### PSL — Plausibility & Simulation Laboratory
-
-A separate research track for converting unestablished claims into testable computational models.
 
 Workflow:
 
@@ -142,7 +155,9 @@ Workflow:
 Current simulation branches:
 
 - **PH-QPM-01:** 3D holographic reconstruction and phase retrieval.
+- **PH-QPM-02:** 3D computational holography of parametric/toroidal geometries.
 - **CG-01:** Ancient-geometry electromagnetic/optical modelling.
+- **CG-02:** Topological/parametric 3D geometry and field-mapping studies.
 - **TORUS-01:** Parameterised torus geometry, optical and electromagnetic field modelling.
 - **TORUS-PV-01:** Toroidal solar concentration versus conventional-control geometry.
 - **TORUS-EM-01:** Toroidal/electric/magnetic multipole and resonant-mode analysis.
@@ -150,58 +165,61 @@ Current simulation branches:
 - **TORUS-AFPM-01:** Toroidal winding variants for axial-flux/permanent-magnet machines.
 - **CRYSTAL-01:** Crystal/material optical interaction modelling.
 - **ENERGY-01:** Light → electricity → storage modelling.
-- **ATM-01:** Atmospheric optical propagation and turbulence.
-- **TB-01:** Computational testing of Thunderbolts-derived hypotheses.
+- **PHO-01:** FSO propagation and structured-light channel modelling.
+- **PHO-02:** Atmospheric-turbulence eigenmode/topology robustness modelling.
+- **PHO-03:** AI-assisted optical-channel optimisation.
+- **TB-01:** Computational testing of Thunderbolts-derived hypotheses against established physical constraints.
+- **TB-02:** Plasma-discharge geometry comparison with ancient visual motifs, explicitly classified as hypothesis testing.
 
 A simulation result does not establish that a proposed phenomenon exists in nature. Models must be checked against known physics, experimental data and reproducible measurements.
 
 ## External Research Source Network
 
-### Primary / established research sources
+### Wits University
 
-- Wits University Optical Communications Laboratory
-- Wits University research on structured light and atmospheric turbulence
-- ResearchGate literature and theses
-- Emerald Insight literature
-- Peer-reviewed optics, photonics, materials, electrical-engineering and energy-storage literature
+Wits is now a **primary research cross-reference** for the Biupiu photonics stream. Current indexed areas include FSO, VLC, structured light, atmospheric turbulence, topology/skyrmion encoding, robust eigenmodes, optical energy delivery and machine-intelligence approaches to optical propagation. citeturn0search0turn0search2turn0search5turn0search9
 
-### Current toroidal cross-reference set
+### ResearchGate
 
-**ResearchGate:** toroidal electromagnetically induced transparency/metasurfaces; dual-band toroidal-dipole research; nonlinear torus-metasurface research; solar-energy toroidal concentrators; torus waveguides for solar-energy transmission.
+ResearchGate remains a literature-discovery and cross-reference layer for toroidal electromagnetics, toroidal metasurfaces, solar-energy toroidal concentrators, torus optical waveguides, photonics and related energy research.
 
-**Emerald Insight:** torus-type axial-flux permanent-magnet electrical-machine FEM research; toroidal winding topology and loss/thermal analysis; toroidal-coordinate multipole expansions; toroidal-core magnetic-loss modelling; photovoltaic-generator equivalent-circuit modelling.
+### Emerald Insight
 
-These source classes are used for literature discovery and cross-validation. A source is not treated as proof merely because it appears in ResearchGate or Emerald Insight.
+Emerald Insight remains a complementary scholarly source network for torus-type axial-flux electrical machines, toroidal winding topology, electrical-machine loss/thermal analysis, toroidal-coordinate electromagnetic modelling, magnetic-core loss and photovoltaic-generator equivalent-circuit modelling.
 
-### Hypothesis / exploratory sources
+### Thunderbolts Project
 
-- Thunderbolts Project YouTube — https://m.youtube.com/@ThunderboltsProject/featured
-- Thunderbolts.info — https://www.thunderbolts.info/
+- Official website: https://www.thunderbolts.info/
+- Official YouTube presence: https://www.youtube.com/@ThunderboltsProject
 
-These sources can generate hypotheses for PSL simulations but are not automatically treated as scientific validation.
+The Thunderbolts Project's own material describes its Electric Universe framework and its interpretations of plasma phenomena and ancient-world narratives. These materials are retained for hypothesis generation and comparative research, not treated as proof. citeturn0search1turn0search7
 
 ## NFT Integration
 
 Research can be connected to NFT records through:
 
-`Research source → hypothesis/model → computational reconstruction → simulation output → artwork → NFT metadata/provenance`
+`Research source → hypothesis/model → 3D computational geometry → holographic/optical visualisation → simulation output → artwork → NFT metadata/provenance`
 
 Potential NFT themes now include:
 
-- ancient architecture reconstructed in 3D
+- 3D ancient architecture reconstruction
 - computational/sacred geometry
 - toroidal and parametric geometry
-- holographic and phase-based visualisations
+- 3D holographic and phase-based visualisations
+- structured-light and topological-light visualisations
 - crystal/material structures
 - photonics and atmospheric optical systems
 - photovoltaic and energy-conversion geometries
 - ancient-technology hypotheses
-- experimentally tested versus untested concepts.
+- experimentally tested versus untested concepts
+- plasma/electromagnetic visualisations clearly labelled as hypothesis or established physics where appropriate.
 
 ## Research Integrity Rule
 
 Every NFT or research record should identify whether an idea is established, supported, plausible, unresolved, inconsistent, or speculative. Artistic representation of a hypothesis must not be presented as proof of the hypothesis.
 
+**Important:** Wits experimental results and peer-reviewed literature are evidence sources. Thunderbolts material is an exploratory hypothesis source. These evidence classes must never be conflated.
+
 ## Version
 
-**Biupiu NFT Research Index v0.4 — September 2026**
+**Biupiu NFT Research Index v0.5 — September 2026**
