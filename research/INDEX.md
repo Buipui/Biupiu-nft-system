@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -64,6 +64,8 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `ALA-ATLANTIS` — dedicated hypothesis layer for Atlantis-related geographic predictions; separate from accepted archaeological geography.
 - `ALA-HYPERBOREA` — dedicated hypothesis layer for Hyperborea/northern ancient-geography claims.
 - `ALA-HIDDEN-LANDS` — analytical layer for hidden-land/Antarctica claims; never replaces satellite/geodetic baselines.
+- `ALA-VOC` — Vibes of Cosmos alternative-cartography layer integrated into the Ancient Landscape Atlas; versioned map records and claim-to-coordinate testing.
+- `VOC-ATLAS` — VOC map-specific records for Pangaia, alternative world maps, Antarctica/hidden lands, oceanography and lunar/map-projection hypotheses.
 - `NFT-IP` — NFT, provenance, artwork and invention IP.
 - `NFT-CF` — Founding NFT crowdfunding programme for establishing the Biupiu R&D and digital-art ecosystem.
 - `NFT-ATH-GEO` — Ancient Systems × Computational Geometry artwork stream, connecting archaeology/ancient technology with computational reconstruction and generative art.
@@ -75,23 +77,14 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 ## Speculative video/source index
 `research/SPEC-VIDEO-INDEX.md` is the controlled index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. It contains claim-specific records, evidence statuses, source-genealogy controls and proposed CODEX tests.
 
-### VOC source update
-The 2025 World Map is documented as containing conventional geographic layers plus Pangaia, Narnia/Middle Earth, Oceanografia, Cosmic Epochs, Unknown Continents and Lands Beyond Antarctica; the published map is all rights reserved. citeturn0search1 The 2024 Extended World Map lists seabed depth, underwater craters, Antarctica stations, ice walls, hidden lands and alternative map layers. citeturn0search2 VOC's own channel describes its work as reverse-engineering cosmology and identifies Stergio as creator of World Map by Plasma Moon. citeturn0search0
+## Vibes of Cosmos Atlas integration
+`research/SPEC-VOC-ATLAS-INTEGRATION.md` is the dedicated BIUPIU-VOC cartographic layer. VOC maps are preserved as third-party speculative source material and separated from the authoritative physical Earth baseline. The Atlas now maintains five analytical tiers: physical Earth, historical Earth, palaeogeography, archaeological/cultural geography, and BIUPIU-VOC speculative cartography.
 
-New records: `SPEC-VOC-010` Moon/image-to-world-map reconstruction; `011` lunar phase/size visual claims; `012` cosmic-epoch transitions; `013` magnetic-north/great-circle claims; `014` oceanografia/seabed/crater mapping; `015` Antarctica/hidden-continent claims; `016` alternative map version comparison; `017` Pangaia/Middle Earth/Narnia provenance.
+New VOC Atlas records: `VOC-ATLAS-001..012`, covering World Map/Plasma Moon projection, Physical/Extended/2025 map versions, Pangaia/Selenographic geometry, Antarctica/Terra Vista/hidden-land claims, oceanography/seabed/crater layers, magnetic/celestial claims, lunar-image reconstruction, cosmic epochs and Pangaia/Middle Earth/Narnia provenance.
 
-These remain hypothesis records, not accepted geographic facts. Preserve source provenance and generate Biupiu analytical layers rather than copying protected artwork. citeturn0search1turn0search2
+Workflow: **VOC map → provenance/version capture → feature extraction → claim-to-coordinate conversion → projection/georeferencing → modern geodetic comparison → bathymetry/geology → palaeogeography → archaeology → statistical/physical test → evidence update.**
 
-### Sepehr / Atlantean Gardens update
-New records: `SPEC-SEP-011` Hyperborea/Atlantis/Thule and antediluvian technology; `012` Vril/scalar/free-energy; `013` Agartha/Shambhala/inner-earth traditions; `014` alleged European underground tunnel networks; `015` Atlantis/antediluvian anthropology; `016` alternative human-origins models.
-
-The archive explicitly presents Hyperborea/Atlantis/Thule as legendary pre-flood civilisations and associates them with advanced technology/Vril claims. citeturn0search3 It also presents Agartha/Shambhala underground traditions. citeturn0search12 A 2020 entry describes an alleged 12,000-year-old European tunnel network; this remains a claim requiring site-by-site archaeological verification. citeturn0search5
-
-### Divergent update
-New records: `SPEC-DIV-005` architectural anomalies; `006` landscape/cartographic anomalies; `007` reset/pre-disaster chronology; `008` Moon/Antarctica/alternative-map claims. Divergent material remains visual/hypothesis input and requires provenance, geolocation, historical-map, cadastral, architectural, geological and archaeological review.
-
-## Source-genealogy rule
-**Creator ≠ source ≠ original evidence.** Repeated claims are not independent corroboration. Every convergence record must trace the earliest identifiable source and determine whether later channels copied or independently derived the claim.
+VOC is cross-linked to Sepehr/Atlantean Gardens and Divergent, but repeated claims are not treated as independent corroboration until source genealogy establishes independent derivation. Copyrighted maps remain third-party material; Biupiu should create original analytical GIS/statistical outputs rather than copy protected artwork.
 
 ## CODEX speculative integration
 - `CODEX-SPEC-GIS` — claim-to-coordinate mapping.
@@ -108,8 +101,6 @@ New records: `SPEC-DIV-005` architectural anomalies; `006` landscape/cartographi
 - `CODEX-ANTARCTICA` — Antarctic geographic/bathymetric comparison.
 - `CODEX-UNDERGROUND` — tunnel/cave network GIS/connectivity testing.
 - `CODEX-RESET` — event-specific before/after landscape reconstruction.
-
-All speculative claims must be converted into measurable predictions before computational or experimental validation.
 
 ## Validation controls
 Historical landscape workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
@@ -131,4 +122,4 @@ Each record includes source, evidence status, technical question, reproducibilit
 7. CODEX geometry/GIS/statistics integration.
 8. Only after validation: research-to-art/NFT translation.
 
-**Status:** Research index upgraded to **v1.0** and integrated with the executed speculative-video source layer. The repository now has dedicated cosmology, geography, catastrophe, underground and human-origins branches, expanded CODEX testing, and controlled NFT/IP boundaries.
+**Status:** Research index upgraded to **v1.1**. BIUPIU-VOC is now an official indexed Atlas branch and dedicated research record, integrated with the existing Sepehr/Atlantean Gardens and Divergent speculative-source network, with controlled cartographic, provenance, geodetic and CODEX testing boundaries.
