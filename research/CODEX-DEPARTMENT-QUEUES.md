@@ -1,20 +1,16 @@
 # BIUPIU CODEX DEPARTMENT SIMULATION QUEUES
 
-**Version:** 1.1  
+**Version:** 1.2  
 **Date:** 15 September 2026  
-**Status:** Active — P0 execution activated
+**Status:** Active — source-integrated computational backlog
 
 ## P0 execution activation
 
 Activated P0 queues: `Q-CODEX-001`, `Q-IP-001`, `Q-AGRI-001`, `Q-HEMP-001`, and `Q-PHO-001`. Activation means the test definition, inputs and validation gate are ready; it does not mean a simulation result exists.
 
-## Wits P0/P1 implementation specification
+## New source-routing rule
 
-`Q-PHO-001` references `research/WITS-PHOTONICS-RESOURCE-REGISTER.md`.
-
-Minimum reproducible run: establish a conventional Gaussian/orthogonal baseline; establish one documented structured-light mode; hold wavelength, aperture, propagation distance, transmit power and receiver assumptions constant; define the turbulence model and parameter sweep; record received power, mode fidelity and/or BER; store configuration, random seed, software version and source IDs; compare with the Wits institutional/publisher record; only then promote AI optimisation, digital-twin calibration or hardware testing.
-
-ResearchGate remains a discovery/cross-reference layer. Emerald Insight remains complementary and requires exact publication/DOI identification before independent-evidence status is assigned.
+All new CODEX queues inherit `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md` and `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`. Ancient-technology queues should use AnthroSource alongside primary archaeology/JSTOR; systems/implementation questions should use Emerald where relevant; scientific mechanisms should use ResearchGate/publisher sources; implementation/IP questions should use patents/declassified records; code and computational methods must be versioned and licensed.
 
 ## Queue
 
@@ -49,8 +45,8 @@ ResearchGate remains a discovery/cross-reference layer. Emerald Insight remains 
 | Q-GA-001 | GEOARCH | GIS/geophysics | evidence-ladder site map | maps, DEM, geology, geophysics | independent field evidence | IP | P2 | DATA-GATHERING |
 | Q-GIS-001 | LAND-GIS | georeferencing | historical map reproduction | scan + control points | independent coordinate check | IP | P1 | READY |
 | Q-ALA-001 | ALA | temporal GIS | time-slice reconstruction | dated maps/environmental data | chronology/spatial controls | NFT/IP | P2 | DATA-GATHERING |
-| Q-AAT-001 | AAT | reconstruction/experimental archaeology | documented ancient engineering model | archaeological measurements | physical/historical evidence | IP | P2 | DATA-GATHERING |
-| Q-ATH-001 | AAT-H | comparative analysis | material-culture dataset | archaeological/anthropological sources | source provenance | IP/NFT | P3 | UNQUEUED |
+| Q-AAT-001 | AAT | reconstruction/experimental archaeology | documented ancient engineering model | archaeological measurements + AnthroSource/JSTOR/primary records | physical/historical evidence | IP | P2 | DATA-GATHERING |
+| Q-ATH-001 | AAT-H | comparative analysis | material-culture dataset | archaeological/anthropological sources incl. AnthroSource | source provenance | IP/NFT | P3 | UNQUEUED |
 | Q-COAST-001 | PALAEO-COAST | palaeogeographic GIS | ancient coastline scenario | sea-level/DEM/geology | dated proxies | IP/NFT | P2 | DATA-GATHERING |
 | Q-CULT-001 | EMPIRE-CULTURE | network/GIS | documented exchange/political network map | dated historical/archaeological data | source triangulation | NFT | P3 | UNQUEUED |
 | Q-NH-001 | NAGA-HIM | source genealogy/GIS | location claim evidence ladder | primary/historical/GIS sources | independent evidence | SPEC/IP | P3 | DATA-GATHERING |
@@ -62,6 +58,14 @@ ResearchGate remains a discovery/cross-reference layer. Emerald Insight remains 
 | Q-NFT-001 | NFT-ART | procedural generation | original art from validated research dataset | validated data + algorithm | deterministic regeneration | provenance/licence | P2 | DATA-GATHERING |
 | Q-PROV-001 | NFT-PROV | provenance graph | hash source/data/algorithm/parameters | source + artefact hashes | reproducibility | licence/IP | P1 | READY |
 | Q-RES-REG-001 | Governance | register normalisation | recover historical payment/resource register | original register file | source-file verification | provenance/IP | P1 | VERIFY SOURCE FILE |
+
+## New AAT/AAT-H source integration
+
+`Q-AAT-001` and `Q-ATH-001` now explicitly accept AnthroSource records as a scholarly anthropology/archaeology input. AnthroSource does not replace primary archaeological evidence and does not prove engineering performance. It supplies context on craft, technology transmission, materiality, cultural ecology and human practice.
+
+## Emerald integration
+
+Water, agriculture, infrastructure and systems-design queues should use relevant Emerald publications when an exact publication/DOI has been identified. Emerald evidence should inform implementation/system models; it does not replace primary experimental engineering data.
 
 ## IP / public-declassified control
 
