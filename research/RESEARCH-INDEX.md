@@ -1,4 +1,4 @@
-# Biupiu NFT Research Index v0.5
+# Biupiu NFT Research Index v0.6
 
 **Purpose:** Cross-index research, computational models and experimental hypotheses supporting the Biupiu NFT / computational-art portfolio and its linked personal R&D research streams.
 
@@ -28,7 +28,7 @@
 - computational propagation and inverse problems
 - holographic visualisation of toroidal and other parametric geometries
 
-**Cross-links:** CG-3D; TORUS; PHO; CRM; EEE; LES; PSL; Ancient-Technology Reconstruction.
+**Cross-links:** CG-3D; TORUS; PHO; CRM; MM; EEE; LES; PSL; Ancient-Technology Reconstruction.
 
 ### CG-3D — 3D Computational Geometry
 
@@ -46,7 +46,7 @@
 - geometry generation for NFT artwork
 - geometry-to-physics parameter sweeps
 
-**Cross-disciplinary rule:** CG-3D is the geometry layer for PH-QPM, TORUS, EEE, PHO, LES and PSL. A geometric visualisation is not itself evidence of a physical effect.
+**Cross-disciplinary rule:** CG-3D is the geometry layer for PH-QPM, TORUS, EEE, PHO, MM, LES and PSL. A geometric visualisation is not itself evidence of a physical effect.
 
 ### TORUS — Toroidal Geometry, Electromagnetics & Energy Systems
 
@@ -79,7 +79,7 @@
 - battery/supercapacitor interfaces
 - thermal/electromagnetic co-simulation
 
-**Cross-links:** TORUS; CG-3D; LES; PHO; CRM; PSL.
+**Cross-links:** TORUS; CG-3D; LES; PHO; CRM; MM; PSL.
 
 ### CRM — Crystal & Materials Research
 
@@ -90,7 +90,40 @@
 - quantum-dot materials
 - composites and advanced materials
 - energy-storage materials
+- engineered materials and functional structures
+- metamaterial constituent materials
 - toroidal metamaterial / resonant-material structures
+
+### MM — Metamaterials & Metasurfaces — OFFICIAL INDEXED BRANCH
+
+**Parent:** CRM — Crystal & Materials Research  
+**Primary record:** `research/METAMATERIALS-METASURFACES-RD.md`  
+**Record:** `BPU-RES-MM-001`
+
+MM is now an official dedicated R&D branch. It remains structurally connected to CRM and composite/advanced-material research, but receives its own research record, prior-art workflow and simulation branches because engineered geometry, interfaces and unit-cell architecture are central research variables.
+
+Research scope:
+
+- electromagnetic metamaterials
+- optical metamaterials
+- metasurfaces / flat optics
+- photonic and phononic crystals
+- resonant and subwavelength unit cells
+- negative-index / near-zero-index concepts
+- anisotropic and hyperbolic media
+- reconfigurable/tunable metamaterials
+- mechanical and structural metamaterials
+- architected and programmable materials
+- metamaterial antennas and beam steering
+- metamaterial absorbers and filters
+- metamaterial waveguides
+- metamaterial solar/light-management concepts
+- toroidal metamaterials and toroidal metasurfaces
+- inverse design and topology optimisation
+
+**Cross-links:** CRM; CG-3D; PH-QPM; PHO; TORUS; EEE; LES; PSL; PAT.
+
+**Dedicated NASA resource rule:** Future MM searches must explicitly cross-reference NASA TechPort, NASA NTRS, NASA JPL, NASA Langley, NASA Ames, NASA Goddard and NASA NIAC where relevant. NASA records are classified individually by evidence level; a NASA concept or project is not automatically experimental validation.
 
 ### PHO — Photonics, Optical Communications & Atmospheric Systems
 
@@ -109,8 +142,7 @@
 - optical energy delivery
 - optical V2X and hybrid optical/RF concepts
 - toroidal optical waveguides and resonant photonic structures
-
-Wits Optical Communications Laboratory explicitly works on long-range FSO links, VLC systems, optical turbulence, signal processing and machine intelligence for controlling light propagation. citeturn0search0 Wits research has also experimentally demonstrated topology-encoded information surviving naturally occurring atmospheric turbulence across a campus optical link, using skyrmion-structured light. citeturn0search2 Earlier Wits work demonstrated robust structured-light eigenmodes in atmospheric turbulence and experimentally validated their invariance. citeturn0search4turn0search35
+- metamaterial and metasurface wavefront control
 
 ### LES — Light-Based Energy Storage & Conversion
 
@@ -127,6 +159,7 @@ Wits Optical Communications Laboratory explicitly works on long-range FSO links,
 - toroidal solar concentrators
 - toroidal optical-to-PV coupling
 - PV irradiance uniformity and thermal-management modelling
+- metamaterial/metasurface light-management concepts
 
 ### ACT — Ancient Civilizations & Technology
 
@@ -142,7 +175,7 @@ Wits Optical Communications Laboratory explicitly works on long-range FSO links,
 
 ### TB — Thunderbolts / Electric-Universe Hypothesis Research
 
-The Thunderbolts Project is explicitly indexed as an **exploratory hypothesis source**, not as scientific validation. Its stated focus is the Electric Universe paradigm, plasma/electromagnetic interpretations of cosmic phenomena and proposed connections between plasma phenomena and ancient-world narratives. citeturn0search1turn0search3
+The Thunderbolts Project is explicitly indexed as an **exploratory hypothesis source**, not as scientific validation. Its stated focus is the Electric Universe paradigm, plasma/electromagnetic interpretations of cosmic phenomena and proposed connections between plasma phenomena and ancient-world narratives.
 
 The repository may use Thunderbolts material to generate testable questions in plasma physics, electromagnetism, computational geometry and ancient-technology reconstruction. Claims must be separated from established plasma physics and checked independently.
 
@@ -163,6 +196,14 @@ Current simulation branches:
 - **TORUS-EM-01:** Toroidal/electric/magnetic multipole and resonant-mode analysis.
 - **TORUS-MAG-01:** Toroidal-core versus conventional-core magnetic-loss comparison.
 - **TORUS-AFPM-01:** Toroidal winding variants for axial-flux/permanent-magnet machines.
+- **MM-01:** Electromagnetic metamaterial unit-cell modelling versus conventional-material control.
+- **MM-02:** Metasurface phase/amplitude/polarisation response modelling.
+- **MM-03:** Reconfigurable metamaterial parameter sweep and tuning analysis.
+- **MM-04:** Mechanical/architected metamaterial stiffness, damping and band-gap modelling.
+- **MM-05:** Metamaterial antenna/beam-steering modelling.
+- **MM-06:** Metamaterial/metasurface optical-energy and PV light-management modelling.
+- **MM-07:** Toroidal metamaterial and toroidal metasurface modelling.
+- **MM-08:** Inverse design and topology-optimisation studies.
 - **CRYSTAL-01:** Crystal/material optical interaction modelling.
 - **ENERGY-01:** Light → electricity → storage modelling.
 - **PHO-01:** FSO propagation and structured-light channel modelling.
@@ -177,28 +218,33 @@ A simulation result does not establish that a proposed phenomenon exists in natu
 
 ### Wits University
 
-Wits is now a **primary research cross-reference** for the Biupiu photonics stream. Current indexed areas include FSO, VLC, structured light, atmospheric turbulence, topology/skyrmion encoding, robust eigenmodes, optical energy delivery and machine-intelligence approaches to optical propagation. citeturn0search0turn0search2turn0search5turn0search9
+Wits is a primary research cross-reference for the Biupiu photonics stream.
+
+### NASA — Dedicated MM Resource Family
+
+NASA is a dedicated cross-reference source for metamaterials/metasurfaces. Future searches should include NASA TechPort, NASA NTRS, NASA JPL, NASA Langley, NASA Ames, NASA Goddard and NASA NIAC where relevant.
 
 ### ResearchGate
 
-ResearchGate remains a literature-discovery and cross-reference layer for toroidal electromagnetics, toroidal metasurfaces, solar-energy toroidal concentrators, torus optical waveguides, photonics and related energy research.
+ResearchGate remains a literature-discovery and cross-reference layer for toroidal electromagnetics, metamaterials, metasurfaces, solar-energy structures, photonics and related energy research.
 
 ### Emerald Insight
 
-Emerald Insight remains a complementary scholarly source network for torus-type axial-flux electrical machines, toroidal winding topology, electrical-machine loss/thermal analysis, toroidal-coordinate electromagnetic modelling, magnetic-core loss and photovoltaic-generator equivalent-circuit modelling.
+Emerald Insight remains a complementary scholarly source network for electrical machines, engineered materials, metamaterials, photonics, electromagnetic modelling and related engineering research.
+
+### Patent / Prior-Art / Declassified Research
+
+See `research/PATENT-PRIOR-ART-AND-DECLASSIFIED-RESEARCH-REGISTRY.md`. Future MM development must cross-reference patent claims, patent families, government technical records and appropriate declassified historical material before public disclosure or commercial prototype work.
 
 ### Thunderbolts Project
 
-- Official website: https://www.thunderbolts.info/
-- Official YouTube presence: https://www.youtube.com/@ThunderboltsProject
-
-The Thunderbolts Project's own material describes its Electric Universe framework and its interpretations of plasma phenomena and ancient-world narratives. These materials are retained for hypothesis generation and comparative research, not treated as proof. citeturn0search1turn0search7
+Exploratory hypothesis source only. It is not treated as proof or as equivalent to NASA, Wits or peer-reviewed evidence.
 
 ## NFT Integration
 
 Research can be connected to NFT records through:
 
-`Research source → hypothesis/model → 3D computational geometry → holographic/optical visualisation → simulation output → artwork → NFT metadata/provenance`
+`Research source → evidence classification → hypothesis/model → 3D computational geometry → holographic/optical visualisation → simulation output → artwork → NFT metadata/provenance`
 
 Potential NFT themes now include:
 
@@ -207,6 +253,7 @@ Potential NFT themes now include:
 - toroidal and parametric geometry
 - 3D holographic and phase-based visualisations
 - structured-light and topological-light visualisations
+- metamaterial and metasurface geometry
 - crystal/material structures
 - photonics and atmospheric optical systems
 - photovoltaic and energy-conversion geometries
@@ -218,8 +265,8 @@ Potential NFT themes now include:
 
 Every NFT or research record should identify whether an idea is established, supported, plausible, unresolved, inconsistent, or speculative. Artistic representation of a hypothesis must not be presented as proof of the hypothesis.
 
-**Important:** Wits experimental results and peer-reviewed literature are evidence sources. Thunderbolts material is an exploratory hypothesis source. These evidence classes must never be conflated.
+**Important:** NASA and Wits research records, patents, NTRS/TechPort documentation and peer-reviewed literature are evidence/reference sources according to their individual evidence level. Funded concepts and proposals are not automatically experimental validation. Declassified material is historical/technical source material unless independently validated. Thunderbolts material is an exploratory hypothesis source. These evidence classes must never be conflated.
 
 ## Version
 
-**Biupiu NFT Research Index v0.5 — September 2026**
+**Biupiu NFT Research Index v0.6 — Official MM Branch + Simulation Branches — September 2026**
