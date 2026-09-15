@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 0.7  
+**Version:** 0.8  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -57,6 +57,17 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `NFT-ATH-GEO` — **Ancient Systems × Computational Geometry artwork stream**, connecting archaeology/ancient technology with computational reconstruction and generative art.
 - `NFT-GEN` — generative-art and algorithmic artwork production.
 - `NFT-PROV` — digital-art provenance, research IDs, algorithms, generation parameters, hashes and blockchain records.
+- `NFT-ARCH` — **NFT master architecture**, covering research-to-art-to-blockchain structure, collection taxonomy, identity model, evidence controls and IP boundaries.
+- `NFT-ORIGIN` — **BIUPIU / ORIGIN founding collection**, including Genesis, Ancient Systems, Geometry, Regenerative Earth, Biological Geometry, HempCarbon, Energy, Water, Computational Engineering and Future Systems.
+
+## NFT master architecture
+The Biupiu NFT system is structured in three layers: **Biupiu Research → Biupiu Digital Assets → Biupiu NFTs**. NFTs are public-facing digital artifacts derived from documented research, computational models or original generative processes; they do not automatically convey ownership of underlying patents, inventions, research, source code, biological materials or trademarks.
+
+Core pipeline: **Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector.**
+
+Every serious artwork receives a **Biupiu Research ID** and a separate **NFT ID**. One research project may generate multiple artworks/editions. Cross-disciplinary works may carry primary and secondary Research IDs.
+
+Research ID examples: `BIU-ANC-001`, `BIU-GEO-001`, `BIU-BIO-001`, `BIU-AGR-001`, `BIU-MAT-001`, `BIU-ENE-001`, `BIU-WAT-001`, `BIU-COD-001`. NFT IDs use a separate sequence such as `BIU-NFT-0001`.
 
 ## Founding NFT crowdfunding architecture
 The NFT system begins as a collector/crowdfunding project intended to help establish the Biupiu research and development ecosystem. The founding collection is **BIUPIU / ORIGIN**.
@@ -77,23 +88,10 @@ Crowdfunding may support research and development, computational resources, soft
 
 The NFT project is not automatically an equity or investment offering. NFT ownership does not automatically transfer Biupiu patents, inventions, trademarks, proprietary research, confidential information, biological materials, source code or underlying scientific discoveries.
 
-## NFT Research-to-Art Pipeline
-**Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector.**
+## Ancient Systems × Computational Geometry artwork architecture
+Dedicated stream: `NFT-ATH-GEO`.
 
-Every serious artwork should receive a Biupiu Research ID and a separate NFT ID. One research project may generate multiple editions/artworks.
-
-## NFT evidence controls
-Ancient-technology and archaeological artwork uses explicit classifications:
-- `DOCUMENTED` — supported by reliable historical, archaeological or scientific evidence.
-- `RECONSTRUCTED` — computational or physical reconstruction based on available evidence.
-- `EXPERIMENTAL` — Biupiu experiment testing a proposed mechanism/model.
-- `HYPOTHESIS` — interpretation requiring further investigation.
-- `SPECULATIVE` — creative exploration inspired by a subject.
-
-Artistic interpretation must not be represented as archaeological or scientific proof.
-
-## Ancient Systems × Computational Geometry — NFT stream
-Dedicated record: `research/NFT-ANCIENT-SYSTEMS-COMPUTATIONAL-GEOMETRY.md`
+The artwork programme combines documented ancient technologies, archaeology and ancient landscape/technology research with computational geometry and original generative-art systems. Planned subjects include ancient water engineering, agricultural terraces and waru-waru systems, mining/metallurgy, ceramics, stone construction, architectural geometry, archaeoastronomy, ancient transport/trade networks and southern African archaeological technologies.
 
 Planned series:
 1. `WATER` — ancient hydraulic systems transformed into computational flow geometry.
@@ -107,43 +105,53 @@ Planned series:
 
 Potential geometry systems include circles, spirals, fractals, Voronoi structures, tessellation, symmetry, topology, polyhedra, flow fields, networks, phyllotaxis, recursion, parametric surfaces/meshes and geometry-to-wavefront representations.
 
-## NFT provenance standard
-Each computational artwork should preserve, where applicable:
-- Research ID
-- NFT ID
-- source/reference genealogy
-- evidence classification
-- algorithm name and version
-- software and dependencies
-- input data
-- parameters
-- generation seed
-- Git commit/version
-- artwork version
-- asset hash
-- metadata hash
-- blockchain/contract/token information
-- applicable licence
+The visual direction is **archaeological authenticity × mathematical precision × futuristic biotech/materials aesthetics**. Original generative artwork should be created rather than copying third-party archaeological photography or other artists' work.
 
-Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Blockchain Token.**
+## Evidence controls for ancient-technology artwork
+Ancient-technology and archaeological artwork uses explicit classifications:
+- `DOCUMENTED` — supported by reliable historical, archaeological or scientific evidence.
+- `RECONSTRUCTED` — computational or physical reconstruction based on available evidence.
+- `EXPERIMENTAL` — Biupiu experiment testing a proposed mechanism/model.
+- `HYPOTHESIS` — interpretation requiring further investigation.
+- `SPECULATIVE` — creative exploration inspired by the subject.
 
-## NFT classes
+Artistic interpretation must not be represented as archaeological or scientific proof. Historical evidence, reconstruction assumptions, alternative interpretations and speculative elements must be separately recorded.
+
+## Computational-art classes
 - `CLASS-A ART` — primarily aesthetic digital/generative artwork.
 - `CLASS-B RESEARCH ART` — artwork linked to documented Biupiu research.
 - `CLASS-C COMPUTATIONAL ARTIFACT` — artwork with algorithm, parameters and reproducible-generation record where appropriate.
 
+## NFT provenance standard
+Each computational artwork should preserve, where applicable: Research ID, NFT ID, source/reference genealogy, evidence classification, algorithm name/version, software/dependencies, input data, parameters, generation seed, Git commit/version, artwork version, asset hash, metadata hash, blockchain/contract/token information and applicable licence.
+
+Provenance chain: **Research Source → Evidence Classification → Model → Algorithm → Parameters → Artwork → Metadata → Asset Hash → Blockchain Token.**
+
 ## NFT rarity model
 Rarity should be tied to meaningful research characteristics rather than arbitrary traits. Possible fields include algorithm complexity, number of geometry systems, historical-source breadth, computational complexity and edition size.
 
-## NFT identity model
-Research IDs use forms such as `BIU-ANC-001`, `BIU-GEO-001`, `BIU-BIO-001`, `BIU-AGR-001`, `BIU-MAT-001`, `BIU-ENE-001`, `BIU-WAT-001` and `BIU-COD-001`.
+## NFT metadata model
+Recommended fields include NFT name, collection, NFT ID, primary/secondary Research IDs, division(s), research theme, evidence classification, artwork type, algorithm/version, geometry systems, input data, parameters, generation seed, software/dependencies, Git version/commit, image/animation/3D URIs, external documentation, licence, edition, rarity class, creation year, asset hash and metadata hash.
 
-NFT IDs use a separate sequence such as `BIU-NFT-0001`.
+## NFT master prototype
+`BIU-NFT-0001` — **BIUPIU / ORIGIN — Ancient Water / Computational Flow I**.  
+Primary Research ID: `BIU-ANC-001`.  
+Secondary Research ID: `BIU-GEO-001`.  
+Stream: `NFT-ATH-GEO`.  
+Class: `CLASS-C — Computational Artifact`.  
+Evidence: `RECONSTRUCTED`.  
+Proposed algorithm: `FLOW-GEOMETRY-001`.  
+Proposed initial edition: `1/25`, subject to final approval.
+
+Master specification: `releases/BIUPIU-ORIGIN-001-SPEC.md`.
+
+## IP and licensing controls
+Public GitHub availability does not by itself establish commercial rights. Third-party images, code, datasets and research outputs require rights/licence review before commercial use. Code status should be tracked as **OPEN / RESEARCH / DERIVED / PROPRIETARY / IP-SENSITIVE / RESTRICTED**.
+
+Every NFT must distinguish token ownership from copyright, research ownership, patents, source-code rights and commercial licences. Potentially patentable or commercially sensitive information should remain private until appropriate IP protection has been considered.
 
 ## CODEX structure
 `CODEX-01` Core Python; `02` Geometry; `03` CFD; `04` FEA/FEM; `05` Multiphysics; `06` Optimisation/NSGA-II/topology; `07` AI/ML; `08` Digital Twin; `09` Data; `10` Experimental Data; `11` AI Geometry Lab; `12` Open-Source Research/licence control.
-
-Code status: **OPEN / RESEARCH / DERIVED / PROPRIETARY / IP-SENSITIVE / RESTRICTED**. Open-source code is licence-checked before commercial reuse.
 
 ## Ancient landscape / underground validation
 Historical workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
@@ -172,7 +180,10 @@ Sepehr, Atlantean Gardens, Divergent Libertalia and VOC remain hypothesis-genera
 ## IP control
 Each record should include source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. IP values: **OPEN / PUBLIC-DOMAIN / OPEN-SOURCE / UNCLEAR / THIRD-PARTY / PRIOR ART / DERIVATIVE / ORIGINAL BIUPIU / IP-SENSITIVE**.
 
-## Current priority integration
+## Current NFT priority integration
+1. Finalise BIU-NFT-0001 artwork prototype; 2. establish reproducible generative-art pipeline; 3. build metadata/provenance records; 4. perform third-party source/licence review; 5. protect IP-sensitive material before public release; 6. select blockchain/network and marketplace; 7. mint a controlled pilot edition; 8. document collector/crowdfunding terms; 9. expand Ancient Systems × Computational Geometry series; 10. connect future NFT outputs to relevant Biupiu research streams.
+
+## Current broader priority integration
 1. Founding NFT crowdfunding architecture and first release; 2. Ancient Systems × Computational Geometry artwork prototype; 3. Hybrid VAWT demonstrator; 4. low-head micro-hydro; 5. HempCarbon supercapacitor programme; 6. hemp composites; 7. CODEX geometry/CFD engine; 8. ancient water reconstruction; 9. Ancient Landscape Atlas; 10. integrated digital twin.
 
-**Status:** Index architecture updated to v0.7; founding crowdfunding brief, NFT master template and Ancient Systems × Computational Geometry research stream added. Detailed artwork records, metadata, source/licence checks and minting remain versioned work items.
+**Status:** Research index upgraded to v0.8. NFT master architecture, identity model, collection taxonomy, Ancient Systems × Computational Geometry artwork system, provenance/metadata controls and BIUPIU ORIGIN-001 prototype specification are now formally indexed.
