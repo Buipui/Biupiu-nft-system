@@ -8,6 +8,12 @@ This directory supports the Biupiu NFT / computational-art portfolio and linked 
 
 The department map is the portfolio architecture; individual files remain specialist research records. The immediate commercial DTIC/InvestSA library may activate only a subset of these departments at any stage.
 
+## Department execution layers
+
+- **`BIUPIU-DEPARTMENT-MAP.md`** — department-to-record/source/IP/commercial mapping, including Wits/ResearchGate, Emerald Insight, patent/declassified and register-verification layers.
+- **`CODEX-DEPARTMENT-QUEUES.md`** — department-specific computational queues with model type, dataset, first test, validation gate, IP gate, priority and status.
+- **`CODEX-SPEC-EXECUTION.md`** — controlled computational gate for speculative-source claims.
+
 ## Research Tracks
 
 - **BIO / BIO-GEN** — biotechnology, botany, plant science, genetics and seed breeding
@@ -30,19 +36,23 @@ The department map is the portfolio architecture; individual files remain specia
 - **TB** — Thunderbolts / Electric-Universe material as an exploratory hypothesis source
 - **PSL** — plausibility, simulation and experimental-control methodology
 
-## Key computational cross-reference
+## ResearchGate / Emerald / Wits cross-reference
 
-`BIO/AGRI/HEMP → MATERIALS/ENERGY/WATER → COMPUTE/AI/GEOMETRY → DIGITAL-TWIN/ROBOTICS/ADV-MFG → IP → product or NFT output`
+ResearchGate and Emerald Insight are complementary literature-discovery and cross-reference sources. The original institutional record, publisher page, paper, dataset or technical report remains preferred where available. Emerald records should be captured with exact title/DOI/publication metadata before being treated as independent evidence.
 
-`AAT/AAT-H → GEOARCH/LAND-GIS/ALA → CODEX → validated reconstruction → original analytical artwork/IP`
+The Wits structured-light stream is explicitly indexed under **PHOTONICS → PH-QPM → COMPUTE/CODEX → AI → DIGITAL-TWIN**, with secondary ELECTROMAG and GEOMETRY links. Public Wits material covers structured light, atmospheric turbulence, long-range free-space optical communication and related optical experimentation. citehttps://www.wits.ac.za/oclab/research/https://www.wits.ac.za/news/latest-news/research-news/2026/--2026-08/wits-researchers-use-lights-topology-to-beat-atmospheric-distortion.html
 
-ResearchGate and Emerald Insight provide complementary literature discovery and cross-reference. NASA, U.S. Air Force and other official public/declassified government sources are preferred for aerospace-history verification. Thunderbolts material remains a separate exploratory evidence class and is never treated as equivalent to peer-reviewed or experimental evidence.
+## IP / public-declassified source boundary
+
+NASA, U.S. Air Force and other official public/declassified government sources are preferred for aerospace-history verification. Patent records are prior-art evidence, not proof of performance. Declassified documents are historical/public technical sources and require independent engineering validation. AERO/STEALTH work uses only public, officially released/declassified, licensed or independently generated information.
+
+## Register governance
+
+Previous project work referenced payment-register and resource-register updates. A standalone historical register file was not located in the current verification pass. The new department map records the relationship as **VERIFY SOURCE FILE** rather than creating unsupported entries. Once located, each register item will receive a stable Research ID, department code, source/provenance, IP status and CODEX relationship.
 
 ## Evidence / research boundary
 
 Each specialist record should identify its department code, research question, evidence classification, source/provenance, computational path, experiment/prototype path, related IP and commercialisation status.
-
-AERO-STEALTH uses only public, officially released, licensed or independently generated information. It does not claim access to classified aircraft designs, classified performance data or non-public military information.
 
 Speculative historical material is retained as hypothesis-generation input only. Creator claims, repeated videos and derivative sources are not independent evidence.
 
