@@ -1,29 +1,19 @@
 # Biupiu R&D Research Index
 
-**Version:** 1.6  
+**Version:** 1.7  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
+
+## Master evidence architecture
+`research/BIUPIU-EVIDENCE-LAYER-ARCHITECTURE.md` is the master source-control architecture. Core layers are: primary archaeology/history; JSTOR; AnthroSource; ResearchGate/scientific literature; Emerald Insight; Robert Sepehr/YouTube/Atlantean Gardens as a hypothesis-generation layer; ancient texts; scientific primary data; patents/prior art; public/declassified technical archives; GitHub/BIUPIU CODEX; computational validation; and physical/experimental validation.
+
+**Core doctrine:** No idea is rejected merely because it is unconventional. No idea is accepted merely because it is fascinating. Every important claim becomes a testable research object.
 
 ## Repository boundary
 This is the personal Biupiu computational-art, invention, speculative-research and R&D/IP track. It remains separate from the immediate commercial DTIC/InvestSA library unless explicitly transferred.
 
 ## Master department architecture
 `research/BIUPIU-DEPARTMENT-INDEX.md` is the authoritative department map for the full Biupiu R&D/IP portfolio. It integrates biotechnology, regenerative agriculture, genetics/seed breeding, industrial hemp, biochar/biocarbon, biochemical engineering, textiles/fibres, adhesives/coatings, composites, advanced materials, water, energy, electrical/electromagnetics, photonics, quantum/photonic materials, metamaterials, aerospace, marine, computational engineering, AI, computational geometry, digital twins, robotics/automation, advanced manufacturing, biomedical/life sciences, geoarchaeology, historical GIS, Ancient Applied Technology, geomagnetics, controlled speculative research, IP and NFT/generative art.
-
-The department map is the portfolio architecture; specialist research files retain their existing IDs. The commercial/funding library may activate only selected departments at any stage.
-
-## Department-to-record map
-`research/BIUPIU-DEPARTMENT-MAP.md` is the active cross-linking layer that assigns existing research families, Wits/ResearchGate and Emerald cross-references, public/declassified IP material, commercial/R&D records and NFT streams to department codes. It explicitly marks source relationships that still require file verification rather than inventing missing records.
-
-## Department-specific CODEX queues
-`research/CODEX-DEPARTMENT-QUEUES.md` is the active simulation queue. It assigns model types, datasets, first executable tests, validation requirements, IP gates, priorities and queue states across the department architecture.
-
-## Evidence doctrine
-> Ancient knowledge generates the question. Archaeology establishes the evidence. Science identifies the mechanism. Engineering makes it measurable. Computation optimises it. Biupiu builds it.
-
-Workflow: **Discover → Index → Understand → Model → Simulate → Optimise → Prototype → Measure → Learn → Protect → Commercialise.**
-
-Evidence labels: **Established / Supported Research / Plausible Model / Unresolved / Inconsistent / Speculative / Inspirational / Mythological-Cultural / Unknown.**
 
 ## Master indexed streams
 - `BIO` / `BIO-GEN` — biotechnology, botany, plant science, genetics and seed breeding.
@@ -53,29 +43,71 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `FAILURE` / `ALA-PRE-DISASTER` — engineering, agricultural, water and civilisational failure/pre-disaster atlas.
 - `IP-PA` / `IP` / `DECLASS` — patents, prior art, licensing, FTO and public/declassified engineering records.
 - `SPEC` / `SPEC-VIDEO` / `SPEC-SEP` / `SPEC-CONVERGENCE` — controlled speculative-source research.
+- `JSTOR` / `ANTHROSOURCE` / `RG` / `EMERALD` / `PRIMARY` / `TEXTS` — transversal evidence-source layers used across relevant departments.
 - `NFT-IP` / `NFT-CF` / `NFT-ATH-GEO` / `NFT-GEN` / `NFT-PROV` / `NFT-ARCH` / `NFT-ORIGIN` — research-to-art, crowdfunding, generative art, provenance and NFT architecture.
 
+## Core evidence-source registry
+
+### `SRC-PRIMARY` — Primary archaeology/history
+Highest-priority layer for direct claims about physical sites, artefacts, chronology and historical records.
+
+### `SRC-JSTOR` — JSTOR
+Core scholarly layer for archaeology, anthropology, history, material culture, technology, environment and ancient civilisations. Record exact title, author, year, stable identifier/DOI where available and relevant pages. JSTOR is evidence, not automatic validation; primary research remains preferred where available.
+
+### `SRC-ANTHROSOURCE` — AnthroSource
+Core anthropology/AAA layer for archaeology, craft production, technology transmission, human-material relationships, cultural ecology and social organisation. Use alongside JSTOR for complementary coverage and source genealogy.
+
+### `SRC-RESEARCHGATE` — ResearchGate/scientific literature
+Scientific and engineering discovery layer for archaeometry, metallurgy, materials, genetics, experimental archaeology, computational research and engineering. Prefer publisher/institutional/DOI versions for final evidence records.
+
+### `SRC-EMERALD` — Emerald Insight
+Core systems/implementation layer for sustainability, water, agriculture, infrastructure, engineering management, optimisation and socioeconomic implementation. Index at publication/DOI level and distinguish content type.
+
+### `SRC-SEP` — Robert Sepehr / YouTube / Atlantean Gardens
+Controlled alternative-hypothesis layer. Sepehr material can surface unusual questions about ancient civilizations, human origins, migration, catastrophism, ancient technology, comparative mythology and alternative geography. It is **not** a primary-evidence layer; repeated claims do not count as independent corroboration. See `SPEC-SEP-SOURCE.md` and `SPEC-SEP-CLAIM-EXTRACTION.md`.
+
+### `SRC-TEXTS` — Ancient texts
+Textual evidence and cultural traditions, with strict separation between historical testimony, mythology, later commentary and modern interpretation.
+
+### `SRC-SCI` — Scientific primary data
+Dating, archaeogenomics, isotopes, palaeoclimate, geology, geophysics, chemistry, physics and environmental datasets.
+
+### `SRC-IP` — Patents/prior art
+Modern implementation and FTO layer. Patent publication does not establish efficacy; record legal status and relevant claims.
+
+### `SRC-DECLASS` — Public/declassified technical archives
+Historical/public engineering layer. Use only lawfully public/declassified information and validate technical claims independently.
+
+### `SRC-GITHUB-CODEX` — GitHub / BIUPIU CODEX
+Reproducible code, algorithms, simulation methods, datasets and computational engineering. Record repository, author, commit/version, licence and dependencies.
+
+### `SRC-COMPUTE` — Computational validation
+GIS/CAD/CFD/FEA/EM/thermal/acoustic/statistical/network/optimisation and digital-twin validation.
+
+### `SRC-EXPERIMENT` — Physical validation
+Biupiu laboratory/field reconstruction, prototypes, sensor measurements and repeatability studies.
+
+## Evidence workflow
+`hypothesis/source → exact claim → source genealogy → PRIMARY → JSTOR → ANTHROSOURCE → RESEARCHGATE → EMERALD → TEXTS/SCIENCE → GIS/CODEX → experiment → evidence status`
+
+Evidence controls: **A Directly demonstrated; B Strongly supported; C Plausible/incomplete; D Testable hypothesis; E Unsupported/contradicted; M Mythological/cultural; S Speculative/inspirational.**
+
+Three videos repeating the same source count as one source lineage, not three independent confirmations.
+
+## JSTOR / AnthroSource / Sepehr integration
+All future AAT and ancient-civilisation searches use the combined evidence protocol. Targeted JSTOR searches include ancient technology, technological change, technology transfer, experimental archaeology, ancient metallurgy, ancient hydraulic engineering, civilization collapse, population movement, material culture and site/region-specific terms including Mapungubwe, Bokoni, Great Zimbabwe, Nubia, Kush, Mesoamerica and Andean engineering.
+
 ## ResearchGate / Emerald / Wits evidence layer
-
-ResearchGate is retained as a literature-discovery and cross-reference layer; the original publisher, institutional repository or dataset remains preferred where available. Emerald Insight is also a complementary literature-discovery layer and must be indexed at publication/DOI level before being treated as independent evidence.
-
-The Wits structured-light stream is now explicitly mapped to `PHOTONICS → PH-QPM → COMPUTE/CODEX → AI → DIGITAL-TWIN`, with secondary links to `ELECTROMAG` and `GEOMETRY`. The current public Wits record includes structured-light research, atmospheric-turbulence mitigation, long-range free-space optical links and a 2026 report on an experiment using topological information in light under atmospheric turbulence. citehttps://www.wits.ac.za/oclab/research/https://www.wits.ac.za/news/latest-news/research-news/2026/--2026-08/wits-researchers-use-lights-topology-to-beat-atmospheric-distortion.html
-
-## IP, patent and declassified-document layer
-
-`IP-PA / IP / DECLASS` is a transversal control across all departments. Patent documents are treated as prior-art records rather than proof of performance. Public/declassified engineering documents are historical/public technical sources and require independent engineering validation. Aerospace-related work remains restricted to public, officially released/declassified, licensed or independently generated information.
-
-## Payment/resource register governance
-
-Prior project work referred to payment-register and resource-register updates. A standalone historical register file was not identified in the current Library/GitHub verification pass, so no missing entries are fabricated. `BIUPIU-DEPARTMENT-MAP.md` records this as **VERIFY SOURCE FILE** and defines the normalisation fields for when the original register is located.
+ResearchGate is retained as a literature-discovery and cross-reference layer; original publisher, institutional repository or dataset remains preferred where available. Emerald Insight is a complementary literature-discovery layer and must be indexed at publication/DOI level before being treated as independent evidence. The Wits structured-light stream is mapped to `PHOTONICS → PH-QPM → COMPUTE/CODEX → AI → DIGITAL-TWIN`, with secondary links to `ELECTROMAG` and `GEOMETRY`.
 
 ## Cross-department integration
+`AAT/AAT-H ↔ GEOARCH/LAND-GIS/ALA/PALAEO ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
+
+`JSTOR/ANTHROSOURCE/RESEARCHGATE/EMERALD/PRIMARY/TEXTS ↔ every relevant AAT division`
 
 `BIO/BIO-GEN → AGRI → HEMP → BIOCARBON/BIOCHEM → MATERIALS/COMPOSITES/TEXTILES/COAT`
 
 `AGRI ↔ WATER ↔ GEOARCH ↔ LAND-GIS ↔ ALA/AAT`
-
-`HEMP ↔ ELECTROMAG ↔ BIOCARBON ↔ ENERGY ↔ MATERIALS`
 
 `ENERGY ↔ ELECTROMAG ↔ PHOTONICS ↔ CRM ↔ MM`
 
@@ -83,41 +115,24 @@ Prior project work referred to payment-register and resource-register updates. A
 
 `COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
 
-`BIOMED ↔ BIO ↔ MATERIALS ↔ PHOTONICS ↔ AI ↔ ADV-MFG`
-
-`AAT/AAT-H ↔ GEOARCH/LAND-GIS/ALA/PALAEO ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
-
 `IP ↔ every department`
 
 ## CODEX execution layer
-`research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. `research/CODEX-DEPARTMENT-QUEUES.md` now operationalises the department-specific simulation backlog.
+`research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. `research/CODEX-DEPARTMENT-QUEUES.md` operationalises the department-specific simulation backlog.
 
-## Speculative video/source index
-`research/SPEC-VIDEO-INDEX.md` controls VOC, Robert Sepehr/Atlantean Gardens and Divergent material. `research/SPEC-SEP-SOURCE.md` is the Sepehr source registry. `research/SPEC-SEP-CLAIM-EXTRACTION.md` is the claim-level extraction layer.
-
-## Speculative convergence and verification
-`research/SPEC-CONVERGENCE.md` tracks source genealogy and independent convergence. `research/SPEC-CLAIM-REGISTRY.md` converts priority claims into explicit null/alternative tests.
-
-## Validation controls
-Historical landscape workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
-
-Subterranean evidence ladder: `folklore → historical reference → surface morphology → remote sensing → geophysical anomaly → physical inspection → archaeological documentation → surveyed/independently verified structure`.
-
-Remote-sensing anomalies are not automatically tunnels. Ley lines remain unproven hypotheses; sacred-site relationships require statistical testing against geology, faults, hydrology, geomagnetism, topography and astronomy.
+## Speculative source controls
+`research/SPEC-VIDEO-INDEX.md` controls VOC, Robert Sepehr/Atlantean Gardens and Divergent material. `research/SPEC-SEP-SOURCE.md` is the Sepehr source registry. `research/SPEC-SEP-CLAIM-EXTRACTION.md` is the claim-level extraction layer. `research/SPEC-CONVERGENCE.md` tracks source genealogy and independent convergence. `research/SPEC-CLAIM-REGISTRY.md` converts priority claims into explicit null/alternative tests.
 
 ## IP / NFT control
 Each record includes source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. Third-party maps, videos, photographs and code remain subject to their licences. NFT artwork uses original Biupiu-generated analytical outputs or properly licensed material; speculative claims are labelled rather than presented as established facts.
 
-## Commercial alignment layer
-The department architecture is compatible with relevant InvestSA/dtic opportunity categories including agribusiness, textiles, digital economy/ICT, healthcare/life sciences, clean-technology manufacturing, advanced manufacturing and transport/industrial sectors. InvestSA is part of the dtic ecosystem. These are alignment references, not claims that every department is currently commercially active or funded.
-
 ## Current execution priorities
 1. Department-to-record cross-links — **EXECUTED v1.0**.
 2. Department-specific CODEX simulation queues — **EXECUTED v1.0**.
-3. Map each department to IP/prior-art records and commercialisation status — active through `BIUPIU-DEPARTMENT-MAP.md`.
-4. Build robotics/AI/advanced-manufacturing integration layer.
-5. Continue Sepehr/Atlantis claim extraction and independent evidence testing.
-6. Link validated research outputs to NFT provenance only after evidence/licence review.
-7. Resolve the historical payment/resource register source-file references when the original files are located.
+3. Core evidence-layer architecture — **EXECUTED v1.0**.
+4. Continue Sepehr/Atlantean Gardens claim extraction and independent evidence testing using JSTOR + AnthroSource + ResearchGate + Emerald + primary evidence.
+5. Map each department to IP/prior-art records and commercialisation status.
+6. Build robotics/AI/advanced-manufacturing integration layer.
+7. Link validated research outputs to NFT provenance only after evidence/licence review.
 
-**Status:** Master R&D index upgraded to **v1.6**. Department-to-record mapping and department-specific CODEX queues are now active. Wits/ResearchGate and Emerald are explicit cross-reference layers, while patent/declassified records and payment/resource-register references remain controlled by provenance and verification gates.
+**Status:** Master R&D index upgraded to **v1.7**. Core evidence layers are formally indexed and linked to AAT, CODEX, speculative-source controls and NFT provenance. Sepehr remains a hypothesis-generation layer; JSTOR, AnthroSource, ResearchGate, Emerald and primary/scientific evidence provide the scholarly/technical cross-check structure.
