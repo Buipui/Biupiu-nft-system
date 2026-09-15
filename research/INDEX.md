@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 1.2  
+**Version:** 1.3  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -65,6 +65,8 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `SPEC-OLMEC` — speculative Olmec/contact claims cross-linked to the established Olmec archaeological record.
 - `SPEC-ANTARCTICA` — alternative Antarctic geography claims cross-linked to satellite/geodetic/bathymetric baselines.
 - `SPEC-VIS` — historical photographic/video visual-forensics and architectural anomaly analysis.
+- `SPEC-SACRED-TECH` — speculative ancient sacred-geometry, technology and energy claims translated into measurable engineering hypotheses.
+- `SPEC-NAGA-HIM` — speculative Naga/Himalayan subterranean and sacred-geography claims cross-linked to archaeology, historical surveys and geophysics.
 - `ALA-ATLANTIS` — dedicated hypothesis layer for Atlantis-related geographic predictions; separate from accepted archaeological geography.
 - `ALA-HYPERBOREA` — dedicated hypothesis layer for Hyperborea/northern ancient-geography claims.
 - `ALA-HIDDEN-LANDS` — analytical layer for hidden-land/Antarctica claims; never replaces satellite/geodetic baselines.
@@ -82,7 +84,7 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 `research/SPEC-VIDEO-INDEX.md` is the controlled index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. `research/SPEC-SEP-SOURCE.md` is the dedicated Sepehr/Atlantean Gardens source registry. These records contain claim-specific evidence statuses, source-genealogy controls and proposed CODEX tests.
 
 ## Speculative convergence and verification
-`research/SPEC-CONVERGENCE.md` tracks apparent convergence between channels without treating repeated claims as independent corroboration. `research/SPEC-CLAIM-REGISTRY.md` converts priority claims into explicit null/alternative tests, including Atlantis, catastrophe/reset, underground networks, alternative maps, Hyperborea/Thule, human origins, architectural anomalies, Olmec/contact hypotheses and Antarctica claims.
+`research/SPEC-CONVERGENCE.md` tracks apparent convergence between channels without treating repeated claims as independent corroboration. `research/SPEC-CLAIM-REGISTRY.md` converts priority claims into explicit null/alternative tests, now including Atlantis, catastrophe/reset, underground networks, alternative maps, Hyperborea/Thule, human origins, architectural anomalies, Olmec/contact hypotheses, Antarctica, sacred-technology claims and Naga/Himalayan subterranean traditions.
 
 ## Vibes of Cosmos Atlas integration
 `research/SPEC-VOC-ATLAS-INTEGRATION.md` is the dedicated BIUPIU-VOC cartographic layer. VOC maps are preserved as third-party speculative source material and separated from the authoritative physical Earth baseline. The Atlas maintains analytical tiers for physical Earth, historical Earth, palaeogeography, archaeological/cultural geography and speculative cartography.
@@ -102,6 +104,8 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `CODEX-ANTARCTICA` — Antarctic geographic/bathymetric comparison.
 - `CODEX-UNDERGROUND` — tunnel/cave network GIS/connectivity testing.
 - `CODEX-RESET` — event-specific before/after landscape reconstruction.
+- `CODEX-SACRED-TECH` — measurable geometry/material/energy translation of ancient-technology claims.
+- `CODEX-NAGA-HIM` — historical-survey, GIS and geophysical testing of Naga/Himalayan subterranean claims.
 
 ## Validation controls
 Historical landscape workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
@@ -114,7 +118,7 @@ Remote-sensing anomalies are not automatically tunnels. Ley lines are not treate
 Each record includes source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. Third-party maps, videos, photographs and code remain subject to their licences. NFT artwork must use original Biupiu-generated analytical outputs or properly licensed material.
 
 ## Current priorities
-1. Claim-by-claim extraction from highest-priority videos.
+1. Claim-by-claim extraction from highest-priority Sepehr/Atlantean Gardens and Divergent videos.
 2. Primary-source verification and source-independence graph.
 3. Atlantis/ancient-catastrophe prediction registry.
 4. Underground-site verification registry.
@@ -123,6 +127,8 @@ Each record includes source, evidence status, technical question, reproducibilit
 7. CODEX geometry/GIS/statistics integration.
 8. Olmec/Mesoamerican contact-evidence audit.
 9. Antarctica/alternative-geography coordinate tests.
-10. Only after validation: research-to-art/NFT translation.
+10. Sacred-technology engineering tests.
+11. Naga/Himalayan subterranean and sacred-geography audit.
+12. Only after validation: research-to-art/NFT translation.
 
-**Status:** Research index upgraded to **v1.2**. Robert Sepehr/Atlantean Gardens now has a dedicated permanent source registry and expanded claim families; Divergent has a formal visual-forensics branch; claim verification and source-genealogy records have been expanded; all speculative layers remain linked to ALA and CODEX while preserving the distinction between speculation and evidence.
+**Status:** Research index upgraded to **v1.3**. The Sepehr/Atlantean Gardens branch now has a live priority extraction queue; the verification registry includes sacred-technology and Naga/Himalayan research families; Divergent remains integrated through visual-forensics and catastrophe/cartographic testing; all speculative layers remain linked to ALA and CODEX while preserving the distinction between speculation and evidence.
