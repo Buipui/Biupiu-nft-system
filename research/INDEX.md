@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 0.9  
+**Version:** 1.0  
 **Updated:** 15 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -37,6 +37,7 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `GEOARCH` — geoarchaeology, geology, hydrology, geophysics and remote sensing.
 - `LAND-GIS` — historical GIS, land survey, cadastral reconstruction and uncertainty.
 - `ALA` — Ancient Landscape Atlas and time-layered environmental/cultural reconstruction.
+- `ALA-PRE-DISASTER` — event-specific reconstruction before/after earthquakes, floods, tsunamis, volcanoes and other transformations.
 - `PALAEO` / `COAST` — palaeogeography, ancient coastlines and submerged landscapes.
 - `EMPIRE` / `CULTURE` — ancient political geography and comparative technology/culture.
 - `GEO-MAG` — geomagnetics and archaeomagnetism.
@@ -52,33 +53,47 @@ Evidence labels: **Established / Supported Research / Plausible Model / Unresolv
 - `FAILURE` — engineering, agricultural, water and civilisational failure atlas.
 - `BIT` — BitChute/video prototype intelligence for real-world engineering discovery.
 - `SPEC` — Sepehr, Atlantean Gardens, Divergent Libertalia and Vibes of Cosmos hypothesis research.
-- `SPEC-VIDEO` — **controlled video/source index for speculative-history, geography and cosmology claims.**
-- `SPEC-CONVERGENCE` — **source-genealogy and independent-convergence testing; copied sources are not counted as independent corroboration.**
-- `CARTOFORENSICS` — **historical/alternative-map provenance, projection, georeferencing and claim-to-coordinate analysis.**
-- `ALA-PRE-DISASTER` — **event-specific reconstruction of landscapes before/after earthquakes, floods, tsunamis, volcanoes and other transformations.**
+- `SPEC-VIDEO` — controlled video/source index for speculative-history, geography and cosmology claims.
+- `SPEC-CONVERGENCE` — source-genealogy and independent-convergence testing; copied sources are not counted as independent corroboration.
+- `CARTOFORENSICS` — historical/alternative-map provenance, projection, georeferencing and claim-to-coordinate analysis.
+- `SPEC-COSMOLOGY` — controlled alternative-cosmology claim testing, including Plasma Moon and celestial-motion claims.
+- `SPEC-GEOGRAPHY` — alternative world-map, hidden-land and palaeogeographic hypothesis layers.
+- `SPEC-CATASTROPHE` — event-specific ancient catastrophe/reset hypotheses; no global-reset assumption.
+- `SPEC-UNDERGROUND` — speculative subterranean-network claims cross-linked to the documented UNDERGROUND atlas.
+- `SPEC-HUMAN-ORIGINS` — alternative human-origins claims cross-linked to fossil, genomic and archaeological evidence.
+- `ALA-ATLANTIS` — dedicated hypothesis layer for Atlantis-related geographic predictions; separate from accepted archaeological geography.
+- `ALA-HYPERBOREA` — dedicated hypothesis layer for Hyperborea/northern ancient-geography claims.
+- `ALA-HIDDEN-LANDS` — analytical layer for hidden-land/Antarctica claims; never replaces satellite/geodetic baselines.
 - `NFT-IP` — NFT, provenance, artwork and invention IP.
-- `NFT-CF` — **Founding NFT crowdfunding programme** for establishing the Biupiu R&D and digital-art ecosystem.
-- `NFT-ATH-GEO` — **Ancient Systems × Computational Geometry artwork stream**, connecting archaeology/ancient technology with computational reconstruction and generative art.
+- `NFT-CF` — Founding NFT crowdfunding programme for establishing the Biupiu R&D and digital-art ecosystem.
+- `NFT-ATH-GEO` — Ancient Systems × Computational Geometry artwork stream, connecting archaeology/ancient technology with computational reconstruction and generative art.
 - `NFT-GEN` — generative-art and algorithmic artwork production.
 - `NFT-PROV` — digital-art provenance, research IDs, algorithms, generation parameters, hashes and blockchain records.
-- `NFT-ARCH` — **NFT master architecture**, covering research-to-art-to-blockchain structure, collection taxonomy, identity model, evidence controls and IP boundaries.
-- `NFT-ORIGIN` — **BIUPIU / ORIGIN founding collection**, including Genesis, Ancient Systems, Geometry, Regenerative Earth, Biological Geometry, HempCarbon, Energy, Water, Computational Engineering and Future Systems.
+- `NFT-ARCH` — NFT master architecture, covering research-to-art-to-blockchain structure, collection taxonomy, identity model, evidence controls and IP boundaries.
+- `NFT-ORIGIN` — BIUPIU / ORIGIN founding collection, including Genesis, Ancient Systems, Geometry, Regenerative Earth, Biological Geometry, HempCarbon, Energy, Water, Computational Engineering and Future Systems.
 
-## Speculative video index
-`research/SPEC-VIDEO-INDEX.md` is the controlled source index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. It contains claim-specific records, evidence statuses, source-genealogy controls and proposed CODEX tests. Key records include alternative cartography, Plasma Moon, Pangaia, hidden-land claims, Atlantis/Hyperborea/Thule, subterranean traditions, catastrophe/reset claims and visual/cartographic anomalies.
+## Speculative video/source index
+`research/SPEC-VIDEO-INDEX.md` is the controlled index for VOC, Robert Sepehr/Atlantean Gardens and Divergent material. It contains claim-specific records, evidence statuses, source-genealogy controls and proposed CODEX tests.
 
-### Source-control rule
-Creator ≠ source ≠ original evidence. A video claim is never upgraded to established fact merely because multiple channels repeat it. Every convergence record must trace the original source and test source independence.
+### VOC source update
+The 2025 World Map is documented as containing conventional geographic layers plus Pangaia, Narnia/Middle Earth, Oceanografia, Cosmic Epochs, Unknown Continents and Lands Beyond Antarctica; the published map is all rights reserved. citeturn0search1 The 2024 Extended World Map lists seabed depth, underwater craters, Antarctica stations, ice walls, hidden lands and alternative map layers. citeturn0search2 VOC's own channel describes its work as reverse-engineering cosmology and identifies Stergio as creator of World Map by Plasma Moon. citeturn0search0
 
-## NFT master architecture
-The Biupiu NFT system is structured in three layers: **Biupiu Research → Biupiu Digital Assets → Biupiu NFTs**. NFTs are public-facing digital artifacts derived from documented research, computational models or original generative processes; they do not automatically convey ownership of underlying patents, inventions, research, source code, biological materials or trademarks.
+New records: `SPEC-VOC-010` Moon/image-to-world-map reconstruction; `011` lunar phase/size visual claims; `012` cosmic-epoch transitions; `013` magnetic-north/great-circle claims; `014` oceanografia/seabed/crater mapping; `015` Antarctica/hidden-continent claims; `016` alternative map version comparison; `017` Pangaia/Middle Earth/Narnia provenance.
 
-Core pipeline: **Research → source material → evidence classification → data/measurements → mathematical model → computational geometry → algorithm → generative process → original artwork → metadata → asset hash → blockchain record → collector.**
+These remain hypothesis records, not accepted geographic facts. Preserve source provenance and generate Biupiu analytical layers rather than copying protected artwork. citeturn0search1turn0search2
 
-Every serious artwork receives a **Biupiu Research ID** and a separate **NFT ID**. One research project may generate multiple artworks/editions. Cross-disciplinary works may carry primary and secondary Research IDs.
+### Sepehr / Atlantean Gardens update
+New records: `SPEC-SEP-011` Hyperborea/Atlantis/Thule and antediluvian technology; `012` Vril/scalar/free-energy; `013` Agartha/Shambhala/inner-earth traditions; `014` alleged European underground tunnel networks; `015` Atlantis/antediluvian anthropology; `016` alternative human-origins models.
+
+The archive explicitly presents Hyperborea/Atlantis/Thule as legendary pre-flood civilisations and associates them with advanced technology/Vril claims. citeturn0search3 It also presents Agartha/Shambhala underground traditions. citeturn0search12 A 2020 entry describes an alleged 12,000-year-old European tunnel network; this remains a claim requiring site-by-site archaeological verification. citeturn0search5
+
+### Divergent update
+New records: `SPEC-DIV-005` architectural anomalies; `006` landscape/cartographic anomalies; `007` reset/pre-disaster chronology; `008` Moon/Antarctica/alternative-map claims. Divergent material remains visual/hypothesis input and requires provenance, geolocation, historical-map, cadastral, architectural, geological and archaeological review.
+
+## Source-genealogy rule
+**Creator ≠ source ≠ original evidence.** Repeated claims are not independent corroboration. Every convergence record must trace the earliest identifiable source and determine whether later channels copied or independently derived the claim.
 
 ## CODEX speculative integration
-New controlled modules:
 - `CODEX-SPEC-GIS` — claim-to-coordinate mapping.
 - `CODEX-CARTOFORENSICS` — projection/georeferencing analysis.
 - `CODEX-ALIGN` — Monte Carlo alignment testing.
@@ -88,29 +103,32 @@ New controlled modules:
 - `CODEX-SOURCEGRAPH` — source genealogy and independence graph.
 - `CODEX-HCI` — hypothesis convergence index.
 - `CODEX-SPS` — speculative priority score.
+- `CODEX-MOONMAP` — lunar-image geometry and projection testing.
+- `CODEX-EPOCH` — chronology/cycle model testing.
+- `CODEX-ANTARCTICA` — Antarctic geographic/bathymetric comparison.
+- `CODEX-UNDERGROUND` — tunnel/cave network GIS/connectivity testing.
+- `CODEX-RESET` — event-specific before/after landscape reconstruction.
 
 All speculative claims must be converted into measurable predictions before computational or experimental validation.
 
-## Ancient landscape / underground validation
-Historical workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
+## Validation controls
+Historical landscape workflow: `historical map/survey → scan → georeference → coordinate transform → cadastral reconstruction → satellite/aerial → LiDAR/DEM → geology → hydrology → archaeology → geophysics → present landscape`.
 
 Subterranean evidence ladder: `folklore → historical reference → surface morphology → remote sensing → geophysical anomaly → physical inspection → archaeological documentation → surveyed/independently verified structure`.
 
-Remote-sensing anomalies are not automatically tunnels; geological fractures, drainage, buried walls, roads, pipes and natural cavities remain alternative explanations.
+Remote-sensing anomalies are not automatically tunnels. Ley lines are not treated as established science; sacred-site relationships must be tested against geology, faults, hydrology, geomagnetism, topography and astronomy with statistical controls.
 
-## Sacred-grid / geomagnetic testing
-Global ley lines are not treated as established science. Test archaeological/sacred-site relationships against geology, faults, hydrology, geomagnetism, topography and astronomy using appropriate statistical/randomisation controls.
+## IP / NFT control
+Each record includes source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. Third-party maps, videos, photographs and code remain subject to their licences. NFT artwork must use original Biupiu-generated analytical outputs or properly licensed material.
 
-## HempCarbon / materials
-Hemp biomass is treated as a chemical feedstock for engineered carbon materials, not as evidence of naturally generated energy. Research covers activated-carbon surface area, N/S/P doping, supercapacitor performance, electrolyte chemistry, conductivity, dielectric properties, EMI shielding and magnetodielectric composites.
+## Current priorities
+1. Claim-by-claim extraction from highest-priority videos.
+2. Primary-source verification and source-independence graph.
+3. Atlantis/ancient-catastrophe prediction registry.
+4. Underground-site verification registry.
+5. Alternative-cartography/CODEX-MOONMAP testing.
+6. Ancient Landscape Atlas hypothesis layers.
+7. CODEX geometry/GIS/statistics integration.
+8. Only after validation: research-to-art/NFT translation.
 
-## IP control
-Each record should include source, evidence status, technical question, reproducibility, prior art, licence/provenance, computational path, experimental path and IP/commercialisation status. IP values: **OPEN / PUBLIC-DOMAIN / OPEN-SOURCE / UNCLEAR / THIRD-PARTY / PRIOR ART / DERIVATIVE / ORIGINAL BIUPIU / IP-SENSITIVE**.
-
-## Current NFT priority integration
-1. Finalise BIU-NFT-0001 artwork prototype; 2. establish reproducible generative-art pipeline; 3. build metadata/provenance records; 4. perform third-party source/licence review; 5. protect IP-sensitive material before public release; 6. select blockchain/network and marketplace; 7. mint a controlled pilot edition; 8. document collector/crowdfunding terms; 9. expand Ancient Systems × Computational Geometry series; 10. connect future NFT outputs to relevant Biupiu research streams.
-
-## Current broader priority integration
-1. Founding NFT crowdfunding architecture and first release; 2. Ancient Systems × Computational Geometry artwork prototype; 3. speculative-source claim verification pipeline; 4. Ancient Landscape Atlas; 5. CODEX geometry/CFD engine; 6. HempCarbon supercapacitor programme; 7. hemp composites; 8. ancient water reconstruction; 9. low-head micro-hydro; 10. integrated digital twin.
-
-**Status:** Research index upgraded to **v0.9**. The speculative video/source layer, source-genealogy controls, cartographic forensics and computational hypothesis-testing modules are now formally indexed. The detailed execution record is `research/SPEC-VIDEO-INDEX.md`.
+**Status:** Research index upgraded to **v1.0** and integrated with the executed speculative-video source layer. The repository now has dedicated cosmology, geography, catastrophe, underground and human-origins branches, expanded CODEX testing, and controlled NFT/IP boundaries.
