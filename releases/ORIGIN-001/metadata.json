@@ -1,0 +1,37 @@
+{
+  "name": "BIUPIU — Ancient Water / Computational Flow I",
+  "description": "Original computational artwork exploring ancient water-management principles through flow fields, terrain/network geometry and parametric transformation. This work is a reconstructed artistic/computational interpretation and is not presented as an exact archaeological reconstruction.",
+  "collection": "BIUPIU / ORIGIN",
+  "nft_id": "BIU-NFT-0001",
+  "research_id": "BIU-ANC-001",
+  "secondary_research_ids": ["BIU-GEO-001"],
+  "stream": "NFT-ATH-GEO",
+  "class": "CLASS-C — Computational Artifact",
+  "evidence_classification": "RECONSTRUCTED",
+  "artwork_type": "Generative Computational Art",
+  "algorithm": {
+    "id": "FLOW-GEOMETRY-001",
+    "version": "0.1"
+  },
+  "generation": {
+    "seed": null,
+    "parameters_status": "TBD"
+  },
+  "edition": {
+    "number": 1,
+    "size": 25,
+    "status": "PROPOSED"
+  },
+  "creator": "Biupiu",
+  "creation_year": 2026,
+  "artwork_uri": null,
+  "metadata_uri": null,
+  "git_commit": null,
+  "asset_hash": null,
+  "metadata_hash": null,
+  "blockchain": null,
+  "contract_address": null,
+  "token_id": null,
+  "license": "To be approved before minting",
+  "ip_sensitivity": "IP review required before release"
+}
