@@ -1,0 +1,78 @@
+{
+  "name": "BIU Art Genesis #0001-A",
+  "description": "The inaugural artwork in the BIU dual-asset NFT collection. A provenance artwork paired with an independent certificate of authenticity (BIU-COA-0001). This piece represents the genesis of a revolutionary model where artwork and authenticity proof exist as complementary, tradeable assets.",
+  "image": "ipfs://QmPlaceholder/biu-art-0001-a-preview.png",
+  "external_url": "https://biu-nft.studio/artworks/BIU-ART-0001-A",
+  "attributes": [
+    {
+      "trait_type": "Collection",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Asset Type",
+      "value": "Provenance Artwork"
+    },
+    {
+      "trait_type": "Edition",
+      "value": "1/1"
+    },
+    {
+      "trait_type": "Creator",
+      "value": "Studio BIU"
+    },
+    {
+      "trait_type": "Medium",
+      "value": "Digital"
+    },
+    {
+      "trait_type": "Dimensions",
+      "value": "4000x3000px"
+    },
+    {
+      "trait_type": "Certification Status",
+      "value": "Bonded"
+    },
+    {
+      "trait_type": "Bonded Certificate",
+      "value": "BIU-COA-0001"
+    },
+    {
+      "trait_type": "Royalty Percentage",
+      "value": "10%"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "ipfs://QmPlaceholder/biu-art-0001-a-fullres.png",
+        "type": "image/png",
+        "size": "High Resolution Master"
+      }
+    ],
+    "category": "image"
+  },
+  "dual_asset": {
+    "model": "BIU Dual-Asset Bond",
+    "paired_token": "BIU-COA-0001",
+    "relationship": "Artwork to Certificate",
+    "bond_type": "Keccak256 Hash Chain",
+    "bond_status": "Active",
+    "bond_created_at": "2026-09-16T00:00:00Z"
+  },
+  "provenance": {
+    "minter": "0x0000000000000000000000000000000000000001",
+    "mint_date": "2026-09-16T00:00:00Z",
+    "contract": "BIUArtwork.sol",
+    "blockchain": "Ethereum Testnet (Sepolia)",
+    "chain_id": 11155111,
+    "provenance_hash": "0xkeccak256(artwork_data + timestamp + metadata)"
+  },
+  "rights": {
+    "copyright": "© 2026 BIU Studio. All rights reserved.",
+    "usage": "This NFT grants non-exclusive ownership of the digital asset. Creator retains copyright and commercial reproduction rights.",
+    "licensing": "CC BY-NC-ND 4.0 for verified holders"
+  },
+  "metadata_version": "1.0",
+  "standard": "ERC-721",
+  "schema_url": "https://raw.githubusercontent.com/Buipui/Biupiu-nft-system/main/nft-metadata/README.md"
+}
