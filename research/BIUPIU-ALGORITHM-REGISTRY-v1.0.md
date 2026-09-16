@@ -6,6 +6,12 @@
 | Algorithm ID | Version | Research | NFT/Release | Domain | Status |
 |---|---|---|---|---|---|
 | BIU-ALG-GEO-FLOW-001 | 0.1.0 | BIU-ANC-001 / BIU-GEO-001 | BIU-NFT-0001 / ORIGIN-001 | Computational flow geometry | Prototype |
+| BIU-ALG-GEO-TORUS-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Toroidal geometry | Framework / pending implementation |
+| BIU-ALG-GEO-NEST-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Nested / recursive geometry | Framework / pending implementation |
+| BIU-ALG-GEO-BRAID-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Braided filament geometry | Framework / pending implementation |
+| BIU-ALG-GEO-WAVE-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Nested wave / superposition geometry | Framework / pending implementation |
+| BIU-ALG-GEO-VORTEX-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Vortex / vortex-ring geometry | Framework / pending implementation |
+| BIU-ALG-GEO-SYMM-001 | 0.1.0-planned | BPU-RES-CG-TB-001 | Future | Symmetry / polyhedral analysis | Framework / pending implementation |
 
 ## Registration fields for future algorithms
 
@@ -40,3 +46,9 @@ A released NFT always points to the exact algorithm version used for generation.
 ## First registered family
 
 `BIU-ALG-GEO-FLOW-001` is the network's first algorithm family. It is the registered lineage of the ORIGIN-001 `FLOW-GEOMETRY-001` prototype. The current implementation remains explicitly an artistic/computational scaffold and not an archaeological validation.
+
+## Complex geometry expansion
+
+`BPU-RES-CG-TB-001` introduces a controlled mathematical geometry expansion inspired by shapes and structures discussed in Thunderbolts Project material. The expansion includes toroidal, nested/stacked toroidal, helical/braided filament, spiral, hourglass, Platonic/nested-polyhedral, nested-wave, vortex, cellular, Möbius, knot and superformula families.
+
+The Thunderbolts source layer is classified as inspiration/controlled hypothesis material. The algorithm registry records mathematical and computational lineage separately from claims about physical mechanisms. Proposed algorithms are not treated as validated physics until independently tested.
