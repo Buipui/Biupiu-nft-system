@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.2  
+**Version:** 2.3  
 **Updated:** 16 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -51,42 +51,63 @@ This is the personal Biupiu computational-art, invention, speculative-research a
 - `JSTOR` / `ANTHROSOURCE` / `RG` / `EMERALD` / `PRIMARY` / `TEXTS` — transversal evidence-source layers used across relevant departments.
 - `NFT-IP` / `NFT-CF` / `NFT-ATH-GEO` / `NFT-GEN` / `NFT-PROV` / `NFT-ARCH` / `NFT-ORIGIN` — research-to-art, crowdfunding, generative art, provenance and NFT architecture.
 - `NFT-WEB3` / `NFT-MINT` / `NFT-EVM` — smart contracts, Web3 tooling, deployment, minting, token URI management and blockchain provenance.
+- `NFT-ALG` / `NFT-GRAPH` / `NFT-REGISTRY` — company algorithm families, semantic version lineage, machine-readable algorithm graph, release commitments and blockchain registry architecture.
 
-## NFT / Web3 master architecture
-The NFT system is now a complete research-to-blockchain development track rather than an artwork-only repository.
+## Company algorithm network
+`research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md` defines the active computational company-network architecture.
 
-### Research-to-NFT pipeline
-`RESEARCH → EVIDENCE → RESEARCH ID → COMPUTATIONAL MODEL → ALGORITHM → PARAMETERS/SEED → STAND-ALONE ARTWORK → PROVENANCE ARTWORK → HASHES → METADATA → IP/LICENCE GATE → SMART CONTRACT → TESTNET → TEST MINT → VERIFICATION → PRODUCTION MINT → BLOCKCHAIN RECORD`
+### Canonical lineage
+`RESEARCH ID → ALGORITHM FAMILY/VERSION → PARAMETERS + SEED → ARTWORK RELEASE → RELEASE MANIFEST → HASHES → BLOCKCHAIN RECORD`
 
-### Mandatory two-image standard
-Every future NFT release is designed as a paired asset:
+Algorithm layers are organised from reusable geometric primitives through fields/structures, domain models, generative operators, optimisation/AI and final rendering. Algorithm families use `BIU-ALG-[DOMAIN]-[NUMBER]`; released algorithms use immutable semantic versions.
 
-1. **01_PROVENANCE** — BIUPIU branded research/provenance presentation.
+### Algorithm registry
+`research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md` is the human-readable registry. The first registered family is `BIU-ALG-GEO-FLOW-001@0.1.0`, linked to `BIU-ANC-001`, `BIU-GEO-001`, `BIU-NFT-0001` and ORIGIN-001. Historical algorithm versions are not overwritten.
+
+### Machine-readable algorithm graph
+`research/BIUPIU-ALGORITHM-GRAPH-v1.0.json` is the machine-readable lineage graph. It records algorithm nodes and provides controlled edge types for evolution, composition, validation, research derivation, release generation and forks. Future NFTs can therefore extend the network without breaking provenance of earlier releases.
+
+## Blockchain / Web3 master architecture
+The NFT system is a research-to-blockchain development track rather than an artwork-only repository.
+
+### Master pipeline
+`RESEARCH → EVIDENCE → RESEARCH ID → COMPUTATIONAL MODEL → ALGORITHM FAMILY/VERSION → PARAMETERS/SEED → STAND-ALONE ARTWORK → PROVENANCE ARTWORK → RELEASE MANIFEST → HASHES → METADATA → IP/LICENCE GATE → RESEARCH REGISTRY ANCHOR → SMART CONTRACT → TESTNET → TEST MINT → VERIFICATION → PRODUCTION MINT → BLOCKCHAIN PROVENANCE`
+
+### Paired-image standard
+Every future NFT release is designed as:
+1. **01_PROVENANCE** — BIUPIU-branded research/provenance presentation.
 2. **02_STANDALONE** — independent collector-facing computational artwork.
 
-The pair shares a Research ID/release record but receives independent versions and hashes.
+The two assets share the same release record but have independent versions and hashes. Image creation remains paused until explicitly requested.
 
-### Web3 repository layer
-- `contracts/BiupiuNFT.sol` — ERC-721 reference contract with capped supply, owner-controlled minting, batch minting, per-token URI and ERC-2981 royalty signalling.
-- `hardhat.config.js` — EVM development/testnet configuration.
-- `package.json` — Hardhat/ethers/OpenZeppelin/dotenv tooling.
-- `.env.example` — secret-safe local configuration template.
-- `scripts/deploy.js` — deployment workflow specification.
-- `scripts/mint.js` — mint workflow specification.
-- `docs/WEB3-MINTING-LAYER-v1.0.md` — operational Web3 documentation.
-- `docs/NFT-MINTING-ARCHITECTURE-v2.0.md` — contract/network/wallet/on-chain/off-chain architecture.
+### Contract layer
+- `contracts/BiupiuNFT.sol` — ERC-721 collection/ownership and token metadata layer.
+- `contracts/BiupiuResearchRegistry.sol` — prototype research/algorithm/release commitment registry and post-mint token-link layer.
+- `deploy-nft.js` — NFT deployment script.
+- `mint-nft.js` — NFT mint script.
+- `deploy-registry.js` — registry deployment script.
+- `hardhat.config.js` — local/EVM testnet configuration.
+- `.env.example` — secret-safe configuration template.
+- `WEB3-MINTING.md` — operational Web3 documentation.
+- `NFT-MINTING-ARCHITECTURE-v2.0.md` — complete contract/network/wallet/on-chain/off-chain architecture.
+- `WEB3-SECURITY.md` — security and custody doctrine.
+
+### Blockchain registry principle
+GitHub remains the canonical detailed record. The registry anchors only identifiers and cryptographic commitments: release ID, Research ID, algorithm family/version, manifest hash, provenance hash, standalone hash, metadata hash and eventual NFT contract/token linkage.
+
+Off-chain: source code, full research, artwork files, private datasets and confidential IP. On-chain: release commitments and public linkage records where approved.
 
 ### Development networks
 - Ethereum Sepolia — chain ID 11155111.
 - Polygon Amoy — chain ID 80002.
 
-These are test/development targets. Mainnet deployment is a separate release-governance decision.
+These remain development/test targets. No production deployment or NFT mint is represented as complete.
 
-### Security doctrine
-Private keys, seed phrases and `.env` files are never committed. Deployment and treasury wallets are separated conceptually, and future production architecture should consider role separation/multisig custody. Contract code must be tested and source-verified where supported before production use.
+### Web3 security doctrine
+Never commit private keys, seed phrases or `.env` files. Keep test and production custody separate. Production should use controlled operational custody and may use multisig. Test, source-verify and document deployed contracts before production release.
 
 ### IP doctrine
-The blockchain token does not automatically transfer Biupiu patents, inventions, trademarks, confidential research, source code, datasets or commercial rights. Token URI metadata and licence terms define the rights actually granted.
+A token does not automatically transfer Biupiu patents, inventions, trademarks, confidential research, source code, datasets or commercial rights. Licence terms explicitly define what a collector receives.
 
 ## Core evidence-source registry
 
@@ -107,7 +128,7 @@ Core anthropology/archaeology layer for craft production, technology transmissio
 Scientific and engineering discovery layer for archaeometry, metallurgy, materials, genetics, experimental archaeology, computational research and engineering. Prefer publisher/institutional/DOI versions for final evidence records.
 
 ### `SRC-EMERALD` — Emerald Insight
-Core systems/implementation layer for sustainability, water, agriculture, infrastructure, engineering management, optimisation and socioeconomic implementation. Index at publication/DOI level and distinguish content type.
+Core systems/implementation layer for sustainability, water, agriculture, infrastructure, engineering management, optimisation and socioeconomic implementation.
 
 ### `SRC-TEXTS` — Ancient texts
 Textual evidence and cultural traditions, with strict separation between historical testimony, mythology, later commentary and modern interpretation.
@@ -130,32 +151,10 @@ GIS/CAD/CFD/FEA/EM/thermal/acoustic/statistical/network/optimisation and digital
 ### `SRC-EXPERIMENT` — Physical validation
 Biupiu laboratory/field reconstruction, prototypes, sensor measurements and repeatability studies.
 
-## AnthroSource master register integration
-`research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md` is now a formal sub-index of this master index.
-
-Current indexed records include:
-
-1. **AS-AAT-001 — Agricultural landscapes and relict field systems:** Casana (2024), *The state of the field: Emerging approaches to the archaeology of agricultural landscapes*, DOI 10.1111/apaa.12181. Routes to `AAT/AGRI/GEOARCH/LAND-GIS/ALA/WATER/CODEX`. Use for landscape-scale agricultural archaeology and modern archaeological methods; not as proof of a particular Biupiu technology.
-2. **AS-AAT-002 — Technology as material and behavioural selection:** Bleed (1997), *Content as Variability, Result as Selection: Toward a Behavioral Definition of Technology*, DOI 10.1525/ap3a.1997.7.1.95. Routes to `AAT/AAT-H/MATERIALS/GEOMETRY/CODEX/IP`. Supports process/skill/selection/context-aware technology records.
-3. **AS-AAT-003 — Craft production, fibres and metals:** Hendon (2015), *Producing Goods, Shaping People: The Materiality of Crafting*, DOI 10.1111/apaa.12068. Routes to `AAT/AAT-H/HEMP/TEXTILES/MATERIALS/BIOCARBON/COMPOSITES`. Bridges ancient craft/process research with modern material and process engineering questions.
-4. **AS-AAT-004 — Early blade technologies:** Bar-Yosef (1999), *The Big Deal about Blades: Laminar Technologies and Human Evolution*, DOI 10.1525/aa.1999.101.2.322. Routes to `AAT/AAT-H/MATERIALS/GEOMETRY/PALAEO/CODEX`. Supports comparative study of geometry/process evolution without assuming a single technological origin.
-5. **AS-AAT-005 — Stone-tool making and materiality:** Efrati (2026), *Reframing the Chipped Edge: Combining Materiality, Ontology, and Embodiment to Rethink Stone Tool-Making and Human Conscious Behavior in the Paleolithic Past*, DOI 10.1111/anoc.70016. Routes to `AAT/AAT-H/GEOMETRY/MATERIALS/PALAEO`. Use for contemporary anthropology of stone-tool making and embodied human-material interaction; do not infer untested engineering mechanisms.
-
-**Methodological extensions now required:** future ancient-agriculture searches should cross-reference agricultural-landscape archaeology, LiDAR/aerial imagery, ecological datasets and Indigenous/traditional ecological knowledge where relevant; future ancient-craft searches should record materials, skills, process, labour/social context and output; future ancient-technology claims must distinguish archaeological evidence from modern engineering reconstruction.
-
-## Evidence workflow
-`hypothesis/source → exact claim → source genealogy → PRIMARY → JSTOR → ANTHROSOURCE → RESEARCHGATE → EMERALD → TEXTS/SCIENCE → patents/declassified → GIS/CODEX → experiment → evidence status → IP/NFT gate`
-
-Evidence controls: **A Directly demonstrated; B Strongly supported; C Plausible/incomplete; D Testable hypothesis; E Unsupported/contradicted; M Mythological/cultural; S Speculative/inspirational.**
-
-Three videos repeating the same source count as one source lineage, not three independent confirmations.
-
 ## Cross-department integration
 `AAT/AAT-H ↔ GEOARCH/LAND-GIS/ALA/PALAEO ↔ COMPUTE/GEOMETRY ↔ NFT-ART`
 
 `JSTOR/ANTHROSOURCE/RESEARCHGATE/EMERALD/PRIMARY/TEXTS ↔ every relevant AAT division`
-
-`ANTHROSOURCE → AAT/AAT-H → AGRI/WATER/GEOARCH/LAND-GIS → MATERIALS/HEMP/TEXTILES → CODEX/GEOMETRY`
 
 `BIO/BIO-GEN → AGRI → HEMP → BIOCARBON/BIOCHEM → MATERIALS/COMPOSITES/TEXTILES/COAT`
 
@@ -169,39 +168,26 @@ Three videos repeating the same source count as one source lineage, not three in
 
 `IP ↔ every department`
 
-`NFT-ATH-GEO ↔ AAT/AAT-H ↔ GEOARCH/WATER/AGRI ↔ GEOMETRY/CODEX ↔ NFT-PROV/NFT-GEN ↔ NFT-EVM/NFT-MINT`
+`NFT-ATH-GEO ↔ AAT/AAT-H ↔ GEOARCH/WATER/AGRI ↔ GEOMETRY/CODEX ↔ NFT-PROV/NFT-GEN ↔ NFT-EVM/NFT-MINT/NFT-REGISTRY`
+
+`NFT-ALG ↔ GEOMETRY ↔ CODEX/COMPUTE ↔ AI ↔ DIGITAL-TWIN ↔ NFT-GEN ↔ NFT-PROV ↔ NFT-EVM`
 
 ## Current high-value integrated programmes
-
 1. **HempCarbon Energy Storage:** HEMP ↔ BIOCARBON ↔ ENERGY ↔ MATERIALS ↔ ELECTROMAG ↔ CODEX ↔ IP.
 2. **BioCarbon Metallurgy / Wootz research:** AAT/AAT-H ↔ MATERIALS ↔ BIOCARBON ↔ BIOCHEM ↔ CODEX ↔ EXPERIMENT ↔ IP.
 3. **Ancient Hydraulic Systems:** AAT/AAT-H ↔ AGRI ↔ WATER ↔ GEOARCH ↔ LAND-GIS ↔ Emerald/JSTOR/AnthroSource ↔ CFD/CODEX.
 4. **Computational Turbine Engine:** ENERGY ↔ MARINE ↔ AERO ↔ GEOMETRY ↔ COMPUTE ↔ AI ↔ patents/declassified records ↔ EXPERIMENT.
 5. **Digital Ancient Technology Atlas:** AAT ↔ AAT-H ↔ GEOARCH ↔ ALA ↔ GEOMETRY ↔ CODEX ↔ NFT-ATH-GEO.
 6. **Photonics / Structured Light:** PHOTONICS ↔ PH-QPM ↔ COMPUTE ↔ AI ↔ DIGITAL-TWIN ↔ ELECTROMAG.
-7. **Metamaterials:** METAMATERIALS ↔ MM-NASA ↔ MATERIALS ↔ PHOTONICS/ELECTROMAG ↔ GEOMETRY ↔ CODEX.
+7. **Metamaterials:** MM ↔ MM-NASA ↔ MATERIALS ↔ PHOTONICS/ELECTROMAG ↔ GEOMETRY ↔ CODEX.
 8. **Anthropology of Technology / Human-Material Systems:** AAT-H ↔ ANTHROSOURCE ↔ AAT ↔ MATERIALS ↔ AGRI ↔ HEMP/TEXTILES ↔ GEOARCH ↔ CODEX.
-9. **Research-to-Blockchain NFT System:** NFT-ATH-GEO/NFT-GEN/NFT-PROV/NFT-ORIGIN ↔ CG-3D/GEOMETRY ↔ CODEX ↔ IP ↔ NFT-EVM/NFT-MINT. This programme converts evidence-controlled research and reproducible computational outputs into paired provenance/stand-alone artwork assets, content-addressed metadata and controlled EVM minting records.
+9. **Research-to-Blockchain NFT System:** NFT-ATH-GEO/NFT-GEN/NFT-PROV/NFT-ORIGIN ↔ CG-3D/GEOMETRY ↔ CODEX ↔ IP ↔ NFT-EVM/NFT-MINT/NFT-REGISTRY. This is the controlled bridge from evidence-based research and reproducible computation to paired artwork, immutable release commitments and eventual token provenance.
+10. **Company Algorithm Network:** NFT-ALG/NFT-GRAPH ↔ GEOMETRY/CODEX ↔ research IDs ↔ algorithm families/versioning ↔ release manifests ↔ blockchain registry. New algorithms become versioned nodes and new NFTs become release-linked outputs rather than replacing historical records.
 
-## CODEX execution layer
-`research/CODEX-SPEC-EXECUTION.md` is the computational gate from source capture through claim extraction, provenance graph, baseline data, null/alternative models, simulation/statistics, evidence-status update and IP/NFT output. `research/CODEX-DEPARTMENT-QUEUES.md` operationalises department-specific simulation backlogs.
-
-## NFT/Web3 execution layer
-`releases/BIUPIU-NFT-COLLECTION-ARCHITECTURE-v1.0.md` is now v2.0 and includes the blockchain minting lifecycle. `contracts/BiupiuNFT.sol` is the reference ERC-721 contract. Hardhat/ethers tooling is configured for development and testnet deployment. The production gate requires final paired artwork, frozen metadata, asset hashes, licence/IP review, testnet deployment, test mint, verification and only then production mint authorisation.
-
-## New permanent source and routing files
-- `research/ANTHROSOURCE-ANCIENT-TECHNOLOGY-REGISTER.md`
-- `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md`
-- `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md`
-- `releases/BIUPIU-NFT-COLLECTION-ARCHITECTURE-v1.0.md` — now v2.0 Web3-enabled NFT architecture.
-- `docs/WEB3-MINTING-LAYER-v1.0.md` — smart-contract/deployment/minting operations.
-- `docs/NFT-MINTING-ARCHITECTURE-v2.0.md` — blockchain governance and on-chain/off-chain separation.
-
-## Repository correlation rule
-Every newly indexed AnthroSource record must be correlated against: primary archaeology/history; JSTOR where relevant; ResearchGate/scientific literature; Emerald for implementation/system context where relevant; patents/prior art for modern implementations; public/declassified technical records where relevant; GitHub/CODEX for reproducibility; and a defined experimental question where the claim can be tested.
-
-Each resulting research object should carry: source ID, exact claim, source genealogy, evidence status, department codes, computational/CODEX queue, experimental path, IP status and NFT relevance.
-
-## Status
-
-**Master R&D index upgraded to v2.2.** The NFT stream is now explicitly connected to the EVM smart-contract/minting layer, while the research-to-art evidence architecture, two-image release standard and IP boundary remain mandatory. Image generation remains paused; no final NFT image is represented as minted or production-approved.
+## Repository status
+- ORIGIN-001 remains a prototype and is **NOT MINTED**.
+- `BIU-ALG-GEO-FLOW-001@0.1.0` is the first registered algorithm family/version.
+- `BiupiuResearchRegistry.sol` is a prototype contract; it has not been represented as production-deployed.
+- Ethereum Sepolia and Polygon Amoy are development targets.
+- No production blockchain deployment or live NFT mint is recorded.
+- Artwork generation is paused until explicitly requested.
