@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.5  
+**Version:** 2.6  
 **Updated:** 16 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -25,14 +25,14 @@ This is the personal Biupiu computational-art, invention, speculative-research a
 - `WATER` — springs, hydrology, filtration, irrigation and water-energy conversion.
 - `ENERGY` / `ELECTROMAG` — turbines, generators, energy storage, electrical and electromagnetic engineering.
 - `PHOTONICS` / `PH-QPM` / `CRM` — FSO, LiFi/VLC, structured light, holography, quantitative phase, crystals and quantum/photonic materials.
-- `FSO-CPT` / `LIGHT-NET` — Cape Town light-based internet, terrestrial FSO mesh, VLC/LiFi edge access, hybrid optical/RF/fibre resilience and site screening.
+- `FSO-CPT` / `LIGHT-NET` — Cape Town light-based internet, terrestrial FSO mesh, VLC/LiFi edge access, hybrid optical/RF/fibre resilience and GIS site screening.
 - `MM` / `MM-NASA` — metamaterials/metasurfaces and NASA/public technical cross-reference.
 - `AERO` / `STEALTH-GEO` — public-source aerospace, aerodynamics, SR-71/stealth geometry and lightweight mobility.
 - `MARINE` — propellers, pumpjets, hydrofoils, hulls and marine turbines.
 - `CG-3D` / `GEOMETRY` — parametric geometry, topology, CAD, reconstruction and optimisation; extended by `research/BIUPIU-COMPLEX-GEOMETRY-THUNDERBOLTS-CODEX-v1.0.md`.
 - `CODEX` / `COMPUTE` — Python, CFD, FEA/FEM, multiphysics, algorithms, data and reproducible computational engineering.
-- `AI` — machine learning, surrogate models, generative engineering and optimisation; now linked to optical link-quality prediction, adaptive routing and digital-twin workflows.
-- `DIGITAL-TWIN` — physical systems, sensor data, models and optimisation loops; now includes the planned Cape Town FSO network twin.
+- `AI` — machine learning, surrogate models, generative engineering and optimisation; now linked to optical link-quality prediction, adaptive routing and GIS-derived digital-twin inputs.
+- `DIGITAL-TWIN` — physical systems, sensor data, models and optimisation loops; now includes municipal GIS/elevation inputs for the planned Cape Town FSO network twin.
 - `ROBOTICS` / `ADV-MFG` — automation, robotics, machine vision, additive/digital manufacturing and manufacturing constraints.
 - `BIOMED` — biomedical and life-science technology R&D.
 - `AAT` / `AAT-H` — Ancient Applied Technology and anthropology/human-material systems.
@@ -50,24 +50,25 @@ This is the personal Biupiu computational-art, invention, speculative-research a
 - `NFT-ALG` / `NFT-GRAPH` / `NFT-REGISTRY` — company algorithm families, semantic version lineage, machine-readable algorithm graph, release commitments and blockchain registry architecture.
 
 ## Cape Town light-internet / AI-assisted FSO stream
-`research/CAPE-TOWN-LIGHT-INTERNET-AI-FSO-NETWORK-v1.0.md` is the master architecture for a proposed Cape Town metropolitan light-based network. It integrates Wits optical-communications research with terrestrial FSO, VLC/LiFi, structured-light/turbulence research, AI link adaptation, hybrid optical/RF/fibre resilience and digital-twin development.
+`research/CAPE-TOWN-LIGHT-INTERNET-AI-FSO-NETWORK-v1.0.md` remains the master architecture. `research/CAPE-TOWN-FSO-GIS-DATA-ACQUISITION-v1.0.md` defines the authoritative-data acquisition workflow, while `research/CAPE-TOWN-FSO-GIS-FINDINGS-v1.0.md` records the current GIS evidence findings.
 
-Candidate screening zones are CBD/Foreshore; Observatory/Salt River/Woodstock; Rondebosch/Newlands/Claremont; Bellville/Tyger Valley; Century City/Paarden Eiland/Milnerton; Airport/logistics/industrial; and a later Stellenbosch/Winelands extension. These are research zones, not approved deployment sites.
+New findings establish that the City of Cape Town Open Data Service exposes machine-queryable municipal layers including **CCT Buildings**, **5m Contours**, additional 2m ground-level contours, electricity/public-lighting infrastructure and community/public-facility datasets. Current municipal metadata also documents a LiDAR-derived 5m contour/DTM product based on 2024–2025 capture, providing a stronger topographic screening input than an unverified conceptual map. These datasets are research inputs only; they do not establish ownership, permission, structural capacity or deployment approval.
 
-`research/CAPE-TOWN-FSO-PILOT-TESTPLAN-v1.0.md` defines simulation, laboratory, controlled outdoor and multi-node pilot gates. Site selection must use authoritative GIS/elevation, LOS, meteorological, infrastructure, permission, aviation, safety and environmental data.
+The first graph-construction corridors remain CBD/Foreshore ↔ Woodstock/Salt River/Observatory and Observatory/Rondebosch ↔ Newlands/Claremont. The next implementation gate is a public/institutional candidate-node graph with source object IDs, elevation evidence, link geometry, obstruction status, infrastructure status, weather coverage and regulatory/safety gates. No private address is to be treated as a deployable node merely because it appears in public GIS.
+
+## Regulatory and hybrid-network cross-link
+The network architecture now explicitly separates optical FSO from RF fallback. ICASA's current spectrum material documents an E-band light-licensing regime covering 73.375–75.875 GHz paired with 83.375–85.375 GHz, with location/characteristic registration and coordination requirements. This is relevant to a hybrid optical/RF resilience layer; it does not constitute authorisation to deploy any Biupiu network.
 
 ## CODEX network implementation
-`codex/gis/cpt_fso_site_screen.py` provides deterministic preliminary site/link screening. It deliberately does not designate deployable sites; permission and safety constraints are gates, while incomplete authoritative data remains unresolved.
+`codex/gis/cpt_fso_site_screen.py` provides deterministic preliminary site/link screening. Associated tests are `codex/gis/test_cpt_fso_site_screen.py`.
 
-Associated tests: `codex/gis/test_cpt_fso_site_screen.py`.
-
-Planned optical/network modules include FSO channel modelling, structured-light encoding, turbulence eigenmodes, topological encoding, FSO mesh routing, hybrid optical/RF routing, AI link-quality prediction, route optimisation and Cape Town digital-twin modelling.
+Next CODEX work: implement a machine-readable candidate-node/edge graph using authoritative public/institutional GIS objects, then test graph construction before connecting it to AI routing and the digital twin. Planned optical/network modules include FSO channel modelling, structured-light encoding, turbulence eigenmodes, topological encoding, FSO mesh routing, hybrid optical/RF routing, AI link-quality prediction, route optimisation and Cape Town digital-twin modelling.
 
 ## Wits optical research integration
-The FSO stream cross-links Wits research on long-range FSO, VLC/LiFi, structured light, atmospheric turbulence, turbulence eigenmodes, topological/skyrmion encoding and AI-assisted optical-channel adaptation. Wits reports both an established FSO testbed programme and recent real-world structured-light turbulence research. These sources inform engineering hypotheses and test design; they do not by themselves establish Cape Town deployment feasibility.
+The FSO stream cross-links Wits research on long-range FSO, VLC/LiFi, structured light, atmospheric turbulence, turbulence eigenmodes, topological/skyrmion encoding and AI-assisted optical-channel adaptation. These sources inform engineering hypotheses and test design; they do not by themselves establish Cape Town deployment feasibility.
 
 ## Metamaterials cross-link
-`MM → metasurface wavefront control → beam steering/phase control → structured light → FSO channel → AI optimisation` is now an explicit cross-disciplinary pathway. MM remains a separate research branch with its source cross-link register and NASA/ResearchGate/Emerald/patent/declassified evidence layers.
+`MM → metasurface wavefront control → beam steering/phase control → structured light → FSO channel → AI optimisation` remains an explicit cross-disciplinary pathway. MM remains a separate research branch with its source cross-link register and NASA/ResearchGate/Emerald/patent/declassified evidence layers.
 
 ## Complex geometry / Thunderbolts-inspired CODEX stream
 `research/BIUPIU-COMPLEX-GEOMETRY-THUNDERBOLTS-CODEX-v1.0.md` remains the dedicated mathematical/computational reference for toroidal, nested, spiral, helical, braided, vortex, hourglass, wave-superposition, knot and related geometry families. Thunderbolts material remains source/inspiration and controlled hypothesis material only.
@@ -83,13 +84,14 @@ The FSO stream cross-links Wits research on long-range FSO, VLC/LiFi, structured
 - `BIU-ALG-FSO-CHAN-001` — atmospheric optical-channel modelling.
 - `BIU-ALG-FSO-AI-001` — AI link-quality prediction/adaptive routing.
 - `BIU-ALG-FSO-TWIN-001` — digital-twin calibration against measured network telemetry.
+- `BIU-ALG-FSO-GRAPH-001` — authoritative GIS candidate-node/edge graph construction; framework registration pending executable implementation and tests.
 
 These remain framework registrations until validated against authoritative datasets and physical measurements.
 
 ## Cross-disciplinary integration
 `ENERGY ↔ ELECTROMAG ↔ PHOTONICS ↔ FSO-CPT ↔ CRM ↔ MM ↔ GEOMETRY ↔ CODEX`
 
-`PHOTONICS ↔ STRUCTURED-LIGHT ↔ TURBULENCE ↔ AI ↔ DIGITAL-TWIN ↔ FSO-CPT`
+`PHOTONICS ↔ STRUCTURED-LIGHT ↔ TURBULENCE ↔ AI ↔ DIGITAL-TWIN ↔ FSO-CPT ↔ LAND-GIS`
 
 `COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
 
@@ -105,7 +107,8 @@ These remain framework registrations until validated against authoritative datas
 - Complex-geometry execution remains active with deterministic primitives and tests.
 - Cape Town FSO/light-internet architecture and pilot-test plan are indexed.
 - Cape Town FSO preliminary site-screening CODEX implementation and deterministic tests have been added.
-- Network algorithm families remain framework-level until authoritative data and physical validation exist.
+- Authoritative municipal GIS acquisition and first findings are now indexed.
+- Network graph algorithm family is framework-level until executable graph construction, authoritative-data validation and physical validation exist.
 - `BiupiuResearchRegistry.sol` is a prototype contract and is not represented as production-deployed.
 - No production blockchain deployment or live NFT mint is recorded.
 - Artwork generation remains paused until explicitly requested.
