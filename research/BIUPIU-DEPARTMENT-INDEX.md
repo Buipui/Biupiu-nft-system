@@ -1,7 +1,7 @@
 # BIUPIU MASTER DEPARTMENT INDEX
 
-**Version:** 2.0  
-**Date:** 15 September 2026  
+**Version:** 2.1  
+**Date:** 16 September 2026  
 **Status:** Active — integrated Biupiu R&D / computational-art / IP architecture
 
 ## Purpose
@@ -41,7 +41,7 @@ The repository remains a personal R&D/IP and computational-art environment. The 
 | ADV-MFG | Advanced & Additive Manufacturing | CNC/automation, additive manufacturing, digital fabrication, manufacturing constraints |
 | BIOMED | Biomedical & Health/Life Sciences | biomedical R&D, diagnostics, devices and life-science technology |
 | GEOARCH | Geoarchaeology & Geophysics | geology, hydrology, archaeology, remote sensing, geophysical methods |
-| LAND-GIS | Land Survey, Historical GIS & Cadastral Systems | historical maps, surveying, georeferencing, cadastral reconstruction |
+| LAND-GIS | Land Survey, Historical GIS & Cadastral Systems | historical maps, surveying, georeferencing, cadastral reconstruction and spatial screening |
 | ALA | Ancient Landscape Atlas | environmental, political, technological and settlement reconstruction through time |
 | AAT | Ancient Applied Technology | ancient engineering, agriculture, water, materials, architecture and reconstruction |
 | AAT-H | Anthropology & Human-Material Systems | craft, knowledge transmission, material culture, ecology, social organisation |
@@ -64,6 +64,27 @@ Emerald Insight remains the complementary systems/implementation layer for water
 
 GitHub/BIUPIU CODEX is the reproducibility and computational implementation layer. Every computationally testable claim should link to a CODEX queue/model and eventually a versioned commit.
 
+## Cape Town FSO department routing
+
+The Cape Town light-internet stream now routes explicitly across **PHOTONICS, ELECTROMAG, METAMATERIALS, AI, DIGITAL-TWIN, COMPUTE, LAND-GIS, GEOARCH, ROBOTICS, ADV-MFG, IP and NFT-PROV** where applicable.
+
+- **PHOTONICS:** FSO, VLC/LiFi, structured/topological light, atmospheric channel modelling.
+- **ELECTROMAG:** optical/RF interfaces, sensors and hybrid-bearer engineering.
+- **METAMATERIALS:** metasurface wavefront control and beam-steering research interface.
+- **AI:** link-quality prediction, adaptive routing, uncertainty handling and optimisation.
+- **DIGITAL-TWIN:** GIS + terrain + network telemetry + environmental data integration.
+- **COMPUTE/CODEX:** deterministic GIS screening and future candidate graph algorithms.
+- **LAND-GIS/GEOARCH:** municipal spatial layers, elevation/terrain and geospatial evidence controls.
+- **ROBOTICS/ADV-MFG:** future automated optical-node alignment, inspection and manufacturable hardware interfaces.
+- **IP:** prior-art, licensing and regulatory evidence separation.
+- **NFT-PROV:** only where validated/original research outputs later enter the research-to-art provenance system.
+
+## New GIS evidence controls
+
+The City of Cape Town Open Data Service is now an authoritative spatial-data source for the FSO research stream. Current acquisition records include CCT Buildings, 5m contours, additional ground-level contours, electricity/public-lighting infrastructure and community/public-facility datasets. Current municipal metadata also records a LiDAR-derived 5m contour/DTM product based on 2024–2025 capture.
+
+These sources are used for **research screening**, not permission or deployment approval. Public/institutional structures are the preferred first candidate class. Private properties are not to be treated as available merely because their geometry is present in public GIS.
+
 ## Cross-disciplinary strategic layers
 
 ### CLEAN-CIRCULAR
@@ -71,6 +92,9 @@ Connects HEMP, BIOCARBON, BIOCHEM, AGRI, WATER, ENERGY, MATERIALS, ADV-MFG and T
 
 ### BIUPIU-MANUFACTURING
 Connects ADV-MFG, ROBOTICS, AI, COMPUTE, GEOMETRY, MATERIALS, COMPOSITES, TEXTILES, COAT, ENERGY and DIGITAL-TWIN.
+
+### BIUPIU-OPTICAL-NETWORK
+Connects PHOTONICS, ELECTROMAG, METAMATERIALS, COMPUTE, AI, DIGITAL-TWIN, LAND-GIS, GEOARCH, ROBOTICS and IP for the Cape Town FSO research architecture.
 
 ### BIUPIU-RESEARCH-TO-PRODUCT
 `research → computational model → validated experiment → prototype → manufacturing process → IP review → product → market`
@@ -88,9 +112,13 @@ Connects ADV-MFG, ROBOTICS, AI, COMPUTE, GEOMETRY, MATERIALS, COMPOSITES, TEXTIL
 
 `ENERGY ↔ ELECTROMAG ↔ PHOTONICS ↔ CRM ↔ METAMATERIALS`
 
-`AERO ↔ MARINE ↔ MATERIALS ↔ COMPOSITES ↔ GEOMETRY ↔ COMPUTE ↔ AI`
+`PHOTONICS ↔ ELECTROMAG ↔ METAMATERIALS ↔ STRUCTURED LIGHT ↔ FSO-CPT ↔ AI ↔ DIGITAL-TWIN ↔ LAND-GIS`
+
+`LAND-GIS ↔ GEOARCH ↔ COMPUTE ↔ DIGITAL-TWIN ↔ AI`
 
 `COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
+
+`AERO ↔ MARINE ↔ MATERIALS ↔ COMPOSITES ↔ GEOMETRY ↔ COMPUTE ↔ AI`
 
 `BIOMED ↔ BIO ↔ MATERIALS ↔ PHOTONICS ↔ AI ↔ ADV-MFG`
 
@@ -126,4 +154,4 @@ Each department should maintain, where applicable:
 
 ## Status
 
-**Master department architecture upgraded to v2.0.** AnthroSource, Emerald and GitHub/CODEX are now explicitly integrated into department routing and cross-linking. The commercial/funding library remains a deployment subset of this broader R&D architecture.
+**Master department architecture upgraded to v2.1.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.
