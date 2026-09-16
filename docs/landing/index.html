@@ -1,0 +1,433 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="BIU NFT Dual-Asset Model - Provenance Artwork paired with Certificates of Authenticity">
+    <title>BIU NFT - Dual-Asset Revolution</title>
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        header {
+            background: rgba(0, 0, 0, 0.8);
+            color: white;
+            padding: 2rem;
+            text-align: center;
+            border-bottom: 3px solid #667eea;
+        }
+
+        header h1 {
+            font-size: 3rem;
+            margin-bottom: 0.5rem;
+            text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+        }
+
+        header p {
+            font-size: 1.2rem;
+            color: #ddd;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 2rem;
+        }
+
+        .hero {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+            text-align: center;
+        }
+
+        .hero h2 {
+            color: #667eea;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+        }
+
+        .hero p {
+            font-size: 1.1rem;
+            color: #555;
+            margin-bottom: 2rem;
+            max-width: 800px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+
+        .dual-asset-showcase {
+            display: grid;
+            grid-template-columns: 1fr 1fr;
+            gap: 2rem;
+            margin-bottom: 3rem;
+        }
+
+        .asset-card {
+            background: white;
+            border-radius: 15px;
+            padding: 2rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            transition: transform 0.3s ease, box-shadow 0.3s ease;
+        }
+
+        .asset-card:hover {
+            transform: translateY(-5px);
+            box-shadow: 0 15px 40px rgba(0, 0, 0, 0.25);
+        }
+
+        .asset-card.artwork {
+            border-top: 5px solid #667eea;
+        }
+
+        .asset-card.certificate {
+            border-top: 5px solid #764ba2;
+        }
+
+        .asset-card h3 {
+            font-size: 1.8rem;
+            margin-bottom: 1rem;
+            color: #333;
+        }
+
+        .asset-type {
+            display: inline-block;
+            padding: 0.5rem 1rem;
+            border-radius: 20px;
+            font-size: 0.9rem;
+            font-weight: bold;
+            margin-bottom: 1rem;
+        }
+
+        .asset-type.artwork {
+            background: #667eea;
+            color: white;
+        }
+
+        .asset-type.certificate {
+            background: #764ba2;
+            color: white;
+        }
+
+        .asset-card p {
+            color: #666;
+            margin-bottom: 1.5rem;
+            line-height: 1.8;
+        }
+
+        .asset-card ul {
+            list-style: none;
+            margin: 1.5rem 0;
+        }
+
+        .asset-card li {
+            padding: 0.5rem 0;
+            padding-left: 1.5rem;
+            position: relative;
+            color: #555;
+        }
+
+        .asset-card li:before {
+            content: "✓";
+            position: absolute;
+            left: 0;
+            color: #667eea;
+            font-weight: bold;
+        }
+
+        .bond-diagram {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            text-align: center;
+        }
+
+        .bond-diagram h2 {
+            color: #333;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .bond-flow {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            gap: 2rem;
+            flex-wrap: wrap;
+        }
+
+        .bond-item {
+            flex: 0 0 auto;
+            background: #f8f9fa;
+            padding: 1.5rem;
+            border-radius: 10px;
+            border: 2px solid #667eea;
+            min-width: 180px;
+        }
+
+        .bond-item h4 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .bond-arrow {
+            font-size: 2rem;
+            color: #764ba2;
+            flex: 0 0 auto;
+        }
+
+        .features {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            margin-bottom: 3rem;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+        }
+
+        .features h2 {
+            color: #333;
+            text-align: center;
+            margin-bottom: 2rem;
+            font-size: 2rem;
+        }
+
+        .features-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 2rem;
+        }
+
+        .feature-item {
+            text-align: center;
+            padding: 1.5rem;
+            border-radius: 10px;
+            background: #f8f9fa;
+        }
+
+        .feature-item h3 {
+            color: #667eea;
+            margin-bottom: 0.5rem;
+        }
+
+        .feature-item p {
+            color: #666;
+            font-size: 0.95rem;
+        }
+
+        .cta-section {
+            background: white;
+            border-radius: 15px;
+            padding: 3rem;
+            text-align: center;
+            box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+            margin-bottom: 3rem;
+        }
+
+        .cta-section h2 {
+            color: #333;
+            margin-bottom: 1rem;
+            font-size: 2rem;
+        }
+
+        .cta-section p {
+            color: #666;
+            margin-bottom: 2rem;
+            font-size: 1.1rem;
+        }
+
+        .cta-buttons {
+            display: flex;
+            gap: 1rem;
+            justify-content: center;
+            flex-wrap: wrap;
+        }
+
+        .btn {
+            padding: 1rem 2rem;
+            border: none;
+            border-radius: 10px;
+            font-size: 1rem;
+            cursor: pointer;
+            font-weight: bold;
+            transition: all 0.3s ease;
+            text-decoration: none;
+            display: inline-block;
+        }
+
+        .btn-primary {
+            background: #667eea;
+            color: white;
+        }
+
+        .btn-primary:hover {
+            background: #5568d3;
+            box-shadow: 0 5px 15px rgba(102, 126, 234, 0.4);
+        }
+
+        .btn-secondary {
+            background: #764ba2;
+            color: white;
+        }
+
+        .btn-secondary:hover {
+            background: #653a8a;
+            box-shadow: 0 5px 15px rgba(118, 75, 162, 0.4);
+        }
+
+        footer {
+            background: rgba(0, 0, 0, 0.8);
+            color: #ddd;
+            text-align: center;
+            padding: 2rem;
+            margin-top: 3rem;
+            border-top: 3px solid #667eea;
+        }
+
+        footer p {
+            font-size: 0.95rem;
+        }
+
+        @media (max-width: 768px) {
+            .dual-asset-showcase {
+                grid-template-columns: 1fr;
+            }
+
+            header h1 {
+                font-size: 2rem;
+            }
+
+            .hero h2 {
+                font-size: 1.8rem;
+            }
+
+            .bond-flow {
+                flex-direction: column;
+                gap: 1rem;
+            }
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>🎨 BIU NFT Dual-Asset Model</h1>
+        <p>Provenance Artwork + Certificate of Authenticity</p>
+    </header>
+
+    <div class="container">
+        <div class="hero">
+            <h2>The Future of Digital Art Authenticity</h2>
+            <p>A revolutionary framework where every provenance artwork is paired with an independent, tradeable certificate of authenticity. Two complementary assets. One unified vision.</p>
+        </div>
+
+        <div class="dual-asset-showcase">
+            <div class="asset-card artwork">
+                <span class="asset-type artwork">PRIMARY ASSET</span>
+                <h3>🖼️ BIU-ART-0001-A</h3>
+                <p><strong>Provenance Artwork NFT</strong></p>
+                <p>The primary creative work, minted as a unique ERC-721 token. Serves as the foundation of the dual-asset pair.</p>
+                <ul>
+                    <li>1/1 Limited Edition</li>
+                    <li>Creator Royalties (10%)</li>
+                    <li>High Resolution Master File</li>
+                    <li>Immutable Provenance Chain</li>
+                    <li>Bonded Certificate Required</li>
+                </ul>
+                <p><strong>Status:</strong> <span style="color: #667eea; font-weight: bold;">Ready for Genesis Launch</span></p>
+            </div>
+
+            <div class="asset-card certificate">
+                <span class="asset-type certificate">SUPPORT ASSET</span>
+                <h3>✅ BIU-COA-0001</h3>
+                <p><strong>Certificate of Authenticity NFT</strong></p>
+                <p>A standalone proof of authenticity and governance token with independent economic properties.</p>
+                <ul>
+                    <li>Standalone Tradeable Token</li>
+                    <li>Governance Voting Weight</li>
+                    <li>Authenticity Dispute Authority</li>
+                    <li>Burnable (Revokes Proof)</li>
+                    <li>Participation Rewards</li>
+                </ul>
+                <p><strong>Status:</strong> <span style="color: #764ba2; font-weight: bold;">Ready for Genesis Launch</span></p>
+            </div>
+        </div>
+
+        <div class="bond-diagram">
+            <h2>The Dual-Asset Bond</h2>
+            <div class="bond-flow">
+                <div class="bond-item">
+                    <h4>Artwork Minted</h4>
+                    <p>BIU-ART-0001-A created as primary token</p>
+                </div>
+                <div class="bond-arrow">↔</div>
+                <div class="bond-item">
+                    <h4>Certificate Generated</h4>
+                    <p>BIU-COA-0001 cryptographically bonded</p>
+                </div>
+                <div class="bond-arrow">↔</div>
+                <div class="bond-item">
+                    <h4>Dual Asset Pair</h4>
+                    <p>Connected, tradeable, complementary</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="features">
+            <h2>Why Dual-Asset Model?</h2>
+            <div class="features-grid">
+                <div class="feature-item">
+                    <h3>🔐 Authenticity</h3>
+                    <p>Certificate serves as cryptographic proof of authenticity via Keccak256 hash chain</p>
+                </div>
+                <div class="feature-item">
+                    <h3>💰 Independent Value</h3>
+                    <p>Both assets can be held, traded, or sold independently with separate market value</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🗳️ Governance</h3>
+                    <p>Certificate holders gain voting power on authenticity disputes and protocol changes</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🔄 Composability</h3>
+                    <p>Assets can be swapped, bonded, or severed while maintaining full traceability</p>
+                </div>
+                <div class="feature-item">
+                    <h3>✨ Provenance</h3>
+                    <p>Complete immutable history from minting through all transfers and ownership changes</p>
+                </div>
+                <div class="feature-item">
+                    <h3>🏆 Economic Model</h3>
+                    <p>Royalties, rewards, and governance incentives create sustainable ecosystem</p>
+                </div>
+            </div>
+        </div>
+
+        <div class="cta-section">
+            <h2>Genesis Launch Ready</h2>
+            <p>BIU-ART-0001-A and BIU-COA-0001 are prepared for testnet validation and mainnet deployment.</p>
+            <div class="cta-buttons">
+                <a href="https://github.com/Buipui/Biupiu-nft-system" class="btn btn-primary">📚 View Documentation</a>
+                <a href="#" class="btn btn-secondary">🚀 Launch Checklist</a>
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2026 BIU Studio. All rights reserved. | <a href="https://github.com/Buipui/Biupiu-nft-system" style="color: #667eea; text-decoration: none;">GitHub Repository</a></p>
+    </footer>
+</body>
+</html>
