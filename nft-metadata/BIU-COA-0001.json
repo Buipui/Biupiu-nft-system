@@ -1,0 +1,98 @@
+{
+  "name": "BIU Certificate of Authenticity #0001",
+  "description": "Standalone certificate of authenticity paired with BIU-ART-0001-A. This certificate serves as independent proof of authenticity and grants governance voting rights on authenticity disputes. Can be held, traded, or burned separately from the artwork. Represents the second pillar of the BIU dual-asset model.",
+  "image": "ipfs://QmPlaceholder/biu-coa-0001-preview.png",
+  "external_url": "https://biu-nft.studio/certificates/BIU-COA-0001",
+  "attributes": [
+    {
+      "trait_type": "Collection",
+      "value": "Genesis"
+    },
+    {
+      "trait_type": "Asset Type",
+      "value": "Certificate of Authenticity"
+    },
+    {
+      "trait_type": "Certificate Number",
+      "value": "0001"
+    },
+    {
+      "trait_type": "Artwork Bonded",
+      "value": "BIU-ART-0001-A"
+    },
+    {
+      "trait_type": "Proof Type",
+      "value": "Keccak256 Hash Chain"
+    },
+    {
+      "trait_type": "Issuer",
+      "value": "BIU Studio Provenance Registry"
+    },
+    {
+      "trait_type": "Governance Weight",
+      "value": "1 Vote"
+    },
+    {
+      "trait_type": "Burnable",
+      "value": "Yes"
+    }
+  ],
+  "properties": {
+    "files": [
+      {
+        "uri": "ipfs://QmPlaceholder/biu-coa-0001-fullres.pdf",
+        "type": "application/pdf",
+        "size": "Certificate Document"
+      }
+    ],
+    "category": "certificate"
+  },
+  "dual_asset": {
+    "model": "BIU Dual-Asset Bond",
+    "paired_token": "BIU-ART-0001-A",
+    "relationship": "Certificate to Artwork",
+    "bond_type": "Keccak256 Hash Chain",
+    "bond_status": "Active",
+    "bond_created_at": "2026-09-16T00:00:00Z"
+  },
+  "certificate": {
+    "issued_to": "Genesis Collector",
+    "issue_date": "2026-09-16T00:00:00Z",
+    "expiry_date": null,
+    "proof_hash": "0xkeccak256(BIU-ART-0001-A + timestamp + metadata)",
+    "verification_url": "https://biu-nft.studio/verify/BIU-COA-0001",
+    "authenticity_guarantee": "Verified by BIU Provenance Registry",
+    "dispute_window_days": 90
+  },
+  "governance": {
+    "voting_enabled": true,
+    "voting_weight": 1,
+    "voting_scope": [
+      "Authenticity Disputes",
+      "Metadata Corrections",
+      "Emergency Pauses"
+    ],
+    "voter_compensation": "Participation rewards"
+  },
+  "burn_mechanism": {
+    "burnable": true,
+    "burn_effect": "Revokes authenticity proof for paired artwork",
+    "burn_irreversible": true,
+    "burn_consequence": "Certificate removed from circulation permanently"
+  },
+  "provenance": {
+    "issuer": "0x0000000000000000000000000000000000000002",
+    "issue_date": "2026-09-16T00:00:00Z",
+    "contract": "BIUCertificate.sol",
+    "blockchain": "Ethereum Testnet (Sepolia)",
+    "chain_id": 11155111
+  },
+  "rights": {
+    "copyright": "© 2026 BIU Studio. Certificate design rights retained.",
+    "usage": "Certificate grants holder authentication authority and governance participation for the paired artwork.",
+    "licensing": "Non-transferable until blockchain transfer executed"
+  },
+  "metadata_version": "1.0",
+  "standard": "ERC-721",
+  "schema_url": "https://raw.githubusercontent.com/Buipui/Biupiu-nft-system/main/nft-metadata/README.md"
+}
