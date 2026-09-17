@@ -1,8 +1,6 @@
 const { expect } = require("chai");
 const { ethers } = require("hardhat");
 
-// These tests deliberately do not call mint(). They validate that the contracts
-// can be generated/deployed locally and expose the expected empty initial state.
 describe("No-mint contract generation smoke test", function () {
   it("deploys the artwork contract without creating an NFT", async function () {
     const [owner] = await ethers.getSigners();
