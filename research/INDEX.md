@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.9  
+**Version:** 3.0  
 **Updated:** 18 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -16,6 +16,11 @@ The proposed product lifecycle is:
 The commercial architecture covers research-object management, evidence control, Experimental Control Centre workflows, AI research intelligence, automated experiment generation, virtual-lab connectors, Materials Genome, Technology Combination Engine, Knowledge Graph, failure/lessons, IP Firewall, digital twin/digital factory interfaces, innovation portfolio management, APIs, tenancy, auditability, deployment and licensing editions.
 
 **Commercialisation status:** architecture defined; commercial validation not yet established; production SaaS not yet built or launched. The software concept must be validated through MVP testing, real research workflows, customer discovery and willingness-to-pay evidence before commercial claims are made.
+
+### R&D OS v0.2 implementation layer
+`software/rnd-os/` now contains the executable v0.2 development foundation. It includes a JSON storage abstraction, PostgreSQL-ready relational schema, relationship and lineage APIs, lifecycle transition validation, integrity-checked research package export/import validation, non-production role/auth primitives, expanded automated tests and a GitHub Actions Node 20 CI workflow.
+
+The current runtime remains intentionally local/development-only. PostgreSQL is modelled but not connected; authentication is scaffolding rather than production identity/security; package import validates without overwriting the datastore. These boundaries prevent prototype capabilities from being represented as production-grade systems.
 
 Core centre systems now include:
 - `BIUPIU-INTELLIGENCE-LAYER-v1.0.md` — evidence-aware research intelligence and next-test queries.
@@ -85,6 +90,7 @@ All existing department streams remain active. New centre systems are overlays t
 ## Repository status
 - Research & Innovation Centre OS v1.0 added.
 - **Biupiu R&D OS Software Architecture v1.0 added as the commercial software product specification/reference layer.**
+- **Biupiu R&D OS executable v0.2 development layer added.**
 - Experimental Control Centre remains active as the execution layer.
 - Intelligence, automated experiment generation, Virtual Lab, Materials Genome, Technology Combination Engine, Technology Readiness/Evidence Engine, Failure/Lessons Register, Knowledge Graph, Digital Factory, Living Systems Lab, IP Firewall, Foresight Centre, Invention Incubator and External Collaboration Layer added.
 - ORIGIN-001 remains a prototype and is **NOT MINTED**.
@@ -100,5 +106,5 @@ All existing department streams remain active. New centre systems are overlays t
 
 ## Version
 
-**Biupiu R&D Research Index v2.9 — Commercial R&D OS Architecture Integration**  
+**Biupiu R&D Research Index v3.0 — Executable R&D OS v0.2 Integration**  
 **Updated:** 18 September 2026
