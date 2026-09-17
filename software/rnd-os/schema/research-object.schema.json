@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Research Object",
+  "type":"object",
+  "required":["id","title","evidenceState","maturity"],
+  "properties":{
+    "id":{"type":"string","pattern":"^RES-[A-Z0-9-]+$"},
+    "title":{"type":"string","minLength":1},
+    "projectId":{"type":"string"},
+    "description":{"type":"string"},
+    "evidenceState":{"enum":["ESTABLISHED","SUPPORTED","PRELIMINARY","HYPOTHESIS","SPECULATIVE","CONTRADICTED","INCONCLUSIVE"]},
+    "maturity":{"type":"string","pattern":"^R[0-9]$"},
+    "createdAt":{"type":"string","format":"date-time"},
+    "updatedAt":{"type":"string","format":"date-time"}
+  }
+}
