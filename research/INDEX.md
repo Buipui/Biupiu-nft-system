@@ -1,8 +1,29 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.7  
-**Updated:** 17 September 2026  
+**Version:** 2.8  
+**Updated:** 18 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
+
+## Research & Innovation Centre OS
+`research/BIUPIU-RESEARCH-INNOVATION-CENTRE-OS-v1.0.md` is now the centre-level architecture. It turns the repository into an integrated research, experimentation, simulation, engineering, innovation and technology-development operating system around the existing Experimental Control Centre.
+
+Core centre systems now include:
+- `BIUPIU-INTELLIGENCE-LAYER-v1.0.md` — evidence-aware research intelligence and next-test queries.
+- `BIUPIU-AUTOMATED-EXPERIMENT-GENERATOR-v1.0.md` — claim/hypothesis to structured experiment pipeline.
+- `BIUPIU-VIRTUAL-LAB-v1.0.md` — CFD, FEA/FEM, thermal, electromagnetic, optical, agricultural, energy, robotics and manufacturing simulation domains.
+- `BIUPIU-MATERIALS-GENOME-v1.0.md` — searchable material composition, properties, processing, testing and application registry.
+- `BIUPIU-TECHNOLOGY-COMBINATION-ENGINE-v1.0.md` — cross-department technology-combination and hypothesis generation.
+- `BIUPIU-TECHNOLOGY-READINESS-EVIDENCE-ENGINE-v1.0.md` — evidence-state and R0–R9 maturity tracking.
+- `BIUPIU-FAILURE-LESSONS-REGISTER-v1.0.md` — searchable negative, failed and inconclusive result archive.
+- `BIUPIU-KNOWLEDGE-GRAPH-v1.0.md` — source-to-product relationship graph.
+- `BIUPIU-DIGITAL-FACTORY-v1.0.md` — future manufacturing, robotics, machine vision and digital-factory architecture.
+- `BIUPIU-LIVING-SYSTEMS-LAB-v1.0.md` — regenerative agriculture and biological systems experimentation architecture.
+- `BIUPIU-IP-FIREWALL-v1.0.md` — public/internal/confidential/pre-patent/IP control states.
+- `BIUPIU-FORESIGHT-CENTRE-v1.0.md` — scientific, patent, standards, university, manufacturing and emerging-technology monitoring.
+- `BIUPIU-INVENTION-INCUBATOR-v1.0.md` — discovery-to-product invention lifecycle.
+- `BIUPIU-EXTERNAL-COLLABORATION-LAYER-v1.0.md` — structured university, laboratory, engineering, manufacturing, investor and government collaboration records.
+
+The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
 ## Master evidence architecture
 `research/BIUPIU-EVIDENCE-LAYER-ARCHITECTURE.md` is the master source-control architecture. Core layers are: primary archaeology/history; JSTOR; AnthroSource; ResearchGate/scientific literature; Emerald Insight; controlled speculative/hypothesis sources; ancient texts; scientific primary data; patents/prior art; public/declassified technical archives; GitHub/BIUPIU CODEX; computational validation; and physical/experimental validation.
@@ -48,93 +69,25 @@
 - `BITCHUTE-ENG` / `ENG-VALIDATION` / `PROTOTYPE-QUEUE` — BitChute source discovery, engineering claim validation, patents/prior art, creator/licensing records and controlled physical validation.
 - `VIDEO-SERIES` / `SPEC-VIDEO` — original Biupiu engineering-validation video production, episode evidence notes, media-rights checks and build-log documentation.
 
-## Phase 3 engineering-validation integration
-
-`research/BIUPIU-BITCHUTE-ENGINEERING-VALIDATION-PHASE-3-v1.0.md` defines the Phase 3 workflow and prototype queue for hybrid VAWT, low-head micro-hydro, integrated farm energy, hemp decortication/fractionation and desiccant cooling. Each track is routed through source → claim → evidence → prior art/IP → model → prototype → measurement → repeatability → iteration.
-
-The programme treats BitChute content as a discovery/input layer rather than proof. Unsupported free-energy and over-unity claims remain in the falsification register and are excluded from commercial performance assumptions until independently reproducible with a complete energy balance.
-
-Phase 3 cross-links CODEX, AAT, ALA, GEO, IP, prior-art and experimental-validation records. It also adds explicit creator/assignee attribution, copyright/licence status, patent-family/priority/jurisdiction fields, safety review and measurement-uncertainty requirements.
-
-## Engineering standards checkpoint
-
-The validation workflow should consider applicable standards and test references. Current web research identified IEC 61400-5:2020+A1:2025 for wind-turbine blade engineering integrity and IEC 61400-40:2026 for wind-turbine electromagnetic compatibility; these are reference points, not a certification claim. Hemp feedstock preparation is cross-linked to ASTM D8513-24 as a guide for hemp straw intended for decortication. Standards are copyrighted and must be obtained and used under their applicable terms. 
-
-## Biupiu engineering video series
-
-`research/BIUPIU-BITCHUTE-ENGINEERING-VIDEO-SERIES-v1.0.md` establishes Season 1 with episodes covering claim validation, hybrid VAWT, low-head micro-hydro, farm energy, hemp processing, desiccant cooling, IP/prior art, falsification methods, CAD-to-prototype workflow and Phase 4 review.
-
-The series uses original Biupiu narration, diagrams, CAD, measurements and build footage wherever possible. Third-party footage, images, diagrams, music, code and excerpts require rights/licence review. No episode is labelled filmed, tested or published until production and evidence records are complete.
-
-## Cape Town light-internet / AI-assisted FSO stream
-`research/CAPE-TOWN-LIGHT-INTERNET-AI-FSO-NETWORK-v1.0.md` remains the master architecture. `research/CAPE-TOWN-FSO-GIS-DATA-ACQUISITION-v1.0.md` defines the authoritative-data acquisition workflow, while `research/CAPE-TOWN-FSO-GIS-FINDINGS-v1.0.md` records the current GIS evidence findings.
-
-New findings establish that the City of Cape Town Open Data Service exposes machine-queryable municipal layers including **CCT Buildings**, **5m Contours**, additional 2m ground-level contours, electricity/public-lighting infrastructure and community/public-facility datasets. Current municipal metadata also documents a LiDAR-derived 5m contour/DTM product based on 2024–2025 capture, providing a stronger topographic screening input than an unverified conceptual map. These datasets are research inputs only; they do not establish ownership, permission, structural capacity or deployment approval.
-
-The first graph-construction corridors remain CBD/Foreshore ↔ Woodstock/Salt River/Observatory and Observatory/Rondebosch ↔ Newlands/Claremont. The next implementation gate is a public/institutional candidate-node graph with source object IDs, elevation evidence, link geometry, obstruction status, infrastructure status, weather coverage and regulatory/safety gates. No private address is to be treated as a deployable node merely because it appears in public GIS.
-
-## Regulatory and hybrid-network cross-link
-The network architecture now explicitly separates optical FSO from RF fallback. ICASA's current spectrum material documents an E-band light-licensing regime covering 73.375–75.875 GHz paired with 83.375–85.375 GHz, with location/characteristic registration and coordination requirements. This is relevant to a hybrid optical/RF resilience layer; it does not constitute authorisation to deploy any Biupiu network.
-
-## CODEX network implementation
-`codex/gis/cpt_fso_site_screen.py` provides deterministic preliminary site/link screening. Associated tests are `codex/gis/test_cpt_fso_site_screen.py`.
-
-Next CODEX work: implement a machine-readable candidate-node/edge graph using authoritative public/institutional GIS objects, then test graph construction before connecting it to AI routing and the digital twin. Planned optical/network modules include FSO channel modelling, structured-light encoding, turbulence eigenmodes, topological encoding, FSO mesh routing, hybrid optical/RF routing, AI link-quality prediction, route optimisation and Cape Town digital-twin modelling.
-
-## Wits optical research integration
-The FSO stream cross-links Wits research on long-range FSO, VLC/LiFi, structured light, atmospheric turbulence, turbulence eigenmodes, topological/skyrmion encoding and AI-assisted optical-channel adaptation. These sources inform engineering hypotheses and test design; they do not by themselves establish Cape Town deployment feasibility.
-
-## Metamaterials cross-link
-`MM → metasurface wavefront control → beam steering/phase control → structured light → FSO channel → AI optimisation` remains an explicit cross-disciplinary pathway. MM remains a separate research branch with its source cross-link register and NASA/ResearchGate/Emerald/patent/declassified evidence layers.
-
-## Complex geometry / Thunderbolts-inspired CODEX stream
-`research/BIUPIU-COMPLEX-GEOMETRY-THUNDERBOLTS-CODEX-v1.0.md` remains the dedicated mathematical/computational reference for toroidal, nested, spiral, helical, braided, vortex, hourglass, wave-superposition, knot and related geometry families. Thunderbolts material remains source/inspiration and controlled hypothesis material only.
-
-## Company algorithm network
-`research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md` defines the active computational company-network architecture.
-
-### Canonical lineage
-`RESEARCH ID → ALGORITHM FAMILY/VERSION → PARAMETERS + SEED → ARTWORK RELEASE → RELEASE MANIFEST → HASHES → BLOCKCHAIN RECORD`
-
-### Proposed network families
-- `BIU-ALG-FSO-CPT-001` — Cape Town optical-site screening and candidate-link generation.
-- `BIU-ALG-FSO-CHAN-001` — atmospheric optical-channel modelling.
-- `BIU-ALG-FSO-AI-001` — AI link-quality prediction/adaptive routing.
-- `BIU-ALG-FSO-TWIN-001` — digital-twin calibration against measured network telemetry.
-- `BIU-ALG-FSO-GRAPH-001` — authoritative GIS candidate-node/edge graph construction; framework registration pending executable implementation and tests.
-
-These remain framework registrations until validated against authoritative datasets and physical measurements.
-
-## Cross-disciplinary integration
-`ENERGY ↔ ELECTROMAG ↔ PHOTONICS ↔ FSO-CPT ↔ CRM ↔ MM ↔ GEOMETRY ↔ CODEX`
-
-`PHOTONICS ↔ STRUCTURED-LIGHT ↔ TURBULENCE ↔ AI ↔ DIGITAL-TWIN ↔ FSO-CPT ↔ LAND-GIS`
-
-`COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
-
-`AERO ↔ MARINE ↔ MATERIALS ↔ COMPOSITES ↔ GEOMETRY ↔ COMPUTE ↔ AI`
-
-`SPEC-VIDEO ↔ GEOMETRY/CODEX ↔ ELECTROMAG/PHOTONICS ↔ controlled hypothesis testing`
-
-`NFT-ALG ↔ GEOMETRY ↔ CODEX/COMPUTE ↔ AI ↔ DIGITAL-TWIN ↔ NFT-GEN ↔ NFT-PROV ↔ NFT-EVM`
-
-`BITCHUTE-ENG ↔ ENG-VALIDATION ↔ IP-PA ↔ CODEX ↔ PROTOTYPE-QUEUE ↔ VIDEO-SERIES`
+## Centre integration rule
+All existing department streams remain active. New centre systems are overlays that route existing research into intelligence, experiments, simulations, materials, combinations, failures, IP, manufacturing, living systems, foresight, collaboration and invention pathways rather than replacing the underlying research streams.
 
 ## Repository status
+- Research & Innovation Centre OS v1.0 added.
+- Experimental Control Centre remains active as the execution layer.
+- Intelligence, automated experiment generation, Virtual Lab, Materials Genome, Technology Combination Engine, Technology Readiness/Evidence Engine, Failure/Lessons Register, Knowledge Graph, Digital Factory, Living Systems Lab, IP Firewall, Foresight Centre, Invention Incubator and External Collaboration Layer added.
 - ORIGIN-001 remains a prototype and is **NOT MINTED**.
 - `BIU-ALG-GEO-FLOW-001@0.1.0` remains the first registered algorithm family/version.
 - Complex-geometry execution remains active with deterministic primitives and tests.
 - Cape Town FSO/light-internet architecture and pilot-test plan are indexed.
 - Cape Town FSO preliminary site-screening CODEX implementation and deterministic tests have been added.
-- Authoritative municipal GIS acquisition and first findings are now indexed.
-- Network graph algorithm family is framework-level until executable graph construction, authoritative-data validation and physical validation exist.
+- Authoritative municipal GIS acquisition and first findings are indexed.
+- Network graph algorithm family remains framework-level until executable graph construction, authoritative-data validation and physical validation exist.
 - `BiupiuResearchRegistry.sol` is a prototype contract and is not represented as production-deployed.
 - No production blockchain deployment or live NFT mint is recorded.
 - Artwork generation remains paused until explicitly requested.
-- Phase 3 BitChute engineering-validation file added.
-- Season 1 engineering-validation video-series framework added.
 
 ## Version
 
-**Biupiu R&D Research Index v2.7 — Phase 3 Engineering Validation + Video Series**  
-**Updated:** 17 September 2026
+**Biupiu R&D Research Index v2.8 — Research & Innovation Centre OS Integration**  
+**Updated:** 18 September 2026
