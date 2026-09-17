@@ -1,0 +1,9 @@
+{
+  "name": "biupiu-rnd-os-mvp",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu Research & Development Operating System MVP",
+  "main": "server.js",
+  "scripts": {"start":"node server.js","test":"node --test tests/core.test.js"},
+  "engines": {"node": ">=20"}
+}
