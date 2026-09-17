@@ -1,6 +1,7 @@
 name: Biupiu R&D OS CI
 
 on:
+  workflow_dispatch:
   push:
     paths:
       - 'software/rnd-os/**'
@@ -21,4 +22,5 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+      - run: npm install
       - run: npm test
