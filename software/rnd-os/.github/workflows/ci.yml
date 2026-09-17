@@ -1,0 +1,22 @@
+name: Biupiu R&D OS CI
+
+on:
+  push:
+    paths:
+      - 'software/rnd-os/**'
+  pull_request:
+    paths:
+      - 'software/rnd-os/**'
+
+jobs:
+  test:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: software/rnd-os
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - run: npm test
