@@ -1,7 +1,7 @@
 # Biupiu R&D Research Index
 
-**Version:** 2.6  
-**Updated:** 16 September 2026  
+**Version:** 2.7  
+**Updated:** 17 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
 ## Master evidence architecture
@@ -11,9 +11,6 @@
 
 ## Permanent research operating protocol
 `research/BIUPIU-RESEARCH-OPERATING-PROTOCOL-v2.0.md` is the default workflow. `research/SOURCE-TO-DEPARTMENT-CROSSWALK.md` routes each source layer into relevant Biupiu departments.
-
-## Repository boundary
-This is the personal Biupiu computational-art, invention, speculative-research and R&D/IP track. It remains separate from the immediate commercial DTIC/InvestSA library unless explicitly transferred.
 
 ## Master indexed streams
 - `BIO` / `BIO-GEN` — biotechnology, botany, plant science, genetics and seed breeding.
@@ -48,6 +45,26 @@ This is the personal Biupiu computational-art, invention, speculative-research a
 - `NFT-IP` / `NFT-CF` / `NFT-ATH-GEO` / `NFT-GEN` / `NFT-PROV` / `NFT-ARCH` / `NFT-ORIGIN` — research-to-art, crowdfunding, generative art, provenance and NFT architecture.
 - `NFT-WEB3` / `NFT-MINT` / `NFT-EVM` — smart contracts, Web3 tooling, deployment, minting, token URI management and blockchain provenance.
 - `NFT-ALG` / `NFT-GRAPH` / `NFT-REGISTRY` — company algorithm families, semantic version lineage, machine-readable algorithm graph, release commitments and blockchain registry architecture.
+- `BITCHUTE-ENG` / `ENG-VALIDATION` / `PROTOTYPE-QUEUE` — BitChute source discovery, engineering claim validation, patents/prior art, creator/licensing records and controlled physical validation.
+- `VIDEO-SERIES` / `SPEC-VIDEO` — original Biupiu engineering-validation video production, episode evidence notes, media-rights checks and build-log documentation.
+
+## Phase 3 engineering-validation integration
+
+`research/BIUPIU-BITCHUTE-ENGINEERING-VALIDATION-PHASE-3-v1.0.md` defines the Phase 3 workflow and prototype queue for hybrid VAWT, low-head micro-hydro, integrated farm energy, hemp decortication/fractionation and desiccant cooling. Each track is routed through source → claim → evidence → prior art/IP → model → prototype → measurement → repeatability → iteration.
+
+The programme treats BitChute content as a discovery/input layer rather than proof. Unsupported free-energy and over-unity claims remain in the falsification register and are excluded from commercial performance assumptions until independently reproducible with a complete energy balance.
+
+Phase 3 cross-links CODEX, AAT, ALA, GEO, IP, prior-art and experimental-validation records. It also adds explicit creator/assignee attribution, copyright/licence status, patent-family/priority/jurisdiction fields, safety review and measurement-uncertainty requirements.
+
+## Engineering standards checkpoint
+
+The validation workflow should consider applicable standards and test references. Current web research identified IEC 61400-5:2020+A1:2025 for wind-turbine blade engineering integrity and IEC 61400-40:2026 for wind-turbine electromagnetic compatibility; these are reference points, not a certification claim. Hemp feedstock preparation is cross-linked to ASTM D8513-24 as a guide for hemp straw intended for decortication. Standards are copyrighted and must be obtained and used under their applicable terms. 
+
+## Biupiu engineering video series
+
+`research/BIUPIU-BITCHUTE-ENGINEERING-VIDEO-SERIES-v1.0.md` establishes Season 1 with episodes covering claim validation, hybrid VAWT, low-head micro-hydro, farm energy, hemp processing, desiccant cooling, IP/prior art, falsification methods, CAD-to-prototype workflow and Phase 4 review.
+
+The series uses original Biupiu narration, diagrams, CAD, measurements and build footage wherever possible. Third-party footage, images, diagrams, music, code and excerpts require rights/licence review. No episode is labelled filmed, tested or published until production and evidence records are complete.
 
 ## Cape Town light-internet / AI-assisted FSO stream
 `research/CAPE-TOWN-LIGHT-INTERNET-AI-FSO-NETWORK-v1.0.md` remains the master architecture. `research/CAPE-TOWN-FSO-GIS-DATA-ACQUISITION-v1.0.md` defines the authoritative-data acquisition workflow, while `research/CAPE-TOWN-FSO-GIS-FINDINGS-v1.0.md` records the current GIS evidence findings.
@@ -101,6 +118,8 @@ These remain framework registrations until validated against authoritative datas
 
 `NFT-ALG ↔ GEOMETRY ↔ CODEX/COMPUTE ↔ AI ↔ DIGITAL-TWIN ↔ NFT-GEN ↔ NFT-PROV ↔ NFT-EVM`
 
+`BITCHUTE-ENG ↔ ENG-VALIDATION ↔ IP-PA ↔ CODEX ↔ PROTOTYPE-QUEUE ↔ VIDEO-SERIES`
+
 ## Repository status
 - ORIGIN-001 remains a prototype and is **NOT MINTED**.
 - `BIU-ALG-GEO-FLOW-001@0.1.0` remains the first registered algorithm family/version.
@@ -112,3 +131,10 @@ These remain framework registrations until validated against authoritative datas
 - `BiupiuResearchRegistry.sol` is a prototype contract and is not represented as production-deployed.
 - No production blockchain deployment or live NFT mint is recorded.
 - Artwork generation remains paused until explicitly requested.
+- Phase 3 BitChute engineering-validation file added.
+- Season 1 engineering-validation video-series framework added.
+
+## Version
+
+**Biupiu R&D Research Index v2.7 — Phase 3 Engineering Validation + Video Series**  
+**Updated:** 17 September 2026
