@@ -1,8 +1,20 @@
 # Biupiu R&D Research Index
 
-**Version:** 3.0  
+**Version:** 3.1  
 **Updated:** 18 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
+
+## Mobile application layer
+
+**Biupiu R&D OS Mobile v0.7 foundation added.**
+
+`software/rnd-os-mobile/` contains the Android application foundation. `software/rnd-os-mobile/MOBILE-ARCHITECTURE-v0.7.md` defines the mobile architecture.
+
+The mobile client is separated from the R&D OS core. It consumes the API rather than accessing PostgreSQL directly and inherits server-side authentication, tenant scope, evidence rules and audit controls.
+
+Initial Android foundation: Kotlin, Jetpack Compose, Navigation Compose, Android API 26+ baseline, dashboard shell, Research Objects navigation, Experimental Control Centre navigation and an API abstraction layer.
+
+**Mobile status:** development foundation only. API authentication integration, offline persistence, evidence capture, automated Android tests, production security review and store-release work remain future gates.
 
 ## Research & Innovation Centre OS
 `research/BIUPIU-RESEARCH-INNOVATION-CENTRE-OS-v1.0.md` is now the centre-level architecture. It turns the repository into an integrated research, experimentation, simulation, engineering, innovation and technology-development operating system around the existing Experimental Control Centre.
