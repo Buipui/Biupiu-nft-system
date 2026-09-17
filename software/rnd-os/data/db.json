@@ -1,9 +1,13 @@
 {
+  "organisations": [],
+  "users": [],
   "projects": [{"id":"PRJ-BIUPIU-001","createdAt":"2026-09-18T00:00:00.000Z","updatedAt":"2026-09-18T00:00:00.000Z","title":"Biupiu R&D OS Pilot","status":"active","description":"Reference project for testing the Research Operating System lifecycle."}],
-  "research": [{"id":"RES-20260918-A01","createdAt":"2026-09-18T00:00:00.000Z","updatedAt":"2026-09-18T00:00:00.000Z","title":"Structured-light FSO validation","projectId":"PRJ-BIUPIU-001","evidenceState":"HYPOTHESIS","maturity":"R2","description":"Test whether structured optical modes improve link robustness under controlled turbulence."}],
+  "research": [{"id":"RES-20260918-A01","createdAt":"2026-09-18T00:00:00.000Z","updatedAt":"2026-09-18T00:00:00.000Z","title":"Structured-light FSO validation","projectId":"PRJ-BIUPIU-001","evidenceState":"HYPOTHESIS","evidence_state":"HYPOTHESIS","maturity":"R2","lifecycleStage":"HYPOTHESIS","description":"Test whether structured optical modes improve link robustness under controlled turbulence."}],
   "hypotheses": [{"id":"HYP-20260918-A01","createdAt":"2026-09-18T00:00:00.000Z","updatedAt":"2026-09-18T00:00:00.000Z","title":"Structured modes may improve FSO robustness","researchId":"RES-20260918-A01","status":"open","prediction":"Under matched power and bandwidth, selected structured modes will show lower error rates than a baseline under simulated turbulence."}],
   "experiments": [],
   "failures": [],
   "ip": [],
+  "relationships": [],
+  "evidence": [],
   "audit": []
 }
