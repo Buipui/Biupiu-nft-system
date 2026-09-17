@@ -33,6 +33,6 @@ After a recognised workflow run exists:
 
 ## Status
 
-**CI verification: NOT VERIFIED**
+**CI verification: RUN REQUESTED**
 
 No production, security-certification, regulatory-LIMS, or PostgreSQL-live claim is made by this document.
