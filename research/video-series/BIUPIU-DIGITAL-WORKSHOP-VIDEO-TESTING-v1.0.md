@@ -8,7 +8,7 @@
 
 The Digital Workshop is a virtual engineering environment for testing research hypotheses before physical prototyping. It combines AI-generated visualisations, simulation outputs, CAD/geometry, calculations, source videos and structured test records.
 
-A video is treated as a **test input or visualisation**, not as proof of a physical result. This distinction follows the established difference between simulation and a data-synchronised digital twin: a digital twin is tied to a real-world system through specified data exchange, while a simulation can operate independently. citeturn0search3turn0search4
+A video is treated as a **test input or visualisation**, not as proof of a physical result. Simulation and digital-twin status are kept separate: a digital twin requires a defined connection to a real-world system through data exchange, while a simulation can operate independently.
 
 ## 2. Video evidence classes
 
@@ -103,7 +103,7 @@ A virtual result advances to physical testing only when the test record contains
 7. Instrumentation and calibration plan.
 8. Raw-data capture plan.
 
-Physical results then become calibration data for the next workshop iteration. A sufficiently synchronized model may later qualify as a digital twin; until that condition exists, call it a simulation or digital model rather than a true twin. citeturn0search5turn0search7
+Physical results then become calibration data for the next workshop iteration. A sufficiently synchronized model may later qualify as a digital twin; until that condition exists, call it a simulation or digital model rather than a true twin.
 
 ## 8. Video-series integration
 
