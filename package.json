@@ -3,9 +3,12 @@
   "version": "1.3.0",
   "private": true,
   "description": "Biupiu NFT smart contracts, deployment tooling, minting scripts and research-linked provenance architecture.",
+  "workspaces": ["packages/*"],
   "scripts": {
     "compile": "hardhat compile",
     "test": "hardhat test",
+    "build:packages": "tsc -b",
+    "test:access": "tsc --noEmit",
     "deploy:local": "hardhat run deploy-nft.js --network hardhat",
     "deploy:registry:local": "hardhat run deploy-registry.js --network hardhat",
     "deploy:sepolia": "hardhat run deploy-nft.js --network sepolia",
