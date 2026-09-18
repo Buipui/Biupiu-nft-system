@@ -1,0 +1,20 @@
+{
+  "protocol": "BIUPIU-TRUST-1",
+  "schema_version": "1.0",
+  "fields": {
+    "event_id": "stable unique identifier",
+    "record_id": "referenced object",
+    "operation": "create|update|approve|revoke|archive|anchor",
+    "actor_id": "non-secret principal identifier",
+    "tenant_id": "authorization scope",
+    "sequence": "monotonic integer",
+    "timestamp": "UTC ISO-8601",
+    "payload_hash": "SHA-256 hex digest",
+    "previous_event_hash": "SHA-256 hex digest or null",
+    "signature": "optional encoded signature",
+    "signature_scheme": "versioned scheme or null",
+    "key_id": "public key identifier or null",
+    "event_hash": "SHA-256 hex digest",
+    "blockchain_anchor": "optional transaction reference"
+  }
+}
