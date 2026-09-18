@@ -1,0 +1,48 @@
+{
+  "schema_version": "1.0",
+  "gate": "GATE-3",
+  "hub": "biupiu_world_main_hub",
+  "default_policy": "deny",
+  "shared_services": {
+    "civilisation_library": "public",
+    "world_map": "public",
+    "video_library": "subscriber",
+    "education_progress": "subscriber",
+    "avatar_profile": "subscriber",
+    "trust_provenance": "subscriber",
+    "mod_sandbox": "approved_research_role"
+  },
+  "destinations": {
+    "farming_world": {
+      "department_scope": "SMART_FARMING",
+      "entry_requires": ["subscriber", "SMART_FARMING"],
+      "resources": [
+        "regenerative_farming",
+        "historical_farming",
+        "smart_farming_simulation",
+        "farming_research_library",
+        "farming_economy"
+      ]
+    },
+    "metal_making_world": {
+      "department_scope": "SMART_METAL_WORKSHOP",
+      "entry_requires": ["subscriber", "SMART_METAL_WORKSHOP"],
+      "resources": [
+        "metallurgy_library",
+        "home_workshop_learning",
+        "historical_metalworking",
+        "materials_lab",
+        "metallurgy_simulation"
+      ]
+    }
+  },
+  "cross_world_learning": {
+    "enabled": true,
+    "requires_explicit_entitlement": true,
+    "does_not_expand_department_write_access": true
+  },
+  "audit": {
+    "protected_entry_event": "WORLD_RESOURCE_ACCESS",
+    "denied_entry_event": "WORLD_RESOURCE_DENIED"
+  }
+}
