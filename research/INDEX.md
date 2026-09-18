@@ -320,3 +320,10 @@ Added `research/BIUPIU-ADOBE-PRODUCTION-PIPELINE-v1.0.md` and the `software/rnd-
 Added `research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md`. GitHub research identified the official Maxon Redshift OSL shader repository and Redshift OCIO configuration resources, plus Cinema 4D Redshift automation/API references and Houdini/Redshift examples. Redshift is now mapped as a renderer adapter in the provider-neutral render pipeline for PRODUCT_STILL, DIGITAL_TWIN, CINEMATIC_SHOWREEL, CONCEPT_VARIATION and RESEARCH_VISUALIZATION workflows.
 
 **RED-01 status:** architecture/resource integration executed. No proprietary Redshift binaries, SDKs or licensed assets are copied into the repository. Live Redshift execution remains gated on an installed and validated Redshift-capable environment.
+
+
+## Lumion visualization integration — LUM-01
+
+Added `research/BIUPIU-VISUALIZATION-PIPELINE-LUMION-v1.0.md`. Lumion is now indexed as a complementary real-time visualisation/presentation layer for CAD/BIM/product/environment concepts, Digital Twin presentation, investor imagery and video production. The authoritative engineering path remains CAD/CAE, simulation, Digital Twin and physical validation.
+
+The Lumion track cross-links `CG-3D`, `DIGITAL-TWIN`, `COMPUTE`, `ROBOTICS`, `AERO`, `MARINE`, `MATERIALS`, `NFT-ATH-GEO`, `NFT-IP` and `VIDEO-SERIES`. Proprietary binaries, cracks/unlocks, and unlicensed asset redistribution are explicitly excluded. **LUM-01 executed.** Next: LUM-02 open-asset/PBR compatibility registry.
