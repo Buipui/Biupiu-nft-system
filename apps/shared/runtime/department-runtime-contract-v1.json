@@ -1,0 +1,19 @@
+{
+  "schema": "biupiu.department.runtime.v1",
+  "purpose": "Common runtime adapter contract for Android and Windows",
+  "routes": {
+    "SMART_FARMING": "@biupiu/smart-farming",
+    "SMART_METAL_WORKSHOP": "@biupiu/smart-metallurgy",
+    "RND_OS": "@biupiu/rnd-os"
+  },
+  "lifecycle": [
+    "RESOLVE_PACKAGE",
+    "CHECK_ENTITLEMENT",
+    "CREATE_RUNTIME_ADAPTER",
+    "START_DEPARTMENT"
+  ],
+  "authority": {
+    "client": "runtime orchestration only",
+    "server": "final authorization"
+  }
+}
