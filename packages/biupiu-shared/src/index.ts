@@ -1,0 +1,1 @@
+export const BIUPIU_PACKAGE="@biupiu/shared";
