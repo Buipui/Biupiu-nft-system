@@ -1,0 +1,12 @@
+{
+  "schema": "biupiu.module.runway-media.v1",
+  "module": "Runway Media Engine",
+  "status": "architecture-integrated",
+  "provider": "Runway",
+  "capabilities": ["image-generation","image-to-video","text-to-video","video-to-video","video-editing","video-upscaling","audio-generation","task-polling"],
+  "integration": {"server_side": true, "android_client": true, "windows_client": true, "main_hub_route": "RND_OS"},
+  "security": {"api_secret": "server-side-only", "generated_urls": "ephemeral; download/archive required"},
+  "upstream_repositories": [
+    "runwayml/skills","runwayml/runway-studio-skills","runwayml/sdk-python","runwayml/sdk-node","runwayml/openapi","runwayml/runway-api-mcp-server","runwayml/runway-mcp-plugin"
+  ]
+}
