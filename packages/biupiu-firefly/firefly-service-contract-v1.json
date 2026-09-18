@@ -1,0 +1,32 @@
+{
+  "schema": "biupiu.firefly.service.v1",
+  "provider": "adobe-firefly",
+  "package": "@biupiu/firefly",
+  "scope": "CREATIVE_AI",
+  "clientAuthority": false,
+  "credentialBoundary": "server-only",
+  "operations": [
+    "GENERATE_IMAGE",
+    "EXPAND_IMAGE",
+    "FILL_IMAGE",
+    "OBJECT_COMPOSITE",
+    "SIMILAR_IMAGES",
+    "UPSCALE",
+    "UPLOAD_ASSET"
+  ],
+  "provenance": {
+    "researchId": "required-when-research-linked",
+    "projectId": "required",
+    "sourceAssetId": "tracked-when-used",
+    "prompt": "tracked-when-applicable",
+    "jobId": "tracked",
+    "outputAssetId": "tracked",
+    "outputHash": "required-before-release"
+  },
+  "releasePolicy": {
+    "nftStudio": "release-gated",
+    "publicPublication": "human-approved",
+    "scientificEvidence": "not-automatic"
+  },
+  "clients": ["android", "windows", "web"]
+}
