@@ -1,0 +1,2 @@
+# AI-02 development foundation
+# Provider SDKs and vector database dependencies are intentionally deferred.
