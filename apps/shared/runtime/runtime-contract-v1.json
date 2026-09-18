@@ -16,6 +16,7 @@
     "SMART_FARMING": "packages/biupiu-smart-farming",
     "SMART_METAL_WORKSHOP": "packages/biupiu-smart-metallurgy",
     "RND_OS": "packages/biupiu-rnd-os",
+    "CREATIVE_AI": "packages/biupiu-firefly",
     "RUNWAY_MEDIA": "packages/biupiu-runway-media"
   },
   "clients": ["android", "windows"]
