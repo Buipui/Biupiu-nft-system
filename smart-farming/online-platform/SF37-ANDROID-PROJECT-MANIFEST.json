@@ -1,0 +1,53 @@
+{
+  "version": "SF-37.1",
+  "platform": "Android",
+  "status": "FOUNDATION_READY",
+  "implementation": {
+    "language": "Kotlin",
+    "ui": "Jetpack Compose",
+    "architecture": "single-activity"
+  },
+  "modules": [
+    "app-shell",
+    "profile",
+    "world",
+    "episode-viewer",
+    "departments",
+    "research",
+    "digital-lab",
+    "academy",
+    "gallery",
+    "marketplace",
+    "intelligence-hub",
+    "settings"
+  ],
+  "canonical_manifests": [
+    "SF36-SHOWCASE-DEVELOPMENT-MANIFEST.json",
+    "SF36-SHOWCASE-PLACEMENT-MAP.json"
+  ],
+  "routes": [
+    "/home",
+    "/world",
+    "/world/episode/{episode_id}",
+    "/department/{department_id}",
+    "/research",
+    "/lab/{experiment_id}",
+    "/academy/{lesson_id}",
+    "/gallery",
+    "/marketplace",
+    "/profile"
+  ],
+  "build_tests": [
+    "launch",
+    "navigation",
+    "manifest-load",
+    "showcase-metadata-render"
+  ],
+  "guards": {
+    "claims": true,
+    "rights": true,
+    "commerce": true,
+    "human_approval": true
+  },
+  "live_runtime": false
+}
