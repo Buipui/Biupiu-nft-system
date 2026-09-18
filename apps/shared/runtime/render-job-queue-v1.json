@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.job-queue.v1","status":"architecture-integrated","states":["QUEUED","RUNNING","REVIEW","APPROVED","FAILED","ARCHIVED"],"required":["jobId","sourceAssetIds","provider","workflow","output","provenance"],"outputs":{"still":"STILL","video":"VIDEO","audio":"AUDIO","showreel":"SHOWREEL"}}
