@@ -207,3 +207,15 @@ Additional linked lost-land, lost-city and esoteric traditions:
 A reality-control library separately models documented submerged/transformed landscapes including Doggerland, Sundaland, Beringia, Sahul and Te Riu-a-Māui / Zealandia. These are comparison cases, not evidence for the speculative entities.
 
 The New Age Theory layer preserves source provenance, evidence states, counter-evidence and claim-testing so speculative world-building cannot silently become established history.
+
+
+## New Age Theory entry point and character layer
+
+Biupiu World now has a dedicated **MAIN HUB → NEW AGE THEORY** entry point for Atlantis, Mu, Hyperborea, Tartaria / Great Tartaria, Hollow Earth and associated lost-land/inner-Earth research.
+
+Added:
+- `research/BIUPIU-NEW-AGE-THEORY-CHARACTERS-v1.0.md` — original guide characters, environment avatars and neutral player research archetypes.
+- The character system inherits department subscriber permissions and evidence-state controls.
+- Historical/legendary figures are not presented as documentary portraits; original Biupiu characters are used for navigation and research guidance.
+
+The full world model is defined in `research/BIUPIU-NEW-AGE-THEORY-LOST-CIVILISATIONS-v1.0.md`.
