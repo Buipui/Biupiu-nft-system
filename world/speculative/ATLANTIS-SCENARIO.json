@@ -1,0 +1,12 @@
+{
+  "site_id":"atlantis_platonic_core",
+  "display_name":"Atlantis — Platonic Core Scenario",
+  "evidence_class":"LITERARY_TRADITION",
+  "confidence":"OPEN",
+  "reconstruction":true,
+  "ui_label":"SPECULATIVE — NOT ESTABLISHED HISTORY",
+  "source_basis":["Plato, Timaeus 24e-25d","Plato, Critias 108e, 113c-113e"],
+  "features":["central fertile plain","central hill","alternating land-and-water rings","springs","maritime islands","agricultural hinterland"],
+  "simulation_modules":["farming","water allocation","storage","barter","maritime trade","catastrophe"],
+  "variable_parameters":["ring_radius","plain_area","water_capacity","spring_output","crop_mix","population","trade_links","catastrophe_intensity"]
+}
