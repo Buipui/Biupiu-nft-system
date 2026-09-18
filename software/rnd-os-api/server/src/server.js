@@ -15,7 +15,7 @@ const now=()=>new Date().toISOString();
 const uid=p=>p+"-"+crypto.randomUUID().slice(0,8).toUpperCase();
 function audit(actor,action,ref,details={}){db.prepare("INSERT INTO audit VALUES(?,?,?,?,?,?)").run(uid("AUD"),actor,action,ref,now(),JSON.stringify(details))}
 function json(res,status,data){res.writeHead(status,{"content-type":"application/json"});res.end(JSON.stringify(data))}
-function body(req){return new Promise((resolve,reject)=>{let s="";req.on("data",c=>{s+=c};);req.on("end",()=>{try{resolve(s?JSON.parse(s):{})}catch(e){reject(e)}});req.on("error",reject)})}
+function body(req){return new Promise((resolve,reject)=>{let s="";req.on("data",c=>{s+=c});req.on("end",()=>{try{resolve(s?JSON.parse(s):{})}catch(e){reject(e)}});req.on("error",reject)})}
 function auth(req){return req.headers["x-biupiu-role"]||"VIEWER"}
 function allowed(role,needed){const order={VIEWER:0,RESEARCHER:1,REVIEWER:2,ADMIN:3};return (order[role]??-1)>=(order[needed]??99)}
 const server=http.createServer(async(req,res)=>{
