@@ -1,0 +1,13 @@
+{
+  "environment_id":"feudal_japan_world",
+  "civilisation_id":"JAPAN_FEUDAL",
+  "period_focus":"Sengoku_period",
+  "evidence_class":"ARCHAEOLOGICAL/SCHOLARLY_RECONSTRUCTION",
+  "models":["castle_town","samurai_residence","machiya_street","temple_shrine_zone","rice_paddies","irrigation_channels","forest_mountain","tea_garden","smithy","market","dojo","library"],
+  "library":"feudal_japan_library",
+  "avatar_entry":"japan_gate",
+  "spawn_zones":["castle_town","farm","smithy","dojo","market","library","mountain_path"],
+  "learning_objects":["castle_model","rice_farming_model","smithing_model","social_structure_timeline","material_culture_gallery"],
+  "reconstruction":true,
+  "ui_badge":"HISTORICAL RECONSTRUCTION — PERIOD-SPECIFIC"
+}
