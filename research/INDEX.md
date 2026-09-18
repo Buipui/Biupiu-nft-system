@@ -154,3 +154,8 @@ The Main Hub now has separate culturally contextualised sandbox environments for
 - Ancient Americas
 
 Each sandbox follows: MAIN HUB → CIVILISATION SANDBOX → CULTURAL HUB → DEPARTMENT ENVIRONMENT → WORKSHOP/LAB → PROJECT → RESEARCH OBJECT. Department subscriber entitlements remain authoritative, so entering a sandbox does not unlock unrelated departments. Historical evidence, reconstruction and modern R&D remain separate and evidence-classified.
+
+
+## Biupiu World — ancient civilisation layer
+
+`research/BIUPIU-WORLD-ANCIENT-CIVILISATIONS-v1.0.md` defines the next world-building layer: separate civilisation environments inside regional sandboxes, department-specific spaces, historical/reconstruction zones, an asset-provenance model and evidence/access firewalls. Initial mapped environments include Southern African cultures, Ancient Egypt/Nubian-Kushite, Sumerian/Akkadian/Babylonian/Assyrian Mesopotamia, Indus/Harappan and South Asian environments, ancient Chinese/Japanese environments, and Mesoamerican/Andean environments. Damascus is modelled as a regional historical city/trade/metalworking gateway.
