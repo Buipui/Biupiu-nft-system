@@ -1,0 +1,26 @@
+{
+  "schema_version":"1.0",
+  "gate":"GATE-4",
+  "default_tier":"PUBLIC",
+  "tiers":{
+    "PUBLIC":{"level":0,"capabilities":["hub_public","library_public","showcase_public"]},
+    "EXPLORER":{"level":1,"inherits":"PUBLIC","capabilities":["avatar_profile","guided_exploration","education","basic_simulations","progress_tracking"]},
+    "BUILDER":{"level":2,"inherits":"EXPLORER","capabilities":["advanced_learning","department_simulations","virtual_workshop_tools","virtual_inventory","project_workspace","permitted_export"]},
+    "RESEARCHER":{"level":3,"inherits":"BUILDER","capabilities":["research_sandbox","evidence_tools","experiment_authoring","result_logging","advanced_simulation","cross_world_research"]},
+    "CREATOR_DEVELOPER":{"level":4,"inherits":"RESEARCHER","capabilities":["content_authoring","mod_sandbox","digital_asset_pipeline","test_nft_mint_workflow","developer_test_api"]}
+  },
+  "department_scopes":[
+    "SMART_FARMING",
+    "SMART_METAL_WORKSHOP",
+    "FUTURE_DEPARTMENT"
+  ],
+  "rules":[
+    "tier_does_not_grant_department_access",
+    "department_entitlement_is_separate",
+    "role_privileges_are_separate",
+    "default_deny",
+    "server_authoritative",
+    "all_protected_actions_audited"
+  ],
+  "release_gate":["DRAFT","REVIEW","TESTNET","VERIFIED","RELEASED"]
+}
