@@ -219,3 +219,17 @@ Added:
 - Historical/legendary figures are not presented as documentary portraits; original Biupiu characters are used for navigation and research guidance.
 
 The full world model is defined in `research/BIUPIU-NEW-AGE-THEORY-LOST-CIVILISATIONS-v1.0.md`.
+
+
+## New Age Theory visual production layer
+
+Character and environment design now incorporates a controlled visual-reference workflow for archived videos/descriptions and allocated mod assets. See `research/BIUPIU-NEW-AGE-THEORY-CHARACTERS-v1.0.md`.
+
+Priority packages:
+- Tartaria
+- Atlantis
+- Hyperborea
+- Mu
+- Hollow Earth
+
+Every source/mod asset receives provenance and licence metadata before reuse. Visual claims such as alleged giant inhabitants remain source-specific speculative variants rather than established facts.
