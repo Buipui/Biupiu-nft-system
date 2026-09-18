@@ -1,0 +1,11 @@
+{
+  "site_id":"inca_mountain",
+  "display_name":"Inka Mountain Terraces",
+  "terrain":"Andean mountain slopes",
+  "features":["stone terraces","gravity-fed channels","retaining/drainage layers","Moray research bowl","mountain settlement"],
+  "mechanics":["altitude","erosion","water allocation","terrace construction","microclimate","storage","barter"],
+  "evidence_class":"ARCHAEOLOGICAL",
+  "confidence":"HIGH",
+  "reconstruction":false,
+  "sources":["Smithsonian NMAI Inka Water Management","IICA Agua y Agricultura Moray"]
+}
