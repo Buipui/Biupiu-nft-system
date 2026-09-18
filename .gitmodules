@@ -1,3 +1,7 @@
 [submodule "engines/blender-android"]
 	path = engines/blender-android
 	url = https://github.com/Wanderson-Magalhaes/blender_for_android.git
+
+[submodule "engines/blender-windows-official"]
+	path = engines/blender-windows-official
+	url = https://github.com/blender/blender.git
