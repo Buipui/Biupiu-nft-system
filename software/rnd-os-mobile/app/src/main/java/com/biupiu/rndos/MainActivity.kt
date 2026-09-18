@@ -3,63 +3,73 @@ package com.biupiu.rndos
 import android.os.Bundle
 import androidx.activity.ComponentActivity
 import androidx.activity.compose.setContent
+import androidx.activity.viewModels
 import androidx.compose.foundation.layout.*
 import androidx.compose.material3.*
-import androidx.compose.runtime.Composable
+import androidx.compose.runtime.*
 import androidx.compose.ui.Modifier
+import androidx.compose.ui.platform.LocalContext
 import androidx.compose.ui.unit.dp
-import androidx.navigation.compose.NavHost
-import androidx.navigation.compose.composable
-import androidx.navigation.compose.rememberNavController
+import androidx.lifecycle.viewmodel.compose.viewModel
+import com.biupiu.rndos.auth.AuthViewModel
+import com.biupiu.rndos.auth.AuthViewModelFactory
+import com.biupiu.rndos.ui.AuthScreen
+import com.biupiu.rndos.ui.MobileDashboardViewModel
+import com.biupiu.rndos.ui.MobileDashboardViewModelFactory
 
 class MainActivity : ComponentActivity() {
+    private val authViewModel: AuthViewModel by viewModels { AuthViewModelFactory(applicationContext) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setContent { BiupiuRndOsApp() }
+        setContent { BiupiuRndOsApp(authViewModel) }
     }
 }
 
 @Composable
-fun BiupiuRndOsApp() {
-    val navController = rememberNavController()
+fun BiupiuRndOsApp(authViewModel: AuthViewModel) {
     MaterialTheme {
         Surface(Modifier.fillMaxSize()) {
-            NavHost(navController, startDestination = "dashboard") {
-                composable("dashboard") {
-                    DashboardScreen(
-                        { navController.navigate("research") },
-                        { navController.navigate("experiments") },
-                        { navController.navigate("assets") },
-                        { navController.navigate("controls") }
-                    )
-                }
-                composable("research") { FormScreen("Research Objects", "Create evidence-classified research records.") }
-                composable("experiments") { FormScreen("Digital Laboratory", "Log hypotheses, protocols and observations.") }
-                composable("assets") { FormScreen("Assets & NFTs", "Create provenance records and mint payloads. Blockchain signing remains gated.") }
-                composable("controls") { FormScreen("Control Centre", "Audit trail, release gates and security boundaries.") }
+            val auth = authViewModel.state
+            if (!auth.authenticated || auth.session == null) {
+                AuthScreen(authViewModel)
+            } else {
+                val dashboardViewModel: MobileDashboardViewModel = viewModel(
+                    key = "dashboard-${auth.session.userId}-${auth.session.organisationId}",
+                    factory = MobileDashboardViewModelFactory(LocalContext.current, auth.session)
+                )
+                DashboardRoute(dashboardViewModel, authViewModel)
             }
         }
     }
 }
 
 @Composable
-private fun DashboardScreen(onResearch: () -> Unit, onExperiments: () -> Unit, onAssets: () -> Unit, onControls: () -> Unit) {
-    Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
-        Text("Biupiu R&D OS", style = MaterialTheme.typography.headlineMedium)
-        Text("Cross-platform prototype v1.0")
-        Text("Research → Hypothesis → Experiment → Evidence → Validation → Provenance → Release")
-        Button(onClick = onResearch, modifier = Modifier.fillMaxWidth()) { Text("Research Objects") }
-        Button(onClick = onExperiments, modifier = Modifier.fillMaxWidth()) { Text("Digital Laboratory") }
-        Button(onClick = onAssets, modifier = Modifier.fillMaxWidth()) { Text("Assets & NFT Console") }
-        Button(onClick = onControls, modifier = Modifier.fillMaxWidth()) { Text("Control Centre") }
-    }
-}
-
-@Composable
-private fun FormScreen(title: String, message: String) {
+private fun DashboardRoute(viewModel: MobileDashboardViewModel, authViewModel: AuthViewModel) {
+    LaunchedEffect(Unit) { viewModel.loadDashboard() }
+    val state = viewModel.state
     Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
-        Text(title, style = MaterialTheme.typography.headlineSmall)
-        Text(message)
-        Text("Production API, persistent audit storage, authentication and blockchain execution are explicit next gates.")
+        Text("Biupiu R&D OS", style = MaterialTheme.typography.headlineMedium)
+        Text("Authenticated dashboard")
+        when {
+            state.loading -> CircularProgressIndicator()
+            state.error != null -> {
+                Text("Dashboard error: " + state.error, color = MaterialTheme.colorScheme.error)
+                Button(onClick = viewModel::loadDashboard) { Text("Retry") }
+            }
+            state.dashboard == null -> Text("No dashboard data returned.")
+            else -> {
+                val d = state.dashboard
+                Text("Projects: " + d.projects)
+                Text("Research: " + d.research)
+                Text("Hypotheses: " + d.hypotheses)
+                Text("Experiments: " + d.experiments)
+                Text("Failures: " + d.failures)
+                Text("IP records: " + d.ip)
+                Text("Relationships: " + d.relationships)
+                Button(onClick = viewModel::loadDashboard) { Text("Refresh") }
+            }
+        }
+        OutlinedButton(onClick = authViewModel::signOut) { Text("Sign Out") }
     }
 }
