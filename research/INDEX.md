@@ -52,6 +52,10 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Blade Baseline Dataset + Comparison Workflow
+
+Added `research/BIUPIU-BLADE-BASELINE-DATASET-v1.0.json` and `research/BIUPIU-BLADE-COMPARISON-WORKFLOW-v1.0.md`; **GATE BM-05 executed**. The baseline dataset contains the common candidate families, load-case definitions, required material properties and result fields. Unknown properties remain null rather than being invented.
+
 ## Blade Simulation Runner + Result Schema
 
 Added `research/BIUPIU-BLADE-SIMULATION-RUNNER-SPEC-v1.0.md` and `research/BIUPIU-BLADE-RESULT-RECORD-SCHEMA-v1.0.json`; **GATE BM-04 executed**. The runner specification enforces identical geometry/load cases across candidate fibre/resin systems and requires provenance, model version, boundary conditions, uncertainty and evidence state for every result.
