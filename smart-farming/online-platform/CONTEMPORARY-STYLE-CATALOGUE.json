@@ -1,0 +1,20 @@
+{
+  "catalogue_version":"0.1",
+  "categories":[
+    {"id":"avatar-wear","label":"Biupiu Avatar Wear"},
+    {"id":"researcher","label":"Researcher / Lab Styles"},
+    {"id":"campus","label":"Campus Accessories"},
+    {"id":"digital-assets","label":"Digital Assets"},
+    {"id":"limited","label":"Limited Editions"}
+  ],
+  "product_template":{
+    "product_id":"string",
+    "title":"string",
+    "description":"string",
+    "type":"avatar_item|digital_asset|physical_product",
+    "price":"commerce-service-value",
+    "inventory":"unlimited|quantity|made-to-order",
+    "licence":"string",
+    "status":"draft|review|published|retired"
+  }
+}
