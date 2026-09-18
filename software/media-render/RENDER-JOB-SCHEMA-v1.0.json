@@ -1,0 +1,30 @@
+{
+  "schema": "biupiu.media.render-job.v1",
+  "job_id": "MRJ-000001",
+  "project_id": "PROJECT-ID",
+  "research_object_id": "RO-ID",
+  "asset_id": "ASSET-ID",
+  "job_type": "render.still",
+  "source_master": {
+    "format": "blend|cad|usd|other",
+    "version": "1.0"
+  },
+  "toolchain": [
+    {"provider": "blender", "role": "master_scene"}
+  ],
+  "inputs": [],
+  "outputs": [],
+  "metadata": {
+    "resolution": null,
+    "frame_rate": null,
+    "color_space": null,
+    "engine": null
+  },
+  "provenance": {
+    "created_by": null,
+    "created_at": null,
+    "source_hash": null
+  },
+  "evidence_class": "VISUALIZATION_ONLY",
+  "engineering_validation_status": "NOT_VALIDATED"
+}
