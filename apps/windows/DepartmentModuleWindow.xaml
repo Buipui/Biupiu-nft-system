@@ -1,0 +1,11 @@
+<Window x:Class="Biupiu.Desktop.DepartmentModuleWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="Biupiu Department Module" Height="480" Width="900">
+    <Grid>
+        <TextBlock x:Name="ScreenText"
+                   HorizontalAlignment="Center"
+                   VerticalAlignment="Center"
+                   FontSize="30" />
+    </Grid>
+</Window>
