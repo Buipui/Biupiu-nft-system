@@ -1,1 +1,38 @@
-{"campus_id":"biupiu_world_main_hub","entry":"avatar_arrival","destinations":[{"id":"farming_world","label":"FARMING WORLD","route":"farming_gate","systems":["agriculture","water","crops","barter","regeneration"]},{"id":"metal_making_world","label":"METAL MAKING WORLD","route":"metallurgy_gate","systems":["metallurgy","materials","historical_workshops","digital_lab"]}],"shared":["video_library","civilisation_library","avatar_profile","trust_provenance","education_progress"],"rule":"The hub presents farming and metal making as separate destinations while allowing cross-world learning."}
+{
+  "campus_id":"biupiu_world_main_hub",
+  "entry":"avatar_arrival",
+  "policy":"deny_by_default",
+  "destinations":[
+    {
+      "id":"farming_world",
+      "label":"FARMING WORLD",
+      "route":"farming_gate",
+      "department_scope":"SMART_FARMING",
+      "entry_requires":["subscriber","SMART_FARMING"],
+      "systems":["agriculture","water","crops","barter","regeneration"]
+    },
+    {
+      "id":"metal_making_world",
+      "label":"METAL MAKING WORLD",
+      "route":"metallurgy_gate",
+      "department_scope":"SMART_METAL_WORKSHOP",
+      "entry_requires":["subscriber","SMART_METAL_WORKSHOP"],
+      "systems":["metallurgy","materials","historical_workshops","digital_lab"]
+    }
+  ],
+  "shared":[
+    "civilisation_library",
+    "world_map",
+    "video_library",
+    "avatar_profile",
+    "trust_provenance",
+    "education_progress"
+  ],
+  "access_rules":[
+    "department resources are scope-restricted",
+    "unknown scopes are denied",
+    "client routing is not production authorization",
+    "protected resource entry is audited"
+  ],
+  "rule":"The hub presents farming and metal making as separate destinations while allowing explicitly entitled cross-world learning."
+}
