@@ -1,7 +1,8 @@
 export type DepartmentRoute =
   | "SMART_FARMING"
   | "SMART_METAL_WORKSHOP"
-  | "RND_OS";
+  | "RND_OS"
+  | "CREATIVE_AI";
 
 export interface DepartmentTarget {
   route: DepartmentRoute;
@@ -27,6 +28,12 @@ const targets: Record<DepartmentRoute, DepartmentTarget> = {
     route: "RND_OS",
     packageName: "@biupiu/rnd-os",
     packagePath: "packages/biupiu-rnd-os"
+  },
+  CREATIVE_AI: {
+    route: "CREATIVE_AI",
+    packageName: "@biupiu/firefly",
+    packagePath: "packages/biupiu-firefly",
+    scope: "CREATIVE_AI"
   }
 };
 
