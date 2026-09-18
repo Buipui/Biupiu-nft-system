@@ -1,0 +1,12 @@
+{
+  "version":"1.0",
+  "entities":{
+    "research":{"required":["id","title","evidence_class","created_at"]},
+    "experiment":{"required":["id","title","hypothesis","status","created_at"]},
+    "asset":{"required":["id","name","status","created_at"]},
+    "audit":{"required":["id","action","actor_id","ref","at"]}
+  },
+  "evidence_classes":["DOCUMENTED","RECONSTRUCTED","EXPERIMENTAL","HYPOTHESIS","SPECULATIVE"],
+  "release_gates":["DRAFT","REVIEW","TESTNET","VERIFIED","RELEASED"],
+  "roles":["VIEWER","RESEARCHER","REVIEWER","ADMIN"]
+}
