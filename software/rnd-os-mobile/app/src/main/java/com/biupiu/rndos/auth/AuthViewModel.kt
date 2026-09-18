@@ -1,9 +1,14 @@
 package com.biupiu.rndos.auth
 
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.mutableStateOf
+import androidx.compose.runtime.setValue
 import androidx.lifecycle.ViewModel
 
-class AuthViewModel(private val store: SessionStore = MemorySessionStore()) : ViewModel() {
-    var state: SessionState = SessionState(authenticated = store.read() != null)
+class AuthViewModel(private val store: SessionStore) : ViewModel() {
+    var state: SessionState by mutableStateOf(
+        SessionState(authenticated = store.read() != null, session = store.read())
+    )
         private set
 
     fun setDevelopmentSession(token: String, userId: String, organisationId: String, expiresAt: String) {
@@ -11,7 +16,7 @@ class AuthViewModel(private val store: SessionStore = MemorySessionStore()) : Vi
             state = state.copy(error = "All session fields are required")
             return
         }
-        val session = DevSession(token, userId, organisationId, expiresAt)
+        val session = DevSession(token.trim(), userId.trim(), organisationId.trim(), expiresAt.trim())
         store.save(session)
         state = SessionState(authenticated = true, session = session)
     }
