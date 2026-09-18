@@ -1,0 +1,12 @@
+{
+  "scene_id":"waru-waru-v0.1",
+  "facility_id":"waru-waru",
+  "layers":["terrain","raised_beds","water_channels","crop_plots","measurement_points"],
+  "interactions":[
+    {"id":"WW-02","action":"open_water_simulation","target":"digital-lab"},
+    {"id":"WW-03","action":"open_thermal_simulation","target":"digital-lab"},
+    {"id":"WW-04","action":"open_crop_experiment","target":"digital-lab"},
+    {"id":"WW-05","action":"open_research","target":"research-library"}
+  ],
+  "evidence_notice":"Digital reconstruction and simulations are educational models; assumptions must be displayed with the relevant activity."
+}
