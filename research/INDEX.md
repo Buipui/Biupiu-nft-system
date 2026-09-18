@@ -120,3 +120,14 @@ All existing department streams remain active. New centre systems are overlays t
 
 **Biupiu R&D Research Index v3.0 — Executable R&D OS v0.2 Integration**  
 **Updated:** 18 September 2026
+
+
+## Department subscriber products
+
+The repository now defines a shared department-scoped subscriber model and two specialist product architectures:
+
+- `research/BIUPIU-DEPARTMENT-SUBSCRIBER-ACCESS-CONTROL-v1.0.md` — common tenant, entitlement, role, visibility, audit and information-firewall model.
+- `research/BIUPIU-SMART-METAL-WORKSHOP-v1.0.md` — METALLURGY-only smart home-workshop product for hobbyist metalworkers.
+- `research/BIUPIU-SMART-FARMING-v1.0.md` — FARMING-only smart farming product.
+
+Both products use the same subscriber/identity architecture while enforcing department-scoped search, AI retrieval, exports and resource access. A subscriber can hold multiple explicit department entitlements, but no department access is implied by another entitlement.
