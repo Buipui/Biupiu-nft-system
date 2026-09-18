@@ -1,0 +1,17 @@
+{
+  "schema":"BIUPIU-UNCERTAINTY-SCHEMA-v1.0",
+  "gate":"BM-09",
+  "value":"number-or-null",
+  "unit":"string",
+  "uncertainty_type":"measurement|batch|manufacturing|environmental|model-form|numerical|parameter",
+  "method":"string",
+  "sample_count":"integer-or-null",
+  "conditioning":"string-or-null",
+  "source_reference":"string",
+  "confidence_or_coverage":"string-or-null",
+  "model_version":"string",
+  "evidence_state":"string",
+  "distribution":"object-or-null",
+  "sensitivity_rank":"integer-or-null",
+  "notes":"string-or-null"
+}
