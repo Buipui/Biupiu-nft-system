@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Civilisation Historical Evidence Metadata",
+  "type":"object",
+  "required":["civilisation_id","site_id","evidence_class","confidence","reconstruction"],
+  "properties":{
+    "civilisation_id":{"type":"string"},
+    "site_id":{"type":"string"},
+    "period":{"type":"string"},
+    "evidence_class":{"enum":["PRIMARY","ARCHAEOLOGICAL","SCHOLARLY","SECONDARY","RECONSTRUCTION","CONTESTED"]},
+    "confidence":{"enum":["HIGH","MEDIUM","LOW","OPEN"]},
+    "reconstruction":{"type":"boolean"},
+    "source_refs":{"type":"array","items":{"type":"string"}},
+    "simulation_assumptions":{"type":"array","items":{"type":"string"}},
+    "ui_disclosure":{"type":"string"}
+  },
+  "additionalProperties":false
+}
