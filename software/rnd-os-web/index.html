@@ -1,0 +1,23 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<meta name="theme-color" content="#0b1720"><link rel="manifest" href="manifest.webmanifest">
+<title>Biupiu R&D OS</title><link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header><div><strong>BIUPIU</strong><span> R&D OS</span></div><button id="installBtn" hidden>Install</button></header>
+<main>
+<section class="hero"><h1>Research → Experiment → Evidence → Asset</h1><p>Offline-first prototype for Windows and Android. Records remain local until an explicit sync/export action.</p></section>
+<nav id="tabs">
+<button data-tab="dashboard">Dashboard</button><button data-tab="research">Research</button><button data-tab="lab">Digital Lab</button><button data-tab="assets">Assets & NFTs</button><button data-tab="controls">Controls</button>
+</nav>
+<section id="dashboard" class="panel active"><h2>System dashboard</h2><div class="grid">
+<div class="card"><b id="researchCount">0</b><span>Research objects</span></div><div class="card"><b id="experimentCount">0</b><span>Experiments</span></div><div class="card"><b id="assetCount">0</b><span>Digital assets</span></div><div class="card"><b id="auditCount">0</b><span>Audit events</span></div>
+</div><h3>Lifecycle</h3><p class="flow">Source → Claim → Hypothesis → Experiment → Result → Verification → Provenance → Release</p></section>
+<section id="research" class="panel"><h2>Research objects</h2><form id="researchForm"><input id="rTitle" required placeholder="Research title"><select id="rClass"><option>DOCUMENTED</option><option>RECONSTRUCTED</option><option>EXPERIMENTAL</option><option>HYPOTHESIS</option><option>SPECULATIVE</option></select><textarea id="rNotes" placeholder="Evidence/context"></textarea><button>Add research object</button></form><div id="researchList"></div></section>
+<section id="lab" class="panel"><h2>Digital laboratory</h2><form id="experimentForm"><input id="eTitle" required placeholder="Experiment name"><input id="eHypothesis" required placeholder="Hypothesis"><textarea id="eProtocol" placeholder="Protocol / parameters"></textarea><button>Log experiment</button></form><div id="experimentList"></div></section>
+<section id="assets" class="panel"><h2>Digital Asset & NFT Console</h2><p>Create a provenance-controlled asset record and a deterministic mint payload. Actual blockchain signing remains a separate testnet gate.</p><form id="assetForm"><input id="aName" required placeholder="Asset name"><input id="aResearch" placeholder="Research ID (optional)"><input id="aAlgorithm" placeholder="Algorithm/version (optional)"><select id="aClass"><option>Class A — Art</option><option>Class B — Research Art</option><option>Class C — Computational Artifact</option></select><textarea id="aLicence" placeholder="Licence / rights statement"></textarea><button>Create asset & mint payload</button></form><div id="assetList"></div></section>
+<section id="controls" class="panel"><h2>Control centre</h2><ul><li>Every record receives an ID and creation timestamp.</li><li>Updates append audit events rather than silently changing history.</li><li>Evidence class is explicit.</li><li>Minting is gated: READY → REVIEW → TESTNET → VERIFIED → RELEASE.</li><li>No private keys or secrets are stored by this prototype.</li></ul><button id="exportBtn">Export complete local workspace</button> <button id="resetBtn" class="danger">Reset local workspace</button></section>
+</main><script src="app.js"></script>
+</body></html>
