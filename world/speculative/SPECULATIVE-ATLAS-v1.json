@@ -1,0 +1,14 @@
+{
+  "atlas_id":"biupiu_speculative_atlas_v1",
+  "layers":[
+    {"id":"L0","name":"Evidence","rule":"source classification only"},
+    {"id":"L1","name":"Tradition","rule":"literary/mythological record"},
+    {"id":"L2","name":"Reconstruction","rule":"explicit visual/world interpretation"},
+    {"id":"L3","name":"Simulation","rule":"parameterised what-if model"}
+  ],
+  "entries":[
+    {"id":"ATLANTIS","scenario":"atlantis_platonic_core","status":"open"},
+    {"id":"MU","scenario":"mu_hypothesis_archipelago","status":"open"}
+  ],
+  "promotion_rule":"Simulation outputs never upgrade evidentiary status."
+}
