@@ -1,0 +1,4 @@
+date,block_plot,treatment,water_added_litres,soil_moisture,soil_temperature_c,rainfall_mm,air_temperature_c,humidity_percent,wind_notes,plant_height_cm,leaf_count,plant_stress,olla_refill_count,olla_condition,deviations
+YYYY-MM-DD,1A,Olla,,,,,,,,,,,,,
+YYYY-MM-DD,1B,Matched surface irrigation,,,,,,,,,,,,,
+YYYY-MM-DD,1C,Reduced-water control,,,,,,,,,,,,,
