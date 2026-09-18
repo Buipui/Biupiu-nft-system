@@ -1,0 +1,34 @@
+name: Biupiu Main Hub Foundation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/shared/runtime/main-hub/**"
+      - "apps/android/**"
+      - "apps/windows/**"
+      - ".github/workflows/biupiu-main-hub-foundation.yml"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/main-hub/**"
+      - "apps/android/**"
+      - "apps/windows/**"
+      - ".github/workflows/biupiu-main-hub-foundation.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Main Hub files
+        run: |
+          test -f apps/shared/runtime/main-hub/main-hub-model.ts
+          test -f apps/shared/runtime/main-hub/README.md
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
+          test -f apps/windows/MainHubViewModel.cs
+          test -f apps/windows/MainWindow.xaml
+      - name: Verify route contract
+        run: |
+          grep -q 'SMART_FARMING' apps/shared/runtime/main-hub/main-hub-model.ts
+          grep -q 'SMART_METAL_WORKSHOP' apps/shared/runtime/main-hub/main-hub-model.ts
+          grep -q 'RND_OS' apps/shared/runtime/main-hub/main-hub-model.ts
