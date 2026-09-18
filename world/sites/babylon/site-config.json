@@ -1,0 +1,11 @@
+{
+  "site_id":"babylon_alluvial",
+  "display_name":"Babylonian Alluvial Farm",
+  "terrain":"Mesopotamian alluvial plain",
+  "features":["canal irrigation","river-fed fields","date palms","mud-brick settlement","garden plots"],
+  "mechanics":["canal allocation","water demand","crop yield","maintenance labour","storage","barter"],
+  "evidence_class":"ARCHAEOLOGICAL",
+  "confidence":"MEDIUM",
+  "reconstruction":false,
+  "sources":["Biupiu Civilisation Index research record"]
+}
