@@ -1,0 +1,9 @@
+{
+  "schema_version":"0.1",
+  "user_id":"string",
+  "facility_visits":[{"facility_id":"string","first_seen":"ISO-8601","last_seen":"ISO-8601"}],
+  "stations_completed":["station-id"],
+  "lessons_completed":["lesson-id"],
+  "experiments_saved":["experiment-id"],
+  "achievements":[]
+}
