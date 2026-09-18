@@ -1,0 +1,9 @@
+{
+  "name": "@biupiu/unreal-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu Unreal Engine integration package for digital twins, simulation, visualization and Twinmotion/Datasmith workflows",
+  "platforms": ["windows"],
+  "entry": "src/index.ts",
+  "requires": ["@biupiu/rnd-os", "@biupiu/main-hub", "@biupiu/showcase"]
+}
