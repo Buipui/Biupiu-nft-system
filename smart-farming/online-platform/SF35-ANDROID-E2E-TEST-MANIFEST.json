@@ -1,0 +1,72 @@
+{
+  "version": "SF-35.1",
+  "platform": "Android",
+  "test_path": [
+    "launch",
+    "profile",
+    "world",
+    "episode",
+    "scene",
+    "hero_asset",
+    "research",
+    "digital_lab",
+    "academy",
+    "gallery",
+    "marketplace",
+    "profile"
+  ],
+  "tests": [
+    {
+      "id": "E2E-01",
+      "test": "app launch",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-02",
+      "test": "canonical navigation",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-03",
+      "test": "scene-to-mobile handoff",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-04",
+      "test": "hero asset resolution",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-05",
+      "test": "Digital Lab deep link",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-06",
+      "test": "Academy deep link",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-07",
+      "test": "gallery/marketplace guard",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-08",
+      "test": "captions/accessibility",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-09",
+      "test": "session restoration",
+      "status": "PENDING_BUILD"
+    },
+    {
+      "id": "E2E-10",
+      "test": "error/offline fallback",
+      "status": "PENDING_BUILD"
+    }
+  ],
+  "release_gate": "all_critical_tests_pass AND rights_cleared AND human_approval",
+  "live_runtime": false
+}
