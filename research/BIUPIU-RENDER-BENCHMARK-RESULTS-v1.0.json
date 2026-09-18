@@ -1,0 +1,49 @@
+{
+  "benchmark_id": "BIU-RENDER-001",
+  "version": "1.0",
+  "status": "PENDING_WORKSTATION_EXECUTION",
+  "source_scene_id": "BIU-RENDER-SCENE-001",
+  "engines": {
+    "BLENDER_CYCLES": {"status": "PENDING", "measurements": {}, "observations": []},
+    "OCTANE": {"status": "PENDING", "measurements": {}, "observations": []},
+    "V_RAY": {"status": "PENDING", "measurements": {}, "observations": []},
+    "UNREAL_ENGINE_5": {"status": "PENDING", "measurements": {}, "observations": []}
+  },
+  "controls": {
+    "geometry_version": "PENDING",
+    "physical_scale": "PENDING",
+    "camera": "PENDING",
+    "lighting": "PENDING",
+    "materials": "PENDING",
+    "resolution": "PENDING",
+    "colour_management": "PENDING"
+  },
+  "measurement_schema": [
+    "engine_version",
+    "gpu_cpu",
+    "render_mode",
+    "quality_or_samples",
+    "resolution",
+    "render_time_seconds",
+    "peak_memory_or_vram_mb",
+    "output_size_bytes",
+    "unsupported_features",
+    "conversion_notes"
+  ],
+  "review": {
+    "geometry_fidelity": "PENDING",
+    "material_fidelity": "PENDING",
+    "lighting_fidelity": "PENDING",
+    "interoperability": "PENDING",
+    "digital_twin_compatibility": "PENDING",
+    "provenance": "PENDING"
+  },
+  "provenance": {
+    "source_model_id": "PENDING",
+    "scene_version": "PENDING",
+    "run_timestamp": "PENDING",
+    "output_hashes": [],
+    "reviewer": "PENDING"
+  },
+  "integrity_rule": "No fabricated measurements or subjective rankings. Populate only from controlled workstation execution."
+}
