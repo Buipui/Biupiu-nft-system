@@ -233,3 +233,12 @@ Priority packages:
 - Hollow Earth
 
 Every source/mod asset receives provenance and licence metadata before reuse. Visual claims such as alleged giant inhabitants remain source-specific speculative variants rather than established facts.
+
+
+## AI production integration gates
+
+- `research/BIUPIU-AI-PRODUCTION-MODEL-GATE-v1.0.md` — AI-12 production-model boundary and retrieval benchmark gate.
+- `research/BIUPIU-AI-END-TO-END-GATE-v1.0.md` — AI-13 provider adapter boundary, fail-closed behavior and deterministic end-to-end grounding test.
+- `software/rnd-os-ai/src/biupiu_ai/provider_adapter.py` — provider configuration/health contract and fail-closed adapter boundary.
+- `software/rnd-os-ai/tests/test_ai13.py` — provider safety and end-to-end citation propagation tests.
+- **AI-13 status:** repository adapter boundary implemented; live external provider transport and real Android network test remain gated.
