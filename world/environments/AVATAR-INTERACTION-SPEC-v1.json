@@ -1,0 +1,13 @@
+{
+  "avatar_system":"biupiu_world_avatar_v1",
+  "identity":"subscriber_avatar_profile",
+  "states":["loading","orientation","exploring","interacting","farming","bartering","researching","travelling","saving"],
+  "interactions":["inspect","read","collect_virtual_item","plant","harvest","trade","enter_library","enter_simulation","travel"],
+  "permissions":{
+    "public":"explore/read/inspect",
+    "subscriber":"all_public_plus_simulations_and_virtual_economy",
+    "research_role":"approved_research_sandbox_tools"
+  },
+  "persistence":["avatar_progress","inventory_virtual","learning_progress","simulation_results"],
+  "no_real_asset_claim":"Virtual inventory and simulation balances are not real-world ownership or financial balances."
+}
