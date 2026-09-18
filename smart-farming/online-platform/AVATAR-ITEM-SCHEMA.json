@@ -1,0 +1,12 @@
+{
+  "item_id":"string",
+  "pack_id":"string",
+  "slot":"head|hair|face|torso|legs|feet|accessory|pattern",
+  "period":"string",
+  "region":"string",
+  "description":"string",
+  "source_refs":[],
+  "evidence_level":"documented|reconstructed|interpretive",
+  "rights_status":"string",
+  "reconstruction_notes":"string"
+}
