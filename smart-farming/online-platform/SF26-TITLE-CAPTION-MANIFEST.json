@@ -1,0 +1,63 @@
+{
+  "version": "SF-26.1",
+  "episode_id": "BPU-WORLD-E01",
+  "title": "Welcome to Biupiu World",
+  "title_cards": [
+    {
+      "id": "TC-01",
+      "time": "00:00",
+      "title": "BIUPIU WORLD",
+      "subtitle": "Research • Innovation • Regenerative Systems"
+    },
+    {
+      "id": "TC-02",
+      "time": "00:08",
+      "title": "ADVANCED MOBILITY",
+      "status": "CONCEPT"
+    },
+    {
+      "id": "TC-03",
+      "time": "00:27",
+      "title": "MARINE RESEARCH",
+      "status": "RESEARCH CONCEPT"
+    },
+    {
+      "id": "TC-04",
+      "time": "00:41",
+      "title": "REGENERATIVE AGRICULTURE",
+      "status": "RESEARCH PROTOTYPE"
+    },
+    {
+      "id": "TC-05",
+      "time": "00:57",
+      "title": "CONSERVATION",
+      "status": "CONCEPT"
+    },
+    {
+      "id": "TC-06",
+      "time": "01:11",
+      "title": "INTELLIGENCE HUB",
+      "status": "RESEARCH CONCEPT"
+    },
+    {
+      "id": "TC-07",
+      "time": "01:35",
+      "title": "BIUPIU WORLD",
+      "subtitle": "Explore the World"
+    }
+  ],
+  "caption_rules": {
+    "format": "WebVTT/SRT-ready",
+    "max_lines": 2,
+    "safe_area": "10% inset",
+    "minimum_readability": "high contrast, uncluttered background",
+    "speaker_labels": false,
+    "translation_ready": true
+  },
+  "accessibility": [
+    "captions",
+    "clear status labels",
+    "non-audio-dependent information"
+  ],
+  "claim_policy": "Never remove concept/research labels when they qualify the visual."
+}
