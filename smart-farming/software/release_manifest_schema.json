@@ -1,0 +1,8 @@
+{
+  "schema_version":"0.1",
+  "release": {"id":"string","date":"ISO-8601","rollback":"release-id"},
+  "plant_profiles":[{"plant_id":"string","version":"string","evidence_level":"L0-L4"}],
+  "protocols":[{"protocol_id":"string","version":"string","conditions":["string"],"evidence_level":"L0-L4"}],
+  "sensor_compatibility":[{"product_id":"string","metrics":["string"]}],
+  "data_policy":{"network_logging_enabled_by_user":false,"retention_policy":"string"}
+}
