@@ -1,0 +1,17 @@
+{
+  "version":"0.1",
+  "modules":[
+    {"id":"world-launcher","entry":"World Launcher"},
+    {"id":"environment-loader","entry":"Environment Loader"},
+    {"id":"facility-engine","entry":"Facility Interaction Engine"},
+    {"id":"avatar-manager","entry":"Avatar Manager"},
+    {"id":"property-manager","entry":"Home / Property Manager"},
+    {"id":"marketplace","entry":"Marketplace"},
+    {"id":"gallery","entry":"Digital Gallery"},
+    {"id":"academy","entry":"Academy"},
+    {"id":"digital-lab","entry":"Digital Laboratory"},
+    {"id":"research","entry":"Research Library"},
+    {"id":"intelligence","entry":"Biupiu Intelligence Hub"},
+    {"id":"entitlements","entry":"Account / Entitlements"}
+  ]
+}
