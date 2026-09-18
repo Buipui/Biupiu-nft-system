@@ -175,3 +175,35 @@ The speculative environments are explicitly separated from established archaeolo
 ## Robert Sepehr / Atlantean Gardens cross-link layer
 
 Added `research/BIUPIU-ROBERT-SEPEHR-CROSS-LINK-INDEX-v1.0.md`. It cross-links source material on Atlantis, Hyperborea, Thule, Hy-Brasil, Celtic/Atlantic-contact claims, Hercules traditions, Amorites, Peru/Andes, Moon-Eyed People, Green Children of Woolpit, Odin/Norse material and Lost Tribes/Levant history into Biupiu World. These are separated into historical, mythological, folklore and speculative research environments and routed through the existing claim-to-test framework. citeturn0search2turn0search4
+
+
+## Biupiu World — New Age Theory / Lost Civilisations
+
+Added `research/BIUPIU-NEW-AGE-THEORY-LOST-CIVILISATIONS-v1.0.md` as a dedicated Main Hub speculative-research layer.
+
+Core environments:
+- Atlantis
+- Mu
+- Hyperborea
+- Tartaria / Great Tartaria
+- Hollow Earth
+
+Additional linked lost-land, lost-city and esoteric traditions:
+- Lemuria
+- Kumari Kandam
+- Thule
+- Hy-Brasil
+- Agartha
+- Shambhala
+- Aztlan
+- Iram/Ubar
+- Paititi
+- Zerzura
+- Ys
+- Vineta
+- Cantre'r Gwaelod
+- El Dorado
+
+A reality-control library separately models documented submerged/transformed landscapes including Doggerland, Sundaland, Beringia, Sahul and Te Riu-a-Māui / Zealandia. These are comparison cases, not evidence for the speculative entities.
+
+The New Age Theory layer preserves source provenance, evidence states, counter-evidence and claim-testing so speculative world-building cannot silently become established history.
