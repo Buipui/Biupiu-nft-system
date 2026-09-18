@@ -1,0 +1,24 @@
+{
+  "schema": "biupiu.adobe.media-job",
+  "version": "0.1.0",
+  "job_id": "MEDIA-JOB-REPLACE",
+  "project_id": "PROJECT-REPLACE",
+  "research_ids": [],
+  "department": "VIDEO-SERIES",
+  "application": "premiere-pro",
+  "application_version": null,
+  "adapter_version": "0.1.0",
+  "operation": "import|edit|composite|render|export",
+  "inputs": [],
+  "output": {
+    "path": null,
+    "sha256": null,
+    "format": null
+  },
+  "render_preset": null,
+  "evidence_classification": "DOCUMENTED|RECONSTRUCTED|EXPERIMENTAL|HYPOTHESIS|SPECULATIVE",
+  "ip_state": "PUBLIC|INTERNAL|CONFIDENTIAL|PRE-PATENT",
+  "licence_state": "PENDING|CLEARED|RESTRICTED",
+  "source_commit": null,
+  "created_at": null
+}
