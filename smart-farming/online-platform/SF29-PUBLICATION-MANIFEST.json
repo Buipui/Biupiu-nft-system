@@ -1,0 +1,43 @@
+{
+  "version": "SF-29.1",
+  "episode_id": "BPU-WORLD-E01",
+  "release_status": "RELEASE_CANDIDATE",
+  "publication_status": "NOT_PUBLISHED",
+  "required_approvals": [
+    "rights",
+    "claims",
+    "brand",
+    "editorial",
+    "accessibility"
+  ],
+  "world_runtime": {
+    "enabled": false,
+    "reason": "Awaiting human approval and completed media QA"
+  },
+  "placements": [
+    "AIR-01",
+    "MAR-01",
+    "AGR-01",
+    "CONS-01",
+    "AI-01"
+  ],
+  "archive": {
+    "source_project": true,
+    "source_media": true,
+    "approved_renders": true,
+    "captions": true,
+    "manifests": true,
+    "provenance_records": true,
+    "rights_records": true,
+    "approval_record": true,
+    "version_history": true
+  },
+  "release_blockers": [
+    "unresolved_rights",
+    "missing_claim_labels",
+    "missing_human_approval",
+    "critical_render_error",
+    "missing_provenance",
+    "accessibility_failure"
+  ]
+}
