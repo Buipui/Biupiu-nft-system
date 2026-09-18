@@ -1,0 +1,20 @@
+name: Biupiu Department Runtime
+on:
+  workflow_dispatch:
+  push:
+    paths: ["apps/shared/runtime/department-runtime.ts","apps/shared/runtime/department-runtime-contract-v1.json","apps/android/**","apps/windows/**",".github/workflows/biupiu-department-runtime.yml"]
+  pull_request:
+    paths: ["apps/shared/runtime/**","apps/android/**","apps/windows/**",".github/workflows/biupiu-department-runtime.yml"]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - run: python -m json.tool apps/shared/runtime/department-runtime-contract-v1.json >/dev/null
+      - run: |
+          test -f apps/shared/runtime/department-runtime.ts
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt
+          test -f apps/windows/DepartmentRuntime.cs
+          grep -q '@biupiu/smart-farming' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt
+          grep -q '@biupiu/smart-metallurgy' apps/windows/DepartmentRuntime.cs
+          grep -q '@biupiu/rnd-os' apps/shared/runtime/department-runtime.ts
