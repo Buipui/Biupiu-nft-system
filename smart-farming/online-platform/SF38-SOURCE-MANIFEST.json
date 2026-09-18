@@ -1,0 +1,32 @@
+{
+  "version": "SF-38.1",
+  "project": "Biupiu World Android",
+  "source_root": "app/src/main",
+  "packages": [
+    "com.biupiu.world.navigation",
+    "com.biupiu.world.data",
+    "com.biupiu.world.model",
+    "com.biupiu.world.repository",
+    "com.biupiu.world.ui",
+    "com.biupiu.world.guards"
+  ],
+  "inputs": [
+    "SF36-SHOWCASE-DEVELOPMENT-MANIFEST.json",
+    "SF36-SHOWCASE-PLACEMENT-MAP.json",
+    "SF37-SHOWCASE-APP-DATA-CONTRACT.json"
+  ],
+  "first_build_acceptance": [
+    "launch",
+    "world_entry",
+    "department_list",
+    "showcase_list",
+    "hydrofoil_card",
+    "claim_status",
+    "research_link",
+    "digital_lab_link",
+    "academy_link",
+    "commerce_guard"
+  ],
+  "artifact_target": "debug APK",
+  "execution_status": "READY_TO_BUILD"
+}
