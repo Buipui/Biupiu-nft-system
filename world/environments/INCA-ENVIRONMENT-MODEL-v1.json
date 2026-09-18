@@ -1,0 +1,12 @@
+{
+  "environment_id":"inca_mountain_world",
+  "civilisation_id":"INCA",
+  "evidence_class":"ARCHAEOLOGICAL",
+  "models":["mountain_terrain","stone_terraces","fitted_stone_walls","trapezoid_doorways","channels","fountains","storehouses","plaza","mountain_paths"],
+  "library":"inca_library",
+  "avatar_entry":"inca_gate",
+  "spawn_zones":["terrace_farm","water_channel","mountain_settlement","plaza","research_library"],
+  "learning_objects":["terrace_cross_section","water_management_model","stonework_model","crop_store_model"],
+  "reconstruction":true,
+  "ui_badge":"HISTORICAL RECONSTRUCTION — EVIDENCE BASED"
+}
