@@ -1,0 +1,10 @@
+{
+  "version":"0.1",
+  "items":[
+    {"id":"bpu-home-001","type":"home","title":"Biupiu Research Residence","environment":"biupiu-contemporary","status":"prototype","entitlement":"home_access"},
+    {"id":"bpu-interior-001","type":"interior","title":"Biotech Research Interior Pack","status":"prototype","entitlement":"interior_item"},
+    {"id":"bpu-avatar-001","type":"avatar_collection","title":"Biupiu Contemporary Collection 01","status":"prototype","entitlement":"avatar_item"},
+    {"id":"bpu-art-001","type":"artwork","title":"Biupiu Digital Gallery Edition 01","status":"prototype","entitlement":"artwork_access"},
+    {"id":"bpu-special-001","type":"special_edition","title":"Biupiu Campus Edition 01","status":"prototype","entitlement":"digital_collectible"}
+  ]
+}
