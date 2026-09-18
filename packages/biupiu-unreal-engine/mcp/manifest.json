@@ -1,0 +1,24 @@
+{
+  "name": "biupiu-unreal-mcp-integration",
+  "version": "0.1.0",
+  "upstream": {
+    "repository": "https://github.com/hoodtronik/Unreal-MCP-Ultra",
+    "referencePullRequest": "https://github.com/hoodtronik/Unreal-MCP-Ultra/pull/5",
+    "referenceCommit": "d6a83ab023da1e689d5f4e110ec1614e9878d32d"
+  },
+  "engines": {
+    "ue5.6.1": { "status": "pending-verification" },
+    "ue5.8.1": { "status": "pending-runtime-verification" }
+  },
+  "integration": {
+    "mode": "external-adapter",
+    "copyUpstreamSource": false,
+    "epicSourceRedistribution": false
+  },
+  "pipelines": [
+    "ai-to-mcp",
+    "mcp-to-unreal-editor",
+    "unreal-to-digital-twin",
+    "unreal-to-showcase"
+  ]
+}
