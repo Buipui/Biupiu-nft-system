@@ -170,3 +170,8 @@ Added the crystal-lab layer to Biupiu World:
 - Crystal Claim-to-Test Register — source → hypothesis → experiment → measurement → reproduction → result workflow.
 
 The speculative environments are explicitly separated from established archaeology and physics. Subscriber department controls remain active, and negative experimental results are retained.
+
+
+## Robert Sepehr / Atlantean Gardens cross-link layer
+
+Added `research/BIUPIU-ROBERT-SEPEHR-CROSS-LINK-INDEX-v1.0.md`. It cross-links source material on Atlantis, Hyperborea, Thule, Hy-Brasil, Celtic/Atlantic-contact claims, Hercules traditions, Amorites, Peru/Andes, Moon-Eyed People, Green Children of Woolpit, Odin/Norse material and Lost Tribes/Levant history into Biupiu World. These are separated into historical, mythological, folklore and speculative research environments and routed through the existing claim-to-test framework. citeturn0search2turn0search4
