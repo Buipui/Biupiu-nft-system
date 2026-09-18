@@ -1,0 +1,59 @@
+{
+  "version": "SF-36.1",
+  "scenes": {
+    "AGR-01": [
+      "regenerative agriculture",
+      "hemp cultivation",
+      "water systems",
+      "soil systems",
+      "smart farming",
+      "plant research"
+    ],
+    "MAR-01": [
+      "glass hydrofoil",
+      "AQUA-01",
+      "marine composites",
+      "distributed propulsion",
+      "marine energy",
+      "sensors",
+      "marine-current turbines"
+    ],
+    "AIR-01": [
+      "aircraft",
+      "eVTOL",
+      "advanced materials",
+      "AI",
+      "robotics",
+      "photonics"
+    ],
+    "CONS-01": [
+      "conservation",
+      "off-road mobility",
+      "ecological systems",
+      "field research"
+    ],
+    "AI-01": [
+      "AI",
+      "R&D OS",
+      "Intelligence Hub",
+      "robotics",
+      "Digital Lab",
+      "computational engineering"
+    ]
+  },
+  "cross_scene": [
+    "textiles",
+    "fibres",
+    "biocomposites",
+    "adhesives",
+    "biochemical research",
+    "energy storage",
+    "quantum-dot solar research",
+    "crystal storage research",
+    "photonics",
+    "Academy",
+    "Gallery",
+    "Marketplace",
+    "NFT crowdfunding project"
+  ]
+}
