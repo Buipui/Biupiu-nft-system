@@ -1,0 +1,10 @@
+{
+  "name": "@biupiu/keyshot-visualization",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu professional product-visualization integration layer for licensed KeyShot workflows",
+  "platforms": ["windows"],
+  "entry": "src/index.ts",
+  "integrations": ["blender", "unreal-engine-5", "twinmotion", "cad", "keyshot"],
+  "licensePolicy": "Do not bundle proprietary KeyShot software or unverified third-party assets."
+}
