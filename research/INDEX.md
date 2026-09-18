@@ -242,3 +242,10 @@ Every source/mod asset receives provenance and licence metadata before reuse. Vi
 - `software/rnd-os-ai/src/biupiu_ai/provider_adapter.py` — provider configuration/health contract and fail-closed adapter boundary.
 - `software/rnd-os-ai/tests/test_ai13.py` — provider safety and end-to-end citation propagation tests.
 - **AI-13 status:** repository adapter boundary implemented; live external provider transport and real Android network test remain gated.
+
+## AI-14 secure provider and mobile contract gate
+- `research/BIUPIU-AI-SECURE-PROVIDER-HARNESS-v1.0.md` — AI-14 provider test harness, security boundary and mobile API contract.
+- `software/rnd-os-ai/src/biupiu_ai/provider_harness.py` — deterministic injected provider harness with fail-closed citation checks.
+- `software/rnd-os-ai/tests/test_ai14.py` — provider success, missing-citation and timeout/failure tests.
+- `software/rnd-os-mobile/app/src/main/java/com/biupiu/rndos/ai/AiApiContract.kt` — stable Android AI request/response/error contract.
+- **AI-14 status:** repository test harness and mobile API contract implemented; live provider transport, production authentication and compiled Android network integration remain gated.
