@@ -1,0 +1,9 @@
+{
+  "environments":[
+    {"id":"inca_mountain_world","library":"inca_library","avatar_gate":"inca_gate","core_loop":["explore","farm","engineer_water","barter","learn"]},
+    {"id":"maya_lowland_world","library":"maya_library","avatar_gate":"maya_city_gate","core_loop":["explore","farm","manage_water","barter","learn"]},
+    {"id":"babylon_alluvial_world","library":"babylon_library","avatar_gate":"babylon_city_gate","core_loop":["explore","irrigate","farm","trade","learn"]},
+    {"id":"atlantis_speculative_world","library":"atlantis_speculative_library","avatar_gate":"atlantis_observation_gate","core_loop":["read_evidence","explore","farm","trade","test_hypothesis"]},
+    {"id":"mu_speculative_world","library":"mu_speculative_library","avatar_gate":"mu_research_gate","core_loop":["read_evidence","explore","farm","trade","test_hypothesis"]}
+  ]
+}
