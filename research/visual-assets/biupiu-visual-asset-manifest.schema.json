@@ -1,0 +1,188 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biupiu-visual-asset-manifest.schema.json",
+  "title": "Biupiu Visual Asset Manifest",
+  "type": "object",
+  "required": [
+    "asset_id",
+    "asset_type",
+    "source",
+    "licence",
+    "files",
+    "provenance",
+    "pipeline"
+  ],
+  "properties": {
+    "asset_id": {
+      "type": "string"
+    },
+    "asset_type": {
+      "enum": [
+        "model",
+        "material",
+        "texture",
+        "environment",
+        "hdr",
+        "animation",
+        "camera",
+        "reference"
+      ]
+    },
+    "name": {
+      "type": "string"
+    },
+    "source": {
+      "type": "object",
+      "required": [
+        "url"
+      ],
+      "properties": {
+        "url": {
+          "type": "string",
+          "format": "uri"
+        },
+        "repository": {
+          "type": "string"
+        },
+        "creator": {
+          "type": "string"
+        }
+      }
+    },
+    "licence": {
+      "type": "object",
+      "required": [
+        "status"
+      ],
+      "properties": {
+        "status": {
+          "enum": [
+            "verified",
+            "pending",
+            "restricted",
+            "excluded"
+          ]
+        },
+        "name": {
+          "type": "string"
+        },
+        "evidence_url": {
+          "type": "string",
+          "format": "uri"
+        }
+      }
+    },
+    "files": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "path",
+          "format"
+        ],
+        "properties": {
+          "path": {
+            "type": "string"
+          },
+          "format": {
+            "type": "string"
+          },
+          "sha256": {
+            "type": "string"
+          },
+          "size_bytes": {
+            "type": "integer"
+          }
+        }
+      }
+    },
+    "pbr": {
+      "type": "object",
+      "properties": {
+        "base_color": {
+          "type": "string"
+        },
+        "normal": {
+          "type": "string"
+        },
+        "roughness": {
+          "type": "string"
+        },
+        "metallic": {
+          "type": "string"
+        },
+        "height": {
+          "type": "string"
+        },
+        "ao": {
+          "type": "string"
+        },
+        "emissive": {
+          "type": "string"
+        },
+        "uv_scale": {
+          "type": "number"
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "acquired_at",
+        "transformation_log"
+      ],
+      "properties": {
+        "acquired_at": {
+          "type": "string"
+        },
+        "transformation_log": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "source_version": {
+          "type": "string"
+        }
+      }
+    },
+    "pipeline": {
+      "type": "object",
+      "required": [
+        "authoring",
+        "targets"
+      ],
+      "properties": {
+        "authoring": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        },
+        "targets": {
+          "type": "array",
+          "items": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "biupiu_links": {
+      "type": "object",
+      "properties": {
+        "department": {
+          "type": "string"
+        },
+        "digital_twin_id": {
+          "type": "string"
+        },
+        "material_genome_id": {
+          "type": "string"
+        },
+        "project_id": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
