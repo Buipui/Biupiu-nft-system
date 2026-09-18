@@ -1,0 +1,12 @@
+{
+  "schema_version":"sf17.1",
+  "reference_only":true,
+  "categories":{
+    "alan_wake_2":["cinematic_lighting","environment_mood","modular_world_presentation"],
+    "msfs_2020":["aircraft_packaging","world_packages","aircraft_asset_pipeline","simulator_environment"],
+    "battlefield_v":["terrain_composition","lighting","military_vehicle_category_reference","waterfront_composition"],
+    "hell_let_loose":["large_scale_terrain","off_road_vehicle_context","waterfront_context"],
+    "arma_3":["vehicle_category_taxonomy","terrain_tools","boats","off_road_context","scenario_composition"]
+  },
+  "rule":"References inform original Biupiu designs only; no proprietary game geometry, textures, sounds, extracted files or models are approved."
+}
