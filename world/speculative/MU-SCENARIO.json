@@ -1,0 +1,12 @@
+{
+  "site_id":"mu_hypothesis_archipelago",
+  "display_name":"Mu — Hypothesis Archipelago",
+  "evidence_class":"SPECULATIVE_TRADITION",
+  "confidence":"OPEN",
+  "reconstruction":true,
+  "ui_label":"SPECULATIVE — NOT ESTABLISHED HISTORY",
+  "location_mode":"PARAMETERISED",
+  "features":["island_or_archipelago","freshwater_system","hypothetical_agriculture","maritime_exchange"],
+  "simulation_modules":["terrain","water","farming","settlement","barter","maritime_trade","collapse"],
+  "variable_parameters":["island_count","elevation","rainfall","freshwater","soil","coastline","crop_mix","population","trade_links","geological_shock"]
+}
