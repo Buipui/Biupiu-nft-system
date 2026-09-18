@@ -60,4 +60,6 @@ Main Hub architecture; department gateway portals; shared character base; farmin
 
 **Gate 04 — Workshop Interaction & Digital-Twin Binding:** `research/BIUPIU-3D-GATE-04-WORKSHOP-DIGITAL-TWIN-BINDING-v1.0.md`
 
-Status: Gates 01–04 specifications committed for implementation. Binary 3D assets, production runtime code and live IoT connectors are not claimed as generated. Next gate: cross-department campus systems and shared-service layer.
+**Gate 05 — Cross-Department Campus & Shared-Service Layer:** `research/BIUPIU-3D-GATE-05-CROSS-DEPARTMENT-CAMPUS-SERVICES-v1.0.md`
+
+Status: Gates 01–05 specifications committed for implementation. Binary 3D assets, production runtime services and live IoT connectors are not claimed as deployed. Next gate: world data/API contract and persistent project state.
