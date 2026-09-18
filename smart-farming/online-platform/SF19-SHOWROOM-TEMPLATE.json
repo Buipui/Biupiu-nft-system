@@ -1,0 +1,9 @@
+{
+  "schema_version":"sf19.1",
+  "template_id":"biupiu-showroom-v1",
+  "layout":"brand-header|hero-asset|department|verified-message|media|research|academy|digital-lab|catalogue-enquiry",
+  "scene_states":["preview","live","campaign","research_demo"],
+  "asset_slots":["hero","secondary","video","still","logo","department_mark","specification_panel","research_links","academy_links","marketplace_link"],
+  "content_status":["draft","verified","published","retired"],
+  "claim_labels":["product","prototype","concept","research","simulation"]
+}
