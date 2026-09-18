@@ -17,5 +17,12 @@ data class AiResponse(
 
 data class AiError(
     val code: String,
-    val message: String
+    val message: String,
+    val requestId: String? = null
+)
+
+data class AiEnvelope(
+    val ok: Boolean,
+    val response: AiResponse? = null,
+    val error: AiError? = null
 )
