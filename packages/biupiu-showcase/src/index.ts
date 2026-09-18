@@ -1,0 +1,1 @@
+export const BIUPIU_APP="Biupiu Showcase"; export const PACKAGE="@biupiu/showcase";
