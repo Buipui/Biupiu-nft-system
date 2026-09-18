@@ -1,0 +1,30 @@
+{
+  "schema": "biupiu.application.contract.v1",
+  "product": "Biupiu R&D OS",
+  "clients": {
+    "android": {
+      "path": "apps/android",
+      "entry": "Biupiu Android"
+    },
+    "windows": {
+      "path": "apps/windows",
+      "entry": "Biupiu Windows Desktop"
+    }
+  },
+  "sharedPackages": [
+    "@biupiu/access",
+    "@biupiu/main-hub",
+    "@biupiu/rnd-os",
+    "@biupiu/shared"
+  ],
+  "initialRoutes": [
+    "MAIN_HUB",
+    "SMART_FARMING",
+    "SMART_METAL_WORKSHOP",
+    "RND_OS"
+  ],
+  "security": {
+    "clientIsFinalAuthority": false,
+    "serverSideAuthorizationRequired": true
+  }
+}
