@@ -1,0 +1,23 @@
+{
+  "version": "SF-39.1",
+  "required": [
+    "manifest_validation",
+    "android_project",
+    "gradle_build",
+    "unit_tests",
+    "debug_apk",
+    "artifact_hash"
+  ],
+  "states": [
+    "NOT_READY",
+    "WORKFLOW_VALIDATED",
+    "BUILD_RUNNING",
+    "BUILD_PASSED",
+    "ARTIFACT_VERIFIED",
+    "DEVICE_TEST_PENDING"
+  ],
+  "current": "WORKFLOW_VALIDATED",
+  "apk_verified": false,
+  "device_test": "PENDING",
+  "live_runtime": false
+}
