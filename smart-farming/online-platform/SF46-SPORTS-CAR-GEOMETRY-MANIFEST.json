@@ -1,0 +1,35 @@
+{
+  "schema":"sf46.0",
+  "asset_id":"BPU-AUTO-SPORT-001",
+  "name":"Biupiu AeroBlade GT",
+  "claim_class":"CONCEPT",
+  "architecture":{
+    "power_source":"rear_mid_mounted_turbocharged_biodiesel_compatible_engine_generator",
+    "engine_role":"electrical_generation",
+    "wheel_propulsion":"individual_electric_motors",
+    "rear_drive":"dual_rear_wheel_motors",
+    "front_drive_option":"dual_front_wheel_motors_for_torque_vectoring_research",
+    "energy_buffer":"high_voltage_energy_storage",
+    "regeneration":true
+  },
+  "microturbine":{
+    "enabled":"research_option",
+    "role":"auxiliary_electrical_generation",
+    "reference_direction":"historical_turbine_sports_car_concepts",
+    "original_biupiu_design_required":true
+  },
+  "geometry_engine":{
+    "design_language":"stealth_geometric_biupiu",
+    "proportion_method":"golden_mean_aesthetic_guidance",
+    "surface_strategy":"faceted_to_curved_continuous_surfaces",
+    "aerodynamic_targets":["low_drag_body","controlled_wake","underbody_flow","wheel_arch_flow","integrated_aerobrake"]
+  },
+  "materials":{
+    "body":"advanced_composite_concept",
+    "hempcarbon":"research_material",
+    "resin":"biupiu_resin_metasurface_coating_concept",
+    "metasurface":"architected_micro_surface_research"
+  },
+  "showcase_products":["AeroBrake","HempCarbon","Biupiu Resins","Bioblade Microturbine","Energy Storage","Computational Geometry"],
+  "validation_state":"concept_only"
+}
