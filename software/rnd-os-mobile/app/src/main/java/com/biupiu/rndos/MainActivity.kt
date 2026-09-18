@@ -25,29 +25,41 @@ fun BiupiuRndOsApp() {
     MaterialTheme {
         Surface(Modifier.fillMaxSize()) {
             NavHost(navController, startDestination = "dashboard") {
-                composable("dashboard") { DashboardScreen({ navController.navigate("research") }, { navController.navigate("experiments") }) }
-                composable("research") { PlaceholderScreen("Research Objects", "API integration is the next mobile gate.") }
-                composable("experiments") { PlaceholderScreen("Experimental Control Centre", "Experiment capture is planned for v0.9.") }
+                composable("dashboard") {
+                    DashboardScreen(
+                        { navController.navigate("research") },
+                        { navController.navigate("experiments") },
+                        { navController.navigate("assets") },
+                        { navController.navigate("controls") }
+                    )
+                }
+                composable("research") { FormScreen("Research Objects", "Create evidence-classified research records.") }
+                composable("experiments") { FormScreen("Digital Laboratory", "Log hypotheses, protocols and observations.") }
+                composable("assets") { FormScreen("Assets & NFTs", "Create provenance records and mint payloads. Blockchain signing remains gated.") }
+                composable("controls") { FormScreen("Control Centre", "Audit trail, release gates and security boundaries.") }
             }
         }
     }
 }
 
 @Composable
-private fun DashboardScreen(onResearch: () -> Unit, onExperiments: () -> Unit) {
-    Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(16.dp)) {
+private fun DashboardScreen(onResearch: () -> Unit, onExperiments: () -> Unit, onAssets: () -> Unit, onControls: () -> Unit) {
+    Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(14.dp)) {
         Text("Biupiu R&D OS", style = MaterialTheme.typography.headlineMedium)
-        Text("Mobile foundation v0.7")
-        Text("Research → Hypothesis → Experiment → Evidence → Validation")
+        Text("Cross-platform prototype v1.0")
+        Text("Research → Hypothesis → Experiment → Evidence → Validation → Provenance → Release")
         Button(onClick = onResearch, modifier = Modifier.fillMaxWidth()) { Text("Research Objects") }
-        Button(onClick = onExperiments, modifier = Modifier.fillMaxWidth()) { Text("Experimental Control Centre") }
+        Button(onClick = onExperiments, modifier = Modifier.fillMaxWidth()) { Text("Digital Laboratory") }
+        Button(onClick = onAssets, modifier = Modifier.fillMaxWidth()) { Text("Assets & NFT Console") }
+        Button(onClick = onControls, modifier = Modifier.fillMaxWidth()) { Text("Control Centre") }
     }
 }
 
 @Composable
-private fun PlaceholderScreen(title: String, message: String) {
+private fun FormScreen(title: String, message: String) {
     Column(Modifier.fillMaxSize().padding(24.dp), verticalArrangement = Arrangement.spacedBy(12.dp)) {
         Text(title, style = MaterialTheme.typography.headlineSmall)
         Text(message)
+        Text("Production API, persistent audit storage, authentication and blockchain execution are explicit next gates.")
     }
 }
