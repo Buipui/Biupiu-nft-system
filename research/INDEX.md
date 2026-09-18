@@ -52,6 +52,12 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Bio-Adhesive and Resin Genome
+
+Added `research/BIUPIU-BIO-ADHESIVE-RESIN-GENOME-v1.0.md` and opened **GATE BM-02**. The new matrix covers partly bio-based epoxies, plant-oil epoxies, lignin-modified and lignin-curing systems, cardanol, vanillin/eugenol, furan, tannin/polyphenol and rosin-derived resin/adhesive families. It links resin chemistry, fibre treatment, interface performance, manufacturing and ageing to the existing Blade Material Genome and Digital Twin.
+
+ResearchGate evidence is routed into the formulation and blade tracks; Emerald Insight remains a complementary source layer for natural-fibre processing, sustainability and implementation. Literature values remain source-specific and are not treated as Biupiu design allowables.
+
 ## Blade Material Genome and qualification gate
 
 Added `research/BIUPIU-BLADE-MATERIAL-GENOME-v1.0.md` and opened **GATE BM-01**. The genome establishes a common qualification matrix for hemp/epoxy, flax/epoxy, hemp/flax/epoxy, hemp/flax/basalt/epoxy and secondary plant composites. Literature observations remain source-specific and cannot substitute for Biupiu-tested allowables.
