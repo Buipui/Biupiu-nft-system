@@ -1,0 +1,65 @@
+{
+  "version": "SF-34.1",
+  "suite": "BIUPIU-WORLD-CROSS-PLATFORM",
+  "execution_mode": "repository_contract_check",
+  "results": [
+    {
+      "id": "CT-01",
+      "result": "PASS",
+      "evidence": "SF31/SF32/SF33 contract manifests present"
+    },
+    {
+      "id": "CT-02",
+      "result": "PASS",
+      "evidence": "canonical ID sets defined across runtime/mobile matrix"
+    },
+    {
+      "id": "CT-03",
+      "result": "PASS",
+      "evidence": "five required scenes and five hero assets registered"
+    },
+    {
+      "id": "CT-04",
+      "result": "PASS",
+      "evidence": "required context keys defined in SF32 contract"
+    },
+    {
+      "id": "CT-05",
+      "result": "PASS",
+      "evidence": "claim states registered in SF27 and referenced by release workflow"
+    },
+    {
+      "id": "CT-06",
+      "result": "PASS",
+      "evidence": "rights clearance is a mandatory release gate"
+    },
+    {
+      "id": "CT-07",
+      "result": "PASS",
+      "evidence": "canonical mobile routes defined in SF32"
+    },
+    {
+      "id": "CT-08",
+      "result": "PASS",
+      "evidence": "commerce activation guard defined"
+    },
+    {
+      "id": "CT-09",
+      "result": "PASS",
+      "evidence": "archive/version/rollback requirements defined in SF29"
+    },
+    {
+      "id": "CT-10",
+      "result": "PASS",
+      "evidence": "live activation requires human approval"
+    }
+  ],
+  "overall": "PASS_FOR_REPOSITORY_CONTRACTS",
+  "limitations": [
+    "actual runtime execution pending",
+    "actual mobile build testing pending",
+    "final media QA pending",
+    "human release approval pending"
+  ],
+  "live_runtime": "DISABLED"
+}
