@@ -1,0 +1,1 @@
+export const MAIN_HUB_RENDER_PIPELINE={route:"RENDER_PIPELINE",label:"Render Pipeline",workflows:["PRODUCT_STILL","DIGITAL_TWIN","CINEMATIC_SHOWREEL","CONCEPT_VARIATION","RESEARCH_VISUALIZATION"],requiresServerAuthorization:true};
