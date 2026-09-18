@@ -1,0 +1,46 @@
+{
+  "schema_version":"sf18.1",
+  "showcase_state":"PARKED_SHOWCASE",
+  "vehicles":[
+    {
+      "id":"biu-veh-air-001",
+      "department":"ai-robotics-photonics",
+      "concept":"Biupiu autonomous research aircraft / EVTOL",
+      "placement":"advanced-mobility showcase",
+      "advertising_focus":["AI","robotics","photonics","advanced materials"],
+      "future_modes":["research_demo","future_driveable"]
+    },
+    {
+      "id":"biu-veh-marine-001",
+      "department":"marine-hydrofoil",
+      "concept":"Biupiu hydrofoil research craft",
+      "placement":"marine-port showcase",
+      "advertising_focus":["hydrofoil research","materials","energy systems"],
+      "future_modes":["research_demo","future_driveable"]
+    },
+    {
+      "id":"biu-veh-agri-001",
+      "department":"regenerative-agriculture",
+      "concept":"Biupiu smart regenerative farming vehicle",
+      "placement":"regenerative farm entrance",
+      "advertising_focus":["smart farming","automation","plant research","sensors"],
+      "future_modes":["field_simulation","future_driveable"]
+    },
+    {
+      "id":"biu-veh-offroad-001",
+      "department":"conservation-regenerative-agriculture",
+      "concept":"Biupiu expedition / conservation utility vehicle",
+      "placement":"conservation district",
+      "advertising_focus":["conservation","field research","regenerative land management"],
+      "future_modes":["field_simulation","future_driveable"]
+    },
+    {
+      "id":"biu-veh-ai-001",
+      "department":"ai-intelligence-hub",
+      "concept":"Biupiu mobile intelligence and robotics laboratory",
+      "placement":"Intelligence Hub",
+      "advertising_focus":["AI","Digital Lab","robotics","research repository"],
+      "future_modes":["research_demo","interactive_display"]
+    }
+  ]
+}
