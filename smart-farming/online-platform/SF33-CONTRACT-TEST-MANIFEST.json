@@ -1,0 +1,64 @@
+{
+  "version": "SF-33.1",
+  "suite": "BIUPIU-WORLD-CROSS-PLATFORM",
+  "status": "READY",
+  "tests": [
+    {
+      "id": "CT-01",
+      "domain": "schema",
+      "expected": "all required schemas valid"
+    },
+    {
+      "id": "CT-02",
+      "domain": "stable_ids",
+      "expected": "no duplicate/orphan critical IDs"
+    },
+    {
+      "id": "CT-03",
+      "domain": "scene_assets",
+      "expected": "all required scenes resolve hero assets"
+    },
+    {
+      "id": "CT-04",
+      "domain": "context",
+      "expected": "all required context keys available"
+    },
+    {
+      "id": "CT-05",
+      "domain": "claims",
+      "expected": "claim labels match registered asset states"
+    },
+    {
+      "id": "CT-06",
+      "domain": "rights",
+      "expected": "unresolved rights block publication"
+    },
+    {
+      "id": "CT-07",
+      "domain": "mobile_routes",
+      "expected": "all canonical routes have destinations"
+    },
+    {
+      "id": "CT-08",
+      "domain": "commerce",
+      "expected": "purchase actions blocked when unavailable"
+    },
+    {
+      "id": "CT-09",
+      "domain": "archive",
+      "expected": "version/rollback metadata present"
+    },
+    {
+      "id": "CT-10",
+      "domain": "release",
+      "expected": "live runtime cannot bypass approval"
+    }
+  ],
+  "result_states": [
+    "PASS",
+    "FAIL",
+    "BLOCKED",
+    "NOT_TESTED"
+  ],
+  "release_rule": "NO_BLOCKED_OR_FAILING_CRITICAL_TESTS"
+}
