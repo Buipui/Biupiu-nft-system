@@ -1,0 +1,13 @@
+{
+  "schema_version":"sf24.1",
+  "episode_id":"BPU-WORLD-E01",
+  "queue":[
+    {"shot":"E01-S02","scene":"AIR-01","status":"storyboarded","priority":1},
+    {"shot":"E01-S04","scene":"MAR-01","status":"storyboarded","priority":2},
+    {"shot":"E01-S05","scene":"AGR-01","status":"storyboarded","priority":3},
+    {"shot":"E01-S06","scene":"CONS-01","status":"storyboarded","priority":4},
+    {"shot":"E01-S07","scene":"AI-01","status":"storyboarded","priority":5}
+  ],
+  "render_profiles":["hero_16_9","vertical_9_16","short_4_5","thumbnail"],
+  "review_gates":["visual_identity","asset_provenance","claim_status","rights","final_render"]
+}
