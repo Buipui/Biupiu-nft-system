@@ -1,0 +1,52 @@
+# Biupiu World — 3D Asset Manifest v1.0
+
+## Core packages
+- BPU-3D-WORLD-CORE-MAIN-HUB
+- BPU-3D-WORLD-CORE-DEPT-GATEWAY
+- BPU-3D-WORLD-CORE-CHARACTER-SYSTEM
+- BPU-3D-WORLD-CORE-RESEARCH-PORTAL
+
+## Department starter packages
+BPU-3D-FARMING
+BPU-3D-METALLURGY
+BPU-3D-TEXTILES
+BPU-3D-MATERIALS
+BPU-3D-BIOTECH
+BPU-3D-FOOD
+BPU-3D-PHOTONICS
+BPU-3D-ENERGY
+BPU-3D-AI-ROBOTICS
+BPU-3D-MARINE
+BPU-3D-MOBILITY
+BPU-3D-CONSERVATION
+BPU-3D-CRYSTAL-GEOMETRY
+BPU-3D-ANCIENT-TECHNOLOGY
+BPU-3D-NEW-AGE-THEORY
+BPU-3D-RESEARCH-ARCHIVE
+BPU-3D-NFT-DIGITAL-ASSETS
+
+## New Age starter environments
+- BPU-3D-NAT-ATLANTIS
+- BPU-3D-NAT-MU
+- BPU-3D-NAT-HYPERBOREA
+- BPU-3D-NAT-TARTARIA
+- BPU-3D-NAT-HOLLOW-EARTH
+
+## Standard package structure
+manifest.json
+scene/
+models/
+materials/
+textures/
+lod/
+colliders/
+animations/
+audio/
+ui/
+docs/
+licence/
+provenance/
+tests/
+
+## Initial production backlog
+Main Hub architecture; department gateway portals; shared character base; farming campus; Smart Metal Workshop; textile workshop; materials laboratory; biotech research building; photonics laboratory; AI/robotics laboratory; marine/hydrofoil showcase; New Age Theory gateway; Atlantis; Mu; Hyperborea; Tartaria; Hollow Earth; Research Archive; NFT/digital gallery.
