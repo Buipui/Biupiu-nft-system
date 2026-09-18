@@ -334,3 +334,8 @@ The Lumion track cross-links `CG-3D`, `DIGITAL-TWIN`, `COMPUTE`, `ROBOTICS`, `AE
 - `software/rnd-os-ai/tests/test_ai17.py` — gateway success, authentication failure and provider-failure tests.
 - `software/rnd-os-mobile/app/src/main/java/com/biupiu/rndos/ai/AiApiContract.kt` — Android success/error envelope with request IDs.
 - **AI-17 status:** gateway service and mobile error envelope implemented; live transport and production infrastructure remain gated.
+
+
+## Lumion LUM-02 — open-asset/PBR registry
+
+Added `research/BIUPIU-OPEN-ASSET-PBR-COMPATIBILITY-REGISTRY-v1.0.md`. The registry cross-links legitimate open/PBR discovery sources to Lumion, Unreal Engine 5, Blender, V-Ray, CAD/CAE, the Materials Genome and Digital Twin. Candidate resources are not treated as approved project assets until licence and provenance checks pass. **LUM-02 executed.** Next: LUM-03 machine-readable asset/material manifest.
