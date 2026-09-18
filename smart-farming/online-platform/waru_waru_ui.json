@@ -1,0 +1,13 @@
+{
+  "facility_id":"waru-waru",
+  "title":"Waru Waru Learning Space",
+  "stations":[
+    {"id":"WW-01","label":"Overview","action":"content"},
+    {"id":"WW-02","label":"Water Flow","action":"lab","template":"waru-water-flow-v1"},
+    {"id":"WW-03","label":"Thermal Simulation","action":"lab","template":"waru-thermal-v1"},
+    {"id":"WW-04","label":"Crop Experiment","action":"lab","template":"waru-crop-v1"},
+    {"id":"WW-05","label":"Research Sources","action":"research"},
+    {"id":"WW-06","label":"Modern Comparison","action":"content"}
+  ],
+  "evidence_notice":"Historical documentation, reconstruction, simulation and hypothesis content are labelled separately."
+}
