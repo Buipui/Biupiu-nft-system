@@ -1,0 +1,21 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu World Environment Library Manifest",
+  "type":"object",
+  "required":["environment_id","civilisation_id","evidence_class","models","library","avatar_entry"],
+  "properties":{
+    "environment_id":{"type":"string"},
+    "civilisation_id":{"type":"string"},
+    "evidence_class":{"type":"string"},
+    "period":{"type":"string"},
+    "models":{"type":"array","items":{"type":"string"}},
+    "library":{"type":"string"},
+    "avatar_entry":{"type":"string"},
+    "spawn_zones":{"type":"array","items":{"type":"string"}},
+    "learning_objects":{"type":"array","items":{"type":"string"}},
+    "source_refs":{"type":"array","items":{"type":"string"}},
+    "reconstruction":{"type":"boolean"},
+    "ui_badge":{"type":"string"}
+  },
+  "additionalProperties":false
+}
