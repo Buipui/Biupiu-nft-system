@@ -1,14 +1,16 @@
 {
-  "schema_version":"sf25.1",
+  "schema_version":"sf25.2",
   "episode_id":"BPU-WORLD-E01",
-  "render_set":"E01-HERO-001",
+  "render_set":"E01-HERO-002",
   "status":"previsualisation",
+  "design_system":"Biupiu stealth-geometric + advanced-materials/metamaterial concept language",
   "scenes":[
-    {"scene_id":"AIR-01","shot_id":"E01-S02","hero_asset":"biu-veh-air-001","status":"render_reference"},
+    {"scene_id":"AIR-01","shot_id":"E01-S02","hero_asset":"biu-veh-air-001","status":"render_reference","design_reference":"Biupiu stealth-geometric aircraft research + metamaterial/metasurface concept study","claim_class":"CONCEPT"},
     {"scene_id":"MAR-01","shot_id":"E01-S04","hero_asset":"biu-veh-marine-001","status":"render_reference"},
     {"scene_id":"AGR-01","shot_id":"E01-S05","hero_asset":"biu-veh-agri-001","status":"render_reference"},
-    {"scene_id":"CONS-01","shot_id":"E01-S06","hero_asset":"biu-veh-offroad-001","status":"render_reference"},
+    {"scene_id":"CONS-01","shot_id":"E01-S06","hero_asset":"biu-veh-offroad-001","status":"render_reference","design_reference":"Registered Biupiu expedition/conservation vehicle specification","claim_class":"CONCEPT"},
     {"scene_id":"AI-01","shot_id":"E01-S07","hero_asset":"biu-veh-ai-001","status":"render_reference"}
   ],
-  "approval_gates":["visual_identity","provenance","rights","claims","final_asset_review"]
+  "approval_gates":["visual_identity","provenance","rights","claims","final_asset_review"],
+  "render_notes":{"evtol":"Emphasise continuous faceted/curved surfaces, integrated lifting-body proportions and engineered-surface visual language.","expedition_vehicle":"Emphasise high-clearance expedition stance, modular field-research equipment, composite body architecture and rugged-but-sophisticated stealth geometry.","metamaterials":"Show as material/surface design concepts only; no unverified radar-absorption, invisibility or performance claims."}
 }
