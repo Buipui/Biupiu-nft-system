@@ -1,0 +1,11 @@
+{
+  "schema_version":"sf19.1",
+  "placements":[
+    {"scene_id":"AIR-01","world_zone":"advanced-mobility-district","visibility":"hero"},
+    {"scene_id":"MAR-01","world_zone":"marine-port","visibility":"hero"},
+    {"scene_id":"AGR-01","world_zone":"regenerative-farm","visibility":"hero"},
+    {"scene_id":"CONS-01","world_zone":"conservation-zone","visibility":"hero"},
+    {"scene_id":"AI-01","world_zone":"intelligence-hub","visibility":"hero"}
+  ],
+  "navigation_links":["department","research","digital_lab","academy","gallery","marketplace","profile"]
+}
