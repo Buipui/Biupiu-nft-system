@@ -1,0 +1,23 @@
+{
+  "schema": "sf47.0",
+  "project_id": "BPU-AUTO-SPORT-001",
+  "vehicle_id": "biu-auto-aeroblade-gt-001",
+  "claim_class": "CONCEPT",
+  "parent_gate": "SF-46",
+  "render_profiles": ["hero_16_9", "vertical_9_16", "campaign_4_5", "world_sequence"],
+  "queue": [
+    {"id":"SF47-R01","type":"hero","subject":"front_three_quarter_vehicle","priority":1},
+    {"id":"SF47-R02","type":"geometry","subject":"side_profile_golden_mean_overlay","priority":2},
+    {"id":"SF47-R03","type":"powertrain","subject":"rear_mid_engine_mechanical_rear_drive_cutaway","priority":3},
+    {"id":"SF47-R04","type":"electric_drive","subject":"front_individual_high_output_hub_motor","priority":4},
+    {"id":"SF47-R05","type":"electric_drive","subject":"rear_mechanical_and_electric_assist","priority":5},
+    {"id":"SF47-R06","type":"energy","subject":"microturbine_generator_hv_bus_flow","priority":6},
+    {"id":"SF47-R07","type":"aerodynamics","subject":"aerobrake_deployment_concept","priority":7},
+    {"id":"SF47-R08","type":"materials","subject":"biupiu_resin_metasurface_macro","priority":8},
+    {"id":"SF47-R09","type":"materials","subject":"hempcarbon_composite_detail","priority":9},
+    {"id":"SF47-R10","type":"geometry","subject":"computational_surface_topology_and_wake_study","priority":10},
+    {"id":"SF47-R11","type":"showroom","subject":"biupiu_world_automotive_showcase","priority":11}
+  ],
+  "review_gates": ["original_geometry","provenance_rights","claim_control","material_review","human_visual_approval"],
+  "production_state": "SPECIFICATION_READY_RENDER_PENDING"
+}
