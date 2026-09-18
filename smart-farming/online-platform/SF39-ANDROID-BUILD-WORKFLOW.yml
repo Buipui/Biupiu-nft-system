@@ -1,0 +1,53 @@
+name: Biupiu Android Build Verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "smart-farming/online-platform/**"
+      - ".github/workflows/**"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate JSON manifests
+        shell: bash
+        run: |
+          set -e
+          for f in \
+            smart-farming/online-platform/SF36-SHOWCASE-DEVELOPMENT-MANIFEST.json \
+            smart-farming/online-platform/SF36-SHOWCASE-PLACEMENT-MAP.json \
+            smart-farming/online-platform/SF37-SHOWCASE-APP-DATA-CONTRACT.json \
+            smart-farming/online-platform/SF38-SOURCE-MANIFEST.json \
+            smart-farming/online-platform/SF39-BUILD-VERIFICATION.json
+          do
+            python -m json.tool "$f" >/dev/null
+          done
+
+      - name: Check Android project
+        shell: bash
+        run: |
+          if [ ! -f "smart-farming/android/settings.gradle.kts" ] && [ ! -f "smart-farming/android/settings.gradle" ]; then
+            echo "Android project not present yet; build is not verified."
+            exit 1
+          fi
+
+      - name: Build Android debug APK
+        working-directory: smart-farming/android
+        run: ./gradlew assembleDebug
+
+      - name: Verify APK
+        working-directory: smart-farming/android
+        run: |
+          test -n "$(find . -type f -name '*.apk' -print -quit)"
+          sha256sum $(find . -type f -name '*.apk' -print)
+
+      - name: Upload APK artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-android-debug
+          path: "smart-farming/android/**/build/outputs/apk/**/*.apk"
