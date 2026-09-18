@@ -1,0 +1,12 @@
+import { buildMainHubNavigation } from "./main-hub-navigation";
+import { SubscriberAccount } from "./subscriber-model";
+const farming:SubscriberAccount={subscriberId:"f",tier:"EXPLORER",departmentEntitlements:["SMART_FARMING"],roles:["subscriber"],status:"active"};
+const metal:SubscriberAccount={subscriberId:"m",tier:"BUILDER",departmentEntitlements:["SMART_METAL_WORKSHOP"],roles:["subscriber"],status:"active"};
+const suspended:SubscriberAccount={subscriberId:"s",tier:"RESEARCHER",departmentEntitlements:["SMART_FARMING","SMART_METAL_WORKSHOP"],roles:["researcher"],status:"suspended"};
+const f=buildMainHubNavigation(farming),m=buildMainHubNavigation(metal),s=buildMainHubNavigation(suspended);
+if(f.find(x=>x.id==="farming_world")?.state!=="ENTERABLE")throw new Error("farming gate failed");
+if(f.find(x=>x.id==="metal_making_world")?.state!=="LOCKED")throw new Error("metal isolation failed");
+if(m.find(x=>x.id==="metal_making_world")?.state!=="ENTERABLE")throw new Error("metal gate failed");
+if(m.find(x=>x.id==="farming_world")?.state!=="LOCKED")throw new Error("farming isolation failed");
+if(s.some(x=>x.state!=="LOCKED"))throw new Error("suspended access failed");
+console.log("Gate 6 Main Hub navigation tests passed");
