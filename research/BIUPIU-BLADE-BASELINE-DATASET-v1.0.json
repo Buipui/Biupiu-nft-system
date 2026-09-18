@@ -1,0 +1,25 @@
+{
+  "dataset_version":"1.0",
+  "status":"research-baseline",
+  "note":"Template values are intentionally null until sourced or measured; no universal material allowables are invented.",
+  "geometry":{"geometry_id":"BTD-BASE-001","blade_family":"small_microturbine_research","status":"placeholder"},
+  "load_cases":[
+    {"id":"LC01","name":"rated_operating","status":"defined"},
+    {"id":"LC02","name":"overspeed_research","status":"defined"},
+    {"id":"LC03","name":"gust/transient","status":"defined"},
+    {"id":"LC04","name":"thermal_moisture_conditioned","status":"defined"}
+  ],
+  "materials":[
+    {"id":"H01","fibre":"hemp","matrix":"conventional_epoxy"},
+    {"id":"H02","fibre":"hemp","matrix":"partly_bio_epoxy"},
+    {"id":"H03","fibre":"hemp","matrix":"plant_oil_epoxy"},
+    {"id":"H04","fibre":"hemp","matrix":"lignin_modified_epoxy"},
+    {"id":"H05","fibre":"hemp","matrix":"lignin_derived_curing_system"},
+    {"id":"F01","fibre":"flax","matrix":"bio_epoxy"},
+    {"id":"HF01","fibre":"hemp_flax","matrix":"bio_epoxy"},
+    {"id":"HFB01","fibre":"hemp_flax_basalt","matrix":"bio_epoxy"}
+  ],
+  "properties_required":["density","E1","E2","G12","nu12","Xt","Xc","Yt","Yc","S12","GIC","GIIC","fatigue_curve","moisture_diffusion","Tg"],
+  "result_fields":["mass","tip_deflection","max_stress","max_strain","natural_frequency_1","buckling_margin","fatigue_damage_indicator","moisture_sensitivity","thermal_sensitivity","manufacturing_sensitivity"],
+  "status_rule":"null means unknown; estimated means explicitly model-estimated; measured means experimentally obtained."
+}
