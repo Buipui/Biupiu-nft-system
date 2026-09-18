@@ -52,6 +52,10 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Physical Test Data + Material Calibration
+
+Added `research/BIUPIU-PHYSICAL-TEST-DATA-SCHEMA-v1.0.json` and `research/BIUPIU-MATERIAL-CALIBRATION-LOOP-v1.0.md`; **GATE BM-06 executed**. Physical coupon, adhesive, laminate and rotating-subassembly results now have a traceable route into the Digital Twin while preserving raw data, uncertainty, conditioning, batch provenance and independent validation data.
+
 ## Blade Baseline Dataset + Comparison Workflow
 
 Added `research/BIUPIU-BLADE-BASELINE-DATASET-v1.0.json` and `research/BIUPIU-BLADE-COMPARISON-WORKFLOW-v1.0.md`; **GATE BM-05 executed**. The baseline dataset contains the common candidate families, load-case definitions, required material properties and result fields. Unknown properties remain null rather than being invented.
