@@ -1,0 +1,14 @@
+{
+  "schema_version":"sf25.1",
+  "episode_id":"BPU-WORLD-E01",
+  "render_set":"E01-HERO-001",
+  "status":"previsualisation",
+  "scenes":[
+    {"scene_id":"AIR-01","shot_id":"E01-S02","hero_asset":"biu-veh-air-001","status":"render_reference"},
+    {"scene_id":"MAR-01","shot_id":"E01-S04","hero_asset":"biu-veh-marine-001","status":"render_reference"},
+    {"scene_id":"AGR-01","shot_id":"E01-S05","hero_asset":"biu-veh-agri-001","status":"render_reference"},
+    {"scene_id":"CONS-01","shot_id":"E01-S06","hero_asset":"biu-veh-offroad-001","status":"render_reference"},
+    {"scene_id":"AI-01","shot_id":"E01-S07","hero_asset":"biu-veh-ai-001","status":"render_reference"}
+  ],
+  "approval_gates":["visual_identity","provenance","rights","claims","final_asset_review"]
+}
