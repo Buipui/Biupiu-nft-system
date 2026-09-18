@@ -541,3 +541,25 @@ Environment-specific avatars are provided for Atlantis, Mu, Hyperborea, Tartaria
 Players can use neutral research archetypes such as Researcher, Archaeologist, Materials Scientist, Metallurgist, Geologist, GIS/Cartography Specialist, Engineer, Marine Researcher, Historian/Source Critic and Experimentalist.
 
 Characters are original Biupiu World fictional assets and are not presented as historical portraits or evidence. Character dialogue inherits subscriber department permissions and evidence-state controls.
+
+
+## Video-reference and allocated-mod environment integration
+
+The New Age Theory visual layer now supports source-based environment design using archived video footage/descriptions and the project's allocated mod assets.
+
+Visual research is treated as **reference material**, not proof. For example, contemporary Tartaria media frequently uses monumental domes, ornate civic architecture, star forts, old-world urban scenes and alleged “giant” inhabitants; some sources explicitly describe their visuals as dramatized or speculative. citeturn0search0turn0search5turn0search7
+
+Environment packages therefore carry:
+SOURCE VIDEO / MOD ASSET → PROVENANCE → LICENCE → VISUAL FEATURES → ENVIRONMENT ID → EVIDENCE STATE → WORLD ASSET
+
+Allocated mod assets are subject to a licence/permission check before redistribution. Reference-only assets can guide a Biupiu-original recreation without being bundled into the public package.
+
+Initial production order:
+1. Tartaria — monumental/civic environment + cartographer/analyst characters
+2. Atlantis — maritime/underwater environment + scholar/navigator characters
+3. Hyperborea — northern/polar environment + archivist/cartographer characters
+4. Mu — Pacific/oceanic environment + cartographer/materials researcher
+5. Hollow Earth — cavern/inner-world environment + geophysicist/folklore archivist
+
+All visual reconstructions remain tagged DOCUMENTED REFERENCE, HISTORICAL RECONSTRUCTION, SOURCE-BASED SPECULATION, CREATIVE INTERPRETATION, GAME FICTION or REFERENCE ONLY.
+
