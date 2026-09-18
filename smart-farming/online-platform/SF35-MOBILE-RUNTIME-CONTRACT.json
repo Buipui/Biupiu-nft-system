@@ -1,0 +1,38 @@
+{
+  "version": "SF-35.1",
+  "canonical_context": [
+    "episode_id",
+    "scene_id",
+    "department_id",
+    "hero_asset_id",
+    "lesson_id",
+    "experiment_id",
+    "property_id",
+    "avatar_id"
+  ],
+  "routes": {
+    "world": "/world",
+    "episode": "/world/episode",
+    "department": "/research/department",
+    "research": "/research",
+    "digital_lab": "/lab",
+    "academy": "/academy",
+    "gallery": "/gallery",
+    "marketplace": "/marketplace",
+    "profile": "/profile"
+  },
+  "guards": {
+    "claims": true,
+    "rights": true,
+    "commerce": true,
+    "human_approval": true
+  },
+  "fallbacks": [
+    "loading",
+    "asset_error",
+    "offline",
+    "unauthorized",
+    "not_available"
+  ],
+  "runtime_mode": "TEST_ONLY"
+}
