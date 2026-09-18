@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Hero Scene",
+  "type":"object",
+  "required":["scene_id","digital_twin_ref","evidence_state","claim_class","asset_convention","material_slots","camera_shots","validation"],
+  "properties":{
+    "scene_id":{"type":"string"},
+    "digital_twin_ref":{"type":"string"},
+    "evidence_state":{"enum":["UNVALIDATED_VISUALISATION","RESEARCH_CONCEPT","PROTOTYPE","VALIDATED_PRODUCT"]},
+    "claim_class":{"enum":["CONCEPT","DESIGN STUDY","PROTOTYPE","AVAILABLE PRODUCT"]},
+    "asset_convention":{"type":"object","required":["units","forward_axis","up_axis","licence_status"],"properties":{"units":{"const":"metres"},"forward_axis":{"const":"+Y"},"up_axis":{"const":"+Z"},"licence_status":{"type":"string"}}},
+    "material_slots":{"type":"array","items":{"type":"object","required":["slot_id","role","status"],"properties":{"slot_id":{"type":"string"},"role":{"type":"string"},"status":{"enum":["PLACEHOLDER","APPROVED","REVIEW_REQUIRED"]}}}},
+    "camera_shots":{"type":"array","items":{"type":"object","required":["shot_id","purpose"],"properties":{"shot_id":{"type":"string"},"purpose":{"type":"string"},"lens_mm":{"type":"number"}}}},
+    "validation":{"type":"object","required":["metadata_pass","materials_pass","cameras_pass"],"properties":{"metadata_pass":{"type":"boolean"},"materials_pass":{"type":"boolean"},"cameras_pass":{"type":"boolean"}}}
+  }
+}
