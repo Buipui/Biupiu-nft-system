@@ -290,3 +290,9 @@ Every source/mod asset receives provenance and licence metadata before reuse. Vi
 - `software/rnd-os-ai/src/biupiu_ai/auth_contract.py` — bearer-header validation and authorization redaction helpers.
 - `software/rnd-os-ai/tests/test_ai15.py` — authentication-format and redaction tests.
 - **AI-15 status:** authentication contract and tests implemented; CI workflow commit was blocked by repeated GitHub repository-state conflicts and has not been claimed as deployed or executed.
+
+## AI-16 production gateway policy gate
+- `research/BIUPIU-AI-PRODUCTION-GATEWAY-v1.0.md` — bounded request schema, rate/cost policy and provider staging boundary.
+- `software/rnd-os-ai/src/biupiu_ai/gateway_policy.py` — deterministic gateway request and provider-staging policy.
+- `software/rnd-os-ai/tests/test_ai16.py` — request-limit, cost-limit and staging-prerequisite tests.
+- **AI-16 status:** policy contract and deterministic tests implemented; live provider transport and production infrastructure remain gated.
