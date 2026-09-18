@@ -272,3 +272,9 @@ Every source/mod asset receives provenance and licence metadata before reuse. Vi
 - `software/rnd-os-ai/tests/test_ai14.py` — provider success, missing-citation and timeout/failure tests.
 - `software/rnd-os-mobile/app/src/main/java/com/biupiu/rndos/ai/AiApiContract.kt` — stable Android AI request/response/error contract.
 - **AI-14 status:** repository test harness and mobile API contract implemented; live provider transport, production authentication and compiled Android network integration remain gated.
+
+## AI-15 authenticated gateway gate
+- `research/BIUPIU-AI-AUTHENTICATED-GATEWAY-v1.0.md` — AI-15 bearer authentication contract, redaction controls and CI specification.
+- `software/rnd-os-ai/src/biupiu_ai/auth_contract.py` — bearer-header validation and authorization redaction helpers.
+- `software/rnd-os-ai/tests/test_ai15.py` — authentication-format and redaction tests.
+- **AI-15 status:** authentication contract and tests implemented; CI workflow commit was blocked by repeated GitHub repository-state conflicts and has not been claimed as deployed or executed.
