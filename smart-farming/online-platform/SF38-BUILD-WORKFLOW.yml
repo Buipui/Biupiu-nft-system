@@ -1,0 +1,23 @@
+name: Biupiu Android Build
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "smart-farming/online-platform/**"
+      - ".github/workflows/**"
+
+jobs:
+  build-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Repository checkout
+        uses: actions/checkout@v4
+      - name: Validate SF manifests
+        run: |
+          python -m json.tool smart-farming/online-platform/SF36-SHOWCASE-DEVELOPMENT-MANIFEST.json
+          python -m json.tool smart-farming/online-platform/SF36-SHOWCASE-PLACEMENT-MAP.json
+          python -m json.tool smart-farming/online-platform/SF37-SHOWCASE-APP-DATA-CONTRACT.json
+          python -m json.tool smart-farming/online-platform/SF38-SOURCE-MANIFEST.json
+      - name: Report scaffold status
+        run: echo "Biupiu Android source scaffold contract validated"
