@@ -1,0 +1,20 @@
+{
+  "schema": "sf44.0",
+  "episode_id": "BPU-WORLD-E01",
+  "status": "production_queue_ready",
+  "shots": [
+    {"shot_id":"E01-S01","scene_id":"WORLD-GATEWAY","duration_s":8,"priority":1,"asset_state":"PENDING"},
+    {"shot_id":"E01-S02","scene_id":"AIR-01","duration_s":14,"priority":2,"design_pass":"stealth_geometric_evtol","claim_class":"CONCEPT","asset_state":"PENDING"},
+    {"shot_id":"E01-S03","scene_id":"WORLD-TRANSITION","duration_s":5,"priority":3,"asset_state":"PENDING"},
+    {"shot_id":"E01-S04","scene_id":"MAR-01","duration_s":14,"priority":4,"claim_class":"RESEARCH_CONCEPT","asset_state":"PENDING"},
+    {"shot_id":"E01-S05","scene_id":"AGR-01","duration_s":16,"priority":5,"claim_class":"RESEARCH_PROTOTYPE","asset_state":"PENDING"},
+    {"shot_id":"E01-S06","scene_id":"CONS-01","duration_s":14,"priority":6,"design_pass":"biupiu_expedition_vehicle","claim_class":"CONCEPT","asset_state":"PENDING"},
+    {"shot_id":"E01-S07","scene_id":"AI-01","duration_s":16,"priority":7,"claim_class":"RESEARCH_CONCEPT","asset_state":"PENDING"},
+    {"shot_id":"E01-S08","scene_id":"WORLD-MONTAGE","duration_s":8,"priority":8,"required_details":["evtol_detail","metamaterial_surface_macro","expedition_vehicle_detail","field_sensor_deployment","world_vehicle_lineup"],"asset_state":"PENDING"},
+    {"shot_id":"E01-S09","scene_id":"END-CARD","duration_s":5,"priority":9,"asset_state":"PENDING"}
+  ],
+  "outputs":["master_16_9","trailer_30s","teaser_15s","mobile_9_16","campaign_4_5","department_stills"],
+  "rights_policy":"original_or_commercially_licensed_assets_only",
+  "claim_policy":"concept_and_research_labels_required_until_validated",
+  "final_video_status":"NOT_RENDERED"
+}
