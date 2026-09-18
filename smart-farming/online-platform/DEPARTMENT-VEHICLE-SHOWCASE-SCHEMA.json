@@ -1,0 +1,8 @@
+{
+  "schema_version":"sf16.1",
+  "required":["vehicle_id","department_id","display_location","vehicle_state","asset_provenance","branding","showcase_content"],
+  "vehicle_state":["PARKED_SHOWCASE","INTERACTIVE_DISPLAY","RESEARCH_DEMO","FIELD_SIMULATION","FUTURE_DRIVEABLE"],
+  "showcase_content":["department_summary","purpose","features","research_links","academy_links","digital_lab_links","media","contact"],
+  "asset_provenance":["original_biupiu","licensed_third_party","conceptual","research_reference"],
+  "rule":"research_reference assets cannot be used as production showcase geometry"
+}
