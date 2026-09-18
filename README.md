@@ -141,6 +141,10 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 `research/INDEX.md` remains the master R&D research index. The new algorithm and blockchain network specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry releases.
 
+## Blender / Biupiu World Production Layer
+
+The repository now defines two Blender engine paths: the official Blender upstream mirror for Windows desktop production and the reviewed Android Blender fork for mobile. Both consume the Biupiu Digital Twin and asset-provenance contracts. Biupiu World character, environment and product-development showreel pipelines are documented under `world/`, `docs/blender-windows/` and `showcase/`.
+
 ## Version
 
 **Biupiu NFT System v1.3 — Company Algorithm Network + Blockchain Registry Architecture + EVM Minting + Two-Image NFT Standard**  
