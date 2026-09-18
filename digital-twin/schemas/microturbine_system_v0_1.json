@@ -1,0 +1,12 @@
+{
+  "schema_version": "BIUPIU-DIGITAL-TWIN-MICROTURBINE-v0.1",
+  "entities": ["turbine", "recuperator", "generator", "battery", "mission", "environment"],
+  "required_fields": {
+    "turbine": ["module", "net_kw", "pressure_ratio", "turbine_inlet_K"],
+    "environment": ["altitude_m"],
+    "battery": ["energy_kwh"],
+    "mission": ["application", "phases"]
+  },
+  "status_values": ["concept", "screened", "bench_tested", "validated", "certified"],
+  "rule": "A concept or screened value must not be represented as validated or certified."
+}
