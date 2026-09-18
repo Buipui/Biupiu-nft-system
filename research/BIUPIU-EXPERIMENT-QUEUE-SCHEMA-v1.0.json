@@ -1,0 +1,28 @@
+{
+  "schema":"BIUPIU-EXPERIMENT-QUEUE-SCHEMA-v1.0",
+  "gate":"BM-08",
+  "queue_id":"string",
+  "candidate_id":"string",
+  "test_class":"resin|adhesive|fibre|laminate|component|rotating_subassembly",
+  "test_plan":{
+    "test_id":"string",
+    "test_standard":"string-or-null",
+    "specimen_geometry":"string-or-null",
+    "conditioning":"required",
+    "equipment":"required",
+    "calibration_reference":"required",
+    "raw_data_reference":"string-or-null",
+    "replicates":"integer-or-null"
+  },
+  "priority_inputs":{
+    "pareto_relevance":"number-or-null",
+    "uncertainty_reduction":"number-or-null",
+    "manufacturability":"number-or-null",
+    "operating_condition_relevance":"number-or-null",
+    "hypothesis_information_gain":"number-or-null",
+    "cost_time":"number-or-null"
+  },
+  "status":"GENERATED|READY|QUEUED|IN-PROGRESS|TESTED|BLOCKED|FAILED|CALIBRATED",
+  "traceability":["candidate_id","test_id","raw_data_reference","material_record_version","resin_record_version","digital_twin_version"],
+  "evidence_boundary":"Research workflow only; qualification/certification requires applicable standards and independent review."
+}
