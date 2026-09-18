@@ -1,17 +1,18 @@
 {
-  "schema_version":"sf22.1",
+  "schema_version":"sf22.2",
   "episode_id":"BPU-WORLD-E01",
   "title":"Welcome to Biupiu World",
   "runtime_seconds_target":120,
+  "design_continuity":{"evtol":"Use Biupiu stealth-geometric and metamaterial/metasurface concept language for AIR-01.","expedition_vehicle":"Use the registered Biupiu expedition/conservation vehicle specification for CONS-01.","claim_control":"All metamaterial, stealth, aerodynamic and performance features remain CONCEPT/RESEARCH unless independently validated."},
   "shots":[
     {"id":"E01-S01","scene":"WORLD-GATEWAY","duration":8,"camera":"aerial_establishing"},
-    {"id":"E01-S02","scene":"AIR-01","vehicle":"biu-veh-air-001","duration":14,"camera":"slow_orbit"},
+    {"id":"E01-S02","scene":"AIR-01","vehicle":"biu-veh-air-001","duration":14,"camera":"slow_orbit","design_pass":"stealth_geometric_evtol","overlay":["AI","Robotics","Photonics","Advanced Materials","CONCEPT"]},
     {"id":"E01-S03","scene":"WORLD-TRANSIT","duration":5,"camera":"aerial_travel"},
     {"id":"E01-S04","scene":"MAR-01","vehicle":"biu-veh-marine-001","duration":14,"camera":"waterline_track"},
     {"id":"E01-S05","scene":"AGR-01","vehicle":"biu-veh-agri-001","duration":16,"camera":"vehicle_approach"},
-    {"id":"E01-S06","scene":"CONS-01","vehicle":"biu-veh-offroad-001","duration":14,"camera":"ground_expedition"},
+    {"id":"E01-S06","scene":"CONS-01","vehicle":"biu-veh-offroad-001","duration":14,"camera":"ground_expedition","design_pass":"biupiu_expedition_vehicle","overlay":["Conservation","Field Research","Regenerative Land Management","CONCEPT"]},
     {"id":"E01-S07","scene":"AI-01","vehicle":"biu-veh-ai-001","duration":16,"camera":"dolly_reveal"},
-    {"id":"E01-S08","scene":"WORLD-MONTAGE","duration":8,"camera":"multi_scene_montage"},
+    {"id":"E01-S08","scene":"WORLD-MONTAGE","duration":8,"camera":"multi_scene_montage","include":["evtol_detail","expedition_vehicle_detail","metamaterial_surface_macro","world_vehicle_lineup"]},
     {"id":"E01-S09","scene":"END-CARD","duration":5,"camera":"static"}
   ],
   "output_profiles":["cinematic_16_9","mobile_9_16","short_4_5","presentation_cut"]
