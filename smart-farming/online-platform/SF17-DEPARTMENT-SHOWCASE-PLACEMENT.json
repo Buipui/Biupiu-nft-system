@@ -1,0 +1,20 @@
+{
+  "schema_version":"sf17.1",
+  "default_vehicle_state":"PARKED_SHOWCASE",
+  "placements":[
+    {"vehicle_id":"biu-veh-agri-001","district":"regenerative-farm","display_role":"hero_advertisement"},
+    {"vehicle_id":"biu-veh-plant-001","district":"plant-research-campus","display_role":"research_exhibit"},
+    {"vehicle_id":"biu-veh-conservation-001","district":"conservation-zone","display_role":"field_showcase"},
+    {"vehicle_id":"biu-veh-textile-001","district":"materials-market","display_role":"product_advertisement"},
+    {"vehicle_id":"biu-veh-composite-001","district":"materials-lab","display_role":"technical_showcase"},
+    {"vehicle_id":"biu-veh-bio-001","district":"biotech-district","display_role":"research_exhibit"},
+    {"vehicle_id":"biu-veh-automation-001","district":"robotics-campus","display_role":"technology_showcase"},
+    {"vehicle_id":"biu-veh-ai-001","district":"intelligence-hub","display_role":"hero_advertisement"},
+    {"vehicle_id":"biu-veh-photonics-001","district":"photonics-lab","display_role":"technology_showcase"},
+    {"vehicle_id":"biu-veh-energy-001","district":"energy-district","display_role":"technology_showcase"},
+    {"vehicle_id":"biu-veh-marine-001","district":"marine-port","display_role":"hero_advertisement"},
+    {"vehicle_id":"biu-veh-academy-001","district":"academy-plaza","display_role":"course_showcase"},
+    {"vehicle_id":"biu-veh-gallery-001","district":"digital-gallery","display_role":"art_showcase"},
+    {"vehicle_id":"biu-veh-logistics-001","district":"manufacturing-district","display_role":"fleet_showcase"}
+  ]
+}
