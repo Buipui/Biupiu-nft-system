@@ -1,0 +1,9 @@
+{
+  "schema_version":"sf21.1",
+  "required":["episode_id","series_id","title","scene_ids","hero_assets","script_status","rights_status","claim_status","render_profile"],
+  "claim_status":["concept","prototype","research","simulation","verified_product"],
+  "rights_status":["pending_review","cleared","restricted","research_only"],
+  "scene_reuse":true,
+  "asset_reuse":true,
+  "required_before_publish":["rights_cleared","claims_reviewed","brand_reviewed"]
+}
