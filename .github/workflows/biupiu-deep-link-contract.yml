@@ -1,0 +1,20 @@
+name: Biupiu Deep Link Contract
+on:
+  workflow_dispatch:
+  push:
+    paths: ["apps/android/app/src/main/AndroidManifest.xml","apps/windows/DeepLinkRouter.cs","apps/windows/APP-PROTOCOL-v1.md",".github/workflows/biupiu-deep-link-contract.yml"]
+  pull_request:
+    paths: ["apps/android/**","apps/windows/**",".github/workflows/biupiu-deep-link-contract.yml"]
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify Android protocol
+        run: grep -q 'android:scheme="biupiu"' apps/android/app/src/main/AndroidManifest.xml
+      - name: Verify Windows router
+        run: |
+          test -f apps/windows/DeepLinkRouter.cs
+          grep -q 'smart-farming' apps/windows/DeepLinkRouter.cs
+          grep -q 'smart-metal-workshop' apps/windows/DeepLinkRouter.cs
+          grep -q 'rnd-os' apps/windows/DeepLinkRouter.cs
