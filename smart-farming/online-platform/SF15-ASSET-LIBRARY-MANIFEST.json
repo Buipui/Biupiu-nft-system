@@ -1,0 +1,24 @@
+{
+  "schema_version": "sf15.1",
+  "status": "research_and_original_production_pipeline",
+  "production_rule": "Only original or explicitly compatible commercially licensed assets may enter the commercial runtime.",
+  "asset_groups": [
+    {"id":"env-biu-campus-001","type":"environment","status":"original-design","theme":"Biupiu contemporary research campus"},
+    {"id":"env-waru-001","type":"environment","status":"original-design","theme":"Waru Waru regenerative agriculture learning district"},
+    {"id":"env-ancient-research-001","type":"environment","status":"original-reconstruction","theme":"ancient-civilization research sandbox"},
+    {"id":"env-rural-westerncape-001","type":"environment","status":"original-design","theme":"Western Cape regenerative farming landscape"},
+    {"id":"veh-biu-utility-001","type":"vehicle","status":"original-design","class":"electric utility"},
+    {"id":"veh-biu-farm-001","type":"vehicle","status":"original-design","class":"smart farming vehicle"},
+    {"id":"veh-biu-research-001","type":"vehicle","status":"original-design","class":"research transport"},
+    {"id":"veh-biu-marine-001","type":"vehicle","status":"original-design","class":"hydrofoil/marine research"},
+    {"id":"veh-biu-logistics-001","type":"vehicle","status":"original-design","class":"low-emission logistics"},
+    {"id":"veh-biu-experimental-001","type":"vehicle","status":"original-design","class":"experimental mobility"}
+  ],
+  "research_sources": [
+    {"id":"gta-nexus","role":"visual_and_technical_reference","production_use":false},
+    {"id":"forza-tech-research","role":"vehicle_asset_and_tooling_reference","production_use":false}
+  ],
+  "runtime_formats": ["glTF","GLB"],
+  "required_metadata": ["asset_id","version","lods","materials","bounds","license","provenance","evidence_level"],
+  "evidence_levels": ["documented","reconstructed","engineering_interpretation","simulation","hypothesis"]
+}
