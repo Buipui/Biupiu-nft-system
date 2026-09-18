@@ -1,0 +1,31 @@
+{
+  "schema":"sf45.0",
+  "status":"design_integrated",
+  "marine_assets":[
+    {
+      "asset_id":"biu-veh-marine-001",
+      "scene_id":"MAR-01",
+      "name":"Biupiu Hydrofoil Research Craft",
+      "role":"primary_marine_showcase",
+      "claim_class":"CONCEPT",
+      "design_pass":"biupiu_stealth_geometric_advanced_materials",
+      "technology_tags":["hydrofoil","advanced_materials","hempcarbon","distributed_propulsion","marine_sensors","energy_systems"]
+    },
+    {
+      "asset_id":"biu-boat-expedition-001",
+      "scene_id":"MAR-02",
+      "name":"Biupiu Personal Expedition Boat",
+      "role":"personal_expedition_technology_showcase",
+      "claim_class":"CONCEPT",
+      "design_pass":"biupiu_stealth_geometric_advanced_materials",
+      "technology_tags":["expedition","advanced_composites","natural_fibre_composites","metamaterial_concept","sensors","water_sampling","energy_interface","ai_navigation_research"]
+    }
+  ],
+  "video_integration":{
+    "primary":"biu-veh-marine-001",
+    "supporting":"biu-boat-expedition-001",
+    "episode_id":"BPU-WORLD-E01",
+    "montage_shot":"E01-S08"
+  },
+  "final_physical_product_status":"NOT_CLAIMED"
+}
