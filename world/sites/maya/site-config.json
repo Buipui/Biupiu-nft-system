@@ -1,0 +1,11 @@
+{
+  "site_id":"maya_lowland",
+  "display_name":"Maya Lowland Farming Landscape",
+  "terrain":"tropical lowlands and forest",
+  "features":["milpa rotation","selective terraces","runoff management","wetland/raised-field scenario"],
+  "mechanics":["rainfall","soil fertility","forest regeneration","terrace runoff","crop diversity","population pressure","barter"],
+  "evidence_class":"SCHOLARLY",
+  "confidence":"MEDIUM",
+  "reconstruction":false,
+  "sources":["Wiley Geographical Review: Upland Agriculture in the Maya Lowlands","Cambridge Advances in Archaeological Practice"]
+}
