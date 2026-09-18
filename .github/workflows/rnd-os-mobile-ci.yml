@@ -26,18 +26,22 @@ jobs:
           distribution: temurin
           java-version: '17'
 
+      - name: Set up Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.13'
+
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
 
       - name: Install Android SDK 36
         run: sdkmanager "platforms;android-36"
 
-      - name: Verify Gradle project
+      - name: Verify project
         run: |
           test -f settings.gradle.kts
           test -f build.gradle.kts
           test -f app/build.gradle.kts
 
-      - name: Build when Gradle wrapper is present
-        if: hashFiles('software/rnd-os-mobile/gradlew') != ''
-        run: ./gradlew testDebugUnitTest assembleDebug --stacktrace
+      - name: Build and unit test
+        run: gradle testDebugUnitTest assembleDebug --stacktrace
