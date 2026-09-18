@@ -1,0 +1,9 @@
+{
+  "schema_version":"1.0",
+  "object":"physical_test_record",
+  "required":["TEST_ID","SPECIMEN_ID","MATERIAL_ID","FORMULATION_ID","BATCH_ID","MANUFACTURING_ROUTE","TEST_STANDARD","SPECIMEN_GEOMETRY","CONDITIONING","EQUIPMENT","RAW_DATA_REFERENCE","PROCESSED_RESULTS","UNCERTAINTY","OPERATOR_DATE","EVIDENCE_STATE"],
+  "test_classes":["resin","adhesive","fibre","laminate","component","rotating_subassembly"],
+  "conditioning":["ambient","humidity_conditioned","water_conditioned","thermal_cycle","UV_ageing"],
+  "core_outputs":["density","tensile","compression","flexure","ILSS","GIC","GIIC","fatigue","Tg","moisture_uptake","failure_mode"],
+  "calibration_rule":"Measured results may replace estimated Digital Twin inputs only when specimen, batch, conditioning, method and uncertainty are traceable."
+}
