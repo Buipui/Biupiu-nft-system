@@ -1,0 +1,12 @@
+{
+  "environment_id":"mu_speculative_world",
+  "civilisation_id":"MU",
+  "evidence_class":"SPECULATIVE_TRADITION/HYPOTHESIS",
+  "models":["parameterised_archipelago","island_terrain","freshwater_system","hypothetical_farms","maritime_settlement"],
+  "library":"mu_speculative_library",
+  "avatar_entry":"mu_research_gate",
+  "spawn_zones":["island_farm","freshwater_zone","settlement","harbour","speculative_library"],
+  "learning_objects":["hypothesis_card","parameter_map","environment_model","alternative_scenarios"],
+  "reconstruction":true,
+  "ui_badge":"SPECULATIVE — NOT ESTABLISHED HISTORY"
+}
