@@ -52,6 +52,10 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Resin Formulation + Blade Twin Integration
+
+Added `research/BIUPIU-RESIN-FORMULATION-SCHEMA-v1.0.json` and `research/BIUPIU-RESIN-BLADE-TWIN-SCHEMA-v1.0.md`; **GATE BM-03 executed**. Resin chemistry, cure state, fibre treatment, interface properties and laminate data are now defined as machine-readable inputs to the Blade Digital Twin. The comparison runner must preserve uncertainty and never silently substitute missing material properties.
+
 ## Bio-Adhesive and Resin Genome
 
 Added `research/BIUPIU-BIO-ADHESIVE-RESIN-GENOME-v1.0.md` and opened **GATE BM-02**. The new matrix covers partly bio-based epoxies, plant-oil epoxies, lignin-modified and lignin-curing systems, cardanol, vanillin/eugenol, furan, tannin/polyphenol and rosin-derived resin/adhesive families. It links resin chemistry, fibre treatment, interface performance, manufacturing and ageing to the existing Blade Material Genome and Digital Twin.
