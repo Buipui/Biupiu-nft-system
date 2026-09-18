@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 3.2  
+**Version:** 3.3  
 **Updated:** 18 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -157,7 +157,7 @@ All existing department streams remain active. New centre systems are overlays t
 
 ## Version
 
-**Biupiu R&D Research Index v3.2 — Plant Composite + Digital Twin Integration**  
+**Biupiu R&D Research Index v3.3 — Adobe Media Production Integration**  
 **Updated:** 18 September 2026
 
 
@@ -294,6 +294,19 @@ Every source/mod asset receives provenance and licence metadata before reuse. Vi
 - `software/rnd-os-ai/src/biupiu_ai/auth_contract.py` — bearer-header validation and authorization redaction helpers.
 - `software/rnd-os-ai/tests/test_ai15.py` — authentication-format and redaction tests.
 - **AI-15 status:** authentication contract and tests implemented; CI workflow commit was blocked by repeated GitHub repository-state conflicts and has not been claimed as deployed or executed.
+
+
+## Adobe media-production integration
+
+Added `research/BIUPIU-ADOBE-PRODUCTION-PIPELINE-v1.0.md` and the `software/rnd-os-media/adobe/` adapter boundary for professional media production.
+
+- Premiere Pro: UXP-first integration target; legacy CEP/PProPanel retained only as compatibility/reference material.
+- After Effects: compositing, motion graphics, VFX and render-queue adapter boundary; legacy CEP/ExtendScript isolated behind an adapter.
+- `MEDIA-JOB-SCHEMA.json` defines portable media-job, provenance, evidence, IP and licence metadata.
+- Pipeline tracks include Engineering Showcase, Digital Twin, Biupiu World, Product Development Showreel and Research Evidence Video.
+- Adobe software, proprietary binaries and SDK assets are not redistributed in this repository.
+
+**ADOBE-01:** executed — architecture/provenance layer integrated. Live Adobe execution remains gated until the target workstation has the relevant Adobe applications and UXP/adapter test environment installed and validated.
 
 ## AI-16 production gateway policy gate
 - `research/BIUPIU-AI-PRODUCTION-GATEWAY-v1.0.md` — bounded request schema, rate/cost policy and provider staging boundary.
