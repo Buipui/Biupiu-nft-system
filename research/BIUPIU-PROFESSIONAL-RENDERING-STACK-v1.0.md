@@ -1,149 +1,83 @@
-# Biupiu Professional Rendering Stack v1.0
+# Biupiu Professional Rendering Stack v1.1
 
-**Status:** Integrated reference architecture
-**Date:** 18 September 2026
+**Status:** Integrated reference architecture  
+**Date:** 18 September 2026  
 **Repository role:** Personal R&D / computational-engineering / visualization track
 
-## Purpose
+## Maxon / Cinema 4D integration
 
-Define the Biupiu professional visualization stack as a cross-engine orchestration layer. Rendering engines remain replaceable adapters; source CAD/geometry, engineering models, material records and provenance remain authoritative.
+Maxon Cinema 4D is now a first-class professional visualization and procedural-content adapter.
 
-## OctaneRender integration
+Official upstream GitHub references:
+- Maxon-Computer/Cinema-4D-Python-API-Examples
+- Maxon-Computer/Cinema-4D-Cpp-API-Examples
+- Maxon-Computer/Cinema-4D-Visual-Studio-Code-Extension
+- Maxon-Computer/Redshift-OSL-Shaders
+- Maxon-Computer/Redshift-OCIO-Configs
+- Maxon-Computer/ZBrush-Python-API-Examples
 
-Primary upstream reference:
+Adapter roles:
+- procedural/parametric modelling
+- Cinema 4D Python and C++ automation
+- plugin development
+- MoGraph/fields/generator workflows
+- Redshift production rendering
+- OSL/shader experimentation
+- ZBrush sculpting/asset preparation
+- engineering, marine, automotive, aerospace/eVTOL and turbine visualization
+- digital-twin presentation assets
 
-- OTOY-NZ/OctaneBlender — official OctaneBlender source repository.
-- OctaneRender supports GPU-accelerated production rendering and Blender integration.
-- The repository must reference, not redistribute, proprietary Octane binaries, SDKs, licenses or protected assets.
+## Redshift integration
 
-Octane adapter role:
+Redshift is a production-rendering sub-adapter under the Maxon route. The repository indexes OSL shaders, OCIO configuration, node/material automation and Cinema 4D → Redshift workflows.
 
-- Blender high-quality product stills
-- photorealistic material/lighting studies
-- automotive, marine, aerospace/eVTOL and turbine visualization
-- digital-twin presentation renders
-- cinematic/showreel output
-- research visualization
-- AOV/pass-based compositing where supported by the installed Octane version
-
-## Material-library track
-
-Community Octane/Blender helper repositories may be evaluated as optional tooling for:
-
-- material-library generation
-- texture-to-material workflows
-- Asset Browser organization
-- reusable Biupiu material presets
-
-Third-party repositories remain dependency candidates until license, maintenance, compatibility and provenance checks are completed.
+Maxon documentation provides Python workflows using `c4d` and `maxon` for Redshift material node graphs. These are references only; proprietary binaries, SDK packages and licensed assets are not redistributed.
 
 ## Cross-engine architecture
 
 SOURCE MODEL
-→ BLENDER / CAD IMPORT
-→ MATERIAL + PROVENANCE
+→ CAD / BLENDER / CINEMA 4D
+→ PROCEDURAL + MATERIAL + PROVENANCE
 → ENGINEERING VALIDATION
-→ RENDER ADAPTER
+→ RENDER ADAPTER (CYCLES / OCTANE / V-RAY / REDSHIFT)
+→ REAL-TIME ADAPTER (UNREAL / TWINMOTION / LUMION)
 → OUTPUT / AOV
 → EDITORIAL / COMPOSITING
 → REVIEW
 → RELEASE
 
-Supported/planned rendering adapters:
-
-- Blender Cycles — baseline/open renderer
-- OctaneRender — GPU/photorealistic rendering adapter
-- V-Ray — comparison/production-render adapter
-- Unreal Engine 5 — real-time/virtual-production adapter
-- Twinmotion — rapid environment/visualization adapter
-- Lumion — architectural/environment visualization adapter
-- KeyShot — product visualization adapter
-- Adobe media pipeline — editorial/compositing/output layer
-
-The stack does not claim feature parity between engines.
-
-## Unreal / Octane relationship
-
-Render Network documentation records an OctaneRender-for-Blender integration proposal and describes Blender → OctaneRender → Unreal Engine virtual-production workflows, including USD/MaterialX and Hydra-related interoperability.
-
-Biupiu therefore treats:
-
-- Blender as a modelling/scene-authoring hub
-- Octane as a high-end rendering adapter
-- Unreal Engine 5 as a real-time/interactive/digital-twin/virtual-production adapter
-
-This is an interoperability target, not a claim that every asset or material is automatically portable without conversion or validation.
-
-## Distributed rendering
-
-Render Network RNP-017 is indexed as an external infrastructure reference for OctaneRender-for-Blender distributed GPU rendering. Its status must be checked again before any production dependency is declared.
+Existing adapters remain active: Blender/Cycles, Octane, V-Ray, Unreal Engine 5, Twinmotion, Lumion, KeyShot and Adobe media pipeline.
 
 ## Biupiu use cases
 
-### Engineering
-- Biupiu blade micro-turbines
-- marine propulsion concepts
-- automotive concepts
-- eVTOL and helicopter concepts
-- advanced materials and composites
+- blade micro-turbines
+- marine propulsion
+- automotive, eVTOL and helicopter concepts
+- plant-based composites and bio-resins
+- photonics/crystal research
 - robotics and manufacturing
-
-### Scientific/research visualization
-- materials genome
-- plant-based composites
-- bio-adhesives/resins
-- photonics
-- crystal/optical research
-- digital-twin scenes
-
-### Presentation
+- digital twins
 - investor/funder visuals
-- product stills
-- cinematic showreels
-- concept variants
 - research evidence videos
 
-## Evidence and IP controls
+## Evidence/IP boundary
 
-A render is a visualization output, not engineering validation.
+A render is a visualization artifact, not engineering validation. Production assets retain source-model version, renderer/version, material provenance, licence state, scene version, render settings, output identity, evidence classification and reviewer status.
 
-Every production asset should retain:
+Do not copy proprietary Maxon/Cinema 4D/Redshift/ZBrush source, binaries, licences or protected assets into Biupiu. Store adapter contracts, compatibility records, external references, provenance metadata and legally distributable scene specifications.
 
-- source model ID/version
-- render engine/version
-- material source/provenance
-- texture/license status
-- scene version
-- camera/lighting preset
-- render settings
-- output checksum where appropriate
-- evidence/claim classification
-- reviewer status
+## Gate RENDER-02
 
-Speculative concepts remain labelled as concepts/hypotheses.
+**Executed:** Maxon Cinema 4D + Redshift integrated as first-class adapters and cross-linked with the existing professional rendering stack.
 
-## Dependency policy
-
-Do not copy proprietary Octane source, SDK files, binaries, licensed assets or credentials into the Biupiu repository.
-
-Store:
-
-1. adapter interfaces;
-2. version/compatibility records;
-3. installation requirements;
-4. external repository references;
-5. license/provenance metadata;
-6. reproducible scene specifications where legally distributable.
-
-## Gate RENDER-01
-
-**Executed:** OctaneRender added as a first-class rendering adapter in the Biupiu professional visualization architecture.
-
-**Next validation gate:** install/version compatibility test on a workstation, followed by a controlled Blender scene rendered through Octane and compared against Cycles/V-Ray/Unreal outputs using the same source geometry and documented material assumptions.
+**Next gate:** controlled workstation test using common Biupiu geometry/material inputs and comparison across Cinema 4D/Redshift, Blender/Cycles, Octane, V-Ray and Unreal.
 
 ## External references
 
-- https://github.com/OTOY-NZ/OctaneBlender
-- https://github.com/rendernetwork/RNPs/blob/main/RNP-017.md
-- https://github.com/rendernetwork/RNPs/blob/main/RNP-014.md
-
+- https://github.com/Maxon-Computer/Cinema-4D-Python-API-Examples
+- https://github.com/Maxon-Computer/Cinema-4D-Cpp-API-Examples
+- https://github.com/Maxon-Computer/Cinema-4D-Visual-Studio-Code-Extension
+- https://github.com/Maxon-Computer/Redshift-OSL-Shaders
+- https://github.com/Maxon-Computer/Redshift-OCIO-Configs
+- https://github.com/Maxon-Computer/ZBrush-Python-API-Examples
+- https://developers.maxon.net/docs/py/
