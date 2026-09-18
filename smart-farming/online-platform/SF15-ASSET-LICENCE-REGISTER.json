@@ -1,0 +1,26 @@
+{
+  "schema_version":"sf15.1",
+  "records":[
+    {
+      "asset_id":"gta-nexus-vehicle-packs",
+      "source":"Nexus Mods / GTA V",
+      "status":"research-only",
+      "reason":"Checked packs restrict asset use, conversion and/or commercial sold use.",
+      "evidence":["turn0search0","turn0search1","turn0search2","turn0search9"]
+    },
+    {
+      "asset_id":"forza-game-assets",
+      "source":"Forza Motorsport / Forza Horizon",
+      "status":"research-only",
+      "reason":"ForzaTech Studio states extraction is intended for personal modding/research and warns about game terms.",
+      "evidence":["turn0search12","turn0search15"]
+    },
+    {
+      "asset_id":"biupiu-original-assets",
+      "source":"Biupiu",
+      "status":"production-candidate",
+      "approval":"pending_asset_review",
+      "requirements":["original_authorship","licence_record","runtime_test","rights_review"]
+    }
+  ]
+}
