@@ -141,3 +141,16 @@ Added culturally contextualised specialist spaces:
 - `research/BIUPIU-CULTURAL-HERITAGE-ENVIRONMENT-MATRIX-v1.0.md` — cross-department navigation and evidence rules.
 
 The main hub routes users through their subscribed department before exposing its cultural environments and specialist workspaces. Historical context and modern experiments remain separately classified.
+
+
+## Civilisation sandbox environments
+
+The Main Hub now has separate culturally contextualised sandbox environments for:
+- Southern African
+- West African
+- North African / Mediterranean
+- South Asian
+- East Asian
+- Ancient Americas
+
+Each sandbox follows: MAIN HUB → CIVILISATION SANDBOX → CULTURAL HUB → DEPARTMENT ENVIRONMENT → WORKSHOP/LAB → PROJECT → RESEARCH OBJECT. Department subscriber entitlements remain authoritative, so entering a sandbox does not unlock unrelated departments. Historical evidence, reconstruction and modern R&D remain separate and evidence-classified.
