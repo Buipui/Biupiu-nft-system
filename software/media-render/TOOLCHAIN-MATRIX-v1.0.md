@@ -31,3 +31,17 @@ Each connector is provider-specific. The OS should expose a common media-job int
 ## Evidence boundary
 
 A render is a visualization artifact. A simulation result is an engineering evidence artifact. They must remain distinct in the R&D OS.
+
+
+## V-Ray integration
+
+V-Ray is registered as an additional professional renderer alongside Blender/Cycles, KeyShot, Twinmotion and Unreal. Use V-Ray through the connector boundary; proprietary runtime components are not redistributed.
+
+| Job type | V-Ray role |
+|---|---|
+| render.still | high-quality product/concept rendering |
+| render.turntable | asset presentation |
+| render.animation | sequence rendering where supported |
+| render.digital-twin | presentation layer, not engineering solver |
+| material-study | VRayMtl/alSurface shader research |
+| gltf-preview | glTF/GLB interoperability via V-Ray App SDK reference |
