@@ -1,0 +1,15 @@
+{
+  "version":"0.1",
+  "routes":[
+    {"id":"home","path":"/"},
+    {"id":"campus","path":"/campus"},
+    {"id":"facility","path":"/campus/:facility_id"},
+    {"id":"station","path":"/campus/:facility_id/station/:station_id"},
+    {"id":"research","path":"/research"},
+    {"id":"lab","path":"/lab"},
+    {"id":"plants","path":"/plants"},
+    {"id":"academy","path":"/academy"},
+    {"id":"ai","path":"/ai"}
+  ],
+  "context_keys":["facility_id","station_id","plant_id","lesson_id","experiment_template_id"]
+}
