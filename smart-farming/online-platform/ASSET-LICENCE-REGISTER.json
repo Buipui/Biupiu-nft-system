@@ -1,0 +1,6 @@
+{
+  "schema_version":"0.1",
+  "required_fields":["asset_id","source","creator","licence","commercial_use","redistribution","modification","attribution","proof_url","status"],
+  "statuses":["research-only","pending-review","approved","rejected"],
+  "rule":"No asset enters a commercial Biupiu World package without documented permission/licence compatible with redistribution and commercial use."
+}
