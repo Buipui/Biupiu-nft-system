@@ -1,8 +1,8 @@
 {
-  "schema":"biupiu.module.render-pipeline.v1",
-  "module":"Biupiu Render Pipeline",
-  "status":"architecture-integrated",
-  "providers":[
+  "schema": "biupiu.module.render-pipeline.v1",
+  "module": "Biupiu Render Pipeline",
+  "status": "adapter-contract-integrated",
+  "providers": [
     "BLENDER",
     "UNREAL_ENGINE_5",
     "TWINMOTION",
@@ -12,14 +12,17 @@
     "FIREFLY",
     "RUNWAY"
   ],
-  "flows":[
+  "flows": [
     "PRODUCT_STILL",
     "DIGITAL_TWIN",
     "CINEMATIC_SHOWREEL",
     "CONCEPT_VARIATION",
     "RESEARCH_VISUALIZATION"
   ],
-  "source_of_truth":"asset-registry",
-  "provenance_required":true,
-  "redshift_resources":"research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md"
+  "source_of_truth": "asset-registry",
+  "provenance_required": true,
+  "redshift_resources": "research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md",
+  "redshift_adapter": "packages/biupiu-render-pipeline/src/redshift.ts",
+  "redshift_test_scene": "research/BIUPIU-REDSHIFT-TEST-SCENE-SPEC-v1.0.md",
+  "redshift_validation_test": "packages/biupiu-render-pipeline/tests/redshift.validation.ts"
 }
