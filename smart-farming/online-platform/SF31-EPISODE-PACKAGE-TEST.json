@@ -1,0 +1,41 @@
+{
+  "version": "SF-31.1",
+  "episode_id": "BPU-WORLD-E01",
+  "simulation_state": "READY",
+  "required_scenes": [
+    "AIR-01",
+    "MAR-01",
+    "AGR-01",
+    "CONS-01",
+    "AI-01"
+  ],
+  "required_hero_assets": [
+    "biu-veh-air-001",
+    "biu-veh-marine-001",
+    "biu-veh-agri-001",
+    "biu-veh-offroad-001",
+    "biu-veh-ai-001"
+  ],
+  "required_context_keys": [
+    "department_id",
+    "scene_id",
+    "hero_asset_id",
+    "research_link",
+    "digital_lab_link",
+    "academy_link"
+  ],
+  "test_cases": [
+    "RT-SIM-01",
+    "RT-SIM-02",
+    "RT-SIM-03",
+    "RT-SIM-04",
+    "RT-SIM-05",
+    "RT-SIM-06",
+    "RT-SIM-07",
+    "RT-SIM-08",
+    "RT-SIM-09",
+    "RT-SIM-10"
+  ],
+  "failure_policy": "BLOCK_ON_MISSING_REQUIRED_STATE",
+  "live_runtime": false
+}
