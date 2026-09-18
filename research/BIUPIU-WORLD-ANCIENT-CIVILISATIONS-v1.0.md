@@ -107,3 +107,15 @@ W0 world registry and access model; W1 Main Hub → Region → Civilisation navi
 6. Historical reconstruction cannot silently become established evidence.
 7. Game/mod/creative assets are labelled separately from historical evidence.
 8. New civilisations can be added without changing the access-control architecture.
+
+
+## Dedicated New Age Theory entry point
+
+Biupiu World now provides a separate Main Hub gateway for speculative lost-civilisation, lost-land and inner-Earth content:
+
+**MAIN HUB → NEW AGE THEORY**
+
+This gateway is deliberately distinct from the established historical civilisation entrances. It routes to Atlantis, Mu, Hyperborea, Tartaria / Great Tartaria, Hollow Earth and the wider New Age Theory research catalogue.
+
+The gateway uses the dedicated character/guide layer in `research/BIUPIU-NEW-AGE-THEORY-CHARACTERS-v1.0.md`.
+
