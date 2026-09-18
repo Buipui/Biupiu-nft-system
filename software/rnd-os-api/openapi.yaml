@@ -1,0 +1,55 @@
+openapi: 3.0.3
+info:
+  title: Biupiu R&D OS API
+  version: 1.0.0
+  description: Shared contract for authenticated R&D, provenance and controlled digital-asset workflows.
+servers:
+  - url: https://api.example.invalid
+paths:
+  /v1/auth/session:
+    post:
+      summary: Establish an authenticated session
+      responses:
+        '200': {description: Session established}
+  /v1/research:
+    get:
+      summary: List permitted research objects
+      responses:
+        '200': {description: Research objects}
+    post:
+      summary: Create a research object
+      responses:
+        '201': {description: Created}
+  /v1/experiments:
+    get:
+      summary: List permitted experiments
+      responses:
+        '200': {description: Experiments}
+    post:
+      summary: Create an experiment
+      responses:
+        '201': {description: Created}
+  /v1/assets:
+    get:
+      summary: List permitted digital assets
+      responses:
+        '200': {description: Assets}
+    post:
+      summary: Create a provenance-controlled asset
+      responses:
+        '201': {description: Created}
+  /v1/assets/{id}/gate:
+    post:
+      summary: Request a controlled release-gate transition
+      parameters:
+        - in: path
+          name: id
+          required: true
+          schema: {type: string}
+      responses:
+        '200': {description: Gate transition recorded}
+  /v1/audit:
+    get:
+      summary: Read permitted audit events
+      responses:
+        '200': {description: Audit events}
