@@ -1,0 +1,18 @@
+{
+  "name": "@biupiu/firefly",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu Adobe Firefly Services integration boundary for generative media, creative automation and provenance-aware asset workflows",
+  "platforms": ["android", "windows", "web"],
+  "entry": "src/index.ts",
+  "scope": "CREATIVE_AI",
+  "requires": ["@biupiu/rnd-os", "@biupiu/showcase", "@biupiu/nft-studio"],
+  "externalSdk": {
+    "provider": "Adobe",
+    "packages": [
+      "@adobe/firefly-services-common-apis",
+      "@adobe/firefly-apis"
+    ],
+    "installation": "npm install @adobe/firefly-services-common-apis @adobe/firefly-apis"
+  }
+}
