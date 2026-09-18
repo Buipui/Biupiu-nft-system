@@ -1,0 +1,17 @@
+{
+  "generator":"biupiu_civilisation_world_generator_v1",
+  "input":"environment manifest + civilisation evidence metadata + mod index rules",
+  "output":["terrain","architecture","water_systems","farms","library_objects","spawn_points","interaction_points","lod_groups"],
+  "asset_classes":{
+    "evidence_grounded":"documented archaeological/architectural characteristics",
+    "reconstruction":"interpretive model with reconstruction metadata",
+    "speculative":"scenario model with persistent speculative badge"
+  },
+  "rules":[
+    "never replace local visual language with generic fantasy assets",
+    "carry evidence_class and reconstruction status into generated assets",
+    "keep speculative assets isolated from evidence-grounded asset registries",
+    "use deterministic seeds for reproducible world generation",
+    "support mobile and desktop quality tiers"
+  ]
+}
