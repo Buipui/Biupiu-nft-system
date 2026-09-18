@@ -1,0 +1,45 @@
+{
+  "schema_version": "1.0",
+  "asset": "BPU",
+  "status": "design_only",
+  "production_enabled": false,
+  "allocation_basis": "percentage_of_settlement_amount",
+  "allocations": [
+    {
+      "id": "seller_creator",
+      "label": "Seller / Creator",
+      "percentage": null,
+      "required": true
+    },
+    {
+      "id": "marketplace_service",
+      "label": "Marketplace / Service",
+      "percentage": null,
+      "required": true
+    },
+    {
+      "id": "ecosystem_treasury",
+      "label": "Ecosystem / Treasury",
+      "percentage": null,
+      "required": true
+    },
+    {
+      "id": "liquidity_network",
+      "label": "Liquidity / Network Development",
+      "percentage": null,
+      "required": false
+    }
+  ],
+  "rules": {
+    "percentages_must_sum_to": 100,
+    "production_requires_published_tokenomics": true,
+    "production_requires_legal_review": true,
+    "production_requires_security_review": true,
+    "allow_fake_volume": false,
+    "allow_wash_trading": false,
+    "allow_self_trade_for_volume": false,
+    "allow_guaranteed_returns": false,
+    "allow_fabricated_reserves": false,
+    "allow_misleading_market_statistics": false
+  }
+}
