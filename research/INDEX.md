@@ -327,3 +327,10 @@ Added `research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md`. GitHub research identified t
 Added `research/BIUPIU-VISUALIZATION-PIPELINE-LUMION-v1.0.md`. Lumion is now indexed as a complementary real-time visualisation/presentation layer for CAD/BIM/product/environment concepts, Digital Twin presentation, investor imagery and video production. The authoritative engineering path remains CAD/CAE, simulation, Digital Twin and physical validation.
 
 The Lumion track cross-links `CG-3D`, `DIGITAL-TWIN`, `COMPUTE`, `ROBOTICS`, `AERO`, `MARINE`, `MATERIALS`, `NFT-ATH-GEO`, `NFT-IP` and `VIDEO-SERIES`. Proprietary binaries, cracks/unlocks, and unlicensed asset redistribution are explicitly excluded. **LUM-01 executed.** Next: LUM-02 open-asset/PBR compatibility registry.
+
+## AI-17 provider-neutral gateway service gate
+- `research/BIUPIU-AI-GATEWAY-SERVICE-v1.0.md` — AI-17 gateway service, request IDs and structured error contract.
+- `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — authentication/policy/provider orchestration with structured responses.
+- `software/rnd-os-ai/tests/test_ai17.py` — gateway success, authentication failure and provider-failure tests.
+- `software/rnd-os-mobile/app/src/main/java/com/biupiu/rndos/ai/AiApiContract.kt` — Android success/error envelope with request IDs.
+- **AI-17 status:** gateway service and mobile error envelope implemented; live transport and production infrastructure remain gated.
