@@ -1,0 +1,31 @@
+{
+  "OTIO_SCHEMA": "Timeline.1",
+  "name": "Biupiu Animation Gate 1 Showreel Test",
+  "metadata": {
+    "biupiuResearchId": "BIUPIU-ANIM-GATE1-001",
+    "status": "test-manifest",
+    "mediaPolicy": "external-references-only"
+  },
+  "tracks": [
+    {
+      "OTIO_SCHEMA": "Track.1",
+      "name": "Main Picture",
+      "kind": "Video",
+      "children": [
+        {
+          "OTIO_SCHEMA": "Clip.2",
+          "name": "USD Scene Test Shot",
+          "source_range": {
+            "OTIO_SCHEMA": "TimeRange.1",
+            "duration": {"OTIO_SCHEMA": "RationalTime.1", "value": 48, "rate": 24},
+            "start_time": {"OTIO_SCHEMA": "RationalTime.1", "value": 0, "rate": 24}
+          },
+          "media_reference": {
+            "OTIO_SCHEMA": "ExternalReference.1",
+            "target_url": "tests/media/usd_scene_test_render.mov"
+          }
+        }
+      ]
+    }
+  ]
+}
