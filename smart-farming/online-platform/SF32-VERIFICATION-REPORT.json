@@ -1,0 +1,48 @@
+{
+  "version": "SF-32.1",
+  "episode_id": "BPU-WORLD-E01",
+  "checks": [
+    {
+      "id": "SF32-01",
+      "check": "SF-31 contract mapped to runtime modules",
+      "status": "PASS"
+    },
+    {
+      "id": "SF32-02",
+      "check": "stable scene/asset/context IDs defined",
+      "status": "PASS"
+    },
+    {
+      "id": "SF32-03",
+      "check": "mobile route model defined",
+      "status": "PASS"
+    },
+    {
+      "id": "SF32-04",
+      "check": "claim/rights guard defined",
+      "status": "PASS"
+    },
+    {
+      "id": "SF32-05",
+      "check": "commerce activation guard defined",
+      "status": "PASS"
+    },
+    {
+      "id": "SF32-06",
+      "check": "actual runtime execution",
+      "status": "PENDING"
+    },
+    {
+      "id": "SF32-07",
+      "check": "actual mobile build execution",
+      "status": "PENDING"
+    },
+    {
+      "id": "SF32-08",
+      "check": "final media validation",
+      "status": "PENDING"
+    }
+  ],
+  "overall": "ARCHITECTURE_INTEGRATION_READY",
+  "live_runtime": "DISABLED"
+}
