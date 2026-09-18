@@ -1,0 +1,31 @@
+{
+  "schema": "sf50.0",
+  "scene_id": "AUTO-01",
+  "district": "advanced-mobility-district",
+  "hero_asset_id": "BPU-AUTO-SPORT-001",
+  "claim_class": "CONCEPT",
+  "runtime_state_sequence": ["PARKED_SHOWCASE","INTERACTIVE_DISPLAY","RESEARCH_DEMO"],
+  "display_zones": ["exterior","powertrain","electric_traction","energy","aero","materials","digital_lab","academy","product_studio"],
+  "technical_links": {
+    "research": true,
+    "digital_lab": true,
+    "academy": true,
+    "product_studio": true
+  },
+  "asset_targets": {
+    "runtime": "glTF/GLB PBR",
+    "mobile_fallback": "optimized_3d_or_still_render",
+    "interactive_hotspots": true,
+    "camera_orbit": true,
+    "cutaway_overlays": true
+  },
+  "architecture": {
+    "rear_mid_biodiesel_engine_mechanical_rear_drive": true,
+    "engine_electrical_generation_support": true,
+    "individual_wheel_electric_motors": true,
+    "front_hub_motor_torque_vectoring_research": true,
+    "microturbine_hv_generation": true
+  },
+  "publication": "PROVENANCE_RIGHTS_CLAIMS_AND_HUMAN_REVIEW_REQUIRED",
+  "next_gate": "SF-51"
+}
