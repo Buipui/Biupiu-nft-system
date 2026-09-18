@@ -62,4 +62,6 @@ Main Hub architecture; department gateway portals; shared character base; farmin
 
 **Gate 05 — Cross-Department Campus & Shared-Service Layer:** `research/BIUPIU-3D-GATE-05-CROSS-DEPARTMENT-CAMPUS-SERVICES-v1.0.md`
 
-Status: Gates 01–05 specifications committed for implementation. Binary 3D assets, production runtime services and live IoT connectors are not claimed as deployed. Next gate: world data/API contract and persistent project state.
+**Gate 06 — World Data/API Contract & Persistent Project State:** `research/BIUPIU-3D-GATE-06-WORLD-DATA-API-PERSISTENCE-v1.0.md`
+
+Status: Gates 01–06 specifications committed for implementation. Binary 3D assets, production backend services and live IoT connectors are not claimed as deployed. Next gate: runtime package/build matrix for reproducible Windows/Android builds.
