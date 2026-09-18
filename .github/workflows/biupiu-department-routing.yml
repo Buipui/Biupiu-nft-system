@@ -1,0 +1,36 @@
+name: Biupiu Department Package Routing
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/shared/runtime/**"
+      - "packages/biupiu-main-hub/**"
+      - "packages/biupiu-access/**"
+      - "packages/biupiu-rnd-os/**"
+      - "packages/biupiu-smart-farming/**"
+      - "packages/biupiu-smart-metallurgy/**"
+      - ".github/workflows/biupiu-department-routing.yml"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/**"
+      - "packages/**"
+      - ".github/workflows/biupiu-department-routing.yml"
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify package entry points
+        run: |
+          test -f packages/biupiu-main-hub/src/index.ts
+          test -f packages/biupiu-access/src/index.ts
+          test -f packages/biupiu-rnd-os/src/index.ts
+          test -f packages/biupiu-smart-farming/src/index.ts
+          test -f packages/biupiu-smart-metallurgy/src/index.ts
+      - name: Verify routing map
+        run: |
+          grep -q '@biupiu/smart-farming' apps/shared/runtime/department-router.ts
+          grep -q '@biupiu/smart-metallurgy' apps/shared/runtime/department-router.ts
+          grep -q '@biupiu/rnd-os' apps/shared/runtime/department-router.ts
