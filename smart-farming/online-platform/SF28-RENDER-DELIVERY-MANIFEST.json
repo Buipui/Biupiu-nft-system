@@ -1,0 +1,53 @@
+{
+  "version": "SF-28.1",
+  "episode_id": "BPU-WORLD-E01",
+  "delivery_profiles": [
+    {
+      "id": "MASTER-16X9",
+      "ratio": "16:9",
+      "duration_seconds": 100
+    },
+    {
+      "id": "TRAILER-30",
+      "ratio": "16:9",
+      "duration_seconds": 30
+    },
+    {
+      "id": "TEASER-15",
+      "ratio": "16:9",
+      "duration_seconds": 15
+    },
+    {
+      "id": "VERTICAL-9X16",
+      "ratio": "9:16",
+      "duration_seconds": 100
+    },
+    {
+      "id": "CAMPAIGN-4X5",
+      "ratio": "4:5",
+      "duration_seconds": 30
+    }
+  ],
+  "department_cutdowns": [
+    "CUT-AIR-01",
+    "CUT-MAR-01",
+    "CUT-AGR-01",
+    "CUT-CONS-01",
+    "CUT-AI-01"
+  ],
+  "still_outputs": [
+    "WORLD-GATEWAY-01",
+    "AIR-01",
+    "MAR-01",
+    "AGR-01",
+    "CONS-01",
+    "AI-01"
+  ],
+  "qa_states": [
+    "PASS",
+    "CONDITIONAL PASS",
+    "REWORK",
+    "BLOCKED"
+  ],
+  "release_gate": "all blocking QA issues resolved && rights_cleared && claims_reviewed && brand_reviewed"
+}
