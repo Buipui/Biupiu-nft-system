@@ -1,0 +1,22 @@
+{
+  "schema_version":"1.0",
+  "subscriber_record":{
+    "subscriber_id":"server_generated",
+    "tier":"PUBLIC",
+    "department_entitlements":[],
+    "roles":[],
+    "status":"active",
+    "created_at":"server_timestamp"
+  },
+  "authorization_order":[
+    "account_status",
+    "tier_capability",
+    "department_entitlement",
+    "role_privilege",
+    "resource_policy",
+    "audit_event"
+  ],
+  "upgrade_policy":"server_only",
+  "billing_policy":"external_subscription_system",
+  "production_authority":"server_api"
+}
