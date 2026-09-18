@@ -1,0 +1,21 @@
+{
+  "schema": "biupiu.runtime.contract.v1",
+  "runtime": "Biupiu R&D OS",
+  "authority": {
+    "client": "presentation-and-local-state",
+    "server": "authorization-and-persistent-state"
+  },
+  "startup": [
+    "LOAD_APP_CONTRACT",
+    "LOAD_SUBSCRIBER_CONTEXT",
+    "BUILD_MAIN_HUB",
+    "RESOLVE_DEPARTMENT_ENTITLEMENTS"
+  ],
+  "routes": {
+    "MAIN_HUB": "apps/shared/runtime/main-hub",
+    "SMART_FARMING": "packages/biupiu-smart-farming",
+    "SMART_METAL_WORKSHOP": "packages/biupiu-smart-metallurgy",
+    "RND_OS": "packages/biupiu-rnd-os"
+  },
+  "clients": ["android", "windows"]
+}
