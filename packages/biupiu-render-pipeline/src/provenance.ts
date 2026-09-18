@@ -1,0 +1,2 @@
+export interface RenderProvenance { jobId:string; sourceAssetIds:string[]; sourceModelVersion:string; provider:string; providerJobId?:string; createdAt:string; parentJobId?:string; }
+export const createProvenance=(p:Omit<RenderProvenance,"createdAt">):RenderProvenance=>({...p,createdAt:new Date().toISOString()});
