@@ -1,0 +1,20 @@
+{
+  "schema": "sf49.0",
+  "project_id": "BPU-AUTO-SPORT-001",
+  "gate": "SF-49",
+  "status": "VIDEO_INTEGRATION_READY",
+  "asset_approval_states": ["RENDER_SPEC_READY","SOURCE_RECORDED","PROVENANCE_RECORDED","RIGHTS_REVIEWED","CLAIMS_REVIEWED","VISUAL_REVIEWED","VIDEO_READY","PUBLISHED"],
+  "render_outputs": ["hero_16_9","vertical_9_16","campaign_4_5","technical_explainer","transparent_cutout"],
+  "video_outputs": ["master_16_9","trailer_30s","teaser_15s","vertical_9_16","campaign_4_5","world_showroom_sequence"],
+  "required_claim_classes": ["CONCEPT","RESEARCH_CONCEPT","DESIGN_STUDY"],
+  "architecture_lock": {
+    "mechanical_rear_drive": true,
+    "engine_electrical_generation_support": true,
+    "individual_wheel_electric_motors": true,
+    "front_motor_torque_vectoring_research": true,
+    "microturbine_auxiliary_generation": true
+  },
+  "commercial_rights_rule": "original_or_explicitly_licensed_assets_only",
+  "final_render_status": "PENDING",
+  "final_video_status": "PENDING"
+}
