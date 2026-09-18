@@ -1,0 +1,85 @@
+{
+  "version": "SF-27.1",
+  "episode_id": "BPU-WORLD-E01",
+  "release_states": [
+    "BLOCKED",
+    "VALIDATION_REQUIRED",
+    "RENDER_READY",
+    "HUMAN_REVIEW",
+    "APPROVED_FOR_ASSEMBLY",
+    "PUBLISHED"
+  ],
+  "assets": [
+    {
+      "id": "WORLD-GATEWAY-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    },
+    {
+      "id": "biu-veh-air-001",
+      "status": "VALIDATION_REQUIRED",
+      "claim_status": "CONCEPT"
+    },
+    {
+      "id": "biu-veh-marine-001",
+      "status": "VALIDATION_REQUIRED",
+      "claim_status": "RESEARCH CONCEPT"
+    },
+    {
+      "id": "biu-veh-agri-001",
+      "status": "VALIDATION_REQUIRED",
+      "claim_status": "RESEARCH PROTOTYPE"
+    },
+    {
+      "id": "biu-veh-offroad-001",
+      "status": "VALIDATION_REQUIRED",
+      "claim_status": "CONCEPT"
+    },
+    {
+      "id": "biu-veh-ai-001",
+      "status": "VALIDATION_REQUIRED",
+      "claim_status": "RESEARCH CONCEPT"
+    },
+    {
+      "id": "BIUPIU-BRAND-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "brand"
+    },
+    {
+      "id": "AIR-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    },
+    {
+      "id": "MAR-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    },
+    {
+      "id": "AGR-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    },
+    {
+      "id": "CONS-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    },
+    {
+      "id": "AI-01",
+      "status": "VALIDATION_REQUIRED",
+      "type": "environment"
+    }
+  ],
+  "checks": [
+    "provenance",
+    "rights",
+    "claim_status",
+    "visual_identity",
+    "technical_quality",
+    "safe_area",
+    "watermark_check",
+    "camera_continuity"
+  ],
+  "publication_rule": "ALL required checks passed AND human review approved"
+}
