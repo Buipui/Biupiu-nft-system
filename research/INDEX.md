@@ -360,3 +360,10 @@ Added `research/BIUPIU-RENDER-INTEROPERABILITY-RED-04-v1.0.md`, a provider-neutr
 ## Lumion LUM-03 — machine-readable asset/material manifest
 
 Added `research/visual-assets/biupiu-visual-asset-manifest.schema.json`, an example manifest, and README documentation. The schema records asset identity, source/creator, licence evidence, file hashes/metadata, PBR maps, provenance/transformation history, authoring/target applications, and links to Biupiu Digital Twin/Materials Genome/project IDs. **LUM-03 executed.**
+
+
+## RED-05 — Universal asset/material interchange
+
+Added `research/BIUPIU-UNIVERSAL-ASSET-INTERCHANGE-RED-05-v1.0.md` and the provider-neutral interchange implementation under `packages/biupiu-render-pipeline/`. The new manifest carries sourceAssetId, sourceModelVersion, research/evidence/IP/licence states, geometry units/coordinate metadata, stable material IDs, PBR metadata and provenance into provider packages. GLTF, FBX and USD are supported as interchange targets, with OBJ/USDZ/native formats available to adapters. Provider-specific conversion remains adapter-controlled and lossy/unsupported features must be recorded rather than silently substituted.
+
+Added `src/interchange.ts`, a canonical test fixture and `tests/red-05.interchange.ts`. The render pipeline export file was normalized to real newlines and now exposes the RED-05 contract. The module contract was expanded to match all provider IDs already defined by the pipeline. **RED-05 status:** repository implementation complete; live cross-provider conversion/render validation remains gated on connected application hosts and measured outputs.
