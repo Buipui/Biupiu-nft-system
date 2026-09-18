@@ -1,0 +1,23 @@
+{
+  "schema_version":"sf21.1",
+  "world_id":"biupiu-world-v1",
+  "persistent_world":true,
+  "content_studio":true,
+  "series":[
+    {"id":"SERIES-01","name":"Biupiu World","type":"world_showcase"},
+    {"id":"SERIES-02","name":"Department Showcase","type":"department"},
+    {"id":"SERIES-03","name":"Digital Lab","type":"research"},
+    {"id":"SERIES-04","name":"Biupiu Academy","type":"education"},
+    {"id":"SERIES-05","name":"Regenerative Farming","type":"agriculture"},
+    {"id":"SERIES-06","name":"Biotech & Materials","type":"research"},
+    {"id":"SERIES-07","name":"Intelligence Hub","type":"technology"},
+    {"id":"SERIES-08","name":"Mobility & Marine","type":"mobility"},
+    {"id":"SERIES-09","name":"Ancient Technology Research","type":"history_reconstruction"},
+    {"id":"SERIES-10","name":"Biupiu Product Studio","type":"product"},
+    {"id":"SERIES-11","name":"World Stories","type":"narrative"},
+    {"id":"SERIES-12","name":"Launch & Campaign","type":"marketing"}
+  ],
+  "persistent_scenes":["AIR-01","MAR-01","AGR-01","CONS-01","AI-01"],
+  "render_profiles":["cinematic_16_9","mobile_9_16","short_4_5","world_sequence","academy_lesson","product_ad","presentation_cut"],
+  "content_status":["draft","review","approved","published","retired"]
+}
