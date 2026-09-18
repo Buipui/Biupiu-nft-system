@@ -1,6 +1,6 @@
 # Biupiu R&D Research Index
 
-**Version:** 3.1  
+**Version:** 3.2  
 **Updated:** 18 September 2026  
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -51,6 +51,17 @@ Core centre systems now include:
 - `BIUPIU-EXTERNAL-COLLABORATION-LAYER-v1.0.md` — structured university, laboratory, engineering, manufacturing, investor and government collaboration records.
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
+
+## Plant-based composites and blade materials
+
+Added `research/BIUPIU-PLANT-BASED-BLADE-MATERIALS-v1.0.md` for plant-fibre blade selection and evidence-controlled micro-turbine materials research. Hemp and flax are primary plant-fibre candidates for stiffness-driven composite blade regions; basalt is retained as a non-plant hybrid reinforcement for high-load zones.
+
+Added `research/BIUPIU-PLANT-FUNCTIONAL-ALLOCATION-REGISTRY-v1.0.md`, allocating plant species/feedstocks to HEMP, TEXTILES, COMPOSITES, MATERIALS, ENERGY, AERO, MARINE, AGRI, WATER, BIOCARBON, BIOCHEM, BIOMED, ROBOTICS/ADV-MFG and AI/COMPUTE by measurable functionality.
+
+Added `research/BIUPIU-BIO-COMPOSITE-DIGITAL-TWIN-v1.0.md`, linking plant → fibre → laminate → blade/component → system with CFD/FEA, sensor data, manufacturing parameters and evidence states.
+
+### Plant-composite evidence bundle
+ResearchGate and Emerald Insight evidence is routed through `RG` and `EMERALD`. Current evidence supports hemp/flax as leading natural-fibre blade candidates, while hybridisation and manufacturing conditions remain qualification variables. No literature record is treated as certification.
 
 ## Master evidence architecture
 `research/BIUPIU-EVIDENCE-LAYER-ARCHITECTURE.md` is the master source-control architecture. Core layers are: primary archaeology/history; JSTOR; AnthroSource; ResearchGate/scientific literature; Emerald Insight; controlled speculative/hypothesis sources; ancient texts; scientific primary data; patents/prior art; public/declassified technical archives; GitHub/BIUPIU CODEX; computational validation; and physical/experimental validation.
@@ -118,7 +129,7 @@ All existing department streams remain active. New centre systems are overlays t
 
 ## Version
 
-**Biupiu R&D Research Index v3.0 — Executable R&D OS v0.2 Integration**  
+**Biupiu R&D Research Index v3.2 — Plant Composite + Digital Twin Integration**  
 **Updated:** 18 September 2026
 
 
