@@ -50,6 +50,51 @@ The world does not override subscriber restrictions. A METALLURGY subscriber ent
 ## World-building rule
 Biupiu World is a research-backed interactive sandbox, not a claim that every reconstructed building, machine, process or civilisation is historically exact. Incomplete evidence is visibly identified as reconstruction or creative interpretation.
 
+
+## New Age Theory space
+
+A dedicated speculative gateway is now added alongside the established civilisation regions:
+
+MAIN HUB → NEW AGE THEORY → TOPIC REGION → ENTITY / LANDSCAPE → CLAIM ARCHIVE → EVIDENCE ROOM → WORKSHOP / LAB → PROJECT
+
+The initial dedicated environments are:
+
+- **NAT-ATL — Atlantis**
+- **NAT-MU — Mu**
+- **NAT-HYP — Hyperborea**
+- **NAT-TAR — Tartaria / Great Tartaria**
+- **NAT-HOLLOW — Hollow Earth**
+
+The New Age Theory layer also indexes Lemuria, Kumari Kandam, Thule, Hy-Brasil, Agartha, Shambhala, Aztlan, Iram/Ubar, Paititi, Zerzura, Ys, Vineta, Cantre'r Gwaelod and El Dorado.
+
+These are not inserted into the established historical-civilisation map as verified civilisations. Each receives an evidence state, source lineage and claim-testing workflow.
+
+### New Age Theory control layer
+
+Documented submerged or transformed landscapes are kept as reality-control environments:
+
+- Doggerland
+- Sundaland
+- Beringia
+- Sahul
+- Te Riu-a-Māui / Zealandia
+
+They provide real geological and archaeological comparison cases for testing claims about submerged lands and lost settlements without treating those cases as evidence that speculative civilisations existed.
+
+### Evidence-preserving rule
+
+New Age Theory uses:
+
+SOURCE → CLAIM → HISTORICAL CONTEXT → COUNTER-EVIDENCE → HYPOTHESIS → MODEL → TEST → RESULT
+
+Historical sources, archaeology, geology, religious traditions, folklore, modern internet theories and creative world-building are separately classified.
+
+Hollow Earth specifically receives a historical-theory layer (e.g. early scientific/philosophical models), a modern esoteric layer, and a geophysics reality-check layer.
+
+Tartaria specifically receives two linked but distinct layers: documented historical cartographic usage of the term “Tartary/Tartaria” and the modern “Great Tartaria” lost-empire theory.
+
+See `research/BIUPIU-NEW-AGE-THEORY-LOST-CIVILISATIONS-v1.0.md` for the full environment matrix, claim-testing modules and source register.
+
 ## Development phases
 W0 world registry and access model; W1 Main Hub → Region → Civilisation navigation; W2 historical environment shells and asset registry; W3 interactive scenes/maps/workshops; W4 research-object interaction and reconstruction tools; W5 evidence-constrained AI guide; W6 modern Innovation Zones connecting validated research to Biupiu R&D.
 
