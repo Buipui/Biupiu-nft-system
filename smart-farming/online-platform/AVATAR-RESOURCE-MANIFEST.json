@@ -1,0 +1,19 @@
+{
+  "schema_version":"0.1",
+  "packs":[
+    {"id":"egypt-nile","label":"Ancient Egypt / Nile Valley","evidence":"research-required"},
+    {"id":"mesopotamia","label":"Mesopotamia","subgroups":["sumer","akkad","babylon","assyria"]},
+    {"id":"levant-phoenician","label":"Ancient Levant / Phoenician contexts"},
+    {"id":"greece","label":"Ancient Greece"},
+    {"id":"rome","label":"Ancient Rome"},
+    {"id":"achaemenid-persia","label":"Achaemenid Persian world"},
+    {"id":"indus-valley","label":"Indus Valley Civilisation"},
+    {"id":"ancient-china","label":"Ancient China"},
+    {"id":"ancient-india","label":"Ancient India"},
+    {"id":"mesoamerica","label":"Mesoamerica","subgroups":["maya","mexica-aztec","other-documented"]},
+    {"id":"andes","label":"Andean civilisations","subgroups":["tiwanaku","inca"]},
+    {"id":"kush","label":"Ancient Nubia / Kush"},
+    {"id":"southern-africa","label":"Ancient southern African archaeological contexts"},
+    {"id":"west-africa","label":"Ancient West African contexts"}
+  ]
+}
