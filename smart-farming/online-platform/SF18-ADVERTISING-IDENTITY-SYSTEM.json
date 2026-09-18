@@ -1,0 +1,17 @@
+{
+  "schema_version":"sf18.1",
+  "identity_system":{
+    "master_brand":"Biupiu",
+    "visual_principles":["premium","biotech","regenerative","advanced-materials","futuristic","natural","technical","sophisticated"],
+    "avoid":["generic green-tech","unlicensed game-derived visuals","visual clutter","unverified claims"],
+    "asset_roles":["hero_vehicle","department_marker","research_exhibit","product_story","academy_promo","digital_lab_promo","marketplace_banner"],
+    "future_inputs":["video","product_design","CAD","3D_model","photography","render","licensed_asset"],
+    "output_types":["world_billboard","vehicle_livery","showroom_scene","3D_product_card","social_adaptation","mobile_adaptation","gallery_panel"]
+  },
+  "claim_control":{
+    "concept":"label concept",
+    "prototype":"label prototype",
+    "research":"label research",
+    "available_product":"only mark available when verified"
+  }
+}
