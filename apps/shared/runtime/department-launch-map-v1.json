@@ -1,0 +1,21 @@
+{
+  "schema": "biupiu.department.launch-map.v1",
+  "targets": {
+    "SMART_FARMING": {
+      "package": "@biupiu/smart-farming",
+      "android": "biupiu://department/smart-farming",
+      "windows": "biupiu://department/smart-farming"
+    },
+    "SMART_METAL_WORKSHOP": {
+      "package": "@biupiu/smart-metallurgy",
+      "android": "biupiu://department/smart-metal-workshop",
+      "windows": "biupiu://department/smart-metal-workshop"
+    },
+    "RND_OS": {
+      "package": "@biupiu/rnd-os",
+      "android": "biupiu://department/rnd-os",
+      "windows": "biupiu://department/rnd-os"
+    }
+  },
+  "note": "Deep-link targets are launch contracts; actual native registration is a subsequent integration step."
+}
