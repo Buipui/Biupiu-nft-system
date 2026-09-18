@@ -1,0 +1,29 @@
+name: Biupiu Department Module Contract
+
+on:
+  push:
+    paths:
+      - "apps/shared/runtime/department-module*"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModule*"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt"
+      - "apps/windows/DepartmentModule*"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/department-module*"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModule*"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt"
+      - "apps/windows/DepartmentModule*"
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify module contract
+        run: |
+          grep -q '@biupiu/smart-farming' apps/shared/runtime/department-module.ts
+          grep -q '@biupiu/smart-metallurgy' apps/shared/runtime/department-module.ts
+          grep -q 'biupiu://department/rnd-os' apps/shared/runtime/department-module.ts
+          grep -q 'FARMING_WORLD' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt
+          grep -q 'METAL_MAKING_WORLD' apps/windows/DepartmentModuleRegistry.cs
+          grep -q 'RND_OS_HOME' apps/windows/DepartmentModuleRegistry.cs
