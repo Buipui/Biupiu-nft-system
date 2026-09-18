@@ -1,0 +1,46 @@
+{
+  "version": "SF-30.1",
+  "episode_id": "BPU-WORLD-E01",
+  "runtime_state": "INTEGRATION_BLOCKED",
+  "tests": [
+    {
+      "id": "RT-01",
+      "name": "episode launch",
+      "status": "TEST_READY"
+    },
+    {
+      "id": "RT-02",
+      "name": "scene traversal",
+      "status": "TEST_READY"
+    },
+    {
+      "id": "RT-03",
+      "name": "context bridge",
+      "status": "TEST_READY"
+    },
+    {
+      "id": "RT-04",
+      "name": "claim labels",
+      "status": "TEST_READY"
+    },
+    {
+      "id": "RT-05",
+      "name": "commerce separation",
+      "status": "TEST_READY"
+    },
+    {
+      "id": "RT-06",
+      "name": "rollback",
+      "status": "TEST_READY"
+    }
+  ],
+  "required_context": [
+    "department_id",
+    "scene_id",
+    "hero_asset_id",
+    "research_link",
+    "digital_lab_link",
+    "academy_link"
+  ],
+  "release_gate": "media_qa_passed && human_approval_recorded && rights_cleared && claim_review_passed"
+}
