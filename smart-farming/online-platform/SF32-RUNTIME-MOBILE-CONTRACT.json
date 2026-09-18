@@ -1,0 +1,64 @@
+{
+  "version": "SF-32.1",
+  "episode_id": "BPU-WORLD-E01",
+  "runtime_mode": "INTEGRATION_TEST",
+  "live_enabled": false,
+  "modules": [
+    "world_launcher",
+    "episode_loader",
+    "scene_resolver",
+    "asset_resolver",
+    "context_bridge",
+    "claim_rights_guard",
+    "mobile_navigation",
+    "digital_lab_adapter",
+    "academy_adapter",
+    "commerce_gallery_adapter",
+    "verification_reporter"
+  ],
+  "routes": [
+    "home",
+    "world",
+    "episode",
+    "department",
+    "research",
+    "digital_lab",
+    "academy",
+    "gallery",
+    "marketplace",
+    "profile"
+  ],
+  "required_session_fields": [
+    "user_id",
+    "episode_id",
+    "scene_id",
+    "department_id",
+    "hero_asset_id",
+    "avatar_id",
+    "property_id",
+    "lesson_id",
+    "experiment_id"
+  ],
+  "required_context_keys": [
+    "department_id",
+    "scene_id",
+    "hero_asset_id",
+    "research_link",
+    "digital_lab_link",
+    "academy_link"
+  ],
+  "guards": [
+    "rights_cleared",
+    "claim_review_passed",
+    "human_approval"
+  ],
+  "mobile_features": [
+    "touch_navigation",
+    "responsive_media",
+    "low_bandwidth_preview",
+    "deferred_3d_loading",
+    "captions",
+    "safe_area"
+  ],
+  "commerce_rule": "no purchase action unless service availability is confirmed"
+}
