@@ -1,0 +1,1 @@
+{"name":"@biupiu/research-lab","version":"0.1.0","private":true,"description":"Biupiu digital laboratory, experiments and result logging package","platforms":["android","windows"],"entry":"src/index.ts","requires":["@biupiu/access"]}
