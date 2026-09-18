@@ -1,0 +1,8 @@
+{
+  "schema_version":"sf18.1",
+  "required":["asset_id","source_type","source_reference","creator","rights_status","department","derived_outputs"],
+  "source_type":["biupiu_original","user_supplied","licensed_third_party","research_reference"],
+  "rights_status":["cleared","pending_review","research_only","restricted"],
+  "derived_outputs":["image","video","texture","3d_model","vehicle_livery","advertisement","world_showcase"],
+  "rule":"research_only or restricted sources cannot generate production advertising assets."
+}
