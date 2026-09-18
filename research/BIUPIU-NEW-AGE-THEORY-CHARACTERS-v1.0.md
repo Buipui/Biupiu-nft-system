@@ -129,3 +129,118 @@ The initial character pack should prioritise:
 - Submerged Landscape Archaeologist
 
 These are original Biupiu World characters rather than depictions of specific living or historical people.
+
+
+## Visual-reference expansion — video/descriptive research layer
+
+Character visual design is now allowed to draw from **archived video footage, descriptive narratives and visual references associated with each speculative tradition**, while keeping a strict provenance distinction between source material and established history.
+
+### Reference interpretation
+
+The research corpus shows several recurring visual conventions:
+
+- **Atlantis:** monumental maritime architecture, coastal/underwater settings, advanced-looking geometric structures and seafaring imagery in modern speculative media.
+- **Mu:** Pacific/island landscapes, monumental ruins, tropical environments, crystal/mineral motifs and oceanic settings in modern speculative interpretations.
+- **Hyperborea:** polar/northern landscapes, solar/Apollo symbolism, monumental or archaic architecture and esoteric “ancient northern people” imagery. Some modern fictional treatments add highly fantastical humanoid traits; those are tagged CREATIVE/SPECULATIVE rather than historical.
+- **Tartaria:** ornate monumental civic architecture, domes, towers, star forts, grand interiors, old-world clothing and “pre-reset” urban imagery frequently used in online theory videos. Some sources portray alleged inhabitants as giants; that is a claim-specific visual variant, not a factual biological conclusion. Recent online video descriptions explicitly frame many visualisations as dramatized or speculative. citeturn0search0turn0search5turn0search7
+- **Hollow Earth / Agartha:** subterranean cities, immense caverns, inner suns/lighting systems, crystalline environments and expedition aesthetics in esoteric/fictional representations.
+- **Lost-land environments generally:** use source-specific architecture, terrain, clothing, tools and materials where available, with fictional interpolation only in clearly marked layers.
+
+### Character-model asset pipeline
+
+Existing **allocated mod assets** may be reused as source/reference assets only where the repository records their licence/permission and provenance.
+
+Asset pipeline:
+
+MOD ASSET / VIDEO REFERENCE
+→ LICENCE CHECK
+→ ASSET ID
+→ SOURCE / VIDEO ID
+→ ENVIRONMENT ID
+→ VISUAL FEATURE EXTRACTION
+→ CHARACTER / ENVIRONMENT VARIANT
+→ EVIDENCE STATE
+→ RIGHTS / LICENCE TAG
+→ OPTIMISED GAME ASSET
+→ WORLD INTEGRATION
+
+### Mod-asset rules
+
+1. Do not assume a mod asset is legally reusable merely because it is downloadable.
+2. Record the original mod, creator, licence, source URL, asset filename and permitted use.
+3. Separate **Biupiu-original assets**, **licensed/permissioned mod assets**, **public-domain assets** and **reference-only assets**.
+4. If a mod has a restrictive licence, the asset remains reference-only unless permission is obtained.
+5. Do not redistribute extracted copyrighted game assets as part of a public Biupiu package unless the licence permits it.
+6. The final character system should support swappable meshes, textures, clothing, accessories and animation rigs so licensed replacements can be substituted without changing world logic.
+
+## Environment visual-design matrix
+
+### Atlantis
+Visual layers:
+- coastal/underwater metropolis
+- monumental stone/metal architecture
+- submerged ruins
+- marine research zone
+- speculative energy/crystal zone
+- navigation/shipyard area
+
+### Mu
+Visual layers:
+- tropical Pacific island geography
+- oceanic settlements
+- monumental terraces
+- botanical zones
+- mineral/crystal research spaces
+- submerged/coastal ruins
+
+### Hyperborea
+Visual layers:
+- northern/polar terrain
+- ice/snow and highland zones
+- monumental ceremonial architecture
+- astronomical/solar symbolism
+- archive and mythology spaces
+- speculative advanced-technology layer
+
+### Tartaria
+Visual layers:
+- ornate imperial/civic architecture
+- domed halls and towers
+- star-fort geometry
+- monumental railway/exhibition/civic spaces
+- historical-map district
+- “reset/mud-flood” claim reconstruction district
+- architecture-forensics laboratory
+
+### Hollow Earth
+Visual layers:
+- deep cavern entrances
+- enormous subterranean chambers
+- underground rivers
+- geothermal/mineral zones
+- speculative inner-city environments
+- geophysics reality-check laboratory
+
+## Visual evidence states
+
+Each visual component receives:
+- DOCUMENTED REFERENCE
+- HISTORICAL RECONSTRUCTION
+- SOURCE-BASED SPECULATION
+- CREATIVE INTERPRETATION
+- GAME/WORLD-BUILDING FICTION
+- REFERENCE ONLY
+
+This prevents a video-game mod, AI image, YouTube reconstruction or speculative artwork from being mistaken for archaeological evidence.
+
+## Production priority
+
+The first environment/character bundle should use the allocated assets as **reference/implementation candidates** for:
+
+1. Tartaria — character + grand civic environment
+2. Atlantis — maritime/underwater character + environment
+3. Hyperborea — northern/polar character + environment
+4. Mu — Pacific/oceanic character + environment
+5. Hollow Earth — subterranean character + environment
+
+The Biupiu World engine should expose these as interchangeable environment packages rather than hard-coding one visual interpretation as historical truth.
