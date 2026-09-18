@@ -1,0 +1,25 @@
+{
+  "version": "SF-37.1",
+  "record": {
+    "development_id": "string",
+    "department_id": "string",
+    "showcase_scene_id": "string",
+    "status": "CONCEPT|RESEARCH|PROTOTYPE|DEMONSTRATOR|AVAILABLE_PRODUCT",
+    "claim_class": "string",
+    "hero_asset_id": "string|null",
+    "research_links": "array",
+    "digital_lab_links": "array",
+    "academy_links": "array",
+    "catalogue_links": "array"
+  },
+  "marine_example": {
+    "development_id": "AQUA-01-HYDROFOIL",
+    "department_id": "D-MAR",
+    "showcase_scene_id": "MAR-01",
+    "status": "CONCEPT",
+    "claim_class": "DESIGN_REFERENCE",
+    "hero_asset_id": "biu-veh-marine-001",
+    "design_reference": "Biupiu glass hydrofoil concept image"
+  },
+  "validation": "status and claim_class are mandatory before display"
+}
