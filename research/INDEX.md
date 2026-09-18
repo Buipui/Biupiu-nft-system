@@ -52,6 +52,12 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Blade Material Genome and qualification gate
+
+Added `research/BIUPIU-BLADE-MATERIAL-GENOME-v1.0.md` and opened **GATE BM-01**. The genome establishes a common qualification matrix for hemp/epoxy, flax/epoxy, hemp/flax/epoxy, hemp/flax/basalt/epoxy and secondary plant composites. Literature observations remain source-specific and cannot substitute for Biupiu-tested allowables.
+
+The next executable stage is the common Blade Digital Twin parameter schema and simulation runner, using identical geometry/load cases across material candidates.
+
 ## Plant-based composites and blade materials
 
 Added `research/BIUPIU-PLANT-BASED-BLADE-MATERIALS-v1.0.md` for plant-fibre blade selection and evidence-controlled micro-turbine materials research. Hemp and flax are primary plant-fibre candidates for stiffness-driven composite blade regions; basalt is retained as a non-plant hybrid reinforcement for high-load zones.
