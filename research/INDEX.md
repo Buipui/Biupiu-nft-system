@@ -159,3 +159,14 @@ Each sandbox follows: MAIN HUB → CIVILISATION SANDBOX → CULTURAL HUB → DEP
 ## Biupiu World — ancient civilisation layer
 
 `research/BIUPIU-WORLD-ANCIENT-CIVILISATIONS-v1.0.md` defines the next world-building layer: separate civilisation environments inside regional sandboxes, department-specific spaces, historical/reconstruction zones, an asset-provenance model and evidence/access firewalls. Initial mapped environments include Southern African cultures, Ancient Egypt/Nubian-Kushite, Sumerian/Akkadian/Babylonian/Assyrian Mesopotamia, Indus/Harappan and South Asian environments, ancient Chinese/Japanese environments, and Mesoamerican/Andean environments. Damascus is modelled as a regional historical city/trade/metalworking gateway.
+
+
+## Advanced Crystal Labs
+
+Added the crystal-lab layer to Biupiu World:
+- Mesopotamia Advanced Crystal Lab — archaeological/materials/optics research environment.
+- Mu / Atlantean Crystal Speculative Lab — controlled hypothesis-testing environment.
+- Atlantean Gardens — speculative world-building environment connecting water, minerals, optics, geometry and botanical zones.
+- Crystal Claim-to-Test Register — source → hypothesis → experiment → measurement → reproduction → result workflow.
+
+The speculative environments are explicitly separated from established archaeology and physics. Subscriber department controls remain active, and negative experimental results are retained.
