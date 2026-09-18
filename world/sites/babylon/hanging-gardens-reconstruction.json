@@ -1,0 +1,12 @@
+{
+  "site_id":"babylon_hanging_gardens_reconstruction",
+  "display_name":"Hanging Gardens — Reconstruction Scenario",
+  "terrain":"elevated stepped terraces",
+  "features":["stepped planting beds","water distribution","tree/crop maintenance","urban monumental setting"],
+  "mechanics":["water lifting","water loss","maintenance labour","plant selection","terrace capacity"],
+  "evidence_class":"RECONSTRUCTION",
+  "confidence":"OPEN",
+  "reconstruction":true,
+  "ui_disclosure":"Interpretive simulation based on later classical descriptions; existence and exact location/design remain unresolved.",
+  "sources":["National Geographic / classical-source review; alternative Nineveh hypothesis tracked separately"]
+}
