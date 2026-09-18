@@ -1,0 +1,52 @@
+{
+  "asset_id": "EXAMPLE-MATERIAL-001",
+  "asset_type": "material",
+  "name": "Example PBR Material",
+  "source": {
+    "url": "https://example.invalid/source",
+    "repository": "",
+    "creator": ""
+  },
+  "licence": {
+    "status": "pending",
+    "name": "",
+    "evidence_url": ""
+  },
+  "files": [
+    {
+      "path": "materials/example/",
+      "format": "PBR"
+    }
+  ],
+  "pbr": {
+    "base_color": "",
+    "normal": "",
+    "roughness": "",
+    "metallic": "",
+    "height": "",
+    "ao": "",
+    "emissive": "",
+    "uv_scale": 1
+  },
+  "provenance": {
+    "acquired_at": "YYYY-MM-DD",
+    "transformation_log": [],
+    "source_version": ""
+  },
+  "pipeline": {
+    "authoring": [
+      "Blender"
+    ],
+    "targets": [
+      "Lumion",
+      "Unreal Engine 5",
+      "V-Ray"
+    ]
+  },
+  "biupiu_links": {
+    "department": "",
+    "digital_twin_id": "",
+    "material_genome_id": "",
+    "project_id": ""
+  }
+}
