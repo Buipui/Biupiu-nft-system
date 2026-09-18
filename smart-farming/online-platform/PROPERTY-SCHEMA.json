@@ -1,0 +1,15 @@
+{
+  "schema_version":"0.1",
+  "property_id":"string",
+  "environment_id":"string",
+  "property_type":"starter|researcher|premium|heritage-inspired|showcase|community",
+  "title":"string",
+  "design_status":"concept|prototype|published|retired",
+  "entitlement_type":"licence|access|ownership-model",
+  "price":"commerce-service-value",
+  "inventory":"quantity|unlimited|one-of-one",
+  "features":[],
+  "related_research":[],
+  "related_courses":[],
+  "marketplace_id":"string"
+}
