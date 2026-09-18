@@ -1,0 +1,3 @@
+[submodule "engines/blender-android"]
+	path = engines/blender-android
+	url = https://github.com/Wanderson-Magalhaes/blender_for_android.git
