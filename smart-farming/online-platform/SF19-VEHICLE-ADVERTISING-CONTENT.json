@@ -1,0 +1,10 @@
+{
+  "schema_version":"sf19.1",
+  "showcases":[
+    {"scene_id":"AIR-01","vehicle_id":"biu-veh-air-001","department":"AI/Robotics/Photonics","message":"Advanced mobility research showcase","label":"CONCEPT"},
+    {"scene_id":"MAR-01","vehicle_id":"biu-veh-marine-001","department":"Marine/Hydrofoil","message":"Marine mobility and advanced-materials research","label":"RESEARCH CONCEPT"},
+    {"scene_id":"AGR-01","vehicle_id":"biu-veh-agri-001","department":"Regenerative Agriculture","message":"Smart farming and regenerative field systems","label":"RESEARCH PROTOTYPE"},
+    {"scene_id":"CONS-01","vehicle_id":"biu-veh-offroad-001","department":"Conservation","message":"Field research and conservation mobility","label":"CONCEPT"},
+    {"scene_id":"AI-01","vehicle_id":"biu-veh-ai-001","department":"AI/Intelligence Hub","message":"AI, robotics and digital research infrastructure","label":"RESEARCH CONCEPT"}
+  ]
+}
