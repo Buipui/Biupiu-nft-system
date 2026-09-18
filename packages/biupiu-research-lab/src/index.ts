@@ -1,0 +1,1 @@
+export const BIUPIU_APP="Biupiu Research Lab"; export const PACKAGE="@biupiu/research-lab";
