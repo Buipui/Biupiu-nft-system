@@ -1,0 +1,20 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu World Learning Video Record",
+  "type":"object",
+  "required":["video_id","title","creator","url","topic","environment_tags","rights_status"],
+  "properties":{
+    "video_id":{"type":"string"},
+    "title":{"type":"string"},
+    "creator":{"type":"string"},
+    "url":{"type":"string","format":"uri"},
+    "topic":{"type":"string"},
+    "environment_tags":{"type":"array","items":{"type":"string"}},
+    "evidence_class":{"type":"string"},
+    "date_checked":{"type":"string"},
+    "rights_status":{"type":"string"},
+    "episode_use":{"type":"string"},
+    "notes":{"type":"string"}
+  },
+  "additionalProperties":false
+}
