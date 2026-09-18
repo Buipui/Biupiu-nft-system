@@ -1,0 +1,7 @@
+{
+  "schema_version":"0.1",
+  "plans":["explorer","researcher","professional","institutional"],
+  "resources":[{"resource_id":"string","type":"library|lab|course|plant_profile|ai_feature","access":"public|explorer|researcher|professional|institutional"}],
+  "user_entitlements":[{"user_id":"string","plan":"explorer","active":true,"expires_at":null}],
+  "rules":{"private_experiments_default":true,"shared_data_requires_user_action":true}
+}
