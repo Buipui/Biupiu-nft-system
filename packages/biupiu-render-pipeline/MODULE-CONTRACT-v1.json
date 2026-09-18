@@ -1,1 +1,25 @@
-{"schema":"biupiu.module.render-pipeline.v1","module":"Biupiu Render Pipeline","status":"architecture-integrated","providers":["BLENDER","UNREAL_ENGINE_5","TWINMOTION","KEYSHOT","ADOBE","FIREFLY","RUNWAY"],"flows":["PRODUCT_STILL","DIGITAL_TWIN","CINEMATIC_SHOWREEL","CONCEPT_VARIATION","RESEARCH_VISUALIZATION"],"source_of_truth":"asset-registry","provenance_required":true}
+{
+  "schema":"biupiu.module.render-pipeline.v1",
+  "module":"Biupiu Render Pipeline",
+  "status":"architecture-integrated",
+  "providers":[
+    "BLENDER",
+    "UNREAL_ENGINE_5",
+    "TWINMOTION",
+    "KEYSHOT",
+    "REDSHIFT",
+    "ADOBE",
+    "FIREFLY",
+    "RUNWAY"
+  ],
+  "flows":[
+    "PRODUCT_STILL",
+    "DIGITAL_TWIN",
+    "CINEMATIC_SHOWREEL",
+    "CONCEPT_VARIATION",
+    "RESEARCH_VISUALIZATION"
+  ],
+  "source_of_truth":"asset-registry",
+  "provenance_required":true,
+  "redshift_resources":"research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md"
+}
