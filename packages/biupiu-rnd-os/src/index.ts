@@ -1,0 +1,1 @@
+export const BIUPIU_APP="Biupiu R&D OS"; export const PACKAGE="@biupiu/rnd-os";
