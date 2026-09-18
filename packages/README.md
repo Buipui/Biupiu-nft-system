@@ -8,7 +8,8 @@
 | @biupiu/smart-metallurgy | Biupiu MetalLab | SMART_METAL_WORKSHOP |
 | @biupiu/research-lab | Biupiu Research Lab | RESEARCH |
 | @biupiu/civilisation-world | Biupiu World | CIVILISATION |
-| @biupiu/showcase | Biupiu Showcase | SHOWCASE |
+| @biupiu/showcase | Biupiu Showcase | SHOWCASE
+| @biupiu/keyshot-visualization | KeyShot Visualization | VISUALIZATION | |
 | @biupiu/nft-studio | Biupiu NFT Studio | NFT |
 | @biupiu/rnd-os | Biupiu R&D OS | RND_OS |
 | @biupiu/shared | Biupiu Shared | SHARED |
