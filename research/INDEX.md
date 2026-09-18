@@ -350,3 +350,8 @@ Added `packages/biupiu-render-pipeline/src/redshift.ts` as a provider-neutral Re
 - `software/rnd-os-ai/src/biupiu_ai/gateway_state.py` — synchronized process-local replay/rate state and audit events.
 - `software/rnd-os-ai/tests/test_ai18.py` — replay, rate-limit and audit tests.
 - **AI-18 status:** development/test state layer implemented; distributed durable production state remains gated.
+
+
+## Redshift RED-04 — cross-engine interoperability gate
+
+Added `research/BIUPIU-RENDER-INTEROPERABILITY-RED-04-v1.0.md`, a provider-neutral interoperability matrix covering Blender, Unreal Engine 5, Redshift, V-Ray, Octane, Lumion and KeyShot. Added a machine-readable handoff manifest and deterministic provider-matrix test under `packages/biupiu-render-pipeline/`. The gate preserves source asset identity, model version, evidence/IP/licence state, provider/version, conversion settings, output hash and derivative-only rules. **RED-04 status:** implementation complete and ready for live cross-engine testing; live interoperability is not claimed until connected application environments produce measured results.
