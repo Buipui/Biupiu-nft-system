@@ -1,0 +1,6 @@
+{
+  "schema_version": "0.1",
+  "observation": {"device_id":"SF-01","timestamp":"ISO-8601","soil_moisture_pct":"0-100","soil_raw":"0-1023","light_raw":"0-1023"},
+  "request": {"task":"farm_advisory","constraints":{"manual_approval":true,"max_irrigation_seconds":0}},
+  "response": {"recommendation":"string","confidence":0,"evidence":["string"],"requires_human_approval":true}
+}
