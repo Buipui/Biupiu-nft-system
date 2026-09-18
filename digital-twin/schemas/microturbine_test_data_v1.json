@@ -1,0 +1,6 @@
+{
+  "schema_version":"BIUPIU-MICROTURBINE-TEST-DATA-v1.0",
+  "required":["test_id","module","application","altitude_m","pressure_ratio","recuperator_efficiency","target_kw","uncertainty_fraction","validation_status"],
+  "validation_status":["planned","measured","bench_tested","validated"],
+  "rule":"planned or measured data must not be represented as validated performance"
+}
