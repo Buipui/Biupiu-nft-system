@@ -1,0 +1,2 @@
+export const DEFAULT_RENDER_EXECUTION_POLICY={maxAttempts:3,retryableStates:["FAILED"],pollIntervalMs:5000,timeoutMs:1800000};
+export const REVIEW_REQUIRED_OUTPUTS=["VIDEO","SHOWREEL","GENERATIVE_VARIATION"];
