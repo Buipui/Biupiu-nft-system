@@ -1,0 +1,24 @@
+{
+  "schema": "biupiu.universal-asset.v1",
+  "sourceAssetId": "BIUPIU-RENDER-TEST-001",
+  "sourceModelVersion": "TEST-001",
+  "researchIds": [],
+  "evidenceState": "EXPERIMENTAL",
+  "ipState": "INTERNAL",
+  "licenceState": "PENDING",
+  "geometry": {
+    "interchangeFormats": ["GLTF","FBX","USD"],
+    "units": "metric",
+    "coordinateSystem": "right-handed",
+    "upAxis": "Z"
+  },
+  "materials": [
+    {
+      "materialId": "MAT-COMPOSITE-001",
+      "name": "Biupiu Composite Visual",
+      "pbr": {"baseColor":"#808080","metallic":0,"roughness":0.42},
+      "licenceState": "PENDING"
+    }
+  ],
+  "provenance": {"sourceCommit":"TEST"}
+}
