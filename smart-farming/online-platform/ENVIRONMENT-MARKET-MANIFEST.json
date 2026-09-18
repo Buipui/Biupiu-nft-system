@@ -1,0 +1,20 @@
+{
+  "schema_version":"0.1",
+  "environments":[
+    {"id":"nile-valley","label":"Nile Valley / Ancient Egypt-inspired","market":"market-nile"},
+    {"id":"mesopotamia","label":"Mesopotamia","market":"market-mesopotamia","contexts":["sumer","akkad","babylon","assyria"]},
+    {"id":"ancient-levant","label":"Ancient Levant / Phoenician-inspired","market":"market-levant"},
+    {"id":"ancient-greece","label":"Ancient Greek-inspired","market":"market-greece"},
+    {"id":"ancient-rome","label":"Ancient Roman-inspired","market":"market-rome"},
+    {"id":"achaemenid-persia","label":"Achaemenid Persian-inspired","market":"market-persia"},
+    {"id":"indus-valley","label":"Indus Valley-inspired","market":"market-indus"},
+    {"id":"ancient-china","label":"Ancient China-inspired","market":"market-china"},
+    {"id":"ancient-india","label":"Ancient India-inspired","market":"market-india"},
+    {"id":"mesoamerica","label":"Mesoamerican research environments","market":"market-mesoamerica","contexts":["maya","mexica-aztec"]},
+    {"id":"andes","label":"Andean research environments","market":"market-andes","contexts":["tiwanaku","inca"]},
+    {"id":"kush","label":"Nubia / Kush-inspired","market":"market-kush"},
+    {"id":"southern-africa","label":"Southern African archaeological contexts","market":"market-southern-africa"},
+    {"id":"west-africa","label":"West African historical contexts","market":"market-west-africa"},
+    {"id":"biupiu-contemporary","label":"Contemporary Biupiu","market":"market-biupiu"}
+  ]
+}
