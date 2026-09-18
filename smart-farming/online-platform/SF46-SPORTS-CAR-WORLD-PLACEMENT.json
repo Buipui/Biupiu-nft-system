@@ -1,0 +1,20 @@
+{
+  "schema":"sf46.0",
+  "district_id":"advanced-mobility-district",
+  "asset_id":"BPU-AUTO-SPORT-001",
+  "placement":{
+    "primary":"advanced-mobility-showroom",
+    "secondary":"materials-lab",
+    "research_demo":"digital-lab-automotive",
+    "advertising":"biupiu-product-studio"
+  },
+  "display_sequence":[
+    "hero_vehicle",
+    "computational_geometry_surface",
+    "biupiu_resin_metasurface_macro",
+    "aerobrake_deployment_concept",
+    "microturbine_generator_cutaway",
+    "individual_wheel_motor_visualisation",
+    "energy_flow_visualisation"
+  ]
+}
