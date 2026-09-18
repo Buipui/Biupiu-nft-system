@@ -1,0 +1,20 @@
+name: Biupiu Animation Pipeline Validation
+
+on:
+  push:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-pipeline-validation.yml"
+  pull_request:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-pipeline-validation.yml"
+  workflow_dispatch:
+
+jobs:
+  static-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate USD/OTIO pipeline contract
+        run: python3 research/pipeline-tests/validate_animation_pipeline.py
