@@ -1,0 +1,11 @@
+{
+  "mod_system":"biupiu_world_mod_sandbox_v1",
+  "validation":["schema","dependencies","evidence","provenance","permissions","performance"],
+  "example_mods":[
+    {"mod_id":"inca_terrace_pack","environment_id":"inca_mountain_world","type":"historical_reconstruction"},
+    {"mod_id":"maya_farm_pack","environment_id":"maya_lowland_world","type":"historical_reconstruction"},
+    {"mod_id":"babylon_irrigation_pack","environment_id":"babylon_alluvial_world","type":"historical_reconstruction"},
+    {"mod_id":"atlantis_platonic_pack","environment_id":"atlantis_speculative_world","type":"speculative_reconstruction"},
+    {"mod_id":"mu_archipelago_pack","environment_id":"mu_speculative_world","type":"speculative_reconstruction"}
+  ]
+}
