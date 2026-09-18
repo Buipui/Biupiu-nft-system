@@ -1,0 +1,11 @@
+import {authorizeDepartmentCapability,canEnterDepartment,hasCapability,SubscriberAccount} from "./subscriber-model";
+const f:SubscriberAccount={subscriberId:"f",tier:"BUILDER",departmentEntitlements:["SMART_FARMING"],roles:["subscriber"],status:"active"};
+const m:SubscriberAccount={subscriberId:"m",tier:"BUILDER",departmentEntitlements:["SMART_METAL_WORKSHOP"],roles:["subscriber"],status:"active"};
+const p:SubscriberAccount={subscriberId:"p",tier:"PUBLIC",departmentEntitlements:[],roles:["subscriber"],status:"active"};
+if(!canEnterDepartment(f,"SMART_FARMING"))throw new Error("farming entitlement");
+if(canEnterDepartment(f,"SMART_METAL_WORKSHOP"))throw new Error("department isolation");
+if(!authorizeDepartmentCapability(f,"SMART_FARMING","department_simulations"))throw new Error("farming capability");
+if(authorizeDepartmentCapability(f,"SMART_METAL_WORKSHOP","department_simulations"))throw new Error("metal isolation");
+if(authorizeDepartmentCapability(m,"SMART_FARMING","department_simulations"))throw new Error("reverse isolation");
+if(hasCapability(p,"department_simulations"))throw new Error("tier escalation");
+console.log("Gate 5 subscriber entitlement tests passed");
