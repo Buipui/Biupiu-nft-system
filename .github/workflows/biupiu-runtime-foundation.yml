@@ -1,0 +1,38 @@
+name: Biupiu Shared Runtime Foundation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/shared/runtime/**"
+      - "apps/android/**"
+      - "apps/windows/**"
+      - ".github/workflows/biupiu-runtime-foundation.yml"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/**"
+      - "apps/android/**"
+      - "apps/windows/**"
+      - ".github/workflows/biupiu-runtime-foundation.yml"
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate runtime JSON
+        run: python -m json.tool apps/shared/runtime/runtime-contract-v1.json >/dev/null
+      - name: Validate shared runtime source
+        run: |
+          test -f apps/shared/runtime/runtime-model.ts
+          test -f apps/shared/runtime/README.md
+      - name: Validate Android adapter
+        run: test -f apps/android/app/src/main/java/com/biupiu/rndos/RuntimeSession.kt
+      - name: Validate Windows adapter
+        run: test -f apps/windows/RuntimeSession.cs
+      - name: Cross-client contract checks
+        run: |
+          grep -q 'SMART_FARMING' apps/android/app/src/main/java/com/biupiu/rndos/RuntimeSession.kt
+          grep -q 'SMART_FARMING' apps/windows/RuntimeSession.cs
+          grep -q 'SMART_METAL_WORKSHOP' apps/android/app/src/main/java/com/biupiu/rndos/RuntimeSession.kt
+          grep -q 'SMART_METAL_WORKSHOP' apps/windows/RuntimeSession.cs
