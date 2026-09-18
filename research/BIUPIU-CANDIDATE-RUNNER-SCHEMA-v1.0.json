@@ -1,0 +1,54 @@
+{
+  "schema":"BIUPIU-CANDIDATE-RUNNER-SCHEMA-v1.0",
+  "gate":"BM-08",
+  "status":"research-implementation-schema",
+  "run":{
+    "run_id":"string",
+    "generator_version":"string",
+    "generation_seed":"integer",
+    "design_space_version":"string",
+    "material_genome_version":"string",
+    "resin_genome_version":"string",
+    "geometry_version":"string",
+    "load_case_versions":["string"],
+    "candidate_count":"integer",
+    "rejected_count":"integer",
+    "rejection_reasons":["string"],
+    "timestamp":"ISO-8601"
+  },
+  "candidate":{
+    "candidate_id":"immutable-string",
+    "design_signature":"canonical-hash-input",
+    "variables":"object",
+    "provenance":"object",
+    "status":"enum",
+    "validation":"object",
+    "simulation_refs":["string"],
+    "result_refs":["string"],
+    "test_refs":["string"],
+    "uncertainty":"object",
+    "objective_vector":"object-or-null",
+    "objective_directions":"object-or-null",
+    "experiment_priority":"number-or-null",
+    "failure_reason":"string-or-null"
+  },
+  "status_enum":["GENERATED","VALIDATED","SIMULATION-QUEUED","SIMULATED","UNCERTAINTY-REVIEW","PARETO-CANDIDATE","TEST-QUEUED","TESTED","CALIBRATED","REJECTED-DATA","REJECTED-CONSTRAINT","SIMULATION-FAILED","TEST-FAILED"],
+  "validation_rules":{
+    "unresolved_reference":"reject",
+    "missing_required_engineering_input":"reject",
+    "unknown_required_allowable":"block",
+    "missing_safety_factor":"reject",
+    "missing_provenance":"reject",
+    "duplicate_design_signature":"deduplicate"
+  },
+  "pareto":{
+    "method":"non-dominated sorting",
+    "invalid_output_policy":"exclude-and-record",
+    "preserve_full_objective_vector":true
+  },
+  "experiment_priority":{
+    "inputs":["pareto_relevance","uncertainty_reduction","manufacturability","operating_condition_relevance","hypothesis_information_gain","cost_time"],
+    "output":"queue_priority",
+    "note":"Priority supports queue management and is not a certification or universal engineering ranking."
+  }
+}
