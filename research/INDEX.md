@@ -344,3 +344,9 @@ Added `research/BIUPIU-OPEN-ASSET-PBR-COMPATIBILITY-REGISTRY-v1.0.md`. The regis
 ## Redshift RED-03 — deterministic adapter/test-scene gate
 
 Added `packages/biupiu-render-pipeline/src/redshift.ts` as a provider-neutral Redshift adapter contract with fail-closed environment validation, OSL validation-set identifiers, provenance rules and no proprietary dependency embedding. Added `research/BIUPIU-REDSHIFT-TEST-SCENE-SPEC-v1.0.md` for deterministic still/sequence validation and `packages/biupiu-render-pipeline/tests/redshift.validation.ts` for the adapter contract checks. **RED-03 status:** repository implementation complete; live Redshift rendering, shader loading and output-hash validation remain blocked until a connected Redshift-capable host/render node is available.
+
+## AI-18 gateway state gate
+- `research/BIUPIU-AI-GATEWAY-STATE-v1.0.md` — AI-18 replay, idempotency, audit and abuse-control boundary.
+- `software/rnd-os-ai/src/biupiu_ai/gateway_state.py` — synchronized process-local replay/rate state and audit events.
+- `software/rnd-os-ai/tests/test_ai18.py` — replay, rate-limit and audit tests.
+- **AI-18 status:** development/test state layer implemented; distributed durable production state remains gated.
