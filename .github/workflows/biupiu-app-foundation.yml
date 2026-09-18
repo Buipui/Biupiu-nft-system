@@ -1,0 +1,43 @@
+name: Biupiu Application Foundation Verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/**"
+      - "packages/**"
+      - ".github/workflows/biupiu-app-foundation.yml"
+  pull_request:
+    paths:
+      - "apps/**"
+      - "packages/**"
+      - ".github/workflows/biupiu-app-foundation.yml"
+
+jobs:
+  foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate application contract
+        run: python -m json.tool apps/shared/biupiu-app-contract.json >/dev/null
+
+      - name: Validate Android foundation
+        run: |
+          test -f apps/android/settings.gradle.kts
+          test -f apps/android/build.gradle.kts
+          test -f apps/android/app/build.gradle.kts
+          test -f apps/android/app/src/main/AndroidManifest.xml
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainActivity.kt
+
+      - name: Validate Windows foundation
+        run: |
+          test -f apps/windows/Biupiu.Desktop.csproj
+          test -f apps/windows/App.xaml
+          test -f apps/windows/App.xaml.cs
+          test -f apps/windows/MainWindow.xaml
+          test -f apps/windows/MainWindow.xaml.cs
+
+      - name: Report scope
+        run: echo "Application foundations verified; native release artifacts are not claimed by this gate."
