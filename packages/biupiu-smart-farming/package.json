@@ -1,0 +1,1 @@
+{"name":"@biupiu/smart-farming","version":"0.1.0","private":true,"description":"Smart Farming application package","platforms":["android","windows"],"entry":"src/index.ts","scope":"SMART_FARMING"}
