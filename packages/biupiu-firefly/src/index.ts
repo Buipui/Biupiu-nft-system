@@ -41,7 +41,7 @@ export interface FireflyAdapter {
   getJob(jobId: string): Promise<FireflyJobResult>;
 }
 
-export const FIRELFY_CAPABILITIES: readonly FireflyOperation[] = [
+export const FIREFLY_CAPABILITIES: readonly FireflyOperation[] = [
   "GENERATE_IMAGE",
   "EXPAND_IMAGE",
   "FILL_IMAGE",
@@ -51,7 +51,7 @@ export const FIRELFY_CAPABILITIES: readonly FireflyOperation[] = [
   "UPLOAD_ASSET"
 ];
 
-export const FIRELFY_PROVENANCE_RULES = {
+export const FIREFLY_PROVENANCE_RULES = {
   researchIdRequiredForResearchAssets: true,
   sourceAssetTracked: true,
   promptTracked: true,
