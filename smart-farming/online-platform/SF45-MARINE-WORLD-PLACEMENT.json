@@ -1,0 +1,18 @@
+{
+  "schema":"sf45.0",
+  "district_id":"marine-port",
+  "placements":[
+    {
+      "placement_id":"mar-01-hydrofoil-hero",
+      "asset_id":"biu-veh-marine-001",
+      "position_role":"hero_waterline_showcase",
+      "interaction":["research","materials","energy","digital_lab"]
+    },
+    {
+      "placement_id":"mar-02-personal-expedition",
+      "asset_id":"biu-boat-expedition-001",
+      "position_role":"expedition_dock_showcase",
+      "interaction":["research","digital_lab","academy","technology_demo"]
+    }
+  ]
+}
