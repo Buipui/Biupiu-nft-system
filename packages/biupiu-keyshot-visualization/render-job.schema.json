@@ -1,0 +1,19 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu KeyShot Render Job",
+  "type":"object",
+  "required":["jobId","assetId","profile","input","output"],
+  "properties":{
+    "jobId":{"type":"string"},
+    "assetId":{"type":"string"},
+    "profile":{"type":"string","enum":["automotive-concept","marine-concept","evtol-helicopter","microturbine","biocomposite","bio-adhesive-resin","textile-fibre","product-hero","engineering-exploded","turntable-showreel"]},
+    "input":{"type":"object","required":["sourceFormat","sourcePath"],"properties":{"sourceFormat":{"type":"string","enum":["step","iges","fbx","obj","glb","gltf","blend","other"]},"sourcePath":{"type":"string"}}},
+    "output":{"type":"object","required":["format","width","height"],"properties":{"format":{"type":"string","enum":["png","jpg","exr","tif","mp4"]},"width":{"type":"integer","minimum":1},"height":{"type":"integer","minimum":1},"frames":{"type":"integer","minimum":1}}},
+    "materialProfile":{"type":"string"},
+    "environmentProfile":{"type":"string"},
+    "cameraProfile":{"type":"string"},
+    "distributed":{"type":"boolean","default":false},
+    "backend":{"type":"string","enum":["local-keyshot","aws-deadline-cloud"]}
+  },
+  "additionalProperties":false
+}
