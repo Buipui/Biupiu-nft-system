@@ -339,3 +339,8 @@ The Lumion track cross-links `CG-3D`, `DIGITAL-TWIN`, `COMPUTE`, `ROBOTICS`, `AE
 ## Lumion LUM-02 — open-asset/PBR registry
 
 Added `research/BIUPIU-OPEN-ASSET-PBR-COMPATIBILITY-REGISTRY-v1.0.md`. The registry cross-links legitimate open/PBR discovery sources to Lumion, Unreal Engine 5, Blender, V-Ray, CAD/CAE, the Materials Genome and Digital Twin. Candidate resources are not treated as approved project assets until licence and provenance checks pass. **LUM-02 executed.** Next: LUM-03 machine-readable asset/material manifest.
+
+
+## Redshift RED-03 — deterministic adapter/test-scene gate
+
+Added `packages/biupiu-render-pipeline/src/redshift.ts` as a provider-neutral Redshift adapter contract with fail-closed environment validation, OSL validation-set identifiers, provenance rules and no proprietary dependency embedding. Added `research/BIUPIU-REDSHIFT-TEST-SCENE-SPEC-v1.0.md` for deterministic still/sequence validation and `packages/biupiu-render-pipeline/tests/redshift.validation.ts` for the adapter contract checks. **RED-03 status:** repository implementation complete; live Redshift rendering, shader loading and output-hash validation remain blocked until a connected Redshift-capable host/render node is available.
