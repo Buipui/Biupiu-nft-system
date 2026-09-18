@@ -1,46 +1,12 @@
 {
-  "schema_version":"sf18.1",
+  "schema_version":"sf18.2",
   "showcase_state":"PARKED_SHOWCASE",
+  "design_language":"Biupiu stealth-geometric + advanced-materials/metamaterial research language",
   "vehicles":[
-    {
-      "id":"biu-veh-air-001",
-      "department":"ai-robotics-photonics",
-      "concept":"Biupiu autonomous research aircraft / EVTOL",
-      "placement":"advanced-mobility showcase",
-      "advertising_focus":["AI","robotics","photonics","advanced materials"],
-      "future_modes":["research_demo","future_driveable"]
-    },
-    {
-      "id":"biu-veh-marine-001",
-      "department":"marine-hydrofoil",
-      "concept":"Biupiu hydrofoil research craft",
-      "placement":"marine-port showcase",
-      "advertising_focus":["hydrofoil research","materials","energy systems"],
-      "future_modes":["research_demo","future_driveable"]
-    },
-    {
-      "id":"biu-veh-agri-001",
-      "department":"regenerative-agriculture",
-      "concept":"Biupiu smart regenerative farming vehicle",
-      "placement":"regenerative farm entrance",
-      "advertising_focus":["smart farming","automation","plant research","sensors"],
-      "future_modes":["field_simulation","future_driveable"]
-    },
-    {
-      "id":"biu-veh-offroad-001",
-      "department":"conservation-regenerative-agriculture",
-      "concept":"Biupiu expedition / conservation utility vehicle",
-      "placement":"conservation district",
-      "advertising_focus":["conservation","field research","regenerative land management"],
-      "future_modes":["field_simulation","future_driveable"]
-    },
-    {
-      "id":"biu-veh-ai-001",
-      "department":"ai-intelligence-hub",
-      "concept":"Biupiu mobile intelligence and robotics laboratory",
-      "placement":"Intelligence Hub",
-      "advertising_focus":["AI","Digital Lab","robotics","research repository"],
-      "future_modes":["research_demo","interactive_display"]
-    }
+    {"id":"biu-veh-air-001","department":"ai-robotics-photonics","concept":"Biupiu autonomous research aircraft / EVTOL","placement":"advanced-mobility showcase","advertising_focus":["AI","robotics","photonics","advanced materials"],"future_modes":["research_demo","future_driveable"],"design_language":{"geometry":["slender integrated body","faceted-to-curved stealth study surfaces","chine-inspired transitions","swept lifting surfaces"],"materials":["advanced composite skins","metamaterial/metasurface concept zones","engineered surface textures"],"visual_rule":"Original Biupiu design; public-source aerospace research may inform geometry but no classified or proprietary aircraft reconstruction."}},
+    {"id":"biu-veh-marine-001","department":"marine-hydrofoil","concept":"Biupiu hydrofoil research craft","placement":"marine-port showcase","advertising_focus":["hydrofoil research","materials","energy systems"],"future_modes":["research_demo","future_driveable"]},
+    {"id":"biu-veh-agri-001","department":"regenerative-agriculture","concept":"Biupiu smart regenerative farming vehicle","placement":"regenerative farm entrance","advertising_focus":["smart farming","automation","plant research","sensors"],"future_modes":["field_simulation","future_driveable"]},
+    {"id":"biu-veh-offroad-001","department":"conservation-regenerative-agriculture","concept":"Biupiu expedition / conservation utility vehicle","placement":"conservation district","advertising_focus":["conservation","field research","regenerative land management"],"future_modes":["field_simulation","future_driveable"],"design_language":{"role":"long-range Biupiu expedition and field-research platform","geometry":["stealth-inspired faceted volumes","protected wheel-arch geometry","high-clearance underbody","integrated roof/cargo architecture","clean uninterrupted side surfaces"],"materials":["hemp/natural-fibre composite concept panels","advanced lightweight composite structures","metamaterial/architected-material concept inserts","durable protective coatings"],"field_features":["modular research/cargo bay","sensor mast provision","field power interface","water/soil sampling equipment provision","roof equipment rail"],"visual_rule":"Rugged expedition capability expressed through Biupiu stealth-geometric design language rather than military styling."}},
+    {"id":"biu-veh-ai-001","department":"ai-intelligence-hub","concept":"Biupiu mobile intelligence and robotics laboratory","placement":"Intelligence Hub","advertising_focus":["AI","Digital Lab","robotics","research repository"],"future_modes":["research_demo","interactive_display"]}
   ]
 }
