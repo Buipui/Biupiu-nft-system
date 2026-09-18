@@ -1,0 +1,8 @@
+export type SubscriberTier = "PUBLIC" | "EXPLORER" | "BUILDER" | "RESEARCHER" | "CREATOR_DEVELOPER";
+export type DepartmentScope = "SMART_FARMING" | "SMART_METAL_WORKSHOP" | "FUTURE_DEPARTMENT";
+export type SubscriberRole = "subscriber" | "researcher" | "creator" | "developer";
+export interface SubscriberAccount { subscriberId:string; tier:SubscriberTier; departmentEntitlements:DepartmentScope[]; roles:SubscriberRole[]; status:"active"|"suspended"|"pending"; }
+export const tierCapabilities:Record<SubscriberTier,string[]>={PUBLIC:["hub_public","library_public","showcase_public"],EXPLORER:["avatar_profile","guided_exploration","education","basic_simulations","progress_tracking"],BUILDER:["advanced_learning","department_simulations","virtual_workshop_tools","virtual_inventory","project_workspace","permitted_export"],RESEARCHER:["research_sandbox","evidence_tools","experiment_authoring","result_logging","advanced_simulation","cross_world_research"],CREATOR_DEVELOPER:["content_authoring","mod_sandbox","digital_asset_pipeline","test_nft_mint_workflow","developer_test_api"]};
+export function hasCapability(a:SubscriberAccount,c:string){if(a.status!=="active")return false;const levels:SubscriberTier[]=["PUBLIC","EXPLORER","BUILDER","RESEARCHER","CREATOR_DEVELOPER"];const i=levels.indexOf(a.tier);return levels.slice(0,i+1).some(t=>tierCapabilities[t].includes(c));}
+export function canEnterDepartment(a:SubscriberAccount,d:DepartmentScope){return a.status==="active"&&a.departmentEntitlements.includes(d);}
+export function authorizeDepartmentCapability(a:SubscriberAccount,d:DepartmentScope,c:string){return canEnterDepartment(a,d)&&hasCapability(a,c);}
