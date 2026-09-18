@@ -1,0 +1,1 @@
+export const BIUPIU_APP="Biupiu World"; export const PACKAGE="@biupiu/civilisation-world";
