@@ -1,0 +1,18 @@
+{
+  "catalogue_version":"0.1",
+  "profiles": [],
+  "profile_template": {
+    "plant_id":"unique-id",
+    "common_name":"",
+    "scientific_name":"",
+    "cultivars":[],
+    "stages":[],
+    "metrics":[],
+    "compatible_products":[],
+    "protocol_ids":[],
+    "evidence_level":"L0",
+    "version":"0.1",
+    "conditions":[],
+    "limitations":[]
+  }
+}
