@@ -17,13 +17,11 @@ data class DashboardSnapshot(
 
 data class ApiError(val statusCode: Int? = null, val message: String, val retryable: Boolean = false)
 
-class RndOsHttpApi(
-    private val baseUrl: String,
-    private val bearerToken: String? = null
-) : RndOsApi {
-    override suspend fun health(): String = request("/api/health")
+class RndOsHttpApi(private val transport: RndOsHttpTransport) : RndOsApi {
+    override suspend fun health(): String = transport.get("/api/health")
+
     override suspend fun dashboard(): DashboardSnapshot {
-        val json = request("/api/dashboard")
+        val json = transport.get("/api/dashboard")
         fun value(key: String): Int {
             val marker = "\"" + key + "\""
             val start = json.indexOf(marker)
@@ -32,9 +30,14 @@ class RndOsHttpApi(
             if (colon < 0) return 0
             return json.substring(colon + 1).trim().takeWhile { it.isDigit() }.toIntOrNull() ?: 0
         }
-        return DashboardSnapshot(value("projects"), value("research"), value("hypotheses"), value("experiments"), value("failures"), value("ip"), value("relationships"))
-    }
-    private suspend fun request(path: String): String {
-        throw UnsupportedOperationException("HTTP transport adapter is isolated for the next Android implementation gate.")
+        return DashboardSnapshot(
+            value("projects"),
+            value("research"),
+            value("hypotheses"),
+            value("experiments"),
+            value("failures"),
+            value("ip"),
+            value("relationships")
+        )
     }
 }
