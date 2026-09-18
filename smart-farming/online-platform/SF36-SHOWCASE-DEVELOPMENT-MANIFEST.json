@@ -1,0 +1,29 @@
+{
+  "version": "SF-36.1",
+  "hero_design_reference": {
+    "asset_id": "biu-veh-marine-001",
+    "source": "earlier Biupiu glass hydrofoil concept image",
+    "use": "design reference",
+    "status": "concept"
+  },
+  "departments": [
+    "Regenerative Agriculture",
+    "Plant Biotechnology",
+    "Biochemical Research",
+    "Textiles & Fibres",
+    "Advanced Materials",
+    "Automotive & Mobility",
+    "Marine & Hydrofoil",
+    "Aircraft & eVTOL",
+    "Robotics & Automation",
+    "AI / Intelligence Hub",
+    "Photonics & Optical Communications",
+    "Energy Systems",
+    "R&D / Digital Lab",
+    "Academy",
+    "Digital World / Gallery / Marketplace"
+  ],
+  "showcase_policy": "Represent registered Biupiu developments through linked exhibits and label each by evidence status.",
+  "runtime_status": "SHOWCASE_REGISTRY_READY",
+  "live_commerce": false
+}
