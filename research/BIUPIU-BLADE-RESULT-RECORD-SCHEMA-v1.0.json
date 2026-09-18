@@ -1,0 +1,7 @@
+{
+  "schema_version":"1.0",
+  "object":"blade_simulation_result",
+  "required":["RUN_ID","MATERIAL_ID","RESIN_FORMULATION_ID","GEOMETRY_ID","LOAD_CASE_ID","MODEL_VERSION","SOLVER","BOUNDARY_CONDITIONS","MESH_VERSION","OUTPUTS","UNCERTAINTY","EVIDENCE_STATE","PROVENANCE"],
+  "outputs":["mass","tip_deflection","max_stress","max_strain","natural_frequency_1","buckling_margin","fatigue_damage_indicator","moisture_sensitivity","thermal_sensitivity","manufacturing_sensitivity"],
+  "rule":"No result may be treated as validated without traceable inputs and uncertainty."
+}
