@@ -1,0 +1,43 @@
+name: Biupiu R&D OS Mobile CI
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'software/rnd-os-mobile/**'
+      - '.github/workflows/rnd-os-mobile-ci.yml'
+  pull_request:
+    paths:
+      - 'software/rnd-os-mobile/**'
+      - '.github/workflows/rnd-os-mobile-ci.yml'
+
+jobs:
+  android:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: software/rnd-os-mobile
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+
+      - name: Set up Android SDK
+        uses: android-actions/setup-android@v3
+
+      - name: Install Android SDK 36
+        run: sdkmanager "platforms;android-36"
+
+      - name: Verify Gradle project
+        run: |
+          test -f settings.gradle.kts
+          test -f build.gradle.kts
+          test -f app/build.gradle.kts
+
+      - name: Build when Gradle wrapper is present
+        if: hashFiles('software/rnd-os-mobile/gradlew') != ''
+        run: ./gradlew testDebugUnitTest assembleDebug --stacktrace
