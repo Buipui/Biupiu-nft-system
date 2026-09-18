@@ -313,3 +313,10 @@ Added `research/BIUPIU-ADOBE-PRODUCTION-PIPELINE-v1.0.md` and the `software/rnd-
 - `software/rnd-os-ai/src/biupiu_ai/gateway_policy.py` — deterministic gateway request and provider-staging policy.
 - `software/rnd-os-ai/tests/test_ai16.py` — request-limit, cost-limit and staging-prerequisite tests.
 - **AI-16 status:** policy contract and deterministic tests implemented; live provider transport and production infrastructure remain gated.
+
+
+## Redshift professional rendering integration
+
+Added `research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md`. GitHub research identified the official Maxon Redshift OSL shader repository and Redshift OCIO configuration resources, plus Cinema 4D Redshift automation/API references and Houdini/Redshift examples. Redshift is now mapped as a renderer adapter in the provider-neutral render pipeline for PRODUCT_STILL, DIGITAL_TWIN, CINEMATIC_SHOWREEL, CONCEPT_VARIATION and RESEARCH_VISUALIZATION workflows.
+
+**RED-01 status:** architecture/resource integration executed. No proprietary Redshift binaries, SDKs or licensed assets are copied into the repository. Live Redshift execution remains gated on an installed and validated Redshift-capable environment.
