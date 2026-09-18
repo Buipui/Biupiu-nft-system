@@ -1,0 +1,22 @@
+{
+  "schema_version":"sf16.1",
+  "default_state":"PARKED_SHOWCASE",
+  "vehicle_policy":"Original Biupiu department representations; no proprietary game assets.",
+  "vehicles":[
+    {"id":"biu-veh-agri-001","department":"regenerative-agriculture","display":"farm operations hub","class":"smart utility"},
+    {"id":"biu-veh-plant-001","department":"plant-research","display":"plant research campus","class":"mobile laboratory"},
+    {"id":"biu-veh-conservation-001","department":"conservation","display":"conservation district","class":"field vehicle"},
+    {"id":"biu-veh-textile-001","department":"textiles-fibres","display":"materials marketplace","class":"fibre transport"},
+    {"id":"biu-veh-composite-001","department":"composite-materials","display":"materials laboratory","class":"materials demonstrator"},
+    {"id":"biu-veh-bio-001","department":"biochemical-research","display":"biotech district","class":"mobile laboratory"},
+    {"id":"biu-veh-genetics-001","department":"genetics-seed-breeding","display":"plant science district","class":"research transport"},
+    {"id":"biu-veh-automation-001","department":"robotics-automation","display":"robotics campus","class":"autonomous support"},
+    {"id":"biu-veh-ai-001","department":"ai-intelligence-hub","display":"intelligence hub","class":"command/research"},
+    {"id":"biu-veh-photonics-001","department":"photonics-optical-comms","display":"photonics laboratory","class":"communications demonstrator"},
+    {"id":"biu-veh-energy-001","department":"energy-systems","display":"energy district","class":"energy research"},
+    {"id":"biu-veh-marine-001","department":"marine-hydrofoil","display":"port/marine district","class":"research craft"},
+    {"id":"biu-veh-academy-001","department":"academy","display":"academy plaza","class":"training showcase"},
+    {"id":"biu-veh-gallery-001","department":"digital-gallery-nft","display":"gallery district","class":"mobile gallery"},
+    {"id":"biu-veh-logistics-001","department":"manufacturing-logistics","display":"manufacturing district","class":"logistics"}
+  ]
+}
