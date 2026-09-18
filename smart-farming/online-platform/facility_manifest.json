@@ -1,0 +1,10 @@
+{
+  "schema_version":"0.1",
+  "facilities":[
+    {"id":"campus-welcome","name":"Biupiu Welcome Plaza","district":"campus"},
+    {"id":"waru-waru","name":"Waru Waru Learning Space","district":"farming-systems","stations":["WW-01","WW-02","WW-03","WW-04","WW-05","WW-06"]},
+    {"id":"digital-lab","name":"Digital Laboratory","district":"research"},
+    {"id":"materials-lab","name":"Biocomposites Lab","district":"materials"},
+    {"id":"academy","name":"Biupiu Academy","district":"learning"}
+  ]
+}
