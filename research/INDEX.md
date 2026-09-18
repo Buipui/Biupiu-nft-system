@@ -355,3 +355,8 @@ Added `packages/biupiu-render-pipeline/src/redshift.ts` as a provider-neutral Re
 ## Redshift RED-04 — cross-engine interoperability gate
 
 Added `research/BIUPIU-RENDER-INTEROPERABILITY-RED-04-v1.0.md`, a provider-neutral interoperability matrix covering Blender, Unreal Engine 5, Redshift, V-Ray, Octane, Lumion and KeyShot. Added a machine-readable handoff manifest and deterministic provider-matrix test under `packages/biupiu-render-pipeline/`. The gate preserves source asset identity, model version, evidence/IP/licence state, provider/version, conversion settings, output hash and derivative-only rules. **RED-04 status:** implementation complete and ready for live cross-engine testing; live interoperability is not claimed until connected application environments produce measured results.
+
+
+## Lumion LUM-03 — machine-readable asset/material manifest
+
+Added `research/visual-assets/biupiu-visual-asset-manifest.schema.json`, an example manifest, and README documentation. The schema records asset identity, source/creator, licence evidence, file hashes/metadata, PBR maps, provenance/transformation history, authoring/target applications, and links to Biupiu Digital Twin/Materials Genome/project IDs. **LUM-03 executed.**
