@@ -1,0 +1,9 @@
+{
+  "schema": "biupiu.render.interoperability.v1",
+  "gate": "RED-04",
+  "testAssetId": "BIUPIU-RENDER-TEST-001",
+  "sourceModelVersion": "TEST",
+  "providers": ["BLENDER","UNREAL_ENGINE_5","REDSHIFT","VRAY","OCTANE","LUMION","KEYSHOT"],
+  "invariants": {"sourceAssetIdPreserved":true,"sourceModelVersionPreserved":true,"researchIdPreservedWhenPresent":true,"evidenceStatePreserved":true,"ipStatePreserved":true,"licenceStatePreserved":true,"providerVersionRecorded":true,"importExportSettingsRecorded":true,"outputSha256Recorded":true,"derivativeCannotOverwriteSource":true},
+  "liveExecution": {"status":"GATED","requiresConnectedProviderHosts":true,"requiresMeasuredOutputs":true}
+}
