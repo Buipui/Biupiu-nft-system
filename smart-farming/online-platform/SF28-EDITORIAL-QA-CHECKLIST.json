@@ -1,0 +1,46 @@
+{
+  "version": "SF-28.1",
+  "checks": [
+    {
+      "id": "QA-STORY-01",
+      "area": "story",
+      "test": "Episode follows approved SF-22 sequence"
+    },
+    {
+      "id": "QA-VIS-01",
+      "area": "visual",
+      "test": "Lighting/material/branding continuity passes"
+    },
+    {
+      "id": "QA-CLAIM-01",
+      "area": "claims",
+      "test": "All status labels remain visible and accurate"
+    },
+    {
+      "id": "QA-RIGHTS-01",
+      "area": "rights",
+      "test": "All assets have cleared provenance/rights"
+    },
+    {
+      "id": "QA-A11Y-01",
+      "area": "accessibility",
+      "test": "Captions and safe-area checks pass"
+    },
+    {
+      "id": "QA-TECH-01",
+      "area": "technical",
+      "test": "No render corruption, clipping, watermark or missing media"
+    },
+    {
+      "id": "QA-BRAND-01",
+      "area": "brand",
+      "test": "Biupiu visual identity is consistent"
+    },
+    {
+      "id": "QA-ARCHIVE-01",
+      "area": "archive",
+      "test": "Source project, renders and manifests are retained"
+    }
+  ],
+  "result": "PENDING_HUMAN_QA"
+}
