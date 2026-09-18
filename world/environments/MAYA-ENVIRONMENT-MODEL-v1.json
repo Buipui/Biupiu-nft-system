@@ -1,0 +1,12 @@
+{
+  "environment_id":"maya_lowland_world",
+  "civilisation_id":"MAYA",
+  "evidence_class":"ARCHAEOLOGICAL/SCHOLARLY",
+  "models":["forest_lowland","planned_plaza","monumental_platforms","corbel_vault_buildings","stucco_facades","stelae","reservoir","terrace_farm","wetland_farm"],
+  "library":"maya_library",
+  "avatar_entry":"maya_city_gate",
+  "spawn_zones":["plaza","farm","reservoir","forest_edge","library"],
+  "learning_objects":["architecture_styles","agriculture_model","water_storage_model","glyph_context_model"],
+  "reconstruction":true,
+  "ui_badge":"HISTORICAL RECONSTRUCTION — EVIDENCE BASED"
+}
