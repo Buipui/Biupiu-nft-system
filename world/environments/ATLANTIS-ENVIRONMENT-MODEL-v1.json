@@ -1,0 +1,12 @@
+{
+  "environment_id":"atlantis_speculative_world",
+  "civilisation_id":"ATLANTIS",
+  "evidence_class":"LITERARY_TRADITION/RECONSTRUCTION",
+  "models":["concentric_land_water_rings","central_highland","fertile_plain","springs","maritime_harbour","agricultural_zone"],
+  "library":"atlantis_speculative_library",
+  "avatar_entry":"atlantis_observation_gate",
+  "spawn_zones":["central_ring","agricultural_plain","spring_zone","harbour","speculative_library"],
+  "learning_objects":["platonic_source_card","ring_geometry_model","water_model","hypothesis_map"],
+  "reconstruction":true,
+  "ui_badge":"SPECULATIVE — NOT ESTABLISHED HISTORY"
+}
