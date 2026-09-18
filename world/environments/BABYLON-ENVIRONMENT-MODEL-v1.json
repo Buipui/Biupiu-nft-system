@@ -1,0 +1,12 @@
+{
+  "environment_id":"babylon_alluvial_world",
+  "civilisation_id":"BABYLONIAN",
+  "evidence_class":"ARCHAEOLOGICAL/SCHOLARLY",
+  "models":["alluvial_plain","canals","irrigated_fields","date_gardens","mudbrick_urban_zone","market","storage","library"],
+  "library":"babylon_library",
+  "avatar_entry":"babylon_city_gate",
+  "spawn_zones":["canal_farm","date_garden","market","urban_zone","library"],
+  "learning_objects":["canal_model","irrigation_model","crop_storage_model","market_barter_model"],
+  "reconstruction":true,
+  "ui_badge":"HISTORICAL RECONSTRUCTION — EVIDENCE BASED"
+}
