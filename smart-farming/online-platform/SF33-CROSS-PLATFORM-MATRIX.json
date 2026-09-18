@@ -1,0 +1,34 @@
+{
+  "version": "SF-33.1",
+  "canonical_ids": [
+    "episode_id",
+    "scene_id",
+    "department_id",
+    "hero_asset_id",
+    "lesson_id",
+    "experiment_id",
+    "property_id",
+    "avatar_id"
+  ],
+  "platforms": {
+    "world_runtime": {
+      "consumer": "canonical"
+    },
+    "mobile_app": {
+      "consumer": "canonical"
+    },
+    "academy": {
+      "consumer": "canonical"
+    },
+    "digital_lab": {
+      "consumer": "canonical"
+    },
+    "gallery": {
+      "consumer": "canonical"
+    },
+    "marketplace": {
+      "consumer": "canonical"
+    }
+  },
+  "semantic_identity_rule": "same canonical IDs and claim/rights states across platforms"
+}
