@@ -131,3 +131,13 @@ The repository now defines a shared department-scoped subscriber model and two s
 - `research/BIUPIU-SMART-FARMING-v1.0.md` — FARMING-only smart farming product.
 
 Both products use the same subscriber/identity architecture while enforcing department-scoped search, AI retrieval, exports and resource access. A subscriber can hold multiple explicit department entitlements, but no department access is implied by another entitlement.
+
+
+## Cultural heritage department environments
+
+Added culturally contextualised specialist spaces:
+- `research/BIUPIU-TEXTILES-CULTURAL-HERITAGE-SPACE-v1.0.md` — TEXTILES environments and Global Fibre Innovation Lab.
+- `research/BIUPIU-MATERIALS-CULTURAL-HERITAGE-SPACE-v1.0.md` — MATERIALS environments and Advanced Materials Laboratory.
+- `research/BIUPIU-CULTURAL-HERITAGE-ENVIRONMENT-MATRIX-v1.0.md` — cross-department navigation and evidence rules.
+
+The main hub routes users through their subscribed department before exposing its cultural environments and specialist workspaces. Historical context and modern experiments remain separately classified.
