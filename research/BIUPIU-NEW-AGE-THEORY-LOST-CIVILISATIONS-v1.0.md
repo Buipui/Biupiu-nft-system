@@ -524,3 +524,20 @@ A direct DuckDuckGo HTML request was attempted for the requested deep-search pas
 - Department access controls continue to apply.
 - AI, search and world navigation preserve evidence classifications.
 - Creative reconstruction cannot become archaeological fact through presentation alone.
+
+
+## Character / avatar layer
+
+The New Age Theory gateway now has a dedicated character system defined in `research/BIUPIU-NEW-AGE-THEORY-CHARACTERS-v1.0.md`.
+
+Entry characters:
+- NAT-GUIDE-01 — The Archivist
+- NAT-GUIDE-02 — The Cartographer
+- NAT-GUIDE-03 — The Geophysicist
+- NAT-GUIDE-04 — The Archaeotechnology Researcher
+
+Environment-specific avatars are provided for Atlantis, Mu, Hyperborea, Tartaria, Hollow Earth, Agartha/Shambhala and the wider lost-land/lost-city layer.
+
+Players can use neutral research archetypes such as Researcher, Archaeologist, Materials Scientist, Metallurgist, Geologist, GIS/Cartography Specialist, Engineer, Marine Researcher, Historian/Source Critic and Experimentalist.
+
+Characters are original Biupiu World fictional assets and are not presented as historical portraits or evidence. Character dialogue inherits subscriber department permissions and evidence-state controls.
