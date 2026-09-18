@@ -51,7 +51,13 @@ tests/
 ## Initial production backlog
 Main Hub architecture; department gateway portals; shared character base; farming campus; Smart Metal Workshop; textile workshop; materials laboratory; biotech research building; photonics laboratory; AI/robotics laboratory; marine/hydrofoil showcase; New Age Theory gateway; Atlantis; Mu; Hyperborea; Tartaria; Hollow Earth; Research Archive; NFT/digital gallery.
 
-## Executed gate
+## Executed gates
 **Gate 01 — Main Hub Blockout:** `research/BIUPIU-3D-GATE-01-MAIN-HUB-BLOCKOUT-v1.0.md`
 
-Status: specification committed. Next gate: shared character base, retargeting skeleton, animation states and mobile-ready avatar package.
+**Gate 02 — Shared Character Base:** `research/BIUPIU-3D-GATE-02-CHARACTER-BASE-v1.0.md`
+
+**Gate 03 — Department Avatar Variants:** `research/BIUPIU-3D-GATE-03-DEPARTMENT-AVATAR-VARIANTS-v1.0.md`
+
+**Gate 04 — Workshop Interaction & Digital-Twin Binding:** `research/BIUPIU-3D-GATE-04-WORKSHOP-DIGITAL-TWIN-BINDING-v1.0.md`
+
+Status: Gates 01–04 specifications committed for implementation. Binary 3D assets, production runtime code and live IoT connectors are not claimed as generated. Next gate: cross-department campus systems and shared-service layer.
