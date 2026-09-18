@@ -1,0 +1,16 @@
+{
+  "schema":"BIUPIU-MULTIPHYSICS-EVALUATION-SCHEMA-v1.0",
+  "gate":"BM-09",
+  "modules":["aerodynamic","structural","modal_buckling","fatigue_proxy","thermal","moisture","manufacturing_variability"],
+  "module_status":["READY","BLOCKED","FAILED","COMPLETE"],
+  "dependencies":[
+    {"upstream":"aerodynamic","downstream":"structural","required":true},
+    {"upstream":"structural","downstream":"modal_buckling","required":true},
+    {"upstream":"structural","downstream":"fatigue_proxy","required":false},
+    {"upstream":"material","downstream":"thermal","required":true},
+    {"upstream":"material","downstream":"moisture","required":true},
+    {"upstream":"manufacturing","downstream":"structural","required":true}
+  ],
+  "required":["candidate_id","run_id","input_snapshot","provenance","deterministic_result_vector","uncertainty_result_vector","sensitivity","evidence_state","digital_twin_version"],
+  "failure_policy":"retain-and-audit"
+}
