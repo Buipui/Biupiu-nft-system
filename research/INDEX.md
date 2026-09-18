@@ -52,6 +52,10 @@ Core centre systems now include:
 
 The Experimental Control Centre remains the execution orchestration layer: `SOURCE → CLAIM → HYPOTHESIS → MODEL → SIMULATION → EXPERIMENT → MEASUREMENT → VALIDATION → REPLICATION → IP/PRODUCT PATH`.
 
+## Blade Simulation Runner + Result Schema
+
+Added `research/BIUPIU-BLADE-SIMULATION-RUNNER-SPEC-v1.0.md` and `research/BIUPIU-BLADE-RESULT-RECORD-SCHEMA-v1.0.json`; **GATE BM-04 executed**. The runner specification enforces identical geometry/load cases across candidate fibre/resin systems and requires provenance, model version, boundary conditions, uncertainty and evidence state for every result.
+
 ## Resin Formulation + Blade Twin Integration
 
 Added `research/BIUPIU-RESIN-FORMULATION-SCHEMA-v1.0.json` and `research/BIUPIU-RESIN-BLADE-TWIN-SCHEMA-v1.0.md`; **GATE BM-03 executed**. Resin chemistry, cure state, fibre treatment, interface properties and laminate data are now defined as machine-readable inputs to the Blade Digital Twin. The comparison runner must preserve uncertainty and never silently substitute missing material properties.
