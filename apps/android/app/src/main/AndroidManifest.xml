@@ -11,5 +11,16 @@
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
         </activity>
+        <activity android:name=".MainHubActivity" android:exported="true">
+            <intent-filter>
+                <action android:name="android.intent.action.VIEW" />
+                <category android:name="android.intent.category.DEFAULT" />
+                <category android:name="android.intent.category.BROWSABLE" />
+                <data android:scheme="biupiu" android:host="department" />
+            </intent-filter>
+        </activity>
+        <activity android:name=".SmartFarmingActivity" android:exported="false" />
+        <activity android:name=".SmartMetallurgyActivity" android:exported="false" />
+        <activity android:name=".RndOsActivity" android:exported="false" />
     </application>
 </manifest>
