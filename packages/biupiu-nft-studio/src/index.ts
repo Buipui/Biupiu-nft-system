@@ -1,0 +1,1 @@
+export const BIUPIU_APP="Biupiu NFT Studio"; export const PACKAGE="@biupiu/nft-studio";
