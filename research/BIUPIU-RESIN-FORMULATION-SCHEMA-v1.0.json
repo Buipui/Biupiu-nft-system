@@ -1,0 +1,7 @@
+{
+  "schema_version":"1.0",
+  "object":"biupiu_resin_formulation",
+  "fields":["FORMULATION_ID","RESIN_FAMILY","FEEDSTOCK","BIO_CONTENT_PCT","HARDENER","ADDITIVES","FIBRE_ID","FIBRE_TREATMENT","FIBRE_VOLUME_FRACTION","CURE_PROFILE","VISCOSITY","POT_LIFE","TG","MODULUS","STRENGTH","FRACTURE_TOUGHNESS","MOISTURE_DIFFUSION","THERMAL_LIMIT","AGEING","MANUFACTURING_ROUTE","SOURCE","TEST_STANDARD","EVIDENCE_STATE","UNCERTAINTY"],
+  "evidence_rule":"Every quantitative value requires source, test conditions and uncertainty; literature observations are not design allowables.",
+  "status":"research"
+}
