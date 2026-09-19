@@ -14,7 +14,7 @@ export class DMSService {
     return this.authorize({principal,featureId,...scope}).allowed;
   }
   effectiveAccess(principal:Principal):string[] {
-    return Object.keys(this.policy["registry"]).filter(featureId=>this.can(principal,featureId));
+    return this.policy.listFeatures().filter(featureId=>this.can(principal,featureId));
   }
   setSubscription(principal:Principal,subscription:SubscriptionTier):Principal{return {...principal,subscription};}
   getAudit():readonly AuditEvent[]{return [...this.audit];}
