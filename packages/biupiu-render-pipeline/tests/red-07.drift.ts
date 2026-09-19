@@ -1,0 +1,7 @@
+import { compareRoundTrip, RED_07_RULES, RoundTripSnapshot } from "../src/drift";
+const base:RoundTripSnapshot={sourceAssetId:"BIUPIU-RENDER-TEST-001",sourceModelVersion:"TEST-001",provider:"BLENDER",format:"GLTF",geometrySignature:"GEOM-1",transformSignature:"XFORM-1",materialSignature:"MAT-1",metadataSignature:"META-1",provenanceSignature:"PROV-1"};
+const clean=compareRoundTrip(base,{...base,provider:"UNREAL_ENGINE_5",format:"USD"}); if(clean.status!=="PASS") throw new Error("RED-07 clean round-trip must pass.");
+const material=compareRoundTrip(base,{...base,materialSignature:"MAT-2"}); if(material.status!=="DRIFT") throw new Error("Material drift must be reported."); if(!material.findings.some(f=>f.domain==="MATERIAL")) throw new Error("Material drift finding missing.");
+const identity=compareRoundTrip(base,{...base,sourceAssetId:"OTHER-ASSET"}); if(identity.status!=="BLOCKED") throw new Error("Source identity drift must block acceptance.");
+const provenance=compareRoundTrip(base,{...base,provenanceSignature:"PROV-2"}); if(provenance.status!=="BLOCKED") throw new Error("Provenance drift must block acceptance.");
+if(!RED_07_RULES.liveRendererComparisonRequiresMeasuredOutputs) throw new Error("RED-07 live execution gate missing.");
