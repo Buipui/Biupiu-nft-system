@@ -1,4 +1,3 @@
-import type { } from "./index";
 export type DriftSeverity = "NONE" | "INFO" | "WARNING" | "ERROR" | "BLOCKED";
 export type DriftDomain = "GEOMETRY" | "TRANSFORM" | "MATERIAL" | "TEXTURE" | "CAMERA" | "METADATA" | "PROVENANCE";
 export interface DriftFinding { domain: DriftDomain; severity: DriftSeverity; field: string; expected?: string | number | boolean; actual?: string | number | boolean; message: string; }
