@@ -1,0 +1,19 @@
+{
+  "version": "1.0",
+  "date": "2026-09-19",
+  "status": "registered",
+  "engine": {
+    "name": "bevy",
+    "version_line": "0.19",
+    "source": "https://github.com/bevyengine/bevy",
+    "official_docs": "https://bevy.org/learn/quick-start/getting-started/",
+    "license_boundary": "Verify upstream and transitive dependency notices before redistribution."
+  },
+  "references": [
+    {"name":"bevyengine/bevy","kind":"core-engine","status":"approved-reference","copy_policy":"do-not-vendor-without-license-review"},
+    {"name":"bevyengine/bevy-website","kind":"official-learning","status":"approved-reference","copy_policy":"retain-provenance-and-license"},
+    {"name":"bevy-cheatbook/bevy-cheatbook","kind":"community-documentation","status":"secondary-reference","copy_policy":"reference-only-unless-reviewed"}
+  ],
+  "integration_targets":["DIGITAL-TWIN","PHYS-SYS","CG-3D","GEOMETRY","AERO","MARINE","AUTO","ROBOTICS","ADV-MFG","AGRI","WATER","AI","COMPUTE","VIDEO-SERIES"],
+  "validation":{"source_static_review":true,"license_provenance_review":true,"cargo_build":false,"runtime_render_test":false,"gpu_test":false}
+}
