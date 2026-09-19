@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Smart System Registry",
+  "type":"object",
+  "required":["systemId","department","gate","mode","twin","telemetry","audit"],
+  "properties":{
+    "systemId":{"type":"string"},
+    "department":{"type":"string"},
+    "gate":{"type":"string","pattern":"^G[0-8]$"},
+    "mode":{"enum":["SIMULATION","PILOT","PHYSICAL","MAINTENANCE","FAULT"]},
+    "twin":{"type":"object","required":["twinId","provenance"]},
+    "telemetry":{"type":"object"},
+    "rules":{"type":"array","items":{"type":"string"}},
+    "capabilities":{"type":"array","items":{"type":"string"}},
+    "audit":{"type":"object","required":["version","lastChange"]},
+    "nextGate":{"type":"string","pattern":"^G[0-8]$"}
+  }
+}
