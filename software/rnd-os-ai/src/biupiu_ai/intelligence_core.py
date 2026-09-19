@@ -2,7 +2,7 @@
 
 Architecture patterns are implemented independently rather than copied from
 third-party repositories. This module provides evidence relations, confidence
-normalisation and impact-trace primitives for the Biupiu Intelligence layer.
+normalisation, impact tracing, bounded agent routing and promotion gates.
 """
 
 from dataclasses import dataclass
@@ -29,6 +29,22 @@ class EvidenceEdge:
     provenance_refs: tuple[str, ...] = ()
 
 
+@dataclass(frozen=True)
+class AgentTask:
+    task_id: str
+    objective: str
+    domains: tuple[str, ...]
+    irreversible: bool = False
+    evidence_refs: tuple[str, ...] = ()
+
+
+@dataclass(frozen=True)
+class RouteDecision:
+    domains: tuple[str, ...]
+    requires_human_approval: bool
+    allowed_actions: tuple[str, ...]
+
+
 def make_edge(source_id: str, target_id: str, relation: str,
               evidence_state: str, provenance_refs: Iterable[str] = ()) -> EvidenceEdge:
     if not source_id or not target_id:
@@ -37,22 +53,15 @@ def make_edge(source_id: str, target_id: str, relation: str,
         raise ValueError(f"invalid relation: {relation}")
     if evidence_state not in EVIDENCE_STATES:
         raise ValueError(f"invalid evidence_state: {evidence_state}")
-    return EvidenceEdge(
-        source_id=source_id,
-        target_id=target_id,
-        relation=relation,
-        evidence_state=evidence_state,
-        provenance_refs=tuple(provenance_refs),
-    )
+    return EvidenceEdge(source_id, target_id, relation, evidence_state,
+                        tuple(provenance_refs))
 
 
 def grounded(edge: EvidenceEdge) -> bool:
-    """True only when the relation is backed by an acceptable evidence state."""
     return edge.evidence_state in {"ESTABLISHED", "SUPPORTED", "PRELIMINARY"}
 
 
 def dependency_closure(root: str, edges: Iterable[EvidenceEdge]) -> set[str]:
-    """Return downstream objects reachable through DEPENDS_ON/PRODUCES edges."""
     adjacency: dict[str, set[str]] = {}
     for edge in edges:
         if edge.relation not in {"DEPENDS_ON", "PRODUCES"}:
@@ -68,3 +77,30 @@ def dependency_closure(root: str, edges: Iterable[EvidenceEdge]) -> set[str]:
         seen.add(node)
         stack.extend(adjacency.get(node, ()))
     return seen
+
+
+def route_task(task: AgentTask) -> RouteDecision:
+    """Bound an agent task before execution."""
+    if not task.task_id or not task.objective:
+        raise ValueError("task_id and objective are required")
+    domains = tuple(dict.fromkeys(task.domains))
+    allowed = ("retrieve", "analyse", "simulate", "propose")
+    if task.irreversible:
+        return RouteDecision(domains, True, allowed)
+    return RouteDecision(domains, False, allowed)
+
+
+def validate_agent_result(*, evidence_refs: Iterable[str],
+                          evidence_state: str,
+                          human_approved: bool,
+                          irreversible: bool) -> bool:
+    """Fail closed when provenance is absent or irreversible release is unapproved."""
+    if evidence_state not in EVIDENCE_STATES:
+        return False
+    if not tuple(evidence_refs):
+        return False
+    if evidence_state in {"UNSUPPORTED", "CONTRADICTED"}:
+        return False
+    if irreversible and not human_approved:
+        return False
+    return True
