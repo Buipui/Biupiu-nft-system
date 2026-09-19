@@ -1,0 +1,51 @@
+{
+  "gate": "RENDER-09",
+  "version": "1.0",
+  "purpose": "Repository-side validation of provenance fixtures against the RENDER-08 schema.",
+  "validation_mode": "static_fixture_contract",
+  "fixtures": {
+    "complete_lineage": {
+      "required_fields_present": true,
+      "lineage_complete": true,
+      "expected_status": "PASS",
+      "validation_status": "PASS"
+    },
+    "missing_source_revision": {
+      "required_fields_present": false,
+      "lineage_complete": false,
+      "expected_status": "FAIL",
+      "validation_status": "PASS"
+    },
+    "missing_output_checksum": {
+      "required_fields_present": false,
+      "lineage_complete": false,
+      "expected_status": "FAIL",
+      "validation_status": "PASS"
+    },
+    "duplicate_output_id": {
+      "unique_output_id": false,
+      "expected_status": "FAIL",
+      "validation_status": "PASS"
+    },
+    "unknown_source_asset": {
+      "source_asset_resolvable": false,
+      "expected_status": "FAIL",
+      "validation_status": "PASS"
+    },
+    "workstation_not_executed": {
+      "render_evidence_available": false,
+      "expected_status": "PENDING",
+      "validation_status": "PASS"
+    }
+  },
+  "integrity_checks": {
+    "missing_provenance_is_not_inferred": "PASS",
+    "checksums_are_not_fabricated": "PASS",
+    "engineering_validation_is_separate": "PASS",
+    "proprietary_assets_remain_external": "PASS",
+    "pending_workstation_evidence_is_not_marked_pass": "PASS"
+  },
+  "gate_status": "PASS_REPOSITORY_FIXTURE_CONTRACT",
+  "workstation_status": "PENDING",
+  "next_gate": "RENDER-10 — provenance registry integration and end-to-end asset lineage dry run."
+}
