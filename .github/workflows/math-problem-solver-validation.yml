@@ -1,0 +1,20 @@
+name: math-problem-solver-validation
+on:
+  push:
+    paths:
+      - 'software/rnd-os-ai/src/biupiu_ai/math_problem_solver.py'
+      - 'software/rnd-os-ai/tests/test_math_problem_solver.py'
+  pull_request:
+    paths:
+      - 'software/rnd-os-ai/src/biupiu_ai/math_problem_solver.py'
+      - 'software/rnd-os-ai/tests/test_math_problem_solver.py'
+  workflow_dispatch:
+jobs:
+  validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.11'
+      - run: python -m pytest software/rnd-os-ai/tests/test_math_problem_solver.py
