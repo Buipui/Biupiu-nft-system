@@ -344,3 +344,8 @@ The contract explicitly separates third-party references from Biupiu-owned imple
 - `software/rnd-os-ai/tests/test_ai27.py` — authentication, provenance, provider, replay, rate-limit and audit-failure harness.
 - `research/BIUPIU-AI-27-END-TO-END-GATE-v1.0.md` — AI-27 specification.
 - **AI-27 status:** test harness committed; CI/test execution remains unverified.
+
+
+## AERO-HANGAR-02 — Environment validation gate
+
+The Virtual Hangar now has explicit pre-simulation validation requirements covering the vehicle Digital Twin schema, L0–L5 fidelity transitions, simulator-version isolation, telemetry/provenance records, simulation-only AI/robotics outputs, replayable test scenarios and authoritative department cross-links. **AERO-HANGAR-02: EXECUTED.**
