@@ -407,3 +407,16 @@ Added `research/BIUPIU-MSFS2024-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The new MSFS 2
 ## Lumion LUM-05 — unified renderer router
 
 Added `research/visual-assets/BIUPIU-UNIFIED-RENDERER-ROUTER-v1.0.md`. The routing contract now connects approved asset manifests and visualization jobs to Lumion, Unreal Engine 5, V-Ray, Blender and CAD/BIM workflows, while keeping engineering truth outside the renderer layer. **LUM-05 executed.**
+
+
+## Knowledge & Visual Asset Ecosystem
+
+Added `research/BIUPIU-KNOWLEDGE-VISUAL-ASSET-ECOSYSTEM-v1.0.md`. This layer formalises the multimodal path **source → evidence → structured knowledge → visual reference → 3D asset → CAD/engineering model → simulation → validation → physical prototype → commercial asset**. It establishes human legibility, provenance, asset identity, derivative lineage and explicit separation between visual fidelity, engineering accuracy and validation evidence. Biupiu World is treated as a visual/spatial R&D layer, while CAD/CAE, Digital Twin, Digital Factory, Materials Genome and render/interchange systems remain the engineering and validation authorities.
+
+**VIS-01 status:** architecture integrated into the repository. Next gate: machine-readable visual-to-CAD lineage manifest plus human-legibility/quality checklist.
+
+
+## Version
+
+**Biupiu R&D Research Index v3.4 — Knowledge & Visual Asset Ecosystem**  
+**Updated:** 19 September 2026
