@@ -1,0 +1,15 @@
+{
+  "gate": "MARINE-SIM-01",
+  "version": "1.0",
+  "date": "2026-09-19",
+  "status": "REGISTERED_PENDING_RUNTIME_VALIDATION",
+  "design_language": "stealth geometric marine, premium biotech, regenerative materials, restrained gold on deep marine green",
+  "resource_classes": [
+    {"name": "ocean_and_buoyancy", "references": ["GodotRealisticEnvironments", "GodotOceanWaves", "godot4-oceanfft", "Godot Endless Waves"]},
+    {"name": "marine_game_modules", "references": ["Corsairs: Wind of Freedom", "Seaworthy", "PirateShipGame"]},
+    {"name": "render_and_interchange", "references": ["Blender", "glTF", "Bevy", "Godot", "Unreal Engine"]}
+  ],
+  "packages": ["MAR-01", "MAR-02", "MAR-03", "MAR-04", "MAR-ENV-01", "MAR-TEST-01"],
+  "licence_policy": "External code/assets remain references until licence, security, compatibility and provenance review is complete.",
+  "validation_policy": "No runtime, physics, performance or cross-platform acceptance is claimed without connected host evidence."
+}
