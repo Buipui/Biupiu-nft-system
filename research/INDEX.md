@@ -1,5 +1,10 @@
 # Biupiu R&D Research Index
 
+## RED-08 — Multi-provider asset equivalence matrix
+
+Added `research/BIUPIU-PROVIDER-EQUIVALENCE-RED-08-v1.0.md`, `packages/biupiu-render-pipeline/src/equivalence.ts`, the RED-08 provider matrix fixture and contract test. The gate compares geometry, transforms, materials, metadata and provenance against one authoritative baseline across all registered render providers. Source identity/provenance variance blocks acceptance; other asset variance is classified as drift. Live provider equivalence remains gated on connected hosts and measured outputs.
+
+
 ## RED-07 — Automated round-trip drift testing
 
 Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
