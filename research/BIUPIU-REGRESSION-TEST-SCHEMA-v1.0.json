@@ -1,0 +1,16 @@
+{
+  "schema":"BIUPIU-REGRESSION-TEST-SCHEMA-v1.0",
+  "gate":"BM-13",
+  "test_id":"string",
+  "type":"schema|reference|determinism|numerical|data-integrity|evidence|calibration|pipeline",
+  "baseline_ref":"string",
+  "current_ref":"string",
+  "tolerance":"number-or-string-or-null",
+  "observed_result":"object",
+  "status":"PASS|FAIL|BLOCKED|WAIVED",
+  "failure_reason":"string-or-null",
+  "waiver_ref":"string-or-null",
+  "code_version":"string",
+  "schema_version":"string",
+  "timestamp":"ISO-8601"
+}
