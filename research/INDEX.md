@@ -216,3 +216,14 @@ External research is treated as architectural reference; upstream code is not co
 - Mainline promotion remains gated until CI and repository validation produce evidence.
 
 **SELF-HEAL-01 status: HARD-CODED ON FEATURE BRANCH — OS contract + AI controller + tests + index synchronized. Main branch merge remains a validation/promotion gate.**
+## EXTERMINATE-01 — Repository Hygiene Gate
+
+19 September 2026:
+- Controlled repository audit executed against the SELF-HEAL-01 integration.
+- No generated cache/build/coverage/log artifacts were found in the inspected tree.
+- No duplicate self-healing implementation or safe dead-code deletion target was identified.
+- Authoritative learning, provenance, source and test records were preserved.
+- Static syntax inspection of the self-healing core passed.
+- No GitHub Actions workflow run is reported for the integration commit; CI remains unverified.
+
+**EXTERMINATE-01: CLEANUP COMPLETE WITHOUT DESTRUCTIVE DELETION.**
