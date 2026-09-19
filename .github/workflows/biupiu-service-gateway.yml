@@ -1,0 +1,23 @@
+name: Biupiu Service Gateway Contract
+
+on:
+  push:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+      - "apps/shared/runtime/DEPARTMENT-SERVICE-GATEWAY-v1.md"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+      - "apps/shared/runtime/DEPARTMENT-SERVICE-GATEWAY-v1.md"
+jobs:
+  gateway-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify authorization boundary
+        run: |
+          grep -q 'DENIED' apps/shared/runtime/department-service.ts
+          grep -q 'EntitlementAwareServiceGateway' apps/shared/runtime/department-service-gateway.ts
+          grep -q 'authorizedDepartments' apps/shared/runtime/department-service-gateway.ts
