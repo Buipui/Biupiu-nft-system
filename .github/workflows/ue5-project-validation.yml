@@ -1,0 +1,74 @@
+name: Biupiu UE5 Project Validation
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'projects/BiupiuAssetStudio/**'
+      - 'software/unreal/**'
+      - '.github/workflows/ue5-project-validation.yml'
+  pull_request:
+    paths:
+      - 'projects/BiupiuAssetStudio/**'
+      - 'software/unreal/**'
+      - '.github/workflows/ue5-project-validation.yml'
+
+permissions:
+  contents: read
+
+jobs:
+  validate-ue5-source:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Validate UE5 project JSON
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          p = Path('projects/BiupiuAssetStudio/BiupiuAssetStudio.uproject')
+          data = json.loads(p.read_text())
+          assert data['FileVersion'] == 3
+          assert any(m['Name'] == 'BiupiuAssetStudio' for m in data['Modules'])
+          enabled = {p['Name'] for p in data['Plugins'] if p.get('Enabled')}
+          required = {'ModelingToolsEditorMode', 'InterchangeEditor', 'EditorScriptingUtilities', 'MovieRenderPipeline'}
+          assert required <= enabled, (required - enabled)
+          print('UE5 project descriptor: PASS')
+
+      - name: Validate UE5 metadata schema
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          p = Path('software/unreal/ASSET-METADATA-SCHEMA-v1.0.json')
+          data = json.loads(p.read_text())
+          required = {'schema_version','asset_id','discipline','source','interchange','unreal','ip'}
+          assert required <= data.keys()
+          assert data['unreal']['engine_major'] == 5
+          print('UE5 asset metadata schema: PASS')
+
+      - name: Validate C++ source scaffold
+        shell: bash
+        run: |
+          test -s projects/BiupiuAssetStudio/Source/BiupiuAssetStudio/BiupiuAssetStudio.cpp
+          test -s projects/BiupiuAssetStudio/Source/BiupiuAssetStudio/BiupiuAssetStudio.Build.cs
+          test -s projects/BiupiuAssetStudio/Source/BiupiuAssetStudio.Target.cs
+          test -s projects/BiupiuAssetStudio/Source/BiupiuAssetStudioEditor.Target.cs
+          echo 'UE5 C++ scaffold presence: PASS'
+
+      - name: Verify generated files are excluded
+        shell: bash
+        run: |
+          grep -q '^Binaries/$' .gitignore
+          grep -q '^Intermediate/$' .gitignore
+          grep -q '^DerivedDataCache/$' .gitignore
+          grep -q '^Saved/$' .gitignore
+          echo 'UE5 generated-file safeguards: PASS'
+
+      - name: Verify workstation boundary
+        shell: bash
+        run: |
+          echo 'UE5/Visual Studio compilation remains a workstation gate.'
+          echo 'This Linux CI validates repository source/configuration only.'
