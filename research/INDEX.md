@@ -105,3 +105,10 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 - `software/rnd-os-ai/tests/test_ai23.py` — registry validation tests.
 - `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — audit-store readiness and write-failure fail-closed handling.
 - **AI-23 status:** resource registry, specification, tests and gateway safety boundary synchronized.
+
+
+## AI-24 outbox and provenance gate
+- `software/rnd-os-ai/src/biupiu_ai/audit_outbox.py` — bounded audit outbox with event deduplication and retry.
+- `software/rnd-os-ai/tests/test_ai24.py` — outbox/retry tests.
+- `research/BIUPIU-AI-24-OUTBOX-PROVENANCE-v1.0.md` — AI-24 production-boundary specification.
+- **AI-24 status:** development outbox and provenance boundary implemented; production durable queue integration remains gated.
