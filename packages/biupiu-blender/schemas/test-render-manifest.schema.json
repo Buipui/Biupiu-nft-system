@@ -1,0 +1,14 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Controlled Test Render Manifest",
+  "type":"object",
+  "required":["package_id","render_target","resolution","shots","validation","release_gate"],
+  "properties":{
+    "package_id":{"type":"string"},
+    "render_target":{"const":"BLENDER_WINDOWS_OFFICIAL"},
+    "resolution":{"const":"1920x1080"},
+    "shots":{"type":"array","items":{"type":"object","required":["shot_id","status"],"properties":{"shot_id":{"type":"string"},"status":{"enum":["READY_FOR_CONTROLLED_TEST_RENDER","TEST_RENDERED","REVIEW_REQUIRED"]}}}},
+    "validation":{"type":"object","required":["asset","provenance","evidence","visual_qc"],"properties":{"asset":{"enum":["PENDING","PASS","FAIL"]},"provenance":{"enum":["PENDING","PASS","FAIL"]},"evidence":{"enum":["PENDING","PASS","FAIL"]},"visual_qc":{"enum":["PENDING","PASS","FAIL"]}}},
+    "release_gate":{"enum":["HOLD","READY_FOR_REVIEW","APPROVED_FOR_RELEASE"]}
+  }
+}
