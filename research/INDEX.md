@@ -197,3 +197,12 @@ Added a machine-readable unified visualization package schema, example package, 
 ## AERO-HANGAR-01 — Virtual Hangar + Digital Twin
 
 Added `research/BIUPIU-AEROSPACE-VIRTUAL-HANGAR-DIGITAL-TWIN-v1.0.md`. The private Virtual Hangar provides a multi-vehicle simulation architecture for eVTOL, helicopters, UAVs, drones, fixed-wing aircraft and jets. NASA, public DARPA research, ResearchGate and Emerald research patterns are mapped into Aerospace, Physics Systems, Compute, AI, Robotics, Avionics, CG-3D, Materials, Manufacturing, Energy, HMI, CODEX, Digital Twin and Testing. Existing FS2002/MSFS 2024 simulator tracks feed the Hangar. **AERO-HANGAR-01: ARCHITECTURE REGISTERED.**
+
+
+## OS/AI Interface Contract — SEPARATION-02
+
+Added 19 September 2026:
+- `research/BIUPIU-OS-AI-INTERFACE-CONTRACT-v1.0.md` — explicit boundary for OS context, AI proposals, validation, audit and authoritative state.
+- `software/rnd-os-ai/README.md` — updated to Biupiu AI Intelligence Layer v1.1.
+
+**SEPARATION-02 status: EXECUTED — interface contract registered and AI boundary implementation documentation synchronized. Runtime end-to-end execution remains a separate validation gate.**
