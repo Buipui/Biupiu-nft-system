@@ -1,0 +1,1 @@
+{"schema":"biupiu.simulator-adapter","version":"1.0","department":"AUTO","world_contract":"world/BIUPIU-WORLD-SHARED-ASSET-CONTRACT-v1.json","candidate":"CARLA","world_inputs":["terrain","roads","buildings","lighting","weather","materials"],"department_inputs":["vehicle-dynamics","traffic","sensors","test-scenarios"],"promotion_state":"research-ready","runtime_validated":false}
