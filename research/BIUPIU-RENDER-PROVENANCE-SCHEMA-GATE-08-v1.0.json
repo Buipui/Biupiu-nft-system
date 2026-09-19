@@ -1,0 +1,36 @@
+{
+  "gate": "RENDER-08",
+  "version": "1.0",
+  "purpose": "Repository-side provenance schema and fixture validation.",
+  "required_fields": [
+    "asset_id",
+    "source_revision",
+    "scene_id",
+    "geometry_checksum",
+    "material_manifest",
+    "engine_adapter",
+    "engine_version",
+    "configuration_id",
+    "output_id",
+    "output_checksum",
+    "creation_timestamp",
+    "status"
+  ],
+  "status_values": ["PASS", "FAIL", "PENDING", "BLOCKED"],
+  "fixtures": {
+    "complete_lineage": {"expected": "PASS"},
+    "missing_source_revision": {"expected": "FAIL"},
+    "missing_output_checksum": {"expected": "FAIL"},
+    "duplicate_output_id": {"expected": "FAIL"},
+    "unknown_source_asset": {"expected": "FAIL"},
+    "workstation_not_executed": {"expected": "PENDING"}
+  },
+  "integrity_rules": [
+    "Do not infer missing provenance.",
+    "Do not fabricate checksums or measurements.",
+    "Derivative showcase assets must retain source lineage.",
+    "Engineering validation must remain distinct from visualization output.",
+    "Proprietary binaries, credentials and restricted assets remain external."
+  ],
+  "gate_status": "PASS_SCHEMA_DEFINED_PENDING_FIXTURE_EXECUTION"
+}
