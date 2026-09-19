@@ -5,14 +5,17 @@
     "client": "presentation-and-local-state",
     "server": "authorization-and-persistent-state",
     "dms": "identity-entitlement-site-and-enterprise-audit",
-    "rnd_os": "research-model-provenance-and-experiment-state"
+    "rnd_os": "research-model-provenance-and-experiment-state",
+    "enterprise": "commercial-operations-and-enterprise-state"
   },
   "startup": [
     "LOAD_APP_CONTRACT",
     "LOAD_SUBSCRIBER_CONTEXT",
     "BUILD_MAIN_HUB",
     "RESOLVE_DEPARTMENT_ENTITLEMENTS",
-    "REGISTER_DIGITAL_TWIN_ADAPTER"
+    "REGISTER_DIGITAL_TWIN_ADAPTER",
+    "REGISTER_ENTERPRISE_CONTROL_PLANE",
+    "REGISTER_ENTERPRISE_ONTOLOGY"
   ],
   "routes": {
     "MAIN_HUB": "apps/shared/runtime/main-hub",
@@ -22,12 +25,26 @@
     "CREATIVE_AI": "packages/biupiu-firefly",
     "RUNWAY_MEDIA": "packages/biupiu-runway-media",
     "DMS_DTM": "dms/core/digital-twin",
-    "DIGITAL_TWIN_SCHEMA": "digital-twin/schemas"
+    "DIGITAL_TWIN_SCHEMA": "digital-twin/schemas",
+    "ENTERPRISE": "enterprise",
+    "ENTERPRISE_CONTROL": "enterprise/control-plane",
+    "ENTERPRISE_ONTOLOGY": "enterprise/ontology",
+    "ENTERPRISE_COMMERCIAL": "enterprise/commercial",
+    "ENTERPRISE_TREASURY": "enterprise/treasury",
+    "ENTERPRISE_PROVENANCE": "trust"
   },
   "clients": ["android", "windows", "macos", "linux", "web"],
   "digital_twin": {
     "feature_id": "digital-twin.advanced",
     "api": "/api/v1/digital-twins",
     "evidence_states": ["T0","T1","T2","T3","T4","T5","T6","T7","T8","T9"]
+  },
+  "enterprise": {
+    "system_id": "BIUPIU-ENTERPRISE-v1",
+    "digital_twin_registry": "enterprise/digital-twin-registry",
+    "ontology": "enterprise/ontology",
+    "commercial": "enterprise/commercial",
+    "treasury": "enterprise/treasury",
+    "blockchain_anchor": "trust/blockchain"
   }
 }
