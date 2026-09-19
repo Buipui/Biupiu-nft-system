@@ -402,3 +402,8 @@ Added `research/BIUPIU-MSFS2024-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The new MSFS 2
 - `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — AuditStore integration for success, rejection and provider-failure events.
 - `software/rnd-os-ai/tests/test_ai21.py` — persistence integration tests.
 - **AI-21 status:** transactional audit integration boundary implemented; production durable-store failure semantics remain gated.
+
+
+## Lumion LUM-05 — unified renderer router
+
+Added `research/visual-assets/BIUPIU-UNIFIED-RENDERER-ROUTER-v1.0.md`. The routing contract now connects approved asset manifests and visualization jobs to Lumion, Unreal Engine 5, V-Ray, Blender and CAD/BIM workflows, while keeping engineering truth outside the renderer layer. **LUM-05 executed.**
