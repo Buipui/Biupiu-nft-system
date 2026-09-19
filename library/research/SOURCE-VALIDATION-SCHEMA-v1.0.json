@@ -1,0 +1,8 @@
+{
+  "version":"1.0",
+  "required_fields":["id","source","title","url","retrieved_at","evidence_class","peer_review_status","open_access_status","licence_status","commercial_or_personal","routes","validation_state"],
+  "file_fields":["download_url","file_sha256","file_format","file_retrieved_at"],
+  "promotion_rule":"A record cannot become implementation-candidate until metadata, source, licence and content checks pass.",
+  "duplicate_rule":"DOI is the primary scholarly deduplication key; otherwise canonical URL plus normalized title.",
+  "copyright_rule":"Store metadata and links for restricted works; store full text only where the source explicitly permits it."
+}
