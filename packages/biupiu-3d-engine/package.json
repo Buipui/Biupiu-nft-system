@@ -1,0 +1,9 @@
+{
+  "name": "@biupiu/3d-engine",
+  "version": "0.1.0",
+  "private": true",
+  "description": "Biupiu open-resource 3D/CAD adapter layer for parametric geometry, engineering blockouts and renderer-neutral asset manifests.",
+  "entry": "src/index.ts",
+  "integrations": ["OpenSCAD", "FreeCAD", "Blender", "build123d"],
+  "licensePolicy": "Adapters and generated examples are Biupiu-authored. External engines and libraries remain separate dependencies subject to their own licences."
+}
