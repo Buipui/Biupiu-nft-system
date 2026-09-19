@@ -1,0 +1,13 @@
+{
+  "screenId":"SMART-SYSTEMS",
+  "version":"1.0",
+  "referenceArchitecture":"SMART_FARMING",
+  "sections":["status","gate","digitalTwin","sensors","intelligence","actuation","experiments","audit","nextGate"],
+  "modeOptions":["SIMULATION","PILOT","PHYSICAL","MAINTENANCE","FAULT"],
+  "safetyRules":[
+    "separate simulated and physical commands",
+    "label recommendations separately from approved actions",
+    "preserve measurement provenance",
+    "require gate evidence before release"
+  ]
+}
