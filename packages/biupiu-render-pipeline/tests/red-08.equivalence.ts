@@ -1,0 +1,10 @@
+import { compareProviderMatrix, RED_08_RULES, ProviderSnapshot } from "../src/equivalence";
+const base:ProviderSnapshot={sourceAssetId:"BIUPIU-RENDER-TEST-001",sourceModelVersion:"TEST-001",provider:"AUTHORITATIVE_SOURCE",format:"GLTF",geometrySignature:"G",transformSignature:"T",materialSignature:"M",metadataSignature:"D",provenanceSignature:"P"};
+const clean=compareProviderMatrix(base,[{...base,provider:"BLENDER",format:"GLTF"},{...base,provider:"UNREAL_ENGINE_5",format:"USD"}]);
+if(clean.status!=="PASS") throw new Error("Equivalent provider matrix must pass.");
+const material=compareProviderMatrix(base,[{...base,provider:"REDSHIFT",materialSignature:"M2"}]);
+if(material.status!=="DRIFT") throw new Error("Material variance must be classified as drift.");
+if(!material.findings.some(f=>f.domain==="MATERIAL")) throw new Error("Material finding missing.");
+const provenance=compareProviderMatrix(base,[{...base,provider:"VRAY",provenanceSignature:"P2"}]);
+if(provenance.status!=="BLOCKED") throw new Error("Provenance variance must block acceptance.");
+if(!RED_08_RULES.liveMeasuredOutputsRequired) throw new Error("Live measurement gate missing.");
