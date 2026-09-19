@@ -1,0 +1,13 @@
+{
+  "schema":"BIUPIU-RD-DATA-LAKE-CATALOG-v1.0",
+  "gate":"BM-12",
+  "zones":{
+    "RAW":{"mutable":false,"purpose":"immutable source and original experimental data"},
+    "PROCESSED":{"mutable":false,"purpose":"versioned reproducible transformations"},
+    "MODELS":{"mutable":false,"purpose":"versioned material resin geometry simulation and Digital Twin records"},
+    "RESULTS":{"mutable":false,"purpose":"simulation and experimental result records"},
+    "CALIBRATION":{"mutable":false,"purpose":"calibration datasets parameter updates and model versions"},
+    "RELEASES":{"mutable":false,"purpose":"frozen reproducible research snapshots"}
+  },
+  "entry_fields":["dataset_id","zone","source_refs","content_hash","schema_version","producer","created_at","parent_dataset_id","processing_code_ref","evidence_state"]
+}
