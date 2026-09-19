@@ -1,0 +1,44 @@
+{
+  "gate": "RENDER-10",
+  "version": "1.0",
+  "purpose": "Provenance registry integration and end-to-end asset-lineage dry run.",
+  "lineage": [
+    "SOURCE_ASSET",
+    "SOURCE_REVISION",
+    "SCENE_ID",
+    "ENGINE_ADAPTER",
+    "ENGINE_VERSION",
+    "CONFIGURATION_ID",
+    "OUTPUT_ID",
+    "OUTPUT_CHECKSUM"
+  ],
+  "dry_run": {
+    "source_asset_id": "BIU-ASSET-DRYRUN-001",
+    "source_revision": "REV-001",
+    "scene_id": "BIU-RENDER-SCENE-001",
+    "engine_adapter": "BLENDER_CYCLES",
+    "engine_version": "WORKSTATION_PENDING",
+    "configuration_id": "CFG-DRYRUN-001",
+    "output_id": "OUT-DRYRUN-001",
+    "output_checksum": "WORKSTATION_PENDING",
+    "status": "PENDING"
+  },
+  "registry_rules": [
+    "Every derivative output must reference a source asset and source revision.",
+    "Every render record must identify its engine adapter and configuration.",
+    "Output identifiers must be unique.",
+    "Actual output checksums are created only after workstation execution.",
+    "A dry-run record must never be represented as a real render result.",
+    "Failed or unsupported conversions must remain attached to the lineage record."
+  ],
+  "integration_checks": {
+    "source_to_scene_link": "PASS",
+    "scene_to_adapter_link": "PASS",
+    "adapter_to_configuration_link": "PASS",
+    "configuration_to_output_link": "PASS",
+    "output_checksum": "PENDING_WORKSTATION",
+    "real_render_evidence": "PENDING_WORKSTATION"
+  },
+  "gate_status": "PASS_DRY_RUN_CONTRACT_PENDING_REAL_RENDER",
+  "next_gate": "RENDER-11 — automated lineage regression and repository consistency checks."
+}
