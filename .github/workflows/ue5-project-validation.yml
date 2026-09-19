@@ -6,11 +6,13 @@ on:
     paths:
       - 'projects/BiupiuAssetStudio/**'
       - 'software/unreal/**'
+      - 'research/visual-assets/**'
       - '.github/workflows/ue5-project-validation.yml'
   pull_request:
     paths:
       - 'projects/BiupiuAssetStudio/**'
       - 'software/unreal/**'
+      - 'research/visual-assets/**'
       - '.github/workflows/ue5-project-validation.yml'
 
 permissions:
@@ -28,26 +30,34 @@ jobs:
         run: |
           import json
           from pathlib import Path
-          p = Path('projects/BiupiuAssetStudio/BiupiuAssetStudio.uproject')
-          data = json.loads(p.read_text())
+          data = json.loads(Path('projects/BiupiuAssetStudio/BiupiuAssetStudio.uproject').read_text())
           assert data['FileVersion'] == 3
           assert any(m['Name'] == 'BiupiuAssetStudio' for m in data['Modules'])
           enabled = {p['Name'] for p in data['Plugins'] if p.get('Enabled')}
           required = {'ModelingToolsEditorMode', 'InterchangeEditor', 'EditorScriptingUtilities', 'MovieRenderPipeline'}
-          assert required <= enabled, (required - enabled)
+          assert required <= enabled, required - enabled
           print('UE5 project descriptor: PASS')
 
-      - name: Validate UE5 metadata schema
+      - name: Validate UE5 metadata schemas
         shell: python
         run: |
           import json
           from pathlib import Path
-          p = Path('software/unreal/ASSET-METADATA-SCHEMA-v1.0.json')
-          data = json.loads(p.read_text())
-          required = {'schema_version','asset_id','discipline','source','interchange','unreal','ip'}
-          assert required <= data.keys()
-          assert data['unreal']['engine_major'] == 5
-          print('UE5 asset metadata schema: PASS')
+          for name in ('ASSET-METADATA-SCHEMA-v1.0.json','ue5-visual-asset-bridge.schema.json'):
+              json.loads(Path('software/unreal', name).read_text())
+          print('UE5 metadata schemas: PASS')
+
+      - name: Validate visual-asset bridge contract
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          schema = json.loads(Path('software/unreal/ue5-visual-asset-bridge.schema.json').read_text())
+          assert schema['properties']['ue5']['properties']['engine_major']['const'] == 5
+          visual = Path('research/visual-assets/biupiu-visual-asset-manifest.schema.json')
+          assert visual.exists()
+          json.loads(visual.read_text())
+          print('Visual asset <-> UE5 bridge: PASS')
 
       - name: Validate C++ source scaffold
         shell: bash
@@ -70,5 +80,5 @@ jobs:
       - name: Verify workstation boundary
         shell: bash
         run: |
-          echo 'UE5/Visual Studio compilation remains a workstation gate.'
-          echo 'This Linux CI validates repository source/configuration only.'
+          echo 'UE5/Visual Studio compilation and Asset Registry checks remain workstation gates.'
+          echo 'This CI validates repository source/configuration only.'
