@@ -377,3 +377,8 @@ Added `research/visual-assets/validate_visual_asset.py`, `VISUALIZATION-JOB-PROV
 ## RED-06 — Asset conversion and material translation
 
 Added `packages/biupiu-render-pipeline/src/conversion.ts`, a provider-neutral conversion report contract that explicitly distinguishes READY, LOSSY, BLOCKED and FAILED conversions. Unsupported material features must be reported with a loss reason/fallback rather than silently dropped. Added the RED-06 fixture and automated invariants test, and exposed the conversion contract through the render-pipeline package and module contract. **RED-06 status:** repository conversion/loss-reporting architecture implemented; actual provider conversion and visual-equivalence acceptance remain gated on connected renderer hosts and measured round-trip results.
+
+
+## FS2002 Nexus Mods × GitHub cross-link
+
+Added `research/BIUPIU-FS2002-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The track separates Microsoft Flight Simulator 2002 from modern MSFS content and cross-links historically relevant Nexus/GMax authoring documentation with open-source GitHub tooling for legacy scenery, BGL analysis, simulator-state interoperability, head tracking and period technical documentation. **FS2K2-01 discovery/cross-link gate: executed.** No third-party game assets were copied or redistributed, and no live FS2002 compatibility is claimed.
