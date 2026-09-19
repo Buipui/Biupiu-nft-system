@@ -500,3 +500,20 @@ Routing now explicitly covers CG-3D, RENDER, PHYS-SYS, NAVIGATION, ROBOTICS, AI,
 ## Index synchronization
 **Research Index v4.3 — World Engine Separation / Digital Twin Promotion**  
 **Updated:** 19 September 2026
+
+
+## WORLD-BUILD-RED-01 — REDkit / WolvenKit Method Harvest
+
+Added 19 September 2026:
+- `world/environments/REDKIT-WORLD-BUILD-RESOURCE-ADAPTER-v1.0.md`
+- `world/environments/REDKIT-ASSET-BUILD-MATRIX-v1.0.json`
+- `world/assets/BIUPIU-MAIN-HUB-ASSET-BLUEPRINTS-v1.json`
+- `world/assets/BIUPIU-PROCEDURAL-TERRAIN-BUILD-v1.json`
+
+The gate harvests world-building methods from the Witcher 3 modding/tool ecosystem into original Biupiu-native asset specifications. No proprietary Witcher 3 meshes, textures, audio, characters, extracted world files or game files are imported or represented as Biupiu-owned.
+
+**WORLD-BUILD-RED-01 status: EXECUTED — method/resource adapter and first native asset blueprints committed.**
+
+## Index synchronization
+**Research Index v4.3 — REDkit/WolvenKit World-Build Resource Harvest**  
+**Updated:** 19 September 2026
