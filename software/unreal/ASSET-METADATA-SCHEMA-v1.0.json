@@ -1,0 +1,9 @@
+{
+  "schema_version": "1.0",
+  "asset_id": "BIUPIU-UE5-EXAMPLE",
+  "discipline": "automotive|marine|evtOL|helicopter|microturbine|advanced-materials|regenerative-agriculture|computational-art",
+  "source": {"research_id": "", "source_application": "", "source_revision": "", "source_commit": ""},
+  "interchange": {"format": "fbx|gltf|usd|native", "source_file": ""},
+  "unreal": {"project": "BiupiuAssetStudio", "asset_path": "/Game/Biupiu/Assets", "engine_major": 5},
+  "ip": {"license_status": "", "provenance_status": ""}
+}
