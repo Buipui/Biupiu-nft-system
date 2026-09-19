@@ -1,9 +1,10 @@
 {
-  "version": "1.0",
-  "moduleIds": ["SMART_FARMING", "SMART_METAL_WORKSHOP", "RND_OS"],
+  "version": "1.1",
+  "moduleIds": ["SMART_FARMING", "SMART_METAL_WORKSHOP", "RND_OS", "CREATIVE_AI"],
   "modules": [
     {"id":"SMART_FARMING","route":"smart-farming","packageName":"@biupiu/smart-farming","launchUri":"biupiu://department/smart-farming","screenId":"FARMING_WORLD"},
     {"id":"SMART_METAL_WORKSHOP","route":"smart-metal-workshop","packageName":"@biupiu/smart-metallurgy","launchUri":"biupiu://department/smart-metal-workshop","screenId":"METAL_MAKING_WORLD"},
-    {"id":"RND_OS","route":"rnd-os","packageName":"@biupiu/rnd-os","launchUri":"biupiu://department/rnd-os","screenId":"RND_OS_HOME"}
+    {"id":"RND_OS","route":"rnd-os","packageName":"@biupiu/rnd-os","launchUri":"biupiu://department/rnd-os","screenId":"RND_OS_HOME"},
+    {"id":"CREATIVE_AI","route":"creative-ai","packageName":"@biupiu/firefly","launchUri":"biupiu://department/creative-ai","screenId":"CREATIVE_AI_HOME"}
   ]
 }
