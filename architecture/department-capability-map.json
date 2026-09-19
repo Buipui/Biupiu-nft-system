@@ -1,0 +1,136 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "nodes": [
+    [
+      "MATH",
+      "capability",
+      "Mathematics/problem solving/formal verification"
+    ],
+    [
+      "PHYS-SYS",
+      "capability",
+      "Physics kernels/numerical simulation"
+    ],
+    [
+      "COMPUTE",
+      "capability",
+      "Algorithms/reproducible computation"
+    ],
+    [
+      "AI",
+      "capability",
+      "Agents/ML/optimisation/decision support"
+    ],
+    [
+      "GEOMETRY",
+      "capability",
+      "Computational geometry/CAD"
+    ],
+    [
+      "ROBOTICS",
+      "capability",
+      "Robotics/control/sensor integration"
+    ],
+    [
+      "DIGITAL-TWIN",
+      "platform",
+      "Enterprise graph/twin registry/digital thread"
+    ],
+    [
+      "AERO",
+      "domain",
+      "Aerospace/eVTOL engineering"
+    ],
+    [
+      "MARINE",
+      "domain",
+      "Marine engineering"
+    ],
+    [
+      "AUTOMOTIVE",
+      "domain",
+      "Automotive engineering"
+    ],
+    [
+      "ADV-MFG",
+      "domain",
+      "Advanced manufacturing"
+    ],
+    [
+      "AGRI",
+      "domain",
+      "Regenerative agriculture"
+    ],
+    [
+      "BIO",
+      "domain",
+      "Biotechnology/plant research"
+    ],
+    [
+      "MATERIALS",
+      "domain",
+      "Advanced materials/composites/textiles"
+    ],
+    [
+      "ENERGY",
+      "domain",
+      "Energy/storage/microturbine research"
+    ],
+    [
+      "PHOTONICS",
+      "domain",
+      "Photonic communications/optical systems"
+    ],
+    [
+      "BIOMED",
+      "domain",
+      "Biomedical R&D"
+    ],
+    [
+      "IP",
+      "governance",
+      "IP/provenance registry"
+    ],
+    [
+      "NFT",
+      "economic",
+      "NFT/digital asset registry"
+    ],
+    [
+      "BLOCKCHAIN",
+      "economic",
+      "Blockchain anchoring/verification"
+    ],
+    [
+      "BPU",
+      "economic",
+      "BPU settlement asset layer"
+    ],
+    [
+      "TREASURY",
+      "economic",
+      "Treasury/budget/financial controls"
+    ],
+    [
+      "MARKETPLACE",
+      "economic",
+      "Marketplace/commercial transactions"
+    ],
+    [
+      "BIUPIU-WORLD",
+      "commercial",
+      "World ecosystem"
+    ],
+    [
+      "RND",
+      "governance",
+      "Private R&D boundary"
+    ],
+    [
+      "COMMERCIAL",
+      "governance",
+      "Commercial Biupiu boundary"
+    ]
+  ]
+}
