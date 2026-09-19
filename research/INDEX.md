@@ -1,5 +1,37 @@
 # Biupiu R&D Research Index
 
+## OPENAI-INTEL-01 — OpenAI Intelligence Architecture Integration
+
+Added 19 September 2026:
+- `research/BIUPIU-OPENAI-INTELLIGENCE-INTEGRATION-v1.0.md`
+- `research/BIUPIU-OPENAI-RESOURCE-MANIFEST-v1.0.json`
+- `software/rnd-os-ai/src/biupiu_ai/intelligence_core.py` — bounded agent task routing and fail-closed result validation.
+- `software/rnd-os-ai/tests/test_openai_integration.py` — routing, approval, provenance and dependency-closure tests.
+
+### Integrated patterns
+OpenAI Agents SDK patterns: bounded agents, tools, handoffs/routing, guardrails, human approval, sessions and tracing.
+
+OpenAI Evals patterns: evaluation-first development, regression testing, grounding, contradiction handling and reproducibility.
+
+OpenAI Codex/Cookbook patterns: repository-aware planning, persistent project guidance, sandbox/workspace boundaries and iterative change verification.
+
+### Biupiu algorithm update
+`INTAKE → CLASSIFY → ROUTE → RETRIEVE → CHECK PROVENANCE → CONSTRAIN → EXECUTE/PROPOSE → TRACE → EVALUATE → REGRESS → LEARN → PROMOTE`
+
+Core rule: **AI proposes; Core OS validates; evidence grounds; tests verify; humans control irreversible release.**
+
+### Separation
+**Biupiu OS = authoritative core/integration layer.**  
+**Biupiu AI = modular intelligence layer.**
+
+Third-party OpenAI source remains external until licence/security/compatibility/provenance/regression gates pass.
+
+**OPENAI-INTEL-01 status: EXECUTED — architecture knowledge and compatible deterministic primitives integrated. Live provider execution remains an environment-validation gate.**
+
+---
+
+# Biupiu R&D Research Index
+
 ## RED-08 — Multi-provider asset equivalence matrix
 
 Added `research/BIUPIU-PROVIDER-EQUIVALENCE-RED-08-v1.0.md`, `packages/biupiu-render-pipeline/src/equivalence.ts`, the RED-08 provider matrix fixture and contract test. The gate compares geometry, transforms, materials, metadata and provenance against one authoritative baseline across all registered render providers. Source identity/provenance variance blocks acceptance; other asset variance is classified as drift. Live provider equivalence remains gated on connected hosts and measured outputs.
