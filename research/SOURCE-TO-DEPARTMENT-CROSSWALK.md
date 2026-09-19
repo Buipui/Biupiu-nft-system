@@ -69,3 +69,23 @@ Only original Biupiu artwork or properly licensed source material may enter the 
 ## Status
 
 This crosswalk is the permanent routing rule for future Biupiu research indexing.
+
+
+## Multilingual routing extension — 19 September 2026
+
+Language must not restrict department routing. A source discovered in any language is routed by subject, entities and research questions.
+
+| Language/search layer | Default routing | Notes |
+|---|---|---|
+| Russian/Cyrillic | COMPUTE, AI, CONTROL, DIGITAL-TWIN, PHYSICS, ENGINEERING, MATERIALS, ENERGY | Search Cyrillic + transliteration |
+| Japanese | MATERIALS, ROBOTICS, AI, MANUFACTURING, ENERGY, PHOTONICS, AERO, AUTOMOTIVE | Preserve original identifiers |
+| Chinese | MATERIALS, MANUFACTURING, AGRI, ENERGY, PHOTONICS, AI, AERO | Search simplified Chinese + English |
+| Korean | MATERIALS, ROBOTICS, COMPUTE, BIO, ENERGY, MANUFACTURING | Search Hangul + English |
+| Spanish/Portuguese | AGRI, WATER, BIO, MEDICAL, MATERIALS, TEXTILES, FOOD, ECOLOGY | Regional open-science repositories |
+| French/German | ENGINEERING, MATERIALS, AERO, ENERGY, AGRI, BIO, COMPUTE, MANUFACTURING | Institutional repository priority |
+| Arabic/Persian/Turkish | HISTORY, WATER, AGRI, ARCHITECTURE, MATERIALS, MEDICAL, ENERGY | Native-script + transliteration |
+| African languages | AGRI, BIO, CONSERVATION, ETHNOBOTANY, ARCHAEOLOGY, WATER, LANGUAGE | Prioritise universities, government and indigenous-knowledge archives |
+| South/Southeast Asian languages | AGRI, WATER, BIO, MATERIALS, TEXTILES, FOOD, ENERGY, COMPUTE | National and university repositories |
+| European regional languages | ENGINEERING, MATERIALS, ENERGY, AERO, ROBOTICS, COMPUTE, HISTORY | National/institutional repositories |
+
+Minimum linkage remains: `Source ID → Claim ID → Department → Research Question → Model → Dataset → Code/Commit → Result → Evidence Status → IP Status`.
