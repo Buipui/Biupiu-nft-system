@@ -10,6 +10,7 @@ export interface FireflyApiResponse {
   jobId?: string;
   statusUrl?: string;
   cancelUrl?: string;
+  resultUrl?: string;
   raw: unknown;
 }
 
@@ -72,6 +73,22 @@ function extractStatusUrl(payload: JsonRecord, linkHeader?: string | null): stri
   }
 
   return extractLinkHeader(linkHeader || null, "result");
+}
+
+function extractResultUrl(payload: JsonRecord, linkHeader?: string | null): string | undefined {
+  const direct = payload.resultUrl;
+  if (typeof direct === "string") return direct;
+
+  const result = payload.result;
+  if (result && typeof result === "object") {
+    const nested = result as JsonRecord;
+    const url = nested.url;
+    if (typeof url === "string") return url;
+    const presignedUrl = nested.presignedUrl;
+    if (typeof presignedUrl === "string") return presignedUrl;
+  }
+
+  return undefined;
 }
 
 function extractCancelUrl(payload: JsonRecord, linkHeader?: string | null): string | undefined {
@@ -161,6 +178,7 @@ export class FireflyApiClient {
       jobId: extractJobId(json),
       statusUrl: extractStatusUrl(json, response.headers.get("Link")),
       cancelUrl: extractCancelUrl(json, response.headers.get("Link")),
+      resultUrl: extractResultUrl(json, response.headers.get("Link")),
       raw
     };
   }
@@ -194,6 +212,23 @@ export class FireflyApiClient {
     }
 
     return raw;
+  }
+
+  /**
+   * Download a completed Firefly output directly from its temporary/presigned URL.
+   * The URL is supplied by Firefly and is intentionally fetched without Adobe
+   * client credentials; it is already authorized by the provider.
+   */
+  async downloadResult(
+    resultUrl: string,
+    options: { fetchImpl?: typeof fetch } = {}
+  ): Promise<ArrayBuffer> {
+    const downloader = options.fetchImpl || this.fetchImpl;
+    const response = await downloader(resultUrl, { method: "GET" });
+    if (!response.ok) {
+      throw new Error(`Firefly result download failed with HTTP ${response.status}.`);
+    }
+    return response.arrayBuffer();
   }
 
   async cancelJob(jobId: string): Promise<unknown> {
