@@ -187,3 +187,8 @@ Learning data remains off-chain by default. Only approved cryptographic checkpoi
 ## Lumion LUM-06 — unified visualization package
 
 Added a machine-readable unified visualization package schema, example package, and specification. One validated source model plus approved asset manifests can now define coordinated Lumion, Unreal Engine 5, V-Ray and Blender targets, with shared scene/provenance metadata and renderer-specific profiles. **LUM-06 executed.**
+
+
+## AERO-HANGAR-01 — Virtual Hangar + Digital Twin
+
+Added `research/BIUPIU-AEROSPACE-VIRTUAL-HANGAR-DIGITAL-TWIN-v1.0.md`. The private Virtual Hangar provides a multi-vehicle simulation architecture for eVTOL, helicopters, UAVs, drones, fixed-wing aircraft and jets. NASA, public DARPA research, ResearchGate and Emerald research patterns are mapped into Aerospace, Physics Systems, Compute, AI, Robotics, Avionics, CG-3D, Materials, Manufacturing, Energy, HMI, CODEX, Digital Twin and Testing. Existing FS2002/MSFS 2024 simulator tracks feed the Hangar. **AERO-HANGAR-01: ARCHITECTURE REGISTERED.**
