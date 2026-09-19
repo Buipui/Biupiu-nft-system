@@ -9,7 +9,6 @@ export interface FireflyApiConfig {
 export interface FireflyApiResponse {
   jobId?: string;
   statusUrl?: string;
-  resultUrl?: string;
   raw: unknown;
 }
 
@@ -17,29 +16,40 @@ type JsonRecord = Record<string, unknown>;
 
 const DEFAULT_BASE_URL = "https://firefly-api.adobe.io";
 
+/**
+ * Endpoint inventory aligned to Adobe's current Firefly API OpenAPI 3.0.0
+ * specification (ffs-firefly-api/static/firefly-api.json).
+ */
 const ENDPOINTS = {
   GENERATE_IMAGE: "/v3/images/generate-async",
   GENERATE_IMAGE5: "/v4/images/generate-async",
+  SIMILAR_IMAGES: "/v3/images/generate-similar-async",
   EXPAND_IMAGE: "/v3/images/expand-async",
   FILL_IMAGE: "/v3/images/fill-async",
   OBJECT_COMPOSITE: "/v3/images/generate-object-composite-async",
-  SIMILAR_IMAGES: "/v3/images/generate-similar-async",
+  PRECISE_COMPOSITE: "/v3/images/precise-composite",
+  ADAPTIVE_COMPOSITE: "/v3/images/adaptive-composite",
   UPSCALE: "/v3/images/upscale",
+  GENERATE_VIDEO: "/v3/videos/generate",
   UPLOAD_ASSET: "/v2/storage/image",
-  GENERATE_VIDEO: "/v3/videos/generate"
+  JOB_STATUS: "/v3/status/"
 } as const;
 
 function extractJobId(payload: JsonRecord): string | undefined {
   if (typeof payload.jobId === "string") return payload.jobId;
+
   const links = payload.links;
   if (links && typeof links === "object") {
     const result = (links as JsonRecord).result;
-    if (result && typeof result === "object" && typeof (result as JsonRecord).href === "string") {
-      const href = (result as JsonRecord).href as string;
-      const match = href.match(/\/status\/(.+)$/);
-      return match?.[1] || href;
+    if (result && typeof result === "object") {
+      const href = (result as JsonRecord).href;
+      if (typeof href === "string") {
+        const match = href.match(/\/status\/(.+)$/);
+        return match?.[1] || href;
+      }
     }
   }
+
   return undefined;
 }
 
@@ -47,10 +57,12 @@ function extractStatusUrl(payload: JsonRecord): string | undefined {
   const links = payload.links;
   if (links && typeof links === "object") {
     const result = (links as JsonRecord).result;
-    if (result && typeof result === "object" && typeof (result as JsonRecord).href === "string") {
-      return (result as JsonRecord).href as string;
+    if (result && typeof result === "object") {
+      const href = (result as JsonRecord).href;
+      if (typeof href === "string") return href;
     }
   }
+
   return undefined;
 }
 
@@ -61,12 +73,16 @@ export class FireflyApiClient {
 
   constructor(config: FireflyApiConfig = {}) {
     const auth = getFireflyAuthConfig();
-    this.baseUrl = (config.baseUrl || "https://firefly-api.adobe.io").replace(/\/$/, "");
+    this.baseUrl = (config.baseUrl || DEFAULT_BASE_URL).replace(/\/$/, "");
     this.clientId = config.clientId || auth?.clientId;
     this.fetchImpl = config.fetchImpl || fetch;
   }
 
-  async health(): Promise<{ configured: boolean; provider: "adobe-firefly"; baseUrl: string }> {
+  async health(): Promise<{
+    configured: boolean;
+    provider: "adobe-firefly";
+    baseUrl: string;
+  }> {
     return {
       configured: Boolean(getFireflyAuthConfig() && this.clientId),
       provider: "adobe-firefly",
@@ -75,7 +91,7 @@ export class FireflyApiClient {
   }
 
   async submit(
-    operation: keyof typeof ENDPOINTS,
+    operation: Exclude<keyof typeof ENDPOINTS, "JOB_STATUS" | "UPLOAD_ASSET">,
     payload: JsonRecord,
     options: { modelVersion?: string } = {}
   ): Promise<FireflyApiResponse> {
@@ -101,7 +117,8 @@ export class FireflyApiClient {
     const raw = await response.json().catch(() => ({}));
     if (!response.ok) {
       const body = raw as JsonRecord;
-      const code = typeof body.error_code === "string" ? body.error_code : "firefly_api_error";
+      const code =
+        typeof body.error_code === "string" ? body.error_code : "firefly_api_error";
       const accessError = response.headers.get("x-access-error");
       throw new Error(
         `Firefly API ${response.status} ${code}${accessError ? ` (${accessError})` : ""}`
@@ -112,7 +129,6 @@ export class FireflyApiClient {
     return {
       jobId: extractJobId(json),
       statusUrl: extractStatusUrl(json),
-      resultUrl: extractStatusUrl(json),
       raw
     };
   }
@@ -123,7 +139,7 @@ export class FireflyApiClient {
 
     const target = jobId.startsWith("http")
       ? jobId
-      : `${this.baseUrl}/v3/status/${encodeURIComponent(jobId)}`;
+      : `${this.baseUrl}${ENDPOINTS.JOB_STATUS}${encodeURIComponent(jobId)}`;
 
     const response = await this.fetchImpl(target, {
       method: "GET",
@@ -137,8 +153,12 @@ export class FireflyApiClient {
     const raw = await response.json().catch(() => ({}));
     if (!response.ok) {
       const body = raw as JsonRecord;
-      const code = typeof body.error_code === "string" ? body.error_code : "firefly_job_error";
-      throw new Error(`Firefly job request ${response.status} ${code}`);
+      const code =
+        typeof body.error_code === "string" ? body.error_code : "firefly_job_error";
+      const accessError = response.headers.get("x-access-error");
+      throw new Error(
+        `Firefly job request ${response.status} ${code}${accessError ? ` (${accessError})` : ""}`
+      );
     }
 
     return raw;
@@ -151,21 +171,25 @@ export class FireflyApiClient {
     const auth = await getFireflyAccessToken();
     if (!this.clientId) throw new Error("Firefly Client ID is not configured.");
 
-    const response = await this.fetchImpl(`${this.baseUrl}${ENDPOINTS.UPLOAD_ASSET}`, {
-      method: "POST",
-      headers: {
-        Authorization: `${auth.tokenType} ${auth.accessToken}`,
-        "x-api-key": this.clientId,
-        "Content-Type": contentType,
-        Accept: "application/json"
-      },
-      body: data
-    });
+    const response = await this.fetchImpl(
+      `${this.baseUrl}${ENDPOINTS.UPLOAD_ASSET}`,
+      {
+        method: "POST",
+        headers: {
+          Authorization: `${auth.tokenType} ${auth.accessToken}`,
+          "x-api-key": this.clientId,
+          "Content-Type": contentType,
+          Accept: "application/json"
+        },
+        body: data
+      }
+    );
 
     const raw = await response.json().catch(() => ({}));
     if (!response.ok) {
       const body = raw as JsonRecord;
-      const code = typeof body.error_code === "string" ? body.error_code : "firefly_upload_error";
+      const code =
+        typeof body.error_code === "string" ? body.error_code : "firefly_upload_error";
       throw new Error(`Firefly upload ${response.status} ${code}`);
     }
 
@@ -174,3 +198,4 @@ export class FireflyApiClient {
 }
 
 export const FIREFLY_API_ENDPOINTS = ENDPOINTS;
+export const FIREFLY_API_BASE_URL = DEFAULT_BASE_URL;
