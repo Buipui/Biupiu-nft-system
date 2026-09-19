@@ -279,3 +279,18 @@ Reusable code now covers:
 Routing: **GEOMETRY, COMPUTE, AERO, MARINE, ENERGY, COMPOSITES, MATERIALS, ADV-MFG, ROBOTICS, DIGITAL-TWIN, AI, NFT-ART and NFT-PROV**.
 
 **3D-OPEN-01 status: EXECUTED — repository integration committed. Runtime CAD-host compilation and physical/engineering validation remain separate gates.**
+
+
+## FARM-SIM-01 — Farming Simulator / Smart Farming Integration
+
+Added 19 September 2026:
+- `research/BIUPIU-FARMING-SIMULATOR-RESOURCE-REGISTRY-v1.0.md` — Farming Simulator/FS25 external resource and open-access knowledge registry.
+- `smart-farming/online-platform/SF37-FARMING-SIMULATOR-DIGITAL-TWIN-BRIDGE-v1.0.md` — normalised telemetry/control boundary and Digital Twin adapter architecture.
+- `smart-farming/online-platform/SF38-FARMING-SIMULATOR-RESOURCE-MAP.md` — source-to-function mapping.
+- `world/environments/BIUPIU-FARMING-SIMULATION-ARCHITECTURE-v1.0.md` — simulator-agnostic World farming architecture and agricultural virtual test tracks.
+
+Mapped reference classes include FS25 tooling, telemetry, field automation, precision agriculture, harvesting, logistics, farm management and map-building. Open-access/educational references cover crop/soil modelling, sensing, irrigation, UAV/ML and intelligent machinery.
+
+The integration is **adapter-first**: third-party code/assets remain external until licence, security and compatibility review passes. Farming Simulator is not made a hard dependency of Biupiu World.
+
+**FARM-SIM-01 status: EXECUTED — research/resource registry, Digital Twin bridge, World architecture and resource map committed. Live simulator/adapter execution remains a host-validation gate.**
