@@ -1,0 +1,22 @@
+{
+  "schema":"BIUPIU-RD-RUN-MANIFEST-SCHEMA-v1.0",
+  "gate":"BM-12",
+  "run_id":"string",
+  "parent_run_id":"string-or-null",
+  "workflow_version":"string",
+  "code_refs":["string"],
+  "input_dataset_ids":["string"],
+  "material_version":"string-or-null",
+  "resin_version":"string-or-null",
+  "geometry_version":"string-or-null",
+  "model_version":"string-or-null",
+  "environment":"object",
+  "parameters":"object",
+  "seed":"integer-or-null",
+  "status":"WAITING-INPUT|BLOCKED-PROVENANCE|BLOCKED-DATA|READY|RUNNING|COMPLETE|FAILED|CANCELLED",
+  "output_refs":["string"],
+  "log_refs":["string"],
+  "error_refs":["string"],
+  "timestamp":"ISO-8601",
+  "operator_or_process":"string"
+}
