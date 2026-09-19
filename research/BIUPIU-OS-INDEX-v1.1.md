@@ -54,3 +54,17 @@ Cross-platform target: Windows, Linux, macOS, Android, Web/WASM where runtime su
 Foreign-language compatibility is included for DOS code pages, DOS/V, multilingual command/help resources and Unicode bridging. Legacy binaries require sandboxed filesystem/device/network boundaries.
 
 **DOS-COMPAT-01 status: RESOURCE DISCOVERY + ARCHITECTURE EXECUTED. Live host/runtime compatibility remains unverified until connected-host tests run.**
+
+
+## FULL-OS-01 — Full Multi-Platform OS Build Gate
+
+Added 19 September 2026:
+- `research/BIUPIU-FULL-OS-BUILD-GATE-PLAN-v1.0.md`
+- `research/BIUPIU-RESEARCH-PUBLIC-RELEASE-FIRST-PROTOCOL-v1.0.md`
+- `research/BIUPIU-FULL-OS-GATE-MATRIX-v1.0.json`
+
+The build protocol now searches official public releases, official historical/public source dumps and official binaries/SDKs before mature open-source implementations. Public availability accelerates discovery but does not itself waive reuse rights; licensing is evaluated only when reuse/redistribution is proposed.
+
+Full build gates G00-G29 cover firmware, architecture HALs, memory, interrupts, scheduler, devices/drivers, storage/VFS, console/input, IPC, networking, security, recovery, package ABI, userland, DOS/Linux compatibility, GPU/media, virtualization, AI, Digital Twin, SDK, images, CI/VM, hardware, performance, security audit, release candidate and production.
+
+**FULL-OS-01 status: GATE PLAN + SEARCH PROTOCOL PREPARED; full implementation execution begins at G00/G01 and must accumulate boot/runtime/regression/security evidence.**
