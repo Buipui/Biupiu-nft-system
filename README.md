@@ -179,3 +179,14 @@ As of 19 September 2026, the repository includes a dedicated MATH verification-o
 Pipeline: PROBLEM -> CLASSIFY -> RETRIEVE -> DECOMPOSE -> SOLVE -> VERIFY -> SIMULATE -> SENSITIVITY -> DIGITAL-TWIN -> VALIDATE -> RECORD.
 
 The layer is integrated with Biupiu Intelligence and routed to COMPUTE, GEOMETRY, ROBOTICS, DIGITAL-TWIN and domain engineering departments. External theorem-proving projects remain references/dependencies pending licence, security and compatibility review.
+
+
+## Gate-Learning / Conflict-Resolution Architecture
+
+As of 19 September 2026, repeated repository gates are governed by the Gate-Learning Architecture and machine-readable Gate-Learning Matrix. Execute/diagnose/fix/retest cycles preserve failure evidence, regression evidence, dependency impact and promotion lineage rather than treating repeated passes as learning by themselves.
+
+Canonical documents: `research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md` and `research/BIUPIU-GATE-LEARNING-MATRIX-v1.0.json`.
+
+The Intelligence layer uses these records to improve diagnostic retrieval and preventative-test generation while preserving authoritative OS controls, human release authority and third-party licence/security boundaries.
+
+**README synchronization:** 19 September 2026
