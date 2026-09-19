@@ -1,0 +1,8 @@
+{
+  "version":"1.0",
+  "status":"implemented-contract",
+  "interfaces":["boot_info","cpu","memory","interrupts","scheduler","device","storage","vfs","console","clock","ipc","network","security","recovery"],
+  "invariants":["kernel-authoritative-state","explicit-memory-ownership","bounded-interrupt-work","record-before-bind","boot-provenance","rollback","no-ai-bypass"],
+  "implementation_order":["boot_info","architecture_hal","memory","interrupts_timer","scheduler","device_pci","storage_vfs","console","ipc","network","security","recovery","compatibility"],
+  "adapters":["DOS","Linux","UE5","Bevy","future-Windows"]
+}
