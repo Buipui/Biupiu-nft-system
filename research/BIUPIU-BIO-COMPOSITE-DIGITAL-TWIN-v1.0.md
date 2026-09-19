@@ -36,3 +36,14 @@ These states are separate from technology-readiness claims and certification.
 1. Hemp/epoxy baseline. 2. Flax/epoxy baseline. 3. Hemp/flax hybrid. 4. Hemp/flax/basalt hybrid. 5. Bamboo/epoxy secondary laminate. 6. Kenaf/jute comparison. 7. Moisture-conditioned specimens. 8. Thermal cycling. 9. Fatigue coupons. 10. Small rotating demonstrators with strain/vibration instrumentation.
 
 All results feed back into Materials Genome and the blade digital twin.
+
+## Phase 2 component-first implementation
+
+The digital twin now terminates at component/subsystem level rather than treating complete vehicles, vessels, aircraft, eVTOLs or helicopters as twin objects.
+
+**Registry:** `research/BIUPIU-COMPONENT-REGISTRY-v1.0.md`
+**Protocol:** `research/BIUPIU-SYSTEM-LOGGING-CROSS-DIVISION-PROTOCOL-v1.0.md`
+
+**Component twin examples:** BPU-CMP-MAT-001 HempCarbon structural panel; BPU-CMP-ENERGY-001 Bioblade recuperated microturbine-generator; BPU-CMP-AERO-001 AeroBrake; BPU-CMP-AERO-002 active diffuser; BPU-CMP-AERO-003 rear air-jet module.
+
+Platform records reference these component twins through assembly/application maps. This prevents duplicated technical records across automotive, marine and aerospace applications while preserving application-specific loads, environments and certification requirements.
