@@ -9,6 +9,7 @@
   "Plugins": [
     { "Name": "ModelingToolsEditorMode", "Enabled": true },
     { "Name": "InterchangeEditor", "Enabled": true },
-    { "Name": "EditorScriptingUtilities", "Enabled": true }
+    { "Name": "EditorScriptingUtilities", "Enabled": true },
+    { "Name": "MovieRenderPipeline", "Enabled": true }
   ]
 }
