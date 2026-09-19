@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.workspace.v1","route":"RENDER_PIPELINE","views":["JOB_CREATE","QUEUE","JOB_DETAIL","PROVENANCE","OUTPUT_REVIEW"],"inputs":["sourceAssetIds","workflow","provider","output","parameters"],"server_actions":["CREATE_JOB","GET_STATUS","CANCEL_JOB","APPROVE_OUTPUT","ARCHIVE_OUTPUT"],"client_authority":false}
