@@ -1,0 +1,21 @@
+name: PHYS-SYS-01 private physics smoke test
+
+on:
+  push:
+    paths:
+      - 'private-rd-centre/**'
+  pull_request:
+    paths:
+      - 'private-rd-centre/**'
+  workflow_dispatch:
+
+jobs:
+  smoke-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run physics kernel smoke tests
+        run: python private-rd-centre/tests/test_physics_kernel.py
