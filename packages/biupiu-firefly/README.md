@@ -101,3 +101,16 @@ The R&D OS can poll or later consume provider callbacks while retaining the prov
 ## Dependency policy
 
 Use the official Adobe Firefly Services SDK as the primary implementation reference. Third-party Firefly clients/MCP servers may be evaluated separately but are not trusted dependencies by default.
+
+## Server-side API configuration
+
+The repository now includes `src/auth.ts` and `firefly.env.example` for Adobe IMS OAuth Server-to-Server authentication.
+
+Configure these values in the **server/hosting environment**, never in Android/Windows client bundles or committed files:
+
+- `FIREFLY_SERVICES_CLIENT_ID`
+- `FIREFLY_SERVICES_CLIENT_SECRET`
+- `FIREFLY_SERVICES_TOKEN_URL` (defaults to Adobe IMS)
+- `FIREFLY_SERVICES_SCOPE` (defaults to the Firefly Services scope set)
+
+The auth module caches the access token until shortly before expiry and never logs the client secret or access token. The live Adobe connection becomes operational once the Adobe Developer Console OAuth Server-to-Server credentials are supplied to the server environment.
