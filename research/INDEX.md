@@ -387,3 +387,9 @@ Added `research/BIUPIU-FS2002-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The track separa
 ## Microsoft Flight Simulator 2024 — Nexus Mods × GitHub cross-link
 
 Added `research/BIUPIU-MSFS2024-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The new MSFS 2024 track separates current simulator-generation resources from FS2002/FSX/MSFS 2020 material and cross-links Nexus aircraft, EFB/cockpit, texture/livery, localization and visual resources with GitHub avionics, cockpit I/O, AI, SimConnect and addon-management tooling. **MSFS24-01 discovery/cross-link gate: executed.** No third-party Nexus assets or proprietary binaries were copied.
+
+## AI-21 transactional audit integration gate
+- `research/BIUPIU-AI-TRANSACTIONAL-AUDIT-v1.0.md` — AI-21 gateway/audit persistence integration and failure boundary.
+- `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — AuditStore integration for success, rejection and provider-failure events.
+- `software/rnd-os-ai/tests/test_ai21.py` — persistence integration tests.
+- **AI-21 status:** transactional audit integration boundary implemented; production durable-store failure semantics remain gated.
