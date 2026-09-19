@@ -464,3 +464,18 @@ Integrated architecture patterns: research task DAGs, dependency-aware execution
 **Current gate:** architecture integrated; source-level repair complete; runtime CI and full licence/security validation remain environment gates.
 
 **Next gate:** execute local/runtime regression, then expand the task graph into the AI OS/Main OS/Biupiu OS adapter contracts and perform full repository-wide integration verification.
+
+
+## DISCOVERY-FLOW-02 — Unified Research Orchestration Gate
+Added 19 September 2026.
+
+The Microsoft Discovery-compatible task graph is now treated as a reusable orchestration pattern across Biupiu Intelligence rather than a standalone research feature. It connects task decomposition, dependency closure, evidence retrieval, specialist routing, simulation/experiment branches, evaluation, learning and governed promotion.
+
+### Fluid protocol rule
+Protocols are **composable stages**, not rigid linear scripts. A task may branch, loop back, spawn dependent tasks, become stale, be contradicted, or return to retrieval/evaluation without losing provenance. The authoritative OS boundary remains the convergence point.
+
+### Canonical flow
+INTAKE → CLASSIFY → DECOMPOSE → TASK GRAPH → RETRIEVE → CROSS-LINK → PROVENANCE → ROUTE → EXECUTE/SIMULATE → EVALUATE → REGRESS → LEARN → PROMOTE
+
+### Gate status
+ARCH-FLOW-02: ARCHITECTURE INTEGRATED. Runtime execution and platform CI remain validation gates.
