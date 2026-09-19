@@ -6,17 +6,19 @@ Provide a controlled Adobe Firefly Services integration boundary for the Biupiu 
 
 The package does **not** store Adobe credentials, call Firefly directly from mobile clients, or make the client an authority. It defines the shared contract that a secure server-side adapter can implement.
 
-## Current Adobe API source
+## Current Adobe API release lock
 
-The repository is aligned to Adobe's current Firefly OpenAPI specification:
+The repository is locked to Adobe's current Firefly OpenAPI release supplied through the official AdobeDocs repository:
 
 - OpenAPI: 3.1.0
 - Firefly API version: 3.0.0
 - Production base URL: `https://firefly-api.adobe.io`
-- Current image generation includes Image3, Image4 variants and Image5.
-- Current access failures expose `x-access-error` values including entitlement, profile, quota and IMS-scope failures.
+- Source: `AdobeDocs/ffs-firefly-api/static/firefly-api.json`
+- Source URL: `https://raw.githubusercontent.com/AdobeDocs/ffs-firefly-api/main/static/firefly-api.json`
 
-The Adobe-supplied OpenAPI specification is treated as the API contract. Account entitlement and credentials remain a separate runtime concern.
+The credential-free gate validates this API contract and repository integration without attempting authentication or making a live generation request. Credentials are therefore **not required to inspect, validate, or smoke-test these updated API files**.
+
+A live authenticated provider call is a separate runtime stage. The adapter retains a server-side authentication boundary for that stage because the current Adobe OpenAPI security declaration includes both `X-Api-Key` and `AccessToken`.
 
 ## Reusable Adobe components selected
 
@@ -39,6 +41,15 @@ Adobe's JavaScript SDK is TypeScript/Node.js based and separates Common, Firefly
 - Video generation
 - Asset upload
 - Asynchronous job/status handling
+- Job cancellation
+
+## Credential-free static gate
+
+Run:
+
+`node packages/biupiu-firefly/smoke-test.mjs`
+
+This test performs source/contract checks only. It does **not** contact Adobe, request a token, require an API secret, or generate an asset.
 
 ## Biupiu integration path
 
@@ -51,9 +62,9 @@ Biupiu API Gateway
           v
 @biupiu/firefly
           |
-          +--> Adobe IMS authentication (server side)
+          +--> Adobe Firefly API contract
           |
-          +--> Adobe Firefly API
+          +--> Optional live server authentication
           |
           v
 Asset / Job Result
@@ -63,12 +74,6 @@ Asset / Job Result
           +--> NFT Studio (release-gated)
           +--> Research Library
 ```
-
-## Security boundary
-
-Adobe Client ID and Client Secret must remain server-side. Never put them in Android, browser bundles, public GitHub files or NFT metadata.
-
-The adapter uses environment/secret-manager configuration and returns opaque job/output identifiers to clients.
 
 ## Provenance boundary
 
@@ -107,16 +112,6 @@ The current Adobe API contract exposes these access-related signals:
 
 These are surfaced by the adapter rather than converted into a misleading generic failure.
 
-## Recommended first workflows
-
-1. Product concept generation for Biupiu Showcase.
-2. Environment/character concept generation for Biupiu World.
-3. Product-shot compositing for prototype renders.
-4. Controlled image expansion/fill for presentation assets.
-5. Upscaling of approved render assets.
-6. Research-art generation through a provenance-aware NFT Studio workflow.
-7. Video concept generation for controlled showreel previsualization.
-
 ## Explicit non-goals
 
 - No credential storage in this package.
@@ -130,17 +125,15 @@ These are surfaced by the adapter rather than converted into a misleading generi
 
 Use the official Adobe Firefly Services SDK and Adobe OpenAPI specification as the primary implementation references. Third-party Firefly clients/MCP servers may be evaluated separately but are not trusted dependencies by default.
 
-## Server-side API configuration
+## Server-side live API configuration
 
-The repository includes `src/auth.ts` and `firefly.env.example` for Adobe IMS OAuth Server-to-Server authentication.
+The repository includes `src/auth.ts` for the optional live authenticated runtime.
 
-Configure these values in the **server/hosting environment**, never in Android/Windows client bundles or committed files:
+Configure these values only in the server/hosting environment when the live provider stage is enabled:
 
 - `FIREFLY_SERVICES_CLIENT_ID`
 - `FIREFLY_SERVICES_CLIENT_SECRET`
-- `FIREFLY_SERVICES_TOKEN_URL` (defaults to Adobe IMS)
-- `FIREFLY_SERVICES_SCOPE` (defaults to the Firefly Services scope set)
+- `FIREFLY_SERVICES_TOKEN_URL`
+- `FIREFLY_SERVICES_SCOPE`
 
-The auth module caches the access token until shortly before expiry and never logs the client secret or access token.
-
-**Live API status:** repository-side integration is prepared, but a live call still requires valid Adobe credentials and the account's applicable Firefly API access/entitlement. The Adobe OpenAPI specification does not itself grant access.
+Never put secrets in Android/browser bundles, committed files, NFT metadata, or the credential-free smoke test.
