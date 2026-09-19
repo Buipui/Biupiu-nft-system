@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Vehicle Digital Twin",
+  "type":"object",
+  "required":["vehicleTwinId","baseVehicle","parts","materials","performance","provenance"],
+  "properties":{
+    "vehicleTwinId":{"type":"string"},
+    "baseVehicle":{"type":"object","required":["id","name"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"category":{"type":"string"}}},
+    "parts":{"type":"array","items":{"type":"object","required":["slot","partId"],"properties":{"slot":{"type":"string"},"partId":{"type":"string"},"compatibility":{"type":"array","items":{"type":"string"}},"massKg":{"type":"number"},"assetUri":{"type":"string"}}}},
+    "materials":{"type":"array","items":{"type":"object","required":["id","name"],"properties":{"id":{"type":"string"},"name":{"type":"string"},"baseColor":{"type":"string"},"metallic":{"type":"number"},"roughness":{"type":"number"},"licence":{"type":"string"}}}},
+    "appearance":{"type":"object","properties":{"paint":{"type":"string"},"vinylLayers":{"type":"array"},"decals":{"type":"array"},"lighting":{"type":"object"}}},
+    "performance":{"type":"object","properties":{"massKg":{"type":"number"},"powerKw":{"type":"number"},"torqueNm":{"type":"number"},"dragCd":{"type":"number"},"downforceN":{"type":"number"},"gearRatios":{"type":"array","items":{"type":"number"}},"suspension":{"type":"object"}}},
+    "provenance":{"type":"object","required":["revision"],"properties":{"revision":{"type":"string"},"source":{"type":"string"},"licence":{"type":"string"},"validated":{"type":"boolean"}}}
+  }
+}
