@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Review Render Package",
+  "type":"object",
+  "required":["package_id","asset_source","provenance","licence","evidence","shots","release_gate"],
+  "properties":{
+    "package_id":{"type":"string"},
+    "asset_source":{"type":"string"},
+    "provenance":{"type":"object","required":["source","review_status"],"properties":{"source":{"type":"string"},"review_status":{"enum":["PENDING","PASSED","FAILED"]}}},
+    "licence":{"type":"object","required":["status"],"properties":{"status":{"enum":["PENDING","APPROVED","RESTRICTED","REJECTED"]}}},
+    "evidence":{"type":"object","required":["state","claim_class"],"properties":{"state":{"type":"string"},"claim_class":{"type":"string"}}},
+    "shots":{"type":"array","items":{"type":"object","required":["shot_id","status"],"properties":{"shot_id":{"type":"string"},"status":{"enum":["PLACEHOLDER","READY","RENDERED","REVIEW_REQUIRED"]}}}},
+    "release_gate":{"enum":["HOLD","READY_FOR_REVIEW","APPROVED_FOR_RELEASE"]}
+  }
+}
