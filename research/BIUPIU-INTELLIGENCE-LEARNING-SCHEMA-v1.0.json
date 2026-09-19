@@ -1,0 +1,22 @@
+{
+  "schema": "BIUPIU-INTELLIGENCE-LEARNING-SCHEMA-v1.0",
+  "version": "1.0",
+  "learning_id": "string",
+  "target_type": "RESEARCH|EXPERIMENT|MODEL|DATASET|REPOSITORY_CHANGE|WORLD_SYSTEM",
+  "target_id": "string",
+  "input_refs": ["string"],
+  "evidence_state": "ESTABLISHED|SUPPORTED|PRELIMINARY|HYPOTHESIS|SPECULATIVE|CONTRADICTED|INCONCLUSIVE",
+  "knowledge_class": "FACT|MODEL_OUTPUT|HYPOTHESIS|SIMULATION_RESULT|MEASUREMENT|INTERPRETATION|FAILURE|REPOSITORY_CHANGE",
+  "prior_version": "string|null",
+  "result_version": "string",
+  "model_version": "string|null",
+  "expected_outcome": "string|null",
+  "observed_outcome": "string",
+  "error": "number|null",
+  "uncertainty": "number|null",
+  "next_action": "SIMULATE|TEST|REPLICATE|CALIBRATE|REVIEW|HOLD|ARCHIVE",
+  "human_decision": "PENDING|ACCEPTED|REJECTED|DEFERRED",
+  "provenance_hash": "sha256",
+  "parent_learning_id": "string|null",
+  "created_at": "ISO-8601"
+}
