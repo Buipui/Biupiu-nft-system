@@ -205,3 +205,33 @@ The Intelligence Layer includes a governed System Builder concept capable of ana
 Machine interaction is abstracted through capability contracts. The OS consumes machine-readable descriptions of identity, inputs, outputs, commands, events, units, ranges, safety constraints, protocols and Digital Twin references. Hardware-specific translation may remain below the common interface where required.
 
 **Status:** Architecture integrated into the master department map and OS/DMS subsystem registry.
+
+
+## INSTRUMENTATION-01 — Machine Instrumentation & Telemetry
+
+Instrumentation is now a first-class cross-disciplinary route connecting physical sensors/instruments to the Machine Capability contract, Digital Twins, mathematics/physics, AI and governed actuation.
+
+INSTRUMENT -> MACHINE CAPABILITY -> EDGE/PROTOCOL -> DIGITAL TWIN -> MATH/PHYSICS -> AI -> VALIDATION -> AUTHORISATION -> ACTUATION
+
+Primary routes: ELECTROMAG, ROBOTICS, DIGITAL-TWIN, COMPUTE, MATH, AI, ADV-MFG, WATER, ENERGY, AGRI, BIOMED, PHOTONICS.
+
+Canonical register: research/BIUPIU-INSTRUMENTATION-MACHINE-INTERFACE-RESEARCH-v1.0.md.
+
+## FOREIGN-AUTOMATION-01 — Italian/German Research Routing
+
+Italian and German technical literature/software repositories are now explicit research-source families, with priority on industrial robotics, PLC/SPS, OPC UA, Industrie 4.0, instrumentation, mechatronics and automation.
+
+Priority industrial cross-links:
+- Italian robotics: CNR-ITIA/COMAU ROS-Industrial.
+- German industrial automation: Siemens OPC UA / industrial AI architecture and German SPS/OPC UA literature.
+- Fujitsu Research: AI, optimisation, anomaly detection and agent-evaluation research.
+
+Canonical register: research/BIUPIU-FOREIGN-LANGUAGE-AUTOMATION-ROBOTICS-REGISTER-v1.0.md.
+
+## AUTOMATION-AI-01 — Automation / Robotics / AI Gate
+
+Automation, robotics and AI resources now route through licence, security, capability-schema, simulation, hardware-in-loop and provenance gates before promotion.
+
+Canonical gate: research/BIUPIU-INSTRUMENTATION-AUTOMATION-ROBOTICS-AI-GATE-v1.0.md.
+
+**Status:** Research harvest and architecture cross-link complete. Implementation promotion remains gated.
