@@ -5,7 +5,8 @@ import Database from "better-sqlite3";
 const db=new Database(process.env.DB_FILE||"biupiu-rnd-os.db");
 db.exec(`
 CREATE TABLE IF NOT EXISTS records(
- id TEXT PRIMARY KEY,type TEXT NOT NULL,payload TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL
+ id TEXT PRIMARY KEY,type TEXT NOT NULL,payload TEXT NOT NULL,created_at TEXT NOT NULL,updated_at TEXT NOT NULL,
+ version INTEGER NOT NULL DEFAULT 1, content_hash TEXT, updated_by TEXT
 );
 CREATE TABLE IF NOT EXISTS audit(
  id TEXT PRIMARY KEY,actor_id TEXT NOT NULL,action TEXT NOT NULL,ref TEXT NOT NULL,at TEXT NOT NULL,details TEXT
@@ -18,6 +19,16 @@ function json(res,status,data){res.writeHead(status,{"content-type":"application
 function body(req){return new Promise((resolve,reject)=>{let s="";req.on("data",c=>{s+=c});req.on("end",()=>{try{resolve(s?JSON.parse(s):{})}catch(e){reject(e)}});req.on("error",reject)})}
 function auth(req){return req.headers["x-biupiu-role"]||"VIEWER"}
 function allowed(role,needed){const order={VIEWER:0,RESEARCHER:1,REVIEWER:2,ADMIN:3};return (order[role]??-1)>=(order[needed]??99)}
+
+import { createHash } from "node:crypto";
+const hashPayload=p=>createHash("sha256").update(JSON.stringify(p)).digest("hex");
+function recordRows(type){return db.prepare("SELECT * FROM records WHERE type=? ORDER BY created_at DESC").all(type)}
+function getRecord(id){return db.prepare("SELECT * FROM records WHERE id=?").get(id)}
+function revisions(id){
+ const r=getRecord(id); if(!r)return null;
+ return [{entity_id:r.id,version:r.version,content_hash:r.content_hash,updated_at:r.updated_at,updated_by:r.updated_by}];
+}
+
 const server=http.createServer(async(req,res)=>{
  try{
   const path=req.url.split("?")[0],role=auth(req),actor=req.headers["x-biupiu-actor"]||"local-test";
@@ -43,7 +54,7 @@ const server=http.createServer(async(req,res)=>{
     if(!allowed(role,"RESEARCHER"))return json(res,403,{error:"researcher_role_required"});
     const b=await body(req),rid=uid(type==="research"?"RES":type==="experiment"?"EXP":"AST"),t=type==="research"?"research":type==="experiments"?"experiment":"asset",ts=now();
     b.id=rid;b.created_at=ts;b.updated_at=ts;if(!b.status)b.status=t==="asset"?"DRAFT":"LOGGED";
-    db.prepare("INSERT INTO records VALUES(?,?,?,?,?)").run(rid,t,JSON.stringify(b),ts,ts);audit(actor,"CREATE_"+t.toUpperCase(),rid);return json(res,201,b);
+    db.prepare("INSERT INTO records (id,type,payload,created_at,updated_at,version,content_hash,updated_by) VALUES(?,?,?,?,?,?,?,?)").run(rid,t,JSON.stringify(b),ts,ts,1,hashPayload(b),actor);audit(actor,"CREATE_"+t.toUpperCase(),rid);return json(res,201,b);
    }
   }
   json(res,404,{error:"not_found"});
