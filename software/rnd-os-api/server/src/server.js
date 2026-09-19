@@ -25,7 +25,8 @@ const server=http.createServer(async(req,res)=>{
   if(req.method==="GET"&&path==="/v1/audit")return json(res,200,db.prepare("SELECT * FROM audit ORDER BY at DESC LIMIT 500").all());
   const match=path.match(/^\/v1\/(research|experiments|assets)(?:\/([^/]+)\/gate)?$/);
   if(match){
-   const type=match[1].slice(0,-1),id=match[2];
+   const typeMap={research:"research",experiments:"experiment",assets:"asset"};
+   const type=typeMap[match[1]],id=match[2];
    if(req.method==="GET"&&type!=="experiments")return json(res,200,db.prepare("SELECT * FROM records WHERE type=? ORDER BY created_at DESC").all(type));
    if(req.method==="GET"&&type==="experiments")return json(res,200,db.prepare("SELECT * FROM records WHERE type=? ORDER BY created_at DESC").all("experiment"));
    if(req.method==="POST"&&id&&path.endsWith("/gate")){
