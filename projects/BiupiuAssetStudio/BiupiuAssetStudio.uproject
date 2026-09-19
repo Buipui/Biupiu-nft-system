@@ -1,0 +1,15 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.x",
+  "Category": "Biupiu R&D",
+  "Description": "Biupiu Unreal Engine 5 asset studio for 3D assets, digital twins, interactive visualization and showreel production.",
+  "Modules": [
+    { "Name": "BiupiuAssetStudio", "Type": "Runtime", "LoadingPhase": "Default" }
+  ],
+  "Plugins": [
+    { "Name": "ModelingToolsEditorMode", "Enabled": true },
+    { "Name": "InterchangeEditor", "Enabled": true },
+    { "Name": "EditorScriptingUtilities", "Enabled": true },
+    { "Name": "MovieRenderPipeline", "Enabled": true }
+  ]
+}
