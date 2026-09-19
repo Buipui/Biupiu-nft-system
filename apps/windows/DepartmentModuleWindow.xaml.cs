@@ -11,13 +11,25 @@ public partial class DepartmentModuleWindow : System.Windows.Window
         Title = $"Biupiu — {target.ScreenId}";
         TitleText.Text = $"BIUPIU R&D OS — {target.ScreenId}";
         IdentityText.Text = $"{target.PackageName}  •  {target.LaunchUri}";
+
+        foreach (var capability in ResolveCapabilities(target.Route))
+        {
+            var button = new System.Windows.Controls.Button
+            {
+                Content = capability.Replace('_', ' '),
+                Margin = new System.Windows.Thickness(8),
+                Padding = new System.Windows.Thickness(18, 10, 18, 10)
+            };
+            button.Click += (_, _) => TitleText.Text = $"BIUPIU R&D OS — {_target.ScreenId} — {capability}";
+            CapabilityPanel.Children.Add(button);
+        }
     }
 
-    private void ShowArea(string area) =>
-        TitleText.Text = $"BIUPIU R&D OS — {_target.ScreenId} — {area}";
-
-    private void Overview_Click(object sender, System.Windows.RoutedEventArgs e) => ShowArea("OVERVIEW");
-    private void Tools_Click(object sender, System.Windows.RoutedEventArgs e) => ShowArea("TOOLS");
-    private void Research_Click(object sender, System.Windows.RoutedEventArgs e) => ShowArea("RESEARCH");
-    private void Settings_Click(object sender, System.Windows.RoutedEventArgs e) => ShowArea("SETTINGS");
+    private static IReadOnlyList<string> ResolveCapabilities(string route) => route switch
+    {
+        "SMART_FARMING" => new[] { "WORLD", "FARMING_SYSTEMS", "AUTOMATION", "AI", "SETTINGS" },
+        "SMART_METAL_WORKSHOP" => new[] { "WORLD", "METAL_WORKSHOP", "AUTOMATION", "AI", "SETTINGS" },
+        "RND_OS" => new[] { "WORLD", "RESEARCH_REPOSITORY", "COMPUTATIONAL_ENGINEERING", "AUTOMATION", "AI", "SETTINGS" },
+        _ => Array.Empty<string>()
+    };
 }
