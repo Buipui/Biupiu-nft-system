@@ -1,25 +1,22 @@
-# Biupiu Bevy Adapter v1.0
+# Biupiu Bevy Adapter v1.1
 
-A small, original integration boundary for using Bevy as an optional Rust runtime inside Biupiu R&D and simulation workflows.
+Original Biupiu integration boundary for Bevy as an optional Rust runtime inside Biupiu OS simulation workflows.
 
-## Scope
+## OS-SIM kernel
 
-The adapter exposes a Bevy Plugin entry point, a shared runtime state resource, a deterministic tick counter, a controlled message channel for simulation events, and a boundary where Digital Twin / simulator adapters can be attached later.
+The adapter provides simulation identity, entity registration, start/pause/step controls, deterministic ticks, measurement capture, simulation events, a Bevy plugin boundary and deterministic replay tests.
 
-It deliberately does not copy Bevy source code or third-party plugins into the repository.
+The kernel is renderer- and domain-neutral. Automotive, aerospace, marine, agriculture, robotics and manufacturing models enter through versioned adapters rather than modifying the OS core.
 
-## Usage
+## Safety boundaries
 
-Add this crate to a Rust workspace and add Bevy 0.19 as the engine dependency. The adapter can then be registered with:
-
-    app.add_plugins(BiupiuBevyPlugin::default());
-
-The adapter itself does not create a window, load third-party assets, access credentials, or claim that a physical simulator is connected.
-
-## Intended departments
-
-DIGITAL-TWIN, PHYS-SYS, CG-3D, GEOMETRY, AERO, MARINE, AUTO, ROBOTICS, ADV-MFG, AGRI, WATER, AI and COMPUTE.
+- Simulation is explicitly started.
+- Duplicate entity identifiers are rejected.
+- Measurements for unknown entities are rejected.
+- Third-party engines and assets are not copied into the repository by this adapter.
+- Physical actuation and hardware-in-the-loop remain outside this core until separately validated.
+- Source-level tests are not equivalent to connected GPU, runtime or physical validation.
 
 ## Validation
 
-Compilation and runtime validation are separate gates. The repository currently records the source-level adapter as implemented; connected-host execution must be recorded before claiming runtime success.
+Use cargo test with the adapter manifest on a connected Rust host. Until CI or a connected-host result is observed, runtime execution remains NOT VERIFIED.
