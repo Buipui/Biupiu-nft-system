@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.service-api.v1","server_authoritative":true,"endpoints":{"POST /render/jobs":"create","GET /render/jobs":"list","GET /render/jobs/{jobId}":"get","POST /render/jobs/{jobId}/execute":"execute","POST /render/jobs/{jobId}/approve":"approve","POST /render/jobs/{jobId}/archive":"archive"},"default_authorization":"deny"}
