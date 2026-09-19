@@ -1,0 +1,38 @@
+name: Biupiu Department Shell Contract
+
+on:
+  push:
+    paths:
+      - "apps/shared/runtime/department-shell.ts"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt"
+      - "apps/windows/DepartmentModuleWindow.xaml"
+      - "apps/windows/DepartmentModuleWindow.xaml.cs"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/department-shell.ts"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt"
+      - "apps/windows/DepartmentModuleWindow.xaml"
+      - "apps/windows/DepartmentModuleWindow.xaml.cs"
+
+jobs:
+  shell-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify shared shell areas
+        run: |
+          grep -q 'OVERVIEW' apps/shared/runtime/department-shell.ts
+          grep -q 'TOOLS' apps/shared/runtime/department-shell.ts
+          grep -q 'RESEARCH' apps/shared/runtime/department-shell.ts
+          grep -q 'SETTINGS' apps/shared/runtime/department-shell.ts
+      - name: Verify Android shell
+        run: |
+          grep -q 'SmartFarmingActivity' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt
+          grep -q 'SmartMetallurgyActivity' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt
+          grep -q 'RndOsActivity' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentScreenActivity.kt
+      - name: Verify Windows shell
+        run: |
+          grep -q 'Overview_Click' apps/windows/DepartmentModuleWindow.xaml.cs
+          grep -q 'Tools_Click' apps/windows/DepartmentModuleWindow.xaml.cs
+          grep -q 'Research_Click' apps/windows/DepartmentModuleWindow.xaml.cs
+          grep -q 'Settings_Click' apps/windows/DepartmentModuleWindow.xaml.cs
