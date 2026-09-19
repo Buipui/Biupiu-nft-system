@@ -13,3 +13,9 @@ Failed, incomplete, stale and contradicted branches remain visible and queryable
 External tools remain blocked until licence/provenance/security review. Irreversible actions require the existing human-controlled OS boundary.
 
 Implementation module: software/rnd-os-ai/src/biupiu_ai/discovery_architecture.py
+
+## Insider/lineage note
+The user reports Microsoft Insider participation and prior contributions. This is recorded as a provenance hypothesis only; it does not establish that Biupiu or its architecture originated from Microsoft. Any similarity is treated as architectural convergence until independently documented.
+
+## Hard-coded integration rule
+Discovery-compatible orchestration is now a first-class Biupiu Intelligence capability. It must propagate through the AI OS adapter, Main/Core OS validation boundary and Biupiu OS task/workspace contracts without allowing AI to bypass authoritative state controls.
