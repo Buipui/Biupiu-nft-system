@@ -12,6 +12,7 @@ abstract class DepartmentScreenActivity : Activity() {
     protected abstract val screenId: String
     protected abstract val title: String
     protected abstract val packageName: String
+    protected abstract val route: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -30,12 +31,19 @@ abstract class DepartmentScreenActivity : Activity() {
         root.addView(TextView(this).apply {
             text = "$screenId  •  $packageName"
             gravity = Gravity.CENTER
-            setPadding(0, 12, 0, 24)
+            setPadding(0, 12, 0, 16)
         })
 
         listOf("OVERVIEW", "TOOLS", "RESEARCH", "SETTINGS").forEach { action ->
             root.addView(Button(this).apply {
                 text = action
+                setOnClickListener { }
+            })
+        }
+
+        DepartmentCapabilityRegistry.resolve(route).forEach { capability ->
+            root.addView(Button(this).apply {
+                text = capability.replace('_', ' ')
                 setOnClickListener { }
             })
         }
@@ -47,16 +55,19 @@ class SmartFarmingActivity : DepartmentScreenActivity() {
     override val screenId = "FARMING_WORLD"
     override val title = "Smart Farming"
     override val packageName = "@biupiu/smart-farming"
+    override val route = "SMART_FARMING"
 }
 
 class SmartMetallurgyActivity : DepartmentScreenActivity() {
     override val screenId = "METAL_MAKING_WORLD"
     override val title = "Smart Metal Workshop"
     override val packageName = "@biupiu/smart-metallurgy"
+    override val route = "SMART_METAL_WORKSHOP"
 }
 
 class RndOsActivity : DepartmentScreenActivity() {
     override val screenId = "RND_OS_HOME"
     override val title = "Biupiu R&D OS"
     override val packageName = "@biupiu/rnd-os"
+    override val route = "RND_OS"
 }
