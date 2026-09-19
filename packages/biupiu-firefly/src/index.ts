@@ -4,11 +4,15 @@ export const SCOPE = "CREATIVE_AI" as const;
 
 export type FireflyOperation =
   | "GENERATE_IMAGE"
+  | "GENERATE_IMAGE5"
   | "EXPAND_IMAGE"
   | "FILL_IMAGE"
   | "OBJECT_COMPOSITE"
+  | "PRECISE_COMPOSITE"
+  | "ADAPTIVE_COMPOSITE"
   | "SIMILAR_IMAGES"
   | "UPSCALE"
+  | "GENERATE_VIDEO"
   | "UPLOAD_ASSET";
 
 export interface FireflyJobRequest {
@@ -18,6 +22,7 @@ export interface FireflyJobRequest {
   referenceAssetId?: string;
   aspectRatio?: string;
   outputFormat?: "png" | "jpeg";
+  modelVersion?: "image3" | "image3_custom" | "image4_standard" | "image4_ultra" | "image4_custom" | "image5";
   projectId: string;
   researchId?: string;
   assetId?: string;
@@ -43,13 +48,24 @@ export interface FireflyAdapter {
 
 export const FIREFLY_CAPABILITIES: readonly FireflyOperation[] = [
   "GENERATE_IMAGE",
+  "GENERATE_IMAGE5",
   "EXPAND_IMAGE",
   "FILL_IMAGE",
   "OBJECT_COMPOSITE",
+  "PRECISE_COMPOSITE",
+  "ADAPTIVE_COMPOSITE",
   "SIMILAR_IMAGES",
   "UPSCALE",
+  "GENERATE_VIDEO",
   "UPLOAD_ASSET"
 ];
+
+export const FIREFLY_ACCESS_ERRORS = [
+  "quota_exhausted",
+  "user_non_entitled",
+  "user_profile_denied",
+  "invalid_ims_scope"
+] as const;
 
 export const FIREFLY_PROVENANCE_RULES = {
   researchIdRequiredForResearchAssets: true,
