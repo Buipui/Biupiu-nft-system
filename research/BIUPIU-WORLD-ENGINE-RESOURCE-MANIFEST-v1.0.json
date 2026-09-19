@@ -1,0 +1,14 @@
+{
+  "id": "WORLD-ENGINE-RES-01",
+  "version": "1.0",
+  "date": "2026-09-19",
+  "status": "registered-architecture-only",
+  "engine_families": [
+    {"name":"RAGE","classification":"proprietary-reference","allowed_use":["architecture study","lawful read-only format research"],"prohibited_use":["Rockstar source/assets","redistribution","runtime dependency"]},
+    {"name":"Unity 6","classification":"engine/optional-adapter-reference","allowed_use":["package evaluation","adapter design","documented open-source packages after licence review"],"prohibited_use":["unreviewed package import","assuming engine/runtime is open source"]},
+    {"name":"Decima","classification":"proprietary-reference","allowed_use":["read-only research-tool architecture","resource metadata and importer UX study"],"prohibited_use":["proprietary game assets","keys/encrypted data","Decima engine claims"]}
+  ],
+  "open_learning": ["Game Engine Architecture","Foundations of Game Engine Development","Scratchapixel","LearnOpenGL"],
+  "biupiu_adapters": ["asset-inspection","scene-interchange","render-provider","physics-provider","navigation","telemetry","provenance"],
+  "promotion_policy": "fail-closed; licence, security, compatibility, deterministic tests and human approval required"
+}
