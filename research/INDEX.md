@@ -481,8 +481,31 @@ Duplicates and overlaps were classified rather than destructively deleted. Third
 **XR-HARVEST-01 status: EXECUTED — research record committed; index synchronization pending this update.**
 
 
+
+## METAVERSE-HARVEST-01 — Biupiu World Metaverse Implementation
+
+Added 19 September 2026:
+- `research/BIUPIU-METAVERSE-WORLD-IMPLEMENTATION-HARVEST-2026-09-19.md`
+- `world/metaverse/BIUPIU-WORLD-METAVERSE-ADAPTER-CONTRACT-v1.0.md`
+- `world/metaverse/world_state_schema.json`
+- `world/metaverse/adapter.py`
+- `world/metaverse/test_adapter.py`
+
+### Research routes
+ResearchGate geospatial metaverse architecture; WebXR; Immersive Web SDK; XREngine; NASA MRET; multi-user, Digital Twin, WebSocket/WebRTC, spatial interaction and provenance patterns.
+
+### Canonical federation
+`Biupiu OS → World State → Session Replica → Client/XR → Interaction Request → Validation → Authoritative Commit → Telemetry/Replay`
+
+### Simulator federation
+AUTO, AERO, MARINE, AGRI, ROBOTICS, ADV-MFG, PHYS-SYS, CG-3D and TRAINING are routed through versioned adapters. The World remains simulator-agnostic.
+
+### Gate result
+**METAVERSE-HARVEST-01: RESEARCH EXECUTED.**
+**WORLD-METAVERSE-01: ADAPTER CONTRACT + DEPENDENCY-FREE REFERENCE CODE IMPLEMENTED.**
+Runtime WebSocket/WebRTC/WebXR provider execution remains a host-validation gate. Third-party frameworks remain reference-only pending licence/security/compatibility review.
+
 ## Index synchronization
 
-**Research Index v4.3 — XR / VR / AR / MR Immersive Resource Harvest**
-
-Updated: 19 September 2026
+**Research Index v4.4 — Metaverse / Persistent World / Simulator Federation**
+**Updated:** 19 September 2026
