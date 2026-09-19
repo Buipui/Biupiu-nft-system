@@ -1,0 +1,40 @@
+name: Biupiu Render Pipeline Regression Gate
+on:
+  push:
+    paths:
+      - 'packages/biupiu-render-pipeline/**'
+      - 'packages/biupiu-access/**'
+      - 'apps/shared/runtime/render-*.json'
+      - 'apps/shared/runtime/render-*.ts'
+      - '.github/workflows/biupiu-render-pipeline-ci.yml'
+  pull_request:
+    paths:
+      - 'packages/biupiu-render-pipeline/**'
+      - 'packages/biupiu-access/**'
+      - 'apps/shared/runtime/render-*.json'
+      - 'apps/shared/runtime/render-*.ts'
+jobs:
+  contract-regression:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate JSON contracts
+        shell: bash
+        run: |
+          set -e
+          for f in $(find packages/biupiu-render-pipeline apps/shared/runtime -type f -name 'render-*.json' -o -name 'MODULE-CONTRACT-v1.json' -o -name 'render-access-contract-v1.json' -o -name 'render-execution-contract-v1.json' -o -name 'render-persistence-v1.json'); do
+            python -m json.tool "$f" >/dev/null
+          done
+      - name: Verify security invariants
+        shell: bash
+        run: |
+          set -e
+          grep -R 'server_authoritative.*true' apps/shared/runtime/render-*.json >/dev/null
+          grep -R 'server-side-only\|server-side' apps/shared/runtime/render-*.json packages/biupiu-render-pipeline packages/biupiu-access >/dev/null
+          grep -R 'provenance' packages/biupiu-render-pipeline apps/shared/runtime >/dev/null
+      - name: Verify recovery safeguards
+        shell: bash
+        run: |
+          set -e
+          grep -R 'RENDER:ALL\|default.*deny\|RENDER:' packages/biupiu-access apps/shared/runtime/render-* >/dev/null
+          grep -R 'human-review\|requiresApproval\|recommendation-first' packages/biupiu-render-pipeline apps/shared/runtime >/dev/null
