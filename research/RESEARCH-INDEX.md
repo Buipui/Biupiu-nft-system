@@ -284,3 +284,16 @@ Historical aircraft records are treated as established only where supported by o
 ## Version
 
 **Biupiu NFT Research Index v0.7 — AERO-STEALTH / SR-71 Geometry Integration — September 2026**
+
+
+## Global Multilingual Intelligence Expansion — 19 September 2026
+
+- `research/BIUPIU-GLOBAL-MULTILINGUAL-RESEARCH-INTELLIGENCE-PROTOCOL-v1.0.md` — global language-aware discovery, provenance, translation and OS/AI routing protocol.
+- Language coverage now explicitly includes Russian/Cyrillic, Japanese, Chinese, Korean, Spanish, Portuguese, French, German, Arabic, Persian, Turkish, African languages, South Asian languages, Southeast Asian languages, Nordic/Central/Eastern European languages and native/transliterated terminology search.
+- Discovery architecture uses global scholarly indexes plus national, institutional and specialist repositories; multilingual records are candidate knowledge until source/evidence validation.
+- Intelligence/OS interfaces proposed: `LANG-DETECT`, `TERM-MAP`, `NATIVE-SEARCH`, `SOURCE-VERIFY`, `TRANSLATE`, `CLAIM-EXTRACT`, `EVIDENCE-CLASSIFY`, `DEPARTMENT-ROUTE`, `DEDUP`, `PROVENANCE`, `LICENCE-CHECK`, `DIGITAL-TWIN-QUEUE`.
+- Cross-department routing applies to all Biupiu World departments; language is metadata, not a department boundary.
+- Translation is never treated as validation. Original evidence, contradictions, uncertainty, licensing and superseded interpretations remain preserved.
+
+
+**Version:** Biupiu NFT Research Index v0.8 — Global Multilingual Intelligence Expansion — September 2026
