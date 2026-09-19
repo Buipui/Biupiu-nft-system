@@ -32,7 +32,8 @@ const ENDPOINTS = {
   UPSCALE: "/v3/images/upscale",
   GENERATE_VIDEO: "/v3/videos/generate",
   UPLOAD_ASSET: "/v2/storage/image",
-  JOB_STATUS: "/v3/status/"
+  JOB_STATUS: "/v3/status/",
+  CANCEL_JOB: "/v3/cancel/"
 } as const;
 
 function extractJobId(payload: JsonRecord): string | undefined {
@@ -106,7 +107,18 @@ export class FireflyApiClient {
       Accept: "application/json"
     };
 
-    if (options.modelVersion) headers["x-model-version"] = options.modelVersion;
+    const requiredModelVersions: Partial<Record<keyof typeof ENDPOINTS, string>> = {
+      GENERATE_IMAGE5: "image5",
+      GENERATE_VIDEO: "video1_standard",
+      UPSCALE: "precise_upsampler_v1"
+    };
+    const requiredModel = requiredModelVersions[operation];
+    const modelVersion = requiredModel || options.modelVersion;
+
+    if (requiredModel && options.modelVersion && options.modelVersion !== requiredModel) {
+      throw new Error(`Adobe Firefly requires x-model-version=${requiredModel} for ${operation}.`);
+    }
+    if (modelVersion) headers["x-model-version"] = modelVersion;
 
     const response = await this.fetchImpl(`${this.baseUrl}${path}`, {
       method: "POST",
@@ -159,6 +171,34 @@ export class FireflyApiClient {
       throw new Error(
         `Firefly job request ${response.status} ${code}${accessError ? ` (${accessError})` : ""}`
       );
+    }
+
+    return raw;
+  }
+
+  async cancelJob(jobId: string): Promise<unknown> {
+    const auth = await getFireflyAccessToken();
+    if (!this.clientId) throw new Error("Firefly Client ID is not configured.");
+
+    const target = jobId.startsWith("http")
+      ? jobId.replace("/status/", "/cancel/")
+      : `${this.baseUrl}${ENDPOINTS.CANCEL_JOB}${encodeURIComponent(jobId)}`;
+
+    const response = await this.fetchImpl(target, {
+      method: "PUT",
+      headers: {
+        Authorization: `${auth.tokenType} ${auth.accessToken}`,
+        "x-api-key": this.clientId,
+        Accept: "application/json"
+      }
+    });
+
+    const raw = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const body = raw as JsonRecord;
+      const code =
+        typeof body.error_code === "string" ? body.error_code : "firefly_cancel_error";
+      throw new Error(`Firefly cancel ${response.status} ${code}`);
     }
 
     return raw;
