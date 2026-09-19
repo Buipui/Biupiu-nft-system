@@ -1,0 +1,36 @@
+name: Biupiu Exterminate Gate
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "tools/housekeeping/**"
+      - "research/**"
+      - "codex/**"
+      - "simulators/**"
+      - "software/**"
+      - "packages/**"
+      - ".github/workflows/biupiu-exterminate.yml"
+  workflow_dispatch:
+
+jobs:
+  exterminate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python syntax gate
+        run: python -m compileall -q codex simulators tools/housekeeping
+      - name: Exterminate scan
+        run: python tools/housekeeping/run.py
+      - name: JSON parse gate
+        shell: bash
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          for p in Path('.').rglob('*.json'):
+              if any(x in p.parts for x in ('.git','node_modules','build','dist','vendor')):
+                  continue
+              json.loads(p.read_text(encoding='utf-8'))
+          print('JSON_OK')
+          PY
