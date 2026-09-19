@@ -1,0 +1,14 @@
+{
+  "schema":"BIUPIU-RELEASE-GATE-SCHEMA-v1.0",
+  "gate":"BM-13",
+  "release_id":"string",
+  "regression_run_ids":["string"],
+  "evidence_ledger_version":"string",
+  "provenance_complete":true,
+  "reference_integrity":"PASS|FAIL|BLOCKED",
+  "evidence_consistency":"PASS|FAIL|BLOCKED",
+  "independent_validation_separation":"PASS|FAIL|BLOCKED",
+  "release_status":"DRAFT|VALIDATED|FROZEN|BLOCKED|SUPERSEDED",
+  "exceptions":["string"],
+  "timestamp":"ISO-8601"
+}
