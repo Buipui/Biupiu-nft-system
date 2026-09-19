@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.regression.v1","checks":["contract-syntax","server-authority","secret-isolation","provenance","entitlement","recovery-safeguards"],"external-provider-calls":false,"credential-free":true,"blocking":true}
