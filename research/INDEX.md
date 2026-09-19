@@ -162,3 +162,8 @@ Bug fixes, code updates, technology/dependency updates, security/configuration a
 Learning data remains off-chain by default. Only approved cryptographic checkpoints/commitments may be anchored on-chain. No private keys, prompts, raw datasets, confidential IP or model payloads are placed on-chain. The registry is not a claim of an independent Biupiu Layer-1.
 
 **INTEL-LEARN-01 status: IMPLEMENTED — learning schema, deterministic provenance primitive, regression tests, AI architecture integration and blockchain checkpoint contract added. Live AI-provider execution, local model training and blockchain deployment remain environment-validation gates.**
+
+
+## Lumion LUM-06 — unified visualization package
+
+Added a machine-readable unified visualization package schema, example package, and specification. One validated source model plus approved asset manifests can now define coordinated Lumion, Unreal Engine 5, V-Ray and Blender targets, with shared scene/provenance metadata and renderer-specific profiles. **LUM-06 executed.**
