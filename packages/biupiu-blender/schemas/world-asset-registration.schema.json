@@ -1,0 +1,23 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Biupiu World Asset Registration",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["registry_version","biupiu_asset_id","registration_state","handoff","digital_twin","provenance","claim","targets","integrity"],
+  "properties": {
+    "registry_version": {"type":"string","const":"1.0"},
+    "biupiu_asset_id": {"type":"string","pattern":"^BPU-WORLD-[A-Z0-9-]+$"},
+    "registration_state": {"enum":["PENDING","REGISTERED","BLOCKED"]},
+    "handoff": {"type":"object","required":["handoff_id","approval"],"properties":{
+      "handoff_id":{"type":"string","minLength":1},
+      "approval":{"type":"object","required":["decision","visual","provenance","evidence","asset_rights"],"properties":{
+        "decision":{"const":"APPROVE"},"visual":{"const":"PASS"},"provenance":{"const":"PASS"},"evidence":{"const":"PASS"},"asset_rights":{"const":"PASS"}
+      }}
+    }},
+    "digital_twin":{"type":"object","required":["id"],"properties":{"id":{"type":"string"},"department":{"type":"string"},"claim_class":{"type":"string"}}},
+    "provenance":{"type":"object","required":["source_type","source_ref"],"properties":{"source_type":{"type":"string"},"source_ref":{"type":"string"},"license":{"type":"string"}}},
+    "claim":{"type":"object","required":["evidence_state","label"],"properties":{"evidence_state":{"type":"string"},"label":{"type":"string"}}},
+    "targets":{"type":"object","required":["world"],"properties":{"world":{"type":"boolean"},"showreel":{"type":"boolean"},"digital_twin_catalog":{"type":"boolean"}}},
+    "integrity":{"type":"object","required":["source_hash","manifest_hash"],"properties":{"source_hash":{"type":"string"},"manifest_hash":{"type":"string"}}}
+  }
+}
