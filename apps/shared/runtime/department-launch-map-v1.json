@@ -15,6 +15,11 @@
       "package": "@biupiu/rnd-os",
       "android": "biupiu://department/rnd-os",
       "windows": "biupiu://department/rnd-os"
+    },
+    "CREATIVE_AI": {
+      "package": "@biupiu/firefly",
+      "android": "biupiu://department/creative-ai",
+      "windows": "biupiu://department/creative-ai"
     }
   },
   "note": "Deep-link targets are launch contracts; actual native registration is a subsequent integration step."
