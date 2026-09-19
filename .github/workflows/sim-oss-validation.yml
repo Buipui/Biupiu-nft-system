@@ -1,0 +1,26 @@
+name: SIM-OSS Validation
+
+on:
+  push:
+    paths:
+      - "software/rnd-os-ai/src/simulator_adapters.py"
+      - "software/rnd-os-ai/src/simulator_validation.py"
+      - "software/rnd-os-ai/tests/test_simulator_adapters.py"
+      - "software/rnd-os-ai/tests/test_simulator_validation.py"
+  pull_request:
+    paths:
+      - "software/rnd-os-ai/**"
+  workflow_dispatch:
+
+jobs:
+  adapter-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run SIM-OSS adapter tests
+        run: python -m pytest software/rnd-os-ai/tests/test_simulator_adapters.py software/rnd-os-ai/tests/test_simulator_validation.py
+      - name: Run non-executing validation probe
+        run: PYTHONPATH=software/rnd-os-ai/src python -c "from simulator_validation import validate_backends; print(validate_backends())"
