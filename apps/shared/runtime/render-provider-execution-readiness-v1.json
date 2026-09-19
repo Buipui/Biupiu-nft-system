@@ -1,0 +1,22 @@
+{
+  "schema": "biupiu.render.provider-execution-readiness.v1",
+  "truthPolicy": "contract-and-interface-do-not-equal-live-provider-execution",
+  "providers": {
+    "BLENDER": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"},
+    "UNREAL_ENGINE_5": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"},
+    "TWINMOTION": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"},
+    "KEYSHOT": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"},
+    "ADOBE": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"},
+    "FIREFLY": {"contract": "implemented", "concreteAdapter": "client-implemented", "liveValidation": "credential/runtime dependent"},
+    "RUNWAY": {"contract": "implemented", "concreteAdapter": "not-found", "liveValidation": "pending"}
+  },
+  "requiredNextEvidence": [
+    "provider runtime available",
+    "adapter registered in ProviderRegistry",
+    "test asset import/export",
+    "render result captured",
+    "provenance recorded",
+    "output hash recorded before release"
+  ],
+  "noUnsupportedClaim": true
+}
