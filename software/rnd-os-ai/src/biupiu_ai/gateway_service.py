@@ -61,7 +61,10 @@ class GatewayService:
 
         admission = self.state.admit(self.client_key, idempotency_key)
         if not admission.accepted:
-            self._audit(request_id, "gateway.rejected", admission.reason, admission.reason)
+            try:
+                self._audit(request_id, "gateway.rejected", admission.reason, admission.reason)
+            except AuditStoreError:
+                return self._error(request_id, "audit-store-unavailable", "audit persistence failed")
             return self._error(request_id, admission.reason, admission.reason)
 
         evidence = evidence or []
@@ -70,7 +73,10 @@ class GatewayService:
         dataset_ids = dataset_version_ids or [getattr(d, "version_id", str(d)) for d in dataset_versions]
         decision = validate_request(task, source_ids, dataset_ids, self.policy)
         if not decision.accepted:
-            self._audit(request_id, "gateway.rejected", decision.reason, "invalid-request")
+            try:
+                self._audit(request_id, "gateway.rejected", decision.reason, "invalid-request")
+            except AuditStoreError:
+                return self._error(request_id, "audit-store-unavailable", "audit persistence failed")
             return self._error(request_id, "invalid-request", decision.reason)
 
         context = GroundedContext(task, dataset_versions, evidence)
@@ -78,10 +84,16 @@ class GatewayService:
             result = self.provider.generate(context)
         except Exception as exc:
             error_type = type(exc).__name__
-            self._audit(request_id, "gateway.provider-failure", error_type, "provider-failure")
+            try:
+                self._audit(request_id, "gateway.provider-failure", error_type, "provider-failure")
+            except AuditStoreError:
+                return self._error(request_id, "audit-store-unavailable", "audit persistence failed")
             return self._error(request_id, "provider-failure", error_type)
 
-        self._audit(request_id, "gateway.accepted", "success")
+        try:
+            self._audit(request_id, "gateway.accepted", "success")
+        except AuditStoreError:
+            return self._error(request_id, "audit-store-unavailable", "audit persistence failed")
         return GatewayResponse(True, request_id, result=result)
 
     @staticmethod
