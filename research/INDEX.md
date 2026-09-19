@@ -112,3 +112,10 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 - `software/rnd-os-ai/tests/test_ai24.py` — outbox/retry tests.
 - `research/BIUPIU-AI-24-OUTBOX-PROVENANCE-v1.0.md` — AI-24 production-boundary specification.
 - **AI-24 status:** development outbox and provenance boundary implemented; production durable queue integration remains gated.
+
+
+## AI-25 transactional audit and provenance gate
+- `software/rnd-os-ai/src/biupiu_ai/transactional_audit.py` — transactional audit boundary and resource provenance validation.
+- `software/rnd-os-ai/tests/test_ai25.py` — transactional/provenance tests.
+- `research/BIUPIU-AI-25-TRANSACTIONAL-AUDIT-PROVENANCE-v1.0.md` — AI-25 specification.
+- **AI-25 status:** transactional audit boundary implemented; GatewayService end-to-end integration remains the next gate.
