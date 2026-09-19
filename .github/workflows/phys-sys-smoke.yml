@@ -18,4 +18,6 @@ jobs:
         with:
           python-version: '3.12'
       - name: Run physics kernel smoke tests
-        run: python private-rd-centre/tests/test_physics_kernel.py
+        run: |
+            python private-rd-centre/tests/test_physics_kernel.py
+            python private-rd-centre/tests/test_physics_benchmarks.py
