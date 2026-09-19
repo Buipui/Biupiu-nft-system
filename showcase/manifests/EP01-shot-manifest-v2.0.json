@@ -1,22 +1,68 @@
 {
   "showreel_id": "EP01-BIUPIU-WORLD-SHOWREEL-v2.0",
-  "status": "specification",
+  "status": "design-reference-locked; integration-validation-pending",
   "runtime_seconds": 120,
   "master_format": "16:9",
   "derivatives": ["30s", "15s", "9:16", "4:5", "showroom-loop"],
-  "brand": {"logo": "authoritative-uploaded-biupiu-logo", "palette": "gold-on-deep-green"},
-  "engine_policy": {"asset_prep": "Blender/approved tools", "cinematic_runtime": "Unreal Engine 5 external", "canonical_data": "repository schemas and validated records"},
+  "brand": {
+    "logo": "authoritative-uploaded-biupiu-logo",
+    "palette": "gold-on-deep-green",
+    "design_reference": "showcase/design-reference/BIUPIU-CONCEPT-BOARD-DESIGN-LOCK-v1.0.md",
+    "reference_image": "Biupiu Regenerative Technology Ecosystem.png",
+    "reference_sha256": "ac4f10b30b68719f52338e447681719d5f1ae7e5b757d0e4da1f81c7920f578b",
+    "reference_role": "silhouette/proportion/styling inspiration; not engineering-accurate source geometry"
+  },
+  "engine_policy": {
+    "asset_prep": "Blender/approved tools",
+    "cinematic_runtime": "Unreal Engine 5 external",
+    "canonical_data": "repository schemas and validated records",
+    "render_gate": "blocked until integration and runtime validation are complete"
+  },
+  "reference_assets": {
+    "source": "Adobe Firefly/Creative Cloud concept assets discovered for Biupiu showcase development",
+    "usage": "visual reference only until canonical 3D assets are approved",
+    "asset_ids": [
+      "urn:aaid:sc:EU:1c41036a-f6b1-444b-959a-3a82b7dcd30f",
+      "urn:aaid:sc:EU:eadbd0bd-b7c5-445c-bfaa-b4f94f12682c",
+      "urn:aaid:sc:EU:cf4513cc-85e8-4eb1-9658-dfebfea435d5",
+      "urn:aaid:sc:EU:1c9f2ec7-3598-4188-8a2a-ac7373647893",
+      "urn:aaid:sc:EU:d4fa77a0-83c0-4d4a-883d-be61e44202da",
+      "urn:aaid:sc:EU:5bf814f1-dea6-4095-92ba-95f3e40f0224",
+      "urn:aaid:sc:EU:dbecfae6-f0d5-445f-b8e7-46e66e3bc3d7",
+      "urn:aaid:sc:EU:7eec68fd-3781-40a3-8837-2ec7a6b6a4b6",
+      "urn:aaid:sc:EU:7cc379c0-ed5c-53f5-b7e6-fa4e495a6558",
+      "urn:aaid:sc:EU:6a7361d2-db29-4d8b-9972-d563a34f5a4e",
+      "urn:aaid:sc:EU:96b49467-d261-421c-b038-77a58ade4ab1",
+      "urn:aaid:sc:EU:16ad08b0-84d2-4d6e-a3cf-d89ecfc25ffd",
+      "urn:aaid:sc:EU:da022247-6554-4381-82e7-c7d0e7709409",
+      "urn:aaid:sc:EU:f53acc08-9919-473c-9a47-50067ec946fc",
+      "urn:aaid:sc:EU:34222cb3-2495-47f4-8227-dc25716e2b34",
+      "urn:aaid:sc:EU:9d24fedb-5d53-41e3-ac02-aebe1a25c4eb",
+      "urn:aaid:sc:EU:7c205e77-8026-4f1a-8e13-6aa93598bf07",
+      "urn:aaid:sc:EU:9afc3fc7-d13c-466a-b0f8-c6d8a98dff96",
+      "urn:aaid:sc:EU:7ba3f67a-8236-4313-bdbb-99348bda5e3e"
+    ]
+  },
   "shots": [
     {"id":"S01","space":"main-hub","asset_ids":[],"evidence_class":"brand/world-establishing","status":"planned"},
     {"id":"S02","space":"regenerative-farming","asset_ids":["AGR-01"],"evidence_class":"research/concept","status":"planned"},
     {"id":"S03","space":"materials-textiles","asset_ids":["HC-01"],"evidence_class":"research/prototype","status":"planned"},
     {"id":"S04","space":"propulsion-lab","asset_ids":["BL-01"],"evidence_class":"prototype/concept","status":"planned"},
-    {"id":"S05","space":"marine-port","asset_ids":["MAR-01","MAR-02"],"evidence_class":"concept","status":"planned"},
+    {"id":"S05","space":"marine-port","asset_ids":["MR-01","MR-02"],"evidence_class":"concept","status":"planned"},
     {"id":"S06","space":"aerospace-mobility","asset_ids":["EV-01","HC-01","AX-01"],"evidence_class":"concept","status":"planned"},
     {"id":"S07","space":"robotics-ai-factory","asset_ids":[],"evidence_class":"architecture/concept","status":"planned"},
     {"id":"S08","space":"photonics-lab","asset_ids":[],"evidence_class":"research-visualization","status":"planned"},
     {"id":"S09","space":"digital-twin-montage","asset_ids":[],"evidence_class":"validated-data-visualization","status":"planned"},
     {"id":"S10","space":"end-card","asset_ids":[],"evidence_class":"brand","status":"planned"}
   ],
-  "required_review": ["asset provenance", "licence permission", "logo correctness", "concept/research labels", "technical claim review", "render QA"]
+  "design_families": {
+    "BL-01": "concept-board-inspired turbine silhouette; photorealistic reconstruction pending",
+    "MR-01": "concept-board-inspired marine hull family; photorealistic reconstruction pending",
+    "MR-02": "marine propulsion/research variant; photorealistic reconstruction pending",
+    "EV-01": "concept-board-inspired distributed-lift eVTOL; photorealistic reconstruction pending",
+    "HC-01": "concept-board-inspired streamlined helicopter; photorealistic reconstruction pending",
+    "AX-01": "concept-board-inspired stealth/aerospace silhouette; photorealistic reconstruction pending"
+  },
+  "required_review": ["asset provenance", "licence permission", "logo correctness", "concept/research labels", "technical claim review", "design-family continuity", "render QA"],
+  "production_sequence": ["integration validation", "canonical asset preparation", "material and camera lock", "approved still renders", "animation and sequencing", "derivative exports"]
 }
