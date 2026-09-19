@@ -308,3 +308,13 @@ Mapped references include NVIDIA WaveWorks (external/proprietary reference), Hon
 Routing: **MARINE, PHYS-SYS, DIGITAL-TWIN, ROBOTICS, AI, COMPUTE, CG-3D, GEOMETRY, ADV-MFG, MATERIALS, COMPOSITES, ENERGY, VIDEO-SERIES and BIUPIU-WORLD**.
 
 **MARINE-SIM-01 status: ARCHITECTURE + RESOURCE INDEX REGISTERED.** Runtime compilation, wave/dynamics calibration and physical sea-trial validation remain separate gates. Third-party code/assets remain external pending licence, security and compatibility review.
+
+
+## FARM-SIM-02 — Adapter Contract + Scenario Validation Gate
+
+Added 19 September 2026:
+- `smart-farming/online-platform/SF39-FARMING-SIMULATOR-ADAPTER-CONTRACT-v1.0.md` — simulator-neutral interfaces and fail-closed integration rules.
+- `smart-farming/online-platform/SF40-FARMING-SIMULATOR-SCENARIO-SUITE-v1.0.json` — deterministic scenario definitions for soil regeneration, irrigation, autonomous navigation, harvesting, greenhouse automation, drought stress, logistics and historical farming.
+- `research/BIUPIU-FARM-SIM-VALIDATION-GATE-v1.0.md` — G1–G7 validation framework from resource identity/licence through Digital Twin and World promotion.
+
+**FARM-SIM-02 status: ARCHITECTURE EXECUTED.** Runtime-connected validation remains open because no connected Farming Simulator host/telemetry endpoint was executed in this gate.
