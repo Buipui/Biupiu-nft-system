@@ -206,3 +206,13 @@ Integration rule: self-healing extends INTEL-LEARN-01 but does not bypass OS aut
 **SELF-HEAL-01 status: IMPLEMENTED ON FEATURE BRANCH — deterministic controller, learning linkage and regression tests committed. Merge/CI execution and live-host remediation remain separate validation gates.**
 
 External research is treated as architectural reference; upstream code is not copied automatically.
+## SELF-HEAL-01 — Core OS + AI Hardening
+
+19 September 2026 update:
+- Core OS baseline now explicitly owns the self-healing safety contract.
+- Biupiu AI self-healing controller is integrated through the OS validation boundary.
+- Failure learning remains provenance-linked through INTEL-LEARN-01.
+- Candidate repairs remain sandboxed/bounded; failed verification triggers rollback and repeated failures trigger escalation.
+- Mainline promotion remains gated until CI and repository validation produce evidence.
+
+**SELF-HEAL-01 status: HARD-CODED ON FEATURE BRANCH — OS contract + AI controller + tests + index synchronized. Main branch merge remains a validation/promotion gate.**
