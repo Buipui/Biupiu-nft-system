@@ -479,3 +479,24 @@ INTAKE → CLASSIFY → DECOMPOSE → TASK GRAPH → RETRIEVE → CROSS-LINK →
 
 ### Gate status
 ARCH-FLOW-02: ARCHITECTURE INTEGRATED. Runtime execution and platform CI remain validation gates.
+
+
+## WORLD-ENGINE-02 / SEPARATION-03 — World Engine Learning Separation + Digital Twin Promotion
+Added 19 September 2026:
+- `research/BIUPIU-WORLD-ENGINE-SEPARATION-03.md` — canonical separation of external research, Biupiu Intelligence, AI OS, Main OS, Digital Twin and department promotion.
+- `research/BIUPIU-DIGITAL-TWIN-PROMOTION-CONTRACT-v1.0.md` — release-manifest and Digital Twin acceptance boundary.
+- `research/BIUPIU-WORLD-ENGINE-PROMOTION-MATRIX-v1.0.json` — machine-readable classification, routing and promotion matrix.
+- `research/BIUPIU-WORLD-ENGINE-RESOURCE-MANIFEST-v1.0.json` — expanded engine-resource separation routes.
+
+### Canonical flow
+RESEARCH → INTELLIGENCE → AI OS PROPOSAL → MAIN OS VALIDATION → RELEASE MANIFEST → DIGITAL TWIN → RELEVANT DEPARTMENT ADAPTERS
+
+External resources are classified as REFERENCE, PATTERN, ADAPTER, ASSET, DEPENDENCY or PROHIBITED. No external resource is promoted directly into authoritative state. Licence/IP, security, compatibility, deterministic tests, provenance and human release authority remain mandatory promotion gates.
+
+Routing now explicitly covers CG-3D, RENDER, PHYS-SYS, NAVIGATION, ROBOTICS, AI, COMPUTE, AERO, MARINE, ADV-MFG, MATERIALS, AGRI, WATER, PHOTONICS and VIDEO-SERIES where relevant. Revoked manifests must be blocked by the Main OS boundary and removed from downstream consumption.
+
+**SEPARATION-03 status: ARCHITECTURE COMMITTED.** Repository integration is complete; runtime/CI, connected-host and Digital Twin execution evidence remain separate validation gates.
+
+## Index synchronization
+**Research Index v4.3 — World Engine Separation / Digital Twin Promotion**  
+**Updated:** 19 September 2026
