@@ -1,0 +1,34 @@
+{
+  "schema": "biupiu.provider-equivalence.v1",
+  "gate": "RED-08",
+  "providers": [
+    "BLENDER",
+    "MAXON_CINEMA_4D",
+    "REDSHIFT",
+    "UNREAL_ENGINE_5",
+    "TWINMOTION",
+    "LUMION",
+    "KEYSHOT",
+    "OCTANE",
+    "VRAY",
+    "ADOBE",
+    "FIREFLY",
+    "RUNWAY"
+  ],
+  "baseline": {
+    "sourceAssetId": "BIUPIU-RENDER-TEST-001",
+    "sourceModelVersion": "TEST-001",
+    "provider": "AUTHORITATIVE_SOURCE",
+    "format": "GLTF",
+    "geometrySignature": "GEOM-BASELINE-001",
+    "transformSignature": "XFORM-BASELINE-001",
+    "materialSignature": "MAT-BASELINE-001",
+    "metadataSignature": "META-BASELINE-001",
+    "provenanceSignature": "PROV-BASELINE-001"
+  },
+  "execution": {
+    "status": "GATED",
+    "requiresConnectedProviderHosts": true,
+    "requiresMeasuredOutputs": true
+  }
+}
