@@ -119,3 +119,10 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 - `software/rnd-os-ai/tests/test_ai25.py` — transactional/provenance tests.
 - `research/BIUPIU-AI-25-TRANSACTIONAL-AUDIT-PROVENANCE-v1.0.md` — AI-25 specification.
 - **AI-25 status:** transactional audit boundary implemented; GatewayService end-to-end integration remains the next gate.
+
+
+## AI-26 gateway integration gate
+- `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — transactional audit and resource provenance enforcement integrated into GatewayService.
+- `software/rnd-os-ai/tests/test_ai26.py` — integration-boundary tests.
+- `research/BIUPIU-AI-26-GATEWAY-INTEGRATION-v1.0.md` — AI-26 specification.
+- **AI-26 status:** gateway integration committed; end-to-end GatewayService harness remains the next gate.
