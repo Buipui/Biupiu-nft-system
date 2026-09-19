@@ -1,43 +1,37 @@
-# Biupiu R&D OS v1.0 — Implementation Gate
+# Biupiu R&D OS v1.0 — Core Baseline
 
-Date: 2026-09-18
+Date: 2026-09-19
 
-## Scope executed
-Biupiu R&D OS now has a usable cross-platform prototype layer alongside the existing Android foundation and EVM NFT stack.
+## Baseline designation
 
-### Core functions
+The original Biupiu R&D OS v1.0 implementation is now designated the **Core OS Baseline** for subsequent development.
+
+This designation does not delete, replace or invalidate existing modules. It establishes the reference architecture from which future OS updates are built.
+
+## Core baseline functions
+
 - Research-object registry with explicit evidence classes.
 - Digital laboratory experiment logging.
 - Audit-event records.
 - Digital Asset & Provenance console.
 - Deterministic SHA-256 mint payload generation.
-- NFT release gate model: READY_FOR_REVIEW → TESTNET → VERIFIED → RELEASE.
+- NFT release gate model: READY_FOR_REVIEW -> TESTNET -> VERIFIED -> RELEASE.
 - Local JSON workspace export.
 - Offline-first PWA structure for Windows and Android browsers.
-- Android navigation updated to expose Research, Digital Lab, Assets/NFT and Control Centre.
+- Android navigation exposing Research, Digital Lab, Assets/NFT and Control Centre.
 
-## Architecture
-The web prototype is under `software/rnd-os-web/`.
-The Android client remains under `software/rnd-os-mobile/`.
-The existing Solidity/Hardhat minting layer remains under the repository Web3 structure.
+## Separated intelligence layer
 
-## Control boundary
-The prototype does not store private keys, sign transactions, or claim that an NFT has been minted on-chain. Testnet execution remains behind the existing contract/IP/provenance/release gates.
+Biupiu AI is maintained separately under `software/rnd-os-ai/`.
 
-## Production gates
-1. Backend/API persistence.
-2. Authentication and role-based permissions.
-3. Server-side append-only audit log.
-4. Encrypted object storage.
-5. GitHub/repository integration.
-6. AI service integration.
-7. Simulation/experiment runners.
-8. Wallet/testnet signing integration.
-9. Automated security and integrity tests.
-10. Windows packaged client and production Android build.
+The AI layer can consume OS context and request operations through OS-defined interfaces, but it does not become the authoritative system of record and does not bypass validation/audit controls.
 
-## Testing
-For the fastest first test, serve `software/rnd-os-web/` through a local HTTP server or GitHub Pages and open it in Chrome/Edge on Windows or Android. The PWA can then be installed where browser support permits.
+## Future extension rule
 
-## Repository status
-This is a functional prototype gate, not a production release. It is intentionally designed so that stronger server-side controls can replace the local prototype storage without changing the conceptual research/provenance model.
+Future OS updates must build on the core contracts above. New capabilities such as Digital Twin, simulation, robotics, package managers, platform adapters, additional desktop/mobile targets and Web3 integrations must attach through explicit interfaces.
+
+## Production boundary
+
+The baseline remains a functional prototype, not a production release. Production persistence, authentication/RBAC, encrypted storage, repository integration, AI service deployment, simulation runners, signing infrastructure, security testing and packaged platform builds remain gated.
+
+**CORE-OS-BASELINE-01: REGISTERED**
