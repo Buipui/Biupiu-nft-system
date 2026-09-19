@@ -1,0 +1,9 @@
+{
+  "preset_id":"BIU-AUTO-FM6REF-STUDIO-001",
+  "reference_state":"FM6-REFERENCE-ONLY",
+  "lod":{"policy":"NANITE_OR_ENGINE_LOD","levels":[{"name":"hero","screen_percentage":100,"purpose":"close cinematic"},{"name":"high","screen_percentage":60,"purpose":"product showcase"},{"name":"medium","screen_percentage":30,"purpose":"world presentation"},{"name":"low","screen_percentage":12,"purpose":"distant traffic/world"}]},
+  "material":{"model":"LAYERED_PBR","clearcoat":0.75,"metallic":0.85,"roughness":0.22,"flake_layer":true,"normal_tangent_validation":true},
+  "camera":{"framing":"FRONT_THREE_QUARTER","lens_mm":50},
+  "lighting":{"environment":"STUDIO","reflection_priority":"HIGH","wet_surface_support":false},
+  "targets":["unreal-engine-5","blender","redshift","v-ray","octane","lumion","keyshot"]
+}
