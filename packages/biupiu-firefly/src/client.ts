@@ -9,6 +9,7 @@ export interface FireflyApiConfig {
 export interface FireflyApiResponse {
   jobId?: string;
   statusUrl?: string;
+  cancelUrl?: string;
   raw: unknown;
 }
 
@@ -54,7 +55,13 @@ function extractJobId(payload: JsonRecord): string | undefined {
   return undefined;
 }
 
-function extractStatusUrl(payload: JsonRecord): string | undefined {
+function extractLinkHeader(linkHeader: string | null, rel: "result" | "cancel"): string | undefined {
+  if (!linkHeader) return undefined;
+  const entry = linkHeader.split(",").find((part) => new RegExp(`rel=["']${rel}["']`).test(part));
+  return entry?.match(/<([^>]+)>/)?.[1];
+}
+
+function extractStatusUrl(payload: JsonRecord, linkHeader?: string | null): string | undefined {
   const links = payload.links;
   if (links && typeof links === "object") {
     const result = (links as JsonRecord).result;
@@ -64,7 +71,19 @@ function extractStatusUrl(payload: JsonRecord): string | undefined {
     }
   }
 
-  return undefined;
+  return extractLinkHeader(linkHeader || null, "result");
+}
+
+function extractCancelUrl(payload: JsonRecord, linkHeader?: string | null): string | undefined {
+  const links = payload.links;
+  if (links && typeof links === "object") {
+    const cancel = (links as JsonRecord).cancel;
+    if (cancel && typeof cancel === "object") {
+      const href = (cancel as JsonRecord).href;
+      if (typeof href === "string") return href;
+    }
+  }
+  return extractLinkHeader(linkHeader || null, "cancel");
 }
 
 export class FireflyApiClient {
@@ -140,7 +159,8 @@ export class FireflyApiClient {
     const json = raw as JsonRecord;
     return {
       jobId: extractJobId(json),
-      statusUrl: extractStatusUrl(json),
+      statusUrl: extractStatusUrl(json, response.headers.get("Link")),
+      cancelUrl: extractCancelUrl(json, response.headers.get("Link")),
       raw
     };
   }
@@ -181,7 +201,7 @@ export class FireflyApiClient {
     if (!this.clientId) throw new Error("Firefly Client ID is not configured.");
 
     const target = jobId.startsWith("http")
-      ? jobId.replace("/status/", "/cancel/")
+      ? jobId.includes("/cancel/") ? jobId : jobId.replace("/status/", "/cancel/")
       : `${this.baseUrl}${ENDPOINTS.CANCEL_JOB}${encodeURIComponent(jobId)}`;
 
     const response = await this.fetchImpl(target, {
