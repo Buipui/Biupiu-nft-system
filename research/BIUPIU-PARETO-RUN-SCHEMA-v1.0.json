@@ -1,0 +1,24 @@
+{
+  "schema":"BIUPIU-PARETO-RUN-SCHEMA-v1.0",
+  "gate":"BM-10",
+  "pareto_run_id":"string",
+  "source_evaluation_run_ids":["string"],
+  "objective_schema_version":"string",
+  "constraint_schema_version":"string",
+  "algorithm_version":"string",
+  "tie_handling":"string",
+  "missing_data_policy":"exclude-and-record",
+  "timestamp":"ISO-8601",
+  "records":[
+    {
+      "candidate_id":"string",
+      "objective_vector":"object",
+      "objective_directions":"object",
+      "uncertainty":"object",
+      "constraint_state":"PASS|FAIL|UNKNOWN",
+      "pareto_status":"FRONT|DOMINATED|INVALID|BLOCKED",
+      "dominated_by":["string"],
+      "provenance":"object"
+    }
+  ]
+}
