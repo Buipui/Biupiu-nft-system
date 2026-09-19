@@ -1,0 +1,28 @@
+name: Biupiu Department Service Registry
+
+on:
+  push:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-registry.ts"
+      - "apps/shared/runtime/department-service-runtime.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-registry.ts"
+      - "apps/shared/runtime/department-service-runtime.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+
+jobs:
+  registry-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify registry runtime
+        run: |
+          grep -q 'DepartmentServiceRegistry' apps/shared/runtime/department-service-registry.ts
+          grep -q 'register' apps/shared/runtime/department-service-registry.ts
+          grep -q 'resolve' apps/shared/runtime/department-service-registry.ts
+          grep -q 'EntitlementAwareServiceGateway' apps/shared/runtime/department-service-runtime.ts
+          grep -q 'NOT_CONFIGURED' apps/shared/runtime/department-service-runtime.ts
