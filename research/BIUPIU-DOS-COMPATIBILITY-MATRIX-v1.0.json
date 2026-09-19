@@ -1,0 +1,7 @@
+{
+  "version":"1.0",
+  "targets":["Windows","Linux","macOS","Android","Web/WASM","UE5/Bevy adapter"],
+  "runtime_candidates":["FreeDOS","DOSBox-X","validated DOS environment"],
+  "checks":["boot","command-shell","filesystem","16-bit-real-mode","CONFIG.SYS/AUTOEXEC.BAT","INT21h","BIOS-services","code-pages","floppy/disk-images","serial-parallel-device-boundary","sandbox","network-isolation","deterministic-replay"],
+  "status":"matrix-defined-runtime-validation-pending"
+}
