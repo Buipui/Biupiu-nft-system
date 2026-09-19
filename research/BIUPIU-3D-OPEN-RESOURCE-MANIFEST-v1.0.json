@@ -1,0 +1,19 @@
+{
+  "gate":"3D-OPEN-01","version":"1.0","date":"2026-09-19","status":"IMPLEMENTED",
+  "open_books":[
+    {"name":"OpenSCAD User Manual","source":"Wikibooks","role":"procedural CAD reference"},
+    {"name":"Engineering Statics: Open and Interactive","source":"Open Textbook Library / LibreTexts","role":"engineering mechanics reference","license":"CC BY-SA 4.0"},
+    {"name":"Mechanics Map","source":"LibreTexts","role":"statics/dynamics reference","license":"CC BY-SA 4.0"}
+  ],
+  "github":[
+    {"name":"openscad/openscad","role":"procedural CAD engine reference"},
+    {"name":"BelfrySCAD/BelfrySCAD","role":"hybrid procedural CAD reference"},
+    {"name":"FreeCAD/FreeCAD","role":"parametric engineering CAD reference"},
+    {"name":"blender/blender","role":"mesh/procedural visualization reference"},
+    {"name":"gumyr/build123d","role":"Python parametric CAD reference"},
+    {"name":"Adam-CAD/CADAM","role":"text-to-CAD architecture reference"},
+    {"name":"pythonscad/pythonscad","role":"Python CAD reference"}
+  ],
+  "biupiu_code":{"package":"@biupiu/3d-engine","path":"packages/biupiu-3d-engine","outputs":["manifest validation","OpenSCAD generator","bounding-radius check","engineering blockout templates"]},
+  "departments":["GEOMETRY","COMPUTE","AERO","MARINE","ENERGY","COMPOSITES","MATERIALS","ADV-MFG","ROBOTICS","DIGITAL-TWIN","AI","NFT-ART","NFT-PROV"]
+}
