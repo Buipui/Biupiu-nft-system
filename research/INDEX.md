@@ -33,6 +33,23 @@ Third-party repositories remain external dependencies/references. Their source c
 
 **FLIGHT-SIM-01 status: EXECUTED — architecture, dependency registry and index integration complete.** Live UE5/JSBSim/AirSim execution remains a separate environment-validation gate.
 
+## AI × Blockchain × Algorithm Integration — AI-BLOCKCHAIN-01
+
+Added 19 September 2026:
+- `research/BIUPIU-AI-BLOCKCHAIN-ALGORITHM-INTEGRATION-v1.0.md` — cross-department integration architecture.
+- `research/BIUPIU-AI-BLOCKCHAIN-RESOURCE-MANIFEST-v1.0.json` — machine-readable reusable-resource manifest.
+
+Mapped streams:
+- AI / Buipiu Intelligence — persistent memory, agents, policy, verification and efficient orchestration.
+- COMPUTE / Algorithms — hard constraints, optimization, zkVM and reproducible execution.
+- ROBOTICS / PHYS-SYS — constrained control and simulation-before-physical execution.
+- PRIVATE-RD / DIGITAL-TWIN / CG-3D — simulation-ready scene generation and model lineage.
+- AERO / MARINE / ADV-MFG / MATERIALS — constrained design, CAD reconstruction and scientific optimization.
+- AGRICULTURE / WATER / CONSERVATION / CLIMATE — NASA geospatial and weather foundation-model references.
+- BLOCKCHAIN / NFT / IP — provenance, hash anchoring, verification and controlled agent transaction research.
+
+**AI-BLOCKCHAIN-01 status: EXECUTED — research resources isolated, indexed and cross-linked. Third-party code remains external pending licence/security review.**
+
 ## Master indexed streams
 
 The flight-simulation stream is now indexed under:
