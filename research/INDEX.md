@@ -294,3 +294,17 @@ Mapped reference classes include FS25 tooling, telemetry, field automation, prec
 The integration is **adapter-first**: third-party code/assets remain external until licence, security and compatibility review passes. Farming Simulator is not made a hard dependency of Biupiu World.
 
 **FARM-SIM-01 status: EXECUTED — research/resource registry, Digital Twin bridge, World architecture and resource map committed. Live simulator/adapter execution remains a host-validation gate.**
+
+
+## MARINE-SIM-01 — Marine Simulation + Virtual Boatyard / Sea-Test Integration
+
+Added 19 September 2026:
+- `research/BIUPIU-MARINE-SIMULATION-RESOURCE-REGISTRY-v1.0.md` — NVIDIA WaveWorks and open marine-simulation resource map.
+- Virtual boatyard/workshop architecture: CAD/design, hull Digital Twin, materials/composites, propulsion, electrical/automation, fabrication, inspection, work orders and showreel workflows.
+- Virtual sea-testing architecture: calm water, coastal conditions, wind/current/wave matrices, maneuvering, propulsion, sensor/autonomy and deterministic telemetry scenarios.
+
+Mapped references include NVIDIA WaveWorks (external/proprietary reference), HonuRobotics/gz-maritime, LSTS/gazebo-sim/asv_wave_sim, Naval Group LOTUSim, MARSIM, Plankton and VRX/Gazebo marine simulation. Professional ship simulators and Seafarer: The Ship Sim are observational/reference products only; proprietary code and assets are not represented as Biupiu-owned.
+
+Routing: **MARINE, PHYS-SYS, DIGITAL-TWIN, ROBOTICS, AI, COMPUTE, CG-3D, GEOMETRY, ADV-MFG, MATERIALS, COMPOSITES, ENERGY, VIDEO-SERIES and BIUPIU-WORLD**.
+
+**MARINE-SIM-01 status: ARCHITECTURE + RESOURCE INDEX REGISTERED.** Runtime compilation, wave/dynamics calibration and physical sea-trial validation remain separate gates. Third-party code/assets remain external pending licence, security and compatibility review.
