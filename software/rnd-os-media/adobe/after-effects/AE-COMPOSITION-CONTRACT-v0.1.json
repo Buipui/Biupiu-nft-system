@@ -1,0 +1,9 @@
+{
+  "schema":"biupiu.adobe.after-effects.composition-job",
+  "version":"0.1.0",
+  "commands":["open_project","create_composition","import_assets","apply_annotation_template","queue_render","export"],
+  "required_inputs":["project_id","research_ids","asset_ids"],
+  "required_outputs":["render_path","output_sha256","provenance_record"],
+  "validation":["registered-assets-only","evidence-classification-required","licence-state-required","output-hash-required"],
+  "status":"adapter-contract-only"
+}
