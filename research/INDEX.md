@@ -192,3 +192,17 @@ Added a machine-readable unified visualization package schema, example package, 
 ## AERO-HANGAR-01 — Virtual Hangar + Digital Twin
 
 Added `research/BIUPIU-AEROSPACE-VIRTUAL-HANGAR-DIGITAL-TWIN-v1.0.md`. The private Virtual Hangar provides a multi-vehicle simulation architecture for eVTOL, helicopters, UAVs, drones, fixed-wing aircraft and jets. NASA, public DARPA research, ResearchGate and Emerald research patterns are mapped into Aerospace, Physics Systems, Compute, AI, Robotics, Avionics, CG-3D, Materials, Manufacturing, Energy, HMI, CODEX, Digital Twin and Testing. Existing FS2002/MSFS 2024 simulator tracks feed the Hangar. **AERO-HANGAR-01: ARCHITECTURE REGISTERED.**
+
+## Self-Healing + Failure Learning — SELF-HEAL-01
+
+Added 19 September 2026:
+- `research/BIUPIU-SELF-HEALING-ARCHITECTURE-v1.0.md` — bounded Detect → Diagnose → Propose → Sandbox → Test → Verify → Learn → Promote/Rollback architecture.
+- `research/BIUPIU-SELF-HEALING-RESOURCE-REGISTRY-v1.0.md` — external GitHub/OpenBook research patterns and provenance/licence boundary.
+- `software/rnd-os-ai/src/biupiu_ai/self_healing.py` — deterministic failure signatures, allowlisted remediation rules, file-scope limits, protected-file checks, regression-test requirement, rollback and circuit breaker.
+- `software/rnd-os-ai/tests/test_self_healing.py` — regression coverage for verified learning, rollback, protected files, circuit breaking and regression-test enforcement.
+
+Integration rule: self-healing extends INTEL-LEARN-01 but does not bypass OS authority, provenance, evidence or human promotion controls.
+
+**SELF-HEAL-01 status: IMPLEMENTED ON FEATURE BRANCH — deterministic controller, learning linkage and regression tests committed. Merge/CI execution and live-host remediation remain separate validation gates.**
+
+External research is treated as architectural reference; upstream code is not copied automatically.
