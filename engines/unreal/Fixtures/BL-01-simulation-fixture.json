@@ -1,0 +1,12 @@
+{
+  "simulation_id": "BL-01-SIM-0001",
+  "model_version": "BL-01-v0.1",
+  "input_dataset_id": "BL-01-input-synthetic-0001",
+  "result_dataset_id": "BL-01-result-synthetic-0001",
+  "execution_timestamp": "2026-09-19T00:00:00Z",
+  "units": {"rotational_speed": "rpm", "torque": "N.m", "power": "W"},
+  "parameter_reference": "synthetic-fixture-only",
+  "validation_state": "SYNTHETIC_REPLAY",
+  "source_commit": "TO_BE_RECORDED_BY_LOCAL_RUNNER",
+  "values": {"rotational_speed": 1200, "torque": 10, "power": 1256.64}
+}
