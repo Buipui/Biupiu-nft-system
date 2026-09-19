@@ -1,1 +1,43 @@
-{"schema":"biupiu.render.provider-adapters.v1","architecture":"thin-adapter","providers":{"BLENDER":{"execution":"external-or-local","source":"scene/project"},"UNREAL_ENGINE_5":{"execution":"external","source":"project/level"},"TWINMOTION":{"execution":"external","source":"scene"},"KEYSHOT":{"execution":"external","source":"scene"},"ADOBE":{"execution":"external","source":"edit-project"},"FIREFLY":{"execution":"api-or-hosted","source":"prompt/assets"},"RUNWAY":{"execution":"api-or-hosted","source":"prompt/assets"}},"rule":"no-provider-secret-on-client"}
+{
+  "schema": "biupiu.render.provider-adapters.v1",
+  "architecture": "thin-adapter",
+  "providers": {
+    "BLENDER": {
+      "execution": "external-or-local",
+      "source": "scene/project",
+      "status": "contract-only; provider-runtime-validation-required"
+    },
+    "UNREAL_ENGINE_5": {
+      "execution": "external",
+      "source": "project/level",
+      "status": "contract-only; provider-runtime-validation-required"
+    },
+    "TWINMOTION": {
+      "execution": "external",
+      "source": "scene",
+      "status": "contract-only; provider-runtime-validation-required"
+    },
+    "KEYSHOT": {
+      "execution": "external",
+      "source": "scene",
+      "status": "contract-only; provider-runtime-validation-required"
+    },
+    "ADOBE": {
+      "execution": "external",
+      "source": "edit-project",
+      "status": "contract-only; provider-runtime-validation-required"
+    },
+    "FIREFLY": {
+      "execution": "api-or-hosted",
+      "source": "prompt/assets",
+      "status": "adapter-client-implemented; live-execution-server-gated"
+    },
+    "RUNWAY": {
+      "execution": "api-or-hosted",
+      "source": "prompt/assets",
+      "status": "contract-only; provider-runtime-validation-required"
+    }
+  },
+  "rule": "no-provider-secret-on-client",
+  "executionTruth": "Repository contracts and adapter interfaces are implemented; no concrete BLENDER/UNREAL_ENGINE_5/TWINMOTION/KEYSHOT provider adapter implementation is claimed until provider-side runtime validation is performed."
+}
