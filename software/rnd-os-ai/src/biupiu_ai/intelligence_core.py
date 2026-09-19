@@ -21,6 +21,16 @@ RELATIONS = (
 
 
 @dataclass(frozen=True)
+class TaskStatus(str, Enum):
+    NEW="new"; EXECUTING="executing"; EXECUTION_DONE="executionDone"; COMPLETE="complete"
+    ON_HOLD="onHold"; FAILED="failed"; INCOMPLETE="incomplete"; STALE="stale"
+    FLAGGED_HUMAN="flaggedHuman"; FLAGGED_AI="flaggedAi"; REMOVED="removed"
+
+
+class Autonomy(str, Enum):
+    FULL="Full"; SUPERVISED="Supervised"; LOCKED="Locked"
+
+
 class EvidenceEdge:
     source_id: str
     target_id: str
