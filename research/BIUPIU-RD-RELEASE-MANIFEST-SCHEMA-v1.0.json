@@ -1,0 +1,17 @@
+{
+  "schema":"BIUPIU-RD-RELEASE-MANIFEST-SCHEMA-v1.0",
+  "gate":"BM-12",
+  "release_id":"string",
+  "release_version":"string",
+  "status":"DRAFT|VALIDATED|FROZEN|SUPERSEDED",
+  "included_run_ids":["string"],
+  "included_dataset_ids":["string"],
+  "included_model_versions":["string"],
+  "code_refs":["string"],
+  "configuration_refs":["string"],
+  "environment_metadata":"object",
+  "regression_status":"string",
+  "evidence_ledger_ref":"string-or-null",
+  "release_notes":"string",
+  "created_at":"ISO-8601"
+}
