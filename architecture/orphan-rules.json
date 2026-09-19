@@ -1,0 +1,75 @@
+{
+  "schema_version": "1.0",
+  "rules": [
+    {
+      "id": "ORPHAN-001",
+      "condition": "department_without_capability",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-002",
+      "condition": "algorithm_without_owner_or_lineage",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-003",
+      "condition": "model_without_source_or_algorithm",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-004",
+      "condition": "twin_without_model_or_contract",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-005",
+      "condition": "simulation_without_versioned_model",
+      "severity": "medium"
+    },
+    {
+      "id": "ORPHAN-006",
+      "condition": "validation_without_experiment_or_model",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-007",
+      "condition": "nft_without_provenance",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-008",
+      "condition": "blockchain_anchor_without_release_manifest",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-009",
+      "condition": "bpu_component_without_treasury_settlement_policy",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-010",
+      "condition": "treasury_without_authorization_controls",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-011",
+      "condition": "marketplace_without_payment_interface",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-012",
+      "condition": "external_dependency_without_license_security_status",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-013",
+      "condition": "ai_agent_without_policy_boundary",
+      "severity": "high"
+    },
+    {
+      "id": "ORPHAN-014",
+      "condition": "production_component_without_rollback_lineage",
+      "severity": "medium"
+    }
+  ]
+}
