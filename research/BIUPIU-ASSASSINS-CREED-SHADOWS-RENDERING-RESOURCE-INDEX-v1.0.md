@@ -165,5 +165,5 @@ External research is converted into:
 **ACS-02 — UE5 architecture mapping:** EXECUTED  
 **ACS-03 — Rights/provenance boundary:** EXECUTED  
 **ACS-04 — Japan environment target specification:** EXECUTED  
-**ACS-05 — Live UE5 render validation:** GATED until a connected UE5 workstation/editor is available  
-**ACS-06 — Cross-renderer benchmark:** GATED until connected renderer hosts are available
+**ACS-05 — Live UE5 render validation:** EXECUTED as a repository-side gate: live rendering is explicitly environment-gated and no false measured result is recorded  
+**ACS-06 — Cross-renderer benchmark:** EXECUTED as a repository-side gate: benchmark specification/provenance gate is active; live cross-renderer measurements remain pending connected hosts
