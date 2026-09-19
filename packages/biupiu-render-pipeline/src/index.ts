@@ -6,3 +6,5 @@ export { REDSHIFT_OSL_VALIDATION_SET, REDSHIFT_PROVIDER_CONTRACT, REDSHIFT_VALID
 export type { RedshiftAdapter, RedshiftEnvironment, RedshiftHost, RedshiftDeviceKind, RedshiftValidationResult } from "./redshift";
 export { createProviderPackage, UNIVERSAL_INTERCHANGE_RULES } from "./interchange";
 export type { InterchangeFormat, MaterialSlot, UniversalAssetManifest, ProviderPackage } from "./interchange";
+export { createConversionReport, RED_06_RULES } from "./conversion";
+export type { ConversionStatus, MaterialFeature, MaterialTranslationRule, ConversionReport } from "./conversion";
