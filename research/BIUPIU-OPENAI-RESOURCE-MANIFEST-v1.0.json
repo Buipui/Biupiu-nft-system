@@ -1,0 +1,44 @@
+{
+  "manifest_id": "OPENAI-RESOURCE-01",
+  "date": "2026-09-19",
+  "status": "validated-reference",
+  "policy": "architecture-patterns-first",
+  "resources": [
+    {
+      "id": "OPENAI-AGENTS-PY",
+      "repository": "openai/openai-agents-python",
+      "capabilities": ["agents", "tools", "handoffs", "guardrails", "sessions", "human_approval", "tracing"],
+      "route": ["AI", "COMPUTE", "DIGITAL-TWIN", "ROBOTICS"],
+      "integration": "independent-compatible-primitives"
+    },
+    {
+      "id": "OPENAI-AGENTS-TS",
+      "repository": "openai/openai-agents-js",
+      "capabilities": ["agents", "tools", "handoffs", "orchestration", "realtime"],
+      "route": ["AI", "WORLD", "CG-3D"],
+      "integration": "reference-pattern"
+    },
+    {
+      "id": "OPENAI-COOKBOOK",
+      "repository": "openai/openai-cookbook",
+      "capabilities": ["implementation-patterns", "codex-workflows", "sandbox-patterns", "eval-patterns"],
+      "route": ["AI", "CODEX", "COMPUTE", "RESEARCH"],
+      "integration": "reference-pattern"
+    },
+    {
+      "id": "OPENAI-EVALS",
+      "repository": "openai/evals",
+      "capabilities": ["evaluation", "regression", "custom-evals"],
+      "route": ["AI", "QA", "EXTERMINATE", "COMPUTE"],
+      "integration": "methodology-plus-local-tests"
+    },
+    {
+      "id": "OPENAI-CODEX",
+      "repository": "openai/codex",
+      "capabilities": ["repository-aware-agentic-development", "planning", "code-change-workflows"],
+      "route": ["CODEX", "CORE-OS", "AI"],
+      "integration": "reference-pattern"
+    }
+  ],
+  "promotion_rule": "No third-party code becomes Biupiu-owned without licence, security, compatibility, provenance and regression gates."
+}
