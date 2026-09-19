@@ -1,7 +1,7 @@
 {
   "schema": "biupiu.module.render-pipeline.v1",
   "module": "Biupiu Render Pipeline",
-  "status": "universal-interchange-gate-integrated",
+  "status": "conversion-gate-integrated",
   "providers": ["BLENDER","MAXON_CINEMA_4D","REDSHIFT","UNREAL_ENGINE_5","TWINMOTION","LUMION","KEYSHOT","OCTANE","VRAY","ADOBE","FIREFLY","RUNWAY"],
   "flows": ["PRODUCT_STILL","DIGITAL_TWIN","CINEMATIC_SHOWREEL","CONCEPT_VARIATION","RESEARCH_VISUALIZATION"],
   "source_of_truth": "asset-registry",
@@ -9,6 +9,9 @@
   "universal_interchange": "packages/biupiu-render-pipeline/src/interchange.ts",
   "universal_asset_fixture": "packages/biupiu-render-pipeline/fixtures/universal-asset-test-001.json",
   "universal_interchange_test": "packages/biupiu-render-pipeline/tests/red-05.interchange.ts",
+  "conversion_engine": "packages/biupiu-render-pipeline/src/conversion.ts",
+  "conversion_fixture": "packages/biupiu-render-pipeline/fixtures/red-06-conversion-report.json",
+  "conversion_test": "packages/biupiu-render-pipeline/tests/red-06.conversion.ts",
   "redshift_resources": "research/BIUPIU-REDSHIFT-RESOURCES-v1.0.md",
   "redshift_adapter": "packages/biupiu-render-pipeline/src/redshift.ts",
   "redshift_test_scene": "research/BIUPIU-REDSHIFT-TEST-SCENE-SPEC-v1.0.md",
