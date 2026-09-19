@@ -1,5 +1,9 @@
 # Biupiu R&D Research Index
 
+## RED-07 — Automated round-trip drift testing
+
+Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
+
 **Version:** 3.6
 **Updated:** 19 September 2026
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
