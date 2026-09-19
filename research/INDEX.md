@@ -34,3 +34,14 @@ Registered files:
 The reconciliation system distinguishes `CLOSED/VERIFIED`, `IMPLEMENTED-BUT-UNVERIFIED`, `READY/NOT EXECUTED`, `DEFERRED BY DESIGN`, `BLOCKED` and `SUPERSEDED/OBSOLETE`. It preserves unfinished research and prohibits closure of runtime CI, UE5, Android, physical-experiment, production-security or third-party-application gates without direct evidence.
 
 **HOUSEKEEPING STATUS: EXECUTED — protocol and open-gate register committed. Repository documentation gates are synchronized; downstream execution and validation gates remain explicitly open, deferred or blocked according to evidence.**
+
+
+## EXTERMINATE + OPEN-SOURCE SIMULATOR INTEGRATION GATE — 19 September 2026
+
+Architecture reconciled: canonical World assets remain in world/; department simulators remain independent; proprietary third-party assets remain external; research lineage is preserved.
+
+New records: world/BIUPIU-WORLD-INTEGRATION-GATE-04-v1.0.md and department adapter manifests under simulators/manifests/ for AUTO, MARINE, AERO, ROBOTICS and AGRICULTURE.
+
+Routing: World Asset ID -> Environment Manifest -> Department Adapter -> Simulator -> Telemetry -> Digital Twin -> Validation -> Promotion.
+
+Execution state: architecture/resource-routing gate executed. Runtime dependency builds and simulator smoke tests remain OPEN / NOT VERIFIED until performed on the actual development host.
