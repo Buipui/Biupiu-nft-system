@@ -1,0 +1,10 @@
+{
+  "version":"1.0",
+  "status":"prepared-for-execution",
+  "protocols":["exterminate","public-release-first","open-source-second","provenance","regression","security"],
+  "platforms":["x86_64","ARM64","RISC-V64","legacy-x86","BIOS","UEFI","device-tree","Windows-host","Linux-host","macOS-host","Android/ARM64","QEMU/OVMF","UE5","Bevy"],
+  "gates":[
+    "G00-scope","G01-firmware","G02-architecture-hal","G03-memory","G04-interrupts-timers","G05-scheduler-processes","G06-devices-drivers","G07-storage-vfs","G08-console-input-graphics","G09-ipc-services","G10-network","G11-security-sandbox","G12-recovery-update","G13-package-abi","G14-userland-shell","G15-DOS","G16-Linux","G17-GPU","G18-media","G19-virtualization","G20-AI","G21-Digital-Twin","G22-SDK","G23-images-installer","G24-CI-VM","G25-hardware","G26-performance","G27-security-audit","G28-RC","G29-production"
+  ],
+  "promotion_rule":"No gate is production-complete until build, boot, runtime, regression, security and provenance evidence exists."
+}
