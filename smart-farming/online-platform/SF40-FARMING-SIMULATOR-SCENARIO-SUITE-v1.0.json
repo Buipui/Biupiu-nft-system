@@ -1,0 +1,13 @@
+{
+  "version": "1.0",
+  "scenarios": [
+    {"id":"soil-regeneration","focus":["soil","organic_matter","crop_rotation","biochar"]},
+    {"id":"precision-irrigation","focus":["soil_moisture","weather","water_demand","irrigation"]},
+    {"id":"autonomous-field-navigation","focus":["robotics","coverage","routing","machine_state"]},
+    {"id":"harvest-operations","focus":["crop_stage","yield","machine_load","storage"]},
+    {"id":"greenhouse-automation","focus":["sensors","climate","irrigation","controls"]},
+    {"id":"drought-stress","focus":["rainfall","soil_moisture","yield","water_efficiency"]},
+    {"id":"farm-logistics","focus":["inventory","storage","transport","energy","cost"]},
+    {"id":"historical-farming","focus":["terrain","water","crops","labour","evidence_class"]}
+  ]
+}
