@@ -1,0 +1,116 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biupiu-visualization-package.schema.json",
+  "title": "Biupiu Unified Visualization Package",
+  "type": "object",
+  "required": [
+    "package_id",
+    "project_id",
+    "source_model",
+    "asset_manifests",
+    "targets",
+    "provenance"
+  ],
+  "properties": {
+    "package_id": {
+      "type": "string"
+    },
+    "project_id": {
+      "type": "string"
+    },
+    "source_model": {
+      "type": "object",
+      "required": [
+        "id",
+        "version"
+      ],
+      "properties": {
+        "id": {
+          "type": "string"
+        },
+        "version": {
+          "type": "string"
+        },
+        "authoring": {
+          "type": "string"
+        }
+      }
+    },
+    "asset_manifests": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "scene": {
+      "type": "object",
+      "properties": {
+        "units": {
+          "type": "string"
+        },
+        "coordinate_system": {
+          "type": "string"
+        },
+        "real_world_scale": {
+          "type": "boolean"
+        },
+        "camera_set": {
+          "type": "string"
+        },
+        "environment_set": {
+          "type": "string"
+        }
+      }
+    },
+    "targets": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": [
+          "renderer",
+          "enabled"
+        ],
+        "properties": {
+          "renderer": {
+            "enum": [
+              "Lumion",
+              "Unreal Engine 5",
+              "V-Ray",
+              "Blender"
+            ]
+          },
+          "enabled": {
+            "type": "boolean"
+          },
+          "profile": {
+            "type": "string"
+          },
+          "output_formats": {
+            "type": "array",
+            "items": {
+              "type": "string"
+            }
+          }
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "created_at",
+        "manifest_version"
+      ],
+      "properties": {
+        "created_at": {
+          "type": "string"
+        },
+        "manifest_version": {
+          "type": "string"
+        },
+        "notes": {
+          "type": "string"
+        }
+      }
+    }
+  }
+}
