@@ -1,0 +1,26 @@
+name: Biupiu Subscriber Service Authorization
+
+on:
+  push:
+    paths:
+      - "software/rnd-os/access/subscriber-model.ts"
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+      - "apps/shared/runtime/SUBSCRIBER-SERVICE-AUTH-v1.md"
+  pull_request:
+    paths:
+      - "software/rnd-os/access/subscriber-model.ts"
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-gateway.ts"
+
+jobs:
+  subscriber-auth-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify subscriber authorization binding
+        run: |
+          grep -q 'SubscriberAccount' apps/shared/runtime/department-service-gateway.ts
+          grep -q 'canEnterDepartment' apps/shared/runtime/department-service-gateway.ts
+          grep -q 'authorizeDepartmentCapability' apps/shared/runtime/department-service-gateway.ts
+          grep -q 'SERVICE_CAPABILITY' apps/shared/runtime/department-service-gateway.ts
