@@ -89,7 +89,13 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 
 ## Version
 
-**Biupiu R&D Research Index v3.7 — Audit + Flight Simulation + Private Systems Physics Centre**
+**Biupiu R&D Research Index v3.8 — Audit + Flight Simulation + Private Systems Physics Centre**
 **Updated:** 19 September 2026
 
 > Index synchronization note: This is the authoritative current index state for the flight-simulation integration. Historical gate records remain in their respective files.
+
+
+## AUTO-CUSTOM-03 — NEXT GATE EXECUTION
+**Executed:** 19 September 2026
+
+Production integration gate prepared: modular Unreal/Blender pipeline, attachment-point validation, Digital Twin runtime binding, and original Biupiu parametric component generation are now the next implementation targets. Third-party NFSU2/Forza assets remain excluded unless separately licensed.
