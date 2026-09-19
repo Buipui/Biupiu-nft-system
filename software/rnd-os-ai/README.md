@@ -45,3 +45,26 @@ The AI provider/model can be replaced without changing the OS data model or core
 **AI-01 / SEPARATION-01: REGISTERED — Biupiu AI is formally maintained as an independent intelligence layer integrated with the Core OS.**
 
 Production AI deployment remains gated by persistence, authentication, security, provider integration and end-to-end testing.
+
+
+## Global Language Translation — HARD-CODED CORE FEATURE
+
+**Gate AI-26 / GLOBAL-LANGUAGE-01: REGISTERED** — multilingual translation is now a first-class Biupiu AI capability and is connected to the global multilingual research protocol.
+
+Implementation: `src/global_language_translation.py`  
+Regression tests: `tests/test_global_language_translation.py`  
+Research protocol: `research/BIUPIU-GLOBAL-MULTILINGUAL-RESEARCH-INTELLIGENCE-PROTOCOL-v1.0.md`
+
+### Contract
+- Preserves original-language source text.
+- Normalises BCP-47-style language tags to registered base languages.
+- Includes African, European, Asian, Middle Eastern and other major language families in the initial registry.
+- Supports provider injection rather than hard-coding credentials or a commercial vendor.
+- Records translation provider and provenance.
+- Marks supplied machine translations `translated-unverified` until validation.
+- Leaves translation `pending` when no backend is configured rather than fabricating output.
+- Rejects unknown language codes.
+- Translation never bypasses OS validation, evidence, licence or provenance gates.
+
+### Hard-code boundary
+The language registry, validation rules and translation provenance contract are hard-coded into the Biupiu AI layer. Actual translation engines remain replaceable plugins/backends so the core architecture does not become vendor-locked.
