@@ -4,7 +4,7 @@
 
 Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
 
-**Version:** 3.7
+**Version:** 3.8
 **Updated:** 19 September 2026
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -104,6 +104,12 @@ Added 19 September 2026:
 Registered references include Vulkan/DX12/DXR rendering, glTF, Jolt Physics, PhysX, Bullet/PyBullet, AMD FidelityFX/FSR, Intel XeSS, libplacebo and selected research-only upscaling projects.
 
 **GPU-SYS-01 status: EXECUTED — registry, dependency manifest, adapter contracts and package definitions committed. Local compilation, GPU benchmarks and runtime acceptance remain validation gates.**
+
+### PHYS-SYS-01 validation gate
+
+- `private-rd-centre/tests/test_physics_kernel.py` — deterministic smoke tests for rigid-body, thermal and rotating-machine primitives.
+- `.github/workflows/phys-sys-smoke.yml` — repeatable GitHub Actions smoke-test workflow triggered by private-R&D changes or manually.
+- Current state: **TEST HARNESS REGISTERED**. The connector reports no commit status checks yet, so CI execution is not claimed as passed until GitHub Actions produces a run result.
 
 ## Version
 
