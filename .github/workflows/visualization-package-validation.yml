@@ -1,0 +1,49 @@
+name: Biupiu Visualization Package Validation
+
+on:
+  push:
+    paths:
+      - 'research/visual-assets/**'
+  pull_request:
+    paths:
+      - 'research/visual-assets/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  validate-visualization-package:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Validate JSON manifests
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          for p in Path('research/visual-assets').glob('*.json'):
+              json.loads(p.read_text())
+              print(f'JSON syntax OK: {p}')
+      - name: Validate schema metadata
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          p=Path('research/visual-assets/biupiu-visual-asset-manifest.schema.json')
+          s=json.loads(p.read_text())
+          assert s.get('$schema') == 'https://json-schema.org/draft/2020-12/schema'
+          print('Visual asset schema dialect: JSON Schema 2020-12')
+      - name: Validate Python validator syntax
+        run: python -m py_compile research/visual-assets/validate_visual_asset.py
+      - name: Package integrity report
+        run: |
+          echo '# Biupiu Visualization Package Validation' > validation-report.md
+          echo '' >> validation-report.md
+          echo '- JSON syntax: PASS' >> validation-report.md
+          echo '- JSON Schema dialect: PASS' >> validation-report.md
+          echo '- Python validator syntax: PASS' >> validation-report.md
+          echo '- Renderer packages: Lumion / Unreal Engine 5 / V-Ray / Blender' >> validation-report.md
+          echo '- Engineering source-of-truth boundary: ENFORCED BY SPECIFICATION' >> validation-report.md
+          cat validation-report.md
