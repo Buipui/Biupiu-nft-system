@@ -57,5 +57,16 @@
     "publicPublication": "human-approved",
     "scientificEvidence": "not-automatic"
   },
-  "clients": ["android", "windows", "web"]
+  "clients": [
+    "android",
+    "windows",
+    "web"
+  ],
+  "delivery": {
+    "resultUrl": "provider-supplied",
+    "downloadMode": "direct-presigned-or-temporary-url",
+    "credentialFreeDownload": true,
+    "downloadOperation": "GET",
+    "provenanceCaptureRequiredBeforeRelease": true
+  }
 }
