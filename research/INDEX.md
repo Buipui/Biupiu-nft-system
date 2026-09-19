@@ -336,3 +336,15 @@ The contract explicitly separates third-party references from Biupiu-owned imple
 - `software/rnd-os-ai/tests/test_ai27.py` — authentication, provenance, provider, replay, rate-limit and audit-failure harness.
 - `research/BIUPIU-AI-27-END-TO-END-GATE-v1.0.md` — AI-27 specification.
 - **AI-27 status:** test harness committed; CI/test execution remains unverified.
+
+
+## Production Code Health — 2026-09-19
+
+Added `research/BIUPIU-PRODUCTION-CODE-HEALTH-GATE-2026-09-19.md`.
+
+- Fixed the verified R&D OS API `research` collection routing defect.
+- Added a regression test for `GET /v1/research`.
+- Added dedicated API CI coverage under `.github/workflows/rnd-os-api-ci.yml`.
+- Formalized the four-state release rule: verified working, known issue/pending verification, intentional learning/research, and unverified.
+
+**Status: IMPLEMENTED — CI/runtime verification pending.**
