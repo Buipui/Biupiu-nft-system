@@ -92,7 +92,7 @@ export class FireflyApiClient {
   }
 
   async submit(
-    operation: Exclude<keyof typeof ENDPOINTS, "JOB_STATUS" | "UPLOAD_ASSET">,
+    operation: Exclude<keyof typeof ENDPOINTS, "JOB_STATUS" | "CANCEL_JOB" | "UPLOAD_ASSET">,
     payload: JsonRecord,
     options: { modelVersion?: string } = {}
   ): Promise<FireflyApiResponse> {
