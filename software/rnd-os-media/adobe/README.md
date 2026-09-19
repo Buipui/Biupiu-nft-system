@@ -1,19 +1,23 @@
-# Biupiu Adobe Media Adapter Layer v0.1
+# Biupiu Adobe Media Adapter Layer v0.2
 
 This package defines the boundary between the Biupiu R&D OS and Adobe Creative Cloud media applications.
 
-## Adapters
+## Architecture
+
+The R&D OS remains authoritative for projects, research objects, provenance, evidence, IP state and audit events. Adobe applications execute application-specific media operations through adapters.
+
+### Adapters
 
 - `premiere-pro/` — Premiere Pro UXP job contract and integration notes.
 - `after-effects/` — After Effects composition/render adapter contract.
 - `MEDIA-JOB-SCHEMA.json` — portable job/provenance envelope.
+- `ADOBE-RDOS-EVENT-BRIDGE-v0.1.json` — event contract connecting media jobs to the R&D OS lifecycle.
 
-## Design rule
+## Gate status
 
-The R&D OS owns research objects, provenance, evidence, IP state and job orchestration. Adobe applications own application-specific editing/compositing/render execution.
+- ADOBE-01: architecture/provenance layer — closed
+- ADOBE-02: deterministic media-job validation architecture — closed
+- ADOBE-03: R&D OS event bridge/schema contract — closed
+- Live Adobe application execution — not yet verified
 
-No Adobe executable or proprietary SDK binary is bundled here.
-
-## Current status
-
-Architecture only. Live application execution is gated on local Adobe installation, developer mode/UXP tooling where applicable, and end-to-end validation.
+No Adobe executable, proprietary SDK binary or unlicensed third-party asset is bundled here.
