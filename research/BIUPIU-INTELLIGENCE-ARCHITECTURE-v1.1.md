@@ -47,4 +47,19 @@ The mobile application does not access PostgreSQL directly. Secrets remain serve
 - Gate AI-06: offline mobile queue and sync.
 - Gate AI-07: physical-lab/device integration.
 
-**Current gate:** AI-01 architecture/foundation.
+**Current gate:** AI-21 transactional audit integration; AI-22 durable-store readiness remains pending.
+
+## Learning Layer extension — 2026-09-19
+The Intelligence Layer now has a dedicated learning/provenance foundation:
+- `research/BIUPIU-INTELLIGENCE-LEARNING-LAYER-v1.0.md`
+- `research/BIUPIU-INTELLIGENCE-LEARNING-SCHEMA-v1.0.json`
+- `software/rnd-os-ai/src/biupiu_ai/learning.py`
+- `software/rnd-os-ai/tests/test_learning.py`
+
+The learning layer records versioned lineage across research, experiments, models, datasets, repository changes and World systems. It preserves old/new knowledge rather than treating duplication or supersession as automatic deletion.
+
+### Blockchain checkpoint boundary
+Approved learning checkpoints can be anchored through `contracts/BiupiuLearningRegistry.sol`. Raw datasets, prompts, private model outputs, credentials and confidential IP remain off-chain. Blockchain anchoring is a commitment/integrity function, not model training or proof of scientific truth.
+
+### Core AI maintenance function
+The Intelligence Layer now treats bug fixes, code updates, technology updates, dependency/security audits, index synchronization, provenance checks and regression evidence as first-class learning events. Human approval remains required for durable promotion, deletion, public release, IP transitions and blockchain anchoring.
