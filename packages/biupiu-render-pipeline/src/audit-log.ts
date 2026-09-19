@@ -1,0 +1,2 @@
+export interface RecoveryAuditRecord { id:string; jobId:string; failureCode:string; classification:string; proposedAction:string; appliedAction?:string; approvedBy?:string; timestamp:string; outcome?:string; }
+export interface RecoveryAuditLog { append(record:RecoveryAuditRecord):Promise<void>; list(jobId?:string):Promise<RecoveryAuditRecord[]>; }
