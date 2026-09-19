@@ -1,0 +1,63 @@
+{
+  "package_id": "VISPKG-EXAMPLE-001",
+  "project_id": "BIUPIU-DEMO",
+  "source_model": {
+    "id": "MODEL-001",
+    "version": "v1.0",
+    "authoring": "Blender"
+  },
+  "asset_manifests": [
+    "EXAMPLE-MATERIAL-001"
+  ],
+  "scene": {
+    "units": "metric",
+    "coordinate_system": "project-defined",
+    "real_world_scale": true,
+    "camera_set": "CAM-v1",
+    "environment_set": "ENV-v1"
+  },
+  "targets": [
+    {
+      "renderer": "Lumion",
+      "enabled": true,
+      "profile": "presentation",
+      "output_formats": [
+        "PNG",
+        "MP4"
+      ]
+    },
+    {
+      "renderer": "Unreal Engine 5",
+      "enabled": true,
+      "profile": "interactive-digital-twin",
+      "output_formats": [
+        "UE project package",
+        "PNG",
+        "MP4"
+      ]
+    },
+    {
+      "renderer": "V-Ray",
+      "enabled": false,
+      "profile": "high-fidelity",
+      "output_formats": [
+        "PNG",
+        "EXR"
+      ]
+    },
+    {
+      "renderer": "Blender",
+      "enabled": true,
+      "profile": "conditioning-review",
+      "output_formats": [
+        "BLEND",
+        "PNG"
+      ]
+    }
+  ],
+  "provenance": {
+    "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+    "manifest_version": "1.0",
+    "notes": "Example only."
+  }
+}
