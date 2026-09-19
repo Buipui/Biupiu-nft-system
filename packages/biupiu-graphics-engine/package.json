@@ -1,0 +1,15 @@
+{
+  "name": "@biupiu/graphics-engine",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu graphics backend abstraction for DX12/Vulkan, glTF, PBR and ray-tracing experiments",
+  "platforms": [
+    "windows"
+  ],
+  "entry": "src/index.ts",
+  "references": [
+    "SaschaWillems/Vulkan",
+    "nvpro-samples/vk_gltf_renderer",
+    "haasn/libplacebo"
+  ]
+}
