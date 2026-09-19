@@ -1,0 +1,24 @@
+{
+  "matrix_id":"redkit_asset_build_matrix_v1",
+  "reference_only":true,
+  "source_projects":[
+    {"name":"REDkit","source":"CDPR official documentation","use":"world-building methodology"},
+    {"name":"WolvenKit-7","source":"GitHub/WolvenKit","use":"file-format/modding research"},
+    {"name":"Witcher3-Blender-Tools","source":"GitHub/dingdio","use":"Blender interoperability research"}
+  ],
+  "biupiu_targets":[
+    {"department":"WORLD","asset_class":"terrain","build":"procedural_native"},
+    {"department":"WORLD","asset_class":"vegetation","build":"procedural_native"},
+    {"department":"WORLD","asset_class":"architecture","build":"modular_native"},
+    {"department":"WORLD","asset_class":"lighting_weather","build":"parameterized_native"},
+    {"department":"WORLD","asset_class":"navigation","build":"metadata_native"},
+    {"department":"CG-3D","asset_class":"props","build":"procedural_or_original_mesh"},
+    {"department":"DIGITAL-TWIN","asset_class":"scene_manifest","build":"schema_native"}
+  ],
+  "prohibited": [
+    "copied_Witcher_3_assets",
+    "extracted_proprietary_textures",
+    "rehosted_game_files",
+    "unlicensed_character_or_audio_assets"
+  ]
+}
