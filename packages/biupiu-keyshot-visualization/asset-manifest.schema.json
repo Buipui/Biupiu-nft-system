@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Visual Asset Manifest",
+  "type":"object",
+  "required":["assetId","name","domain","source","geometry","materials","environment","validation"],
+  "properties":{
+    "assetId":{"type":"string","pattern":"^asset-[a-z0-9-]+$"},
+    "name":{"type":"string","minLength":1},
+    "domain":{"type":"string","enum":["automotive","marine","evtol-helicopter","microturbine","biocomposite","bio-resin-adhesive","textile-fibre","product","engineering","showreel"]},
+    "source":{"type":"object","required":["uri","format"],"properties":{"uri":{"type":"string"},"format":{"type":"string"},"sha256":{"type":["string","null"]}},"additionalProperties":false},
+    "geometry":{"type":"object","required":["status"],"properties":{"status":{"type":"string","enum":["validated","pending","failed"]},"units":{"type":["string","null"]},"scale":{"type":["number","null"]}},"additionalProperties":false},
+    "materials":{"type":"array","items":{"type":"object","required":["materialId","provenanceStatus"],"properties":{"materialId":{"type":"string"},"provenanceStatus":{"type":"string","enum":["verified","pending-review","reference-only","restricted"]}},"additionalProperties":false}}},
+    "environment":{"type":"string"},
+    "validation":{"type":"object","required":["status","checkedAt"],"properties":{"status":{"type":"string","enum":["passed","pending","failed"]},"checkedAt":{"type":"string"},"errors":{"type":"array","items":{"type":"string"}}},"additionalProperties":false}
+  },
+  "additionalProperties":false
+}
