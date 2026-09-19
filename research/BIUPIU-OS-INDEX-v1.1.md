@@ -61,3 +61,15 @@ Architecture is implemented in source/contracts. Native packaging, authenticated
 - CPU architecture metadata, page sizing, memory region types, mapping flags and allocation/mapping interfaces defined.
 - Alignment, zero-page and overflow checks included in contract helpers.
 - **Status: CONTRACT IMPLEMENTED; runtime/VM validation OPEN.**
+
+
+## OS-UNIX-HARVEST-01 — 19 September 2026
+- Unix/Unix-like and microkernel research harvest integrated.
+- Reference families: Unix/xv6, NetBSD, OpenBSD, seL4, MINIX, QNX, Redox.
+- Open textbook conceptual layer added for OS fundamentals.
+- Unix/POSIX concepts are compatibility/reference layers, not the definition of the Core OS.
+- Microkernel/service-isolation/capability concepts routed to Core OS architecture.
+- AI remains a bounded service layer and cannot bypass Core OS authority.
+- Implementation queue OS-G03 through OS-G13 added.
+- Checkpoint: `research/checkpoints/OS-UNIX-HARVEST-01.md`.
+- Runtime, VM/host and physical firmware validation remain OPEN until execution evidence exists.
