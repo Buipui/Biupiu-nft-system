@@ -1,0 +1,21 @@
+{
+  "job_id": "VIS-EXAMPLE-001",
+  "project_id": "BIUPIU-DEMO",
+  "asset_manifest_ids": [
+    "EXAMPLE-MATERIAL-001"
+  ],
+  "source_model_version": "MODEL-v1.0",
+  "authoring_application": "Blender",
+  "target_renderer": "Lumion",
+  "renderer_version": "record-at-execution",
+  "scene_version": "SCENE-v1.0",
+  "output_files": [
+    {
+      "path": "outputs/example-render.png",
+      "sha256": ""
+    }
+  ],
+  "created_at": "YYYY-MM-DDTHH:MM:SSZ",
+  "operator": "Biupiu",
+  "notes": "Example only."
+}
