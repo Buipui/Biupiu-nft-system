@@ -213,3 +213,22 @@ Existing MATH and physics/simulation engines are first-class system resources. T
 The system may innovate within the specification; it may not forget the specification. Simulated, desired or inferred state must never silently become observed physical state, and physical actuation remains subject to independent authority and safety gates.
 
 **Gate status:** Architecture integrated; implementation, conformance, security, hardware-in-the-loop and production validation remain separate gates.
+
+
+## 12. Instrumentation / Automation / Robotics / AI Integration
+
+Instrumentation is now a first-class OS/DMS subsystem input. Machine telemetry is normalised through the Machine Capability contract and associated with Digital Twin identity, mathematical/physics models and AI services.
+
+Protocol/adaptor research includes OPC UA, MQTT, Modbus, ROS/ROS 2 and vendor-specific industrial interfaces. Siemens and Fujitsu are research/benchmark sources; they do not define Biupiu OS.
+
+Foreign-language routing prioritises Italian and German technical material, especially industrial robotics, PLC/SPS, OPC UA, Industrie 4.0, instrumentation and mechatronics.
+
+Canonical records:
+- research/BIUPIU-INSTRUMENTATION-MACHINE-INTERFACE-RESEARCH-v1.0.md
+- research/BIUPIU-FOREIGN-LANGUAGE-AUTOMATION-ROBOTICS-REGISTER-v1.0.md
+- research/BIUPIU-INSTRUMENTATION-AUTOMATION-ROBOTICS-AI-GATE-v1.0.md
+
+Integration loop:
+INSTRUMENT -> CAPABILITY -> EDGE/PROTOCOL -> DIGITAL TWIN -> MATH/PHYSICS -> AI -> VALIDATION -> AUTHORISATION -> ACTUATION
+
+**Gate status:** Research and architecture integration complete; implementation, licence, security, simulation, hardware-in-loop and safety gates remain mandatory.
