@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu KeyShot Material Provenance",
+  "type":"object",
+  "required":["materialId","family","displayName","sourceType","license","redistributionAllowed","modificationAllowed","provenanceStatus"],
+  "properties":{
+    "materialId":{"type":"string","pattern":"^mat-[a-z0-9-]+$"},
+    "family":{"type":"string","enum":["automotive-paint-composite","marine-coating","aerospace-finish","microturbine-metal-thermal","hemp-fibre-composite","bio-resin-adhesive","textile-fibre","ceramic","glass","packaging-product"]},
+    "displayName":{"type":"string"},
+    "sourceType":{"type":"string","enum":["biupiu-generated","licensed-third-party","public-domain","reference-only"]},
+    "sourceUri":{"type":["string","null"]},
+    "authorVendor":{"type":["string","null"]},
+    "license":{"type":"string"},
+    "redistributionAllowed":{"type":"boolean"},
+    "modificationAllowed":{"type":"boolean"},
+    "acquisitionDate":{"type":["string","null"],"format":"date"},
+    "physicalProperties":{"type":"object","additionalProperties":true},
+    "visualProperties":{"type":"object","additionalProperties":true},
+    "textureRefs":{"type":"array","items":{"type":"object","required":["uri"],"properties":{"uri":{"type":"string"},"sha256":{"type":["string","null"]}},"additionalProperties":false}},
+    "compatibleRenderers":{"type":"array","items":{"type":"string"}},
+    "provenanceStatus":{"type":"string","enum":["verified","pending-review","reference-only","restricted"]},
+    "safetyLegalNotes":{"type":["string","null"]}
+  },
+  "allOf":[
+    {"if":{"properties":{"redistributionAllowed":{"const":true}}},"then":{"properties":{"license":{"minLength":1},"provenanceStatus":{"enum":["verified"]}}}},
+    {"if":{"properties":{"sourceType":{"const":"reference-only"}}},"then":{"properties":{"redistributionAllowed":{"const":false}}}}
+  ],
+  "additionalProperties":false
+}
