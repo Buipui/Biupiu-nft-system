@@ -1,0 +1,18 @@
+name: Biupiu Animation Gate 4 Validation
+on:
+  push:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate4-validation.yml"
+  pull_request:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate4-validation.yml"
+  workflow_dispatch:
+jobs:
+  static-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Run Gate 4 validator
+        run: python3 research/pipeline-tests/validate_animation_pipeline.py
