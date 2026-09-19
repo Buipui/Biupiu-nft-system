@@ -1,0 +1,9 @@
+{
+  "schema":"biupiu.adobe.premiere.uxp-job",
+  "version":"0.1.0",
+  "commands":["open_project","create_project","import_media","create_sequence","place_markers","attach_metadata","export"],
+  "required_inputs":["project_id","research_ids","asset_ids"],
+  "required_outputs":["export_path","output_sha256","provenance_record"],
+  "validation":["registered-assets-only","evidence-classification-required","licence-state-required","output-hash-required"],
+  "status":"adapter-contract-only"
+}
