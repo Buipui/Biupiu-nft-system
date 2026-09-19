@@ -1,0 +1,14 @@
+{
+  "manifest_id":"biupiu_main_hub_runtime_resources_v1",
+  "runtime":"babylonjs",
+  "package_version":"9.27.1",
+  "resources":[
+    {"id":"babylon_core","package":"@babylonjs/core","version":"9.27.1","role":"scene_engine"},
+    {"id":"babylon_loaders","package":"@babylonjs/loaders","version":"9.27.1","role":"glTF_asset_loading"}
+  ],
+  "canonical_scene":"world/environments/BIUPIU-MAIN-HUB-SCENE-v1.json",
+  "destination_policy":"world/environments/CAMPUS-DESTINATION-GATE-v1.json",
+  "source_of_truth":"repository_manifests",
+  "third_party_policy":"external_reference_until_license_security_compatibility_review",
+  "status":"prototype_runtime_manifest"
+}
