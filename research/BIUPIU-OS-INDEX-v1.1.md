@@ -31,3 +31,12 @@ Updated: 19 September 2026
 DISCOVER -> STATIC CHECK -> CONTRACT CHECK -> PLATFORM CHECK -> SECURITY/PROVENANCE CHECK -> TEST -> INDEX -> COMMIT -> RELEASE GATE
 
 Architecture is implemented in source/contracts. Native packaging, authenticated DMS transport, physical telemetry and production security remain runtime gates.
+
+
+## Simulator Core
+
+- OS-SIM-01/02/03 source-level simulator kernel registered under `packages/biupiu-bevy-adapter/`.
+- Bevy is an execution adapter; Core OS remains authoritative.
+- Digital Twin, physics, graphics, AI and domain systems route through versioned interfaces.
+- OS-SIM-04/05/06/07 remain implementation gates.
+- Rust CI workflow added; PASS is withheld until an actual workflow run succeeds.
