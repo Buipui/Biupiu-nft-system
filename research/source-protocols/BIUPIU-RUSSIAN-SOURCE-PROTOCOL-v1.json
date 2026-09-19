@@ -1,0 +1,56 @@
+{
+  "schema_version": "1.0",
+  "status": "active",
+  "purpose": "Permanent Russian-language research source routing for Biupiu Main research discovery.",
+  "language": "ru",
+  "sources": [
+    {
+      "id": "RU-OPENBOOKS",
+      "name": "ITMO OpenBooks",
+      "url": "https://openbooks.itmo.ru/",
+      "priority": "high",
+      "uses": ["robotics", "control", "simulation", "computer vision", "optics", "photonics", "algorithms", "optimization", "digital twins", "AI"],
+      "route_to": ["ROBOTICS", "AERO", "DIGITAL-TWIN", "COMPUTE", "AI", "PHOTONICS", "CG-3D", "ADV-MFG"],
+      "code_rule": "Search article title/keywords, then look for linked PDF, authors, datasets, implementation references and independently available code. Do not treat a paper as executable code."
+    },
+    {
+      "id": "RU-MATHNET",
+      "name": "Math-Net.Ru",
+      "url": "https://www.mathnet.ru/",
+      "priority": "high",
+      "uses": ["mathematics", "numerical methods", "optimization", "control", "simulation", "aerospace", "robotics"],
+      "route_to": ["COMPUTE", "AI", "ROBOTICS", "AERO", "DIGITAL-TWIN", "PHYS-SYS", "CG-3D"],
+      "code_rule": "Extract algorithms and numerical methods; search GitHub/CODEX for independent implementations; preserve theorem/model assumptions and validation limits."
+    },
+    {
+      "id": "RU-IPU-RAS",
+      "name": "Institute of Control Sciences RAS (IPU RAS)",
+      "url": "https://www.ipu.ru/",
+      "priority": "high",
+      "uses": ["control theory", "robotics", "cyber-physical systems", "task allocation", "optimization", "AI", "technical diagnostics"],
+      "route_to": ["ROBOTICS", "AI", "COMPUTE", "DIGITAL-TWIN", "ADV-MFG", "AERO", "ENERGY"],
+      "code_rule": "Search laboratory publications and technical reports for algorithms, simulation tools and control models; independently verify implementations before integration."
+    },
+    {
+      "id": "MEDSOC-BSA-MSO",
+      "name": "MedSoc / Medical Sociology Online (BSA Medical Sociology Group)",
+      "url": "https://www.medicalsociologyonline.org/",
+      "priority": "medium",
+      "uses": ["medical sociology", "health systems", "digital health", "health inequality", "medical anthropology", "social determinants"],
+      "route_to": ["BIOMED", "BIO", "AI", "DIGITAL-TWIN", "HUMAN-SYSTEMS"],
+      "code_rule": "Use for social/health-system context and human factors. Do not convert sociological findings into biomedical efficacy claims. Search for cited datasets, methods and open supplementary material where available."
+    }
+  ],
+  "global_search_rules": [
+    "Search original Russian terminology plus English technical equivalents.",
+    "Prefer primary institutional publications and stable full-text records.",
+    "Translate before synthesis but preserve the original Russian title and source metadata.",
+    "Separate publication evidence from executable code.",
+    "For code, record repository URL, commit/tag, licence, dependencies and provenance.",
+    "For algorithms, reproduce assumptions and validation conditions before reuse.",
+    "Never silently replace an earlier implementation; version new adaptations.",
+    "Route computationally testable findings into a CODEX queue.",
+    "Run provenance/licence/security checks before importing third-party code.",
+    "Do not treat publication presence as proof that a method is validated for Biupiu use."
+  ]
+}
