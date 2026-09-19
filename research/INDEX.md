@@ -4,7 +4,7 @@
 
 Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
 
-**Version:** 3.6
+**Version:** 3.7
 **Updated:** 19 September 2026
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -145,3 +145,20 @@ Registered 19 September 2026:
 The layers remain integrated through explicit interfaces. AI cannot bypass OS validation, provenance or authoritative state controls.
 
 **SEPARATION-01 status: EXECUTED — architecture separation registered and repository index synchronized.**
+
+## Biupiu Intelligence Learning + Blockchain Core — INTEL-LEARN-01
+
+Added the Intelligence learning/provenance foundation:
+- `research/BIUPIU-INTELLIGENCE-LEARNING-LAYER-v1.0.md` — persistent learning-loop and knowledge-retention rules.
+- `research/BIUPIU-INTELLIGENCE-LEARNING-SCHEMA-v1.0.json` — machine-readable learning record contract.
+- `software/rnd-os-ai/src/biupiu_ai/learning.py` — deterministic learning-record hashing and verification primitives.
+- `software/rnd-os-ai/tests/test_learning.py` — deterministic integrity and tamper-detection tests.
+- `contracts/BiupiuLearningRegistry.sol` — optional on-chain checkpoint registry for approved learning lineage commitments.
+
+### Core maintenance integration
+Bug fixes, code updates, technology/dependency updates, security/configuration audits, index repairs, regression evidence and repository changes are now explicitly represented as learning events. Historical/experimental material remains preservable; duplicate-looking content is not automatically deleted.
+
+### Blockchain boundary
+Learning data remains off-chain by default. Only approved cryptographic checkpoints/commitments may be anchored on-chain. No private keys, prompts, raw datasets, confidential IP or model payloads are placed on-chain. The registry is not a claim of an independent Biupiu Layer-1.
+
+**INTEL-LEARN-01 status: IMPLEMENTED — learning schema, deterministic provenance primitive, regression tests, AI architecture integration and blockchain checkpoint contract added. Live AI-provider execution, local model training and blockchain deployment remain environment-validation gates.**
