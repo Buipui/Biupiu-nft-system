@@ -372,3 +372,8 @@ Added `src/interchange.ts`, a canonical test fixture and `tests/red-05.interchan
 ## Lumion LUM-04 — automated validation + visualization provenance
 
 Added `research/visual-assets/validate_visual_asset.py`, `VISUALIZATION-JOB-PROVENANCE-v1.0.md`, and an example visualization-job record. The pipeline now defines a licence/provenance validation gate and records source model, renderer/version, scene version, output hashes and Digital Twin/project lineage for renders and videos. JSON Schema 2020-12 is the manifest validation basis. glTF/PBR remains the interoperability reference for portable real-time material description. **LUM-04 executed.**
+
+
+## RED-06 — Asset conversion and material translation
+
+Added `packages/biupiu-render-pipeline/src/conversion.ts`, a provider-neutral conversion report contract that explicitly distinguishes READY, LOSSY, BLOCKED and FAILED conversions. Unsupported material features must be reported with a loss reason/fallback rather than silently dropped. Added the RED-06 fixture and automated invariants test, and exposed the conversion contract through the render-pipeline package and module contract. **RED-06 status:** repository conversion/loss-reporting architecture implemented; actual provider conversion and visual-equivalence acceptance remain gated on connected renderer hosts and measured round-trip results.
