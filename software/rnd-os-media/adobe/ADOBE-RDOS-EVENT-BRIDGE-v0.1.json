@@ -1,0 +1,18 @@
+{
+  "schema":"biupiu.adobe.rdos-event-bridge",
+  "version":"0.1.0",
+  "event_types":[
+    "media.job.created",
+    "media.job.validated",
+    "media.job.started",
+    "media.job.completed",
+    "media.job.failed",
+    "media.job.cancelled",
+    "media.asset.registered",
+    "media.export.verified"
+  ],
+  "required_event_fields":["event_id","event_type","job_id","project_id","timestamp","source_commit","payload"],
+  "completion_requirements":["output_sha256","provenance_record","licence_state","evidence_classification"],
+  "failure_policy":"failed_or_cancelled_jobs_are_auditable_and_not_releasable",
+  "execution_mode":"adapter-event-contract-only"
+}
