@@ -1,0 +1,26 @@
+{
+  "schema":"BIUPIU-ML-OPENBOOK-GITHUB-RESOURCE-MANIFEST-v1.0",
+  "date":"2026-09-19",
+  "reuse_rule":"reference-first; individual licence, provenance, security and compatibility review before import",
+  "resources":[
+    {"id":"SKLEARN","repo":"https://github.com/scikit-learn/scikit-learn","license":"BSD-3-Clause","role":"classical_ml"},
+    {"id":"XGBOOST","repo":"https://github.com/dmlc/xgboost","license":"Apache-2.0","role":"gradient_boosting"},
+    {"id":"LIGHTGBM","repo":"https://github.com/lightgbm-org/LightGBM","license":"MIT","role":"gradient_boosting"},
+    {"id":"RIVER","repo":"https://github.com/online-ml/river","license":"BSD-3-Clause","role":"online_ml"},
+    {"id":"TORCHRL","repo":"https://github.com/pytorch/rl","license":"MIT","role":"reinforcement_learning"},
+    {"id":"TRANSFORMERS","repo":"https://github.com/huggingface/transformers","license":"Apache-2.0","role":"multilingual_nlp"},
+    {"id":"FAISS","repo":"https://github.com/facebookresearch/faiss","license":"MIT","role":"vector_retrieval"},
+    {"id":"OPTUNA","repo":"https://github.com/optuna/optuna","license":"MIT","role":"optimization"},
+    {"id":"ONNX","repo":"https://github.com/onnx/onnx","license":"Apache-2.0","role":"model_interchange"},
+    {"id":"ONNXRUNTIME","repo":"https://github.com/microsoft/onnxruntime","license":"MIT","role":"edge_inference"},
+    {"id":"MLFLOW","repo":"https://github.com/mlflow/mlflow","license":"Apache-2.0","role":"model_registry"},
+    {"id":"OPACUS","repo":"https://github.com/meta-pytorch/opacus","license":"Apache-2.0","role":"differential_privacy"},
+    {"id":"PYSYFT","repo":"https://github.com/OpenMined/PySyft","license":"Apache-2.0","role":"federated_privacy_research"},
+    {"id":"GYMNASIUM","repo":"https://github.com/Farama-Foundation/Gymnasium","license":"MIT","role":"rl_environment"}
+  ],
+  "open_book_references":[
+    {"id":"HARVARD-CS249R","source":"https://github.com/harvard-edge/cs249r_book","role":"ml_systems_education"},
+    {"id":"MIT-OCW-6.036","source":"https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/","role":"ml_education"},
+    {"id":"MIT-OCW-6.7960","source":"https://ocw.mit.edu/courses/6-7960-deep-learning-fall-2024/","role":"deep_learning_education"}
+  ]
+}

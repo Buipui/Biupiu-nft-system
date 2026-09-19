@@ -1,0 +1,25 @@
+name: Biupiu ML subsystem validation
+
+on:
+  push:
+    paths:
+      - 'software/rnd-os-ai/src/biupiu_ai/ml/**'
+      - 'software/rnd-os-ai/tests/test_ml_subsystem.py'
+      - 'software/rnd-os-ai/ML-SUBSYSTEM-FOUNDATION-v1.0.md'
+  pull_request:
+    paths:
+      - 'software/rnd-os-ai/src/biupiu_ai/ml/**'
+      - 'software/rnd-os-ai/tests/test_ml_subsystem.py'
+
+jobs:
+  ml-foundation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: '3.12'
+      - name: Run ML subsystem tests
+        working-directory: software/rnd-os-ai
+        run: |
+          PYTHONPATH=src python -m pytest tests/test_ml_subsystem.py
