@@ -318,3 +318,15 @@ Added 19 September 2026:
 - `research/BIUPIU-FARM-SIM-VALIDATION-GATE-v1.0.md` — G1–G7 validation framework from resource identity/licence through Digital Twin and World promotion.
 
 **FARM-SIM-02 status: ARCHITECTURE EXECUTED.** Runtime-connected validation remains open because no connected Farming Simulator host/telemetry endpoint was executed in this gate.
+
+
+## MARINE-SIM-02 — Virtual Boatyard / Sea-Test Adapter Contract
+
+Added 19 September 2026:
+- `research/BIUPIU-MARINE-SIM-02-BOATYARD-SEATEST-ADAPTER-CONTRACT-v1.0.md` — adapter-first contract for vessel models, ocean/waves, hydrodynamics, sensors, workshop state, deterministic sea tests and Digital Twin provenance.
+- Virtual boatyard zones: CAD review, dry dock/slipway, fabrication, composites, propulsion, electrical/automation, finishing, crane/lift, QA and launch/recovery.
+- Virtual sea-test zones: harbour, coastal, deep-water, wave/current/wind matrices, maneuvering, propulsion endurance, sensor/autonomy proving and recovery scenarios.
+
+The contract explicitly separates third-party references from Biupiu-owned implementation and requires model/environment/scenario/configuration/telemetry provenance for accepted simulation results.
+
+**MARINE-SIM-02 status: EXECUTED — adapter contract and virtual boatyard/sea-test architecture registered and verified in repository. Runtime host compilation, solver calibration and physical validation remain open gates.**
