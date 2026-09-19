@@ -1,0 +1,12 @@
+{
+  "schema": "biupiu.world.shared-asset-contract",
+  "version": "1.0",
+  "canonical_layer": "world",
+  "principle": "Biupiu World is the canonical shared location for reusable visual/world assets and environment contracts.",
+  "shared_domains": ["terrain","world-building","lighting","time-of-day","weather","atmosphere","water","vegetation","materials","shaders","sky","roads","buildings","common-props","scene-metadata"],
+  "department_consumers": ["AUTO","MARINE","AERO","ROBOTICS","AGRICULTURE","ADV_MFG","AI","DIGITAL_TWIN"],
+  "department_owns": ["domain-physics","domain-sensors","domain-controllers","domain-specific-models","domain-test-scenarios","domain-validation"],
+  "asset_states": ["discovered","licence-reviewed","compatible","world-candidate","department-candidate","approved","deprecated"],
+  "required_metadata": ["source_url","source_repository","source_commit_or_release","licence","creator_or_maintainer","provenance_status","modification_status","target_engine","target_department","validation_status"],
+  "promotion_rule": "No external asset becomes a Biupiu-owned asset without provenance and licence review."
+}
