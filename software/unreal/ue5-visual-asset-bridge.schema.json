@@ -6,7 +6,19 @@
   "required": ["asset_id", "visual_manifest", "ue5"],
   "properties": {
     "asset_id": {"type":"string"},
-    "visual_manifest": {"type":"string"},
+    "visual_manifest": {
+      "type":"object",
+      "required":["asset_id","asset_type","source","licence","files","provenance","pipeline"],
+      "properties": {
+        "asset_id":{"type":"string"},
+        "asset_type":{"type":"string"},
+        "source":{"type":"object"},
+        "licence":{"type":"object","required":["status"]},
+        "files":{"type":"array"},
+        "provenance":{"type":"object","required":["acquired_at","transformation_log"]},
+        "pipeline":{"type":"object","required":["authoring","targets"]}
+      }
+    },
     "ue5": {
       "type":"object",
       "required":["project","asset_path","engine_major"],
