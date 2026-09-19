@@ -1,0 +1,97 @@
+{
+  "schema_version": "1.0",
+  "updated": "2026-09-19",
+  "scope": "graphics-physics-upscaling",
+  "dependencies": [
+    {
+      "id": "jolt",
+      "repo": "https://github.com/jrouwe/JoltPhysics",
+      "version": "5.6.0",
+      "role": "physics",
+      "status": "candidate-primary",
+      "license": "MIT"
+    },
+    {
+      "id": "jolt-js",
+      "repo": "https://github.com/jrouwe/JoltPhysics.js",
+      "version": "1.1.0",
+      "role": "physics-web",
+      "status": "reference",
+      "license": "MIT"
+    },
+    {
+      "id": "physx",
+      "repo": "https://github.com/NVIDIA-Omniverse/PhysX",
+      "version": "5.x",
+      "role": "physics-alternate",
+      "status": "reference",
+      "license": "BSD-3-Clause"
+    },
+    {
+      "id": "bullet",
+      "repo": "https://github.com/bulletphysics/bullet3",
+      "version": "3.2.5",
+      "role": "robotics-validation",
+      "status": "reference"
+    },
+    {
+      "id": "vulkan",
+      "repo": "https://github.com/SaschaWillems/Vulkan",
+      "version": "main",
+      "role": "graphics-reference",
+      "status": "reference"
+    },
+    {
+      "id": "vk-gltf",
+      "repo": "https://github.com/nvpro-samples/vk_gltf_renderer",
+      "version": "master",
+      "role": "graphics-gltf",
+      "status": "reference"
+    },
+    {
+      "id": "libplacebo",
+      "repo": "https://github.com/haasn/libplacebo",
+      "version": "main",
+      "role": "scaling-hdr-shaders",
+      "status": "reference",
+      "license": "LGPL-2.1-or-later"
+    },
+    {
+      "id": "fidelityfx",
+      "repo": "https://github.com/GPUOpen-LibrariesAndSDKs/FidelityFX-SDK",
+      "version": "2.3.0",
+      "role": "upscaling-frame-generation",
+      "status": "candidate-primary"
+    },
+    {
+      "id": "xess",
+      "repo": "https://github.com/intel/xess",
+      "version": "3.0.1",
+      "role": "upscaling-frame-generation-low-latency",
+      "status": "candidate-primary"
+    },
+    {
+      "id": "optiscaler",
+      "repo": "https://github.com/optiscaler/OptiScaler",
+      "version": "0.9.x",
+      "role": "interoperability-research",
+      "status": "research-only",
+      "license": "GPL-3.0"
+    },
+    {
+      "id": "webgpu-upscaler",
+      "repo": "https://github.com/pmndrs/upscaler",
+      "version": "main",
+      "role": "webgpu-upscaling",
+      "status": "reference"
+    },
+    {
+      "id": "open-supersampling",
+      "repo": "https://github.com/cashcon57/open-supersampling",
+      "version": "main",
+      "role": "experimental-super-resolution",
+      "status": "research-only",
+      "license": "Apache-2.0"
+    }
+  ]
+}
