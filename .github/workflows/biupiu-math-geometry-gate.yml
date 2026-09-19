@@ -1,18 +1,12 @@
 name: Biupiu Math Geometry Gate
-
 on:
-  push:
-    paths:
-      - "codex/math/**"
-      - "codex/geometry/**"
-      - "research/BIUPIU-MATH-**"
-  pull_request:
-    paths:
-      - "codex/math/**"
-      - "codex/geometry/**"
-      - "research/BIUPIU-MATH-**"
   workflow_dispatch:
-
+  push:
+    branches: [main]
+    paths:
+      - "codex/math/**"
+      - "codex/geometry/**"
+      - ".github/workflows/biupiu-math-geometry-gate.yml"
 jobs:
   test:
     runs-on: ubuntu-latest
@@ -21,10 +15,11 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Compile core Python
+      - name: Compile
         run: python -m compileall -q codex/math codex/geometry
-      - name: Run dependency-light tests
+      - name: Install test runner
+        run: python -m pip install pytest
+      - name: Test dependency-light math and geometry
         env:
           PYTHONPATH: .
-        run: |
-          python -m pytest -q codex/geometry/tests codex/math/tests
+        run: python -m pytest -q codex/geometry/tests codex/math/tests
