@@ -1,0 +1,13 @@
+{
+  "asset_set":"biupiu_main_hub_native_v1",
+  "source_method":"REDkit/WolvenKit research only",
+  "assets":[
+    {"id":"hub_arrival_obelisk","type":"architectural_prop","geometry":"stacked_parametric_prisms","material":"metal_stone_hybrid","lod":["high","mid","low"]},
+    {"id":"civilisation_library_kiosk","type":"interactive_prop","geometry":"modular_pavilion","material":"glass_metal_stone","interaction":"open_library"},
+    {"id":"farming_gate_arch","type":"gate","geometry":"twin_pillars_and_beam","material":"stone_bio_composite","route":"farming_world"},
+    {"id":"metallurgy_gate_arch","type":"gate","geometry":"twin_pillars_and_beam","material":"forged_metal_stone","route":"metal_making_world"},
+    {"id":"world_map_table","type":"interactive_prop","geometry":"circular_table","material":"glass_metal","interaction":"open_world_map"},
+    {"id":"research_marker","type":"marker","geometry":"low_profile_cylinder","material":"biupiu_metal","interaction":"show_provenance"}
+  ],
+  "original_asset_rule":true
+}
