@@ -1,0 +1,15 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Render Review Record",
+  "type":"object",
+  "required":["package_id","shot_id","render_status","asset_review","provenance_review","evidence_review","release_gate"],
+  "properties":{
+    "package_id":{"type":"string"},
+    "shot_id":{"type":"string"},
+    "render_status":{"enum":["SCAFFOLD","TEST_RENDER","REVIEW_RENDER","FINAL_RENDER"]},
+    "asset_review":{"enum":["PENDING","PASSED","FAILED"]},
+    "provenance_review":{"enum":["PENDING","PASSED","FAILED"]},
+    "evidence_review":{"enum":["PENDING","PASSED","FAILED"]},
+    "release_gate":{"enum":["HOLD","READY_FOR_REVIEW","APPROVED_FOR_RELEASE"]}
+  }
+}
