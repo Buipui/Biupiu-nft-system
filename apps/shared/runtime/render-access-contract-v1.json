@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.access.v1","server_authoritative":true,"default":"deny","override":"RENDER:ALL","capabilities":["PRODUCT_STILL","DIGITAL_TWIN","CINEMATIC_SHOWREEL","CONCEPT_VARIATION","RESEARCH_VISUALIZATION"],"client_behavior":"display-only; never authoritative"}
