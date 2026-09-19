@@ -1,6 +1,6 @@
 # BIUPIU SOURCE → DEPARTMENT CROSSWALK
 
-**Version:** 1.0  
+**Version:** 1.1  
 **Date:** 15 September 2026  
 **Status:** Active
 
@@ -123,3 +123,19 @@ MATH supports GEOMETRY, COMPUTE, AI, ROBOTICS, DIGITAL-TWIN and specialist scien
 `MATH → COMPUTE → GEOMETRY → AI → ROBOTICS → DIGITAL-TWIN → EXPERIMENT → LEARNING`
 
 Third-party code remains external until licence, provenance, security, dependency, compatibility and regression gates pass.
+
+
+## 2026 mathematics and solver research layer
+
+The MATH routing layer now cross-links multilingual mathematics research with public engineering research from NASA/DARPA and open-source implementations. Current targets include AI-assisted theorem decomposition/autoformalization, semantic theorem retrieval, geometry theorem proving, multi-fidelity optimisation under uncertainty, control optimisation and algorithm discovery.
+
+`DARPA expMath → theorem/lemma decomposition`
+`DARPA DIAL/SPEED DIAL → algorithm discovery`
+`NASA Copernicus → trajectory optimisation`
+`NASA multi-fidelity UQ → surrogate/high-fidelity optimisation`
+`Math-Net.Ru + OpenBooks → mathematical research`
+`AlphaGeometry2 → geometry theorem proving`
+`OR-Tools → combinatorial/constraint optimisation`
+`J-STAGE → multilingual robotics/optimisation research`
+
+Research is retained with evidence status; papers/solver outputs are not promoted to Biupiu theorems without proof or verification.

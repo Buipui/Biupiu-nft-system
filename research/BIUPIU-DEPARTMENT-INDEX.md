@@ -1,6 +1,6 @@
 # BIUPIU MASTER DEPARTMENT INDEX
 
-**Version:** 2.2  
+**Version:** 2.3  
 **Date:** 19 September 2026  
 **Status:** Active — integrated Biupiu R&D / computational-art / IP architecture
 
@@ -34,7 +34,7 @@ The repository remains a personal R&D/IP and computational-art environment. The 
 | AERO | Aerospace, Aerodynamics & Lightweight Mobility | public-source aerospace geometry, aerodynamics, cooling, lightweight structures |
 | MARINE | Marine & Hydrodynamic Engineering | propellers, pumpjets, hydrofoils, hulls, marine turbines |
 | COMPUTE | CODEX Computational Engineering | Python, algorithms, simulation, data engineering, reproducible research code |
-| MATH | Mathematics & Mathematical R&D | symbolic mathematics, numerical methods, optimisation, dynamics, probability, statistics, geometry and mathematical validation |
+| MATH | Mathematics & Mathematical R&D | symbolic mathematics, numerical methods, optimisation, dynamics, probability, statistics, geometry, theorem retrieval/proving and mathematical validation |
 | AI | Artificial Intelligence & ML | AI/ML, surrogate models, optimisation, generative engineering |
 | GEOMETRY | Computational Geometry & Optimisation | parametric geometry, topology, CAD, geometry reconstruction and optimisation |
 | DIGITAL-TWIN | Digital Twin & Simulation Integration | physical systems ↔ sensors ↔ models ↔ optimisation |
@@ -158,3 +158,10 @@ Each department should maintain, where applicable:
 ## Status
 
 **Master department architecture upgraded to v2.2.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.
+
+
+### MATH Problem-Solving System
+
+The Mathematics Division now provides a repository-wide solver/orchestration layer for theorem retrieval, symbolic/numerical solving, optimisation, geometry proving, uncertainty analysis and digital-twin calibration. Engineering departments route quantitative problems through MATH before simulation/physical validation where appropriate.
+
+`PROBLEM → CLASSIFY → RETRIEVE → DECOMPOSE → SOLVE → VERIFY → SIMULATE → SENSITIVITY → DIGITAL-TWIN → VALIDATE → RECORD`
