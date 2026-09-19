@@ -171,3 +171,11 @@ As of 19 September 2026, the original R&D OS v1.0 implementation is the **Core O
 The system remains integrated through explicit OS interfaces: **AI -> OS validation/audit -> authoritative state**. AI is optional to core OS operation and does not directly bypass authoritative OS controls.
 
 Canonical architecture: `research/BIUPIU-OS-AI-SEPARATION-ARCHITECTURE-v1.0.md`.
+
+## Mathematics / Problem-Solving Layer
+
+As of 19 September 2026, the repository includes a dedicated MATH verification-oriented layer for problem classification, deterministic invariant checking, numerical residual validation and future formal theorem-proving adapters.
+
+Pipeline: PROBLEM -> CLASSIFY -> RETRIEVE -> DECOMPOSE -> SOLVE -> VERIFY -> SIMULATE -> SENSITIVITY -> DIGITAL-TWIN -> VALIDATE -> RECORD.
+
+The layer is integrated with Biupiu Intelligence and routed to COMPUTE, GEOMETRY, ROBOTICS, DIGITAL-TWIN and domain engineering departments. External theorem-proving projects remain references/dependencies pending licence, security and compatibility review.
