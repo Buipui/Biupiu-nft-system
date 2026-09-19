@@ -102,3 +102,20 @@ The repository remains the authoritative engineering archive. Specifications, so
 **SEPARATION-01: EXECUTED — Biupiu OS core and Biupiu AI are formally separated at the architecture boundary while remaining integrated through versioned interfaces.**
 
 Live production deployment remains subject to the existing testing, security, persistence and platform-build gates.
+
+
+## Simulator authority extension — OS-SIM
+
+The simulator kernel is a Core OS capability, not an AI capability.
+
+Canonical direction:
+
+`AI proposal -> OS simulation interface -> validation/audit -> simulation state -> Digital Twin/provenance`
+
+Engine direction:
+
+`Core OS simulation state -> Bevy/Unreal/Godot/other adapters`
+
+AI may propose scenarios, parameters, experiments or analysis, but the authoritative simulation lifecycle and durable state remain under OS contracts.
+
+The simulator gate therefore extends the existing separation invariant without changing OS/AI ownership.
