@@ -1,6 +1,6 @@
 # BIUPIU MASTER DEPARTMENT INDEX
 
-**Version:** 2.3  
+**Version:** 2.4  
 **Date:** 19 September 2026  
 **Status:** Active — integrated Biupiu R&D / computational-art / IP architecture
 
@@ -157,7 +157,7 @@ Each department should maintain, where applicable:
 
 ## Status
 
-**Master department architecture upgraded to v2.2.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.
+**Master department architecture upgraded to v2.4.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.
 
 
 ### MATH Problem-Solving System
@@ -165,3 +165,10 @@ Each department should maintain, where applicable:
 The Mathematics Division now provides a repository-wide solver/orchestration layer for theorem retrieval, symbolic/numerical solving, optimisation, geometry proving, uncertainty analysis and digital-twin calibration. Engineering departments route quantitative problems through MATH before simulation/physical validation where appropriate.
 
 `PROBLEM → CLASSIFY → RETRIEVE → DECOMPOSE → SOLVE → VERIFY → SIMULATE → SENSITIVITY → DIGITAL-TWIN → VALIDATE → RECORD`
+
+
+### Gate 2.4 — MATH/Geometry validation
+
+Exterminate review completed for the recent MATH, computational-geometry, AI, robotics and digital-twin adapters. Automated compilation/test workflow added. External dependencies remain isolated until actual CI and simulation validation succeed.
+
+`EXTERMINATE → COMPILE → UNIT TEST → INTEGRATION TEST → SIMULATION → VALIDATION → PROMOTION`
