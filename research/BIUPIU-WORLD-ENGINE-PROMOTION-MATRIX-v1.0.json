@@ -1,0 +1,18 @@
+{
+  "id":"WORLD-ENGINE-PROMOTION-01",
+  "version":"1.0",
+  "date":"2026-09-19",
+  "status":"registered",
+  "flow":["research","intelligence","ai_os","main_os","digital_twin","departments"],
+  "classifications":{
+    "reference":"knowledge_only",
+    "pattern":"independent_implementation_required",
+    "adapter":"biupiu_authored_test_required",
+    "asset":"provenance_and_validation_required",
+    "dependency":"licence_security_version_validation_required",
+    "prohibited":"blocked"
+  },
+  "department_routes":["CG-3D","RENDER","PHYS-SYS","NAVIGATION","ROBOTICS","AI","COMPUTE","AERO","MARINE","ADV-MFG","MATERIALS","AGRI","WATER","PHOTONICS","VIDEO-SERIES"],
+  "promotion_gate":["source_identity","licence_ip","security","compatibility","deterministic_tests","provenance","human_release_authority"],
+  "digital_twin_rule":"Only approved Main OS release manifests may enter the Digital Twin."
+}
