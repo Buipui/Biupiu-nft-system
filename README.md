@@ -156,3 +156,12 @@ The repository now defines two Blender engine paths: the official Blender upstre
 Current reusable research integration is indexed in `research/BIUPIU-AI-BLOCKCHAIN-ALGORITHM-INTEGRATION-v1.0.md` and `research/BIUPIU-AI-BLOCKCHAIN-RESOURCE-MANIFEST-v1.0.json`. The architecture connects persistent AI memory, agent orchestration, hard constraints, Digital Twin simulation, verifiable computation, blockchain provenance and controlled agent transactions across the relevant R&D streams.
 
 Third-party projects remain external references until licence, dependency, security and validation gates are passed. No external code is represented as Biupiu-owned code merely by being indexed.
+
+
+## Biupiu OS / Biupiu AI separation
+
+As of 19 September 2026, the original R&D OS v1.0 implementation is the **Core OS Baseline**. Biupiu AI is a separate modular intelligence layer under `software/rnd-os-ai/`.
+
+The system remains integrated through explicit OS interfaces: **AI -> OS validation/audit -> authoritative state**. AI is optional to core OS operation and does not directly bypass authoritative OS controls.
+
+Canonical architecture: `research/BIUPIU-OS-AI-SEPARATION-ARCHITECTURE-v1.0.md`.
