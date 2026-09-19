@@ -1,0 +1,31 @@
+name: Biupiu Department Navigation
+
+on:
+  push:
+    paths:
+      - "apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt"
+      - "apps/windows/MainWindow.xaml"
+      - "apps/windows/MainWindow.xaml.cs"
+      - "apps/windows/DepartmentModuleRegistry.cs"
+      - "apps/shared/runtime/DEPARTMENT-NAVIGATION-v1.md"
+  pull_request:
+    paths:
+      - "apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt"
+      - "apps/windows/MainWindow.xaml"
+      - "apps/windows/MainWindow.xaml.cs"
+      - "apps/windows/DepartmentModuleRegistry.cs"
+
+jobs:
+  navigation-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify native navigation bindings
+        run: |
+          grep -q 'DepartmentModuleRegistry.resolve' apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
+          grep -q 'SmartFarmingActivity' apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
+          grep -q 'new DepartmentModuleWindow' apps/windows/MainWindow.xaml.cs
+          grep -q 'DepartmentModuleRegistry.Resolve' apps/windows/MainWindow.xaml.cs
+          grep -q 'RND_OS_HOME' apps/windows/DepartmentModuleRegistry.cs
