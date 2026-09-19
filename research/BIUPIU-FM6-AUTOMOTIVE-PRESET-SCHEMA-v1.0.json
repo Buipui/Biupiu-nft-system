@@ -1,0 +1,16 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"biupiu-fm6-automotive-preset-schema-v1.0.json",
+  "title":"Biupiu Automotive Rendering Preset",
+  "type":"object",
+  "required":["preset_id","reference_state","lod","material","camera","lighting","targets"],
+  "properties":{
+    "preset_id":{"type":"string"},
+    "reference_state":{"const":"FM6-REFERENCE-ONLY"},
+    "lod":{"type":"object","required":["policy","levels"],"properties":{"policy":{"enum":["NANITE_OR_ENGINE_LOD","CLASSIC_LOD","HYBRID"]},"levels":{"type":"array","items":{"type":"object","required":["name","screen_percentage"],"properties":{"name":{"type":"string"},"screen_percentage":{"type":"number","minimum":0,"maximum":100},"purpose":{"type":"string"}}}}}},
+    "material":{"type":"object","required":["model","clearcoat","metallic","roughness"],"properties":{"model":{"enum":["PBR","LAYERED_PBR"]},"clearcoat":{"type":"number","minimum":0,"maximum":1},"metallic":{"type":"number","minimum":0,"maximum":1},"roughness":{"type":"number","minimum":0,"maximum":1},"flake_layer":{"type":"boolean"},"normal_tangent_validation":{"type":"boolean"}}},
+    "camera":{"type":"object","required":["framing","lens_mm"],"properties":{"framing":{"enum":["STUDIO_THREE_QUARTER","SIDE_PROFILE","FRONT_THREE_QUARTER","REAR_THREE_QUARTER","ROAD_CINEMATIC"]},"lens_mm":{"type":"number","exclusiveMinimum":0}}},
+    "lighting":{"type":"object","required":["environment","reflection_priority"],"properties":{"environment":{"enum":["STUDIO","DAY_ROAD","NIGHT_ROAD","RAIN_ROAD","SUNSET"]},"reflection_priority":{"enum":["LOW","MEDIUM","HIGH"]},"wet_surface_support":{"type":"boolean"}}},
+    "targets":{"type":"array","items":{"type":"string"},"minItems":1}
+  }
+}
