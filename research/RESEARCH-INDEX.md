@@ -297,3 +297,18 @@ Historical aircraft records are treated as established only where supported by o
 
 
 **Version:** Biupiu NFT Research Index v0.8 — Global Multilingual Intelligence Expansion — September 2026
+
+
+## Automotive Real-World Research Harvest — 20 September 2026
+
+**Primary harvest:** `research/BIUPIU-AUTOMOTIVE-REAL-WORLD-RESEARCH-HARVEST-v1.0.md`
+
+The automotive harvest cross-links real-world engineering research to the Biupiu AeroBlade GT / AeroBrake / materials / energy concepts. Evidence was identified for active aerodynamic braking, active diffusers, rear air-jet flow control, air-cushion/ground-effect vehicle physics, hemp automotive composites, hemp-derived supercapacitor carbon, and recuperated microturbine EV range extenders. External results are prior-art/engineering evidence only and do not validate Biupiu-specific designs.
+
+**Routing:** AERO → BRAKES → FLOW CONTROL → GROUND EFFECT → MATERIALS/HEMP → HEMPCARBON → ENERGY/MICROTURBINE → DIGITAL-TWIN.
+
+**Evidence discipline:** Biupiu-specific geometries, performance figures, materials stacks and integrated vehicle claims remain concept/research until independent testing. Published percentages and performance figures remain attributed to their source studies.
+
+**New validation queue:** AeroBrake transient CFD; active diffuser sweep; rear air-jet optimisation; combined aero-control study; air-cushion feasibility; hemp/carbon composite matrix; HempCarbon cell replication; microturbine cycle-model validation; vehicle energy-management simulation; rotating composite-blade testing; thermal-management CFD; integrated digital-twin evidence chain.
+
+**Version:** Biupiu NFT Research Index v0.9 — Automotive Real-World Research Harvest — September 2026
