@@ -16,3 +16,11 @@ The AI core is provider-agnostic. The application supplies structured R&D contex
 
 ## Gate AI-01
 This directory currently defines the implementation boundary. Provider credentials, production model selection and production deployment are intentionally not hard-coded.
+
+## SELF-HEAL-01 — Intelligence Integration Contract
+
+Biupiu AI includes a bounded failure-learning/self-healing controller linked to the existing learning/provenance layer. It may identify failures, select approved remediation rules, run repairs through an injected host executor, verify results and record outcomes.
+
+The controller cannot grant itself new privileges, bypass protected-file checks, omit required regression tests for code patches, or promote production changes without the OS approval boundary.
+
+SELF-HEAL-01: IMPLEMENTED — feature branch pending mainline verification.
