@@ -1,0 +1,59 @@
+{
+  "schema_version": "1.0",
+  "date": "2026-09-19",
+  "purpose": "Cross-domain Biupiu architecture node registry for Digital Twin dependency observation",
+  "required_fields": [
+    "id",
+    "type",
+    "owner_department",
+    "canonical_record",
+    "inputs",
+    "outputs",
+    "version",
+    "status",
+    "provenance",
+    "digital_twin_mapping"
+  ],
+  "orphan_checks": [
+    "missing_owner",
+    "missing_dependency_path",
+    "missing_interface",
+    "missing_validation",
+    "missing_provenance",
+    "missing_digital_twin_mapping",
+    "missing_boundary",
+    "unreviewed_external_dependency"
+  ],
+  "economic_nodes": [
+    "BPU",
+    "TREASURY",
+    "MARKETPLACE",
+    "NFT",
+    "BLOCKCHAIN-REGISTRY"
+  ],
+  "engineering_nodes": [
+    "MATH",
+    "PHYS-SYS",
+    "COMPUTE",
+    "AI",
+    "GEOMETRY",
+    "DIGITAL-TWIN",
+    "ROBOTICS",
+    "ADV-MFG",
+    "AERO",
+    "MARINE"
+  ],
+  "integration_gates": [
+    "DISCOVER",
+    "CLASSIFY",
+    "LICENCE",
+    "INDEX",
+    "ADAPT",
+    "UNIT_TEST",
+    "INTEGRATION_TEST",
+    "DIGITAL_TWIN_TEST",
+    "DOMAIN_VALIDATION",
+    "PROVENANCE",
+    "PROMOTION"
+  ]
+}
