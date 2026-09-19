@@ -180,3 +180,28 @@ The MATH division is now an explicit verification-oriented service layer. Quanti
 **Routing contract:** MATH -> COMPUTE/AI -> GEOMETRY/PHYS-SYS -> domain simulator -> Digital Twin -> validation -> provenance/learning record.
 
 Formal proof is distinguished from deterministic, numerical, simulation and heuristic evidence; no weaker result is represented as a theorem.
+
+
+## MINT-01 — Machine Intelligence & Capability Architecture
+
+Biupiu OS is now explicitly routed as a **machine-capable, intelligence-oriented software architecture** rather than a Windows-equivalent clone.
+
+Cross-department routing:
+
+`MATH ↔ COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ PHYSICS/SIMULATION ↔ ROBOTICS ↔ ADV-MFG ↔ ELECTROMAG ↔ PHOTONICS ↔ all machine-connected departments`
+
+The Machine Intelligence layer introduces machine-readable capability contracts, discovery, semantic system graphs, governed learning, simulation-before-execution and machine communication abstraction. See `research/BIUPIU-MACHINE-INTELLIGENCE-ARCHITECTURE-v1.0.md`.
+
+## DIGITAL-TWIN-RECURSIVE-01 — Twin-of-Twin architecture
+
+Digital Twin is promoted to a recursive integration layer. A system twin can compose child twins while preserving identity, provenance, state separation, model versions and validation boundaries. See `research/BIUPIU-RECURSIVE-DIGITAL-TWIN-ARCHITECTURE-v1.0.md`.
+
+## SYSTEM-BUILDER-01 — OS-assisted OS development
+
+The Intelligence Layer includes a governed System Builder concept capable of analysing proposed OS capabilities, dependencies, architecture impact, implementation, tests and simulation before promotion. This is a development architecture, not a claim of autonomous production deployment.
+
+## MACHINE-CAPABILITY-01
+
+Machine interaction is abstracted through capability contracts. The OS consumes machine-readable descriptions of identity, inputs, outputs, commands, events, units, ranges, safety constraints, protocols and Digital Twin references. Hardware-specific translation may remain below the common interface where required.
+
+**Status:** Architecture integrated into the master department map and OS/DMS subsystem registry.
