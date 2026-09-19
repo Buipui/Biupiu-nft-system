@@ -1,0 +1,8 @@
+{
+  "version":"1.0",
+  "targets":["legacy BIOS","UEFI","Linux x86 boot protocol","DOS/FreeDOS","x86_64","ARM64","future RISC-V"],
+  "interfaces":["MBR","boot-sector","INT10h","INT13h","INT15h","INT16h","INT19h","Linux boot protocol","EFI/UEFI","ACPI","device-tree"],
+  "base_contracts":["boot-target","firmware-capability","memory-map","cpu-features","framebuffer","storage","timer-clock","interrupt-controller","PCI-device-enumeration","ACPI-firmware-tables","UEFI-runtime","boot-parameters","initramfs","early-console","secure-boot","recovery"],
+  "reference_projects":["coreboot","SeaBIOS","TianoCore EDK II"],
+  "status":"architecture-executed-validation-open"
+}
