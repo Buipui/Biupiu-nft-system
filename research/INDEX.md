@@ -97,3 +97,11 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 **Updated:** 19 September 2026
 
 > Index synchronization note: This is the authoritative current index state for the flight-simulation integration. Historical gate records remain in their respective files.
+
+
+## AI-23 open-resource and fail-closed gate
+- `research/BIUPIU-AI-23-OPEN-RESOURCE-INTEGRATION-v1.0.md` — NASA, MIT and open-source resource provenance/licence boundary.
+- `software/rnd-os-ai/src/biupiu_ai/open_resource_registry.py` — external resource registry.
+- `software/rnd-os-ai/tests/test_ai23.py` — registry validation tests.
+- `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — audit-store readiness and write-failure fail-closed handling.
+- **AI-23 status:** resource registry, specification, tests and gateway safety boundary synchronized.
