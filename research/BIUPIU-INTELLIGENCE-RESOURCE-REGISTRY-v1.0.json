@@ -1,0 +1,17 @@
+{
+  "schema": "BIUPIU-INTELLIGENCE-RESOURCE-REGISTRY-v1.0",
+  "entries": [
+    {"name":"NASA Open Source Software","source":"https://code.nasa.gov/","category":"government_open_source","reuse_mode":"reference_then_individual_license_review"},
+    {"name":"NASA-IMPACT AKD-CARE","source":"https://github.com/NASA-IMPACT/akd-care","category":"scientific_ai_engineering","reuse_mode":"architecture_reference"},
+    {"name":"NASA-IMPACT Accelerated Discovery","source":"https://github.com/NASA-IMPACT/veda-accelerated-discovery","category":"scientific_ai_orchestration","reuse_mode":"architecture_reference"},
+    {"name":"MIT OpenCourseWare AI 6.034","source":"https://ocw.mit.edu/courses/6-034-artificial-intelligence-spring-2005/","category":"education","reuse_mode":"learning_reference"},
+    {"name":"MIT OpenCourseWare ML 6.036","source":"https://ocw.mit.edu/courses/6-036-introduction-to-machine-learning-fall-2020/","category":"education","reuse_mode":"learning_reference"},
+    {"name":"MIT Deep Learning 6.7960","source":"https://ocw.mit.edu/courses/6-7960-deep-learning-fall-2024/","category":"education","reuse_mode":"learning_reference"},
+    {"name":"Wits RAIL public research","source":"https://www.wits.ac.za/csam/research/","category":"university_research","reuse_mode":"research_reference"},
+    {"name":"KnowledgeForge","source":"https://github.com/miticojo/knowledgeforge","category":"knowledge_graph","reuse_mode":"architecture_reference"},
+    {"name":"Provenance","source":"https://github.com/kamuma03/Provenance","category":"grounded_rag","reuse_mode":"architecture_reference"},
+    {"name":"Prior","source":"https://github.com/Agents4Academia-AI/prior","category":"literature_provenance","reuse_mode":"architecture_reference"},
+    {"name":"ATLAS","source":"https://github.com/ActiveInferenceInstitute/ATLAS","category":"knowledge_management","reuse_mode":"architecture_reference"},
+    {"name":"Harvard CS249r Machine Learning Systems","source":"https://github.com/harvard-edge/cs249r_book","category":"open_courseware_book","reuse_mode":"learning_reference"}
+  ]
+}
