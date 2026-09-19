@@ -1,0 +1,133 @@
+{
+  "version": "1.0",
+  "date": "2026-09-19",
+  "gate": "GODOT-MIT-01",
+  "resources": [
+    {
+      "id": "godot-engine",
+      "kind": "engine",
+      "url": "https://github.com/godotengine/godot",
+      "license": "MIT",
+      "status": "adapter-target",
+      "capabilities": [
+        "scene",
+        "physics",
+        "render",
+        "mobile",
+        "networking",
+        "xr"
+      ]
+    },
+    {
+      "id": "godot-demo-projects",
+      "kind": "official-demos",
+      "url": "https://github.com/godotengine/godot-demo-projects",
+      "license": "MIT",
+      "status": "reference",
+      "capabilities": [
+        "2d",
+        "3d",
+        "audio",
+        "compute",
+        "gui",
+        "mobile",
+        "networking",
+        "xr"
+      ]
+    },
+    {
+      "id": "godot-tps-demo",
+      "kind": "official-demo",
+      "url": "https://github.com/godotengine/tps-demo",
+      "license": "mixed: code MIT; assets separately licensed",
+      "status": "asset-review-required",
+      "capabilities": [
+        "3d",
+        "render",
+        "animation"
+      ]
+    },
+    {
+      "id": "mit-2-12-robotics",
+      "kind": "MIT-OCW",
+      "url": "https://ocw.mit.edu/courses/2-12-introduction-to-robotics-fall-2005/",
+      "license": "MIT OCW terms",
+      "status": "research-reference",
+      "capabilities": [
+        "robotics",
+        "control",
+        "sensors",
+        "kinematics",
+        "dynamics",
+        "navigation"
+      ]
+    },
+    {
+      "id": "mit-6-801-machine-vision",
+      "kind": "MIT-OCW",
+      "url": "https://ocw.mit.edu/courses/6-801-machine-vision-fall-2004/",
+      "license": "MIT OCW terms",
+      "status": "research-reference",
+      "capabilities": [
+        "vision",
+        "geometry",
+        "photogrammetry",
+        "robotics"
+      ]
+    },
+    {
+      "id": "mit-6-4210-robotic-manipulation",
+      "kind": "MIT-OCW",
+      "url": "https://ocw.mit.edu/courses/6-4210-robotic-manipulation-fall-2022/",
+      "license": "MIT OCW terms",
+      "status": "research-reference",
+      "capabilities": [
+        "manipulation",
+        "planning",
+        "kinematics",
+        "dynamics",
+        "control"
+      ]
+    },
+    {
+      "id": "mit-16-412j-cognitive-robotics",
+      "kind": "MIT-OCW",
+      "url": "https://ocw.mit.edu/courses/16-412j-cognitive-robotics-spring-2016/",
+      "license": "MIT OCW terms",
+      "status": "research-reference",
+      "capabilities": [
+        "planning",
+        "monitoring",
+        "multi-agent",
+        "risk",
+        "autonomy"
+      ]
+    },
+    {
+      "id": "mit-acl",
+      "kind": "GitHub-organisation",
+      "url": "https://github.com/mit-acl",
+      "license": "per-repository",
+      "status": "research-reference",
+      "capabilities": [
+        "planning",
+        "localisation",
+        "trajectory-optimization",
+        "verification"
+      ]
+    },
+    {
+      "id": "mit-rss",
+      "kind": "GitHub-organisation",
+      "url": "https://github.com/mit-rss",
+      "license": "per-repository",
+      "status": "research-reference",
+      "capabilities": [
+        "ros",
+        "visual-servoing",
+        "localisation",
+        "path-planning"
+      ]
+    }
+  ]
+}
