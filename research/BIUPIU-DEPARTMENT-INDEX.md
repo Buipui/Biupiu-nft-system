@@ -1,7 +1,7 @@
 # BIUPIU MASTER DEPARTMENT INDEX
 
-**Version:** 2.1  
-**Date:** 16 September 2026  
+**Version:** 2.2  
+**Date:** 19 September 2026  
 **Status:** Active — integrated Biupiu R&D / computational-art / IP architecture
 
 ## Purpose
@@ -34,6 +34,7 @@ The repository remains a personal R&D/IP and computational-art environment. The 
 | AERO | Aerospace, Aerodynamics & Lightweight Mobility | public-source aerospace geometry, aerodynamics, cooling, lightweight structures |
 | MARINE | Marine & Hydrodynamic Engineering | propellers, pumpjets, hydrofoils, hulls, marine turbines |
 | COMPUTE | CODEX Computational Engineering | Python, algorithms, simulation, data engineering, reproducible research code |
+| MATH | Mathematics & Mathematical R&D | symbolic mathematics, numerical methods, optimisation, dynamics, probability, statistics, geometry and mathematical validation |
 | AI | Artificial Intelligence & ML | AI/ML, surrogate models, optimisation, generative engineering |
 | GEOMETRY | Computational Geometry & Optimisation | parametric geometry, topology, CAD, geometry reconstruction and optimisation |
 | DIGITAL-TWIN | Digital Twin & Simulation Integration | physical systems ↔ sensors ↔ models ↔ optimisation |
@@ -116,7 +117,9 @@ Connects PHOTONICS, ELECTROMAG, METAMATERIALS, COMPUTE, AI, DIGITAL-TWIN, LAND-G
 
 `LAND-GIS ↔ GEOARCH ↔ COMPUTE ↔ DIGITAL-TWIN ↔ AI`
 
-`COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
+`MATH ↔ COMPUTE ↔ AI ↔ GEOMETRY ↔ DIGITAL-TWIN ↔ ROBOTICS ↔ ADV-MFG`
+
+`MATH ↔ AERO ↔ MARINE ↔ ENERGY ↔ PHOTONICS ↔ ELECTROMAG ↔ MATERIALS ↔ BIOMED ↔ AGRI ↔ WATER`
 
 `AERO ↔ MARINE ↔ MATERIALS ↔ COMPOSITES ↔ GEOMETRY ↔ COMPUTE ↔ AI`
 
@@ -154,4 +157,4 @@ Each department should maintain, where applicable:
 
 ## Status
 
-**Master department architecture upgraded to v2.1.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.
+**Master department architecture upgraded to v2.2.** Cape Town FSO GIS findings and the PHOTONICS/ELECTROMAG/METAMATERIALS/AI/DIGITAL-TWIN/LAND-GIS/GEOARCH/CODEX routing are now explicitly integrated. The commercial/funding library remains a deployment subset of this broader R&D architecture.

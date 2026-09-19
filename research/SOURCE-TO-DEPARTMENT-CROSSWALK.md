@@ -19,7 +19,8 @@ This crosswalk prevents source silos. A source is assigned to one or more Biupiu
 | Scientific primary data | quantitative validation | BIO, BIO-GEN, AGRI, WATER, MATERIALS, ENERGY, GEOARCH, GEO-MAG |
 | Patents/prior art | modern implementation, novelty/FTO | IP + relevant technical department |
 | Public/declassified engineering | historical technical architecture | ENERGY, MATERIALS, AERO, MARINE, ELECTROMAG, GEOMETRY, COMPUTE |
-| GitHub / BIUPIU CODEX | code, algorithms, simulation, datasets | COMPUTE, GEOMETRY, AI, DIGITAL-TWIN, all technical departments |
+| GitHub / BIUPIU CODEX | code, algorithms, simulation, datasets | COMPUTE, MATH, GEOMETRY, AI, DIGITAL-TWIN, ROBOTICS, all technical departments |
+| Mathematics / scientific-computing layer | symbolic/numerical models, optimisation, dynamics, uncertainty and validation | MATH, COMPUTE, GEOMETRY, AI, ROBOTICS, DIGITAL-TWIN + target department |
 | Computational validation | reproducible modelling | COMPUTE, GEOMETRY, AI, DIGITAL-TWIN + target department |
 | Physical validation | prototype and measurement | target department + EXPERIMENT record |
 | Controlled speculative sources | hypothesis generation only | SPEC + target department after claim decomposition |
@@ -109,3 +110,16 @@ Routing rule:
 `Repository → Resource ID → Language/Source → Department → Simulator Adapter → Digital Twin → AI Training → Validation → Provenance → Commit`
 
 Hard-link policy: these repository URLs are searchable anchors in the Biupiu Intelligence Network. They remain `discovered-reference` until explicit validation promotes them to `validated-incorporated`.
+
+
+## Mathematics Division routing — 19 September 2026
+
+The MATH department is the repository-wide quantitative support layer. Complex problems route through `PROBLEM → VARIABLES → ASSUMPTIONS → DIMENSIONAL CHECK → SYMBOLIC MODEL → NUMERICAL MODEL → SOLVER → SENSITIVITY/UNCERTAINTY → VALIDATION → RESULT → RESEARCH RECORD`.
+
+MATH supports GEOMETRY, COMPUTE, AI, ROBOTICS, DIGITAL-TWIN and specialist scientific/engineering departments. A converged solver result is not automatically experimental evidence.
+
+## Infrastructure routing — 19 September 2026
+
+`MATH → COMPUTE → GEOMETRY → AI → ROBOTICS → DIGITAL-TWIN → EXPERIMENT → LEARNING`
+
+Third-party code remains external until licence, provenance, security, dependency, compatibility and regression gates pass.
