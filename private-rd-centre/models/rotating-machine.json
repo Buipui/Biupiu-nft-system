@@ -1,0 +1,8 @@
+{
+  "model_id":"PHYS-ROT","version":"1.0","status":"EXPERIMENTAL",
+  "equation":"alpha = (T_drive - T_load) / J",
+  "inputs":["inertia_kg_m2","drive_torque_nm","load_torque_nm","dt_s"],
+  "outputs":["angular_speed_rad_s"],
+  "use_cases":["microturbine concepts","electric motors","pumps","robotic actuators"],
+  "limitations":["does not model fluid dynamics, losses, blade aerodynamics or material failure"]
+}
