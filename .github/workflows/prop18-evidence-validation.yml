@@ -1,0 +1,29 @@
+name: PROP-18 Evidence Validation
+
+on:
+  push:
+    paths:
+      - "simulators/biupiu_evidence_state_engine_v0_1.py"
+      - "simulators/biupiu_prop18_dataset_validator_v0_1.py"
+      - "digital-twin/datasets/**"
+      - "digital-twin/schemas/**"
+      - "tests/**"
+  pull_request:
+    paths:
+      - "simulators/**"
+      - "digital-twin/**"
+      - "tests/**"
+  workflow_dispatch:
+
+jobs:
+  evidence-guards:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Run evidence regression tests
+        run: python -m pytest tests/test_validation_state_guards.py
+      - name: Validate PROP-15 dataset
+        run: python simulators/biupiu_prop18_dataset_validator_v0_1.py digital-twin/datasets/prop15_test_points_v1.json
