@@ -349,3 +349,15 @@ The contract explicitly separates third-party references from Biupiu-owned imple
 ## AERO-HANGAR-02 — Environment validation gate
 
 The Virtual Hangar now has explicit pre-simulation validation requirements covering the vehicle Digital Twin schema, L0–L5 fidelity transitions, simulator-version isolation, telemetry/provenance records, simulation-only AI/robotics outputs, replayable test scenarios and authoritative department cross-links. **AERO-HANGAR-02: EXECUTED.**
+
+## MATH-01 — Problem-Solving + Formal Verification Layer
+
+Added 19 September 2026:
+- research/BIUPIU-MATH-PROBLEM-SOLVING-FORMAL-VERIFICATION-v1.0.md
+- software/rnd-os-ai/src/biupiu_ai/math_problem_solver.py
+- software/rnd-os-ai/tests/test_math_problem_solver.py
+- .github/workflows/math-problem-solver-validation.yml
+
+The MATH layer provides deterministic problem classification, invariant checks and numerical residual verification, with an explicit adapter boundary for formal theorem proving and downstream simulation. It is routed through AI, COMPUTE, GEOMETRY, ROBOTICS, DIGITAL-TWIN, AERO, MARINE, ENERGY, MATERIALS, PHOTONICS, AGRI, WATER and BIOMED as applicable.
+
+**MATH-01 status: IMPLEMENTED — core primitives and CI validation registered. External formal-prover execution and domain-specific validation remain separate gates.**
