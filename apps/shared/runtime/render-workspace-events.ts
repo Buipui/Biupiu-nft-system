@@ -1,0 +1,2 @@
+export type RenderWorkspaceEvent="CREATE_JOB"|"REFRESH_QUEUE"|"OPEN_JOB"|"OPEN_PROVENANCE"|"APPROVE_OUTPUT"|"ARCHIVE_OUTPUT";
+export interface RenderWorkspaceCommand { event:RenderWorkspaceEvent; jobId?:string; payload?:Record<string,unknown>; }
