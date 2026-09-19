@@ -1,0 +1,31 @@
+{
+  "schema": "biupiu.roundtrip-drift.v1",
+  "gate": "RED-07",
+  "source": {
+    "sourceAssetId": "BIUPIU-RENDER-TEST-001",
+    "sourceModelVersion": "TEST-001",
+    "provider": "BLENDER",
+    "format": "GLTF",
+    "geometrySignature": "GEOM-BASELINE-001",
+    "transformSignature": "XFORM-BASELINE-001",
+    "materialSignature": "MAT-BASELINE-001",
+    "metadataSignature": "META-BASELINE-001",
+    "provenanceSignature": "PROV-BASELINE-001"
+  },
+  "returned": {
+    "sourceAssetId": "BIUPIU-RENDER-TEST-001",
+    "sourceModelVersion": "TEST-001",
+    "provider": "UNREAL_ENGINE_5",
+    "format": "USD",
+    "geometrySignature": "GEOM-BASELINE-001",
+    "transformSignature": "XFORM-BASELINE-001",
+    "materialSignature": "MAT-BASELINE-001",
+    "metadataSignature": "META-BASELINE-001",
+    "provenanceSignature": "PROV-BASELINE-001"
+  },
+  "liveExecution": {
+    "status": "GATED",
+    "requiresConnectedProviderHosts": true,
+    "requiresMeasuredOutputs": true
+  }
+}
