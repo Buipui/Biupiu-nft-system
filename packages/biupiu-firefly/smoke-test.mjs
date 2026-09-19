@@ -54,5 +54,9 @@ assert.match(client, /x-model-version/);
 assert.match(client, /x-access-error/);
 assert.match(client, /CANCEL_JOB/);
 assert.match(client, /Authorization:/);
+assert.match(client, /downloadResult/);
+assert.match(client, /resultUrl/);
+assert.match(client, /temporary\/presigned URL/);
+assert.match(client, /method: "GET"/);
 
 console.log("Biupiu Firefly current-release static conformance gate: PASS");
