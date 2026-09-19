@@ -1,0 +1,31 @@
+{
+  "version": "1.0",
+  "provider": "V-Ray",
+  "integration_class": "professional_render_provider",
+  "runtime_status": "external_proprietary_dependency",
+  "copied_upstream_sources": [
+    {
+      "repository": "ChaosGroup/vray_gltf",
+      "paths": [
+        "main.py",
+        "Gltf_Parser/gltfparser.py",
+        "Gltf_Parser/parserUtils.py",
+        "Gltf_Parser/cameraUtils.py",
+        "testUtils.py",
+        "LICENSE"
+      ],
+      "purpose": "glTF/GLB parsing and V-Ray App SDK reference"
+    },
+    {
+      "repository": "ChaosGroup/vraymtl_glsl",
+      "paths": [
+        "vraymtl.glsl",
+        "LICENSE"
+      ],
+      "purpose": "VRayMtl shader/material research reference"
+    }
+  ],
+  "evidence_class": "VISUALIZATION_ONLY",
+  "engineering_validation_status": "NOT_VALIDATED",
+  "provenance_required": true
+}
