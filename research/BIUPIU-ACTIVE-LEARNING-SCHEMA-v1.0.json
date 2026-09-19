@@ -1,0 +1,16 @@
+{
+  "schema":"BIUPIU-ACTIVE-LEARNING-SCHEMA-v1.0",
+  "gate":"BM-11",
+  "selection_id":"string",
+  "candidate_or_experiment_id":"string",
+  "uncertainty_reduction":"number-or-null",
+  "information_gain":"number-or-null",
+  "model_sensitivity":"number-or-null",
+  "model_disagreement":"number-or-null",
+  "pareto_relevance":"number-or-null",
+  "feasibility":"number-or-null",
+  "selection_rationale":"string",
+  "next_action":"SIMULATE|TEST|REPLICATE|CALIBRATE|HOLD",
+  "model_version":"string",
+  "provenance":"object"
+}
