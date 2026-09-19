@@ -330,3 +330,9 @@ Added 19 September 2026:
 The contract explicitly separates third-party references from Biupiu-owned implementation and requires model/environment/scenario/configuration/telemetry provenance for accepted simulation results.
 
 **MARINE-SIM-02 status: EXECUTED — adapter contract and virtual boatyard/sea-test architecture registered and verified in repository. Runtime host compilation, solver calibration and physical validation remain open gates.**
+
+
+## AI-27 end-to-end gateway test gate
+- `software/rnd-os-ai/tests/test_ai27.py` — authentication, provenance, provider, replay, rate-limit and audit-failure harness.
+- `research/BIUPIU-AI-27-END-TO-END-GATE-v1.0.md` — AI-27 specification.
+- **AI-27 status:** test harness committed; CI/test execution remains unverified.
