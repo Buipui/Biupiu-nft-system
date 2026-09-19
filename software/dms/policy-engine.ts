@@ -20,4 +20,5 @@ export class PolicyEngine {
     return {allowed:false,reason,featureId:request.featureId,principalId:request.principal.id,obligations:["AUDIT_REQUIRED"]};
   }
   getFeature(featureId:string):FeatureDefinition|undefined{return this.registry[featureId];}
+  listFeatures(): string[] { return Object.keys(this.registry); }
 }
