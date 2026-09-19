@@ -1,0 +1,27 @@
+{
+  "version": "1.0",
+  "basis": ["automotive", "hangar"],
+  "departments": [
+    {"id":"automotive","simulator":"automotive-workshop","status":"foundation","inherits":"shared-workshop-core"},
+    {"id":"aerospace","simulator":"hangar-maintenance","status":"foundation","inherits":"shared-workshop-core"},
+    {"id":"agriculture","simulator":"agri-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"biotechnology","simulator":"bio-lab-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"textiles","simulator":"textile-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"advanced-materials","simulator":"materials-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"energy","simulator":"energy-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"robotics-automation","simulator":"robotics-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"marine","simulator":"marine-workshop","status":"scaffold","inherits":"shared-workshop-core"},
+    {"id":"computational-design","simulator":"computational-design-workshop","status":"scaffold","inherits":"shared-workshop-core"}
+  ],
+  "shared_contracts": [
+    "asset_id",
+    "component_id",
+    "procedure_id",
+    "measurement",
+    "fault_event",
+    "work_order",
+    "validation_result",
+    "digital_twin_revision",
+    "provenance_record"
+  ]
+}
