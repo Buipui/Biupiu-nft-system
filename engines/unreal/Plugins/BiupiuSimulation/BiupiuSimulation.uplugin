@@ -1,0 +1,16 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "Biupiu Simulation",
+  "Description": "Native Unreal Engine integration foundation for Biupiu simulation-result playback.",
+  "Category": "Biupiu",
+  "CanContainContent": false,
+  "Modules": [
+    {
+      "Name": "BiupiuSimulation",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}

@@ -1,0 +1,17 @@
+{
+  "FileVersion": 3,
+  "EngineAssociation": "5.6",
+  "Category": "Biupiu",
+  "Description": "Biupiu Digital Twin prototype project for local Unreal Engine verification.",
+  "Modules": [],
+  "Plugins": [
+    {
+      "Name": "BiupiuDigitalTwin",
+      "Enabled": true
+    },
+    {
+      "Name": "BiupiuSimulation",
+      "Enabled": true
+    }
+  ]
+}
