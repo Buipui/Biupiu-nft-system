@@ -369,3 +369,30 @@ Added 19 September 2026:
 The MATH layer provides deterministic problem classification, invariant checks and numerical residual verification, with an explicit adapter boundary for formal theorem proving and downstream simulation. It is routed through AI, COMPUTE, GEOMETRY, ROBOTICS, DIGITAL-TWIN, AERO, MARINE, ENERGY, MATERIALS, PHOTONICS, AGRI, WATER and BIOMED as applicable.
 
 **MATH-01 status: IMPLEMENTED — core primitives and CI validation registered. External formal-prover execution and domain-specific validation remain separate gates.**
+
+
+## INTEL-LEARN-02 — Repeated Gate Learning + Conflict Resolution Matrix
+
+Added 19 September 2026:
+- `research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md`
+- `research/BIUPIU-GATE-LEARNING-MATRIX-v1.0.json`
+- `research/BIUPIU-OPEN-RESOURCE-AUDIT-2026-09-19-v2.0.md`
+
+Repeated execution is now treated as structured evidence collection rather than repetition alone. Gates capture state, expected/observed outcomes, conflict class, root-cause evidence, fix/version, tests, regression scope, dependency impact, provenance and promotion status. Repeating a gate without new evidence is classified as a stalled loop.
+
+### New learning matrix
+G0 PLAN → G1 EXECUTE → G2 DIAGNOSE → G3 FIX → G4 VERIFY → G5 REGRESS → G6 LEARN → G7 PROMOTE.
+
+Learning maturity: L0 logged, L1 classified, L2 fix verified, L3 regression covered, L4 reusable pattern, L5 preventative test generated.
+
+### Intelligence architecture integration
+Biupiu Intelligence now treats bug-fix and regression evidence as reusable diagnostic knowledge. Dependency-impact closure can route changes across OS, AI, COMPUTE, MATH, GEOMETRY, ROBOTICS, PHYS-SYS, DIGITAL-TWIN, CG-3D, AERO, MARINE, ADV-MFG, MATERIALS, BLOCKCHAIN, NFT/IP and relevant domain systems.
+
+### New open-source research radar
+The audit records candidate references including memory services, AI evaluation/observability, agent orchestration, knowledge/RAG and Digital Twin/autonomous-system simulation projects. They remain reference-only until licence, security, dependency and compatibility gates pass.
+
+**INTEL-LEARN-02 status: ARCHITECTURE + MATRIX + RESOURCE AUDIT COMMITTED.** Runtime execution, third-party import, CI pass and physical validation remain separately verified gates.
+
+## Index synchronization
+**Research Index v4.0 — Gate Learning / Conflict Resolution / Open Resource Audit**  
+**Updated:** 19 September 2026
