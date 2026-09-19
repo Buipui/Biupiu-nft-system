@@ -22,7 +22,7 @@ export interface FireflyJobRequest {
   referenceAssetId?: string;
   aspectRatio?: string;
   outputFormat?: "png" | "jpeg";
-  modelVersion?: "image3" | "image3_custom" | "image4_standard" | "image4_ultra" | "image4_custom" | "image5";
+  modelVersion?: "image3" | "image3_custom" | "image4_standard" | "image4_ultra" | "image4_custom" | "image5" | "video1_standard" | "precise_upsampler_v1";
   projectId: string;
   researchId?: string;
   assetId?: string;

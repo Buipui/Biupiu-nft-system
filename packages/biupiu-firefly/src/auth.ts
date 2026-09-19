@@ -16,7 +16,7 @@ const DEFAULT_SCOPE =
   "openid,AdobeID,session,additional_info,read_organizations,firefly_api,ff_apis";
 
 export function getFireflyAuthConfig(
-  env: Record<string, string | undefined> = typeof process !== "undefined" ? process.env : {}
+  env: Record<string, string | undefined> = (() => { const runtime = globalThis as typeof globalThis & { process?: { env?: Record<string, string | undefined> } }; return runtime.process?.env || {}; })()
 ): FireflyAuthConfig | null {
   const clientId = env.FIREFLY_SERVICES_CLIENT_ID;
   const clientSecret = env.FIREFLY_SERVICES_CLIENT_SECRET;
