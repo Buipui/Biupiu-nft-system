@@ -1,0 +1,12 @@
+{
+  "version":"1.0",
+  "profiles":[
+    {"id":"studio-hdri","purpose":"neutral studio material evaluation"},
+    {"id":"automotive-studio","purpose":"vehicle and body-surface visualization"},
+    {"id":"marine-waterline","purpose":"marine and waterline presentation"},
+    {"id":"aerospace-flight","purpose":"eVTOL/helicopter/aircraft presentation"},
+    {"id":"engineering-neutral","purpose":"technical and exploded views"},
+    {"id":"product-hero","purpose":"premium product presentation"},
+    {"id":"showreel-turntable","purpose":"repeatable cinematic turntables"}
+  ]
+}
