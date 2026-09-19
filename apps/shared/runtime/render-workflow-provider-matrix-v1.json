@@ -1,0 +1,42 @@
+{
+  "schema": "biupiu.render.workflow-provider-matrix.v1",
+  "selection": "workflow-driven",
+  "server_authoritative": true,
+  "workflows": {
+    "PRODUCT_STILL": {
+      "providers": ["BLENDER", "KEYSHOT", "ADOBE", "FIREFLY"],
+      "preferredOutput": "STILL",
+      "handoff": "asset-registry"
+    },
+    "DIGITAL_TWIN": {
+      "providers": ["BLENDER", "UNREAL_ENGINE_5", "TWINMOTION", "ADOBE", "FIREFLY"],
+      "preferredOutput": "VIDEO",
+      "handoff": "digital-twin-registry"
+    },
+    "CINEMATIC_SHOWREEL": {
+      "providers": ["BLENDER", "UNREAL_ENGINE_5", "TWINMOTION", "RUNWAY", "ADOBE", "FIREFLY"],
+      "preferredOutput": "SHOWREEL",
+      "handoff": "showcase-registry"
+    },
+    "CONCEPT_VARIATION": {
+      "providers": ["FIREFLY", "BLENDER", "ADOBE"],
+      "preferredOutput": "STILL",
+      "handoff": "asset-registry"
+    },
+    "RESEARCH_VISUALIZATION": {
+      "providers": ["BLENDER", "UNREAL_ENGINE_5", "FIREFLY", "ADOBE"],
+      "preferredOutput": "STILL",
+      "handoff": "research-asset-registry"
+    }
+  },
+  "provenance": {
+    "requiredBeforeApproval": ["jobId", "sourceAssetIds", "provider", "workflow", "outputAssetIds"],
+    "outputHashRequiredBeforeRelease": true,
+    "sourceNeverOverwritten": true
+  },
+  "safety": {
+    "providerChangeRequiresApproval": true,
+    "externalProviderCallsFromRegression": false,
+    "clientAuthority": false
+  }
+}
