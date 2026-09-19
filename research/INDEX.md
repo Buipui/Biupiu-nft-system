@@ -206,3 +206,8 @@ Added 19 September 2026:
 - `software/rnd-os-ai/README.md` — updated to Biupiu AI Intelligence Layer v1.1.
 
 **SEPARATION-02 status: EXECUTED — interface contract registered and AI boundary implementation documentation synchronized. Runtime end-to-end execution remains a separate validation gate.**
+
+
+## Lumion LUM-07 — automated package build and validation
+
+Added `.github/workflows/visualization-package-validation.yml` plus `research/visual-assets/VISUALIZATION-PACKAGE-BUILD-v1.0.md`. The repository now has a read-only CI validation workflow for visual-asset JSON syntax, JSON Schema 2020-12 metadata, validator-script syntax and package integrity reporting. **LUM-07 executed.**
