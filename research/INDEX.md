@@ -340,6 +340,14 @@ The contract explicitly separates third-party references from Biupiu-owned imple
 **MARINE-SIM-02 status: EXECUTED — adapter contract and virtual boatyard/sea-test architecture registered and verified in repository. Runtime host compilation, solver calibration and physical validation remain open gates.**
 
 
+## Intelligence Core Test Gate — INTEL-TEST-01
+
+Added `.github/workflows/intelligence-core-tests.yml`.
+
+The workflow installs pytest in a clean Python 3.13 runner and executes the learning/intelligence regression suite plus AI-23 through AI-27 tests. The workflow is intentionally read-only and has `contents: read` permission.
+
+**INTEL-TEST-01 status: TEST WORKFLOW REGISTERED.** Repository connector read-back confirms the workflow commit exists, but no GitHub Actions run has yet been returned for that commit, so CI PASS is not claimed.
+
 ## AI-27 end-to-end gateway test gate
 - `software/rnd-os-ai/tests/test_ai27.py` — authentication, provenance, provider, replay, rate-limit and audit-failure harness.
 - `research/BIUPIU-AI-27-END-TO-END-GATE-v1.0.md` — AI-27 specification.
