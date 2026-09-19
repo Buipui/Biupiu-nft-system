@@ -1,0 +1,11 @@
+{
+  "version": "1.0",
+  "date": "2026-09-19",
+  "status": "indexed-reference",
+  "resources": [
+    {"id":"DOS-MS-2026","name":"Microsoft MS-DOS source archive","url":"https://github.com/microsoft/MS-DOS","scope":"MS-DOS 1.25, 2.0, 4.0 historical reference","license":"MIT per repository","route":["AI_OS","COMPUTE","PERSONAL_R&D"],"import_mode":"reference-only"},
+    {"id":"DOS-HISTORY-86DOS-2026","name":"Microsoft DOS-History / Paterson listings","url":"https://github.com/microsoft/DOS-History","scope":"early 86-DOS historical source/listings","route":["AI_OS","PERSONAL_R&D"],"import_mode":"reference-only"},
+    {"id":"DOS-FREEDOS-2026","name":"FreeDOS","url":"https://www.freedos.org/","scope":"open-source DOS-compatible OS and current distributions","route":["AI_OS","COMPUTE","SOFTWARE"],"import_mode":"external-runtime/reference"},
+    {"id":"DOS-DOSBOX-X-2026-08","name":"DOSBox-X","url":"https://github.com/joncampbell123/dosbox-x","scope":"cross-platform DOS emulator and compatibility runtime","route":["AI_OS","COMPUTE","SIMULATION","CG-3D"],"import_mode":"external-runtime/reference"}
+  ]
+}
