@@ -139,6 +139,11 @@ ResearchGate and Emerald Insight evidence is routed through `RG` and `EMERALD`. 
 ## Assassin's Creed Shadows rendering research — ACS-01..ACS-06
 Added `research/BIUPIU-ASSASSINS-CREED-SHADOWS-RENDERING-RESOURCE-INDEX-v1.0.md`. Public technical references associated with Assassin's Creed Shadows are now indexed as reference-only rendering research and mapped into CG-3D, COMPUTE, DIGITAL-TWIN, AI, Unreal Engine 5, World Development Lab and cinematic rendering. The integration covers ray-traced GI/reflections, DDGI/radiance-cache research, performance tiers, original Japan-world environment targets and provenance/licence controls. Proprietary Ubisoft assets, binaries, extracted game files and restricted content remain excluded. **ACS-01 through ACS-04 executed; ACS-05/ACS-06 remain gated on connected renderer/UE5 hosts.**
 
+
+## Forza Motorsport 6 graphics research — FM6-01
+
+Added `research/BIUPIU-FORZA-FM6-GRAPHICS-RESEARCH-v1.0.md` and the provider-neutral `forza-reference.ts` adapter/test. FM6 is treated as a technical/visual reference only: LODs, normals/tangents/UVs, automotive materials, lighting, scene hierarchy, resource optimisation and camera presentation are mapped into Biupiu's original Unreal/Blender/Redshift/V-Ray/Octane/Lumion/KeyShot pipeline. Proprietary Forza assets, extracted resources, encryption keys and game binaries are explicitly excluded. **FM6-01 executed.**
+
 ## Centre integration rule
 All existing department streams remain active. New centre systems are overlays that route existing research into intelligence, experiments, simulations, materials, combinations, failures, IP, manufacturing, living systems, foresight, collaboration and invention pathways rather than replacing the underlying research streams.
 
