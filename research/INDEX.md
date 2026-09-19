@@ -9,7 +9,7 @@ Added `research/BIUPIU-PROVIDER-EQUIVALENCE-RED-08-v1.0.md`, `packages/biupiu-re
 
 Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
 
-**Version:** 3.8
+**Version:** 3.9
 **Updated:** 19 September 2026
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -115,6 +115,14 @@ Registered references include Vulkan/DX12/DXR rendering, glTF, Jolt Physics, Phy
 - `private-rd-centre/tests/test_physics_kernel.py` — deterministic smoke tests for rigid-body, thermal and rotating-machine primitives.
 - `.github/workflows/phys-sys-smoke.yml` — repeatable GitHub Actions smoke-test workflow triggered by private-R&D changes or manually.
 - Current state: **TEST HARNESS REGISTERED**. The connector reports no commit status checks yet, so CI execution is not claimed as passed until GitHub Actions produces a run result.
+
+### PHYS-SYS-02 numerical validation
+
+- `private-rd-centre/tests/test_physics_benchmarks.py` — constant-force, zero-torque, thermal-equilibrium and rotating-machine equilibrium benchmarks.
+- `.github/workflows/phys-sys-smoke.yml` now executes both the kernel smoke suite and numerical benchmark suite.
+- Connector verification currently shows no GitHub Actions run for the relevant commits, so CI execution remains **unverified** until a workflow run is observed.
+
+**PHYS-SYS-02 status: IMPLEMENTED — benchmark suite and CI registration complete; external/physical validation remains separate.**
 
 ## Version
 
