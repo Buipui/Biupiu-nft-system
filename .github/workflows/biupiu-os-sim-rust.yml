@@ -1,0 +1,26 @@
+name: Biupiu OS Simulator Rust Validation
+
+on:
+  push:
+    paths:
+      - 'packages/biupiu-bevy-adapter/**'
+      - 'research/BIUPIU-OS-SIMULATOR-KERNEL-v1.0.md'
+      - '.github/workflows/biupiu-os-sim-rust.yml'
+  pull_request:
+    paths:
+      - 'packages/biupiu-bevy-adapter/**'
+      - 'research/BIUPIU-OS-SIMULATOR-KERNEL-v1.0.md'
+      - '.github/workflows/biupiu-os-sim-rust.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  rust-sim-kernel:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Cargo test
+        run: cargo test --manifest-path packages/biupiu-bevy-adapter/Cargo.toml
