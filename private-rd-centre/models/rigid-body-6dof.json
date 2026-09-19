@@ -1,0 +1,8 @@
+{
+  "model_id":"PHYS-RB6","version":"1.0","status":"EXPERIMENTAL",
+  "equations":{"translation":"a = F / m","position":"x_next = x + v * dt","velocity":"v_next = v + a * dt","rotation":"alpha = M / I","angular_rate":"omega_next = omega + alpha * dt"},
+  "inputs":["mass_kg","inertia_x","inertia_y","inertia_z","force_n","moment_nm","dt_s"],
+  "outputs":["position_m","velocity_mps","angular_rate_rps"],
+  "validation":["unit checks","finite-value checks","benchmark tests","physical calibration before promotion"],
+  "limitations":["minimal integrator","no aerodynamic coefficients","not a certified solver"]
+}
