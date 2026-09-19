@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.recovery.v1","server_authoritative":true,"learning_mode":"recommendation-first","automatic_actions":["bounded-retry"],"approval_required":["provider-change","asset-refresh","configuration-change","unknown-failure-remediation"],"forbidden":"self-modifying-production-code","audit_required":true}
