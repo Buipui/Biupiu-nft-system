@@ -35,3 +35,15 @@ Future OS updates must build on the core contracts above. New capabilities such 
 The baseline remains a functional prototype, not a production release. Production persistence, authentication/RBAC, encrypted storage, repository integration, AI service deployment, simulation runners, signing infrastructure, security testing and packaged platform builds remain gated.
 
 **CORE-OS-BASELINE-01: REGISTERED**
+
+## SELF-HEAL-01 — Core OS Failure-Recovery Contract
+
+The Core OS owns the authoritative safety boundary for self-healing operations. Biupiu AI may propose candidate repairs, but OS-controlled validation must precede durable state changes.
+
+Required flow: DETECT -> TRIAGE -> SANDBOX -> TEST -> VERIFY -> LEARN -> PROMOTE or ROLLBACK.
+
+Hard safety rules: bounded repair scope; protected core files; regression-test enforcement; rollback on failed verification; circuit breaker after repeated failure; provenance record for every attempt; no privilege escalation through learned fixes; explicit promotion for production/customer-facing changes.
+
+Implementation: software/rnd-os-ai/src/biupiu_ai/self_healing.py. The AI controller remains modular, while the OS contract is authoritative.
+
+SELF-HEAL-01: CORE OS CONTRACT REGISTERED.
