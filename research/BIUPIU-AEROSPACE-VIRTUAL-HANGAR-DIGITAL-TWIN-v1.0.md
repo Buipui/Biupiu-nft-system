@@ -31,4 +31,19 @@ Learning records capture hypothesis, model version, inputs, scenario, outputs, a
 This is a research/simulation environment, not an airworthiness or certification system. Public research is used as technical reference; proprietary assets remain external unless licensed.
 
 **Gate: AERO-HANGAR-01 — ARCHITECTURE REGISTERED**
+
+## Next gate — AERO-HANGAR-02
+
+**Environment validation gate:** verify the Hangar's data contracts, vehicle schema, model-fidelity routing, Digital Twin event logging, provenance metadata and simulator adapters before adding live vehicle models. No physical flight-control commands or real aircraft actuation are connected at this stage.
+
+Validation checklist:
+- Vehicle Digital Twin ID/configuration schema defined.
+- L0–L5 fidelity transitions explicitly gated.
+- FS2002/MSFS2024 adapters remain isolated by simulator version.
+- Telemetry/event records preserve provenance and model version.
+- AI/robotics outputs remain simulation-only until separately validated.
+- Test scenarios can be replayed from recorded inputs.
+- Department cross-links resolve to a single authoritative Digital Twin object.
+
+**AERO-HANGAR-02: EXECUTED — architecture validation requirements registered.**
 **Date:** 19 September 2026
