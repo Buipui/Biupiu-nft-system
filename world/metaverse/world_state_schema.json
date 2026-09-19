@@ -1,0 +1,27 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu World State",
+  "type":"object",
+  "required":["worldId","version","entities"],
+  "properties":{
+    "worldId":{"type":"string","minLength":1},
+    "version":{"type":"integer","minimum":0},
+    "timestamp":{"type":"string"},
+    "entities":{
+      "type":"array",
+      "items":{
+        "type":"object",
+        "required":["id","kind","transform"],
+        "properties":{
+          "id":{"type":"string","minLength":1},
+          "kind":{"type":"string","minLength":1},
+          "transform":{"type":"object"},
+          "digitalTwinId":{"type":["string","null"]},
+          "owner":{"type":["string","null"]},
+          "provenance":{"type":["object","null"]}
+        }
+      }
+    }
+  },
+  "additionalProperties":false
+}
