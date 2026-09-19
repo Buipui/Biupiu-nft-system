@@ -119,3 +119,14 @@ PROP-07 should implement the numerical cycle model and application mission cases
 - UAV endurance mission
 
 The same turbine module must not be assumed optimal across all missions; the comparison engine will identify where scaling or a different architecture is required.
+
+
+## Phase 2 component registry implementation
+
+The microturbine is now treated as a reusable component, not as a vehicle/aircraft/ship twin.
+
+**Component:** `BPU-CMP-ENERGY-001` — Bioblade recuperated microturbine-generator.
+**Simulation:** `BPU-SIM-ENERGY-001` — recuperated microturbine cycle model.
+**Cross-divisions:** ENERGY ↔ AUTO ↔ MARINE ↔ AEROSPACE ↔ MATERIALS ↔ ELECTRICAL ↔ AI/COMPUTE.
+
+BT-AUTO, BT-MARINE, BT-EVTOL, BT-HELI and BT-UAV remain application/assembly contexts. Their mission models must reference the component twin and retain application-specific loads, thermal conditions, controls, safety and certification requirements.
