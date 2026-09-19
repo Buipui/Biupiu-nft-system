@@ -1,0 +1,8 @@
+{
+  "model_id":"PHYS-THERM","version":"1.0","status":"EXPERIMENTAL",
+  "equation":"dT/dt = (Q - k(T-T_env))/C",
+  "inputs":["heat_input_w","ambient_k","dt_s","heat_capacity_j_per_k","conductance_w_per_k"],
+  "outputs":["temperature_k"],
+  "use_cases":["battery/energy experiments","motor/turbine thermal envelope","manufacturing process studies","material screening"],
+  "limitations":["lumped approximation","requires physical calibration"]
+}
