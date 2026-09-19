@@ -1,0 +1,27 @@
+{
+  "schema":"BIUPIU-TEST-SELECTION-SCHEMA-v1.0",
+  "gate":"BM-10",
+  "selection_run_id":"string",
+  "candidate_id":"string",
+  "test_id":"string-or-null",
+  "priority_inputs":{
+    "pareto_relevance":"number-or-null",
+    "uncertainty_reduction":"number-or-null",
+    "model_sensitivity":"number-or-null",
+    "operating_condition_relevance":"number-or-null",
+    "manufacturing_feasibility":"number-or-null",
+    "hypothesis_discrimination":"number-or-null",
+    "information_gain":"number-or-null",
+    "estimated_cost_time":"number-or-null"
+  },
+  "selection_reason":"string",
+  "queue_status":"SELECTED|DEFERRED|BLOCKED|COMPLETED",
+  "evidence_boundary":"R&D queue metadata; not certification or universal performance ranking",
+  "traceability":{
+    "candidate_id":"string",
+    "evaluation_run_id":"string",
+    "pareto_run_id":"string",
+    "physical_test_id":"string-or-null",
+    "calibration_model_version":"string-or-null"
+  }
+}
