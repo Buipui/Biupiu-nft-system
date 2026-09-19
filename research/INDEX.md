@@ -446,3 +446,21 @@ Current external runtime check: Babylon.js `@babylonjs/core` and `@babylonjs/loa
 ## Index synchronization
 **Research Index v4.2 — Main Hub Runtime / Exterminate Gate**  
 **Updated:** 19 September 2026
+
+
+## MICROSOFT-DISCOVERY-INTEL-01 — Discovery Architecture Integration
+Added 19 September 2026:
+- `research/BIUPIU-MICROSOFT-DISCOVERY-INTEGRATION-v1.0.md`
+- `research/BIUPIU-MICROSOFT-DISCOVERY-RESOURCE-MANIFEST-v1.0.json`
+- `research/BIUPIU-INTELLIGENCE-ARCHITECTURE-v1.3.md`
+- `software/rnd-os-ai/src/biupiu_ai/discovery_architecture.py`
+- `software/rnd-os-ai/src/biupiu_ai/intelligence_core.py`
+- `software/rnd-os-ai/tests/test_discovery_architecture.py`
+
+Integrated architecture patterns: research task DAGs, dependency-aware execution, explicit task lifecycle, specialist agent routing, tool capability registry, autonomy/approval gates, evidence/provenance control, failure preservation and governed promotion.
+
+**Exterminate result:** malformed intermediate Intelligence-core edit was detected during repository inspection and replaced with a clean deterministic implementation. No Microsoft source code was copied.
+
+**Current gate:** architecture integrated; source-level repair complete; runtime CI and full licence/security validation remain environment gates.
+
+**Next gate:** execute local/runtime regression, then expand the task graph into the AI OS/Main OS/Biupiu OS adapter contracts and perform full repository-wide integration verification.
