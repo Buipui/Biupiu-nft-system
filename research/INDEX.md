@@ -367,3 +367,8 @@ Added `research/visual-assets/biupiu-visual-asset-manifest.schema.json`, an exam
 Added `research/BIUPIU-UNIVERSAL-ASSET-INTERCHANGE-RED-05-v1.0.md` and the provider-neutral interchange implementation under `packages/biupiu-render-pipeline/`. The new manifest carries sourceAssetId, sourceModelVersion, research/evidence/IP/licence states, geometry units/coordinate metadata, stable material IDs, PBR metadata and provenance into provider packages. GLTF, FBX and USD are supported as interchange targets, with OBJ/USDZ/native formats available to adapters. Provider-specific conversion remains adapter-controlled and lossy/unsupported features must be recorded rather than silently substituted.
 
 Added `src/interchange.ts`, a canonical test fixture and `tests/red-05.interchange.ts`. The render pipeline export file was normalized to real newlines and now exposes the RED-05 contract. The module contract was expanded to match all provider IDs already defined by the pipeline. **RED-05 status:** repository implementation complete; live cross-provider conversion/render validation remains gated on connected application hosts and measured outputs.
+
+
+## Lumion LUM-04 — automated validation + visualization provenance
+
+Added `research/visual-assets/validate_visual_asset.py`, `VISUALIZATION-JOB-PROVENANCE-v1.0.md`, and an example visualization-job record. The pipeline now defines a licence/provenance validation gate and records source model, renderer/version, scene version, output hashes and Digital Twin/project lineage for renders and videos. JSON Schema 2020-12 is the manifest validation basis. glTF/PBR remains the interoperability reference for portable real-time material description. **LUM-04 executed.**
