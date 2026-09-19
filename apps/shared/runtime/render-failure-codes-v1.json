@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.failure-codes.v1","prefixes":{"AUTH_":"authorization","ASSET_":"source asset","TIMEOUT_":"execution timeout","PROVIDER_TRANSIENT_":"temporary provider failure","PROVIDER_PERMANENT_":"terminal provider failure","VALIDATION_":"request validation"},"unknown_policy":"human-review-and-log"}
