@@ -1,0 +1,28 @@
+name: Biupiu Animation Gate 9 Artifact Contract
+
+on:
+  push:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate9-artifact.yml"
+  pull_request:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate9-artifact.yml"
+  workflow_dispatch:
+
+jobs:
+  schema-and-static-fixture:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate canonical contract JSON
+        run: python3 -m json.tool research/pipeline-tests/expected_scene_contract.json >/dev/null
+      - name: Validate example artifact JSON
+        run: python3 -m json.tool research/pipeline-tests/expected_export_artifact.example.json >/dev/null
+      - name: Validate canonical USDA
+        run: python3 research/pipeline-tests/compare_usda_contract.py
+      - name: Ensure example is never treated as runtime evidence
+        run: |
+          grep -q '"source": "EXTERNAL_DCC_OR_USD_RUNTIME"' research/pipeline-tests/expected_export_artifact.example.json
+          grep -q 'REPLACE_WITH_EXPORTER' research/pipeline-tests/expected_export_artifact.example.json
