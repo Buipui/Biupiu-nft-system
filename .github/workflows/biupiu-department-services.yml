@@ -1,0 +1,26 @@
+name: Biupiu Department Services Contract
+
+on:
+  push:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-adapters.ts"
+      - "apps/shared/runtime/DEPARTMENT-SERVICES-v1.md"
+  pull_request:
+    paths:
+      - "apps/shared/runtime/department-service.ts"
+      - "apps/shared/runtime/department-service-adapters.ts"
+      - "apps/shared/runtime/DEPARTMENT-SERVICES-v1.md"
+
+jobs:
+  service-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify service contract
+        run: |
+          grep -q 'RESEARCH_REPOSITORY' apps/shared/runtime/department-service.ts
+          grep -q 'AUTOMATION' apps/shared/runtime/department-service.ts
+          grep -q 'AI' apps/shared/runtime/department-service.ts
+          grep -q 'WORLD' apps/shared/runtime/department-service.ts
+          grep -q 'ContractOnlyDepartmentServiceAdapter' apps/shared/runtime/department-service-adapters.ts
