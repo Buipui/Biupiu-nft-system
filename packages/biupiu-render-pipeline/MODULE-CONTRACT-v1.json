@@ -1,7 +1,7 @@
 {
   "schema": "biupiu.module.render-pipeline.v1",
   "module": "Biupiu Render Pipeline",
-  "status": "roundtrip-drift-gate-integrated",
+  "status": "provider-equivalence-gate-integrated",
   "providers": [
     "BLENDER",
     "MAXON_CINEMA_4D",
@@ -41,5 +41,9 @@
   "redshift_validation_test": "packages/biupiu-render-pipeline/tests/redshift.validation.ts",
   "redshift_interoperability_gate": "research/BIUPIU-RENDER-INTEROPERABILITY-RED-04-v1.0.md",
   "interoperability_manifest": "packages/biupiu-render-pipeline/fixtures/red-04-interoperability-manifest.json",
-  "interoperability_test": "packages/biupiu-render-pipeline/tests/red-04.interoperability.ts"
+  "interoperability_test": "packages/biupiu-render-pipeline/tests/red-04.interoperability.ts",
+  "equivalence_engine": "packages/biupiu-render-pipeline/src/equivalence.ts",
+  "equivalence_fixture": "packages/biupiu-render-pipeline/fixtures/red-08-equivalence-matrix.json",
+  "equivalence_test": "packages/biupiu-render-pipeline/tests/red-08.equivalence.ts",
+  "equivalence_research_spec": "research/BIUPIU-PROVIDER-EQUIVALENCE-RED-08-v1.0.md"
 }
