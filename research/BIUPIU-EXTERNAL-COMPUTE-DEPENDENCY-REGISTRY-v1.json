@@ -1,0 +1,14 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-09-19",
+  "status":"candidate-reference-registry",
+  "policy":"No third-party code is copied into the repository solely because it is indexed. Each dependency requires licence, provenance, version, security and compatibility review.",
+  "candidates":[
+    {"id":"CGAL","role":"computational_geometry","source":"https://www.cgal.org/","licence":"GPLv3+ or commercial licence; verify package-specific terms","route":["MATH","GEOMETRY","COMPUTE","ROBOTICS","DIGITAL-TWIN"]},
+    {"id":"SciPy","role":"scientific_computing","source":"https://scipy.org/","licence":"BSD; verify version metadata","route":["MATH","COMPUTE","AI","DIGITAL-TWIN","AERO","ENERGY"]},
+    {"id":"SymPy","role":"symbolic_math","source":"https://github.com/sympy/sympy","licence":"BSD; verify version metadata","route":["MATH","COMPUTE","GEOMETRY","AI"]},
+    {"id":"Symbolics.jl","role":"symbolic_numeric_modelling","source":"https://github.com/JuliaSymbolics/Symbolics.jl","licence":"Verify repository/package licence before integration","route":["MATH","COMPUTE","AI","DIGITAL-TWIN"]},
+    {"id":"MoveIt2","role":"robot_manipulation_kinematics_planning","source":"https://moveit.ai/","licence":"BSD-3-Clause","route":["ROBOTICS","MATH","GEOMETRY","AI","DIGITAL-TWIN"]},
+    {"id":"Nav2","role":"robot_navigation","source":"https://nav2.org/","licence":"Verify repository licence/version at integration time","route":["ROBOTICS","AI","DIGITAL-TWIN","GEOMETRY"]}
+  ]
+}
