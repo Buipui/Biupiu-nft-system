@@ -1,0 +1,26 @@
+<!doctype html>
+<html lang="en"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Biupiu Vehicle Customizer</title>
+<style>
+body{font-family:system-ui;margin:0;background:#101612;color:#eee}header{padding:18px 24px;border-bottom:1px solid #334}main{display:grid;grid-template-columns:280px 1fr 320px;min-height:calc(100vh - 70px)}aside,.right{padding:18px;background:#151d18}.stage{display:grid;place-items:center;padding:30px;background:radial-gradient(circle,#26372c,#0c100e)}.car{width:65%;max-width:720px;aspect-ratio:2/1;background:linear-gradient(120deg,#b89b45,#315b43);border-radius:28% 35% 18% 18%;box-shadow:0 35px 50px #0008;position:relative}.wheel{position:absolute;width:18%;aspect-ratio:1;border-radius:50%;background:#111;border:10px solid #777;bottom:-10%;}.w1{left:13%}.w2{right:13%}.label{font-size:12px;color:#9db0a1}.row{display:flex;justify-content:space-between;gap:8px;margin:8px 0}select,input,button{width:100%;padding:9px;border-radius:8px;border:1px solid #48584d;background:#202a23;color:#fff}button{cursor:pointer;margin-top:8px}.metric{padding:8px;border-bottom:1px solid #29362e}.metric b{float:right}
+</style></head><body>
+<header><strong>BIUPIU AUTOMOTIVE — DIGITAL WORKSHOP / VEHICLE CUSTOMIZER v1.0</strong></header>
+<main><aside><h3>Build</h3>
+<div class="label">Vehicle Twin ID</div><input id="id" value="BPU-AUTO-TWIN-001">
+<h4>Exterior</h4><div id="controls"></div>
+<h4>Appearance</h4><div class="row"><input id="paint" type="color" value="#b89b45"><button onclick="applyPaint()">Paint</button></div>
+<button onclick="saveBuild()">Save Revision</button><button onclick="resetBuild()">Reset</button>
+</aside><section class="stage"><div class="car" id="car"><div class="wheel w1"></div><div class="wheel w2"></div></div></section>
+<section class="right"><h3>Digital Twin</h3><div class="metric">Mass <b id="mass">1450 kg</b></div><div class="metric">Power <b id="power">220 kW</b></div><div class="metric">Drag Cd <b id="drag">0.31</b></div><div class="metric">Downforce <b id="down">0 N</b></div><h4>Validation</h4><div id="status">Ready for configuration.</div><pre id="json" style="white-space:pre-wrap;font-size:11px"></pre></section></main>
+<script>
+const state={vehicleTwinId:"BPU-AUTO-TWIN-001",baseVehicle:{id:"BPU-DEMO-01",name:"Biupiu Prototype"},parts:{BODY_FRONT:"stock",BODY_REAR:"stock",SIDE_SKIRT:"stock",WIDEBODY:"none",SPOILER:"none",WHEEL_FRONT:"street",BRAKE:"standard"},appearance:{paint:"#b89b45"}};
+const options={BODY_FRONT:["stock","aero","track"],BODY_REAR:["stock","aero","track"],SIDE_SKIRT:["stock","aero","carbon"],WIDEBODY:["none","street","wide"],SPOILER:["none","ducktail","GT"],WHEEL_FRONT:["street","forged","aero"],BRAKE:["standard","sport","carbon-ceramic"]};
+const controls=document.getElementById("controls");
+Object.keys(options).forEach(k=>{const l=document.createElement("div");l.className="row";l.innerHTML='<span class="label">'+k+'</span><select></select>';const s=l.querySelector("select");options[k].forEach(v=>s.add(new Option(v,v)));s.value=state.parts[k];s.onchange=()=>{state.parts[k]=s.value;recalc();render()};controls.append(l)});
+function recalc(){let mass=1450,power=220,drag=.31,down=0;if(state.parts.WIDEBODY==="wide"){mass+=35;drag+=.015;down+=80}if(state.parts.WIDEBODY==="street"){mass+=18;down+=35}if(state.parts.WHEEL_FRONT==="forged")mass-=20;if(state.parts.BRAKE==="carbon-ceramic")mass-=15;if(state.parts.BRAKE==="sport")mass-=5;if(state.parts.SPOILER==="GT"){mass+=12;down+=120;drag+=.01}document.getElementById("mass").textContent=mass+" kg";document.getElementById("power").textContent=power+" kW";document.getElementById("drag").textContent=drag.toFixed(3);document.getElementById("down").textContent=down+" N";document.getElementById("status").textContent="Configuration valid — geometry/simulation checks pending asset import."}
+function render(){document.getElementById("car").style.background="linear-gradient(120deg,"+state.appearance.paint+",#315b43)";document.getElementById("json").textContent=JSON.stringify(state,null,2)}
+function applyPaint(){state.appearance.paint=document.getElementById("paint").value;render()}
+function saveBuild(){state.provenance={revision:new Date().toISOString(),source:"Biupiu Vehicle Customizer",licence:"Biupiu asset registry",validated:false};render();localStorage.setItem(state.vehicleTwinId,JSON.stringify(state));alert("Build revision saved locally.")}
+function resetBuild(){localStorage.removeItem(state.vehicleTwinId);location.reload()}
+recalc();render();
+</script></body></html>
