@@ -68,3 +68,12 @@ Research protocol: `research/BIUPIU-GLOBAL-MULTILINGUAL-RESEARCH-INTELLIGENCE-PR
 
 ### Hard-code boundary
 The language registry, validation rules and translation provenance contract are hard-coded into the Biupiu AI layer. Actual translation engines remain replaceable plugins/backends so the core architecture does not become vendor-locked.
+
+
+## Simulator/Open-Source Integration Gates
+
+- **SIM-OSS-01:** adapter layer implemented.
+- **SIM-OSS-02:** controlled validation pipeline registered.
+- **SIM-OSS-03:** non-executing backend validation harness implemented; production approval remains gated.
+
+The simulator adapter boundary only probes local availability and constructs safe commands. It does not install or automatically execute external backends.
