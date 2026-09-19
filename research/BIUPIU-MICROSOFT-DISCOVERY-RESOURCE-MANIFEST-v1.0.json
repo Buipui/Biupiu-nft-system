@@ -1,0 +1,11 @@
+{
+  "resource": "microsoft/discovery",
+  "source_type": "external_reference",
+  "integration_status": "architecture_adapted",
+  "adapted_components": ["task_dag","task_lifecycle","agent_registry_pattern","tool_registry_pattern","autonomy_policy","governed_promotion"],
+  "source_code_copy": false,
+  "license_review_required": true,
+  "verification_required": true,
+  "target_layers": ["intelligence","ai-os","main-os","biupiu-os"],
+  "next_gate": "run-local-tests-and-license-review"
+}
