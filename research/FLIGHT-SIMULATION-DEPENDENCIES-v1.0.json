@@ -1,0 +1,19 @@
+{
+  "schema": "biupiu.flight-simulation.dependencies.v1",
+  "purpose": "External dependency and research registry; no third-party source is vendored.",
+  "primary_host": "Unreal Engine 5",
+  "dependencies": [
+    {"id":"jsbsim","repository":"JSBSim-Team/jsbsim","role":["flight-dynamics","6dof","controls","propulsion"],"status":"mapped"},
+    {"id":"jsbsim-unreal","repository":"JSBSim-Team/jsbsim","path":"UnrealEngine","role":["ue5-fdm-bridge"],"status":"mapped"},
+    {"id":"flightgear","repository":"FlightGear/flightgear","role":["flight-simulation","reference","interoperability"],"status":"mapped"},
+    {"id":"simgear","repository":"FlightGear/simgear","role":["simulation-library"],"status":"mapped"},
+    {"id":"airsim","repository":"microsoft/AirSim","role":["autonomy","sensors","ue-simulation","api"],"status":"mapped"},
+    {"id":"project-airsim","repository":"iamaisim/ProjectAirSim","role":["autonomy","robotics","fixed-wing"],"status":"mapped"},
+    {"id":"openvsp","repository":"OpenVSP/OpenVSP","role":["parametric-aircraft-design","geometry"],"status":"mapped"},
+    {"id":"flightmare","repository":"uzh-rpg/flightmare","role":["robotics","flight-simulation"],"status":"research-reference"},
+    {"id":"orbiter","repository":"orbitersim/orbiter","role":["spaceflight","vehicle-simulation"],"status":"research-reference"},
+    {"id":"ortho4xp","repository":"oscarpilote/Ortho4XP","role":["terrain","scenery-generation"],"status":"research-reference"}
+  ],
+  "policy": "Keep upstream code/assets external unless licence review explicitly permits incorporation.",
+  "validation": "All generated Biupiu aircraft/simulation records must preserve source repository, version/commit, licence review, configuration and provenance."
+}
