@@ -1,0 +1,25 @@
+{
+  "version": "1.0",
+  "harvested": "2026-09-19",
+  "policy": {
+    "no_paywall_bypass": true,
+    "no_copyright_infringement": true,
+    "non_downloadable_sources": "metadata_and_canonical_link_only"
+  },
+  "records": [
+    {"id":"PM-2026-001","source":"Popular Mechanics","title":"Science and Energy archive discovery record","url":"https://www.popularmechanics.com/science/energy/","evidence":"secondary","status":"reference-only","route":["ENERGY","AI_OS"]},
+    {"id":"PM-2026-002","source":"Popular Mechanics","title":"Robotics archive discovery record","url":"https://www.popularmechanics.com/robotics/","evidence":"secondary","status":"reference-only","route":["ROBOTICS","AI_OS","DIGITAL_TWIN"]},
+    {"id":"J-2026-001","source":"Journal of Agriculture and Food Research","title":"Integrated digital twins for agricultural machinery and robotics: A systematic review","doi":"10.1016/j.jafr.2026.103051","url":"https://www.sciencedirect.com/science/article/pii/S2666154326004217","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["AGRI","ROBOTICS","DIGITAL_TWIN","CAD_SIM","AI_OS"]},
+    {"id":"J-2026-002","source":"Scientific Reports","title":"Early evidence for the benefits of biochar in organic regenerative agriculture","doi":"10.1038/s41598-026-40280-5","url":"https://www.nature.com/articles/s41598-026-40280-5","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["AGRI","BIOCHAR","CARBON"]},
+    {"id":"J-2026-003","source":"Scientific Reports","title":"Effects of biochar amendment on rhizosphere soil available nitrogen and crop growth","doi":"10.1038/s41598-026-42014-z","url":"https://www.nature.com/articles/s41598-026-42014-z","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["AGRI","BIOCHAR","SOIL"]},
+    {"id":"J-2026-004","source":"Scientific Reports","title":"Carbon-fixing strain-based biochar outperforms biochar alone in enhancing microbial symbiosis and soil organic carbon","doi":"10.1038/s41598-026-54048-4","url":"https://www.nature.com/articles/s41598-026-54048-4","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["AGRI","BIOCHAR","MICROBIOLOGY","CARBON"]},
+    {"id":"J-2026-005","source":"Scientific Reports","title":"Mechanical assessment with data-driven hybrid machine learning-based optimization of compressive strength of sustainable biochar-concrete composite","url":"https://www.nature.com/articles/s41598-026-59827-7","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["BIOCHAR","ADVANCED_MATERIALS","AI_OS","CAD_SIM"]},
+    {"id":"J-2026-006","source":"Journal of Field Robotics","title":"Exploring the Use and Impact of Composite Materials in Robotics: A Systematic Review","doi":"10.1002/rob.70231","url":"https://onlinelibrary.wiley.com/doi/full/10.1002/rob.70231","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["ROBOTICS","ADVANCED_MATERIALS","MANUFACTURING"]},
+    {"id":"J-2026-007","source":"RSC Applied Polymers","title":"Polymer-based smart materials for adaptive and sustainable robotic systems: a review","doi":"10.1039/d6lp00014b","url":"https://www.sciencedirect.com/org/science/article/pii/S2755371X26000289","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["ROBOTICS","POLYMERS","ADVANCED_MATERIALS"]},
+    {"id":"J-2026-008","source":"Scientific Reports","title":"Integrated phytoremediation and MgO Si HAP biochar for heavy metal remediation and maize productivity","url":"https://www.nature.com/articles/s41598-026-69783-x","open_access":true,"peer_reviewed":true,"status":"download-eligible-open-access","route":["AGRI","BIOCHAR","WATER","REMEDIATION"]},
+    {"id":"INV-2026-001","source":"InvestSA","title":"Publications and Investment Project Book","url":"https://www.investsa.gov.za/publications/","status":"government-reference","route":["INVESTSA","MASTER_INDEX","COMMERCIAL"]},
+    {"id":"INV-2026-002","source":"InvestSA","title":"Key Sectors","url":"https://www.investsa.gov.za/key-sectors/","status":"government-reference","route":["INVESTSA","COMMERCIAL"]},
+    {"id":"INV-2026-003","source":"InvestSA","title":"Agribusiness","url":"https://www.investsa.gov.za/key-sectors/agribusiness/","status":"government-reference","route":["AGRI","AGRO_PROCESSING","COMMERCIAL"]},
+    {"id":"INV-2026-004","source":"InvestSA","title":"Provincial investment opportunities including hemp straw processing and engineered hemp textiles","url":"https://www.investsa.gov.za/invest-in-provinces/","status":"government-reference","route":["HEMP","TEXTILES","AGRO_PROCESSING","INVESTSA"]}
+  ]
+}
