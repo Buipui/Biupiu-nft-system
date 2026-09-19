@@ -1,13 +1,15 @@
 <Window x:Class="Biupiu.Desktop.MainWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
-        Title="Biupiu R&D OS"
+        Title="Biupiu R&amp;D OS"
         Height="720"
         Width="1280">
-    <Grid>
-        <TextBlock Text="Biupiu R&amp;D OS"
-                   HorizontalAlignment="Center"
-                   VerticalAlignment="Center"
-                   FontSize="32" />
+    <Grid Margin="48">
+        <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <TextBlock Text="Biupiu R&amp;D OS" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,24"/>
+            <Button x:Name="FarmingButton" Content="SMART FARMING" Width="320" Margin="8" Click="FarmingButton_Click"/>
+            <Button x:Name="MetallurgyButton" Content="SMART METAL WORKSHOP" Width="320" Margin="8" Click="MetallurgyButton_Click"/>
+            <Button x:Name="RndButton" Content="R&amp;D OS" Width="320" Margin="8" Click="RndButton_Click"/>
+        </StackPanel>
     </Grid>
 </Window>
