@@ -1,0 +1,20 @@
+{
+  "schema":"BIUPIU-DIGITAL-TWIN-CALIBRATION-SCHEMA-v1.0",
+  "gate":"BM-11",
+  "loop_id":"string",
+  "candidate_id":"string",
+  "test_id":"string-or-null",
+  "prior_model_version":"string",
+  "calibrated_model_version":"string",
+  "data_refs":["string"],
+  "calibration_set_refs":["string"],
+  "validation_set_refs":["string"],
+  "parameter_updates":"object",
+  "error_metrics":"object",
+  "uncertainty_before":"object",
+  "uncertainty_after":"object",
+  "method":"string",
+  "status":"CALIBRATED|VALIDATION-FAILED|REPLICATION-REQUIRED|BLOCKED",
+  "provenance":"object",
+  "timestamp":"ISO-8601"
+}
