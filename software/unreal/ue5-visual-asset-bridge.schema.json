@@ -1,0 +1,20 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "biupiu-ue5-visual-asset-bridge.schema.json",
+  "title": "Biupiu UE5 Visual Asset Bridge",
+  "type": "object",
+  "required": ["asset_id", "visual_manifest", "ue5"],
+  "properties": {
+    "asset_id": {"type":"string"},
+    "visual_manifest": {"type":"string"},
+    "ue5": {
+      "type":"object",
+      "required":["project","asset_path","engine_major"],
+      "properties": {
+        "project":{"type":"string"},
+        "asset_path":{"type":"string"},
+        "engine_major":{"type":"integer","const":5}
+      }
+    }
+  }
+}
