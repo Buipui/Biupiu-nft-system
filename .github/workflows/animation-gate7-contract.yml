@@ -1,0 +1,22 @@
+name: Biupiu Animation Gate 7 Contract Validation
+
+on:
+  push:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate7-contract.yml"
+  pull_request:
+    paths:
+      - "research/pipeline-tests/**"
+      - ".github/workflows/animation-gate7-contract.yml"
+  workflow_dispatch:
+
+jobs:
+  contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate canonical USDA contract
+        run: python3 research/pipeline-tests/compare_usda_contract.py
+      - name: Validate JSON contract syntax
+        run: python3 -m json.tool research/pipeline-tests/expected_scene_contract.json >/dev/null
