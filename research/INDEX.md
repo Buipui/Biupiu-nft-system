@@ -211,3 +211,34 @@ Added 19 September 2026:
 ## Lumion LUM-07 — automated package build and validation
 
 Added `.github/workflows/visualization-package-validation.yml` plus `research/visual-assets/VISUALIZATION-PACKAGE-BUILD-v1.0.md`. The repository now has a read-only CI validation workflow for visual-asset JSON syntax, JSON Schema 2020-12 metadata, validator-script syntax and package integrity reporting. **LUM-07 executed.**
+
+
+## Global Intelligence Architecture Resource Audit — INTEL-GLOBAL-01
+
+**Date:** 19 September 2026  
+**Status:** IMPLEMENTED — research audit, architecture extension and deterministic core primitives registered.
+
+### Sources reviewed
+- NASA Open Source Software and NASA-IMPACT scientific-AI/orchestration projects.
+- MIT OpenCourseWare AI/ML/deep-learning material.
+- Wits AI/ML/reinforcement-learning research references.
+- Open GitHub knowledge-graph, grounded-RAG, literature-provenance and knowledge-management projects.
+- Open educational/book resources including Harvard CS249r Machine Learning Systems.
+
+### Core changes
+- Hybrid lexical + semantic + graph retrieval contract.
+- Typed evidence graph with SUPPORTS / CONTRADICTS / REFINES / BUILDS_ON / DERIVED_FROM / TESTS / PRODUCES / DEPENDS_ON relations.
+- Explicit UNSUPPORTED evidence state and fail-closed grounding primitive.
+- Dependency-impact closure primitive for change analysis.
+- Evaluation requirements expanded to grounding, contradiction detection, unsupported-claim refusal, regression and reproducibility.
+- External-resource provenance/licence registry.
+- Scientific lifecycle orchestration linked to the learning layer.
+
+**Files:**
+- `research/BIUPIU-INTELLIGENCE-RESOURCE-AUDIT-2026-09-19.md`
+- `research/BIUPIU-INTELLIGENCE-ARCHITECTURE-v1.2.md`
+- `research/BIUPIU-INTELLIGENCE-RESOURCE-REGISTRY-v1.0.json`
+- `software/rnd-os-ai/src/biupiu_ai/intelligence_core.py`
+- `software/rnd-os-ai/tests/test_intelligence_core.py`
+
+**Boundary:** third-party projects are references until individual licence, provenance, security and compatibility review. No third-party code is represented as Biupiu-owned merely because it was discovered.
