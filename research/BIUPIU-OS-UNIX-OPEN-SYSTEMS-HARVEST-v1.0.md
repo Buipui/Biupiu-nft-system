@@ -113,3 +113,21 @@ Runtime closure remains a separate checkpoint requiring build output, boot evide
 **OS-UNIX-HARVEST-01: ARCHITECTURE INTEGRATED.**
 
 **Runtime implementation and VM/host validation: OPEN.**
+
+
+## Ubuntu compatibility addition — 19 September 2026
+The Biupiu OS compatibility plan now explicitly includes **Ubuntu/Linux compatibility**.
+
+### Compatibility target
+- Ubuntu user-space and package ecosystem compatibility is an adapter target, not the canonical Biupiu kernel architecture.
+- Support should be tested against supported Ubuntu LTS environments first, with version-specific compatibility matrices rather than assuming universal compatibility.
+- Ubuntu's kernel documentation confirms that Ubuntu uses Linux kernels with release-specific flavours/variants, module sets, hardware enablement and structured regression/SRU testing. citeturn0search1turn0search3turn0search9
+- The compatibility layer should therefore isolate Ubuntu-specific assumptions behind adapters for boot, filesystem, device interfaces, packages, services and Linux/POSIX APIs.
+
+### Homebrew/Linux developer compatibility
+The developer background in custom ROM/Linux work is recorded as a design input for usability: the OS should provide a familiar Linux-oriented development path where practical, while keeping Biupiu's native contracts independent of Linux internals.
+
+### Proposed Ubuntu bridge
+Boot/runtime → Linux/POSIX compatibility → Ubuntu user-space adapter → package/service adapter → Biupiu native services.
+
+Ubuntu compatibility is **planned/integrated at architecture level**; runtime compatibility is still OPEN until an Ubuntu VM/host test produces evidence.
