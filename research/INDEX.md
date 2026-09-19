@@ -420,3 +420,8 @@ Added `research/BIUPIU-KNOWLEDGE-VISUAL-ASSET-ECOSYSTEM-v1.0.md`. This layer for
 
 **Biupiu R&D Research Index v3.4 — Knowledge & Visual Asset Ecosystem**  
 **Updated:** 19 September 2026
+
+## AI-22 audit readiness gate
+- `software/rnd-os-ai/src/biupiu_ai/audit_store.py` — explicit AuditStoreError and readiness contract.
+- `software/rnd-os-ai/tests/test_ai22.py` — ready/unready audit-store tests.
+- **AI-22 status:** audit-store failure/readiness contract implemented; gateway fail-closed integration and specification/index update remain gated by GitHub Contents API write availability.
