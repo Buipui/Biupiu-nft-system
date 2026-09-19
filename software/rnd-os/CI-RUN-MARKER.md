@@ -1,5 +1,5 @@
 # CI test gate marker
 
-Temporary diagnostic marker used to trigger the R&D OS CI workflow for repository/codebase reconciliation.
+Diagnostic marker used to trigger the R&D OS CI workflow after tenant enforcement reconciliation.
 
-No runtime code is changed by this marker.
+Tenant module commit: ca4c7eab8d401292a7110030c2549bd48c4e5566.
