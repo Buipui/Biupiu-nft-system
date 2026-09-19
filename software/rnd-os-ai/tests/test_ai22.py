@@ -11,3 +11,11 @@ def test_ai22_failed_store_reports_not_ready():
         assert False
     except AuditStoreError:
         assert True
+
+def test_ai22_failure_is_explicit():
+    store = FailingAuditStore()
+    try:
+        store.append(None)
+        assert False
+    except AuditStoreError as exc:
+        assert str(exc) == "audit-store-unavailable"
