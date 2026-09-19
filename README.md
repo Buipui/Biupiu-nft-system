@@ -88,6 +88,12 @@ Development/testnet targets:
 
 The reference contract provides capped supply, controlled minting, batch minting, token URI storage and ERC-2981 royalty signalling. Production use remains gated by contract testing, testnet deployment, verification, IP/licence review and final release approval.
 
+## Biupiu Intelligence Learning Layer
+
+The Intelligence layer now includes a versioned learning/provenance foundation for research, experiments, model outputs, failures and repository maintenance. Learning records preserve old/new lineage and do not automatically delete superseded material. Approved learning checkpoints can optionally be anchored through `contracts/BiupiuLearningRegistry.sol`; raw learning data remains off-chain.
+
+Core maintenance events — bug fixes, code changes, technology/dependency updates, audits, index repairs and regression evidence — can be represented as learning events. This creates a traceable feedback loop without claiming that the system autonomously trains or scientifically validates itself.
+
 ## Blockchain Network Rule
 
 The initial Biupiu blockchain architecture is an **EVM anchoring/registry network**, not an independently launched Biupiu Layer-1. GitHub remains the canonical detailed provenance record; approved hashes and release identities can later be anchored on-chain through a dedicated `BiupiuResearchRegistry` contract.
@@ -147,7 +153,7 @@ The repository now defines two Blender engine paths: the official Blender upstre
 
 ## Version
 
-**Biupiu NFT System v1.3 — Company Algorithm Network + Blockchain Registry Architecture + EVM Minting + Two-Image NFT Standard**  
+**Biupiu NFT System v1.4 — Intelligence Learning Layer + Blockchain Checkpoints + Company Algorithm Network**  
 **Updated:** 16 September 2026
 
 
