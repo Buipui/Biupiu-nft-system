@@ -9,6 +9,7 @@ from .provider_adapter import ProviderAdapter
 from .schemas import AiResult
 from .gateway_state import GatewayState
 from .audit_schema import DurableAuditEvent
+from .audit_store import AuditStore, InMemoryAuditStore
 
 @dataclass(frozen=True)
 class GatewayError:
@@ -24,18 +25,24 @@ class GatewayResponse:
     error: Optional[GatewayError] = None
 
 class GatewayService:
-    """Provider-neutral gateway with replay/rate and audit-state integration."""
+    """Provider-neutral gateway with replay/rate controls and durable-audit boundary."""
     def __init__(
         self,
         provider: ProviderAdapter,
         policy: Optional[GatewayPolicy] = None,
         state: Optional[GatewayState] = None,
         client_key: str = "anonymous",
+        audit_store: Optional[AuditStore] = None,
     ):
         self.provider = provider
         self.policy = policy or GatewayPolicy()
         self.state = state or GatewayState(self.policy.requests_per_minute)
         self.client_key = client_key
+        self.audit_store = audit_store or InMemoryAuditStore()
+
+    def _audit(self, request_id: str, event: str, outcome: str, error_code: Optional[str] = None) -> None:
+        self.state.record(request_id, event, outcome)
+        self.audit_store.append(DurableAuditEvent("1.0", request_id, event, outcome, self.client_key, error_code))
 
     def ask(
         self, *, authorization: Optional[str], task: str, evidence=None,
@@ -49,7 +56,7 @@ class GatewayService:
 
         admission = self.state.admit(self.client_key, idempotency_key)
         if not admission.accepted:
-            self.state.record(request_id, "gateway.rejected", admission.reason)
+            self._audit(request_id, "gateway.rejected", admission.reason, admission.reason)
             return self._error(request_id, admission.reason, admission.reason)
 
         evidence = evidence or []
@@ -58,7 +65,7 @@ class GatewayService:
         dataset_ids = dataset_version_ids or [getattr(d, "version_id", str(d)) for d in dataset_versions]
         decision = validate_request(task, source_ids, dataset_ids, self.policy)
         if not decision.accepted:
-            self.state.record(request_id, "gateway.rejected", decision.reason)
+            self._audit(request_id, "gateway.rejected", decision.reason, "invalid-request")
             return self._error(request_id, "invalid-request", decision.reason)
 
         context = GroundedContext(task, dataset_versions, evidence)
@@ -66,10 +73,10 @@ class GatewayService:
             result = self.provider.generate(context)
         except Exception as exc:
             error_type = type(exc).__name__
-            self.state.record(request_id, "gateway.provider-failure", error_type)
+            self._audit(request_id, "gateway.provider-failure", error_type, "provider-failure")
             return self._error(request_id, "provider-failure", error_type)
 
-        self.state.record(request_id, "gateway.accepted", "success")
+        self._audit(request_id, "gateway.accepted", "success")
         return GatewayResponse(True, request_id, result=result)
 
     @staticmethod
