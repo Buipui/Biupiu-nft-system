@@ -382,3 +382,8 @@ Added `packages/biupiu-render-pipeline/src/conversion.ts`, a provider-neutral co
 ## FS2002 Nexus Mods × GitHub cross-link
 
 Added `research/BIUPIU-FS2002-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The track separates Microsoft Flight Simulator 2002 from modern MSFS content and cross-links historically relevant Nexus/GMax authoring documentation with open-source GitHub tooling for legacy scenery, BGL analysis, simulator-state interoperability, head tracking and period technical documentation. **FS2K2-01 discovery/cross-link gate: executed.** No third-party game assets were copied or redistributed, and no live FS2002 compatibility is claimed.
+
+
+## Microsoft Flight Simulator 2024 — Nexus Mods × GitHub cross-link
+
+Added `research/BIUPIU-MSFS2024-NEXUS-GITHUB-CROSS-LINK-v1.0.md`. The new MSFS 2024 track separates current simulator-generation resources from FS2002/FSX/MSFS 2020 material and cross-links Nexus aircraft, EFB/cockpit, texture/livery, localization and visual resources with GitHub avionics, cockpit I/O, AI, SimConnect and addon-management tooling. **MSFS24-01 discovery/cross-link gate: executed.** No third-party Nexus assets or proprietary binaries were copied.
