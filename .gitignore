@@ -1,0 +1,31 @@
+# Unreal Engine generated data
+Binaries/
+DerivedDataCache/
+Intermediate/
+Saved/
+.vs/
+*.suo
+*.user
+*.opensdf
+*.sdf
+*.VC.db
+
+# Generated project files
+*.sln
+*.csproj
+*.vcxproj
+*.vcxproj.filters
+
+# Build products
+Build/
+
+# IDE / OS
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
+
+# Secrets
+.env
+.env.*
+!.env.example
