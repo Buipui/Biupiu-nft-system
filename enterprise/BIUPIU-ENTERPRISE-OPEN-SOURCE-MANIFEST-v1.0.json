@@ -1,0 +1,29 @@
+{
+  "schema": "biupiu.enterprise.opensource.manifest.v1",
+  "status": "indexed",
+  "policy": "external references require licence, security, compatibility and validation gates before code incorporation",
+  "digital_twin": [
+    {"name":"Eclipse Ditto","role":["twin-state","iot","device-abstraction"]},
+    {"name":"Eclipse BaSyx","role":["AAS","industry-4.0","asset-semantics"]},
+    {"name":"FIWARE NGSI-LD","role":["context-data","interoperability","smart-systems"]},
+    {"name":"W3C Web of Things","role":["semantic-interoperability","thing-description"]},
+    {"name":"Digital Twin Consortium frameworks","role":["architecture","interoperability","governance"]},
+    {"name":"IndustryFusion Process Data Twin","role":["manufacturing-data","semantic-integration"]},
+    {"name":"OpenModelica/FMI","role":["engineering-simulation","model-exchange"]},
+    {"name":"ROS 2 / Gazebo","role":["robotics","simulation","control-interface"]},
+    {"name":"PyBullet","role":["physics-simulation","robotics"]},
+    {"name":"O3DE","role":["3d","simulation","visualisation"]}
+  ],
+  "biupiu_routes": {
+    "DMS":"enterprise/control-plane",
+    "DIGITAL_TWIN":"digital-twin",
+    "ONTOLOGY":"enterprise/ontology",
+    "SIMULATION":"simulators",
+    "AI":"software/rnd-os-ai",
+    "ALGORITHMS":"research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md",
+    "BLOCKCHAIN":"research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md",
+    "PROVENANCE":"trust",
+    "COMMERCIAL":"enterprise/commercial",
+    "TREASURY":"enterprise/treasury"
+  }
+}
