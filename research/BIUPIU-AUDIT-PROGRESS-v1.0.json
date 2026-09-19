@@ -1,22 +1,70 @@
 {
-  "version":"1.0",
-  "updated":"2026-09-19",
-  "schema":"BIUPIU-AUDIT-PROGRESS",
-  "states":["DISCOVERED","ISOLATED","MAPPED","IMPLEMENTED","TESTED","VERIFIED","INTEGRATED","PROMOTION-CANDIDATE","RELEASED"],
-  "current_audit":{
-    "audit_id":"AI-BLOCKCHAIN-01",
-    "state":"INTEGRATED",
-    "files_added":2,
-    "files_modified":2,
-    "departments":["AI","COMPUTE","ROBOTICS","PRIVATE-RD","DIGITAL-TWIN","AERO","MARINE","ADV-MFG","MATERIALS","AGRICULTURE","WATER","CONSERVATION","CLIMATE","BLOCKCHAIN","NFT","IP"],
-    "functionality":["cross-department resource manifest","AI/blockchain/algorithm architecture map","machine-readable resource registry","audit-state model"],
-    "third_party_code_imported":false,
-    "tests":{"repository_readback":"PASS","json_structure_review":"PASS","runtime_execution":"NOT_RUN"},
-    "next_gate":"Implement only licensed selected components in isolated modules and add executable tests."
+  "version": "1.0",
+  "updated": "2026-09-19",
+  "schema": "BIUPIU-AUDIT-PROGRESS",
+  "states": [
+    "DISCOVERED",
+    "ISOLATED",
+    "MAPPED",
+    "IMPLEMENTED",
+    "TESTED",
+    "VERIFIED",
+    "INTEGRATED",
+    "PROMOTION-CANDIDATE",
+    "RELEASED"
+  ],
+  "current_audit": {
+    "audit_id": "AUDIT-CORE-02",
+    "state": "VERIFIED",
+    "date": "2026-09-19",
+    "operation": "EXTERMINATE-PROTOCOL + NEXT-GATE",
+    "findings": [
+      "Existing housekeeping protocol found and retained.",
+      "TODO/FIXME findings are treated as review items, not automatic defects.",
+      "Open issue #25 is the authoritative deferred execution register for Unreal/CI/physics/integration.",
+      "No evidence was found in this gate to claim full Unreal, CI, build, packaging or numerical validation execution."
+    ],
+    "fixes_applied": [
+      "Added repository audit protocol.",
+      "Added machine-readable progress ledger.",
+      "Indexed AUDIT-CORE-01 in research index.",
+      "Verified repository read-back after writes."
+    ],
+    "unresolved": [
+      "P1 local Unreal validation",
+      "P1 full CI/build execution",
+      "P1 extended physics validation",
+      "P2 executable world-system integration",
+      "P2 private/commercial separation audit"
+    ],
+    "tests": {
+      "repository_readback": "PASS",
+      "progress_json_parse": "PASS",
+      "runtime_execution": "NOT_RUN"
+    },
+    "next_gate": "Execute repository-native CI/build checks and available executable tests; then inspect failures and apply evidence-backed fixes."
   },
-  "history":[
-    {"audit_id":"PHYS-SYS-01","state":"IMPLEMENTED","date":"2026-09-19"},
-    {"audit_id":"FLIGHT-SIM-01","state":"INTEGRATED","date":"2026-09-19"},
-    {"audit_id":"AI-BLOCKCHAIN-01","state":"INTEGRATED","date":"2026-09-19"}
+  "history": [
+    {
+      "audit_id": "PHYS-SYS-01",
+      "state": "IMPLEMENTED",
+      "date": "2026-09-19"
+    },
+    {
+      "audit_id": "FLIGHT-SIM-01",
+      "state": "INTEGRATED",
+      "date": "2026-09-19"
+    },
+    {
+      "audit_id": "AI-BLOCKCHAIN-01",
+      "state": "INTEGRATED",
+      "date": "2026-09-19"
+    },
+    {
+      "audit_id": "AUDIT-CORE-02",
+      "state": "VERIFIED",
+      "date": "2026-09-19",
+      "note": "Exterminate protocol completed as an evidence-preserving audit; existing housekeeping/deferred execution controls reconciled."
+    }
   ]
 }
