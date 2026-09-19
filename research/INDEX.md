@@ -395,3 +395,22 @@ The audit records candidate references including memory services, AI evaluation/
 ## Index synchronization
 **Research Index v4.0 — Gate Learning / Conflict Resolution / Open Resource Audit**  
 **Updated:** 19 September 2026
+
+
+## WORLD-HUB-01 — Main Hub Runtime Resource Gate
+
+Added 19 September 2026:
+- `world/client/` — executable Babylon.js Main Hub prototype client.
+- `world/client/src/routeManifest.ts` — route manifest aligned to the canonical Main Hub scene and destination-gate policy.
+- `world/client/src/destinationLoader.ts` — fail-closed destination routing boundary; it returns route intent/metadata and does not bypass authorization.
+- `world/client/src/main.ts` — updated scene bootstrap with gate-selection routing hooks.
+- `world/environments/BIUPIU-MAIN-HUB-RUNTIME-RESOURCE-MANIFEST-v1.0.json` — runtime resource and provenance manifest.
+- `research/BIUPIU-EXTERMINATE-PROTOCOL-MAIN-HUB-v1.0.md` — non-destructive defect/conflict cleanup record.
+
+Current external runtime check: Babylon.js `@babylonjs/core` and `@babylonjs/loaders` 9.27.1 are current package releases observed during this gate. citeturn0search2turn0search4
+
+**WORLD-HUB-01 status: EXECUTED — dependency refresh, fail-closed route boundary, runtime manifest and index synchronization committed. Local npm install/build and browser execution remain host-validation gates.**
+
+## Index synchronization
+**Research Index v4.2 — Main Hub Runtime / Exterminate Gate**  
+**Updated:** 19 September 2026
