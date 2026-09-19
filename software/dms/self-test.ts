@@ -1,0 +1,14 @@
+import { DMSService } from "./dms-service.js";
+import type { Principal } from "./types.js";
+const dms=new DMSService();
+const operator:Principal={id:"demo-operator",role:"STAFF_OPERATOR",accountStatus:"ACTIVE",siteIds:["SITE-WC-01"],productIds:["HEMP-LINE-01"],subscription:"CORE"};
+const proManager:Principal={id:"demo-manager",role:"SITE_MANAGER",accountStatus:"ACTIVE",siteIds:["SITE-WC-01"],productIds:["HEMP-LINE-01"],subscription:"PRO",mfaVerified:true};
+const suspended:Principal={...proManager,id:"suspended",accountStatus:"SUSPENDED"};
+if(!dms.can(operator,"hemp.processing",{siteId:"SITE-WC-01"})) throw new Error("operator should process hemp");
+if(dms.can(operator,"ai.forecasting",{siteId:"SITE-WC-01"})) throw new Error("CORE operator must not receive AI forecasting");
+if(!dms.can(proManager,"ai.forecasting",{siteId:"SITE-WC-01"})) throw new Error("PRO manager should receive AI forecasting");
+if(dms.can(suspended,"hemp.processing",{siteId:"SITE-WC-01"})) throw new Error("suspended account must be denied");
+if(!dms.can(proManager,"quality.release",{siteId:"SITE-WC-01"})) throw new Error("MFA-qualified QA release should be allowed");
+if(dms.can({...proManager,mfaVerified:false},"quality.release",{siteId:"SITE-WC-01"})) throw new Error("QA release must require MFA");
+if(dms.can(proManager,"rnd.experiment-management",{siteId:"SITE-WC-01"})) throw new Error("R&D experiment management requires R&D role/tier");
+console.log("Biupiu DMS authorization self-test: PASS",dms.getAudit().length);
