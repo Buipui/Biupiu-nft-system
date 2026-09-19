@@ -91,9 +91,23 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 
 **PHYS-SYS-01 status: IMPLEMENTED — architecture, prototype kernel, model contracts and promotion gate committed. Domain validation and integration with full external solvers remain future validation gates.**
 
+## Graphics / Physics / Upscaling Integration — GPU-SYS-01
+
+Added 19 September 2026:
+- `research/GRAPHICS-PHYSICS-UPSCALING-GITHUB-RESOURCE-REGISTRY-v1.0.md` — current GitHub resource map and licence boundary.
+- `research/GRAPHICS-PHYSICS-UPSCALING-DEPENDENCIES-v1.0.json` — machine-readable dependency registry.
+- `private-rd-centre/docs/GRAPHICS-PHYSICS-UPSCALING-ADAPTER-CONTRACT-v1.0.md` — stable adapter interfaces for graphics, physics and reconstruction.
+- `packages/biupiu-graphics-engine/package.json` — graphics abstraction package.
+- `packages/biupiu-physics-engine/package.json` — Jolt/PhysX/Bullet abstraction package.
+- `packages/biupiu-upscaling/package.json` — FSR/XeSS/research reconstruction abstraction package.
+
+Registered references include Vulkan/DX12/DXR rendering, glTF, Jolt Physics, PhysX, Bullet/PyBullet, AMD FidelityFX/FSR, Intel XeSS, libplacebo and selected research-only upscaling projects.
+
+**GPU-SYS-01 status: EXECUTED — registry, dependency manifest, adapter contracts and package definitions committed. Local compilation, GPU benchmarks and runtime acceptance remain validation gates.**
+
 ## Version
 
-**Biupiu R&D Research Index v3.7 — Audit + Flight Simulation + Private Systems Physics Centre**
+**Biupiu R&D Research Index v3.8 — Audit + Flight Simulation + Private Systems Physics + GPU Graphics/Reconstruction**
 **Updated:** 19 September 2026
 
 > Index synchronization note: This is the authoritative current index state for the flight-simulation integration. Historical gate records remain in their respective files.
