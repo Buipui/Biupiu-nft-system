@@ -1,0 +1,45 @@
+{
+  "schema_version": "PROP-18-v1.0",
+  "records": [
+    {
+      "test_id": "PROP15-AUTO-BT70",
+      "validation_status": "planned",
+      "evidence_state": "NO_MEASURED_DATA",
+      "anomaly_flag": "INSUFFICIENT_DATA",
+      "measured_evidence_complete": false,
+      "review_passed": false
+    },
+    {
+      "test_id": "PROP15-MARINE-BT140",
+      "validation_status": "planned",
+      "evidence_state": "NO_MEASURED_DATA",
+      "anomaly_flag": "INSUFFICIENT_DATA",
+      "measured_evidence_complete": false,
+      "review_passed": false
+    },
+    {
+      "test_id": "PROP15-EVTOL-BT200",
+      "validation_status": "planned",
+      "evidence_state": "NO_MEASURED_DATA",
+      "anomaly_flag": "INSUFFICIENT_DATA",
+      "measured_evidence_complete": false,
+      "review_passed": false
+    },
+    {
+      "test_id": "PROP15-HELI-BT300",
+      "validation_status": "planned",
+      "evidence_state": "NO_MEASURED_DATA",
+      "anomaly_flag": "INSUFFICIENT_DATA",
+      "measured_evidence_complete": false,
+      "review_passed": false
+    },
+    {
+      "test_id": "PROP15-UAV-BT70",
+      "validation_status": "planned",
+      "evidence_state": "NO_MEASURED_DATA",
+      "anomaly_flag": "INSUFFICIENT_DATA",
+      "measured_evidence_complete": false,
+      "review_passed": false
+    }
+  ]
+}
