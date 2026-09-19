@@ -27,3 +27,4 @@ jobs:
       - run: npm install
       - run: npm run build:packages
       - run: node packages/biupiu-firefly/smoke-test.mjs
+      - run: node packages/biupiu-render-pipeline/blender-adapter.smoke.mjs
