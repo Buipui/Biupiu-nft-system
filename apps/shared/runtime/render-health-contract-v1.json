@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.health.v1","checks":["provider-availability","latency","failure-rate","asset-readiness"],"selection":"health-aware","fallback":"bounded-and-audited","client_authority":false}
