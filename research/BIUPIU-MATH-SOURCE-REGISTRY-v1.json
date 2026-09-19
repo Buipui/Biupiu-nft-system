@@ -1,0 +1,20 @@
+{
+  "schema_version":"1.0",
+  "date":"2026-09-19",
+  "status":"active-research-registry",
+  "sources":[
+    {"id":"DARPA-expMath","type":"research-program","url":"https://www.darpa.mil/research/programs/expmath-exponential-mathematics","focus":["lemma decomposition","autoformalization","formal proof","research-level AI4Math"]},
+    {"id":"DARPA-DIAL","type":"research-program","url":"https://www.darpa.mil/research/programs/mathematics-for-the-discovery-of-algorithms-and-architectures","focus":["algorithm discovery","optimization","multiscale/multiphysics numerical algorithms"]},
+    {"id":"NASA-OSS","type":"open-source","url":"https://code.nasa.gov/","focus":["optimization","linear programming","scientific software"]},
+    {"id":"NASA-NTRS-MF-UQ","type":"technical-report","url":"https://ntrs.nasa.gov/citations/20250007032","focus":["multi-fidelity optimization","uncertainty quantification","trajectory optimization"]},
+    {"id":"NASA-Copernicus","type":"open-source-software","url":"https://www.nasa.gov/general/copernicus/","focus":["trajectory design","optimization","Python API","CR3BP"]},
+    {"id":"ITMO-OpenBooks","type":"repository","url":"https://openbooks.itmo.ru/","focus":["mathematical models","algorithms","optimization","verification","control"]},
+    {"id":"Math-Net-Ru","type":"repository","url":"https://www.mathnet.ru/","focus":["theorems","optimal control","mathematical physics","numerical mathematics"]},
+    {"id":"GitHub-ORTools","type":"code","url":"https://github.com/google/or-tools","focus":["constraint programming","linear programming","routing","graph algorithms"]},
+    {"id":"GitHub-AlphaGeometry","type":"code","url":"https://github.com/google-deepmind/alphageometry","focus":["geometry theorem proving","DDAR"]},
+    {"id":"GitHub-MathNet","type":"code","url":"https://github.com/ShadeAlsha/MathNet","focus":["multilingual mathematical retrieval","problem solving","RAG"]},
+    {"id":"GitHub-MathAdv","type":"code","url":"https://github.com/margotyjx/MathAdv","focus":["Lean theorem proving","robustness evaluation"]},
+    {"id":"GitHub-MathMCP","type":"code","url":"https://github.com/3aKHP/math-mcp","focus":["symbolic math","calculus","linear algebra","number theory","statistics"]}
+  ],
+  "promotion_state":["discovered-reference","licence-verified","compatibility-tested","validated-incorporated"]
+}
