@@ -168,3 +168,48 @@ A passed architecture gate does not imply runtime deployment.
 ## Status
 
 **OS, DMS and subsystem architecture are now registered as one linked system-of-systems.** Implementation, CI, VM boot, authenticated transport, live telemetry, production security, database migration and physical-actuation validation remain separate gates.
+
+
+## 11. Machine Intelligence & Capability Layer — Gate 20 September 2026
+
+Canonical architecture: `research/BIUPIU-MACHINE-INTELLIGENCE-ARCHITECTURE-v1.0.md`.
+
+Biupiu OS is explicitly defined as a new machine-capable software architecture, not as a Windows clone. Its core differentiator is the combination of machine-readable capabilities, governed learning, machine communication, Digital Twins, mathematics, physics and simulation.
+
+### Machine capability lifecycle
+
+`DISCOVER -> IDENTIFY -> DESCRIBE -> TWIN -> VALIDATE -> CONNECT -> OPERATE -> OBSERVE -> LEARN -> UPDATE`
+
+### Intelligence authority lifecycle
+
+`OBSERVE -> LEARN -> PROPOSE -> SIMULATE -> VALIDATE -> AUTHORISE -> EXECUTE`
+
+### Machine-readable abstraction
+
+Applications consume capability contracts rather than depending directly on vendor-specific hardware assumptions. Transport-specific adapters may remain beneath the abstraction for USB, Ethernet/IP, serial, CAN/CAN-FD, Modbus, OPC UA, MQTT, Bluetooth, Wi-Fi, GPIO and robotics/industrial interfaces.
+
+### Semantic system graph
+
+`Machine -> Sensor -> Actuator -> Algorithm -> Digital Twin -> Physics Model -> Mathematics Model -> Dataset -> Provenance -> Product`
+
+### Recursive Digital Twin
+
+Canonical architecture: `research/BIUPIU-RECURSIVE-DIGITAL-TWIN-ARCHITECTURE-v1.0.md`.
+
+Twins may contain child twins and participate in higher-order twins while preserving stable identity, parent/child relationships, model versions, state separation, provenance and validation boundaries. Twin-of-Twin composition is treated as a governed system graph, not uncontrolled duplication.
+
+### Self-development / System Builder
+
+The OS development environment is intended to assist in constructing and validating the OS itself:
+
+`NEW CAPABILITY -> DEPENDENCY ANALYSIS -> ARCHITECTURE IMPACT -> IMPLEMENTATION -> TEST GENERATION -> SIMULATION -> VALIDATION -> HUMAN APPROVAL -> INTEGRATION`
+
+### Maths / Physics integration
+
+Existing MATH and physics/simulation engines are first-class system resources. Their outputs feed geometry, Digital Twins, validation and governed learning records.
+
+### Architecture boundary
+
+The system may innovate within the specification; it may not forget the specification. Simulated, desired or inferred state must never silently become observed physical state, and physical actuation remains subject to independent authority and safety gates.
+
+**Gate status:** Architecture integrated; implementation, conformance, security, hardware-in-the-loop and production validation remain separate gates.
