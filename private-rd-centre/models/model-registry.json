@@ -1,0 +1,17 @@
+{
+  "schema_version": "1.0",
+  "centre": "Biupiu World Private R&D Centre",
+  "customer_access": false,
+  "promotion_requires_owner_approval": true,
+  "model_families": [
+    {"id":"PHYS-RB6","name":"Rigid-body 6-DoF","domains":["aero","marine","automotive","robotics","space"],"status":"EXPERIMENTAL"},
+    {"id":"PHYS-THERM","name":"Lumped thermal","domains":["energy","materials","manufacturing","propulsion"],"status":"EXPERIMENTAL"},
+    {"id":"PHYS-ROT","name":"Rotating machinery","domains":["turbines","motors","pumps","robotics"],"status":"EXPERIMENTAL"},
+    {"id":"PHYS-AERO","name":"Aerodynamic force/drag model","domains":["aero","eVTOL","vehicles"],"status":"CANDIDATE"},
+    {"id":"PHYS-FLUID","name":"Fluid/pressure network","domains":["water","agriculture","process"],"status":"PLANNED"},
+    {"id":"PHYS-STRUCT","name":"Lumped structural/compliance","domains":["composites","vehicles","machinery"],"status":"PLANNED"},
+    {"id":"PHYS-POWER","name":"Electrical/power system","domains":["energy","robotics","manufacturing"],"status":"PLANNED"},
+    {"id":"PHYS-MAT","name":"Material property model","domains":["hemp","composites","textiles","advanced-materials"],"status":"PLANNED"}
+  ],
+  "promotion_states":["PRIVATE","EXPERIMENTAL","VALIDATED","CANDIDATE","WORLD"]
+}
