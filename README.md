@@ -149,3 +149,10 @@ The repository now defines two Blender engine paths: the official Blender upstre
 
 **Biupiu NFT System v1.3 — Company Algorithm Network + Blockchain Registry Architecture + EVM Minting + Two-Image NFT Standard**  
 **Updated:** 16 September 2026
+
+
+## AI × Blockchain × Algorithm Research Integration
+
+Current reusable research integration is indexed in `research/BIUPIU-AI-BLOCKCHAIN-ALGORITHM-INTEGRATION-v1.0.md` and `research/BIUPIU-AI-BLOCKCHAIN-RESOURCE-MANIFEST-v1.0.json`. The architecture connects persistent AI memory, agent orchestration, hard constraints, Digital Twin simulation, verifiable computation, blockchain provenance and controlled agent transactions across the relevant R&D streams.
+
+Third-party projects remain external references until licence, dependency, security and validation gates are passed. No external code is represented as Biupiu-owned code merely by being indexed.
