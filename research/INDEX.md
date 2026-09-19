@@ -105,3 +105,16 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 - `software/rnd-os-ai/tests/test_ai23.py` — registry validation tests.
 - `software/rnd-os-ai/src/biupiu_ai/gateway_service.py` — audit-store readiness and write-failure fail-closed handling.
 - **AI-23 status:** resource registry, specification, tests and gateway safety boundary synchronized.
+
+
+## Production Code Health — 2026-09-19
+
+Added `research/BIUPIU-PRODUCTION-CODE-HEALTH-GATE-2026-09-19.md`.
+
+- Fixed the verified R&D OS API `research` collection routing defect.
+- Added a regression test for `GET /v1/research`.
+- Added dedicated API CI coverage under `.github/workflows/rnd-os-api-ci.yml`.
+- Established the four-state release rule: verified working, known issue/pending verification, intentional learning/research, and unverified.
+- Full runtime/CI execution remains the final production verification boundary.
+
+**Production Code Health Gate status: IMPLEMENTED — CI/runtime verification pending.**
