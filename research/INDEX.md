@@ -126,3 +126,22 @@ The repository records this as a private R&D namespace, but GitHub directory nam
 - `software/rnd-os-ai/tests/test_ai26.py` — integration-boundary tests.
 - `research/BIUPIU-AI-26-GATEWAY-INTEGRATION-v1.0.md` — AI-26 specification.
 - **AI-26 status:** gateway integration committed; end-to-end GatewayService harness remains the next gate.
+
+
+## OS / AI architecture separation — SEPARATION-01
+
+Registered 19 September 2026:
+
+- `research/BIUPIU-OS-AI-SEPARATION-ARCHITECTURE-v1.0.md` — canonical boundary between the Core OS and Biupiu AI.
+- `software/RND-OS-V1.0-IMPLEMENTATION.md` — original R&D OS v1.0 designated as the Core OS Baseline.
+- `software/rnd-os-ai/README.md` — intelligence-layer boundary retained separately.
+
+### Canonical model
+
+**Biupiu OS = stable core/integration layer.**
+
+**Biupiu AI = modular intelligence layer.**
+
+The layers remain integrated through explicit interfaces. AI cannot bypass OS validation, provenance or authoritative state controls.
+
+**SEPARATION-01 status: EXECUTED — architecture separation registered and repository index synchronized.**
