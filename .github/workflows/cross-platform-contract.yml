@@ -1,0 +1,40 @@
+name: Biupiu Cross-Platform Contract CI
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "packages/biupiu-rnd-os/**"
+      - "packages/biupiu-shared/**"
+      - "docs/CROSS-PLATFORM-BUILD-MATRIX-v1.0.md"
+      - "research/BIUPIU-CROSS-PLATFORM-RESEARCH-GATE-01-v1.0.md"
+      - ".github/workflows/cross-platform-contract.yml"
+  pull_request:
+    paths:
+      - "packages/biupiu-rnd-os/**"
+      - "packages/biupiu-shared/**"
+      - "docs/CROSS-PLATFORM-BUILD-MATRIX-v1.0.md"
+      - "research/BIUPIU-CROSS-PLATFORM-RESEARCH-GATE-01-v1.0.md"
+      - ".github/workflows/cross-platform-contract.yml"
+
+jobs:
+  platform-contract:
+    strategy:
+      matrix:
+        os: [ubuntu-latest, macos-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Platform smoke
+        shell: bash
+        run: |
+          node -e "console.log(process.platform, process.arch, process.version)"
+      - name: Verify platform contract
+        shell: bash
+        run: |
+          test -f packages/biupiu-rnd-os/src/platform.ts
+          test -f packages/biupiu-rnd-os/PLATFORM-ADAPTERS-v1.0.md
+          test -f docs/CROSS-PLATFORM-BUILD-MATRIX-v1.0.md
