@@ -242,3 +242,20 @@ Added `.github/workflows/visualization-package-validation.yml` plus `research/vi
 - `software/rnd-os-ai/tests/test_intelligence_core.py`
 
 **Boundary:** third-party projects are references until individual licence, provenance, security and compatibility review. No third-party code is represented as Biupiu-owned merely because it was discovered.
+
+
+## AI Consciousness / Self-Awareness Boundary — CONSCIOUSNESS-BOUNDARY-01
+
+Added 19 September 2026:
+- `research/BIUPIU-AI-CONSCIOUSNESS-BOUNDARY-v1.0.md` — hard-core architectural and human-factors boundary.
+
+### Protected distinction
+Biupiu must distinguish intelligence/capability, learning, memory, self-monitoring and permissioned autonomy from subjective consciousness or sentience. Behaviour that appears self-aware is not to be presented as proof of consciousness.
+
+### Real-world deployment rule
+Factory, robotics, laboratory, vehicle and other physical deployments must communicate this distinction plainly. AI remains permissioned, logged and revocable; physical safety controls remain independently enforceable; AI is not treated as a person or substitute for human authority.
+
+### Governance
+The boundary cannot be silently changed by an AI learning loop, agent, model update or automated repository process. Any future consciousness-related claim requires explicit human review plus scientific evidence and reproducible testing.
+
+**CONSCIOUSNESS-BOUNDARY-01 status: HARD CORE — REGISTERED AND COMMITTED.**
