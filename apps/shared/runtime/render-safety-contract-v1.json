@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.safety.v1","default":"deny","required_before_execution":["authorization","source-assets","provider-health"],"destructive_actions":"hold-for-review","secrets":"server-side-only","audit":true}
