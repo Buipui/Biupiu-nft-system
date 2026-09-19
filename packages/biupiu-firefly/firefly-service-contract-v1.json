@@ -1,18 +1,43 @@
 {
   "schema": "biupiu.firefly.service.v1",
   "provider": "adobe-firefly",
+  "apiSpecification": {
+    "source": "AdobeDocs/ffs-firefly-api",
+    "path": "static/firefly-api.json",
+    "openapi": "3.1.0",
+    "apiVersion": "3.0.0",
+    "productionBaseUrl": "https://firefly-api.adobe.io"
+  },
   "package": "@biupiu/firefly",
   "scope": "CREATIVE_AI",
   "clientAuthority": false,
   "credentialBoundary": "server-only",
   "operations": [
     "GENERATE_IMAGE",
+    "GENERATE_IMAGE5",
     "EXPAND_IMAGE",
     "FILL_IMAGE",
     "OBJECT_COMPOSITE",
+    "PRECISE_COMPOSITE",
+    "ADAPTIVE_COMPOSITE",
     "SIMILAR_IMAGES",
     "UPSCALE",
+    "GENERATE_VIDEO",
     "UPLOAD_ASSET"
+  ],
+  "modelVersions": [
+    "image3",
+    "image3_custom",
+    "image4_standard",
+    "image4_ultra",
+    "image4_custom",
+    "image5"
+  ],
+  "accessErrors": [
+    "quota_exhausted",
+    "user_non_entitled",
+    "user_profile_denied",
+    "invalid_ims_scope"
   ],
   "provenance": {
     "researchId": "required-when-research-linked",
