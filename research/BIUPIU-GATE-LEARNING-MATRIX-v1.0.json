@@ -1,0 +1,30 @@
+{
+  "version": "1.0",
+  "date": "2026-09-19",
+  "purpose": "Machine-readable matrix for repeated gates, conflicts, fixes, regression and learning promotion.",
+  "stages": [
+    {"id":"G0","name":"Plan","evidence":["scope","expected_state","dependencies"]},
+    {"id":"G1","name":"Execute","evidence":["action","output","state_signature"]},
+    {"id":"G2","name":"Diagnose","evidence":["error","logs","dependency_impact"]},
+    {"id":"G3","name":"Fix","evidence":["patch","version","rationale"]},
+    {"id":"G4","name":"Verify","evidence":["unit","contract","deterministic"]},
+    {"id":"G5","name":"Regress","evidence":["dependent_systems","cross_department_results"]},
+    {"id":"G6","name":"Learn","evidence":["failure_pattern","solution_pattern","confidence"]},
+    {"id":"G7","name":"Promote","evidence":["provenance","licence","architecture_update","index_update"]}
+  ],
+  "conflict_classes": ["dependency","interface","schema","version","runtime","data","provenance","licence","resource","logic","numerical","integration","unknown"],
+  "learning_levels": {
+    "L0":"logged",
+    "L1":"classified",
+    "L2":"fix_verified",
+    "L3":"regression_covered",
+    "L4":"reusable_pattern",
+    "L5":"preventative_test_generated"
+  },
+  "promotion_policy": {
+    "repeat_without_new_evidence":"stalled",
+    "failed_regression":"do_not_promote",
+    "external_code_without_licence_review":"reference_only",
+    "physical_or_safety_critical_claim":"requires_external_validation"
+  }
+}
