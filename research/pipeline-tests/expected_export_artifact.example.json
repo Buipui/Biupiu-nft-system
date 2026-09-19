@@ -1,0 +1,22 @@
+{
+  "schemaVersion": "1.0",
+  "provenance": {
+    "source": "EXTERNAL_DCC_OR_USD_RUNTIME",
+    "application": "REPLACE_WITH_EXPORTER",
+    "version": "REPLACE_WITH_VERSION",
+    "generatedAt": "REPLACE_WITH_ISO8601_TIMESTAMP"
+  },
+  "rootPrim": "/BiupiuScene",
+  "fps": 24,
+  "startFrame": 1,
+  "endFrame": 48,
+  "prims": [
+    {"path": "/BiupiuScene/Environment", "type": "Xform"},
+    {"path": "/BiupiuScene/VehiclePlaceholder", "type": "Xform"},
+    {"path": "/BiupiuScene/AnimatedCamera", "type": "Camera"}
+  ],
+  "animatedAttributes": [
+    {"path": "/BiupiuScene/VehiclePlaceholder", "attribute": "xformOp:translate", "samples": [1,48]},
+    {"path": "/BiupiuScene/AnimatedCamera", "attribute": "xformOp:translate", "samples": [1,48]}
+  ]
+}
