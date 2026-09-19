@@ -1,0 +1,18 @@
+{
+  "schema":"BIUPIU-EVIDENCE-LEDGER-SCHEMA-v1.0",
+  "gate":"BM-13",
+  "claim_id":"string",
+  "claim_type":"quantitative|qualitative|model|design|process",
+  "statement":"string",
+  "source_refs":["string"],
+  "dataset_refs":["string"],
+  "run_refs":["string"],
+  "result_refs":["string"],
+  "test_refs":["string"],
+  "model_versions":["string"],
+  "release_refs":["string"],
+  "evidence_state":"T0-literature-candidate|T1-material-coupon|T2-laminate-coupon|T3-component|T4-rotating-subassembly|T5-controlled-prototype|T6-integrated-system|T7-representative-environment|T8-independent-replication|T9-production-qualified",
+  "support_status":"SUPPORTED|PARTIALLY-SUPPORTED|CONTRADICTED|UNTESTED",
+  "uncertainty_refs":["string"],
+  "last_verified":"ISO-8601"
+}
