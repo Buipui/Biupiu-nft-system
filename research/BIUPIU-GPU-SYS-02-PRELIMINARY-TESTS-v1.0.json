@@ -1,0 +1,67 @@
+{
+  "gate": "GPU-SYS-02",
+  "date": "2026-09-19",
+  "tests": [
+    {
+      "id": "T01",
+      "name": "resource registry present",
+      "result": "PASS"
+    },
+    {
+      "id": "T02",
+      "name": "dependency manifest valid JSON",
+      "result": "PASS"
+    },
+    {
+      "id": "T03",
+      "name": "graphics package contract present",
+      "result": "PASS"
+    },
+    {
+      "id": "T04",
+      "name": "physics package contract present",
+      "result": "PASS"
+    },
+    {
+      "id": "T05",
+      "name": "upscaling package contract present",
+      "result": "PASS"
+    },
+    {
+      "id": "T06",
+      "name": "private adapter contract present",
+      "result": "PASS"
+    },
+    {
+      "id": "T07",
+      "name": "index synchronization",
+      "result": "PASS"
+    },
+    {
+      "id": "T08",
+      "name": "GitHub CI status",
+      "result": "NO_CHECKS_REPORTED"
+    },
+    {
+      "id": "T09",
+      "name": "GitHub Actions workflow run",
+      "result": "NO_WORKFLOW_RUNS_REPORTED"
+    },
+    {
+      "id": "T10",
+      "name": "Windows GPU runtime",
+      "result": "PENDING_LOCAL_HOST"
+    },
+    {
+      "id": "T11",
+      "name": "UE5 runtime integration",
+      "result": "PENDING_LOCAL_HOST"
+    },
+    {
+      "id": "T12",
+      "name": "benchmark validation",
+      "result": "PENDING_LOCAL_HOST"
+    }
+  ],
+  "policy": "Do not promote dependencies until host-validation gates pass."
+}
