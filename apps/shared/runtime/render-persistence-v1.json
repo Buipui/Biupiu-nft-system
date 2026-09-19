@@ -1,0 +1,1 @@
+{"schema":"biupiu.render.persistence.v1","required_record_fields":["jobId","sourceAssetIds","sourceModelVersion","provider","workflow","output","state","createdAt","updatedAt","outputAssetIds"],"retention":["terminal-job-record","provenance","failure-reason"],"idempotency":"jobId","client_write_authority":false}
