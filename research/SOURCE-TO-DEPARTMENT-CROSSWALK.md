@@ -89,3 +89,23 @@ Language must not restrict department routing. A source discovered in any langua
 | European regional languages | ENGINEERING, MATERIALS, ENERGY, AERO, ROBOTICS, COMPUTE, HISTORY | National/institutional repositories |
 
 Minimum linkage remains: `Source ID → Claim ID → Department → Research Question → Model → Dataset → Code/Commit → Result → Evidence Status → IP Status`.
+
+
+## Simulator / graphics repository code-routing extension — 19 September 2026
+
+Usable-code candidates identified from the multilingual simulator/graphics pass are registered as external references for future Intelligence searches. Discovery is not incorporation.
+
+| Repository | Primary routing | Validation gate |
+|---|---|---|
+| Gazebo gz-sim | ROBOTICS, DIGITAL-TWIN, SIMULATION | licence + ROS2 compatibility + security + tests |
+| ros_gz | ROBOTICS, ROS2, DIGITAL-TWIN | ROS2 compatibility + integration tests |
+| DISCOVERSE | ROBOTICS, MUJOCO, REAL2SIM2REAL, AI | licence + dependency + reproducibility tests |
+| GaussianRenderer | GRAPHICS, 3DGS, COMPUTATIONAL-VISION | licence + GPU compatibility + benchmark |
+| gs-real2sim | 3DGS, DIGITAL-TWIN, MUJOCO | licence + dataset provenance + physics validation |
+| DLR OAISYS | SIMULATION, BLENDER, PLANETARY-ROBOTICS | licence + dependency audit + reproducibility |
+| rbot | AMR, ROS2, GAZEBO, NAVIGATION | licence + ROS2/security + navigation tests |
+
+Routing rule:
+`Repository → Resource ID → Language/Source → Department → Simulator Adapter → Digital Twin → AI Training → Validation → Provenance → Commit`
+
+Hard-link policy: these repository URLs are searchable anchors in the Biupiu Intelligence Network. They remain `discovered-reference` until explicit validation promotes them to `validated-incorporated`.
