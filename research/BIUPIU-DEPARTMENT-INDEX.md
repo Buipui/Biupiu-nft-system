@@ -172,3 +172,11 @@ The Mathematics Division now provides a repository-wide solver/orchestration lay
 Exterminate review completed for the recent MATH, computational-geometry, AI, robotics and digital-twin adapters. Automated compilation/test workflow added. External dependencies remain isolated until actual CI and simulation validation succeed.
 
 `EXTERMINATE → COMPILE → UNIT TEST → INTEGRATION TEST → SIMULATION → VALIDATION → PROMOTION`
+
+## MATH-01 — Repository-wide mathematical reasoning layer
+
+The MATH division is now an explicit verification-oriented service layer. Quantitative problems can be classified, decomposed, solved, checked against invariants/residual tolerances and routed to formal proof, simulation or Digital Twin validation.
+
+**Routing contract:** MATH -> COMPUTE/AI -> GEOMETRY/PHYS-SYS -> domain simulator -> Digital Twin -> validation -> provenance/learning record.
+
+Formal proof is distinguished from deterministic, numerical, simulation and heuristic evidence; no weaker result is represented as a theorem.
