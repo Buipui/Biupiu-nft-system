@@ -5,7 +5,9 @@
     "moduleResolution": "NodeNext",
     "strict": true,
     "declaration": true,
-    "outDir": "dist"
+    "outDir": "dist",
+    "skipLibCheck": true
   },
-  "include": ["software/**/*.ts"]
+  "include": ["software/**/*.ts", "packages/**/*.ts"],
+  "exclude": ["node_modules", "dist"]
 }
