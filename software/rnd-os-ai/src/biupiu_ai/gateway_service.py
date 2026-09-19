@@ -9,7 +9,7 @@ from .provider_adapter import ProviderAdapter
 from .schemas import AiResult
 from .gateway_state import GatewayState
 from .audit_schema import DurableAuditEvent
-from .audit_store import AuditStore, InMemoryAuditStore
+from .audit_store import AuditStore, InMemoryAuditStore, AuditStoreError
 
 @dataclass(frozen=True)
 class GatewayError:
@@ -42,7 +42,10 @@ class GatewayService:
 
     def _audit(self, request_id: str, event: str, outcome: str, error_code: Optional[str] = None) -> None:
         self.state.record(request_id, event, outcome)
-        self.audit_store.append(DurableAuditEvent("1.0", request_id, event, outcome, self.client_key, error_code))
+        try:
+            self.audit_store.append(DurableAuditEvent("1.0", request_id, event, outcome, self.client_key, error_code))
+        except AuditStoreError:
+            raise
 
     def ask(
         self, *, authorization: Optional[str], task: str, evidence=None,
@@ -53,6 +56,8 @@ class GatewayService:
         auth = validate_bearer_header(authorization)
         if not auth.accepted:
             return self._error(request_id, "unauthorized", auth.reason)
+        if not self.audit_store.readiness():
+            return self._error(request_id, "audit-store-unavailable", "audit persistence is not ready")
 
         admission = self.state.admit(self.client_key, idempotency_key)
         if not admission.accepted:
