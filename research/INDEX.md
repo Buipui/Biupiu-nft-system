@@ -424,96 +424,40 @@ The audit records candidate references including memory services, AI evaluation/
 
 **INTEL-LEARN-02 status: ARCHITECTURE + MATRIX + RESOURCE AUDIT COMMITTED.** Runtime execution, third-party import, CI pass and physical validation remain separately verified gates.
 
-## Index synchronization
-**Research Index v4.0 — Gate Learning / Conflict Resolution / Open Resource Audit**  
-**Updated:** 19 September 2026
 
 
-## WORLD-HUB-01 — Main Hub Runtime Resource Gate
+## OS Simulator Core — OS-SIM-01 through OS-SIM-07
 
-Added 19 September 2026:
-- `world/client/` — executable Babylon.js Main Hub prototype client.
-- `world/client/src/routeManifest.ts` — route manifest aligned to the canonical Main Hub scene and destination-gate policy.
-- `world/client/src/destinationLoader.ts` — fail-closed destination routing boundary; it returns route intent/metadata and does not bypass authorization.
-- `world/client/src/main.ts` — updated scene bootstrap with gate-selection routing hooks.
-- `world/environments/BIUPIU-MAIN-HUB-RUNTIME-RESOURCE-MANIFEST-v1.0.json` — runtime resource and provenance manifest.
-- `research/BIUPIU-EXTERMINATE-PROTOCOL-MAIN-HUB-v1.0.md` — non-destructive defect/conflict cleanup record.
+Added the canonical simulator-kernel boundary:
+- `research/BIUPIU-OS-SIMULATOR-KERNEL-v1.0.md`
+- `packages/biupiu-bevy-adapter/` — Bevy runtime adapter plus domain-neutral simulation kernel.
+- `.github/workflows/biupiu-os-sim-rust.yml` — Rust/Cargo validation workflow.
 
-Current external runtime check: Babylon.js `@babylonjs/core` and `@babylonjs/loaders` 9.27.1 are current package releases observed during this gate. citeturn0search2turn0search4
+### Implemented source capabilities
+- explicit simulation lifecycle;
+- deterministic tick progression;
+- entity registration and duplicate protection;
+- measurement capture with entity validation;
+- simulation event boundary;
+- deterministic replay regression test;
+- Bevy plugin integration.
 
-**WORLD-HUB-01 status: EXECUTED — dependency refresh, fail-closed route boundary, runtime manifest and index synchronization committed. Local npm install/build and browser execution remain host-validation gates.**
+### Architecture routing
 
-## Index synchronization
-**Research Index v4.2 — Main Hub Runtime / Exterminate Gate**  
-**Updated:** 19 September 2026
+Canonical authority remains **Biupiu OS**. Bevy is an optional execution/rendering adapter. Digital Twin, PHYS-SYS, GPU-SYS, CG-3D, GEOMETRY, COMPUTE, AI, ROBOTICS, AERO, MARINE, AUTO, AGRI, WATER and ADV-MFG consume versioned interfaces rather than redefining the kernel.
 
-
-## MICROSOFT-DISCOVERY-INTEL-01 — Discovery Architecture Integration
-Added 19 September 2026:
-- `research/BIUPIU-MICROSOFT-DISCOVERY-INTEGRATION-v1.0.md`
-- `research/BIUPIU-MICROSOFT-DISCOVERY-RESOURCE-MANIFEST-v1.0.json`
-- `research/BIUPIU-INTELLIGENCE-ARCHITECTURE-v1.3.md`
-- `software/rnd-os-ai/src/biupiu_ai/discovery_architecture.py`
-- `software/rnd-os-ai/src/biupiu_ai/intelligence_core.py`
-- `software/rnd-os-ai/tests/test_discovery_architecture.py`
-
-Integrated architecture patterns: research task DAGs, dependency-aware execution, explicit task lifecycle, specialist agent routing, tool capability registry, autonomy/approval gates, evidence/provenance control, failure preservation and governed promotion.
-
-**Exterminate result:** malformed intermediate Intelligence-core edit was detected during repository inspection and replaced with a clean deterministic implementation. No Microsoft source code was copied.
-
-**Current gate:** architecture integrated; source-level repair complete; runtime CI and full licence/security validation remain environment gates.
-
-**Next gate:** execute local/runtime regression, then expand the task graph into the AI OS/Main OS/Biupiu OS adapter contracts and perform full repository-wide integration verification.
-
-
-## DISCOVERY-FLOW-02 — Unified Research Orchestration Gate
-Added 19 September 2026.
-
-The Microsoft Discovery-compatible task graph is now treated as a reusable orchestration pattern across Biupiu Intelligence rather than a standalone research feature. It connects task decomposition, dependency closure, evidence retrieval, specialist routing, simulation/experiment branches, evaluation, learning and governed promotion.
-
-### Fluid protocol rule
-Protocols are **composable stages**, not rigid linear scripts. A task may branch, loop back, spawn dependent tasks, become stale, be contradicted, or return to retrieval/evaluation without losing provenance. The authoritative OS boundary remains the convergence point.
-
-### Canonical flow
-INTAKE → CLASSIFY → DECOMPOSE → TASK GRAPH → RETRIEVE → CROSS-LINK → PROVENANCE → ROUTE → EXECUTE/SIMULATE → EVALUATE → REGRESS → LEARN → PROMOTE
+AI remains an optional intelligence layer and cannot bypass OS validation, provenance or authoritative state.
 
 ### Gate status
-ARCH-FLOW-02: ARCHITECTURE INTEGRATED. Runtime execution and platform CI remain validation gates.
 
+**OS-SIM-01/02/03: SOURCE IMPLEMENTED + REGRESSION COVERAGE REGISTERED.**
 
-## WORLD-ENGINE-02 / SEPARATION-03 — World Engine Learning Separation + Digital Twin Promotion
-Added 19 September 2026:
-- `research/BIUPIU-WORLD-ENGINE-SEPARATION-03.md` — canonical separation of external research, Biupiu Intelligence, AI OS, Main OS, Digital Twin and department promotion.
-- `research/BIUPIU-DIGITAL-TWIN-PROMOTION-CONTRACT-v1.0.md` — release-manifest and Digital Twin acceptance boundary.
-- `research/BIUPIU-WORLD-ENGINE-PROMOTION-MATRIX-v1.0.json` — machine-readable classification, routing and promotion matrix.
-- `research/BIUPIU-WORLD-ENGINE-RESOURCE-MANIFEST-v1.0.json` — expanded engine-resource separation routes.
+**OS-SIM-04/05/06/07: ARCHITECTURE REGISTERED; IMPLEMENTATION OPEN.**
 
-### Canonical flow
-RESEARCH → INTELLIGENCE → AI OS PROPOSAL → MAIN OS VALIDATION → RELEASE MANIFEST → DIGITAL TWIN → RELEVANT DEPARTMENT ADAPTERS
-
-External resources are classified as REFERENCE, PATTERN, ADAPTER, ASSET, DEPENDENCY or PROHIBITED. No external resource is promoted directly into authoritative state. Licence/IP, security, compatibility, deterministic tests, provenance and human release authority remain mandatory promotion gates.
-
-Routing now explicitly covers CG-3D, RENDER, PHYS-SYS, NAVIGATION, ROBOTICS, AI, COMPUTE, AERO, MARINE, ADV-MFG, MATERIALS, AGRI, WATER, PHOTONICS and VIDEO-SERIES where relevant. Revoked manifests must be blocked by the Main OS boundary and removed from downstream consumption.
-
-**SEPARATION-03 status: ARCHITECTURE COMMITTED.** Repository integration is complete; runtime/CI, connected-host and Digital Twin execution evidence remain separate validation gates.
+CI/runtime status is deliberately **NOT VERIFIED** until GitHub Actions reports an actual successful Rust workflow run. Source presence and workflow creation are not treated as runtime proof.
 
 ## Index synchronization
-**Research Index v4.3 — World Engine Separation / Digital Twin Promotion**  
-**Updated:** 19 September 2026
 
+**Research Index v4.2 — OS Simulator Core / Bevy Runtime Boundary**
 
-## WORLD-BUILD-RED-01 — REDkit / WolvenKit Method Harvest
-
-Added 19 September 2026:
-- `world/environments/REDKIT-WORLD-BUILD-RESOURCE-ADAPTER-v1.0.md`
-- `world/environments/REDKIT-ASSET-BUILD-MATRIX-v1.0.json`
-- `world/assets/BIUPIU-MAIN-HUB-ASSET-BLUEPRINTS-v1.json`
-- `world/assets/BIUPIU-PROCEDURAL-TERRAIN-BUILD-v1.json`
-
-The gate harvests world-building methods from the Witcher 3 modding/tool ecosystem into original Biupiu-native asset specifications. No proprietary Witcher 3 meshes, textures, audio, characters, extracted world files or game files are imported or represented as Biupiu-owned.
-
-**WORLD-BUILD-RED-01 status: EXECUTED — method/resource adapter and first native asset blueprints committed.**
-
-## Index synchronization
-**Research Index v4.3 — REDkit/WolvenKit World-Build Resource Harvest**  
-**Updated:** 19 September 2026
+Updated: 19 September 2026
