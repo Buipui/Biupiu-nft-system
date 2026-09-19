@@ -34,6 +34,29 @@ const server=http.createServer(async(req,res)=>{
   const path=req.url.split("?")[0],role=auth(req),actor=req.headers["x-biupiu-actor"]||"local-test";
   if(req.method==="GET"&&path==="/health")return json(res,200,{status:"ok",service:"biupiu-rnd-os-api",version:"0.1.0"});
   if(req.method==="GET"&&path==="/v1/audit")return json(res,200,db.prepare("SELECT * FROM audit ORDER BY at DESC LIMIT 500").all());
+  const syncMatch=path.match(/^\/v1\/records\/([^/]+)\/sync$/);
+  if(req.method==="POST"&&syncMatch){
+    if(!allowed(role,"RESEARCHER"))return json(res,403,{error:"researcher_role_required"});
+    const b=await body(req),r=getRecord(syncMatch[1]);
+    if(!r)return json(res,404,{error:"not_found"});
+    if(Number(b.base_version)!==r.version)return json(res,409,{error:"VERSION_CONFLICT",server_version:r.version,content_hash:r.content_hash});
+    const p={...JSON.parse(r.payload),...(b.payload||{})};
+    const version=r.version+1,updated=now(),hash=hashPayload(p);
+    const changed=db.prepare("UPDATE records SET payload=?,updated_at=?,version=?,content_hash=?,updated_by=? WHERE id=? AND version=?").run(JSON.stringify(p),updated,version,hash,actor,r.id,r.version);
+    if(changed.changes!==1)return json(res,409,{error:"VERSION_CONFLICT",server_version:r.version,content_hash:r.content_hash});
+    audit(actor,"SYNC_UPDATE",r.id,{operation_id:b.operation_id,from_version:r.version,to_version:version});
+    return json(res,200,{id:r.id,version,content_hash:hash,payload:p});
+  }
+  const conflictMatch=path.match(/^\/v1\/records\/([^/]+)\/conflicts\/resolve$/);
+  if(req.method==="POST"&&conflictMatch){
+    if(!allowed(role,"REVIEWER"))return json(res,403,{error:"reviewer_role_required"});
+    const b=await body(req),r=getRecord(conflictMatch[1]);
+    if(!r)return json(res,404,{error:"not_found"});
+    const strategies=["USE_SERVER","SAVE_LOCAL_REVISION","MANUAL_MERGE"];
+    if(!strategies.includes(b.strategy))return json(res,400,{error:"invalid_conflict_strategy"});
+    audit(actor,"CONFLICT_RESOLUTION",r.id,{operation_id:b.operation_id,strategy:b.strategy,version:r.version});
+    return json(res,200,{status:"RESOLVED",id:r.id,strategy:b.strategy,server_version:r.version});
+  }
   const match=path.match(/^\/v1\/(research|experiments|assets)(?:\/([^/]+)\/gate)?$/);
   if(match){
    const typeMap={research:"research",experiments:"experiment",assets:"asset"};
