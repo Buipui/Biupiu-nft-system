@@ -259,3 +259,23 @@ Factory, robotics, laboratory, vehicle and other physical deployments must commu
 The boundary cannot be silently changed by an AI learning loop, agent, model update or automated repository process. Any future consciousness-related claim requires explicit human review plus scientific evidence and reproducible testing.
 
 **CONSCIOUSNESS-BOUNDARY-01 status: HARD CORE — REGISTERED AND COMMITTED.**
+
+
+## 3D Open Engineering Resource Integration — 3D-OPEN-01
+
+Added:
+- `research/BIUPIU-3D-OPEN-RESOURCE-INTEGRATION-v1.0.md`
+- `research/BIUPIU-3D-OPEN-RESOURCE-MANIFEST-v1.0.json`
+- `packages/biupiu-3d-engine/`
+
+Integrated external references include OpenSCAD, FreeCAD, Blender, build123d, BelfrySCAD, CADAM and PythonSCAD, plus open engineering-mechanics references. Third-party repositories remain external references; only Biupiu-authored adapter/generator code and concept templates are committed.
+
+Reusable code now covers:
+- validated renderer-neutral 3D model manifests;
+- OpenSCAD generation;
+- bounding-radius scale checks;
+- micro-turbine, marine-propulsor and eVTOL conceptual blockouts.
+
+Routing: **GEOMETRY, COMPUTE, AERO, MARINE, ENERGY, COMPOSITES, MATERIALS, ADV-MFG, ROBOTICS, DIGITAL-TWIN, AI, NFT-ART and NFT-PROV**.
+
+**3D-OPEN-01 status: EXECUTED — repository integration committed. Runtime CAD-host compilation and physical/engineering validation remain separate gates.**
