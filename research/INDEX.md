@@ -456,8 +456,33 @@ AI remains an optional intelligence layer and cannot bypass OS validation, prove
 
 CI/runtime status is deliberately **NOT VERIFIED** until GitHub Actions reports an actual successful Rust workflow run. Source presence and workflow creation are not treated as runtime proof.
 
+
+## XR-HARVEST-01 — VR / AR / MR / WebXR Research Harvest
+
+Added 19 September 2026:
+- `research/BIUPIU-XR-VR-AR-IMMERSIVE-RESOURCE-HARVEST-2026-09-19.md`
+- ResearchGate: current immersive-systems synthesis, VR/AR construction review, spatially dispersed AR imagery.
+- Emerald Insight: distributed mixed-reality collaboration, metaverse adoption profiling, VR built-environment evaluation, AR information enhancement/overload.
+- NASA: Mixed Reality Exploration Toolkit v2.0, AR telepresence/robotic exploration, 3D-model AR procedure study.
+- DARPA: Intrinsic Cognitive Security and In The Moment immersive testing.
+- Foreign-language streams: Japanese AIST/NEDO/J-Global, Korean XR literature, Chinese 3R simulation literature, French France 2030 immersive-world programme.
+- GitHub candidate references: A-Frame, WebXR samples, Reactylon, VR-Builder, ILLIXR.
+- Patent/prior-art stream: expired/lapsed AR/HMD records identified for FTO/prior-art review.
+
+### Architecture routing
+`XR-HARVEST-01 → BIUPIU-WORLD → XR/VR/AR/MR → WEBXR → HMI/HUMAN-FACTORS → DIGITAL-TWIN → PHYS-SYS → AI → ROBOTICS → AERO → MARINE → AUTO → ADV-MFG → PHOTONICS → TRAINING → SECURITY → VIDEO-SERIES → SUBSCRIBER/PLATFORM`
+
+### Core pattern
+`AUTHORITATIVE MODEL → DIGITAL TWIN → XR ADAPTER → SIMULATION/INTERACTION → TELEMETRY → PROVENANCE → VALIDATION → WORLD PROMOTION`
+
+### Exterminate result
+Duplicates and overlaps were classified rather than destructively deleted. Third-party code/assets remain external until licence, security, provenance and compatibility gates pass. Expired/lapsed patents are prior-art/FTO candidates, not automatically assumed implementation-free in every jurisdiction.
+
+**XR-HARVEST-01 status: EXECUTED — research record committed; index synchronization pending this update.**
+
+
 ## Index synchronization
 
-**Research Index v4.2 — OS Simulator Core / Bevy Runtime Boundary**
+**Research Index v4.3 — XR / VR / AR / MR Immersive Resource Harvest**
 
 Updated: 19 September 2026
