@@ -1,0 +1,17 @@
+{
+  "schemaVersion": "1.0",
+  "provenance": {
+    "application": "REPLACE_WITH_RUNTIME",
+    "version": "REPLACE_WITH_VERSION",
+    "generatedAt": "REPLACE_WITH_ISO8601_TIMESTAMP"
+  },
+  "sourceArtifact": "path/to/real/export.json",
+  "comparison": {
+    "expectedContract": "research/pipeline-tests/expected_scene_contract.json",
+    "status": "PENDING",
+    "errors": []
+  },
+  "environment": {
+    "notes": "Template only; not runtime evidence."
+  }
+}
