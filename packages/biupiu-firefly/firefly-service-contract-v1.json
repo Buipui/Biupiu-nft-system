@@ -3,15 +3,17 @@
   "provider": "adobe-firefly",
   "apiSpecification": {
     "source": "AdobeDocs/ffs-firefly-api",
+    "sourceUrl": "https://raw.githubusercontent.com/AdobeDocs/ffs-firefly-api/main/static/firefly-api.json",
     "path": "static/firefly-api.json",
     "openapi": "3.1.0",
     "apiVersion": "3.0.0",
-    "productionBaseUrl": "https://firefly-api.adobe.io"
+    "productionBaseUrl": "https://firefly-api.adobe.io",
+    "verificationMode": "credential-free-static-contract-check"
   },
   "package": "@biupiu/firefly",
   "scope": "CREATIVE_AI",
   "clientAuthority": false,
-  "credentialBoundary": "server-only",
+  "credentialBoundary": "server-only-live-runtime",
   "operations": [
     "GENERATE_IMAGE",
     "GENERATE_IMAGE5",
@@ -31,7 +33,9 @@
     "image4_standard",
     "image4_ultra",
     "image4_custom",
-    "image5"
+    "image5",
+    "video1_standard",
+    "precise_upsampler_v1"
   ],
   "accessErrors": [
     "quota_exhausted",
