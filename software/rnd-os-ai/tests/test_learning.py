@@ -1,3 +1,5 @@
+from dataclasses import replace
+
 from biupiu_ai.learning import make_learning_record, verify_learning_record
 
 
@@ -12,6 +14,7 @@ def test_learning_record_is_deterministically_verifiable():
         result_version="1.0.1",
         observed_outcome="index synchronized",
         next_action="REVIEW",
+        created_at="2026-09-19T00:00:00+00:00",
     )
     assert verify_learning_record(record)
 
@@ -27,5 +30,7 @@ def test_tampering_is_detected():
         result_version="1.0",
         observed_outcome="model error increased",
         next_action="CALIBRATE",
+        created_at="2026-09-19T00:00:00+00:00",
     )
-    record.observed_outcome = "tampered"
+    tampered = replace(record, observed_outcome="tampered")
+    assert not verify_learning_record(tampered)
