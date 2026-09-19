@@ -9,7 +9,7 @@ Added `research/BIUPIU-PROVIDER-EQUIVALENCE-RED-08-v1.0.md`, `packages/biupiu-re
 
 Added `research/BIUPIU-ROUNDTRIP-DRIFT-RED-07-v1.0.md`, `packages/biupiu-render-pipeline/src/drift.ts`, the RED-07 round-trip fixture and contract test. The gate compares authoritative source signatures across SOURCE → PROVIDER → INTERCHANGE → PROVIDER → SOURCE, reports geometry/transform/material/metadata drift, and blocks source-identity or provenance drift. Live renderer round-trip acceptance remains gated on connected hosts and measured outputs.
 
-**Version:** 3.9
+**Version:** 4.1
 **Updated:** 19 September 2026
 **Repository:** Biupiu NFT / computational-art / personal R&D portfolio
 
@@ -349,10 +349,9 @@ The workflow installs pytest in a clean Python 3.13 runner and executes the lear
 **INTEL-TEST-01 status: TEST WORKFLOW REGISTERED.** Repository connector read-back confirms the workflow commit exists, but no GitHub Actions run has yet been returned for that commit, so CI PASS is not claimed.
 
 ## AI-27 end-to-end gateway test gate
-- `software/rnd-os-ai/tests/test_ai27.py` — authentication, provenance, provider, replay, rate-limit and audit-failure harness.
-- `research/BIUPIU-AI-27-END-TO-END-GATE-v1.0.md` — AI-27 specification.
-- **AI-27 status:** test harness committed; CI/test execution remains unverified.
-
+- `software/rnd-os-ai/tests/test_ai27.py` — deterministic authentication, provenance, provider-execution, replay/idempotency and audit-failure harness.
+- `research/BIUPIU-AI-27-GATEWAY-E2E-HARNESS-v1.0.md` — AI-27 scope and production boundary.
+- **AI-27 status:** IMPLEMENTED — harness committed and read back. Test execution remains unverified until CI or a connected Python runner reports a pass.
 
 ## AERO-HANGAR-02 — Environment validation gate
 
