@@ -183,6 +183,44 @@ export class FireflyApiClient {
     };
   }
 
+  async getJobResponse(jobId: string): Promise<FireflyApiResponse> {
+    const auth = await getFireflyAccessToken();
+    if (!this.clientId) throw new Error("Firefly Client ID is not configured.");
+
+    const target = jobId.startsWith("http")
+      ? jobId
+      : `${this.baseUrl}${ENDPOINTS.JOB_STATUS}${encodeURIComponent(jobId)}`;
+
+    const response = await this.fetchImpl(target, {
+      method: "GET",
+      headers: {
+        Authorization: `${auth.tokenType} ${auth.accessToken}`,
+        "x-api-key": this.clientId,
+        Accept: "application/json"
+      }
+    });
+
+    const raw = await response.json().catch(() => ({}));
+    if (!response.ok) {
+      const body = raw as JsonRecord;
+      const code =
+        typeof body.error_code === "string" ? body.error_code : "firefly_job_error";
+      const accessError = response.headers.get("x-access-error");
+      throw new Error(
+        `Firefly job request ${response.status} ${code}${accessError ? ` (${accessError})` : ""}`
+      );
+    }
+
+    const json = raw as JsonRecord;
+    return {
+      jobId: extractJobId(json) || (jobId.startsWith("http") ? undefined : jobId),
+      statusUrl: extractStatusUrl(json, response.headers.get("Link")),
+      cancelUrl: extractCancelUrl(json, response.headers.get("Link")),
+      resultUrl: extractResultUrl(json, response.headers.get("Link")),
+      raw
+    };
+  }
+
   async getJob(jobId: string): Promise<unknown> {
     const auth = await getFireflyAccessToken();
     if (!this.clientId) throw new Error("Firefly Client ID is not configured.");
