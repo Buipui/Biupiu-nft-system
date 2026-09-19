@@ -1,0 +1,8 @@
+{
+  "terrain_system":"biupiu_procedural_terrain_v1",
+  "method_inspiration":"REDkit terrain workflow",
+  "implementation":"native_procedural",
+  "parameters":{"tile_size_m":32,"lod_levels":4,"seed":"scene_seed","height_source":"deterministic_noise_or_authorized_heightmap"},
+  "layers":["base_terrain","water_mask","vegetation_mask","navigation_mask","evidence_overlay"],
+  "safety":"No external game terrain files are imported by this specification."
+}
