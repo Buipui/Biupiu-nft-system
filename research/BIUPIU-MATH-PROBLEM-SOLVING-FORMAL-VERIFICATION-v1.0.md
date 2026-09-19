@@ -46,3 +46,34 @@ MATH is cross-linked to AI / Biupiu Intelligence, COMPUTE / algorithms, GEOMETRY
 
 ## Acceptance rule
 No automatic physical deployment, repository self-modification or irreversible blockchain action is authorized solely by a solver result. Results must pass the relevant downstream gates.
+
+## MATH-02 — Verification Harness / Formal-Prover Adapter Gate
+
+**Status:** REGISTERED — implementation validation pending CI execution
+**Date:** 19 September 2026
+
+### Gate objective
+Turn MATH-01 from a deterministic verification layer into a controlled multi-backend verification pipeline without allowing unverified solver output to become authoritative.
+
+### Required sequence
+1. Normalize problem statement and constraints.
+2. Generate candidate solution(s).
+3. Run deterministic invariant/residual checks.
+4. Route theorem-shaped claims to a formal-prover adapter.
+5. Route numerical/engineering claims to simulation or domain solvers.
+6. Compare evidence and detect contradictions.
+7. Record verification level, provenance and failure reason.
+8. Fail closed when required evidence is missing.
+
+### Acceptance criteria
+- CI test run observed and passing.
+- Formal-prover adapter remains optional until its toolchain is actually available.
+- Numerical verification never masquerades as formal proof.
+- Solver output cannot directly modify authoritative OS state.
+- Every accepted result has reproducible evidence metadata.
+
+### Current gate result
+The repository contains the MATH-01 implementation and validation workflow. This connector session can verify file presence, but no GitHub Actions run is currently reported for the latest MATH commits. Therefore MATH-02 is **REGISTERED / WAITING FOR CI EXECUTION**, not falsely marked passed.
+
+### Next action
+Trigger or observe the GitHub Actions validation run, inspect its job logs, then promote MATH-02 only if the tests pass. After that, integrate a real formal-prover backend under the adapter boundary and add domain-specific solver contracts.
