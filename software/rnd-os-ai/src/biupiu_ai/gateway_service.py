@@ -10,6 +10,8 @@ from .schemas import AiResult
 from .gateway_state import GatewayState
 from .audit_schema import DurableAuditEvent
 from .audit_store import AuditStore, InMemoryAuditStore, AuditStoreError
+from .transactional_audit import TransactionalAuditBoundary, validate_resource_provenance
+from .open_resource_registry import get_resource
 
 @dataclass(frozen=True)
 class GatewayError:
@@ -39,11 +41,15 @@ class GatewayService:
         self.state = state or GatewayState(self.policy.requests_per_minute)
         self.client_key = client_key
         self.audit_store = audit_store or InMemoryAuditStore()
+        self.audit_boundary = TransactionalAuditBoundary(self.audit_store)
 
     def _audit(self, request_id: str, event: str, outcome: str, error_code: Optional[str] = None) -> None:
         self.state.record(request_id, event, outcome)
         try:
-            self.audit_store.append(DurableAuditEvent("1.0", request_id, event, outcome, self.client_key, error_code))
+            accepted = self.audit_boundary.submit(DurableAuditEvent("1.0", request_id, event, outcome, self.client_key, error_code))
+            if not accepted:
+                return
+            self.audit_boundary.flush_one()
         except AuditStoreError:
             raise
 
@@ -70,6 +76,9 @@ class GatewayService:
         evidence = evidence or []
         dataset_versions = dataset_versions or []
         source_ids = evidence_source_ids or [e.source_id for e in evidence]
+        provenance = validate_resource_provenance(source_ids, type("Registry", (), {"get_resource": staticmethod(get_resource)})())
+        if not provenance.accepted:
+            return self._error(request_id, "invalid-provenance", provenance.reason)
         dataset_ids = dataset_version_ids or [getattr(d, "version_id", str(d)) for d in dataset_versions]
         decision = validate_request(task, source_ids, dataset_ids, self.policy)
         if not decision.accepted:
