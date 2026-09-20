@@ -189,3 +189,13 @@ Added:
 This advances the next gate to **HOST-EXECUTION READY**. The connected repository cannot truthfully verify the user's local Unity installation, Visual Studio/VS Code Insider installation, package resolution, compilation or visual smoke test. Those require execution on the desktop. The PowerShell gate is designed to collect that evidence without modifying production projects.
 
 Promotion chain: **DISCOVERED → RESOLVED → COMPILED → SMOKE-TESTED → EXTERMINATE-PASS → VERIFIED**.
+
+
+## UNITY 6 NEXT GATE EXECUTION RESULT — 20 September 2026
+
+Host gate execution was attempted. The connected environment has no access to the user's local Windows desktop/PowerShell/Unity Editor/Visual Studio/VS Code Insider runtime, so local detection, package resolution, compilation and visual smoke testing cannot be truthfully executed here.
+
+**RESULT: BLOCKED BY HOST ENVIRONMENT — NOT A SOFTWARE FAILURE.**
+**REPOSITORY INTEGRATION: PASS.**
+**VERIFIED RUNTIME: NOT CLAIMED.**
+**NEXT ACTION: RUN THE COMMITTED PowerShell host gate on the desktop against the isolated Unity project, then ingest the resulting evidence/logs for Exterminate and promotion.**
