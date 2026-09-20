@@ -1,0 +1,27 @@
+name: MQTT Adapter Conformance
+
+on:
+  push:
+    paths:
+      - "tests/mqtt_adapter.py"
+      - "tests/test_mqtt_adapter.py"
+      - ".github/workflows/mqtt-adapter.yml"
+  pull_request:
+    paths:
+      - "tests/mqtt_adapter.py"
+      - "tests/test_mqtt_adapter.py"
+      - ".github/workflows/mqtt-adapter.yml"
+  workflow_dispatch:
+
+jobs:
+  mqtt:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest paho-mqtt
+      - name: Run MQTT adapter safety tests
+        run: python -m pytest tests/test_mqtt_adapter.py
