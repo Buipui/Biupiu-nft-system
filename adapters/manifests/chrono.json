@@ -1,0 +1,29 @@
+{
+  "resource_id": "Project Chrono",
+  "capability": "multibody dynamics",
+  "version": "PIN_REQUIRED",
+  "licence_boundary": "EXTERNAL_RESOURCE_BOUNDARY",
+  "input_schema": {
+    "mass": "float",
+    "spring_constant": "float",
+    "damping": "float",
+    "initial_conditions": "declared"
+  },
+  "output_schema": {
+    "state": "time_series"
+  },
+  "units": {
+    "mass": "kg",
+    "spring_constant": "N/m",
+    "damping": "N*s/m",
+    "time": "s"
+  },
+  "coordinate_frame": "declared",
+  "provenance_required": true,
+  "security": {
+    "os_authority": false,
+    "fail_closed": true
+  },
+  "test_vector_id": "CHRONO-TV-001",
+  "promotion_state": "ADAPTER-READY"
+}
