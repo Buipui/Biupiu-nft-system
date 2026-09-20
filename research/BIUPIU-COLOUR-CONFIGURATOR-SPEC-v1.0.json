@@ -1,0 +1,87 @@
+{
+  "schema_version": "1.0",
+  "object": "biupiu_colour_material_configurator",
+  "status": "research_prototype",
+  "reference_models": [
+    "NFS-II preset swatches",
+    "NFS later HSL/PBR evolution",
+    "Pagani real-time configurator",
+    "Ferrari Tailor Made material-first personalisation"
+  ],
+  "identity": {
+    "palette_source": "brand/BIUPIU-NFT-BRAND-LOCK-v1.0.md",
+    "core_hex": [
+      "#063D2C",
+      "#0E5A45",
+      "#0F8C86",
+      "#D4AF5A",
+      "#E7D8A8",
+      "#F2EBDD",
+      "#07110D"
+    ]
+  },
+  "configuration_layers": [
+    "catalogue_family",
+    "substrate",
+    "base_colour",
+    "secondary_colour",
+    "pattern_or_vinyl",
+    "finish",
+    "metalness",
+    "roughness",
+    "clearcoat",
+    "opacity",
+    "texture_scale",
+    "interior_material",
+    "stitching_or_trim",
+    "material_provenance",
+    "evidence_state"
+  ],
+  "substrates": [
+    "paint",
+    "bio-resin",
+    "composite",
+    "bio-adhesive",
+    "PPF",
+    "vinyl",
+    "hemp-textile",
+    "nonwoven",
+    "leather-alternative",
+    "metal"
+  ],
+  "finish_profiles": [
+    "matte",
+    "satin",
+    "semi-gloss",
+    "gloss",
+    "metallic",
+    "pearlescent",
+    "forged-carbon",
+    "bare-carbon",
+    "textured",
+    "translucent"
+  ],
+  "colour_spaces": [
+    "HEX",
+    "RGB",
+    "HSL",
+    "HSV",
+    "CIELAB",
+    "spectral_when_available"
+  ],
+  "output": [
+    "configuration JSON",
+    "material bill of selection",
+    "render parameters",
+    "catalogue ID",
+    "provenance record",
+    "digital-twin links"
+  ],
+  "rules": [
+    "Do not claim physical colour accuracy from RGB/HEX alone.",
+    "Measured Lab/spectral data overrides screen preview.",
+    "Material substrate and finish must be stored with the colour.",
+    "Natural dye records must store feedstock, extraction and process variables.",
+    "Vehicle/asset configuration references component/material IDs instead of duplicating records."
+  ]
+}
