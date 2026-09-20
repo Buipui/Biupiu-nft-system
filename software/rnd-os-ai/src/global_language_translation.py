@@ -2,16 +2,11 @@
 
 Provider-neutral translation contract. It deliberately does not embed API
 credentials or select a commercial translation provider.
-
-The module normalises language metadata, preserves the source text, records
-translation provenance, and provides a deterministic fallback when no
-translation backend is configured. It is an integration boundary, not a
-claim of autonomous translation capability.
 """
 
 from __future__ import annotations
 
-from dataclasses import dataclass, asdict
+from dataclasses import asdict, dataclass
 from typing import Optional
 
 
@@ -41,7 +36,6 @@ class TranslationRecord:
 
 
 def normalise_language(language: str) -> str:
-    """Return the base language tag used by the Biupiu language registry."""
     value = language.strip().lower().replace("_", "-")
     return value.split("-", 1)[0]
 
@@ -61,13 +55,6 @@ def translate(
     provider: Optional[str] = None,
     translated_text: Optional[str] = None,
 ) -> TranslationRecord:
-    """Create a provenance-preserving translation record.
-
-    A real translation backend is intentionally injected rather than hard-coded.
-    If no backend result is supplied, status is 'pending' and source text is
-    preserved unchanged. This prevents the OS from treating untranslated text
-    or an unverified machine translation as authoritative.
-    """
     source = validate_language(source_language)
     target = validate_language(target_language)
 
