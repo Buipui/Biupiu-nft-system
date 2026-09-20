@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-49",
+  "name":"Biupiu Canonical System-Wide Task/Release Record",
+  "domains":["OS","DMS","INTELLIGENCE","SIMULATORS","CONFIGURATORS","MATH_PHYSICS","DIGITAL_TWIN","PROVENANCE","SECURITY","BLOCKCHAIN","HMI","RESEARCH"],
+  "required_controls":["evidence_auth","challenge","math_physics_validation","simulation_digital_twin_check","security_licence","provenance","regression","unified_index"],
+  "state_authority":"BIUPIU-INTELLIGENCE",
+  "runtime_verified_required":true,
+  "fail_closed":true,
+  "physical_actuation":"EXPLICIT_HOST_GATE_ONLY"
+}
