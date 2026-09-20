@@ -1,0 +1,20 @@
+# Biupiu Core Governance Index — AI-53
+
+Status: IMPLEMENTED / RUNTIME EVIDENCE PENDING
+
+Canonical gate chain:
+AI-47 → AI-44 → AI-48 → AI-42 → AI-46 → AI-49 → AI-50 → AI-51 → AI-52 → AI-53
+
+AI-53 is the canonical state-transition authority.
+
+Legal promotion path:
+DISCOVERED → ASSIGNED → EXECUTING → CHALLENGED → VALIDATED →
+REGRESSION_PASS → PROMOTION_READY → PROMOTED
+
+Exceptional controlled paths:
+PENDING_RUNTIME ↔ EXECUTING
+REMEDIATION_REQUIRED → EXECUTING
+BLOCKED_UNTRUSTED_EVIDENCE → EXECUTING/REMEDIATION_REQUIRED
+BLOCKED_CONTROL_CONTRACT → ASSIGNED/EXECUTING
+
+Direct state injection and promotion jumps are invalid.
