@@ -19,3 +19,9 @@ No source component is BUILD_VERIFIED until actual execution evidence is recorde
 
 ## Multi-AI dispute handling
 Architect, Code, Verification, Security, Research and Integration agents may submit findings. The Integration gate accepts only findings supported by repository evidence or reproducible tests. Core OS validation remains authoritative.
+
+
+## Execution evidence update — 20 September 2026
+Repository workflow-run query for the current main commit returned an empty workflow-run set. This is recorded as **NO CI EXECUTION EVIDENCE**, not a pass or fail. Static source integration remains separate from runtime verification.
+
+Multi-AI disposition: preserve the source seed, keep promotion blocked, and route the next gate through an execution-capable runner.
