@@ -108,3 +108,13 @@ Gateway software contract: **IMPLEMENTED / HARDENED**.
 Smoke test definition: **IMPLEMENTED**.
 CI execution result for this revision: **PENDING**.
 Physical host runtime: **UNVERIFIED**.
+## GATE 06 — CI FAILURE ANALYSIS / FALSE-POSITIVE FIX — 20 September 2026
+- Gate 05 Windows runner result: **FAILED**.
+- Failure isolated to the gateway policy test's forbidden-token scan, not gateway execution.
+- Root cause: literal substring detection for `iex` also matched the textual occurrence inside the test's own forbidden-token list.
+- Corrective action: replaced literal substring scan with boundary-aware regular-expression detection.
+- Corrective commit: **1e723c15afc14a4fd3e455dd8be81ef42d8dd81b**.
+- Exterminate status: **FIX APPLIED**.
+- Smoke/regression rerun: **PENDING**.
+- Physical Windows development-host verification: **UNVERIFIED**.
+- Digital Twin host promotion: **BLOCKED pending successful evidence**.
