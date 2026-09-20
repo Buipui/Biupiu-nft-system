@@ -21,3 +21,6 @@ Initial allowlist: HOST.CAPABILITIES, REPOSITORY.STATUS, REPOSITORY.DIRECTORY, T
 PowerShell is an execution substrate, not the OS authority. Microsoft documents PowerShell as a cross-platform automation platform and PowerShell 7 as a separate product from Windows PowerShell 5.1. The gateway records edition/version and does not assume module compatibility.
 
 Verification boundary: repository implementation can be verified here; Windows host execution, GPU/driver inspection and Unity/UE5/Visual Studio/VS Code discovery remain host-dependent until desktop evidence is collected.
+
+## CI Gate 02 trigger
+This marker records that the gateway contract is under automated Windows-runner regression validation.
