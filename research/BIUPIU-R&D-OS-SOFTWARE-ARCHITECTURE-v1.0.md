@@ -417,3 +417,8 @@ The software itself follows the same Biupiu research doctrine:
 **Production SaaS:** Not launched  
 **Licensing:** Proposed model only  
 **Next step:** MVP architecture and machine-readable schema
+
+## P0 Multi-Language Kernel Integration — 20 September 2026
+The R&D OS software architecture now adopts the repository's controlled C/C++/Rust core stack. C provides the durable ABI/HAL boundary; Rust is preferred for new safety-sensitive kernel services; C++ provides native high-performance simulation, geometry and scientific components. AI-generated or translated code remains non-authoritative until licence, build, ABI, security and regression gates pass.
+
+Executable source-level seed: `core/multilang/`. Host/runtime deployment remains unverified.
