@@ -143,3 +143,19 @@ Physical host runtime: **UNVERIFIED**.
 - Corrective commit: **9a828f93aa926171de2633795e7d68ee1f0b9a68**.
 - New regression run: **PENDING**.
 - Digital Twin promotion remains **BLOCKED** until the complete CI chain reaches the smoke and schema stages.
+## GATE 10 — CLEAN WINDOWS CI REGRESSION / PROMOTION CANDIDATE — 20 September 2026
+- Biupiu Gateway Regression run `35526689579`: **SUCCESS**.
+- Windows runner job `106119976298`: **SUCCESS**.
+- Gateway policy/source validation: **PASS**.
+- Dry-run capability probe: **PASS**.
+- Forbidden execution primitive check: **PASS**.
+- Named-test smoke run: **PASS**.
+- Digital Twin schema parse: **PASS**.
+- Biupiu Exterminate Gate run `35526689594`: **SUCCESS**.
+- Repository/CI gateway contract: **VERIFIED FOR CI WINDOWS RUNNER**.
+- Physical development workstation: **NOT VERIFIED**.
+- GPU/driver/UE5/Unity/Visual Studio/VS Code host integration: **NOT VERIFIED**.
+- Digital Twin host state: **REMAINS UNVERIFIED**.
+
+### Promotion boundary
+The clean CI result verifies the gateway's repository contract and Windows CI execution path. It does not establish that the user's physical development workstation has the same capabilities. Host-specific promotion remains gated on desktop evidence.
