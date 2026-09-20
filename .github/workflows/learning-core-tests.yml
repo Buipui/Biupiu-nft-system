@@ -22,15 +22,31 @@ jobs:
           python-version: "3.12"
       - name: Install test runner
         run: python -m pip install --upgrade pip pytest
-      - name: Run dependency-free learning and federation tests
+      - name: Learning core
         env:
           PYTHONPATH: src
-        run: >
-          python -m pytest -q
-          tests/test_learning.py
-          tests/test_learning_integration.py
-          tests/test_advanced_learning_algorithms.py
-          tests/test_algorithm_suite.py
-          tests/test_federation_registry.py
-          tests/test_quantum_federation.py
-          tests/test_federated_backends.py
+        run: python -m pytest -q tests/test_learning.py
+      - name: Learning integration
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_learning_integration.py
+      - name: Advanced learning algorithms
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_advanced_learning_algorithms.py
+      - name: Algorithm suite
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_algorithm_suite.py
+      - name: Federation registry
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_federation_registry.py
+      - name: Quantum federation
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_quantum_federation.py
+      - name: Federated backend adapters
+        env:
+          PYTHONPATH: src
+        run: python -m pytest -q tests/test_federated_backends.py
