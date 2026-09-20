@@ -31,3 +31,18 @@ Adapter contract: IMPLEMENTED
 Search/registry: EXECUTED
 Architecture Exterminate: PASS
 Host runtime: PENDING DESKTOP EXECUTION
+
+
+## EXECUTION ATTEMPT — 20 September 2026
+
+The host gate is prepared and committed, but this connected execution environment does not expose the user's Windows desktop, local Unity Editor, Visual Studio installation, VS Code Insider installation, or PowerShell session. Therefore no local runtime evidence can be generated here.
+
+**SAFE RESULT:** HOST EXECUTION BLOCKED BY ENVIRONMENT BOUNDARY — NOT A FAILURE OF THE UNITY ADAPTER.
+
+No false VERIFIED state is assigned. Repository-level Exterminate remains PASS. The next desktop evidence command is:
+
+`powershell -ExecutionPolicy Bypass -File .\\tools\\unity6\\biupiu-unity-host-gate.ps1 -ProjectPath <isolated-unity-project>`
+
+Use `-Build` only after the read-first inspection is reviewed.
+
+Promotion remains **DISCOVERED/READY → RESOLVED → COMPILED → SMOKE-TESTED → EXTERMINATE-PASS → VERIFIED**.
