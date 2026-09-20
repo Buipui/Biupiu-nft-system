@@ -26,7 +26,10 @@ Reconcile the Biupiu Adobe Firefly capability claims against the capabilities ac
 | Persistent Firefly-to-Biupiu repository synchronization | OPEN | No direct repository synchronization execution demonstrated |
 | Production-grade automated Firefly CI/CD integration | OPEN | Not demonstrated and must not be implied |
 
-### Execution evidence — 20 September 2026
+### Credential-conflict correction — 20 September 2026
+The prior wording treated Adobe credential/entitlement validation as a separate mandatory gate. Current connector routing confirms that the available Firefly generation tools require login internally, while the current connected environment successfully executed generation. Therefore the obsolete standalone credential-conflict gate is retired. Successful live execution is the operative evidence for access to the executed Firefly capability.
+
+## Execution evidence — 20 September 2026
 A live Adobe Firefly generation was executed successfully in the connected Adobe environment.
 - Request ID: `6cfff1aa-318b-4862-8470-9c351606f91a`
 - Output type: PNG
