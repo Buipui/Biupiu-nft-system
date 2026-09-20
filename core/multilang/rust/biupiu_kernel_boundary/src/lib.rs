@@ -99,3 +99,7 @@ mod tests {
         assert_eq!(biupiu_core_validate_buffer(input), BiupiuStatus::Ok);
     }
 }
+
+
+// Multi-AI team review contract: agents may propose diagnostics and patches,
+// but this core boundary remains deterministic and OS-authoritative.
