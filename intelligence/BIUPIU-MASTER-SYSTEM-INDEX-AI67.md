@@ -50,3 +50,11 @@ Current state: ARCHITECTURE + SOURCE SEED IMPLEMENTED / RUNTIME EVIDENCE PENDING
 - Cross-platform host/runtime integration: **PENDING**.
 - Production promotion: **BLOCKED pending broader runtime evidence**.
 - Safety boundary: learning may propose and record; Core OS authority remains independent.
+
+
+## LEARNING INTEGRATION GATE — 20 September 2026
+- Learning → Intelligence → OS/AI validation boundary: **IMPLEMENTED**.
+- Fail-closed promotion contract: **VERIFIED by integration tests**.
+- Intelligence-core CI: **SUCCESS** (`35537839854`).
+- Exterminate: **SUCCESS** (`35537839866`).
+- Runtime/host integration remains **PENDING** and is not inferred from CI.
