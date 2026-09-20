@@ -96,4 +96,7 @@ New record: `research/BIUPIU-FIREFLY-GATE-RECONCILIATION-v1.0.md`.
 
 Exterminate reconciliation completed. Firefly capability/tool availability is recorded as IMPLEMENTED / AVAILABLE. Account-specific entitlements, an end-to-end Biupiu Firefly workflow, persistent repository synchronization, and production CI/CD integration remain OPEN because direct evidence has not yet been captured. Capability is not treated as verification.
 
-**FIREFLY STATUS: RECONCILED — IMPLEMENTED CAPABILITY / VERIFICATION GATES OPEN.**
+**FIREFLY STATUS: RECONCILED — LIVE GENERATION VERIFIED. FULL BIUPIU PIPELINE / PERSISTENT REPOSITORY SYNC / CI-CD REMAIN OPEN.**
+
+
+Live Firefly execution verified 20 September 2026; evidence recorded in `research/BIUPIU-FIREFLY-GATE-RECONCILIATION-v1.0.md`.
