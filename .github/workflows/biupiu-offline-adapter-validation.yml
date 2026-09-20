@@ -14,7 +14,16 @@ jobs:
       - uses: actions/checkout@v4
       - name: Environment evidence
         run: |
+          set -eu
           python3 --version
           uname -a
       - name: Offline adapter validation
-        run: python3 tools/offline_adapter_validation.py
+        run: |
+          set -eu
+          python3 tools/offline_adapter_validation.py
+      - name: Evidence summary
+        if: always()
+        run: |
+          echo "commit=${GITHUB_SHA}"
+          echo "run=${GITHUB_RUN_ID}"
+          echo "job=${GITHUB_JOB}"
