@@ -23,6 +23,10 @@ RESOURCES = (
     RepositoryResource("GS-Real2Sim", "https://github.com/discoverse-dev/gs-real2sim", ("3dgs","digital-twin","mujoco"), "Chinese/Japanese"),
     RepositoryResource("DLR OAISYS", "https://github.com/DLR-RM/oaisys", ("outdoor-simulation","blender","planetary-robotics"), "German"),
     RepositoryResource("rbot", "https://github.com/rlxai/rbot", ("amr","ros2","gazebo","navigation"), "multilingual"),
+    RepositoryResource("Unity EntityComponentSystemSamples", "https://github.com/Unity-Technologies/EntityComponentSystemSamples", ("unity6","ecs","physics","graphics","netcode"), "C#"),
+    RepositoryResource("Unity Robotics Hub", "https://github.com/Unity-Technologies/Unity-Robotics-Hub", ("unity6","robotics","ros2","urdf","simulation"), "C#"),
+    RepositoryResource("Unity UI Toolkit examples", "https://github.com/Unity-Technologies/ui-toolkit-manual-code-examples", ("unity6","graphics","hmi","ui"), "C#"),
+    RepositoryResource("Unity DesktopSamples", "https://github.com/Unity-Technologies/DesktopSamples", ("unity6","desktop","integration"), "C#"),
 )
 
 SEARCH_PROTOCOLS = (
@@ -39,6 +43,7 @@ ROUTING = {
     "graphics": ("GRAPHICS", "COMPUTATIONAL-GEOMETRY"),
     "3dgs": ("COMPUTATIONAL-VISION", "DIGITAL-TWIN"),
     "aerospace": ("AEROSPACE", "VIRTUAL-HANGAR"),
+    "unity6": ("WORLD", "GRAPHICS", "HMI", "DIGITAL-TWIN"),
 }
 
 def search_candidates(domain: str) -> list[RepositoryResource]:
