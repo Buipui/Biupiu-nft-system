@@ -7,7 +7,14 @@ const adapter = new BlenderAdapter(async request => {
   return {
     providerJobId: "blender-smoke-job",
     state: "REVIEW",
-    outputAssetIds: ["asset-rendered-001"]
+    outputAssetIds: ["asset-rendered-001"],
+    manifest: {
+      schema: "biupiu.universal-asset.v1", sourceAssetId: "asset-source-001", sourceModelVersion: "model-v1", researchIds: ["research-001"],
+      evidenceState: "DOCUMENTED", ipState: "INTERNAL", licenceState: "CLEARED",
+      geometry: { interchangeFormats: ["GLTF"], units: "metric", coordinateSystem: "right-handed", upAxis: "Z" },
+      materials: [{ materialId: "mat-001", name: "body", pbr: { metallic: 0.5, roughness: 0.4 }, licenceState: "CLEARED" }],
+      provenance: { parentAssetId: "asset-source-001" }
+    }
   };
 });
 
