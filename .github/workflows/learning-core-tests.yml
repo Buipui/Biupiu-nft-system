@@ -20,9 +20,9 @@ jobs:
         uses: actions/setup-python@v5
         with:
           python-version: "3.12"
-      - name: Install pytest
+      - name: Install test runner
         run: python -m pip install --upgrade pip pytest
-      - name: Run learning, federation, quantum, and federated-backend tests
+      - name: Run dependency-free learning and federation tests
         env:
           PYTHONPATH: src
         run: >
@@ -30,6 +30,7 @@ jobs:
           tests/test_learning.py
           tests/test_learning_integration.py
           tests/test_advanced_learning_algorithms.py
+          tests/test_algorithm_suite.py
           tests/test_federation_registry.py
           tests/test_quantum_federation.py
           tests/test_federated_backends.py
