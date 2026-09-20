@@ -21,5 +21,9 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+      - name: Record runner and toolchain
+        run: |
+          python3 --version
+          uname -a
       - name: Validate adapter manifests and fixtures
         run: python3 tools/validate_adapter_manifests.py
