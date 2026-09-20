@@ -8,7 +8,8 @@ if($checks -contains $false){throw 'Gateway policy assertion failed.'}
 $gateway=Join-Path $PSScriptRoot '..\Invoke-BiupiuGateway.ps1'
 if(-not(Test-Path -LiteralPath $gateway)){throw 'Gateway implementation missing.'}
 $source=Get-Content -Raw -LiteralPath $gateway
-foreach($pattern in @('(?im)^\s*Invoke-Expression\b','(?im)^\s*iex\b')){if($source -match $pattern){throw "Forbidden execution primitive detected: $pattern"}}
+$forbiddenCommands = [regex]::Matches($source, '(?im)^\s*(?:&\s*)?(Invoke-Expression|iex)\b')
+if($forbiddenCommands.Count -gt 0){throw 'Forbidden execution primitive detected in executable command position.'}
 $source = Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot '..\Invoke-BiupiuGateway.ps1')
 foreach($required in @('HOST.CAPABILITIES','REPOSITORY.STATUS','REPOSITORY.DIRECTORY','TEST.NAMED','REPOSITORY.WRITE.TEST','-Approve','-Execute')) { if(-not $source.Contains($required)){throw "Required gateway contract missing: $required"} }
 Write-Output 'BIUPIU_GATEWAY_POLICY_TEST: PASS'
