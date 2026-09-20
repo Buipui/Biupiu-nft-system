@@ -1,4 +1,4 @@
-# Biupiu Open-Gate Register v1.1
+# Biupiu Open-Gate Register v1.2
 
 **Date:** 20 September 2026  
 **Status:** RECONCILED — open work preserved; no unsupported closures
@@ -10,6 +10,7 @@
 - Housekeeping and gate-reconciliation protocol registration.
 - Prior audit records documenting evidence-preserving reconciliation.
 - Vehicle bio-composite engineering gate documentation and routing record.
+- Vehicle parameter-register gate documentation and conservative packaging rules.
 
 ## B. IMPLEMENTED-BUT-UNVERIFIED
 - R&D OS runtime and production-facing API layers where live identity, database, TLS, security testing or E2E evidence is absent.
@@ -17,12 +18,13 @@
 - GPU/host-safe integration where Windows/UE5 and Android runtime execution is not recorded.
 - Rendering adapters and cross-render pipelines pending environment evidence.
 - World production render scaffolds pending actual render review and measured output.
-- Vehicle case-study architecture, research queue and evidence-control record; no physical or runtime engineering validation is implied.
+- Vehicle case-study architecture, research queue, evidence-control record and preliminary parameter register; no physical or runtime engineering validation is implied.
 
 ## C. READY / NOT EXECUTED
-- Vehicle source verification: OEM/supplier specifications, peer-reviewed materials data and donor-platform records.
-- Vehicle CAD/package geometry, driveline angles, shaft loads and clearance stack-up.
-- Vehicle mass budget, axle loads, CG, payload and thermal-system accounting.
+- Vehicle engine-specific OEM/workshop source verification.
+- YASA motor variant, inverter, cooling, mass and drivetrain interface verification.
+- Donor-platform CAD/package geometry, driveline angles, shaft loads and clearance stack-up.
+- Complete vehicle mass budget, axle loads, CG, payload and thermal-system accounting.
 - Vehicle first-order physics, FEA, multibody and thermal analysis.
 - Vehicle hybrid controls, battery, inverter, clutch, cooling and failure-mode analysis.
 - Vehicle test planning, instrumentation, repeatability and safety review.
@@ -55,7 +57,8 @@ A gate is not closed merely because a document, scaffold, adapter or code path e
 1. Verify current workflow inventory and actual job logs.
 2. Inspect unresolved PRs and merge state, including previously pending fixes.
 3. Run available repository-local static checks where execution is supported.
-4. Validate vehicle sources and build parameter registers for both case studies.
-5. Perform conservative mass and packaging budgets before any structural or powertrain conclusion.
-6. Update individual gate records only with observed evidence.
-7. Reconcile this register after each evidence-bearing pass.
+4. Complete source-backed, unit-consistent parameter sheets for one selected hypercar donor and one selected overlander donor.
+5. Perform transparent mass and clearance calculations with uncertainty ranges.
+6. Validate selected material data and powertrain ratings against primary documents.
+7. Update individual gate records only with observed evidence.
+8. Reconcile this register after each evidence-bearing pass.
