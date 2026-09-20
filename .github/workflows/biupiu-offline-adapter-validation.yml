@@ -1,0 +1,20 @@
+name: Biupiu Offline Adapter Validation
+on:
+  push:
+    branches:
+      - gate/adapter-offline-ci-recovery-2026-09-20
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Environment evidence
+        run: |
+          python3 --version
+          uname -a
+      - name: Offline adapter validation
+        run: python3 tools/offline_adapter_validation.py
