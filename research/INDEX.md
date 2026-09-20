@@ -164,3 +164,17 @@ Visual Studio / VS Code Insider / PowerShell are recorded as host-side developme
 **UNITY SEARCH/REGISTRY STATUS: EXECUTED.**
 **UNITY HOST RUNTIME / PACKAGE RESOLUTION / BUILD / VISUAL REGRESSION: OPEN — NOT VERIFIED.**
 **NEXT GATE: ACTUAL UNITY HOST DETECTION → ISOLATED ADAPTER PROJECT → PACKAGE RESOLUTION → COMPILE → APPROVED RESOURCE IMPORT → HMI/ASSET SMOKE TEST → EXTERMINATE → REPOSITORY ROUND-TRIP.**
+
+
+## UNITY 6 + VISUAL STUDIO / VS CODE EXTERMINATE GATE — 20 September 2026
+
+Unity integration conflicts were reconciled at repository/architecture level. UE5 and Unity remain independent optional runtime providers; Biupiu World remains the authoritative shared world/asset contract. Visual Studio and VS Code Insider are registered as host development tooling, with PowerShell available for deterministic desktop inspection/build/log workflows.
+
+Repository records updated:
+- Unity 6 search/integration gate with Exterminate result and host execution sequence.
+- Unity 6 adapter README with Visual Studio / VS Code Insider contract and conflict rules.
+- Unity resource manifest and simulator repository network remain registered.
+
+**EXTERMINATE: PASS — repository-level conflicts resolved; no unverified runtime promotion.**
+**NEXT GATE: UNITY HOST DETECTION → VS/VS CODE TOOLING CHECK → ISOLATED UNITY ADAPTER PROJECT → PACKAGE RESOLUTION → COMPILE → APPROVED VISUAL RESOURCE → HMI/SCENE SMOKE TEST → EXTERMINATE → ROUND-TRIP.**
+**UNITY INTEGRATION STATUS: READY FOR DESKTOP EXECUTION / NOT HOST-VERIFIED.**
