@@ -36,6 +36,14 @@ jobs:
         shell: pwsh
         run: |
           & "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1" -Operation TEST.NAMED -Execute -Approve
+      - name: Host capability observation smoke
+        shell: pwsh
+        run: |
+          $out = & "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1" -Operation HOST.CAPABILITIES -Execute -IncludeGraphics
+          $obj = $out | ConvertFrom-Json
+          if ($obj.status -ne 'EXECUTED') { throw 'Host capability observation failed.' }
+          if ($null -eq $obj.data.graphics) { throw 'Graphics observation payload missing.' }
+          if ($obj.data.graphics.gpu -eq $null) { throw 'GPU observation field missing.' }
       - name: Digital Twin schema parse
         shell: pwsh
         run: |
