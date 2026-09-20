@@ -159,3 +159,15 @@ Physical host runtime: **UNVERIFIED**.
 
 ### Promotion boundary
 The clean CI result verifies the gateway's repository contract and Windows CI execution path. It does not establish that the user's physical development workstation has the same capabilities. Host-specific promotion remains gated on desktop evidence.
+## GATE 11 — HOST CAPABILITY / GRAPHICS OBSERVATION BRIDGE — 20 September 2026
+- Clean Gateway CI Gate 10 accepted as baseline.
+- Gateway extended with observation-only graphics collection: **IMPLEMENTED**.
+- GPU inventory fields: **IMPLEMENTED**.
+- CMake/Git/.NET/Cargo discovery fields: **IMPLEMENTED**.
+- Windows CI host-capability smoke: **IMPLEMENTED**.
+- Digital Twin Graphics.HostObservation interface: **REGISTERED**.
+- Physical development workstation evidence: **PENDING**.
+- GPU/driver/UE5/Unity/Visual Studio/VS Code physical-host promotion: **BLOCKED pending host evidence**.
+- No installation, download, arbitrary command or network mutation added.
+
+Next gate: successful CI execution of the expanded observation smoke, followed by controlled execution on the user's actual Windows development host.
