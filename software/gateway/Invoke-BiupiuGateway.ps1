@@ -11,6 +11,7 @@ param(
   [switch]$Approve,
   [switch]$Execute,
   [switch]$Json,
+  [switch]$IncludeGraphics,
   [string]$RequestId = ([guid]::NewGuid().ToString("N"))
 )
 $ErrorActionPreference = 'Stop'
@@ -45,7 +46,7 @@ try {
   }
   if($Operation -eq 'TEST.NAMED' -and $Execute -and -not $Approve){ throw 'Named test execution requires -Approve.' }
   switch($Operation){
-    'HOST.CAPABILITIES' { New-Evidence 'EXECUTED' @{os=[Environment]::OSVersion.VersionString;computer=$env:COMPUTERNAME;architecture=$env:PROCESSOR_ARCHITECTURE;execution_policy=(Get-ExecutionPolicy -Scope Process);execution_policy_list=(Get-ExecutionPolicy -List | ForEach-Object { [pscustomobject]@{scope=$_.Scope;policy=$_.ExecutionPolicy} })} | ConvertTo-Json -Depth 8 }
+    'HOST.CAPABILITIES' { $graphics=$null; if($IncludeGraphics){$graphics=[ordered]@{gpu=@(Get-CimInstance Win32_VideoController -ErrorAction SilentlyContinue | Select-Object Name,DriverVersion,AdapterRAM,VideoProcessor);executables=@{cmake=(Get-Command cmake -ErrorAction SilentlyContinue).Source;git=(Get-Command git -ErrorAction SilentlyContinue).Source;dotnet=(Get-Command dotnet -ErrorAction SilentlyContinue).Source;cargo=(Get-Command cargo -ErrorAction SilentlyContinue).Source}}; New-Evidence 'EXECUTED' @{os=[Environment]::OSVersion.VersionString;computer=$env:COMPUTERNAME;architecture=$env:PROCESSOR_ARCHITECTURE;execution_policy=(Get-ExecutionPolicy -Scope Process);execution_policy_list=(Get-ExecutionPolicy -List | ForEach-Object { [pscustomobject]@{scope=$_.Scope;policy=$_.ExecutionPolicy} });graphics=$graphics} | ConvertTo-Json -Depth 10 }
     'REPOSITORY.STATUS' { $root=Assert-RepositoryPath; $status=@(git -C $root status --short); New-Evidence 'EXECUTED' @{repository=$root;clean=($status.Count -eq 0);status=$status} | ConvertTo-Json -Depth 8 }
     'REPOSITORY.DIRECTORY' { $root=Assert-RepositoryPath; $target=Join-Path $root $RelativePath; $items=@(Get-ChildItem -LiteralPath $target -Force | Select-Object Name,Length,Mode); New-Evidence 'EXECUTED' @{path=$target;items=$items} | ConvertTo-Json -Depth 8 }
     'TEST.NAMED' { New-Evidence 'EXECUTED' (Invoke-NamedTest) | ConvertTo-Json -Depth 8 }
