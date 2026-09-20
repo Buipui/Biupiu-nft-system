@@ -1,0 +1,246 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biupiu.local/schemas/machine-capability-v1.0.schema.json",
+  "title": "Biupiu Machine Capability Contract",
+  "type": "object",
+  "additionalProperties": false,
+  "required": [
+    "identity",
+    "capability_version",
+    "transport",
+    "inputs",
+    "outputs",
+    "commands",
+    "events",
+    "units_data_types",
+    "operating_limits",
+    "timing_sampling",
+    "calibration",
+    "quality_status",
+    "safety_constraints",
+    "digital_twin",
+    "provenance",
+    "permission_class"
+  ],
+  "properties": {
+    "identity": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "capability_id",
+        "name"
+      ],
+      "properties": {
+        "capability_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "vendor": {
+          "type": [
+            "string",
+            "null"
+          ]
+        },
+        "model": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "capability_version": {
+      "type": "string",
+      "pattern": "^[0-9]+\\.[0-9]+$"
+    },
+    "transport": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "protocol"
+      ],
+      "properties": {
+        "protocol": {
+          "type": "string",
+          "enum": [
+            "OPC_UA",
+            "MQTT",
+            "MODBUS",
+            "ROS",
+            "ROS2",
+            "CAN",
+            "CAN_FD",
+            "ETHERNET",
+            "SERIAL",
+            "GPIO",
+            "VENDOR_ADAPTER"
+          ]
+        },
+        "endpoint": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "inputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      }
+    },
+    "outputs": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/signal"
+      }
+    },
+    "commands": {
+      "type": "array",
+      "items": {
+        "$ref": "#/$defs/command"
+      }
+    },
+    "events": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "units_data_types": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "operating_limits": {
+      "type": "object"
+    },
+    "timing_sampling": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "calibration": {
+      "type": "object",
+      "additionalProperties": true
+    },
+    "quality_status": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "safety_constraints": {
+      "type": "array",
+      "items": {
+        "type": "string",
+        "minLength": 1
+      }
+    },
+    "digital_twin": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "twin_id"
+      ],
+      "properties": {
+        "twin_id": {
+          "type": "string",
+          "minLength": 1
+        },
+        "model_version": {
+          "type": [
+            "string",
+            "null"
+          ]
+        }
+      }
+    },
+    "provenance": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "source",
+        "licence",
+        "version"
+      ],
+      "properties": {
+        "source": {
+          "type": "string",
+          "minLength": 1
+        },
+        "licence": {
+          "type": "string",
+          "minLength": 1
+        },
+        "version": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "permission_class": {
+      "type": "string",
+      "enum": [
+        "READ_ONLY",
+        "CONTROLLED",
+        "ACTUATION"
+      ]
+    }
+  },
+  "$defs": {
+    "signal": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "data_type",
+        "unit"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "data_type": {
+          "type": "string",
+          "minLength": 1
+        },
+        "unit": {
+          "type": "string",
+          "minLength": 1
+        }
+      }
+    },
+    "command": {
+      "type": "object",
+      "additionalProperties": false,
+      "required": [
+        "name",
+        "permission"
+      ],
+      "properties": {
+        "name": {
+          "type": "string",
+          "minLength": 1
+        },
+        "permission": {
+          "type": "string",
+          "enum": [
+            "READ_ONLY",
+            "CONTROLLED",
+            "ACTUATION"
+          ]
+        }
+      }
+    }
+  }
+}
