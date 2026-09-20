@@ -26,9 +26,20 @@ Reconcile the Biupiu Adobe Firefly capability claims against the capabilities ac
 | Persistent Firefly-to-Biupiu repository synchronization | OPEN | No direct repository synchronization execution demonstrated |
 | Production-grade automated Firefly CI/CD integration | OPEN | Not demonstrated and must not be implied |
 
+### Execution evidence — 20 September 2026
+A live Adobe Firefly generation was executed successfully in the connected Adobe environment.
+- Request ID: `6cfff1aa-318b-4862-8470-9c351606f91a`
+- Output type: PNG
+- Workflow: new Firefly image generation
+- Result: SUCCESS
+- Output: Adobe-hosted generated asset URL returned by the connector
+- This verifies live generation capability and Firefly credit/account access sufficient for this operation.
+
 ### Result
 **FIREfly CAPABILITY GATES: IMPLEMENTED / AVAILABLE.**
-**FIREfly VERIFICATION GATES: PARTIALLY OPEN.**
+**LIVE GENERATION GATE: VERIFIED.**
+**ACCOUNT ACCESS / CREDIT GATE: VERIFIED FOR THIS OPERATION.**
+**FULL BIUPIU PIPELINE / PERSISTENT REPOSITORY SYNC / CI-CD: OPEN.**
 
 The previous wording “all Firefly gates fully implemented successfully” is superseded by this evidence-controlled status.
 
