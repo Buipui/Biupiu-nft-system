@@ -46,3 +46,19 @@ No false VERIFIED state is assigned. Repository-level Exterminate remains PASS. 
 Use `-Build` only after the read-first inspection is reviewed.
 
 Promotion remains **DISCOVERED/READY → RESOLVED → COMPILED → SMOKE-TESTED → EXTERMINATE-PASS → VERIFIED**.
+
+
+## DESKTOP-HANDOFF NEXT GATE — READY
+
+The repository-side gate is complete. The only remaining execution dependency is the user's local Windows host. The committed PowerShell harness must be run there because GitHub cannot access local Unity/VS/VS Code installations.
+
+Evidence required for promotion:
+1. Unity version and executable path.
+2. VS / VS Code Insider and C# tooling versions.
+3. ProjectVersion.txt and package manifests.
+4. Compile/build exit code and log.
+5. Scene/HMI smoke-test result.
+6. Exterminate/conflict scan result.
+7. Repository round-trip evidence.
+
+Until these are returned, runtime status remains NOT VERIFIED.
