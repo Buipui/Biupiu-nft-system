@@ -38,7 +38,9 @@ class PromotionEvidence:
     human_approved: bool = False
 
 
-def eligible_for_quantum_promotion(evidence: PromotionEvidence, *, requires_hardware: bool = False) -> bool:
+def eligible_for_quantum_promotion(
+    evidence: PromotionEvidence, *, requires_hardware: bool = False
+) -> bool:
     """Return True only when every mandatory evidence gate is satisfied."""
     required = (
         evidence.provenance,
@@ -54,4 +56,14 @@ def eligible_for_quantum_promotion(evidence: PromotionEvidence, *, requires_hard
 
 
 def quantum_capability_names() -> Tuple[str, ...]:
-    return ("quantum-kernel", "quantum-neural-network", "hybrid-differentiation", "benchmarking")
+    """Return the canonical quantum capability registry in stable order."""
+    return tuple(
+        sorted(
+            {
+                "quantum-kernel",
+                "quantum-neural-network",
+                "hybrid-differentiation",
+                "benchmarking",
+            }
+        )
+    )
