@@ -39,3 +39,11 @@ Canonical architecture record: `research/BIUPIU-MULTILANGUAGE-KERNEL-ARCHITECTUR
 Canonical resource registry: `research/BIUPIU-C-CPP-RUST-RESOURCE-MANIFEST-v1.0.json`.
 
 Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
+
+
+## P0 Executable Language-Stack Learning Integration — 20 September 2026
+
+Biupiu Intelligence now treats the C/C++/Rust core boundary as a structured engineering-learning target. Build results, ABI failures, sanitizer findings, benchmark data, dependency/licence decisions and rejected translations are evidence records. Intelligence may propose code or migrations, but Core OS validation controls promotion.
+
+Executable seed: `core/multilang/`.
+Learning promotion remains `REFERENCE_ONLY -> ANALYZED -> LICENCE_CLEARED -> BUILD_VERIFIED -> SMOKE_TESTED -> REGRESSION_VERIFIED -> PROMOTED_ADAPTER -> PROMOTED_CORE`.
