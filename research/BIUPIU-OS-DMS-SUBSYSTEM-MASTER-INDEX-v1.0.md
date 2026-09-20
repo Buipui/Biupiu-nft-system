@@ -259,3 +259,14 @@ Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
 `core/multilang/` is registered as a Core OS boundary package. C defines the durable ABI, Rust supplies the initial safety-oriented kernel boundary implementation, and C++ supplies the native subsystem contract. DMS and subsystem services consume these through OS contracts; they do not bypass the Core OS.
 
 Verification state: SOURCE IMPLEMENTED / BUILD AND RUNTIME PENDING.
+
+
+## 13. Deep Search / Substitute / Resource Intelligence Gate
+
+The OS/DMS registry now consumes the governed deep-search recovery protocol and cross-disciplinary Digital Twin resource map. Resource discovery is separated from executable promotion. Licence, security, provenance, interface and runtime evidence remain mandatory.
+
+Routing: `BLOCKER -> MULTILINGUAL SEARCH -> OWNER/R&D -> UNIVERSITY/LAB -> OPEN SOURCE -> LICENCE/SECURITY -> DIGITAL TWIN FIT -> DEPARTMENT/SIMULATOR/CONFIGURATOR -> TEST -> PROMOTION`.
+
+Restricted or proprietary tools are represented as external library records when useful. They are not treated as Biupiu-owned code or assets. Failed searches, licence rejections, incompatible APIs and build failures become governed learning evidence.
+
+Canonical records: deep-search protocol, Digital Twin resource map, licensed external asset register and Intelligence resource-search learning rules.

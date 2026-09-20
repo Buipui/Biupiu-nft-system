@@ -38,3 +38,15 @@ Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
 The C/C++/Rust architecture is now represented by executable source-level boundary artifacts under `core/multilang/`. AI-67 routes these artifacts through OS validation, DMS provenance and regression gates. No runtime or hardware capability is inferred from source existence.
 
 Current state: ARCHITECTURE + SOURCE SEED IMPLEMENTED / RUNTIME EVIDENCE PENDING.
+
+
+## P0 Deep Search / Substitute Learning Gate — 20 September 2026
+
+AI-67 now includes governed resource-recovery learning: native-language discovery, primary-owner/R&D and university-first routing, open-source substitution, licence/security classification, Digital Twin capability matching and cross-department routing.
+
+Canonical learning policy: `intelligence/BIUPIU-RESOURCE-SEARCH-LEARNING-RULES-v1.0.md`.
+Canonical recovery protocol: `research/BIUPIU-DEEP-SEARCH-SUBSTITUTE-RESEARCH-PROTOCOL-v1.0.md`.
+
+Learning can improve retrieval order and substitute proposals. It cannot silently alter OS authority, security controls, physical actuation permissions or third-party licence obligations.
+
+Status: LEARNING/RULE ARCHITECTURE IMPLEMENTED / EXECUTABLE RESOURCE PROMOTION REMAINS GATED.

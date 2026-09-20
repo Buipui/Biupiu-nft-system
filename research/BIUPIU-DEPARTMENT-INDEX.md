@@ -250,3 +250,11 @@ Canonical records:
 - `research/BIUPIU-VINYL-CONFIGURATOR-NFS2-BASIS-v1.0.md`
 
 Cross-links: BPU-COL → BPU-MATCOL → resin/adhesive/vinyl/textile/composite → component twin → platform/application → catalogue.
+
+## DEEP-SEARCH-CROSS-DISCIPLINARY-01 — Resource discovery across departments
+
+Every new resource candidate is checked for adjacent departmental utility through Digital Twin capability matching. Current routing families include OS/DMS, Digital Twin, MATH/Physics, simulators, configurators, Biupiu World, robotics, agriculture, automotive, aerospace, marine, materials/composites, photonics/electromagnetics, biomedical, manufacturing and geospatial systems.
+
+Canonical map: `research/BIUPIU-CROSS-DISCIPLINARY-DIGITAL-TWIN-RESOURCE-MAP-v1.0.md`.
+
+Promotion remains evidence- and licence-gated.

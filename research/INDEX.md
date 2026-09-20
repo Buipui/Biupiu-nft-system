@@ -171,3 +171,18 @@ The clean CI result verifies the gateway's repository contract and Windows CI ex
 - No installation, download, arbitrary command or network mutation added.
 
 Next gate: successful CI execution of the expanded observation smoke, followed by controlled execution on the user's actual Windows development host.
+
+## GATE 12 — DEEP SEARCH / SUBSTITUTE / CROSS-DISCIPLINARY RESOURCE RECOVERY — 20 September 2026
+
+- Deep multilingual recovery protocol: IMPLEMENTED.
+- Primary-owner/R&D -> university/lab -> open-source search hierarchy: IMPLEMENTED.
+- Foreign-language terminology expansion: IMPLEMENTED in protocol.
+- Licensed/restricted asset library: IMPLEMENTED.
+- Cross-disciplinary Digital Twin resource map: IMPLEMENTED.
+- Intelligence resource-search learning rules: IMPLEMENTED.
+- Current candidate families researched: NASA F´/FPP, Project Chrono, Eclipse Ditto, Gazebo, Isaac Sim, OpenUSD, FreeCAD/OCCT, OpenFOAM, OpenModelica, SUNDIALS, Elmer, MEEP, OpenSim, Open3D, Assimp, CARLA and agriculture Digital Twin repositories.
+- Executable integration: NOT CLAIMED without build/runtime evidence.
+- CI/host runtime state: unchanged; prior runtime blocker remains separately open.
+
+### Gate 12 promotion boundary
+Research and routing architecture are registered. External code/assets remain reference, adapter-ready, sandboxed or restricted until licence/security/build/test evidence supports promotion.
