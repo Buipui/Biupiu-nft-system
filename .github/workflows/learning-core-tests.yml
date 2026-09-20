@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
       - name: Install pytest
         run: python -m pip install --upgrade pip pytest
-      - name: Run learning, federation, and quantum federation tests
+      - name: Run learning, federation, quantum, and federated-backend tests
         env:
           PYTHONPATH: src
         run: >
@@ -32,3 +32,4 @@ jobs:
           tests/test_advanced_learning_algorithms.py
           tests/test_federation_registry.py
           tests/test_quantum_federation.py
+          tests/test_federated_backends.py
