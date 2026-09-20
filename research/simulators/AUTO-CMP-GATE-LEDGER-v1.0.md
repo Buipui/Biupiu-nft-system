@@ -6,8 +6,8 @@
 | Gate | Description | Status | Evidence required to close |
 |---|---|---|---|
 | AUTO-CMP-00 | Scope, asset IDs and risk classification | PASS | Repository study and integration manifest committed |
-| AUTO-CMP-01 | Schema/unit/provenance validation | PARTIAL | Shared JSON schema and regression tests added; runtime schema/provenance validation still required |
-| AUTO-CMP-02 | Analytical composite benchmark | PASS* | Six regression checks executed against the CLT prototype; independent benchmark dataset still required |
+| AUTO-CMP-01 | Schema/unit/provenance validation | PASS* | Shared schema contract and 2 schema regression checks pass; full runtime provenance validator/CI still required |
+| AUTO-CMP-02 | Analytical composite benchmark | PASS* | Six mathematical regression checks pass; independent material benchmark still required |
 | AUTO-CMP-03 | Bio-resin cure model benchmark | PARTIAL | Illustrative model and bounded regression test exist; DSC/DEA calibration data required |
 | AUTO-CMP-04 | Damping and damage evidence matrix | PARTIAL | Candidate mechanisms recorded; matched test datasets and source verification required |
 | AUTO-CMP-05 | Hypercar packaging feasibility | OPEN | Exact engine, motor, inverter, cooling and donor dimensions |
@@ -26,23 +26,25 @@
 - OPEN = not yet executed.
 - BLOCKED = cannot responsibly progress without specified safety or measurement evidence.
 - NEXT = immediate implementation priority.
-- *AUTO-CMP-02 PASS means the software regression gate passed; it does not mean the material model is physically validated or certified.
+- *AUTO-CMP-01 and AUTO-CMP-02 PASS refer to software/schema regression gates only; they do not certify materials, vehicle structures or safety.
 
 ## Current execution result
 
-- Added AUTO-CMP-SHARED-INPUT-SCHEMA-v1.0.json.
-- Added test_composites_bioresins_screening.py.
-- Executed six regression checks in a Python runtime: 6/6 passed.
-- Symmetric laminate benchmark maximum absolute B-matrix term: 2.22e-16.
-- No physical material properties were certified and no crashworthiness or safety claim was made.
+- Added the body-panel coupon and attachment test matrix.
+- Added dependency-light schema regression tests.
+- Runtime verification performed against the fetched simulator logic: **6/6 composite regression checks passed**.
+- Runtime schema contract verification: **2/2 checks passed**.
+- Symmetric laminate maximum absolute B-matrix term: **2.22e-16**.
+- The repository could not be cloned through the external network runtime, so no claim is made that pytest/CI ran inside a fresh checkout.
+- No physical material properties were certified and no crashworthiness or roadworthiness claim was made.
 
 ## Immediate execution order
 
-1. Add body-panel coupon and attachment test matrix.
-2. Add mass/CG, torque-speed, thermal and torsional interfaces.
-3. Connect simulator outputs to OS-SIM telemetry and digital-twin contracts.
-4. Add runtime schema/provenance validation and CI execution.
-5. Ingest verified literature and laboratory data; recalibrate models.
+1. Add mass/CG, torque-speed, thermal and torsional interfaces.
+2. Connect simulator outputs to OS-SIM telemetry and digital-twin contracts.
+3. Add CI execution and full runtime schema/provenance validation.
+4. Add measured-material cards and environmental-retention data.
+5. Ingest individually verified German, Italian and Japanese literature records.
 6. Maintain conventional/OEM-qualified running gear until safety-critical composite components pass formal validation.
 
-**Current overall state:** Software screening gate advanced; engineering validation, physical correlation and production release remain open.
+**Current overall state:** Software/schema screening is progressing; engineering validation, physical correlation and production release remain open.
