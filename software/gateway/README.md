@@ -24,3 +24,7 @@ Verification boundary: repository implementation can be verified here; Windows h
 
 ## CI Gate 02 trigger
 This marker records that the gateway contract is under automated Windows-runner regression validation.
+
+
+## Gate 05 smoke trigger
+Regression trigger refreshed after Gate 04 hardening. Host promotion remains evidence-gated.
