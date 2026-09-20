@@ -1,0 +1,180 @@
+{
+  "version": "1.0",
+  "date": "2026-09-20",
+  "priority": "P0",
+  "status": "INDEXED_AND_ARCHITECTURE_MAPPED",
+  "resources": [
+    [
+      "NASA Open Source Software",
+      "https://code.nasa.gov/",
+      "C,C++,Rust",
+      "flight software;embedded systems;computer vision;IPC;OS abstraction",
+      "REFERENCE_ONLY"
+    ],
+    [
+      "NASA GitHub",
+      "https://github.com/NASA",
+      "C,C++,Rust",
+      "source provenance;flight/software repositories;build patterns",
+      "REFERENCE_ONLY"
+    ],
+    [
+      "NASA F-prime",
+      "https://github.com/nasa/fprime",
+      "C,C++,Rust",
+      "flight software;embedded systems;component architecture",
+      "ANALYZE_PER_REPO"
+    ],
+    [
+      "NASA Vision Workbench",
+      "https://github.com/nasa/visionworkbench",
+      "C++",
+      "computer vision;image processing;3D reconstruction",
+      "ANALYZE_PER_REPO"
+    ],
+    [
+      "DARPA TRACTOR",
+      "https://www.darpa.mil/research/programs/translating-all-c-to-rust",
+      "C,Rust",
+      "C-to-Rust translation;static/dynamic analysis;ML-assisted migration",
+      "RESEARCH_PATTERN"
+    ],
+    [
+      "Rust Embedded Book",
+      "https://doc.rust-lang.org/embedded-book/",
+      "Rust,C",
+      "bare metal;FFI;embedded architecture",
+      "OPEN_REFERENCE"
+    ],
+    [
+      "Rust Embedded Bookshelf",
+      "https://rust-embedded.org/bookshelf/",
+      "Rust",
+      "microcontrollers;OS development;no_std;ABI",
+      "OPEN_REFERENCE"
+    ],
+    [
+      "Rust Embedded GitHub",
+      "https://github.com/rust-embedded",
+      "Rust",
+      "embedded Linux;RTOS;bare metal;drivers",
+      "REPOSITORY_RADAR"
+    ],
+    [
+      "Awesome Embedded Rust",
+      "https://github.com/rust-embedded/awesome-embedded-rust",
+      "Rust",
+      "curated crates;RTOS;peripherals;real-time",
+      "REPOSITORY_RADAR"
+    ],
+    [
+      "OpenStax Computer Science",
+      "https://openstax.org/subjects/computer-science",
+      "C,C++",
+      "open educational foundation;algorithms;systems",
+      "OPEN_EDUCATION"
+    ],
+    [
+      "CIA FOIA — DOD Computer Security Evaluation Center",
+      "https://www.cia.gov/readingroom/document/cia-rdp83m00914r001800060009-2",
+      "systems",
+      "reference monitor;security kernel;trusted systems",
+      "HISTORICAL_EVIDENCE"
+    ],
+    [
+      "CIA FOIA — Computer Systems Plan 1971-1975",
+      "https://www.cia.gov/readingroom/document/cia-rdp74b00681r000100300005-4",
+      "systems",
+      "systems planning;software/hardware architecture",
+      "HISTORICAL_EVIDENCE"
+    ],
+    [
+      "CIA FOIA — Soviet Computer Software Problem",
+      "https://www.cia.gov/readingroom/docs/CIA-RDP78-01092A000100060020-2.pdf",
+      "systems",
+      "historical programming systems;OS/time-sharing analysis",
+      "HISTORICAL_EVIDENCE"
+    ],
+    [
+      "HAL",
+      "https://hal.science/",
+      "French,English",
+      "academic research;systems;software;AI",
+      "FOREIGN_RESEARCH_RADAR"
+    ],
+    [
+      "CiNii Research",
+      "https://cir.nii.ac.jp/",
+      "Japanese,English",
+      "Japanese academic literature;computer science",
+      "FOREIGN_RESEARCH_RADAR"
+    ],
+    [
+      "KoreaScience",
+      "https://koreascience.kr/",
+      "Korean,English",
+      "Korean science/engineering literature",
+      "FOREIGN_RESEARCH_RADAR"
+    ],
+    [
+      "CyberLeninka",
+      "https://cyberleninka.ru/",
+      "Russian",
+      "open scientific literature",
+      "FOREIGN_RESEARCH_RADAR"
+    ],
+    [
+      "Emerald Insight",
+      "https://www.emerald.com/insight/",
+      "English",
+      "peer-reviewed research;information systems;software;AI",
+      "LITERATURE_RADAR"
+    ],
+    [
+      "ResearchGate",
+      "https://www.researchgate.net/",
+      "multi-language",
+      "research discovery;author copies;citation graph",
+      "LITERATURE_RADAR"
+    ],
+    [
+      "GitHub",
+      "https://github.com/",
+      "C,C++,Rust",
+      "source provenance;issues;releases;CI",
+      "CODE_PROVENANCE"
+    ]
+  ],
+  "architecture": {
+    "C": "ABI/HAL/legacy interoperability/boot-facing primitives",
+    "CPP": "simulation/geometry/graphics/scientific compute/native AI acceleration",
+    "Rust": "memory-safe kernel services/concurrency/security/embedded services",
+    "boundary": "versioned C ABI + deterministic schemas + explicit ownership"
+  },
+  "learning_fields": [
+    "language",
+    "standard",
+    "compiler",
+    "target",
+    "ABI",
+    "license",
+    "dependencies",
+    "tests",
+    "benchmarks",
+    "security",
+    "limitations",
+    "failure_modes",
+    "provenance",
+    "architecture_pattern"
+  ],
+  "promotion": [
+    "REFERENCE_ONLY",
+    "ANALYZED",
+    "LICENCE_CLEARED",
+    "BUILD_VERIFIED",
+    "SMOKE_TESTED",
+    "REGRESSION_VERIFIED",
+    "PROMOTED_ADAPTER",
+    "PROMOTED_CORE"
+  ]
+}
