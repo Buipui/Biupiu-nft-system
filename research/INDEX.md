@@ -178,3 +178,14 @@ Repository records updated:
 **EXTERMINATE: PASS — repository-level conflicts resolved; no unverified runtime promotion.**
 **NEXT GATE: UNITY HOST DETECTION → VS/VS CODE TOOLING CHECK → ISOLATED UNITY ADAPTER PROJECT → PACKAGE RESOLUTION → COMPILE → APPROVED VISUAL RESOURCE → HMI/SCENE SMOKE TEST → EXTERMINATE → ROUND-TRIP.**
 **UNITY INTEGRATION STATUS: READY FOR DESKTOP EXECUTION / NOT HOST-VERIFIED.**
+
+
+## UNITY 6 HOST GATE PREPARATION — 20 September 2026
+
+Added:
+- `tools/unity6/biupiu-unity-host-gate.ps1` — read-first PowerShell desktop inspection/build harness.
+- `research/BIUPIU-UNITY6-HOST-GATE-v1.0.md` — promotion/evidence protocol.
+
+This advances the next gate to **HOST-EXECUTION READY**. The connected repository cannot truthfully verify the user's local Unity installation, Visual Studio/VS Code Insider installation, package resolution, compilation or visual smoke test. Those require execution on the desktop. The PowerShell gate is designed to collect that evidence without modifying production projects.
+
+Promotion chain: **DISCOVERED → RESOLVED → COMPILED → SMOKE-TESTED → EXTERMINATE-PASS → VERIFIED**.
