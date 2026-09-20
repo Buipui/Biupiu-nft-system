@@ -1,0 +1,16 @@
+{
+  "schema_version":"1.0",
+  "twin_type":"execution_gateway",
+  "identity":"biupiu://twin/gateway/powershell/windows",
+  "parent":"biupiu://twin/os",
+  "basis":"biupiu-dos-command-contract",
+  "authority":"biupiu-os-core",
+  "observed_state":{"execution":"host-dependent","verified":false},
+  "desired_state":{"execution":"controlled","arbitrary_commands":false},
+  "interfaces":["DOS.command","PowerShell","Git","DigitalTwin.evidence"],
+  "capabilities":["host inspection","repository status","named tests","approved test write"],
+  "prohibited":["arbitrary command execution","arbitrary script execution","unapproved network","download/install"],
+  "evidence_requirements":["request_id","timestamp_utc","policy_version","operation","status","host"],
+  "promotion_rule":"No twin promotion from unverified host execution; Main OS validation remains authoritative.",
+  "relationships":[{"type":"derived_from","target":"biupiu://os/dos"},{"type":"controlled_by","target":"biupiu://os/core"},{"type":"reports_to","target":"biupiu://intelligence"},{"type":"mirrored_by","target":"biupiu://digital-twin"}]
+}
