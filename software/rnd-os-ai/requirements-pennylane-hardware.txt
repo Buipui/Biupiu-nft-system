@@ -1,0 +1,9 @@
+# PennyLane hardware-capable provider layer
+pennylane
+pennylane-qiskit
+qiskit
+qiskit-machine-learning
+qiskit-ibm-runtime
+pennylane-braket
+amazon-braket-sdk
+pennylane-lightning
