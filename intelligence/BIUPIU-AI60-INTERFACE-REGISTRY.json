@@ -1,0 +1,25 @@
+{
+  "schema":"BIUPIU-AI60-INTERFACE-REGISTRY-v1",
+  "status":"CONTRACT_REGISTRY",
+  "interfaces":{
+    "task":{"adapter":"BIUPIU-TASK-INTERFACE-v1","contract":["task_id","objective","routes"]},
+    "state":{"adapter":"BIUPIU-STATE-INTERFACE-v1","contract":["state","state_path"]},
+    "provenance":{"adapter":"BIUPIU-PROVENANCE-INTERFACE-v1","contract":["source","evidence_hash","lineage"]},
+    "routing":{"adapter":"BIUPIU-ROUTING-INTERFACE-v1","contract":["routes"]},
+    "evidence":{"adapter":"BIUPIU-EVIDENCE-INTERFACE-v1","contract":["execution_attestation","results"]},
+    "release":{"adapter":"BIUPIU-RELEASE-INTERFACE-v1","contract":["release_state"]},
+    "validation":{"adapter":"BIUPIU-VALIDATION-INTERFACE-v1","contract":["validation_pass"]},
+    "observed-state-boundary":{"adapter":"BIUPIU-OBSERVED-STATE-INTERFACE-v1","contract":["observed_state_from_simulation"]},
+    "configuration":{"adapter":"BIUPIU-CONFIGURATION-INTERFACE-v1","contract":["configuration"]},
+    "uncertainty":{"adapter":"BIUPIU-UNCERTAINTY-INTERFACE-v1","contract":["uncertainty"]},
+    "regression":{"adapter":"BIUPIU-REGRESSION-INTERFACE-v1","contract":["regression_pass"]},
+    "simulation":{"adapter":"BIUPIU-SIMULATION-INTERFACE-v1","contract":["simulation"]},
+    "hash":{"adapter":"BIUPIU-HASH-INTERFACE-v1","contract":["hash"]},
+    "lineage":{"adapter":"BIUPIU-LINEAGE-INTERFACE-v1","contract":["lineage"]},
+    "licence":{"adapter":"BIUPIU-LICENCE-INTERFACE-v1","contract":["licence"]},
+    "dependency":{"adapter":"BIUPIU-DEPENDENCY-INTERFACE-v1","contract":["dependency"]},
+    "promotion-record":{"adapter":"BIUPIU-PROMOTION-RECORD-INTERFACE-v1","contract":["promotion_record"]},
+    "human-gate":{"adapter":"BIUPIU-HUMAN-GATE-INTERFACE-v1","contract":["human_approval"]},
+    "citation":{"adapter":"BIUPIU-CITATION-INTERFACE-v1","contract":["citation"]}
+  }
+}
