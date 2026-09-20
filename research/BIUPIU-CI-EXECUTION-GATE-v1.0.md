@@ -24,3 +24,9 @@ Source tests: PRESENT
 CI workflow: PRESENT
 CI execution: PENDING
 Hardware runtime: PENDING
+
+
+## Conflict remediation — 20 September 2026
+The earlier PR attempt returned GitHub 422 (no commits between main and the trigger branch), despite the trigger commit being discoverable. The branch was therefore treated as a stale/inconsistent execution ref rather than merged blindly. The trigger branch is retained for evidence; no false CI pass is recorded.
+
+Next execution path: create a fresh trigger branch from the verified current main ref, apply a new qualifying verification marker, then query the workflow run for that new commit.
