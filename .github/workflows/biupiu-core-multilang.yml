@@ -5,10 +5,16 @@ on:
     paths:
       - "core/multilang/**"
       - ".github/workflows/biupiu-core-multilang.yml"
+      - "research/BIUPIU-CI-EXECUTION-TRIGGER-v2.md"
   pull_request:
     paths:
       - "core/multilang/**"
       - ".github/workflows/biupiu-core-multilang.yml"
+      - "research/BIUPIU-CI-EXECUTION-TRIGGER-v2.md"
+  workflow_dispatch:
+
+permissions:
+  contents: read
 
 jobs:
   rust:
