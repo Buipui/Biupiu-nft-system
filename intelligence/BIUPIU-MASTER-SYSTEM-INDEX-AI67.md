@@ -32,3 +32,9 @@ Canonical architecture record: `research/BIUPIU-MULTILANGUAGE-KERNEL-ARCHITECTUR
 Canonical resource registry: `research/BIUPIU-C-CPP-RUST-RESOURCE-MANIFEST-v1.0.json`.
 
 Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
+
+## P0 Core Language Execution Gate — 20 September 2026
+
+The C/C++/Rust architecture is now represented by executable source-level boundary artifacts under `core/multilang/`. AI-67 routes these artifacts through OS validation, DMS provenance and regression gates. No runtime or hardware capability is inferred from source existence.
+
+Current state: ARCHITECTURE + SOURCE SEED IMPLEMENTED / RUNTIME EVIDENCE PENDING.
