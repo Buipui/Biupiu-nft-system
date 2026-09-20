@@ -171,3 +171,14 @@ The clean CI result verifies the gateway's repository contract and Windows CI ex
 - No installation, download, arbitrary command or network mutation added.
 
 Next gate: successful CI execution of the expanded observation smoke, followed by controlled execution on the user's actual Windows development host.
+
+## LEARNING CORE GATE — 20 September 2026
+- Deterministic learning substrate: **IMPLEMENTED**.
+- Failure fingerprinting / classification / stalled-loop detection: **IMPLEMENTED**.
+- Drift detection and candidate scoring: **IMPLEMENTED**.
+- Dedicated learning CI: **IMPLEMENTED**.
+- Learning CI run `35537554602`: **SUCCESS**.
+- CI-level learning verification: **VERIFIED**.
+- Cross-platform host/runtime integration: **PENDING**.
+- Production promotion: **BLOCKED pending broader runtime evidence**.
+- Safety boundary: learning may propose and record; Core OS authority remains independent.
