@@ -1,0 +1,40 @@
+{
+  "schema_version": "1.0",
+  "gate": "AI-38",
+  "name": "Biupiu System Federation Validation",
+  "status": "IMPLEMENTED",
+  "objective": "Federate the AI-37 evidence gate with the existing Biupiu OS, DMS, Digital Twin, Machine Capability, Math/Physics, AI Intelligence and provenance contracts.",
+  "state_authority": {
+    "observed": "external measurement/runtime evidence only",
+    "computed": "deterministic calculation",
+    "simulated": "digital-twin/simulator output",
+    "inferred": "AI/model inference",
+    "unknown": "unresolved or unavailable"
+  },
+  "pipeline": [
+    "INGEST",
+    "MACHINE_CAPABILITY_NORMALIZE",
+    "DIGITAL_TWIN_BIND",
+    "MATH_PHYSICS_CHECK",
+    "AI_CROSS_CHECK",
+    "DMS_EVENT",
+    "PROVENANCE_RECORD",
+    "EXTERMINATE",
+    "REGRESSION",
+    "PROMOTION_GATE"
+  ],
+  "integration_targets": [
+    "research/BIUPIU-OS-DMS-SUBSYSTEM-MASTER-INDEX-v1.0.md",
+    "research/BIUPIU-OS-SIMULATOR-KERNEL-v1.0.md",
+    "research/BIUPIU-DIGITAL-TWIN-DMS-INTEGRATION-GATE-v1.0.md",
+    "research/BIUPIU-MACHINE-CAPABILITY-ADAPTER-CONFORMANCE-v1.0.md",
+    "codex/ai/MATH-INTEGRATION-CONTRACT.md",
+    "intelligence/BIUPIU-AI37-CI-RESULT-ACQUISITION-REMEDIATION-GATE-v1.0.md"
+  ],
+  "physical_boundary": {
+    "actuation": false,
+    "hardware_in_loop": false,
+    "live_telemetry": false
+  },
+  "promotion_rule": "No component may be promoted to OBSERVED or physical actuation authority from simulation, AI inference, or repository documentation alone."
+}
