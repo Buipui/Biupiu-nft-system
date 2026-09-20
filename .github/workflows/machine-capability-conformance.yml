@@ -1,0 +1,31 @@
+name: Machine Capability Conformance
+
+on:
+  push:
+    paths:
+      - "schemas/machine-capability-v1.0.schema.json"
+      - "schemas/fixtures/machine-capability-v1.0.example.json"
+      - "tests/validate_machine_capability.py"
+      - "tests/test_machine_capability_conformance.py"
+      - ".github/workflows/machine-capability-conformance.yml"
+  pull_request:
+    paths:
+      - "schemas/**"
+      - "tests/**"
+      - ".github/workflows/machine-capability-conformance.yml"
+  workflow_dispatch:
+
+jobs:
+  conformance:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install validator dependency
+        run: python -m pip install --disable-pip-version-check jsonschema pytest
+      - name: Validate schema and fixture
+        run: python tests/validate_machine_capability.py schemas/fixtures/machine-capability-v1.0.example.json
+      - name: Run conformance tests
+        run: python -m pytest tests/test_machine_capability_conformance.py
