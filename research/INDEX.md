@@ -118,3 +118,12 @@ Physical host runtime: **UNVERIFIED**.
 - Smoke/regression rerun: **PENDING**.
 - Physical Windows development-host verification: **UNVERIFIED**.
 - Digital Twin host promotion: **BLOCKED pending successful evidence**.
+## GATE 07 — REGRESSION FAILURE ANALYSIS / SECOND FALSE-POSITIVE FIX — 20 September 2026
+- Gate 06 corrective revision was executed by Windows CI, but the gateway regression still failed at the policy-test step.
+- The source inspection showed the validator's regex still matched its own literal forbidden-token patterns.
+- Corrective action: restrict forbidden-command detection to actual command-position lines rather than scanning the test's pattern declarations.
+- Fix commit: **6f42bcf2311a2c3a1d99a5e62b2aba932605a2be**.
+- Exterminate workflow for prior revision: **SUCCESS**.
+- Gateway regression: **FAILED at policy-test step; subsequent smoke stages skipped**.
+- New regression rerun: **PENDING**.
+- Host/Digital Twin promotion remains **BLOCKED** until a clean regression run.
