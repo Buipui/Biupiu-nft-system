@@ -102,3 +102,13 @@ Exterminate reconciliation completed. Firefly capability/tool availability is re
 Live Firefly execution verified 20 September 2026; evidence recorded in `research/BIUPIU-FIREFLY-GATE-RECONCILIATION-v1.0.md`.
 
 Credential-conflict correction recorded: current Firefly routing does not require a separate manual credential gate; successful live execution is the access evidence for the tested capability.
+
+## FIREFLY CORE-SYSTEM INTEGRATION — 20 September 2026
+
+New canonical contract: `research/BIUPIU-FIREFLY-SYSTEM-INTEGRATION-CONTRACT-v1.0.md`.
+
+Firefly integration is now defined across Biupiu OS, Biupiu AI, Intelligence, Blockchain provenance, Gate-Learning and visual systems. Hard rules include authoritative OS validation, AI non-bypass, provenance/event logging, failure-to-regression conversion, optional hash anchoring only after approval, separation of credentials/secrets from metadata, and explicit IMPLEMENTED/EXECUTED/VERIFIED/PROMOTED states.
+
+Visual Index routing: `Asset ID -> generation context -> visual category -> dimensions/format -> visual QA -> licence/IP -> research linkage -> hash -> release state`.
+
+**NEXT GATE: RUNTIME CROSS-SYSTEM EXECUTION / INTEGRATION TEST.**
