@@ -1,0 +1,111 @@
+{
+  "schema": "BIUPIU-AI58-SYSTEM-INTEGRATION-MANIFEST-v1",
+  "status": "INTEGRATION_CONTRACT",
+  "domains": {
+    "OS": {
+      "governance": "AI-56",
+      "interfaces": [
+        "task",
+        "state",
+        "provenance"
+      ]
+    },
+    "DMS": {
+      "governance": "AI-56",
+      "interfaces": [
+        "task",
+        "state",
+        "provenance"
+      ]
+    },
+    "INTELLIGENCE": {
+      "governance": "AI-56",
+      "interfaces": [
+        "routing",
+        "evidence",
+        "release"
+      ]
+    },
+    "SIMULATORS": {
+      "governance": "AI-56",
+      "interfaces": [
+        "task",
+        "validation",
+        "observed-state-boundary"
+      ]
+    },
+    "CONFIGURATORS": {
+      "governance": "AI-56",
+      "interfaces": [
+        "task",
+        "validation",
+        "provenance"
+      ]
+    },
+    "MATH_PHYSICS": {
+      "governance": "AI-56",
+      "interfaces": [
+        "validation",
+        "uncertainty",
+        "regression"
+      ]
+    },
+    "DIGITAL_TWIN": {
+      "governance": "AI-56",
+      "interfaces": [
+        "simulation",
+        "validation",
+        "observed-state-boundary"
+      ]
+    },
+    "PROVENANCE": {
+      "governance": "AI-56",
+      "interfaces": [
+        "evidence",
+        "hash",
+        "lineage"
+      ]
+    },
+    "SECURITY": {
+      "governance": "AI-56",
+      "interfaces": [
+        "licence",
+        "dependency",
+        "regression"
+      ]
+    },
+    "BLOCKCHAIN": {
+      "governance": "AI-56",
+      "interfaces": [
+        "hash",
+        "lineage",
+        "promotion-record"
+      ]
+    },
+    "HMI": {
+      "governance": "AI-56",
+      "interfaces": [
+        "state",
+        "configuration",
+        "human-gate"
+      ]
+    },
+    "RESEARCH": {
+      "governance": "AI-56",
+      "interfaces": [
+        "evidence",
+        "citation",
+        "uncertainty"
+      ]
+    }
+  },
+  "authorities": {
+    "evidence": "BIUPIU-AI44-REAL-EVIDENCE-GATE.py",
+    "release": "BIUPIU-AI49-CANONICAL-TASK-RELEASE-CONTROLLER.py",
+    "states": "BIUPIU-AI53-GATE-STATE-MACHINE.py",
+    "index": "BIUPIU-AI46-UNIFIED-REGRESSION-INDEX-CONTROLLER.py",
+    "routing": "BIUPIU-AI47-GOVERNED-TASK-ROUTER.py",
+    "readiness": "BIUPIU-AI48-TASK-TO-RELEASE-CONTROLLER.py",
+    "kernel": "BIUPIU-GOVERNANCE-KERNEL-AI56.py"
+  }
+}
