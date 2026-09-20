@@ -1,0 +1,21 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Biupiu Automotive Composite Screening Input",
+  "type": "object",
+  "required": ["asset_id", "revision", "source_provenance", "evidence_class", "units", "inputs", "assumptions", "boundary_conditions", "solver_version", "uncertainty", "validation_status", "promotion_status"],
+  "properties": {
+    "asset_id": {"type": "string", "minLength": 1},
+    "revision": {"type": "string", "minLength": 1},
+    "source_provenance": {"type": "array", "minItems": 1, "items": {"type": "string", "minLength": 1}},
+    "evidence_class": {"enum": ["established", "supported_research", "plausible_model", "unresolved"]},
+    "units": {"const": "SI"},
+    "inputs": {"type": "object"},
+    "assumptions": {"type": "array", "items": {"type": "string"}},
+    "boundary_conditions": {"type": "object"},
+    "solver_version": {"type": "string", "minLength": 1},
+    "uncertainty": {"type": "object"},
+    "validation_status": {"enum": ["untested", "screening", "correlated", "independently_reviewed"]},
+    "promotion_status": {"enum": ["research_only", "prototype_candidate", "engineering_candidate", "released"]}
+  },
+  "additionalProperties": false
+}
