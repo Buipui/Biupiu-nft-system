@@ -1,0 +1,33 @@
+name: Biupiu Core Multi-Language Verification
+
+on:
+  push:
+    paths:
+      - "core/multilang/**"
+      - ".github/workflows/biupiu-core-multilang.yml"
+  pull_request:
+    paths:
+      - "core/multilang/**"
+      - ".github/workflows/biupiu-core-multilang.yml"
+
+jobs:
+  rust:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: core/multilang/rust/biupiu_kernel_boundary
+    steps:
+      - uses: actions/checkout@v4
+      - uses: dtolnay/rust-toolchain@stable
+      - run: cargo fmt --check
+      - run: cargo test
+      - run: cargo clippy --all-targets --all-features -- -D warnings
+
+  c-and-cpp:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: C header syntax check
+        run: gcc -std=c11 -Wall -Wextra -Werror -Icore/multilang/include -fsyntax-only core/multilang/c/abi_smoke.c
+      - name: C++ contract compile check
+        run: g++ -std=c++17 -Wall -Wextra -Werror -Icore/multilang/cpp -fsyntax-only core/multilang/cpp/contract_compile.cpp
