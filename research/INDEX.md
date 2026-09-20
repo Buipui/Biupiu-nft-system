@@ -45,3 +45,15 @@ New records: world/BIUPIU-WORLD-INTEGRATION-GATE-04-v1.0.md and department adapt
 Routing: World Asset ID -> Environment Manifest -> Department Adapter -> Simulator -> Telemetry -> Digital Twin -> Validation -> Promotion.
 
 Execution state: architecture/resource-routing gate executed. Runtime dependency builds and simulator smoke tests remain OPEN / NOT VERIFIED until performed on the actual development host.
+
+## VEHICLE BIO-COMPOSITE ENGINEERING GATE 01 — 20 September 2026
+
+New record: `research/VEHICLE-BIOCOMPOSITE-ENGINEERING-GATE-01-v1.0.md`.
+
+Scope: personal R&D vehicle case studies covering the hypercar and expedition/overlander concepts, composite materials, hybrid powertrains, donor platforms, safety, geometry, mass balance and validation.
+
+Exterminate result: overlapping concepts consolidated; unsupported guarantees removed; hypotheses preserved; no engineering or simulator claim promoted to VERIFIED without source, calculation, test or specialist evidence.
+
+Status: documentation routing IMPLEMENTED; source verification, CAD/package geometry, mass budget, physics, integration, runtime simulation and physical validation remain OPEN / NOT VERIFIED.
+
+Next controlled gate: source-verified parameter register plus conservative system-level mass and packaging budgets for both case studies.
