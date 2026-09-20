@@ -1,0 +1,10 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-46",
+  "name":"Biupiu Unified Regression Index",
+  "domains":["OS","DMS","INTELLIGENCE","SIMULATORS","CONFIGURATORS","MATH_PHYSICS","DIGITAL_TWIN","PROVENANCE","SECURITY"],
+  "state_order":["DISCOVERED","IMPLEMENTED","EXECUTED","REGRESSION_PASS","VERIFIED","PROMOTION_READY"],
+  "rule":"Only evidence-backed records may enter VERIFIED or PROMOTION_READY.",
+  "authority":"AI-45 canonical OS/DMS validation path",
+  "physical_boundary":{"actuation":false,"live_telemetry":false,"hardware_in_loop":false}
+}
