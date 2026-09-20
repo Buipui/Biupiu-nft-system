@@ -1,0 +1,21 @@
+{
+  "version":"1.0",
+  "date":"2026-09-20",
+  "selection_principle":"open standards and permissively licensed code first; proprietary engines remain external adapters",
+  "resources":[
+    {"name":"Khronos OpenXR-SDK","repository":"KhronosGroup/OpenXR-SDK","license":"Apache-2.0","use":"VR/AR/MR boundary","status":"CANDIDATE"},
+    {"name":"Khronos glTF","repository":"KhronosGroup/glTF","use":"portable 3D runtime interchange","status":"CANDIDATE"},
+    {"name":"Pixar OpenUSD","repository":"PixarAnimationStudios/OpenUSD","license":"Tomorrow Open Source Technology License 1.0","use":"scene composition","status":"LICENCE_REVIEW"},
+    {"name":"Jolt Physics","repository":"jrouwe/JoltPhysics","license":"MIT","use":"rigid body and collision","status":"CANDIDATE"},
+    {"name":"PROJECT CHRONO","repository":"projectchrono/chrono","license":"BSD-3-Clause","use":"multibody/vehicle/multiphysics","status":"CANDIDATE"},
+    {"name":"MuJoCo","repository":"google-deepmind/mujoco","license":"Apache-2.0","use":"robotics/control physics","status":"CANDIDATE"},
+    {"name":"OpenVDB","repository":"AcademySoftwareFoundation/openvdb","license":"Apache-2.0","use":"volumetric world/weather data","status":"CANDIDATE"},
+    {"name":"OpenEXR","repository":"AcademySoftwareFoundation/openexr","license":"BSD-3-Clause","use":"HDR/AOV render exchange","status":"CANDIDATE"},
+    {"name":"OpenCV","repository":"opencv/opencv","license":"Apache-2.0 for current releases","use":"vision/AR/inspection","status":"CANDIDATE"},
+    {"name":"Cesium for Unreal","repository":"CesiumGS/cesium-unreal","license":"Apache-2.0","use":"large-scale geospatial World","status":"CANDIDATE"},
+    {"name":"Godot","repository":"godotengine/godot","license":"MIT","use":"open fallback client/reference","status":"REFERENCE"},
+    {"name":"Open 3D Engine","repository":"o3de/o3de","license":"Apache-2.0 or MIT with third-party obligations","use":"open engine reference/fallback","status":"REFERENCE"}
+  ],
+  "exclusions":["pirated software","cracks/keygens/unlocks","unclear-license assets","redistribution of proprietary engine binaries"],
+  "required_gates":["license","dependency","security","compatibility","static/unit","integration","runtime","provenance"]
+}

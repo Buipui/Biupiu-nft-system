@@ -1,234 +1,59 @@
 # Biupiu OS / DMS / Subsystems Master Index v1.0
 
-**Date:** 19 September 2026  
+**Date:** 20 September 2026  
 **Status:** Integrated architecture registry — implementation and runtime gates remain distinct
-
-## Purpose
-
-Canonical registry for the **Biupiu OS**, **Biupiu DMS**, Digital Twin services and the major subsystem families that depend on them. This index prevents OS, DMS, enterprise, simulation and departmental components from becoming disconnected architecture records.
 
 ## Master system position
 
-`BIUPIU OS CORE -> DMS CONTROL PLANE -> ENTERPRISE CONTROL -> DIGITAL TWIN / CONTEXT -> AI / SIMULATION / COMPUTE -> DOMAIN SUBSYSTEMS -> APPLICATIONS / WORLD -> CONTROLLED ACTUATION`
-
-The NFT repository remains the current architecture/reference repository; this registry does not claim that a production OS, production DMS or physical-control system is already deployed.
-
-## 1. Biupiu OS
-
-### Core
-- Kernel / boot foundation
-- HAL and architecture abstraction
-- memory and process/runtime contracts
-- device/firmware boundaries
-- filesystem/storage abstraction
-- networking and IPC boundaries
-- security and identity boundary
-- package/runtime services
-- cross-platform compatibility
-
-### Platform targets
-- x86_64
-- ARM64
-- RISC-V64
-- legacy x86 adapter
-- Linux / Unix / POSIX
-- Ubuntu
-- Windows compatibility boundary
-- Darwin/macOS compatibility boundary
-- Android / Web client boundaries
-
-### Compatibility contracts
-- ELF/Linux
-- Mach-O/Darwin
-- PE/Windows
-- POSIX/Unix APIs
-- platform-neutral Biupiu SDK interfaces
-
-## 2. Biupiu DMS
-
-**DMS = Digital Management System / control plane for Biupiu's governed digital systems.**
-
-### DMS subsystems
-1. Identity & access
-2. Organisation / user / role registry
-3. Entitlement and policy
-4. Project / workspace management
-5. Research and evidence registry
-6. Asset registry
-7. Digital Twin registry
-8. Twin state/event management
-9. Dataset and provenance registry
-10. Model/version registry
-11. Device/site registry
-12. Telemetry/context gateway
-13. Simulation job registry
-14. AI/algorithm service registry
-15. Workflow / gate orchestration
-16. Manufacturing / production records
-17. Inventory / supply-chain interfaces
-18. Quality / maintenance interfaces
-19. IP / prior-art / licence records
-20. Financial/commercial records
-21. Audit / security logs
-22. Notification/event bus
-23. API / adapter gateway
-24. Repository and release metadata
-
-## 3. Digital Twin subsystem
-
-Canonical contracts:
-- DigitalTwinRef
-- TwinEvent
-- observed / desired / computed / simulated / validated / actuated state separation
-- model version
-- evidence state T0-T9
-- provenance lineage
-- calibration and validation records
+`BIUPIU OS CORE -> DMS CONTROL PLANE -> DIGITAL TWIN / CONTEXT -> MATH / PHYSICS / AI -> ENGINE ADAPTERS -> DOMAIN SUBSYSTEMS -> BIUPIU WORLD / XR -> CONTROLLED ACTUATION`
 
-The Digital Twin is an integration service, not a replacement for the OS or DMS.
+Existing OS/DMS contracts remain authoritative. The repository does not claim production deployment.
 
-## 4. Intelligence subsystem
+## Current integrated extension — XENG-WORLD-01
 
-- retrieval
-- evidence graph
-- research orchestration
-- AI/ML services
-- mathematical reasoning
-- optimisation
-- uncertainty handling
-- bounded agents
-- learning/gate records
-- governed promotion
+- Living systems are first-class World/Simulator participants.
+- Environment layers include terrain, hydrology, weather, soil, vegetation, wildlife, infrastructure, machinery, HMI and XR.
+- Mathematics and physics are first-class provider services.
+- VR/AR/MR are first-class presentation/interaction boundaries through OpenXR.
+- UE5, Unity, Lumion, Twinmotion and Blender are routed as provider adapters rather than competing sources of truth.
+- Engine health/readiness is an OS concept.
+- Open-source-first resources and licence/security gates are registered.
+- AI remains governed by the existing OS validation and learning architecture.
 
-AI remains modular and replaceable.
+## Canonical cross-engine contract
 
-## 5. Simulation / engineering subsystem
+`AUTHORITATIVE OS/DMS -> UNIVERSAL ASSET + DIGITAL TWIN -> OPENUSD/GLTF/PROVIDER ADAPTER -> ENGINE -> PROVENANCE -> DIGITAL TWIN`
 
-- physics
-- mathematics
-- computational geometry
-- CAD
-- CFD/FEA
-- robotics
-- agriculture
-- automotive
-- marine
-- aerospace
-- manufacturing
-- visual/3D
-- Biupiu World
-- simulator-specific adapters
+Provider derivatives cannot overwrite authoritative source state. Direct engine-to-engine mutation is prohibited.
 
-## 6. Departmental subsystem registry
+## Living World contract
 
-Department services remain independently deployable where practical and integrate through contracts/events:
+`ENTITY -> TWIN -> STATE -> ENVIRONMENT -> INTERACTION -> OBSERVATION -> MODEL -> SIMULATION -> VALIDATION`
 
-BIO, BIO-GEN, AGRI, HEMP, BIOCARBON, BIOCHEM, TEXTILES, COAT, COMPOSITES, MATERIALS, WATER, ENERGY, ELECTROMAG, PHOTONICS, PH-QPM, CRM, METAMATERIALS, AERO, MARINE, COMPUTE, MATH, AI, GEOMETRY, DIGITAL-TWIN, ROBOTICS, ADV-MFG, BIOMED, GEOARCH, LAND-GIS, ALA, AAT, AAT-H, PALAEO-COAST, EMPIRE-CULTURE, NAGA-HIM, OLMEC-AMR, PRE-DISASTER, GEO-MAG, SPEC, IP, NFT-ART and NFT-PROV.
+Observed, desired, computed, simulated, validated and actuated states remain distinct.
 
-## 7. Cross-system contracts
+## XR contract
 
-`OS -> DMS`  
-Runtime identity, storage, process, network and device services.
+`OS -> DIGITAL TWIN -> SIMULATION STATE -> XR ADAPTER -> OPENXR -> DEVICE`
 
-`DMS -> Digital Twin`  
-Identity, asset ownership, state, event, model and provenance references.
+XR clients do not bypass OS/DMS authority.
 
-`DMS -> Departments`  
-Authorisation, project context, data access, workflow and provenance.
+## Resource principle
 
-`Digital Twin -> Simulators`  
-Versioned model/state/event interfaces.
+Open standards and permissively licensed code are preferred. Proprietary engines may remain external licensed providers. No cracks, keygens, unclear-license assets or proprietary binary redistribution are permitted.
 
-`MATH/COMPUTE/AI -> Domain systems`  
-Deterministic, numerical, optimisation and AI services with explicit evidence class.
+## Runtime promotion
 
-`Repository -> DMS`  
-Source/version/provenance metadata; repository contents are not automatically promoted to validated knowledge.
+`REGISTERED -> INTEGRATED -> CONNECTED -> VERIFIED`
 
-## 8. Security / provenance rule
+Architecture/source integration does not equal connected-host verification.
 
-Unknown permissions fail closed. Secrets and private keys remain outside public research records. External open-source projects are references/adapters until dependency, licence, security and compatibility gates pass.
+## Next gates
 
-## 9. Extermination gate
-
-`DISCOVER -> DEPENDENCY/LICENSE -> SCHEMA -> CONTRACT -> SECURITY/PROVENANCE -> STATIC/UNIT -> INTEGRATION -> INDEX -> COMMIT -> RELEASE GATE`
-
-A passed architecture gate does not imply runtime deployment.
-
-## 10. Canonical repository references
-
-- `research/BIUPIU-OS-INDEX-v1.1.md`
-- `enterprise/BIUPIU-ENTERPRISE-INDEX-v1.0.md`
-- `enterprise/BIUPIU-ENTERPRISE-DIGITAL-TWIN-SYSTEM-v1.0.md`
-- `dms/ARCHITECTURE-v1.0.md`
-- `packages/biupiu-rnd-os/DIGITAL-TWIN-DMS-ADAPTER-v1.0.md`
-- `research/BIUPIU-DEPARTMENT-INDEX.md`
-- `research/BIUPIU-R&D-OS-SOFTWARE-ARCHITECTURE-v1.0.md`
-
-## Status
-
-**OS, DMS and subsystem architecture are now registered as one linked system-of-systems.** Implementation, CI, VM boot, authenticated transport, live telemetry, production security, database migration and physical-actuation validation remain separate gates.
-
-
-## 11. Machine Intelligence & Capability Layer — Gate 20 September 2026
-
-Canonical architecture: `research/BIUPIU-MACHINE-INTELLIGENCE-ARCHITECTURE-v1.0.md`.
-
-Biupiu OS is explicitly defined as a new machine-capable software architecture, not as a Windows clone. Its core differentiator is the combination of machine-readable capabilities, governed learning, machine communication, Digital Twins, mathematics, physics and simulation.
-
-### Machine capability lifecycle
-
-`DISCOVER -> IDENTIFY -> DESCRIBE -> TWIN -> VALIDATE -> CONNECT -> OPERATE -> OBSERVE -> LEARN -> UPDATE`
-
-### Intelligence authority lifecycle
-
-`OBSERVE -> LEARN -> PROPOSE -> SIMULATE -> VALIDATE -> AUTHORISE -> EXECUTE`
-
-### Machine-readable abstraction
-
-Applications consume capability contracts rather than depending directly on vendor-specific hardware assumptions. Transport-specific adapters may remain beneath the abstraction for USB, Ethernet/IP, serial, CAN/CAN-FD, Modbus, OPC UA, MQTT, Bluetooth, Wi-Fi, GPIO and robotics/industrial interfaces.
-
-### Semantic system graph
-
-`Machine -> Sensor -> Actuator -> Algorithm -> Digital Twin -> Physics Model -> Mathematics Model -> Dataset -> Provenance -> Product`
-
-### Recursive Digital Twin
-
-Canonical architecture: `research/BIUPIU-RECURSIVE-DIGITAL-TWIN-ARCHITECTURE-v1.0.md`.
-
-Twins may contain child twins and participate in higher-order twins while preserving stable identity, parent/child relationships, model versions, state separation, provenance and validation boundaries. Twin-of-Twin composition is treated as a governed system graph, not uncontrolled duplication.
-
-### Self-development / System Builder
-
-The OS development environment is intended to assist in constructing and validating the OS itself:
-
-`NEW CAPABILITY -> DEPENDENCY ANALYSIS -> ARCHITECTURE IMPACT -> IMPLEMENTATION -> TEST GENERATION -> SIMULATION -> VALIDATION -> HUMAN APPROVAL -> INTEGRATION`
-
-### Maths / Physics integration
-
-Existing MATH and physics/simulation engines are first-class system resources. Their outputs feed geometry, Digital Twins, validation and governed learning records.
-
-### Architecture boundary
-
-The system may innovate within the specification; it may not forget the specification. Simulated, desired or inferred state must never silently become observed physical state, and physical actuation remains subject to independent authority and safety gates.
-
-**Gate status:** Architecture integrated; implementation, conformance, security, hardware-in-the-loop and production validation remain separate gates.
-
-
-## 12. Instrumentation / Automation / Robotics / AI Integration
-
-Instrumentation is now a first-class OS/DMS subsystem input. Machine telemetry is normalised through the Machine Capability contract and associated with Digital Twin identity, mathematical/physics models and AI services.
-
-Protocol/adaptor research includes OPC UA, MQTT, Modbus, ROS/ROS 2 and vendor-specific industrial interfaces. Siemens and Fujitsu are research/benchmark sources; they do not define Biupiu OS.
-
-Foreign-language routing prioritises Italian and German technical material, especially industrial robotics, PLC/SPS, OPC UA, Industrie 4.0, instrumentation and mechatronics.
-
-Canonical records:
-- research/BIUPIU-INSTRUMENTATION-MACHINE-INTERFACE-RESEARCH-v1.0.md
-- research/BIUPIU-FOREIGN-LANGUAGE-AUTOMATION-ROBOTICS-REGISTER-v1.0.md
-- research/BIUPIU-INSTRUMENTATION-AUTOMATION-ROBOTICS-AI-GATE-v1.0.md
-
-Integration loop:
-INSTRUMENT -> CAPABILITY -> EDGE/PROTOCOL -> DIGITAL TWIN -> MATH/PHYSICS -> AI -> VALIDATION -> AUTHORISATION -> ACTUATION
-
-**Gate status:** Research and architecture integration complete; implementation, licence, security, simulation, hardware-in-loop and safety gates remain mandatory.
+- XENG-02 engine/plugin discovery
+- XENG-03 controlled Blender/CAD -> UE5 -> Unity -> Lumion round trip
+- XENG-04 drift comparison
+- XENG-05 OpenXR device test
+- WORLD-LIFE-02 scheduler
+- SIM-PHYS-02 two-provider physics cross-check
+- AI-LEARN-XX failure/root-cause/patch/regression learning
