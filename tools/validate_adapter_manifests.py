@@ -4,7 +4,7 @@ Does not execute third-party solvers/simulators.
 """
 import json, math, pathlib, sys
 
-ROOT = pathlib.Path(__file__).resolve().parents[2]
+ROOT = pathlib.Path(__file__).resolve().parents[1]
 MANIFESTS = ROOT / "adapters/manifests"
 FIXTURES = ROOT / "adapters/fixtures"
 required = {
