@@ -138,3 +138,8 @@ New record: `research/BIUPIU-WORLD-HMI-RUNTIME-SMOKE-TEST-v1.0.md` (commit `5188
 This verifies the software contract only; it does not claim UE5 host or physical-hardware execution.
 
 **NEXT GATE: ACTUAL UE5/HOST HMI RUNTIME + VISUAL REGRESSION + TELEMETRY ADAPTER EXECUTION.**
+
+
+## UE5 PRE-HOST SMOKE TEST — 20 September 2026
+
+New record: `research/BIUPIU-UE5-PRE-HOST-SMOKE-TEST-v1.0.md` (commit `4e3ac330dec2449c4cb2bbe44f72cc2fbe4dfcde`). Contract smoke checks passed: readiness record retrieval, evidence separation, CI/host separation, telemetry/AI separation, authority boundary and provenance/promotion rules. UE5 host runtime, live telemetry adapter and visual regression remain OPEN pending direct development-host evidence. The known INDEX.md update-path 404 remains isolated as a repository write-back defect and is not treated as an application failure.
