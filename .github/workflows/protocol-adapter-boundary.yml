@@ -1,0 +1,28 @@
+name: Protocol Adapter Boundary Conformance
+
+on:
+  push:
+    paths:
+      - "schemas/**"
+      - "tests/protocol_adapter_boundary.py"
+      - "tests/test_protocol_adapter_boundary.py"
+      - ".github/workflows/protocol-adapter-boundary.yml"
+  pull_request:
+    paths:
+      - "schemas/**"
+      - "tests/**"
+      - ".github/workflows/protocol-adapter-boundary.yml"
+  workflow_dispatch:
+
+jobs:
+  protocol-boundary:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependencies
+        run: python -m pip install --disable-pip-version-check pytest
+      - name: Run protocol boundary tests
+        run: python -m pytest tests/test_protocol_adapter_boundary.py
