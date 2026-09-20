@@ -1,35 +1,29 @@
 # Biupiu Simulator Experiment Log 001 — Bio-Composite Vehicle Panels
 
 **Date:** 20 September 2026  
-**Experiment ID:** `BPU-EXP-AUTO-CMP-001`  
-**Status:** Planned / not yet executed in a runtime
+**Experiment ID:** BPU-EXP-AUTO-CMP-001  
+**Status:** Screening regression executed / material correlation pending
 
 ## Objective
 
 Assess the structural-integrity screening workflow for flax, hemp and hybrid bio-composite panels while retaining conventional vehicle running gear in the physical demonstrator.
 
-## Material cases
+## Executed software regression
 
-- M1: flax / bio-epoxy baseline
-- M2: hemp / bio-epoxy baseline
-- M3: flax-hemp hybrid / bio-epoxy
-- M4: flax / furan or PFA system
-- M5: flax or hemp / EVO-derived epoxy
-- C1: glass-fibre epoxy control
-- C2: carbon-fibre epoxy control
+| Check | Result |
+|---|---|
+| Reduced stiffness symmetry / positive diagonal | PASS |
+| 0° transformed-Q identity | PASS |
+| 90° transformed-Q axis swap | PASS |
+| Symmetric layup B-matrix near zero | PASS |
+| ABD thickness scaling | PASS |
+| Cure increment bounded / monotonic | PASS |
 
-Exact properties are to be entered from measured coupon data or traceable literature. No placeholder values may be presented as certified properties.
+**Runtime result:** 6/6 checks passed.
 
-## Input fields
+**Numerical check:** symmetric-layup maximum absolute B-matrix term = 2.22e-16.
 
-- Fibre type, batch and treatment
-- Fabric architecture and areal weight
-- Fibre volume fraction and void fraction
-- Resin formulation, cure schedule and post-cure
-- Lamina E1, E2, G12, nu12 and strengths
-- Panel thickness, stacking sequence and boundary conditions
-- Temperature, relative humidity and conditioning time
-- Fastener, insert, adhesive and edge details
+These are mathematical/software regression checks only. They do not establish material properties, fatigue life, crashworthiness, or roadworthiness.
 
 ## Planned simulator runs
 
@@ -52,6 +46,7 @@ Exact properties are to be entered from measured coupon data or traceable litera
 - No fatigue life is claimed without measured S-N or equivalent data.
 - No crashworthiness claim is made from static CLT alone.
 - Model calibration is separated from validation data.
+- Conventional/OEM-qualified running gear remains the default for the first physical vehicle demonstrators.
 
 ## Physical correlation plan
 
@@ -64,4 +59,4 @@ Exact properties are to be entered from measured coupon data or traceable litera
 
 ## Current result
 
-No numerical run was executed in this log. This record defines the reproducible experiment plan and prevents unverified simulator output from being treated as physical evidence.
+Software regression completed successfully. Physical material correlation and full simulator runs remain pending.
