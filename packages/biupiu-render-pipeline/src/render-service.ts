@@ -4,6 +4,7 @@ import { RenderExecutionBroker } from "./execution-broker";
 import type { AccessContext } from "@biupiu/access";
 import { authorizeRender } from "@biupiu/access/render-entitlements";
 import { MemoryRenderJobRepository, type RenderJobRecord } from "./job-registry";
+import { validateBlenderOutput } from "../blender-output-gate";
 export interface CreateRenderRequest extends ProviderJobInput { capability:RenderCapability; provider:ProviderAdapterId; sourceModelVersion:string; }
 export class RenderService {
  constructor(private repository:MemoryRenderJobRepository,private broker:RenderExecutionBroker){}
@@ -15,6 +16,10 @@ export class RenderService {
  async execute(context:AccessContext,job:RenderJobRecord){
   const decision=authorizeRender(context,job.workflow as RenderCapability);if(!decision.allowed)throw new Error("Render capability not entitled");
   const result=await this.broker.submit(job.provider,{jobId:job.jobId,sourceAssetIds:job.sourceAssetIds,workflow:job.workflow,output:job.output,parameters:job.parameters});
-  return this.repository.update(job.jobId,{state:result.state,providerJobId:result.providerJobId,outputAssetIds:result.outputAssetIds});
+  if (job.provider === "BLENDER") {
+    if (!result.manifest) throw new Error("Blender render output is missing its universal asset manifest.");
+    validateBlenderOutput({ providerJobId: result.providerJobId, state: result.state, outputAssetIds: result.outputAssetIds, manifest: result.manifest });
+  }
+  return this.repository.update(job.jobId,{state:result.state,providerJobId:result.providerJobId,outputAssetIds:result.outputAssetIds,provenance:{...job.provenance!,providerJobId:result.providerJobId}});
  }
 }
