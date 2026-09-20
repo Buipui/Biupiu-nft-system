@@ -12,6 +12,7 @@ export interface BlenderExecutionResponse {
   providerJobId: string;
   state: ProviderJobResult["state"];
   outputAssetIds: string[];
+  manifest?: import("./src/interchange").UniversalAssetManifest;
 }
 
 export type BlenderExecutor = (
@@ -42,12 +43,13 @@ export class BlenderAdapter implements ProviderAdapter {
     if (!input.sourceAssetIds.length) {
       throw new Error("Blender adapter requires at least one source asset.");
     }
-    return this.executor({
+    const result = await this.executor({
       jobId: input.jobId,
       sourceAssetIds: input.sourceAssetIds,
       workflow: input.workflow,
       output: input.output,
       parameters: input.parameters
     });
+    return result;
   }
 }
