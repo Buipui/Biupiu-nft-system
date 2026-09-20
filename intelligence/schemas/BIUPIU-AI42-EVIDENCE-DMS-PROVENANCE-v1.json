@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-42",
+  "event_type":"biupiu.evidence.promotion",
+  "required_fields":["event_id","timestamp","task_id","gate","input_hash","result_hash","state_class","checks","promotion_state","failure_class","remediation","regression","source"],
+  "state_classes":["observed","computed","simulated","inferred","unknown"],
+  "promotion_states":["PENDING_RUNTIME","EXECUTED_PASS","EXECUTED_FAIL","REMEDIATION_REQUIRED","PROMOTION_READY","PROMOTED"],
+  "failure_classes":["none","schema","unit_dimension","numerical","model_contract","contradictory_evidence","dependency_security","provenance","runtime_unavailable"],
+  "learning_rule":"Failures become learning records only after cause classification, remediation, reproduction of the original failure, and regression confirmation.",
+  "observed_rule":"Only external measurement/runtime evidence may use observed.",
+  "physical_actuation":false
+}
