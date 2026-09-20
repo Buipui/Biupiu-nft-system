@@ -328,3 +328,19 @@ Research references include Pagani's real-time hypercar configurator and materia
 **Foreign-language routing:** Italian Pagani/Ferrari material and configurator sources are preserved as source-language evidence; translation is not validation. Italian/German technical repositories and international open-source configurator code are routed through the existing multilingual research and licence gates.
 
 **Cross-component routing:** BPU-COL / BPU-MATCOL can be attached to BPU-CMP-MAT, BPU-CMP-COAT, BPU-CMP-AERO and textile components without duplicating colour science in platform records.
+
+## Cannabis & Hemp Smart-Agriculture Research Harvest — 20 September 2026
+
+**Primary harvest:** `research/BIUPIU-CANNABIS-HEMP-SMART-AGRICULTURE-HARVEST-2026-09-20.md`
+**Resource manifest:** `research/BIUPIU-CANNABIS-HEMP-SMART-AGRI-RESOURCE-MANIFEST-v1.0.json`
+**Adapter protocol:** `smart-farming/online-platform/BIUPIU-CANNABIS-HEMP-OPEN-SOFTWARE-ADAPTER-PROTOCOL-v1.0.md`
+
+ResearchGate, Emerald Insight, Open Textbook Library, foreign-language discovery and GitHub were cross-linked for hemp/cannabis smart farming, robotics, sensing, phenotyping, IoT, DMS and software architecture.
+
+Priority open-source candidates isolated: OpenWeedLocator (MIT) for edge vision/perception and Open-PhenoLiDAR (MIT) for LiDAR/phenotyping/robotics telemetry. German cannaUNITY (MIT, archived) and Chinese-language WeedBuster (MIT) remain research/adapter references. SuperGreenOS (GPL-3.0) is licence-isolated.
+
+Foreign-language routing executed for German, Italian, Japanese, Chinese, Korean and Spanish. Native terminology and source identity remain preserved; translation is not validation.
+
+Software-sharing gate: architecture/interfaces first; executable code only after licence, provenance, security, dependency, compatibility and runtime/hardware-in-loop validation.
+
+**Status:** HARVEST COMPLETE / INDEXED / EXTERNAL CODE NOT YET PROMOTED TO PRODUCTION.
