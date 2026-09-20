@@ -1,6 +1,9 @@
 #!/usr/bin/env python3
 import json, math, pathlib, sys
 root=pathlib.Path(__file__).resolve().parents[1]
+if not (root/"adapters").is_dir():
+    print("FAIL: repository root/adapters not found")
+    sys.exit(2)
 m=root/"adapters/manifests"; f=root/"adapters/fixtures"; errors=[]
 pairs=[("sundials","SUNDIALS-TV-001","sundials-tv-001.json"),("open3d","OPEN3D-TV-001","open3d-tv-001.json"),("assimp","ASSIMP-TV-001","assimp-tv-001.obj"),("gazebo","GAZEBO-TV-001","gazebo-tv-001.json"),("chrono","CHRONO-TV-001","chrono-tv-001.json")]
 for stem,tv,fx in pairs:
