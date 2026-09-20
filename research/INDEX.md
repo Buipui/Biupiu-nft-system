@@ -129,3 +129,12 @@ GitHub Actions smoke/exterminate workflow was checked against the current reposi
 
 **Repository CI smoke gate: VERIFIED.**
 **Local/host simulator execution and visual regression: NOT VERIFIED — requires the actual development host.**
+
+
+## BIUPIU WORLD HMI DETERMINISTIC SMOKE TEST — 20 September 2026
+
+New record: `research/BIUPIU-WORLD-HMI-RUNTIME-SMOKE-TEST-v1.0.md` (commit `51881dd0`). Exterminate isolated the prior index-update 404 to the GitHub content-update path; repository file creation remains operational. Deterministic telemetry/HMI contract smoke test PASSED: schema, units, device-ID uniqueness, stale-data handling, AI/measured-data separation, authority gating, diagnostic states and visual routing all passed.
+
+This verifies the software contract only; it does not claim UE5 host or physical-hardware execution.
+
+**NEXT GATE: ACTUAL UE5/HOST HMI RUNTIME + VISUAL REGRESSION + TELEMETRY ADAPTER EXECUTION.**
