@@ -135,3 +135,11 @@ Physical host runtime: **UNVERIFIED**.
 - Corrective commit: **b6c8faa25de34f9b5c9ed7c485a89a76a96c60c2**.
 - New regression run: **PENDING**.
 - No host or Digital Twin promotion permitted until a clean regression run reaches all smoke stages.
+## GATE 09 — EXTERMINATE / SWITCH-ASSERTION BUG FIX — 20 September 2026
+- Latest Windows Gateway Regression: **FAILED at policy-test step**.
+- Exterminate workflow for same revision: **SUCCESS**.
+- Gateway source contains no executable `Invoke-Expression`/`iex` primitive.
+- Root cause isolated to the validator's required-token assertion: it searched for literal `-Approve` and `-Execute`, while the PowerShell source declares them as `$Approve` and `$Execute` variables.
+- Corrective commit: **9a828f93aa926171de2633795e7d68ee1f0b9a68**.
+- New regression run: **PENDING**.
+- Digital Twin promotion remains **BLOCKED** until the complete CI chain reaches the smoke and schema stages.
