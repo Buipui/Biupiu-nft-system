@@ -10,6 +10,7 @@ param(
   [string]$TestName = "gateway-policy",
   [switch]$Approve,
   [switch]$Execute,
+  [switch]$Json,
   [string]$RequestId = ([guid]::NewGuid().ToString("N"))
 )
 $ErrorActionPreference = 'Stop'
@@ -42,8 +43,9 @@ try {
     if($Operation -eq 'REPOSITORY.WRITE.TEST'){New-Evidence 'APPROVAL_REQUIRED' | ConvertTo-Json -Depth 8; exit 0}
     New-Evidence 'DRY_RUN_READY' @{repository=$RepositoryPath;path=$RelativePath;test=$TestName} | ConvertTo-Json -Depth 8; exit 0
   }
+  if($Operation -eq 'TEST.NAMED' -and $Execute -and -not $Approve){ throw 'Named test execution requires -Approve.' }
   switch($Operation){
-    'HOST.CAPABILITIES' { New-Evidence 'EXECUTED' @{os=[Environment]::OSVersion.VersionString;computer=$env:COMPUTERNAME;architecture=$env:PROCESSOR_ARCHITECTURE} | ConvertTo-Json -Depth 8 }
+    'HOST.CAPABILITIES' { New-Evidence 'EXECUTED' @{os=[Environment]::OSVersion.VersionString;computer=$env:COMPUTERNAME;architecture=$env:PROCESSOR_ARCHITECTURE;execution_policy=(Get-ExecutionPolicy -Scope Process);execution_policy_list=(Get-ExecutionPolicy -List | ForEach-Object { [pscustomobject]@{scope=$_.Scope;policy=$_.ExecutionPolicy} })} | ConvertTo-Json -Depth 8 }
     'REPOSITORY.STATUS' { $root=Assert-RepositoryPath; $status=@(git -C $root status --short); New-Evidence 'EXECUTED' @{repository=$root;clean=($status.Count -eq 0);status=$status} | ConvertTo-Json -Depth 8 }
     'REPOSITORY.DIRECTORY' { $root=Assert-RepositoryPath; $target=Join-Path $root $RelativePath; $items=@(Get-ChildItem -LiteralPath $target -Force | Select-Object Name,Length,Mode); New-Evidence 'EXECUTED' @{path=$target;items=$items} | ConvertTo-Json -Depth 8 }
     'TEST.NAMED' { New-Evidence 'EXECUTED' (Invoke-NamedTest) | ConvertTo-Json -Depth 8 }
