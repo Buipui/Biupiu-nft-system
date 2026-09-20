@@ -7,6 +7,7 @@ on:
       - 'tools/validate_adapter_manifests.py'
       - 'tools/validate_adapter_manifests.sh'
       - 'research/BIUPIU-ADAPTER-VALIDATOR-EXECUTION-GATE-v1.0.md'
+      - '.github/workflows/biupiu-adapter-validation.yml'
   pull_request:
     paths:
       - 'adapters/**'
