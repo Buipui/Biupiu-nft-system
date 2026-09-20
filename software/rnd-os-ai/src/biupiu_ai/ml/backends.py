@@ -96,8 +96,13 @@ BACKENDS = (
     ),
     BackendSpec(
         "PYSYFT", "syft", "syft", "Apache-2.0",
-        ("federated-learning", "privacy-research"),
+        ("federated-learning", "privacy-research", "remote-data-science", "datasite-access"),
         "research-adapter", "https://github.com/OpenMined/PySyft",
+    ),
+    BackendSpec(
+        "FLOWER", "flwr", "flwr", "Apache-2.0",
+        ("federated-learning", "federated-analytics", "secure-aggregation", "simulation"),
+        "research-adapter", "https://github.com/flwrlabs/flower",
     ),
     BackendSpec(
         "GYMNASIUM", "gymnasium", "gymnasium", "MIT",
