@@ -1,9 +1,14 @@
-"""AI-39 federated matrix runner. Read-only; no network, hardware, or actuation."""
+"""AI-40 local deterministic federation runner. Read-only; no network, hardware, or actuation."""
 import json
+import sys
 from pathlib import Path
+
+ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
 from tests.simulator_machine_capability import ReadOnlyCapabilitySimulator
 
-ROOT=Path(__file__).resolve().parents[1]
 FIXTURE=ROOT/"schemas/fixtures/machine-capability-v1.0.example.json"
 MANIFEST=ROOT/"intelligence/schemas/BIUPIU-AI38-SYSTEM-FEDERATION-v1.json"
 
@@ -30,4 +35,6 @@ def run():
     return results
 
 if __name__=="__main__":
-    print(json.dumps(run(),sort_keys=True))
+    result=run()
+    print(json.dumps(result,sort_keys=True))
+    raise SystemExit(0 if all(result[k] for k in ["F01","F02","F03","F04","F05","F06","F07","F08","F09"]) else 1)
