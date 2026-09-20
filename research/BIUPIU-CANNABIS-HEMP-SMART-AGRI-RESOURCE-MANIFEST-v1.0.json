@@ -1,0 +1,120 @@
+{
+  "schema_version": "1.0",
+  "manifest_id": "BIUPIU-CANNABIS-HEMP-SMART-AGRI-RESOURCE-01",
+  "date": "2026-09-20",
+  "status": "harvested-licence-screened",
+  "reuse_rule": "reference-first; licence, provenance, security, dependency and compatibility review before import",
+  "priority": [
+    {
+      "id": "GH-SF-01",
+      "repo": "https://github.com/geezacoleman/OpenWeedLocator",
+      "license": "MIT",
+      "role": [
+        "edge_vision",
+        "weed_detection",
+        "raspberry_pi",
+        "relay_interface"
+      ],
+      "status": "implementation-candidate"
+    },
+    {
+      "id": "GH-SF-02",
+      "repo": "https://github.com/OpenAgriTech/Open-PhenoLiDAR",
+      "license": "MIT",
+      "role": [
+        "lidar",
+        "phenotyping",
+        "ros",
+        "gnss_imu",
+        "digital_twin",
+        "dashboard"
+      ],
+      "status": "implementation-candidate"
+    },
+    {
+      "id": "GH-FL-DE-01",
+      "repo": "https://github.com/saschadaemgen/cannaUNITY",
+      "license": "MIT",
+      "language": "German",
+      "role": [
+        "traceability",
+        "grow_controller",
+        "access_control",
+        "dms_architecture"
+      ],
+      "status": "research-only-archived-adapter-candidate"
+    },
+    {
+      "id": "GH-FL-ZH-01",
+      "repo": "https://github.com/HanJun27/WeedBuster-YOLO-Powered-Precision-Weed-Detection-Laser-Removal-System",
+      "license": "MIT",
+      "language": "Chinese",
+      "role": [
+        "ros2",
+        "computer_vision",
+        "edge_ai",
+        "visual_servoing"
+      ],
+      "status": "research-only"
+    },
+    {
+      "id": "GH-SF-03",
+      "repo": "https://github.com/SuperGreenLab/SuperGreenOS",
+      "license": "GPL-3.0",
+      "role": [
+        "esp32",
+        "mqtt",
+        "sensors",
+        "farm_automation"
+      ],
+      "status": "copyleft-isolated"
+    }
+  ],
+  "open_books": [
+    {
+      "id": "OTB-SF-01",
+      "title": "Introduction to Biosystems Engineering",
+      "role": [
+        "sensors",
+        "control",
+        "machinery",
+        "mechatronics",
+        "controlled_environment",
+        "biomass"
+      ]
+    },
+    {
+      "id": "OTB-SF-02",
+      "title": "Introduction to Autonomous Robots",
+      "license": "CC BY-NC",
+      "role": [
+        "robotics",
+        "vision",
+        "localization",
+        "slam",
+        "manipulation"
+      ],
+      "status": "training-reference-only"
+    },
+    {
+      "id": "OTB-SF-03",
+      "title": "Measurement and Instrumentation",
+      "license": "CC BY-NC-SA",
+      "role": [
+        "measurement",
+        "sensors",
+        "data_acquisition",
+        "error_analysis"
+      ],
+      "status": "training-reference-only"
+    }
+  ],
+  "research_routes": [
+    "ResearchGate",
+    "Emerald Insight",
+    "Open Textbook Library",
+    "GitHub",
+    "foreign-language discovery"
+  ],
+  "integration_rule": "External resources remain external until explicit promotion evidence exists."
+}
