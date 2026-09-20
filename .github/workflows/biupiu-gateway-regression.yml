@@ -1,0 +1,39 @@
+name: Biupiu Gateway Regression
+
+on:
+  push:
+    paths:
+      - 'software/gateway/**'
+      - 'digital-twin/schemas/biupiu_powershell_gateway_twin_v1_0.json'
+  pull_request:
+    paths:
+      - 'software/gateway/**'
+      - 'digital-twin/schemas/biupiu_powershell_gateway_twin_v1_0.json'
+
+jobs:
+  policy-regression:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate gateway policy and source boundary
+        shell: pwsh
+        run: |
+          & "$env:GITHUB_WORKSPACE\software\gateway\tests\Test-BiupiuGatewayPolicy.ps1"
+      - name: Dry-run capability probe
+        shell: pwsh
+        run: |
+          $out = & "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1" -Operation HOST.CAPABILITIES
+          $obj = $out | ConvertFrom-Json
+          if ($obj.status -ne 'DRY_RUN_READY') { throw 'Unexpected gateway dry-run status.' }
+          if ($obj.operation -ne 'HOST.CAPABILITIES') { throw 'Unexpected gateway operation.' }
+      - name: Confirm no forbidden execution primitives
+        shell: pwsh
+        run: |
+          $source = Get-Content -Raw "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1"
+          foreach ($token in @('Invoke-Expression','iex')) { if ($source.Contains($token)) { throw "Forbidden token detected: $token" } }
+      - name: Digital Twin schema parse
+        shell: pwsh
+        run: |
+          $twin = Get-Content -Raw "$env:GITHUB_WORKSPACE\digital-twin\schemas\biupiu_powershell_gateway_twin_v1_0.json" | ConvertFrom-Json
+          if ($twin.authority -ne 'biupiu-os-core') { throw 'Digital Twin authority mismatch.' }
+          if ($twin.observed_state.verified -ne $false) { throw 'Unverified host state must remain unverified in CI.' }
