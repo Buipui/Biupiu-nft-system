@@ -88,3 +88,12 @@ Status: EXECUTED at preliminary calculation-framework level. The working hyperca
 No final vehicle mass, CG, axle-load capacity, structural equivalence, crashworthiness, thermal sufficiency or performance result has been promoted to VERIFIED. Exact donor year/configuration, component measurements/CAD and physical inspection remain required.
 
 Gate 05: component-level mass/CAD acquisition, CG and axle-load calculations, followed by first-order longitudinal/lateral load cases before FEA promotion.
+
+
+## FIREFLY GATE RECONCILIATION — 20 September 2026
+
+New record: `research/BIUPIU-FIREFLY-GATE-RECONCILIATION-v1.0.md`.
+
+Exterminate reconciliation completed. Firefly capability/tool availability is recorded as IMPLEMENTED / AVAILABLE. Account-specific entitlements, an end-to-end Biupiu Firefly workflow, persistent repository synchronization, and production CI/CD integration remain OPEN because direct evidence has not yet been captured. Capability is not treated as verification.
+
+**FIREFLY STATUS: RECONCILED — IMPLEMENTED CAPABILITY / VERIFICATION GATES OPEN.**
