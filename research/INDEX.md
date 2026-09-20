@@ -35,7 +35,6 @@ The reconciliation system distinguishes `CLOSED/VERIFIED`, `IMPLEMENTED-BUT-UNVE
 
 **HOUSEKEEPING STATUS: EXECUTED — protocol and open-gate register committed. Repository documentation gates are synchronized; downstream execution and validation gates remain explicitly open, deferred or blocked according to evidence.**
 
-
 ## EXTERMINATE + OPEN-SOURCE SIMULATOR INTEGRATION GATE — 19 September 2026
 
 Architecture reconciled: canonical World assets remain in world/; department simulators remain independent; proprietary third-party assets remain external; research lineage is preserved.
@@ -57,3 +56,11 @@ Exterminate result: overlapping concepts consolidated; unsupported guarantees re
 Status: documentation routing IMPLEMENTED; source verification, CAD/package geometry, mass budget, physics, integration, runtime simulation and physical validation remain OPEN / NOT VERIFIED.
 
 Next controlled gate: source-verified parameter register plus conservative system-level mass and packaging budgets for both case studies.
+
+## VEHICLE PARAMETER REGISTER GATE 02 — 20 September 2026
+
+New record: `research/VEHICLE-PARAMETER-REGISTER-GATE-02-v1.0.md`.
+
+Status: EXECUTED at preliminary evidence/documentation level. A parameter register, evidence classes, conservative mass-budget framework and packaging safety rules were committed. Selected material-study findings and a public HVH250 application rating are recorded as externally supported; engine-specific data, YASA variant data, donor geometry, complete mass budgets, FEA, thermal/control integration, runtime simulation and physical validation remain OPEN / NOT VERIFIED.
+
+Gate 03 entry criteria: source-backed, unit-consistent parameter sheets for one selected hypercar donor and one selected overlander donor, followed by transparent mass and clearance calculations with uncertainty ranges.
