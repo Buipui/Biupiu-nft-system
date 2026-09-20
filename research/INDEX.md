@@ -89,3 +89,22 @@ Production promotion: **OPEN**.
 - Android-to-Windows live control: **NOT IMPLEMENTED**.
 
 **NEXT GATE:** obtain the GitHub Actions run result; then, on the Windows development host, execute the gateway plus graphics probe and reconcile host evidence into the Digital Twin.
+## GATE 04 — EXTERMINATE / BUG-FIX / SMOKE TEST HARDENING — 20 September 2026
+- Gateway source audit: **EXECUTED**.
+- Approval conflict fixed: named test execution now requires explicit approval.
+- Host evidence expanded with execution-policy inventory; execution policy remains defence-in-depth, not the gateway security boundary.
+- Gateway smoke assertions expanded to cover all registered operations and execution switches.
+- Windows CI dry-run assertion expanded to verify default `dry-run` mode.
+- Windows CI named-test smoke execution added with explicit approval.
+- Digital Twin remains explicitly unverified for host state.
+- Repository/CI implementation: **UPDATED**.
+- Physical Windows host, GPU, Unity, UE5, VS/VS Code: **HOST VERIFICATION PENDING**.
+
+### Exterminate result
+No arbitrary command execution was introduced. No unrestricted script path was introduced. No download/install/network mutation was introduced. No credentials were added. PowerShell execution policy is not treated as a security boundary.
+
+### Promotion state
+Gateway software contract: **IMPLEMENTED / HARDENED**.
+Smoke test definition: **IMPLEMENTED**.
+CI execution result for this revision: **PENDING**.
+Physical host runtime: **UNVERIFIED**.
