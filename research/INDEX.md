@@ -147,3 +147,20 @@ New record: `research/BIUPIU-UE5-PRE-HOST-SMOKE-TEST-v1.0.md` (commit `4e3ac330d
 ## UE5 POST-SUCCESS IMMEDIATE EXECUTION PIN — 20 September 2026
 
 Pinned record: `research/BIUPIU-UE5-POST-SUCCESS-IMMEDIATE-EXECUTION-PIN-v1.0.md` (commit `0605771b7828f66d14f7f4988d3a6988bdb6b206`). Trigger is direct successful UE5 development-host evidence. Immediate sequence: UE5 evidence capture → HMI runtime → live telemetry adapter → visual regression → Exterminate → repository round-trip/index sync → evidence verification → controlled promotion. No assumption, screenshot-only, stale build, or repository CI result may substitute for direct UE5 success.
+
+## UNITY 6 SEARCH / INTEGRATION GATE — 20 September 2026
+
+New records committed:
+- `research/BIUPIU-UNITY6-SEARCH-INTEGRATION-GATE-v1.0.md`
+- `research/BIUPIU-UNITY6-ASSET-RESOURCE-MANIFEST-v1.0.json`
+- `world/adapters/unity6/README.md`
+
+Search protocol covered Unity official resources, Unity Technologies GitHub, GitHub open-source candidates and OpenStax/open educational references. Unity is now registered as an optional provider alongside UE5. The authoritative Biupiu World contracts remain engine-neutral.
+
+Useful candidate resources: Unity Entities/ECS samples, Unity Robotics Hub, UI Toolkit code examples, DesktopSamples, and CC0 provider candidates (Quaternius/Kenney/Poly Haven) subject to source-file licence/provenance and Unity-version compatibility checks.
+
+Visual Studio / VS Code Insider / PowerShell are recorded as host-side development resources only; their presence is not runtime verification. No external binary asset or unverified package is claimed as incorporated.
+
+**UNITY SEARCH/REGISTRY STATUS: EXECUTED.**
+**UNITY HOST RUNTIME / PACKAGE RESOLUTION / BUILD / VISUAL REGRESSION: OPEN — NOT VERIFIED.**
+**NEXT GATE: ACTUAL UNITY HOST DETECTION → ISOLATED ADAPTER PROJECT → PACKAGE RESOLUTION → COMPILE → APPROVED RESOURCE IMPORT → HMI/ASSET SMOKE TEST → EXTERMINATE → REPOSITORY ROUND-TRIP.**
