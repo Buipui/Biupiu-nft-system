@@ -31,3 +31,4 @@ jobs:
       - run: node packages/biupiu-render-pipeline/blender-output-gate.smoke.mjs
       - run: node packages/biupiu-render-pipeline/conversion-gate.smoke.mjs
       - run: node packages/biupiu-render-pipeline/provenance-lineage.smoke.mjs
+      - run: node packages/biupiu-render-pipeline/release-provenance.smoke.mjs
