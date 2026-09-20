@@ -26,11 +26,16 @@ jobs:
           $obj = $out | ConvertFrom-Json
           if ($obj.status -ne 'DRY_RUN_READY') { throw 'Unexpected gateway dry-run status.' }
           if ($obj.operation -ne 'HOST.CAPABILITIES') { throw 'Unexpected gateway operation.' }
+          if ($obj.mode -ne 'dry-run') { throw 'Gateway default mode is not dry-run.' }
       - name: Confirm no forbidden execution primitives
         shell: pwsh
         run: |
           $source = Get-Content -Raw "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1"
           foreach ($token in @('Invoke-Expression','iex')) { if ($source.Contains($token)) { throw "Forbidden token detected: $token" } }
+      - name: Named test smoke run
+        shell: pwsh
+        run: |
+          & "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1" -Operation TEST.NAMED -Execute -Approve
       - name: Digital Twin schema parse
         shell: pwsh
         run: |
