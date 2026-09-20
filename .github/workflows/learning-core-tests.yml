@@ -3,8 +3,8 @@ name: Biupiu Learning Core Tests
 on:
   push:
     paths:
-      - "software/rnd-os-ai/src/biupiu_ai/learning.py"
-      - "software/rnd-os-ai/tests/test_learning.py"
+      - "software/rnd-os-ai/src/biupiu_ai/**"
+      - "software/rnd-os-ai/tests/**"
       - ".github/workflows/learning-core-tests.yml"
   workflow_dispatch:
 
@@ -22,7 +22,7 @@ jobs:
           python-version: "3.12"
       - name: Install pytest
         run: python -m pip install --upgrade pip pytest
-      - name: Run learning tests
+      - name: Run learning and federation tests
         env:
           PYTHONPATH: src
-        run: python -m pytest -q tests/test_learning.py tests/test_learning_integration.py tests/test_advanced_learning_algorithms.py
+        run: python -m pytest -q tests/test_learning.py tests/test_learning_integration.py tests/test_advanced_learning_algorithms.py tests/test_federation_registry.py
