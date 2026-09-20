@@ -252,3 +252,10 @@ Canonical architecture record: `research/BIUPIU-MULTILANGUAGE-KERNEL-ARCHITECTUR
 Canonical resource registry: `research/BIUPIU-C-CPP-RUST-RESOURCE-MANIFEST-v1.0.json`.
 
 Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
+
+
+## P0 Executable Multi-Language Core Seed — 20 September 2026
+
+`core/multilang/` is registered as a Core OS boundary package. C defines the durable ABI, Rust supplies the initial safety-oriented kernel boundary implementation, and C++ supplies the native subsystem contract. DMS and subsystem services consume these through OS contracts; they do not bypass the Core OS.
+
+Verification state: SOURCE IMPLEMENTED / BUILD AND RUNTIME PENDING.
