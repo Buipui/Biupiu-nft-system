@@ -38,3 +38,15 @@ Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
 The C/C++/Rust architecture is now represented by executable source-level boundary artifacts under `core/multilang/`. AI-67 routes these artifacts through OS validation, DMS provenance and regression gates. No runtime or hardware capability is inferred from source existence.
 
 Current state: ARCHITECTURE + SOURCE SEED IMPLEMENTED / RUNTIME EVIDENCE PENDING.
+
+
+## LEARNING CORE GATE — 20 September 2026
+- Deterministic learning substrate: **IMPLEMENTED**.
+- Failure fingerprinting / classification / stalled-loop detection: **IMPLEMENTED**.
+- Drift detection and candidate scoring: **IMPLEMENTED**.
+- Dedicated learning CI: **IMPLEMENTED**.
+- Learning CI run `35537554602`: **SUCCESS**.
+- CI-level learning verification: **VERIFIED**.
+- Cross-platform host/runtime integration: **PENDING**.
+- Production promotion: **BLOCKED pending broader runtime evidence**.
+- Safety boundary: learning may propose and record; Core OS authority remains independent.
