@@ -121,3 +121,11 @@ New record: `research/BIUPIU-FIREFLY-RUNTIME-SMOKE-TEST-v1.0.md`.
 Exterminate result: the prior GitHub 404 was isolated to an incorrect file lookup/tool contract; it was not a Firefly runtime failure. A fresh repository smoke-test record was successfully committed. Live Firefly generation remains VERIFIED. The shared visual/provenance routing is registered for AUTO, MARINE, AERO, ROBOTICS, AGRICULTURE and Biupiu World, while host-side simulator builds and visual regression remain unverified until executed on the development host.
 
 **NEXT GATE: HOST/RUNTIME SIMULATOR EXECUTION + VISUAL REGRESSION + REPOSITORY ROUND-TRIP.**
+
+
+## HOST/RUNTIME SIMULATOR GATE — 20 September 2026
+
+GitHub Actions smoke/exterminate workflow was checked against the current repository head `760e8862906bbe32a36944bbd46562e3b628c8e3`. The `Biupiu Exterminate Gate` workflow completed with conclusion `success` (run 35515540053). This verifies repository-side automated gate execution, not a physical/local development-host simulator build.
+
+**Repository CI smoke gate: VERIFIED.**
+**Local/host simulator execution and visual regression: NOT VERIFIED — requires the actual development host.**
