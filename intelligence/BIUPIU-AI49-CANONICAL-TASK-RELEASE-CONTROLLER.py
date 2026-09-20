@@ -7,6 +7,13 @@ from __future__ import annotations
 import hashlib,json
 from datetime import datetime,timezone
 
+# AI-53 transition authority
+from pathlib import Path as _Path
+import importlib.util as _importlib_util
+_SM_PATH=_Path(__file__).resolve().parent/"BIUPIU-AI53-GATE-STATE-MACHINE.py"
+_sm_spec=_importlib_util.spec_from_file_location("biupiu_ai53_state_machine",_SM_PATH)
+_sm=_importlib_util.module_from_spec(_sm_spec); _sm_spec.loader.exec_module(_sm)
+
 DOMAINS=["OS","DMS","INTELLIGENCE","SIMULATORS","CONFIGURATORS","MATH_PHYSICS","DIGITAL_TWIN","PROVENANCE","SECURITY","BLOCKCHAIN","HMI","RESEARCH"]
 REQUIRED=["F01","F02","F03","F04","F05","F06","F07","F08","F09"]
 
@@ -50,4 +57,11 @@ def validate(record):
     controls=record.get("required_controls",{})
     if not all(controls.get(k) is True for k in ("evidence_auth","provenance","regression","unified_index")):
         return "BLOCKED_CONTROL_CONTRACT"
-    return record.get("release_state","PENDING_RUNTIME")
+    state=record.get("release_state","PENDING_RUNTIME")
+    if state not in _sm.STATES:
+        return "BLOCKED_CONTROL_CONTRACT"
+    if state in ("PROMOTION_READY","PROMOTED"):
+        required_path=record.get("state_path",[])
+        if not _sm.validate_path(required_path) or required_path[-1] != state:
+            return "BLOCKED_CONTROL_CONTRACT"
+    return state
