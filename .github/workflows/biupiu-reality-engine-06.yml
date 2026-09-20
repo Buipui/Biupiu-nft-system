@@ -1,0 +1,28 @@
+name: Biupiu Reality Scan / Engine 06 Validation
+
+on:
+  push:
+    paths:
+      - 'packages/biupiu-3d-engine/src/resource-gateway.ts'
+      - 'packages/biupiu-3d-engine/src/engine-06-reality-gate.ts'
+      - 'research/BIUPIU-RESOURCE-MANIFEST-v1.0.json'
+      - '.github/workflows/biupiu-reality-engine-06.yml'
+  pull_request:
+    paths:
+      - 'packages/biupiu-3d-engine/src/resource-gateway.ts'
+      - 'packages/biupiu-3d-engine/src/engine-06-reality-gate.ts'
+      - 'research/BIUPIU-RESOURCE-MANIFEST-v1.0.json'
+      - '.github/workflows/biupiu-reality-engine-06.yml'
+
+jobs:
+  reality-gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: TypeScript compile check
+        run: npx -y typescript@5.8.3 --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck packages/biupiu-3d-engine/src/resource-gateway.ts packages/biupiu-3d-engine/src/engine-06-reality-gate.ts
+      - name: Reality gateway smoke test
+        run: npx -y tsx@4.20.5 -e "import { runResourceGatewaySmokeTest } from './packages/biupiu-3d-engine/src/resource-gateway.ts'; import { runEngine06RealityGate } from './packages/biupiu-3d-engine/src/engine-06-reality-gate.ts'; if (!runResourceGatewaySmokeTest()) process.exit(1); const r=runEngine06RealityGate(); console.log(JSON.stringify(r)); if (!r.passed || r.promotion !== 'VERIFIED') process.exit(1)"

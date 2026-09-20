@@ -1,0 +1,13 @@
+{
+  "schema": "biupiu.resource-manifest.v1",
+  "promotion": ["REGISTERED","INTEGRATED","CONNECTED","VERIFIED","BLOCKED"],
+  "candidates": [
+    {"id":"openxr-sdk","source":"https://github.com/KhronosGroup/OpenXR-SDK","license":"Apache-2.0","role":"xr-loader-api","promotion":"REGISTERED"},
+    {"id":"jolt-physics","source":"https://github.com/jrouwe/JoltPhysics","license":"MIT","role":"rigid-body-collision-provider","promotion":"REGISTERED"},
+    {"id":"project-chrono","source":"https://github.com/projectchrono/chrono","license":"BSD-3-Clause","role":"multibody-multiphysics-provider","promotion":"REGISTERED"},
+    {"id":"mujoco","source":"https://github.com/google-deepmind/mujoco","license":"Apache-2.0","role":"robotics-control-physics-provider","promotion":"REGISTERED"},
+    {"id":"openexr","source":"https://github.com/AcademySoftwareFoundation/openexr","license":"BSD-3-Clause","role":"hdr-image-interchange","promotion":"REGISTERED"},
+    {"id":"gltf","source":"https://github.com/KhronosGroup/glTF","license":"MIXED_FILE_LEVEL","role":"3d-asset-interchange","promotion":"REGISTERED"},
+    {"id":"openstax-physics","source":"https://openstax.org/books/physics/","license":"CC-BY-4.0","role":"physics-reference","promotion":"REGISTERED"}
+  ]
+}
