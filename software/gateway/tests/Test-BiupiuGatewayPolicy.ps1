@@ -9,4 +9,6 @@ $gateway=Join-Path $PSScriptRoot '..\Invoke-BiupiuGateway.ps1'
 if(-not(Test-Path -LiteralPath $gateway)){throw 'Gateway implementation missing.'}
 $source=Get-Content -Raw -LiteralPath $gateway
 foreach($forbidden in @('Invoke-Expression','iex')){if($source.Contains($forbidden)){throw "Forbidden primitive present: $forbidden"}}
+$source = Get-Content -Raw -LiteralPath (Join-Path $PSScriptRoot '..\Invoke-BiupiuGateway.ps1')
+foreach($required in @('HOST.CAPABILITIES','REPOSITORY.STATUS','REPOSITORY.DIRECTORY','TEST.NAMED','REPOSITORY.WRITE.TEST','-Approve','-Execute')) { if(-not $source.Contains($required)){throw "Required gateway contract missing: $required"} }
 Write-Output 'BIUPIU_GATEWAY_POLICY_TEST: PASS'
