@@ -312,3 +312,19 @@ The automotive harvest cross-links real-world engineering research to the Biupiu
 **New validation queue:** AeroBrake transient CFD; active diffuser sweep; rear air-jet optimisation; combined aero-control study; air-cushion feasibility; hemp/carbon composite matrix; HempCarbon cell replication; microturbine cycle-model validation; vehicle energy-management simulation; rotating composite-blade testing; thermal-management CFD; integrated digital-twin evidence chain.
 
 **Version:** Biupiu NFT Research Index v0.9 — Automotive Real-World Research Harvest — September 2026
+
+
+## Colour / Material Configurator & Catalogue — 20 September 2026
+
+**Primary catalogue:** `catalogue/BIUPIU-COLOUR-MATERIAL-CATALOGUE-v1.0.md`
+**Configurator:** `research/BIUPIU-COLOUR-CONFIGURATOR-SPEC-v1.0.json`
+**Natural dye simulator:** `research/BIUPIU-DYE-SIMULATOR-PROTOCOL-v1.0.md`
+**Vinyl/PPF configurator:** `research/BIUPIU-VINYL-CONFIGURATOR-NFS2-BASIS-v1.0.md`
+
+Research references include Pagani's real-time hypercar configurator and material personalisation model, Ferrari Tailor Made's material/colour/interior approach, NFS II's preset-swatch baseline, and open-source Three.js/GLTF/PBR configurator implementations. Pagani confirms real-time configuration, deep personalisation and HQ photorealistic output; Ferrari documents themed collections and combinations spanning leather, wool, cashmere, corduroy, denim, technical fabrics, Kevlar, microfibres and carbon trims. Natural-dye reviews support plant-derived colourants but emphasise extraction, mordanting and fastness variability.
+
+**Implementation rule:** screen RGB/HEX is a visual preview only. Production colour records require substrate, finish, measured CIELAB/spectral data where available, provenance and evidence state.
+
+**Foreign-language routing:** Italian Pagani/Ferrari material and configurator sources are preserved as source-language evidence; translation is not validation. Italian/German technical repositories and international open-source configurator code are routed through the existing multilingual research and licence gates.
+
+**Cross-component routing:** BPU-COL / BPU-MATCOL can be attached to BPU-CMP-MAT, BPU-CMP-COAT, BPU-CMP-AERO and textile components without duplicating colour science in platform records.
