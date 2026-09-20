@@ -1,0 +1,69 @@
+{
+  "schema": "BIUPIU-AI-TEAM-MANIFEST-v1",
+  "status": "IMPLEMENTED_AS_GOVERNED_ORCHESTRATION_SPEC",
+  "teams": [
+    {
+      "id": "AI-ORCHESTRATOR",
+      "role": "task decomposition, routing, conflict arbitration, evidence state",
+      "members": ["OpenAI/Codex", "Anthropic/Claude", "Google/Gemini", "DeepSeek", "Meta/Llama", "xAI/Grok", "Moonshot/Kimi"],
+      "routes": ["ALL"]
+    },
+    {
+      "id": "MATH-PHYSICS",
+      "role": "mathematics, numerical methods, physics-model consistency, uncertainty and residual checks",
+      "members": ["DeepSeek", "OpenAI/Codex", "Gemini"],
+      "routes": ["MATH","PHYSICS","SIMULATORS","AERO","MARINE","ENERGY","MATERIALS"]
+    },
+    {
+      "id": "CODE-SYSTEMS",
+      "role": "code generation, review, refactoring, dependency and cross-platform architecture",
+      "members": ["OpenAI/Codex","Claude","Kimi","DeepSeek"],
+      "routes": ["OS","DMS","SUBSYSTEMS","COMPUTE","ROBOTS","CONFIGURATORS"]
+    },
+    {
+      "id": "RESEARCH-EVIDENCE",
+      "role": "literature discovery, evidence classification, source comparison and provenance",
+      "members": ["Gemini","Claude","Kimi","OpenAI/Codex"],
+      "routes": ["RESEARCH","KNOWLEDGE","IP","GEOARCH","BIOMED"]
+    },
+    {
+      "id": "SIMULATION-DIGITAL-TWIN",
+      "role": "simulation contracts, model coupling, validation and digital-twin consistency",
+      "members": ["DeepSeek","OpenAI/Codex","Gemini","Claude"],
+      "routes": ["SIMULATORS","DIGITAL-TWIN","CONFIGURATORS","AERO","MARINE","AGRI","MATERIALS"]
+    },
+    {
+      "id": "SECURITY-EXTERMINATE",
+      "role": "licence, dependency, attack-surface, forbidden-execution, regression and failure analysis",
+      "members": ["Claude","OpenAI/Codex","xAI/Grok"],
+      "routes": ["SECURITY","DMS","OS","REPOSITORY","BLOCKCHAIN"]
+    },
+    {
+      "id": "BLOCKCHAIN-PROVENANCE",
+      "role": "algorithm lineage, hashes, metadata, IP boundaries and smart-contract validation",
+      "members": ["OpenAI/Codex","Claude","Kimi"],
+      "routes": ["BLOCKCHAIN","NFT","IP","PROVENANCE"]
+    },
+    {
+      "id": "MULTIMODAL-CONFIGURATION",
+      "role": "visual, text, image/video, product configuration and HMI workflows",
+      "members": ["Gemini","xAI/Grok","Claude","Kimi"],
+      "routes": ["CONFIGURATORS","HMI","RENDER","MEDIA","MATERIALS"]
+    }
+  ],
+  "coordination": {
+    "parallel_tasks": true,
+    "shared_evidence_id": true,
+    "shared_task_id": true,
+    "contradictions_preserved": true,
+    "single_authoritative_promotion_gate": "BIUPIU-INTELLIGENCE",
+    "human_approval_for_irreversible_actions": true
+  },
+  "execution_boundary": {
+    "default": "SANDBOX/DRY_RUN",
+    "autonomous_production_deployment": false,
+    "automatic_third_party_code_import": false,
+    "automatic_secret_acquisition": false,
+    "physical_actuation": "EXPLICITLY_GATED"
+  }
+}
