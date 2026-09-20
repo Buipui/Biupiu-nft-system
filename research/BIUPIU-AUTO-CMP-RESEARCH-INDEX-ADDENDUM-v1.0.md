@@ -8,6 +8,7 @@
 - AUTO-CMP-PROTOCOL: body-panel and textile-composite validation protocol
 - BPU-EXP-AUTO-CMP-001: simulator experiment log for structural-integrity screening
 - AUTO-CMP-SHARED-INPUT-SCHEMA-v1.0.json: shared machine-readable research input contract
+- AUTO-CMP-BODY-PANEL-COUPON-MATRIX-v1.0.md: physical validation and attachment matrix
 - CMP-LITERATURE-FLAX-HEMP: natural-fibre automotive composite literature
 - CMP-FOREIGN-DE: German-language Fraunhofer WKI and FNR records
 - CMP-FOREIGN-IT: Italian university and ENEA records
@@ -17,17 +18,21 @@
 
 ## Evidence update
 
-Verified evidence used in this gate includes Fraunhofer WKI natural-fibre body-component and racing demonstrator work; a 2024 Materials review of natural-fibre and hybrid automotive crashworthiness; Fraunhofer WKI's 2024 natural-fibre/recycled-plastic underbody demonstrator; and automotive natural-fibre composite reviews identifying durability, fibre-matrix compatibility and processing as continuing research issues. Popular Mechanics remains contextual only.
+Fraunhofer WKI reports natural-fibre/recycled-plastic vehicle underbody prototypes tested at component level and in road tests, including vehicles on Volkswagen Group's Premium Platform Electric, with the project reporting compliance with standard underbody requirements and series-production suitability. This is relevant precedent for Biupiu's non-crash-critical component pathway, not evidence that an unrelated Biupiu material is qualified. citeturn0search4turn0search13
+
+A 2024 automotive review identifies fibre-matrix compatibility, processing and long-term durability as continuing development issues, while durability literature reports moisture/humidity effects on FRP mechanical properties. citeturn0search0turn0search3
+
+A recent critical review also emphasizes coupled durability testing and variability controls for natural/hybrid composites. citeturn0search10
 
 ## Research observations
 
-Natural-fibre composites have documented relevance to interior panels, trim, acoustic applications and selected demonstrator structures. Key unresolved variables remain fibre variability, moisture uptake, fibre-matrix adhesion, thermal processing limits, impact response, fatigue and manufacturing repeatability. Hybridisation may balance damping and sustainability with stiffness and strength, but must be assessed for each layup.
+The evidence supports a staged development path: removable/interior/non-crash-critical vehicle components first, then progressively more demanding applications only after measured environmental, mechanical, joint and durability evidence exists.
 
 ## Priority next actions
 
-1. Add body-panel coupon and attachment test matrix.
-2. Add mass/CG, torque-speed, thermal and torsional interfaces.
-3. Add runtime schema/provenance validation and CI execution.
+1. Add mass/CG, torque-speed, thermal and torsional interfaces.
+2. Connect simulator outputs to OS-SIM telemetry and digital-twin contracts.
+3. Add CI execution and full runtime schema/provenance validation.
 4. Add German, Italian and Japanese structured bibliography records as individually verified sources.
 5. Create measured-material cards after physical coupon testing.
 6. Maintain conventional running gear until safety-critical composite components pass formal validation.
