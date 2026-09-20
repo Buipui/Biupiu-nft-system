@@ -77,3 +77,15 @@ Android-to-Windows live control: **NOT IMPLEMENTED**.
 Production promotion: **OPEN**.
 
 **NEXT GATE:** execute the gateway and graphics probe on the Windows development host, capture JSON evidence, run named tests, reconcile the evidence into the Digital Twin, then promote only evidence-backed capabilities.
+## POWERSHELL GATE 02 — CI REGRESSION + DIGITAL TWIN VALIDATION — 20 September 2026
+- Windows GitHub Actions regression workflow: **COMMITTED**.
+- Deterministic gateway policy test wired into CI: **IMPLEMENTED**.
+- Gateway dry-run smoke test wired into CI: **IMPLEMENTED**.
+- Forbidden execution primitive check wired into CI: **IMPLEMENTED**.
+- Digital Twin schema validation wired into CI: **IMPLEMENTED**.
+- CI workflow execution result: **PENDING**.
+- Windows development-host runtime: **PENDING / UNVERIFIED**.
+- GPU/driver/Unity/UE5/Visual Studio/VS Code host discovery: **PENDING / UNVERIFIED**.
+- Android-to-Windows live control: **NOT IMPLEMENTED**.
+
+**NEXT GATE:** obtain the GitHub Actions run result; then, on the Windows development host, execute the gateway plus graphics probe and reconcile host evidence into the Digital Twin.
