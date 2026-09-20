@@ -43,3 +43,6 @@ The dedicated learning CI run `35537554602` completed successfully. CI-level lea
 
 ## Verification result
 Dedicated GitHub Actions run `35537554602` completed with conclusion `success` for commit `562937df342980fc490c7bc048d998bf5c6becb3`. The learning test suite passed. This establishes the learning-core implementation as **VERIFIED at CI test level**; broader cross-platform/runtime and production integration remain separate gates.
+
+## Exterminate verification
+The repository Exterminate Gate completed successfully for the index reconciliation commits (`35537710044`, `35537713796`, `35537715425`). No Exterminate failure was reported. This confirms repository-level housekeeping/extermination for this gate. It does not substitute for host-specific or cross-platform runtime validation.
