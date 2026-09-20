@@ -41,3 +41,12 @@ P0 C/C++/Rust executable boundary seed is now present under `core/multilang/`: s
 - Cross-platform host/runtime integration: **PENDING**.
 - Production promotion: **BLOCKED pending broader runtime evidence**.
 - Safety boundary: learning may propose and record; Core OS authority remains independent.
+
+
+## LEARNING INTEGRATION GATE — 20 September 2026
+- Learning boundary to OS/AI: **IMPLEMENTED / FAIL-CLOSED**.
+- Core OS autonomous promotion from learning: **BLOCKED by validation boundary**.
+- Intelligence learning-event routing: **IMPLEMENTED**.
+- CI integration: **VERIFIED**.
+- Exterminate: **SUCCESS**.
+- Cross-platform runtime validation: **PENDING**.
