@@ -77,3 +77,14 @@ Current sourced anchors: IVECO Daily 4x4 published 3,480/3,780/4,175 mm wheelbas
 No complete vehicle mass, CG, structural capacity, thermal sufficiency, crashworthiness or performance claim has been promoted to VERIFIED.
 
 Gate 04: select exact hypercar donor and exact overlander chassis configuration; calculate component-level mass, axle loads, CG and packaging envelopes with explicit uncertainty ranges.
+
+
+## VEHICLE MASS & CLEARANCE GATE 04 — 20 September 2026
+
+New record: `research/VEHICLE-MASS-CLEARANCE-GATE-04-v1.0.md`.
+
+Status: EXECUTED at preliminary calculation-framework level. The working hypercar donor baseline is the first-generation Audi R8 V8 ASF platform; the working overlander baseline is the IVECO Daily 4x4 4,175 mm / 7,000 kg configuration. Source-backed wheelbase, mass-rating, power and YASA motor-mass anchors are registered. First-order axle-load equations and component clearance-envelope rules are now fixed.
+
+No final vehicle mass, CG, axle-load capacity, structural equivalence, crashworthiness, thermal sufficiency or performance result has been promoted to VERIFIED. Exact donor year/configuration, component measurements/CAD and physical inspection remain required.
+
+Gate 05: component-level mass/CAD acquisition, CG and axle-load calculations, followed by first-order longitudinal/lateral load cases before FEA promotion.
