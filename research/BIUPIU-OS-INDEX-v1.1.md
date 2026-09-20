@@ -29,3 +29,18 @@ Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
 
 
 P0 C/C++/Rust executable boundary seed is now present under `core/multilang/`: stable C ABI header, Rust boundary crate, C++ native contract and verification README. This is source-level implementation; host/runtime verification remains separate.
+
+
+## P0 Deep Search / Substitute / Cross-Disciplinary Resource Gate — 20 September 2026
+
+New recovery protocol: `PROBLEM -> REPRODUCE -> ISOLATE -> CLASSIFY -> DEEP SEARCH -> SUBSTITUTE -> VALIDATE -> INTEGRATE -> LEARN -> INDEX`.
+
+Canonical records:
+- `research/BIUPIU-DEEP-SEARCH-SUBSTITUTE-RESEARCH-PROTOCOL-v1.0.md`
+- `research/BIUPIU-CROSS-DISCIPLINARY-DIGITAL-TWIN-RESOURCE-MAP-v1.0.md`
+- `research/BIUPIU-LICENSED-EXTERNAL-ASSET-LIBRARY-REGISTER-v1.0.md`
+- `intelligence/BIUPIU-RESOURCE-SEARCH-LEARNING-RULES-v1.0.md`
+
+Foreign-language search is now an explicit recovery route. Primary owners/R&D companies and universities are searched before community repositories; unknown rights remain blocked. Digital Twin capability matching routes reusable candidates across departments, simulators, configurators and Biupiu World. Restricted/licensed systems may enrich Intelligence and substitution planning without being copied or promoted.
+
+Status: PROTOCOL + RESOURCE MAP IMPLEMENTED / EXTERNAL EXECUTABLE RUNTIME VALIDATION REMAINS GATED.
