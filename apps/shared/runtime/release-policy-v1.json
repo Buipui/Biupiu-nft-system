@@ -1,0 +1,10 @@
+{
+  "schema":"biupiu.release-policy.v1",
+  "destinations":{
+    "SHOWCASE":{"provenanceRequired":true,"humanApprovalRequired":true,"outputHashRequired":true},
+    "NFT_STUDIO":{"provenanceRequired":true,"humanApprovalRequired":true,"outputHashRequired":true}
+  },
+  "blockedStates":["FAILED","BLOCKED"],
+  "sourceAssetImmutable":true,
+  "publicPublication":"human-approved"
+}
