@@ -1,0 +1,21 @@
+{
+  "schema_version": "1.0",
+  "gateway": "biupiu-powershell",
+  "basis": "biupiu-dos-command-contract",
+  "mode_default": "dry-run",
+  "arbitrary_command_execution": false,
+  "arbitrary_script_execution": false,
+  "network_operations": false,
+  "download_operations": false,
+  "install_operations": false,
+  "write_requires_approval": true,
+  "operations": [
+    {"id":"HOST.CAPABILITIES","mode":"read"},
+    {"id":"REPOSITORY.STATUS","mode":"read"},
+    {"id":"REPOSITORY.DIRECTORY","mode":"read"},
+    {"id":"TEST.NAMED","mode":"read"},
+    {"id":"REPOSITORY.WRITE.TEST","mode":"write"}
+  ],
+  "forbidden_primitives": ["Invoke-Expression","iex","arbitrary Start-Process","download","install","unapproved network"],
+  "evidence": {"format":"json","required":["timestamp_utc","request_id","operation","mode","status","host","policy_version"],"secret_redaction":true}
+}
