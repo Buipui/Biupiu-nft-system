@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-47",
+  "name":"Biupiu AI Team Orchestration Regression Integration",
+  "status":"IMPLEMENTED",
+  "pipeline":["TASK","TASK_PACKET","TEAM_ASSIGNMENT","PARALLEL_EXECUTION","CHALLENGE","CONTRADICTION_RESOLUTION","MATH_PHYSICS","SIMULATION_DIGITAL_TWIN","SECURITY","REGRESSION","PROVENANCE","UNIFIED_INDEX","PROMOTION"],
+  "teams_source":"intelligence/BIUPIU-AI-TEAM-MANIFEST-v1.json",
+  "promotion_authority":"BIUPIU-INTELLIGENCE",
+  "index_authority":"BIUPIU-AI46",
+  "evidence_required":true,
+  "runtime_required_for_verified":true,
+  "physical_actuation":false
+}
