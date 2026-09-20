@@ -1,7 +1,7 @@
-# Biupiu Open-Gate Register v1.2
+# Biupiu Open-Gate Register v1.3
 
 **Date:** 20 September 2026  
-**Status:** RECONCILED — open work preserved; no unsupported closures
+**Status:** RECONCILED — Gate 03 evidence pass recorded; open work preserved; no unsupported closures
 
 ## A. CLOSED / VERIFIED AT REPOSITORY LEVEL
 - Research evidence architecture and source-routing protocol.
@@ -18,7 +18,7 @@
 - GPU/host-safe integration where Windows/UE5 and Android runtime execution is not recorded.
 - Rendering adapters and cross-render pipelines pending environment evidence.
 - World production render scaffolds pending actual render review and measured output.
-- Vehicle case-study architecture, research queue, evidence-control record and preliminary parameter register; no physical or runtime engineering validation is implied.
+- Vehicle case-study architecture, research queue, evidence-control record and preliminary parameter register; no physical or runtime engineering validation is implied.\n- Vehicle parameter-sheet Gate 03: IVECO Daily 4x4 and YASA 750R source-backed inputs captured; Audi 4.2 TDI family evidence partially captured; exact hypercar donor remains unresolved.
 
 ## C. READY / NOT EXECUTED
 - Vehicle engine-specific OEM/workshop source verification.
@@ -53,7 +53,7 @@ Superseded records must remain in history with a pointer to the replacement. No 
 ## Closure rule
 A gate is not closed merely because a document, scaffold, adapter or code path exists. Closure requires the applicable implementation, integration, validation, indexing/provenance and repository persistence evidence.
 
-## Next controlled pass
+## Gate 03 evidence result\n- Source-backed IVECO Daily 4x4 baseline recorded.\n- Source-backed YASA 750R data recorded, including the datasheet/application-condition caveats.\n- Audi 4.2 TDI evidence recorded without promoting CCFA/CKDA selection.\n- No complete vehicle mass, CG, structural, thermal, crash or performance validation claimed.\n\n## Next controlled pass
 1. Verify current workflow inventory and actual job logs.
 2. Inspect unresolved PRs and merge state, including previously pending fixes.
 3. Run available repository-local static checks where execution is supported.
