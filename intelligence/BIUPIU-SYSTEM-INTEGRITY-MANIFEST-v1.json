@@ -1,0 +1,23 @@
+{
+  "schema":"BIUPIU-SYSTEM-INTEGRITY-MANIFEST-v1",
+  "gate":"AI-67",
+  "status":"CANONICAL_INDEX",
+  "chain":["AI-58","AI-59","AI-60","AI-61","AI-62","AI-63","AI-64","AI-65","AI-66"],
+  "canonical_authorities":{
+    "evidence":"AI-44",
+    "routing":"AI-47",
+    "readiness":"AI-48",
+    "release":"AI-49",
+    "regression_index":"AI-46",
+    "state_machine":"AI-53",
+    "governance_kernel":"AI-65"
+  },
+  "domains":["OS","DMS","INTELLIGENCE","SIMULATORS","CONFIGURATORS","MATH_PHYSICS","DIGITAL_TWIN","PROVENANCE","SECURITY","BLOCKCHAIN","HMI","RESEARCH"],
+  "integrity_rules":{
+    "single_release_authority":"AI-49",
+    "single_state_authority":"AI-53",
+    "single_governance_kernel":"AI-65",
+    "fail_closed":true,
+    "runtime_evidence_required_for_promotion":true
+  }
+}
