@@ -51,3 +51,27 @@ Every dependency requires source URL, version/commit, licence, compatibility res
 7. Verify HMI/asset bridge.
 8. Record logs and hashes.
 9. Update promotion state only from direct evidence.
+
+
+## Visual Studio / VS Code Insider integration
+
+Visual tooling is an implementation aid, not an authority layer.
+
+Preferred host workflow:
+- Visual Studio for Unity-aware C# project/build/debug integration where available.
+- Visual Studio Code Insider for repository navigation, search, lightweight editing and automation workflows where the installed Unity/C# tooling supports the project.
+- PowerShell for deterministic host inspection, Unity executable discovery, package/project checks, build invocation and log capture.
+
+The adapter must remain usable without making VS Code, Visual Studio or PowerShell a runtime dependency of Biupiu World.
+
+## Exterminate rules
+- Do not mix UE5 and Unity project files.
+- Do not allow editor-generated metadata to become authoritative research data.
+- Do not promote Asset Store/GitHub content without provenance.
+- Do not let Unity-specific scripts own engineering truth.
+- Keep HMI schemas and telemetry contracts provider-neutral.
+
+## Gate state
+**Repository adapter: IMPLEMENTED.**
+**VS/VS Code integration contract: IMPLEMENTED.**
+**Unity host/editor/package/runtime: NOT VERIFIED until desktop execution.**
