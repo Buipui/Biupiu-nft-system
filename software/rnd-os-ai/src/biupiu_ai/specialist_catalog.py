@@ -1,15 +1,9 @@
-"""Provider-backed specialist catalog and cross-domain handoff executor.
-
-This layer instantiates specialist identities without requiring optional provider
-packages to be installed. Provider availability is declared as metadata and
-runtime adapters can be attached later. Local autonomy is always preferred;
-handoffs occur only when a task explicitly names collaborators.
-"""
+"""Provider-backed specialist catalog and cross-domain handoff executor."""
 from __future__ import annotations
 from dataclasses import dataclass
-from typing import Any, Mapping, Sequence
+from typing import Sequence
 
-from .specialist_federation import Capability, Result, Specialist, SpecialistRegistry, Task
+from .specialist_federation import Capability, Result, SpecialistRegistry, Task
 
 
 @dataclass(frozen=True)
@@ -33,12 +27,34 @@ CATALOG: tuple[ProviderBinding, ...] = (
 )
 
 
+# First-thread department assignment. "FOUND" means a corresponding repository
+# module/resource was located during this gate; "TRACK" means the specialist
+# identity exists but a department-specific implementation still needs discovery.
+DEPARTMENT_ASSIGNMENTS: dict[str, tuple[str, str, tuple[str, ...]]] = {
+    "AGRI": ("agriculture-ai", "FOUND", ("Farming Simulation Architecture", "Farming Simulator Resource Registry")),
+    "BIO": ("agriculture-ai", "TRACK", ("plant biology", "biotechnology")),
+    "BIO-GEN": ("agriculture-ai", "TRACK", ("genetics", "seed breeding")),
+    "HEMP": ("agriculture-ai", "FOUND", ("farming simulation", "precision agriculture")),
+    "BIOCARBON": ("engineering-simulation-ai", "TRACK", ("carbon materials", "advanced materials")),
+    "BIOCHEM": ("engineering-simulation-ai", "FOUND", ("microturbine/energy simulation cross-division track",)),
+    "MATERIALS": ("engineering-simulation-ai", "FOUND", ("bio-composite digital twin", "CAD/BEM/CFD/FEA chain")),
+    "TEXTILES": ("engineering-simulation-ai", "FOUND", ("AI-enabled smart-textile research",)),
+    "AUTO": ("engineering-simulation-ai", "FOUND", ("vehicle simulation pipeline", "microturbine cross-division track")),
+    "AERO": ("engineering-simulation-ai", "FOUND", ("flight/aeroelastic digital-twin pipeline",)),
+    "MARINE": ("engineering-simulation-ai", "FOUND", ("marine controls/hydrodynamics pipeline", "microturbine cross-division track")),
+    "ROBOTICS": ("robotics-embedded-ai", "FOUND", ("MoveIt 2 robotics adapter contract",)),
+    "MATH": ("engineering-simulation-ai", "FOUND", ("OR-Tools optimisation", "computational geometry", "mathematical verification", "Digital Twin interface")),
+    "PHOTONICS": ("vision-geometry-ai", "TRACK", ("structured light", "OAM", "optical computing")),
+    "BIUPIU-OS": ("knowledge-provenance-ai", "FOUND", ("repository index", "provenance", "security architecture")),
+    "MEDIA": ("media-rendering-ai", "FOUND", ("Blender/graphics/rendering architecture",)),
+    "LANG": ("language-research-ai", "FOUND", ("multilingual research/translation architecture",)),
+}
+
+
 class CatalogSpecialist:
     def __init__(self, binding: ProviderBinding):
         self.binding = binding
-        self.capability = Capability(
-            binding.specialist, "1.0", binding.domains, autonomous=True, resident=True
-        )
+        self.capability = Capability(binding.specialist, "1.0", binding.domains, autonomous=True, resident=True)
 
     def execute(self, task: Task) -> Result:
         return Result(
@@ -58,10 +74,11 @@ def build_specialist_registry() -> SpecialistRegistry:
     return registry
 
 
-def execute_task_graph(
-    registry: SpecialistRegistry,
-    tasks: Sequence[Task],
-) -> tuple[Result, ...]:
+def departments_with_found_modules() -> tuple[str, ...]:
+    return tuple(name for name, (_, status, _) in DEPARTMENT_ASSIGNMENTS.items() if status == "FOUND")
+
+
+def execute_task_graph(registry: SpecialistRegistry, tasks: Sequence[Task]) -> tuple[Result, ...]:
     """Execute an explicit handoff chain; no implicit cross-domain takeover."""
     results: list[Result] = []
     for task in tasks:
