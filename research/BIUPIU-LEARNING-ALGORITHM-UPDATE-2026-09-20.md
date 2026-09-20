@@ -1,6 +1,6 @@
 # Biupiu Learning Algorithm Update — 2026-09-20
 
-**Status:** IMPLEMENTED at repository foundation; runtime/CI verification remains open.
+**Status:** VERIFIED — dedicated CI learning-core gate passed.
 
 ## Objective
 Strengthen the original Biupiu development objective: continuously research new technologies, distinguish usable from non-usable inputs, preserve cross-platform architecture, learn from breakage, and prevent clean-state maintenance from destroying useful lineage.
