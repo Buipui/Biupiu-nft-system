@@ -6,6 +6,8 @@ from simulator_machine_capability import ReadOnlyCapabilitySimulator
 ROOT = Path(__file__).resolve().parents[1]
 FIXTURE = ROOT / "schemas/fixtures/machine-capability-v1.0.example.json"
 
+# AI-36 controlled CI execution evidence trigger.
+
 def load_fixture():
     return json.loads(FIXTURE.read_text(encoding="utf-8"))
 
