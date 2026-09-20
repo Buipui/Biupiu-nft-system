@@ -1,0 +1,14 @@
+{
+  "schema":"BIUPIU-PROVIDER-ADAPTER-MANIFEST-v1",
+  "providers":[
+    {"id":"openai","adapter":"provider-neutral","capabilities":["reasoning","coding","agents","tools","MCP"],"status":"REGISTERED"},
+    {"id":"anthropic","adapter":"provider-neutral","capabilities":["agents","coding","sandbox","tools","MCP"],"status":"REGISTERED"},
+    {"id":"google-gemini","adapter":"provider-neutral","capabilities":["multimodal","reasoning","research","coding"],"status":"REGISTERED"},
+    {"id":"deepseek","adapter":"provider-neutral","capabilities":["reasoning","math","coding","multimodal"],"status":"REGISTERED"},
+    {"id":"meta-llama","adapter":"provider-neutral","capabilities":["open-model","local","edge"],"status":"LICENCE_GATED"},
+    {"id":"xai-grok","adapter":"provider-neutral","capabilities":["reasoning","multimodal","coding","tools"],"status":"REGISTERED"},
+    {"id":"moonshot-kimi","adapter":"provider-neutral","capabilities":["long-context","agents","coding","MCP"],"status":"REGISTERED"}
+  ],
+  "routing":"TASK->CAPABILITY->EVIDENCE->PROVIDER->TOOLS->OUTPUT->CROSSCHECK->VALIDATE->PROVENANCE",
+  "promotion":"LICENCE->SECURITY->COMPATIBILITY->TEST->BENCHMARK->HUMAN_APPROVAL"
+}
