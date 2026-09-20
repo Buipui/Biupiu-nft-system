@@ -1,0 +1,12 @@
+{
+  "schema_version":"1.0",
+  "gate":"BIUPIU-ADAPTER-CI-EVIDENCE",
+  "required_evidence":[
+    "workflow_run_id","workflow_name","commit_sha","runner_os",
+    "toolchain_versions","stdout","stderr","exit_code",
+    "manifest_fixture_result"
+  ],
+  "accepted_exit_code":0,
+  "promotion_rule":"NO_RUNTIME_PROMOTION_WITHOUT_EVIDENCE",
+  "third_party_runtime_separate":true
+}
