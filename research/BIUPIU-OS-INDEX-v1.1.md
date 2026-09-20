@@ -26,3 +26,6 @@ Canonical architecture record: `research/BIUPIU-MULTILANGUAGE-KERNEL-ARCHITECTUR
 Canonical resource registry: `research/BIUPIU-C-CPP-RUST-RESOURCE-MANIFEST-v1.0.json`.
 
 Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
+
+
+P0 C/C++/Rust executable boundary seed is now present under `core/multilang/`: stable C ABI header, Rust boundary crate, C++ native contract and verification README. This is source-level implementation; host/runtime verification remains separate.
