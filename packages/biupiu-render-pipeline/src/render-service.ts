@@ -5,12 +5,14 @@ import type { AccessContext } from "@biupiu/access";
 import { authorizeRender } from "@biupiu/access/render-entitlements";
 import { MemoryRenderJobRepository, type RenderJobRecord } from "./job-registry";
 import { validateBlenderOutput } from "../blender-output-gate";
-export interface CreateRenderRequest extends ProviderJobInput { capability:RenderCapability; provider:ProviderAdapterId; sourceModelVersion:string; }
+import { appendConversionLineage } from "./provenance";
+import type { ConversionLineage } from "./provenance";
+export interface CreateRenderRequest extends ProviderJobInput { capability:RenderCapability; provider:ProviderAdapterId; sourceModelVersion:string; conversion?:ConversionLineage; }
 export class RenderService {
  constructor(private repository:MemoryRenderJobRepository,private broker:RenderExecutionBroker){}
  async create(context:AccessContext,request:CreateRenderRequest){
   const decision=authorizeRender(context,request.capability);if(!decision.allowed)throw new Error("Render capability not entitled");
-  const now=new Date().toISOString();const record:RenderJobRecord={...request,jobId:request.jobId,state:"QUEUED",createdAt:now,updatedAt:now,outputAssetIds:[],provenance:{jobId:request.jobId,sourceAssetIds:request.sourceAssetIds,sourceModelVersion:request.sourceModelVersion,provider:request.provider,createdAt:now}};
+  const now=new Date().toISOString();const record:RenderJobRecord={...request,jobId:request.jobId,state:"QUEUED",createdAt:now,updatedAt:now,outputAssetIds:[],provenance:{jobId:request.jobId,sourceAssetIds:request.sourceAssetIds,sourceModelVersion:request.sourceModelVersion,provider:request.provider,createdAt:now,...(request.conversion ? { conversions:[request.conversion] } : {})}};
   return this.repository.create(record);
  }
  async execute(context:AccessContext,job:RenderJobRecord){
