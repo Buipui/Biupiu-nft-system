@@ -235,3 +235,18 @@ Automation, robotics and AI resources now route through licence, security, capab
 Canonical gate: research/BIUPIU-INSTRUMENTATION-AUTOMATION-ROBOTICS-AI-GATE-v1.0.md.
 
 **Status:** Research harvest and architecture cross-link complete. Implementation promotion remains gated.
+
+
+## COLOUR-MATERIAL-CONFIGURATION-01 — Colour, Surface & Material Configuration
+
+**Status:** IMPLEMENTED — Phase 2
+
+COAT owns adhesives/coatings/graphic materials including PPF/wrap. TEXTILES owns fibre dyeing and textile colour systems. COMPOSITES owns pigmented/resin composite systems. MATERIALS owns advanced material colour/material records. AUTOMOTIVE consumes these through component/application records.
+
+Canonical records:
+- `catalogue/BIUPIU-COLOUR-MATERIAL-CATALOGUE-v1.0.md`
+- `research/BIUPIU-COLOUR-CONFIGURATOR-SPEC-v1.0.json`
+- `research/BIUPIU-DYE-SIMULATOR-PROTOCOL-v1.0.md`
+- `research/BIUPIU-VINYL-CONFIGURATOR-NFS2-BASIS-v1.0.md`
+
+Cross-links: BPU-COL → BPU-MATCOL → resin/adhesive/vinyl/textile/composite → component twin → platform/application → catalogue.
