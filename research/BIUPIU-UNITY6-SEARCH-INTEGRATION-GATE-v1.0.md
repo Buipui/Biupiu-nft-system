@@ -89,3 +89,33 @@ The user's desktop Visual Studio / Visual Studio Code Insider resources and Powe
 
 ## Result
 Search protocol executed and useful Unity/OpenStax/GitHub resources registered. No unverified external binary asset has been claimed as incorporated. Runtime installation, package import, build and visual regression remain OPEN until executed on the development host.
+
+
+## EXTERMINATE / CONFLICT RECONCILIATION — 20 September 2026
+
+- Engine authority conflict checked: NONE. UE5 and Unity remain optional runtime providers; Biupiu World remains authoritative.
+- Asset-provenance conflict checked: external assets remain candidates until file-level source/licence/version evidence exists.
+- Visual Studio / VS Code Insider conflict checked: editor/tooling is host infrastructure, not a runtime dependency of the authoritative simulation layer.
+- Package-version conflict checked: Unity 6 samples are version-sensitive; current Unity Technologies ECS samples use Unity 6.2 with Entities/Netcode/Physics/Entities.Graphics 1.4, so package resolution must be performed against the installed editor rather than copied blindly. citeturn0search0
+- Parallelism/safety review: Unity Jobs/Burst/DOTS candidates remain adapter-level options; deterministic dependencies and safety checks must be preserved. citeturn0search5
+
+**EXTERMINATE RESULT: PASS at repository/architecture level. No conflicting authority, proprietary asset, or unverified runtime dependency was promoted.**
+
+## NEXT GATE — UNITY HOST INTEGRATION
+
+Host execution is required to move from registry status to runtime status. The sequence is fixed:
+
+1. Detect installed Unity Editor and version.
+2. Detect Visual Studio / VS Code Insider integration and C# tooling.
+3. Inspect existing Unity projects without modifying production files.
+4. Create/open isolated Biupiu Unity adapter test project.
+5. Resolve Unity packages against the detected editor version.
+6. Compile with warnings/errors captured.
+7. Connect the Biupiu World adapter contract.
+8. Import one approved, provenance-recorded visual resource.
+9. Run HMI + asset + scene-load smoke tests.
+10. Run Exterminate/conflict scan.
+11. Capture logs/build evidence and repository round-trip.
+12. Promote only the components directly verified on the host.
+
+**CURRENT STATE: READY FOR HOST EXECUTION — NOT YET HOST-VERIFIED.**
