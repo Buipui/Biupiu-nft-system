@@ -33,18 +33,12 @@ The learning layer remains upstream of:
 - repository housekeeping, index synchronization and regression evidence.
 
 ## Verification state
-The two learning source/test files were written to `main`:
+The learning source and test files are registered on `main`:
 - `software/rnd-os-ai/src/biupiu_ai/learning.py`
 - `software/rnd-os-ai/tests/test_learning.py`
+- `.github/workflows/learning-core-tests.yml`
 
-Commits:
-- `e518d82b005089e0578b12eabdb6d9b4e9d034e0`
-- `00ddef5fac1985fa456deffe36a7c784aeb3c9a6`
-
-GitHub reported no combined CI statuses for the test commit at reconciliation time. Therefore this gate is **IMPLEMENTED-BUT-UNVERIFIED**, not falsely promoted to VERIFIED.
-
-## Next gate
-Run the repository/CI test harness, then propagate the resulting evidence into the master index. Only after passing verification should the learning algorithm be promoted to the next maturity level.
+The dedicated learning CI run `35537554602` completed successfully. CI-level learning verification is **VERIFIED**. Broader cross-platform/runtime and production integration remain separate gates.
 
 
 ## Verification result
