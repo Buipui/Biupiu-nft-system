@@ -24,3 +24,8 @@ Simulation starts explicitly; duplicate entities are rejected; unknown measureme
 Core OS, Digital Twin, PHYS-SYS, GPU-SYS, CG-3D, GEOMETRY, COMPUTE, AI, ROBOTICS, AERO, MARINE, AUTO, AGRI, WATER, ADV-MFG.
 
 A gate is PASS only after a real CI or connected-host result. Repository presence alone is not runtime verification.
+
+## P0 Multi-Language Core Binding — 20 September 2026
+The simulator kernel is bound to the Core OS language contract: C ABI/HAL -> Rust safety-oriented services -> C++ simulation/geometry/graphics -> OS validation -> Digital Twin -> Intelligence. Simulator adapters must not bypass the C ABI/OS contract.
+
+Source seed: `core/multilang/`. Build/runtime evidence remains required before promotion.
