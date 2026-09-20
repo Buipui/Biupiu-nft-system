@@ -112,3 +112,12 @@ Firefly integration is now defined across Biupiu OS, Biupiu AI, Intelligence, Bl
 Visual Index routing: `Asset ID -> generation context -> visual category -> dimensions/format -> visual QA -> licence/IP -> research linkage -> hash -> release state`.
 
 **NEXT GATE: RUNTIME CROSS-SYSTEM EXECUTION / INTEGRATION TEST.**
+
+
+## FIREFLY RUNTIME SMOKE / VISUAL ROUTING — 20 September 2026
+
+New record: `research/BIUPIU-FIREFLY-RUNTIME-SMOKE-TEST-v1.0.md`.
+
+Exterminate result: the prior GitHub 404 was isolated to an incorrect file lookup/tool contract; it was not a Firefly runtime failure. A fresh repository smoke-test record was successfully committed. Live Firefly generation remains VERIFIED. The shared visual/provenance routing is registered for AUTO, MARINE, AERO, ROBOTICS, AGRICULTURE and Biupiu World, while host-side simulator builds and visual regression remain unverified until executed on the development host.
+
+**NEXT GATE: HOST/RUNTIME SIMULATOR EXECUTION + VISUAL REGRESSION + REPOSITORY ROUND-TRIP.**
