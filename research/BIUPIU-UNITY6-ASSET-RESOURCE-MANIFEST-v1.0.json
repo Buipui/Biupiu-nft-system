@@ -1,0 +1,57 @@
+{
+  "id": "UNITY6-RESOURCE-01",
+  "version": "1.0",
+  "date": "2026-09-20",
+  "status": "discovered-and-classified",
+  "engine": "Unity 6",
+  "resources": [
+    {
+      "name": "EntityComponentSystemSamples",
+      "url": "https://github.com/Unity-Technologies/EntityComponentSystemSamples",
+      "class": "official-sample",
+      "use": ["ECS", "physics", "netcode", "graphics"],
+      "status": "promote-candidate",
+      "runtime_verified": false
+    },
+    {
+      "name": "Unity Robotics Hub",
+      "url": "https://github.com/Unity-Technologies/Unity-Robotics-Hub",
+      "class": "official-open-source-tooling",
+      "use": ["robotics", "URDF", "ROS2", "visualization", "articulations"],
+      "status": "promote-candidate",
+      "runtime_verified": false
+    },
+    {
+      "name": "UI Toolkit Manual Code Examples",
+      "url": "https://github.com/Unity-Technologies/ui-toolkit-manual-code-examples",
+      "class": "official-code-examples",
+      "use": ["HMI", "runtime UI", "binding", "controls"],
+      "status": "licence-reviewed-reference",
+      "runtime_verified": false
+    },
+    {
+      "name": "DesktopSamples",
+      "url": "https://github.com/Unity-Technologies/DesktopSamples",
+      "class": "official-sample",
+      "use": ["desktop integration"],
+      "licence": "MIT",
+      "status": "promote-candidate",
+      "runtime_verified": false
+    },
+    {
+      "name": "OpenStax Introduction to Computer Science",
+      "url": "https://openstax.org/books/introduction-computer-science/",
+      "class": "open-educational-reference",
+      "use": ["algorithms", "computer systems", "GPU/parallel computing", "GUI", "software concepts"],
+      "status": "reference-only"
+    },
+    {
+      "name": "Quaternius / Kenney / Poly Haven",
+      "class": "CC0 asset-provider candidates",
+      "use": ["characters", "props", "prototype assets", "HDRI", "materials", "audio"],
+      "status": "promote-candidate-after-source-file-provenance",
+      "runtime_verified": false
+    }
+  ],
+  "promotion_policy": "fail-closed; source/licence/version/compatibility/provenance/deterministic-test evidence required"
+}
