@@ -1,0 +1,57 @@
+{
+  "identity": {
+    "capability_id": "example.sensor.temperature",
+    "name": "Temperature Sensor",
+    "vendor": "REFERENCE_ONLY",
+    "model": "example"
+  },
+  "capability_version": "1.0",
+  "transport": {
+    "protocol": "MQTT",
+    "endpoint": null
+  },
+  "inputs": [],
+  "outputs": [
+    {
+      "name": "temperature",
+      "data_type": "float64",
+      "unit": "degC"
+    }
+  ],
+  "commands": [],
+  "events": [
+    "telemetry"
+  ],
+  "units_data_types": [
+    "float64/degC"
+  ],
+  "operating_limits": {
+    "min_degC": -40,
+    "max_degC": 125
+  },
+  "timing_sampling": {
+    "sample_period_ms": 1000
+  },
+  "calibration": {
+    "required": true,
+    "calibration_id": "example-cal-001"
+  },
+  "quality_status": [
+    "GOOD",
+    "STALE",
+    "INVALID"
+  ],
+  "safety_constraints": [
+    "READ_ONLY"
+  ],
+  "digital_twin": {
+    "twin_id": "twin.example.sensor.temperature",
+    "model_version": "1.0"
+  },
+  "provenance": {
+    "source": "Biupiu conformance fixture",
+    "licence": "Internal test fixture",
+    "version": "1.0"
+  },
+  "permission_class": "READ_ONLY"
+}
