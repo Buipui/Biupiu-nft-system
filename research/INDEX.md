@@ -182,3 +182,14 @@ Next gate: successful CI execution of the expanded observation smoke, followed b
 - Cross-platform host/runtime integration: **PENDING**.
 - Production promotion: **BLOCKED pending broader runtime evidence**.
 - Safety boundary: learning may propose and record; Core OS authority remains independent.
+
+
+## LEARNING INTEGRATION GATE — 20 September 2026
+- Learning-to-OS/AI integration boundary: **IMPLEMENTED**.
+- Fail-closed Core OS promotion: **IMPLEMENTED**.
+- Uncertain/speculative/contradicted evidence blocked from autonomous promotion: **IMPLEMENTED**.
+- Failure-event routing into Biupiu Intelligence learning: **IMPLEMENTED**.
+- Intelligence-core CI integration revision: **SUCCESS** (`35537839854`).
+- Exterminate integration revision: **SUCCESS** (`35537839866`).
+- Integration gate: **CI VERIFIED**.
+- Cross-platform runtime / physical-host propagation: **PENDING**.
