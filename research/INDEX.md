@@ -100,3 +100,5 @@ Exterminate reconciliation completed. Firefly capability/tool availability is re
 
 
 Live Firefly execution verified 20 September 2026; evidence recorded in `research/BIUPIU-FIREFLY-GATE-RECONCILIATION-v1.0.md`.
+
+Credential-conflict correction recorded: current Firefly routing does not require a separate manual credential gate; successful live execution is the access evidence for the tested capability.
