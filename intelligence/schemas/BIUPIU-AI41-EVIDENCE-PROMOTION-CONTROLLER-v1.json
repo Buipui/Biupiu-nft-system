@@ -1,0 +1,13 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-41",
+  "name":"Biupiu Executable Evidence Promotion Controller",
+  "status":"IMPLEMENTED",
+  "promotion_states":["PENDING_RUNTIME","EXECUTED_PASS","EXECUTED_FAIL","REMEDIATION_REQUIRED","PROMOTION_READY","PROMOTED"],
+  "required_checks":["F01","F02","F03","F04","F05","F06","F07","F08","F09"],
+  "blocked_checks":["F10"],
+  "promotion_rule":"PROMOTION_READY requires a real runtime result bundle with all required checks true; repository presence alone is insufficient.",
+  "failure_rule":"Any required false result produces EXECUTED_FAIL and REMEDIATION_REQUIRED.",
+  "physical_boundary":{"actuation":false,"live_telemetry":false,"hardware_in_loop":false},
+  "state_authority":{"observed":"external measurement/runtime evidence only","simulated":"digital twin/simulator output"}
+}
