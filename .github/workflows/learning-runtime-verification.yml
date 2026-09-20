@@ -1,0 +1,37 @@
+name: Biupiu Learning Core - Runtime Verification
+
+on:
+  push:
+    branches: ["main"]
+    paths:
+      - "software/rnd-os-ai/**"
+      - ".github/workflows/learning-core-tests.yml"
+      - ".github/workflows/learning-runtime-verification.yml"
+  workflow_dispatch:
+
+jobs:
+  verify:
+    runs-on: ubuntu-latest
+    defaults:
+      run:
+        working-directory: software/rnd-os-ai
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install test runner
+        run: python -m pip install --upgrade pip pytest
+      - name: Run restored core tests
+        env:
+          PYTHONPATH: src
+        run: >
+          python -m pytest -q
+          tests/test_learning.py
+          tests/test_learning_integration.py
+          tests/test_advanced_learning_algorithms.py
+          tests/test_algorithm_suite.py
+          tests/test_multilingual_protocol.py
+          tests/test_federation_registry.py
+          tests/test_quantum_federation.py
+          tests/test_federated_backends.py
