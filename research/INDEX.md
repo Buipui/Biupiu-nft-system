@@ -64,3 +64,16 @@ New record: `research/VEHICLE-PARAMETER-REGISTER-GATE-02-v1.0.md`.
 Status: EXECUTED at preliminary evidence/documentation level. A parameter register, evidence classes, conservative mass-budget framework and packaging safety rules were committed. Selected material-study findings and a public HVH250 application rating are recorded as externally supported; engine-specific data, YASA variant data, donor geometry, complete mass budgets, FEA, thermal/control integration, runtime simulation and physical validation remain OPEN / NOT VERIFIED.
 
 Gate 03 entry criteria: source-backed, unit-consistent parameter sheets for one selected hypercar donor and one selected overlander donor, followed by transparent mass and clearance calculations with uncertainty ranges.
+
+
+## VEHICLE PARAMETER SHEET GATE 03 — 20 September 2026
+
+New record: `research/VEHICLE-PARAMETER-SHEET-GATE-03-v1.0.md`.
+
+Status: PARTIALLY EXECUTED at source-backed research level. The IVECO Daily 4x4 baseline and YASA 750R parameters were captured from current/public manufacturer material. Audi 4.2 TDI family evidence was also captured, but exact hypercar donor and exact engine-code configuration remain open.
+
+Current sourced anchors: IVECO Daily 4x4 published 3,480/3,780/4,175 mm wheelbases, 7,000 kg GVM and 10,500 kg GCM on relevant configurations, with 132 kW/430 Nm for the published 3.0 L engine. YASA 750R documentation records 200 kW peak, up to 70 kW continuous under stated conditions, 790 Nm peak in the datasheet, 37 kg mass and 368 mm diameter × 98 mm axial length. Audi published records confirm 4.2 TDI applications and later A8 output of 283 kW; Q7 CCFA/CCFC documentation records 250 kW/4134 cc.
+
+No complete vehicle mass, CG, structural capacity, thermal sufficiency, crashworthiness or performance claim has been promoted to VERIFIED.
+
+Gate 04: select exact hypercar donor and exact overlander chassis configuration; calculate component-level mass, axle loads, CG and packaging envelopes with explicit uncertainty ranges.
