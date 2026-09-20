@@ -1,0 +1,8 @@
+{
+  "schema":"BIUPIU-AI31-TASK-PACKET-v1",
+  "required":["task_id","objective","scope","constraints","evidence_set_id","required_capabilities","assigned_teams","provider_candidates","acceptance_tests","risk_class","reversible_or_irreversible","status","provenance"],
+  "statuses":["DISCOVERED","ASSIGNED","EXECUTING","CHALLENGED","VALIDATED","REGRESSION-PASS","PROMOTION-READY","PROMOTED","BLOCKED"],
+  "shared_state":["task_id","evidence_set_id","provider_model_version","sources","assumptions","result","uncertainty","conflicts","tests","licence_state"],
+  "promotion_gate":"BIUPIU-INTELLIGENCE",
+  "runtime_mode":"SANDBOX_OR_DRY_RUN_BY_DEFAULT"
+}
