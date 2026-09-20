@@ -1,0 +1,44 @@
+{
+  "schema_version": "0.1",
+  "adapter_id": "biupiu.graphics.external-backends",
+  "status": "REGISTERED",
+  "promotion_policy": "evidence-gated",
+  "backends": [
+    {
+      "id": "nvrhi",
+      "provider": "NVIDIA RTX",
+      "role": "cross-api-rendering-abstraction",
+      "license": "MIT (verify at pinned version)",
+      "integration_mode": "external-dependency",
+      "host_validation": "required",
+      "promotion": "UNVERIFIED"
+    },
+    {
+      "id": "rtxdi",
+      "provider": "NVIDIA RTX",
+      "role": "real-time-lighting-research",
+      "license": "review required",
+      "integration_mode": "isolated-research",
+      "host_validation": "required",
+      "promotion": "UNVERIFIED"
+    },
+    {
+      "id": "optix",
+      "provider": "NVIDIA",
+      "role": "ray-tracing-sdk",
+      "license": "SDK/license-gated",
+      "integration_mode": "reference-only-until-approved",
+      "host_validation": "required",
+      "promotion": "NOT-PROMOTED"
+    },
+    {
+      "id": "dxr-vulkan",
+      "provider": "Microsoft/Khronos",
+      "role": "native-rendering-backends",
+      "license": "platform/API terms review",
+      "integration_mode": "host-backend",
+      "host_validation": "required",
+      "promotion": "UNVERIFIED"
+    }
+  ]
+}
