@@ -34,3 +34,46 @@ No external third-party code is copied into Biupiu core during this gate. Candid
 - Repository index update: **COMMITTED**.
 
 **NEXT GATE:** create isolated adapter projects, run host capability probes, compile only licence-approved dependencies, execute deterministic smoke tests, collect evidence, then promote modules individually.
+## POWERSHELL / DOS GATEWAY + DIGITAL TWIN — 20 September 2026
+
+### Gate objective
+Build a controlled Windows PowerShell execution gateway from the existing Biupiu DOS command/compatibility layer, then expose its state through the Digital Twin without making PowerShell authoritative.
+
+### Repository execution
+- DOS command/permission model reused as the gateway basis: **IMPLEMENTED**.
+- PowerShell Gateway README/policy/source: **COMMITTED**.
+- Deterministic gateway policy test: **COMMITTED**.
+- PowerShell Gateway Digital Twin schema: **COMMITTED**.
+- Default mode: **DRY-RUN**.
+- Arbitrary command/script execution: **DENIED BY POLICY**.
+- Network/download/install operations: **DENIED BY BASE POLICY**.
+- Write operations: **EXPLICIT APPROVAL REQUIRED**.
+- Structured evidence output: **IMPLEMENTED**.
+- Credentials/secrets in gateway: **NONE**.
+
+### Existing gate reconciliation
+- External graphics adapter boundary: **COMMITTED**.
+- Graphics candidate manifest: **COMMITTED**.
+- Graphics host probe: **COMMITTED / HOST-EXECUTION-PENDING**.
+- Third-party vendor code copied into Core: **NO**.
+- GPU/driver/CMake/CUDA/DXR/Vulkan host detection: **UNVERIFIED**.
+- DOS compatibility runtime: **ARCHITECTURE + RESOURCE REGISTRY EXECUTED; HOST RUNTIME OPEN**.
+- Digital Twin promotion contract: **REGISTERED**.
+- Recursive Digital Twin architecture: **INTEGRATED**.
+
+### Digital Twin route
+OS Twin -> DOS command contract -> PowerShell Gateway Twin -> host observations/evidence -> Digital Twin -> validated department routing
+
+The Digital Twin mirrors evidence and lineage. It cannot elevate an unverified host observation into authoritative OS state.
+
+### Exterminate / security
+The gateway does not expose Invoke-Expression, arbitrary script paths, unrestricted process execution, download/install mutation, or unapproved network execution. PowerShell execution policy is treated only as defence-in-depth because Microsoft documents that execution policy is not a security boundary.
+
+### Verification boundary
+Repository implementation/read-back: **COMMITTED**.
+Windows PowerShell runtime: **PENDING / UNVERIFIED**.
+Actual GPU/driver/Unity/UE5/Visual Studio/VS Code discovery through gateway: **PENDING / UNVERIFIED**.
+Android-to-Windows live control: **NOT IMPLEMENTED**.
+Production promotion: **OPEN**.
+
+**NEXT GATE:** execute the gateway and graphics probe on the Windows development host, capture JSON evidence, run named tests, reconcile the evidence into the Digital Twin, then promote only evidence-backed capabilities.
