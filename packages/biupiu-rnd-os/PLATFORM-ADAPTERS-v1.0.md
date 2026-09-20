@@ -52,3 +52,9 @@ No platform adapter may receive private keys, tokens or credentials through sour
 ### Acceptance
 
 A platform is not marked RELEASED merely because source code compiles. It requires platform-specific build, smoke, filesystem, process, networking and packaging checks.
+## PowerShell Gateway integration — 20 September 2026
+The Windows platform adapter now routes approved host automation through the DOS-derived Biupiu PowerShell Gateway.
+Boundary: Biupiu OS Core -> DOS command contract -> PowerShell Gateway -> allowlisted Windows operation -> evidence -> Digital Twin.
+PowerShell is not a runtime authority. Host execution remains evidence-gated and platform-specific.
+Gateway repository implementation: IMPLEMENTED.
+Windows host runtime verification: PENDING / UNVERIFIED.
