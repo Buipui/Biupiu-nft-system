@@ -1,0 +1,11 @@
+{
+  "schema_version":"1.0",
+  "gate":"AI-48",
+  "name":"Biupiu Task-to-Release Control Loop",
+  "stages":["ROUTE","EVIDENCE_AUTH","CHALLENGE","VALIDATE","PROVENANCE","REGRESSION","INDEX","RELEASE_STATE"],
+  "release_states":["BLOCKED_UNTRUSTED_EVIDENCE","PENDING_RUNTIME","REMEDIATION_REQUIRED","BLOCKED_CONTROL_CONTRACT","PROMOTION_READY"],
+  "promotion_authority":"BIUPIU-INTELLIGENCE",
+  "index_authority":"BIUPIU-AI46",
+  "fail_closed":true,
+  "physical_actuation":false
+}
