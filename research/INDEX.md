@@ -127,3 +127,11 @@ Physical host runtime: **UNVERIFIED**.
 - Gateway regression: **FAILED at policy-test step; subsequent smoke stages skipped**.
 - New regression rerun: **PENDING**.
 - Host/Digital Twin promotion remains **BLOCKED** until a clean regression run.
+## GATE 08 — THIRD CI VALIDATOR CORRECTION — 20 September 2026
+- Gate 07 Windows regression again failed at the policy-test step.
+- Exterminate workflow: **SUCCESS**.
+- Failure boundary remains the validator; gateway execution stages were not reached.
+- Validator corrected again to use explicit executable command-position matching rather than scanning textual pattern declarations.
+- Corrective commit: **b6c8faa25de34f9b5c9ed7c485a89a76a96c60c2**.
+- New regression run: **PENDING**.
+- No host or Digital Twin promotion permitted until a clean regression run reaches all smoke stages.
