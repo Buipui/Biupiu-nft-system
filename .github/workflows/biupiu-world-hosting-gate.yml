@@ -1,0 +1,52 @@
+name: Biupiu World Hosting Gate
+
+on:
+  push:
+    branches: [main]
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  repository-contract:
+    name: Repository hosting contract
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate hosting manifest
+        run: |
+          test -f web/biupiu-world-hosting-manifest.json
+          test -f web/BIUPIU-WORLD-HOSTING-TEST-PLAN-v1.0.md
+          node -e "const m=require('./web/biupiu-world-hosting-manifest.json'); if(m.status!=='ARCHITECTURE_READY_NOT_DEPLOYED') process.exit(1); if(m.security.clientIsNotAuthority!==true) process.exit(1); console.log('hosting manifest contract: PASS')"
+
+  package-validation:
+    name: Package and contract validation
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - name: Install dependencies
+        run: npm ci
+      - name: Compile contracts
+        run: npm run compile
+      - name: Run tests
+        run: npm test
+
+  optional-live-host:
+    name: Optional live host probe
+    if: ${{ vars.BIUPIU_WORLD_BASE_URL != '' }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Probe HTTPS origin
+        env:
+          BASE_URL: ${{ vars.BIUPIU_WORLD_BASE_URL }}
+          HEALTH_PATH: ${{ vars.BIUPIU_WORLD_HEALTH_PATH || '/healthz' }}
+        run: |
+          case "$BASE_URL" in https://*) ;; *) echo 'BASE_URL must use HTTPS'; exit 1 ;; esac
+          curl --fail --silent --show-error --location --max-redirs 3 --proto '=https' --proto-redir '=https' -D headers.txt -o health.json "$BASE_URL$HEALTH_PATH"
+          grep -Eiq '^HTTP/.* 200' headers.txt
+          grep -Eiq '^strict-transport-security:' headers.txt
+          grep -Eiq '^content-type:.*application/json' headers.txt
+          node -e "const fs=require('fs'); const x=JSON.parse(fs.readFileSync('health.json','utf8')); if(x.status!=='ok') process.exit(1); console.log('live health contract: PASS')"
