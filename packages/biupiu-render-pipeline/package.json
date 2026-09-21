@@ -1,0 +1,9 @@
+{
+  "name": "@biupiu/render-pipeline",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Biupiu render orchestration and provenance pipeline",
+  "entry": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": { ".": "./src/index.ts" }
+}
