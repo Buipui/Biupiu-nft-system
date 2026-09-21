@@ -1,0 +1,17 @@
+{
+  "schema":"biupiu.github-actions-integrity.v1",
+  "gate":"G32-C",
+  "status":"IMPLEMENTED_NOT_VERIFIED",
+  "policy":"pin verified third-party actions to full immutable commit SHAs",
+  "verified_refs":{
+    "actions/checkout":"v4.4.0",
+    "actions/setup-java":"v4.9.1"
+  },
+  "verified_release_sources":[
+    "https://github.com/actions/checkout/releases",
+    "https://github.com/actions/setup-java/releases"
+  ],
+  "sha_pinning":"OPEN",
+  "reason":"Repository contains a large historical workflow surface; each action must be provenance-checked before mutation.",
+  "next_gate":"G32-D"
+}
