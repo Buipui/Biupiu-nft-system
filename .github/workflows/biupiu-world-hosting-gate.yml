@@ -46,7 +46,7 @@ jobs:
       - name: Probe HTTPS origin
         env:
           BASE_URL: ${{ vars.BIUPIU_WORLD_BASE_URL }}
-          HEALTH_PATH: ${{ vars.BIUPIU_WORLD_HEALTH_PATH || '/healthz' }}
+          HEALTH_PATH: ${{ vars.BIUPIU_WORLD_HEALTH_PATH || '/healthz.json' }}
         run: |
           case "$BASE_URL" in https://*) ;; *) echo 'BASE_URL must use HTTPS'; exit 1 ;; esac
           curl --fail --silent --show-error --location --max-redirs 3 --proto '=https' --proto-redir '=https' -D headers.txt -o health.json "$BASE_URL$HEALTH_PATH"
