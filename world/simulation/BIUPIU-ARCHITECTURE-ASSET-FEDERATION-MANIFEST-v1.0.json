@@ -1,0 +1,31 @@
+{
+  "schema": "biupiu.architecture.asset.federation.v1",
+  "status": "integrated-research-manifest",
+  "date": "2026-09-21",
+  "format_preference": ["glb", "gltf", "usd", "fbx", "obj", "las", "laz", "geotiff", "gpkg"],
+  "rights_policy": ["GREEN", "BLUE", "YELLOW", "ORANGE", "RED", "GREY"],
+  "sources": [
+    {"name":"Poly Haven","type":"3d-assets","license":"CC0","class":"GREEN","role":["models","materials","HDRI"]},
+    {"name":"Adobe Substance 3D Community Assets","type":"materials/models","license":"Adobe/community terms","class":"BLUE","role":["materials","models","lighting"]},
+    {"name":"OpenAI Shap-E","type":"code/model","license":"MIT repository license; verify model/output terms per release","class":"BLUE","role":["text-to-3d","image-to-3d"]},
+    {"name":"WorldGrow","type":"research-code","license":"review repository licence before redistribution","class":"BLUE","role":["procedural-world-generation"]},
+    {"name":"WorldGen","type":"open-source-research","license":"Apache-2.0","class":"GREEN","role":["text-to-scene","image-to-scene"]},
+    {"name":"Assimp","type":"open-source-library","license":"BSD-style","class":"GREEN","role":["multi-format-import"]},
+    {"name":"USGS 3DEP","type":"geospatial-data","license":"public-domain/free-without-use-restrictions for 3DEP products","class":"GREEN","role":["lidar","dem","terrain"]},
+    {"name":"OpenStreetMap","type":"geospatial-data","license":"ODbL; attribution/share-alike obligations apply","class":"BLUE","role":["roads","buildings","land-use"]},
+    {"name":"UE-GeoViewer","type":"Unreal-plugin-reference","license":"MIT","class":"GREEN","role":["GIS-to-Unreal-reference"]},
+    {"name":"UnrealGIS","type":"Unreal-plugin-reference","license":"verify repository licence","class":"BLUE","role":["OSM-to-Unreal","procedural-gis"]},
+    {"name":"CC0Tree","type":"3d-assets","license":"CC0","class":"GREEN","role":["vegetation","props","environment"]},
+    {"name":"Open-source 3D asset registries","type":"asset-index","license":"per-item verification required","class":"BLUE","role":["discovery"]}
+  ],
+  "harvest_protocol": {
+    "languages": ["English","Japanese","Chinese","Korean","German","French","Italian","Spanish","Russian"],
+    "queries": ["free 3D architecture asset","CC0 architecture model","open game asset","GIS LiDAR 3D city","procedural world generation","建築 3D 無料","建筑 3D 免费","건축 3D 무료","kostenlose 3D Architektur","modèles 3D architecture gratuits"],
+    "steps": ["discover","translate/classify","verify source","verify licence","record URL","record format","record checksum when downloaded","assign rights class","map to simulator module","regression test","promote"]
+  },
+  "country_pack_targets": ["South Africa","Japan","China","South Korea","Germany","France","Italy","Spain","United Kingdom","United States","Brazil","India","Egypt","Türkiye","Australia","New Zealand"],
+  "country_pack_fields": ["country","region","language","architectural_grammar","materials","vegetation","road_rules","signage","climate","terrain","GIS_sources","LiDAR_sources","licence","provenance"],
+  "publisher_rule": "Game-publisher assets are reference-only unless the publisher explicitly grants a reusable licence. No extraction of proprietary game files, ripped assets, ROMs or copyrighted mod content.",
+  "google_rule": "Google Earth/Earth Studio imagery is not treated as a freely redistributable commercial asset source; use only under applicable Google terms/attribution or replace with appropriately licensed/open geospatial data.",
+  "integration_target": "world/simulation/BIUPIU-ARCHITECTURE-SIMULATOR-v1.0.md"
+}
