@@ -1,0 +1,8 @@
+{
+  "schema":"biupiu.mini-os.ai-task.v1",
+  "required":["task_id","owner_role","scope","dependencies","evidence_required","promotion_state"],
+  "roles":["ARCHITECT","RESEARCH_HARVEST","CODE","SIMULATION_MATH","SECURITY","INTEGRATION","VERIFICATION","RED_TEAM_FAILURE","GOVERNANCE_RELEASE","HUMAN_GATE"],
+  "states":["NEW","READY","EXECUTING","BLOCKED","COMPLETE","FAILED","INCOMPLETE","STALE","FLAGGED_HUMAN","PROMOTED","REJECTED"],
+  "authority":"MINI_OS_EXPERIMENTAL",
+  "main_os_promotion":"FAIL_CLOSED"
+}
