@@ -1,9 +1,12 @@
-"""AI-34 controlled runtime smoke tests for the existing read-only simulator contract."""
+"""AI-34 controlled runtime smoke test for the read-only simulator contract."""
 from pathlib import Path
 import json
-from tests.simulator_machine_capability import ReadOnlyCapabilitySimulator
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+sys.path.insert(0, str(ROOT))
+from tests.simulator_machine_capability import ReadOnlyCapabilitySimulator
+
 FIXTURE = ROOT / "schemas/fixtures/machine-capability-v1.0.example.json"
 
 def load():
@@ -29,7 +32,8 @@ def main():
         pass
     else:
         raise AssertionError("out-of-range input was accepted")
-    return {"deterministic": True, "state_class": a.state_class, "actuation_blocked": True, "fault_rejected": True}
+    return {"deterministic": True, "state_class": a.state_class,
+            "actuation_blocked": True, "fault_rejected": True}
 
 if __name__ == "__main__":
     print(main())
