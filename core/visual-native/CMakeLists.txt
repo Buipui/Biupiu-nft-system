@@ -22,6 +22,7 @@ set(BIUPIU_VISUAL_NATIVE_SOURCES
   src/biupiu_visual_provider_runtime.cpp
   src/biupiu_visual_regression.cpp
   src/biupiu_visual_provider_adapter.cpp
+  src/biupiu_visual_host_probe.cpp
 )
 
 add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
@@ -46,26 +47,41 @@ endif()
 
 # Provider SDK discovery is deliberately target-based where packages export CMake targets.
 # A discovered target is linked and promoted only by host/runtime evidence.
-set(BIUPIU_PROVIDER_TARGETS
-  "OpenUSD;pxr::usd;BIUPIU_HAS_OPENUSD"
-  "OpenTimelineIO;OpenTimelineIO::opentimelineio;BIUPIU_HAS_OTIO"
-  "OpenSubdiv;OpenSubdiv::osdCPU;BIUPIU_HAS_OPENSUBDIV"
-  "MaterialX;MaterialXCore;BIUPIU_HAS_MATERIALX"
-  "OpenColorIO;OpenColorIO::OpenColorIO;BIUPIU_HAS_OCIO"
-  "OpenImageIO;OpenImageIO::OpenImageIO;BIUPIU_HAS_OIIO"
-  "OpenEXR;OpenEXR::OpenEXR;BIUPIU_HAS_OPENEXR"
-)
-foreach(spec IN LISTS BIUPIU_PROVIDER_TARGETS)
-  string(REPLACE ";" "|" parts "${spec}")
-  list(GET parts 0 package)
-  list(GET parts 1 target)
-  list(GET parts 2 macro)
-  find_package(${package} CONFIG QUIET)
-  if (TARGET ${target})
-    target_link_libraries(biupiu_visual_native PRIVATE ${target})
-    target_compile_definitions(biupiu_visual_native PRIVATE ${macro}=1)
-  endif()
-endforeach()
+find_package(OpenUSD CONFIG QUIET)
+if (TARGET pxr::usd)
+  target_link_libraries(biupiu_visual_native PRIVATE pxr::usd)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OPENUSD=1)
+endif()
+find_package(OpenTimelineIO CONFIG QUIET)
+if (TARGET OpenTimelineIO::opentimelineio)
+  target_link_libraries(biupiu_visual_native PRIVATE OpenTimelineIO::opentimelineio)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OTIO=1)
+endif()
+find_package(OpenSubdiv CONFIG QUIET)
+if (TARGET OpenSubdiv::osdCPU)
+  target_link_libraries(biupiu_visual_native PRIVATE OpenSubdiv::osdCPU)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OPENSUBDIV=1)
+endif()
+find_package(MaterialX CONFIG QUIET)
+if (TARGET MaterialXCore)
+  target_link_libraries(biupiu_visual_native PRIVATE MaterialXCore)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_MATERIALX=1)
+endif()
+find_package(OpenColorIO CONFIG QUIET)
+if (TARGET OpenColorIO::OpenColorIO)
+  target_link_libraries(biupiu_visual_native PRIVATE OpenColorIO::OpenColorIO)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OCIO=1)
+endif()
+find_package(OpenImageIO CONFIG QUIET)
+if (TARGET OpenImageIO::OpenImageIO)
+  target_link_libraries(biupiu_visual_native PRIVATE OpenImageIO::OpenImageIO)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OIIO=1)
+endif()
+find_package(OpenEXR CONFIG QUIET)
+if (TARGET OpenEXR::OpenEXR)
+  target_link_libraries(biupiu_visual_native PRIVATE OpenEXR::OpenEXR)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_OPENEXR=1)
+endif()
 
 add_executable(biupiu_visual_native_smoke tests/native_visual_api_smoke.cpp)
 target_link_libraries(biupiu_visual_native_smoke PRIVATE biupiu_visual_native)
