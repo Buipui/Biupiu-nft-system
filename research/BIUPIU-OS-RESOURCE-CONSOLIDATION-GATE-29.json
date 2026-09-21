@@ -1,0 +1,29 @@
+{
+  "schema":"biupiu.os.resource-consolidation.v1",
+  "gate":"29",
+  "status":"IMPLEMENTED",
+  "canonical_paths":[
+    "core/multilang/",
+    "apps/android/",
+    "apps/shared/runtime/",
+    "intelligence/",
+    "packages/",
+    "world/",
+    "research/"
+  ],
+  "active_authorities":{
+    "governance":"intelligence/BIUPIU-SYSTEM-INTEGRITY-MANIFEST-v1.json",
+    "housekeeping":"research/BIUPIU-HOUSEKEEPING-AND-GATE-RECONCILIATION-PROTOCOL-v1.0.md",
+    "os_dms":"research/BIUPIU-OS-DMS-SUBSYSTEM-MASTER-INDEX-v1.0.md",
+    "resources":"research/BIUPIU-RESOURCE-MANIFEST-v1.0.json",
+    "foreign_oem":"docs/architecture/BIUPIU-FOREIGN-OEM-RESOURCE-HARVEST-GATE-28.md"
+  },
+  "rules":[
+    "extend-existing-contracts-first",
+    "no-parallel-authorities",
+    "implementation-is-not-runtime-verification",
+    "preserve-open-research",
+    "fail-closed-unknown-authority"
+  ],
+  "next_gates":["29-A consistency/orphan scan","29-B Android execution","29-C cross-platform contracts","29-D hardware/OEM execution","29-E VM/host execution","29-F physical/HIL/production"]
+}
