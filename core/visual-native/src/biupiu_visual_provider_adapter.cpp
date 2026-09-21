@@ -7,6 +7,17 @@
 #include <pxr/usd/sdf/path.h>
 #endif
 #include <string>
+#include <sstream>
+
+#if defined(BIUPIU_HAS_OTIO)
+#include <opentimelineio/timeline.h>
+#include <opentimelineio/track.h>
+#include <opentimelineio/clip.h>
+#endif
+#if defined(BIUPIU_HAS_MATERIALX)
+#include <MaterialXCore/Document.h>
+#include <MaterialXCore/Node.h>
+#endif
 #if defined(BIUPIU_HAS_OTIO)
 #include <opentimelineio/timeline.h>
 #include <opentimelineio/track.h>
