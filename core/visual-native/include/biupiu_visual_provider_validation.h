@@ -14,6 +14,8 @@ typedef struct {
   uint8_t state;
   uint64_t input_hash;
   uint64_t output_hash;
+  uint64_t repeat_hash;
+  uint8_t repeat_pass;
 } biupiu_visual_provider_validation;
 int biupiu_visual_provider_validate(const char* provider, const void* input, uint64_t input_size,
                                     const void* canonical_output, uint64_t output_size,
