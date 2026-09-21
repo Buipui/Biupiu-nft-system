@@ -1,4 +1,4 @@
-# Biupiu World — Web Hosting & Online Capability Test Plan v1.0
+# Biupiu World — Web Hosting & Online Capability Test Plan v1.1
 
 ## Scope
 
@@ -6,38 +6,43 @@ This gate verifies repository-level readiness for a future Biupiu World web entr
 
 ## Test layers
 
-1. **Repository integrity** — required web manifest, health endpoint contract, and CI workflow exist.
-2. **Build integrity** — JavaScript/TypeScript packages and Hardhat contracts compile and tests run where dependencies are available.
-3. **Hosting reachability** — optional `BIUPIU_WORLD_BASE_URL` is checked for DNS/TLS/HTTP response and security headers.
-4. **Application health** — optional `/healthz` endpoint must return HTTP 200 and JSON containing `status=ok`.
-5. **Realtime readiness** — WebSocket/WebRTC/WebXR are architecture gates only until a deployed runtime endpoint and browser/device test are supplied.
+1. **Repository integrity** — required web manifest, health contract, and CI workflow exist.
+2. **Build/package integrity** — the repository web surface is packaged and required files are present.
+3. **Hosting reachability** — when BIUPIU_WORLD_BASE_URL is configured, CI checks HTTPS reachability, redirect safety, the configured health path, and HSTS.
+4. **Application health** — the health endpoint must return HTTP 200 and JSON containing status=ok.
+5. **Realtime readiness** — WebSocket/WebRTC/WebXR remain architecture gates until a deployed runtime endpoint and browser/device test are supplied.
 
 ## Required environment values
 
-- `BIUPIU_WORLD_BASE_URL` — deployed HTTPS origin, without a trailing slash.
-- `BIUPIU_WORLD_HEALTH_PATH` — optional path; defaults to `/healthz`.
+- BIUPIU_WORLD_BASE_URL — optional deployed HTTPS origin, without a trailing slash.
+- BIUPIU_WORLD_HEALTH_PATH — optional health path; defaults to /healthz.json.
 
 ## Pass criteria
 
 - No secrets committed to the repository.
-- Build/test jobs complete successfully.
-- If a base URL is supplied: HTTPS responds, health endpoint returns 200, and no redirect downgrades to HTTP.
+- Repository integrity/package checks complete successfully.
+- If a base URL is supplied: HTTPS responds, redirects remain HTTPS, the health endpoint returns 200 with status=ok, and HSTS is present.
 - Failure output identifies the exact layer; no failed or skipped test is promoted to VERIFIED.
 
 ## Current status
 
-- Repository/CI inspection: **OBSERVED**.
-- Public hosting reachability: **NOT VERIFIED** until `BIUPIU_WORLD_BASE_URL` is configured.
-- Live WebSocket/WebRTC/WebXR: **NOT VERIFIED**.
-- UE5 runtime/editor launch: **NOT VERIFIED by this repository workflow**.
+- Repository/CI readiness contract: IMPLEMENTED.
+- CI execution for this gate: PENDING / NOT YET OBSERVED after the current changes.
+- Public hosting reachability: NOT VERIFIED until BIUPIU_WORLD_BASE_URL is configured and the live probe passes.
+- Live WebSocket/WebRTC/WebXR: NOT VERIFIED.
+- UE5 runtime/editor launch: NOT VERIFIED by this repository workflow.
 
-## Missing modules identified
+## Promotion states
 
-- Hosting health probe and security-header probe.
-- Environment-safe deployment manifest.
-- Web client shell / landing entry point.
-- Authenticated gateway contract with server-side authority.
-- Realtime transport adapter contract (WebSocket first; WebRTC optional).
-- Observability: uptime, latency, error rate, trace/correlation ID and audit events.
-- CI promotion rules separating `IMPLEMENTED`, `TESTED`, `DEPLOYED`, and `VERIFIED`.
+IMPLEMENTED → TESTED → DEPLOYED → VERIFIED
+
+A repository contract may be IMPLEMENTED without being TESTED in CI, and a deployed endpoint may be DEPLOYED without being VERIFIED until the live probe and relevant acceptance tests pass.
+
+## Remaining modules
+
 - Browser acceptance tests for desktop/mobile and later WebXR-capable devices.
+- Authenticated gateway implementation.
+- Live WebSocket adapter and server runtime.
+- WebRTC relay where required.
+- Observability backend and trace/audit ingestion.
+- UE5 runtime/editor integration verification.
