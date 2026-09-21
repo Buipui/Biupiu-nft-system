@@ -306,3 +306,16 @@ Deep repository/history reconciliation identified substantial reusable architect
 Canonical consolidation record: `research/BIUPIU-OS-RESOURCE-CONSOLIDATION-GATE-29.md` and `.json`. Smoke/CI: `intelligence/BIUPIU-OS-RESOURCE-CONSOLIDATION-SMOKE.py` and `.github/workflows/biupiu-os-resource-consolidation.yml`.
 
 **Gate status: IMPLEMENTED / CONSOLIDATION REGISTERED / EXECUTION EVIDENCE PENDING.**
+
+
+## 17. Unified Gradle Toolchain & Android Build Harvest — Gate 30, 21 September 2026
+
+Repository audit found three independent Android Gradle systems: `apps/android`, `smart-farming/android`, and `software/rnd-os-mobile`. Gate 30 registers them as separate application boundaries and establishes a shared toolchain matrix rather than merging source trees.
+
+Canonical record: `research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md` and `research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json`.
+
+AGP 8.7.3 systems are pinned to Gradle 8.9; the AGP 8.13.0 mobile system is pinned to Gradle 8.13; JDK 17 is the common execution baseline. Wrapper distribution checksums are recorded. Wrapper JAR/scripts remain explicitly open until official binaries can be retrieved/generated and verified.
+
+CI matrix: `.github/workflows/biupiu-gradle-toolchain-gate.yml`.
+
+**Gate status: TOOLCHAIN REGISTERED / CI EXECUTION ENABLED / WRAPPER COMPLETION PENDING.**
