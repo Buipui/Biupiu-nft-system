@@ -1,6 +1,8 @@
 # Biupiu Multicore + Spatial Compute Federation Gate v1.0
 
-Status: IMPLEMENTED / STATIC VERIFICATION PENDING / LIVE HARDWARE PENDING
+Status: IMPLEMENTED / STATIC CORE VERIFIED / LIVE HARDWARE PENDING
+
+Static verification record: compute-federation syntax and two scheduler/fail-closed tests passed against the repository implementation on 21 September 2026. CI and native hardware validation remain separate gates.
 
 ## Scope
 Unifies heterogeneous CPU, GPU, NPU and spatial/VR compute under capability-first
