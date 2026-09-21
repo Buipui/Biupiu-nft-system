@@ -18,6 +18,17 @@ int main() {
 #endif
   assert(biupiu_visual_provider_validate("UnknownProvider",input,sizeof(input)-1,output,sizeof(output)-1,&v)==1);
 
+  uint64_t mx_a=0, mx_b=0;
+  const int ma=biupiu_provider_adapter_run_materialx_fixture(&mx_a);
+  const int mb=biupiu_provider_adapter_run_materialx_fixture(&mx_b);
+#if defined(BIUPIU_HAS_MATERIALX)
+  assert(ma==0 && mb==0);
+  assert(mx_a!=0 && mx_a==mx_b);
+#else
+  assert(ma==10 && mb==10);
+  assert(mx_a==0 && mx_b==0);
+#endif
+
   uint64_t usd_a=0, usd_b=0;
   const int ra=biupiu_provider_adapter_run_usd_fixture(&usd_a);
   const int rb=biupiu_provider_adapter_run_usd_fixture(&usd_b);
