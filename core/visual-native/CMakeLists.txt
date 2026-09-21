@@ -1,10 +1,59 @@
 cmake_minimum_required(VERSION 3.20)
 project(biupiu_visual_native LANGUAGES CXX)
-set(CMAKE_CXX_STANDARD 17)
+set(CMAKE_CXX_STANDARD 20)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
-add_library(biupiu_visual_native SHARED src/biupiu_visual_native.cpp)
+set(CMAKE_CXX_EXTENSIONS OFF)
+
+set(BIUPIU_VISUAL_NATIVE_SOURCES
+  src/biupiu_visual_native.cpp
+  src/biupiu_visual_scene.cpp
+  src/biupiu_visual_provider.cpp
+  src/biupiu_visual_manifest.cpp
+  src/biupiu_native_render.cpp
+  src/biupiu_native_shader.cpp
+  src/biupiu_visual_material.cpp
+  src/biupiu_visual_assets.cpp
+  src/biupiu_visual_gpu_pipeline.cpp
+  src/biupiu_visual_animation.cpp
+  src/biupiu_visual_geometry.cpp
+  src/biupiu_visual_subdivision.cpp
+  src/biupiu_visual_scheduler.cpp
+  src/biupiu_visual_acceleration.cpp
+  src/biupiu_visual_provider_runtime.cpp
+  src/biupiu_visual_regression.cpp
+  src/biupiu_visual_provider_adapter.cpp
+)
+
+add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
 target_include_directories(biupiu_visual_native PUBLIC include)
+target_compile_features(biupiu_visual_native PUBLIC cxx_std_20)
+
 add_executable(biupiu_visual_native_smoke tests/native_visual_api_smoke.cpp)
 target_link_libraries(biupiu_visual_native_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_render_smoke tests/native_render_smoke.cpp)
+target_link_libraries(biupiu_native_render_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_shader_material_smoke tests/native_shader_material_smoke.cpp)
+target_link_libraries(biupiu_native_shader_material_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_asset_pipeline_smoke tests/native_asset_pipeline_smoke.cpp)
+target_link_libraries(biupiu_native_asset_pipeline_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_animation_geometry_smoke tests/native_animation_geometry_smoke.cpp)
+target_link_libraries(biupiu_native_animation_geometry_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_acceleration_smoke tests/native_acceleration_smoke.cpp)
+target_link_libraries(biupiu_native_acceleration_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_regression_provider_smoke tests/native_regression_provider_smoke.cpp)
+target_link_libraries(biupiu_native_regression_provider_smoke PRIVATE biupiu_visual_native)
+
 enable_testing()
 add_test(NAME native_visual_api_smoke COMMAND biupiu_visual_native_smoke)
+add_test(NAME native_render_smoke COMMAND biupiu_native_render_smoke)
+add_test(NAME native_shader_material_smoke COMMAND biupiu_native_shader_material_smoke)
+add_test(NAME native_asset_pipeline_smoke COMMAND biupiu_native_asset_pipeline_smoke)
+add_test(NAME native_animation_geometry_smoke COMMAND biupiu_native_animation_geometry_smoke)
+add_test(NAME native_acceleration_smoke COMMAND biupiu_native_acceleration_smoke)
+add_test(NAME native_regression_provider_smoke COMMAND biupiu_native_regression_provider_smoke)
