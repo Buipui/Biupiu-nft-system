@@ -45,3 +45,12 @@ This is now a **Biupiu OS-wide and subsystem-wide design principle**, not an And
 **PENDING:** build, emulator/device rendering, accessibility/contrast automation and cross-platform conformance.
 
 No runtime capability is inferred from this design gate.
+
+
+## Gate 27 — Shared Material Language
+
+**IMPLEMENTED:** a simple reusable material abstraction is now connected to the native Android Workshop surface.
+
+The implementation intentionally avoids complicated procedural rendering. Future high-fidelity rendering belongs to the simulator/render pipeline; normal OS interfaces use restrained finish cues only.
+
+Status: **SOURCE IMPLEMENTED / BUILD AND DEVICE VERIFICATION PENDING**.
