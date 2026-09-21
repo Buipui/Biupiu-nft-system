@@ -1,0 +1,67 @@
+{
+  "schema": "biupiu.native.game-resource.v1",
+  "purpose": "Rights-aware registry for future Biupiu World arcade, retro, PC, console, mod and native game resources.",
+  "principle": "External games and emulators are references/adapters; Biupiu-owned runtime, metadata, provenance, creator and rights infrastructure are the long-term native layer.",
+  "rights_states": ["GREEN", "BLUE", "YELLOW", "ORANGE", "RED", "GREY"],
+  "resource_classes": [
+    "native_biupiu_game",
+    "open_source_game",
+    "licensed_game",
+    "freeware_game",
+    "emulator_runtime",
+    "community_mod",
+    "unreal_asset",
+    "unity_asset",
+    "biupiu_engine_asset",
+    "museum_reference"
+  ],
+  "required_fields": [
+    "resource_id",
+    "title",
+    "resource_class",
+    "platform",
+    "creator",
+    "publisher",
+    "rights_holder",
+    "licence",
+    "rights_state",
+    "commercial_use",
+    "redistribution_allowed",
+    "source_url",
+    "source_commit_or_version",
+    "dependencies",
+    "runtime_adapter",
+    "hash",
+    "provenance_record",
+    "compatibility_status",
+    "security_status",
+    "biupiu_distribution_status"
+  ],
+  "native_targets": [
+    "Biupiu Arcade Runtime",
+    "Biupiu World",
+    "Biupiu Mod Hub",
+    "Biupiu Engine",
+    "Biupiu Digital Museum"
+  ],
+  "default_policy": {
+    "unknown_rights": "do_not_distribute",
+    "emulator_licence": "does_not_grant_game_rights",
+    "bankruptcy": "does_not_automatically_release_copyright",
+    "archive_availability": "does_not_equal_distribution_permission"
+  },
+  "initial_external_research_targets": [
+    "MAME",
+    "DOSBox",
+    "ScummVM",
+    "OpenTTD",
+    "open-source game repositories",
+    "publisher-authorized freeware releases"
+  ],
+  "verification_states": {
+    "REGISTERED": "schema/resource recorded",
+    "IMPLEMENTED": "registry and adapter prototype operational",
+    "VERIFIED": "rights, dependencies and runtime independently checked",
+    "RELEASED": "approved for the specified Biupiu distribution channel"
+  }
+}
