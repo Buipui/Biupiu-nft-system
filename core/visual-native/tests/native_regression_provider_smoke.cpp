@@ -32,6 +32,18 @@ int main() {
     if (std::strcmp(p,"OpenEXR")==0) assert(rc==0 && n>0);
 #endif
   }
+  const char* advanced[]={"OpenTimelineIO","OpenSubdiv"};
+  for (const char* p: advanced) {
+    char a[256]{}, b[256]{}; uint32_t an=0,bn=0;
+    int ra=biupiu_provider_adapter_execute(p,a,sizeof(a),&an);
+    int rb=biupiu_provider_adapter_execute(p,b,sizeof(b),&bn);
+#if defined(BIUPIU_HAS_OTIO)
+    if (std::strcmp(p,"OpenTimelineIO")==0) assert(ra==0 && rb==0 && an==bn && std::strcmp(a,b)==0);
+#endif
+#if defined(BIUPIU_HAS_OPENSUBDIV)
+    if (std::strcmp(p,"OpenSubdiv")==0) assert(ra==0 && rb==0 && an==bn && std::strcmp(a,b)==0);
+#endif
+  }
   assert(biupiu_provider_adapter_execute("Unknown",nullptr,0,nullptr)!=0);
   return 0;
 }
