@@ -6,16 +6,22 @@ from .models import Capability,EnvironmentState,EvidenceRecord
 from .registry import CapabilityRegistry
 from .schemas import validate_mapping,validate_outputs
 from .cross_domain import CrossDomainValidator
+from .physics_checks import cycle_energy_balance,temperature_order
 class BiupiuKernel:
     def __init__(self,repo_root=None):
         self.repo_root=Path(repo_root or Path(__file__).resolve().parents[2]); self.registry=CapabilityRegistry(); self.environment=EnvironmentEngine(); self.audit=[]; self.cross_domain=CrossDomainValidator(); self._register_core()
     def _register_core(self):
-        for c in [Capability("biupiu-kernel","os","Biupiu"),Capability("evidence-guard","trust","Biupiu"),Capability("environment-engine","simulation","Biupiu"),Capability("audit-ledger","governance","Biupiu"),Capability("schema-guard","trust","Biupiu"),Capability("cross-domain-validator","trust","Biupiu")]: self.registry.register(c)
+        for c in [Capability("biupiu-kernel","os","Biupiu"),Capability("evidence-guard","trust","Biupiu"),Capability("environment-engine","simulation","Biupiu"),Capability("audit-ledger","governance","Biupiu"),Capability("schema-guard","trust","Biupiu"),Capability("cross-domain-validator","trust","Biupiu"),Capability("physics-guard","trust","Biupiu")]: self.registry.register(c)
     def discover(self): return self.registry.discover_existing_simulators(self.repo_root)
-    def execute(self,module,operation,inputs,*,evidence_state="simulated",measured_evidence_complete=False,review_passed=False,provenance=None):
+    def execute(self,module,operation,inputs,*,evidence_state="simulated",measured_evidence_complete=False,review_passed=False,provenance=None,physics_check=None):
         eid=uuid.uuid4().hex; warnings=challenge_inputs(inputs); status="completed"; outputs={}
         try:
             validate_mapping(inputs); outputs=dict(operation(**inputs) or {}); validate_outputs(outputs)
+            if physics_check:
+                check=physics_check(outputs)
+                outputs["physics_check"]={"valid":check.valid,"issues":check.issues,"metrics":check.metrics}
+                if not check.valid:
+                    status="physics_failed"; warnings.extend(["PHYSICS_CHECK:"+x for x in check.issues])
         except Exception as exc: status="failed"; warnings.append(f"EXECUTION_ERROR:{type(exc).__name__}:{exc}")
         proposed={"execution_id":eid,"module":module,"evidence_state":evidence_state,"measured_evidence_complete":measured_evidence_complete,"review_passed":review_passed}
         guard=guard_evidence(proposed)
@@ -39,11 +45,13 @@ class BiupiuKernel:
         state=dict(initial_inputs or {}); records=[]
         for step in steps:
             module=step["module"]; inputs={**state,**dict(step.get("inputs",{}))}
-            record=self.execute_registered(module,inputs,provenance=provenance or [])
+            record=self.execute_registered(module,inputs,provenance=provenance or [],physics_check=step.get("physics_check"))
             records.append(record)
             if record.outputs.get("status")!="completed": break
             state.update({k:v for k,v in record.outputs.items() if k!="status"})
         return records,state
+    def run_cycle_with_physics_guard(self,inputs):
+        return self.execute_registered("biupiu_cycle_adapter",inputs,physics_check=cycle_energy_balance,provenance=["cycle-physics-guard"])
     def environment_step(self,env,dt_s,updates=None): return self.environment.step(env,dt_s,updates)
     def audit_json(self): return json.dumps([r.to_dict() for r in self.audit],indent=2,sort_keys=True)
     def health(self): return {"kernel":"operational","capabilities":len(self.registry.all()),"audit_records":len(self.audit),"timestamp":time.time()}
