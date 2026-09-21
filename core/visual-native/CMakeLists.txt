@@ -30,7 +30,6 @@ add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
 target_include_directories(biupiu_visual_native PUBLIC include)
 target_compile_features(biupiu_visual_native PUBLIC cxx_std_20)
 
-# Optional host/provider discovery. The native core remains buildable without external SDKs.
 find_package(Vulkan QUIET)
 if (Vulkan_FOUND)
   target_link_libraries(biupiu_visual_native PRIVATE Vulkan::Vulkan)
@@ -46,8 +45,6 @@ if (WIN32)
   endif()
 endif()
 
-# Provider SDK discovery is deliberately target-based where packages export CMake targets.
-# A discovered target is linked and promoted only by host/runtime evidence.
 find_package(OpenUSD CONFIG QUIET)
 if (TARGET pxr::usd)
   target_link_libraries(biupiu_visual_native PRIVATE pxr::usd)
@@ -89,30 +86,24 @@ endif()
 
 add_executable(biupiu_visual_native_smoke tests/native_visual_api_smoke.cpp)
 target_link_libraries(biupiu_visual_native_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_render_smoke tests/native_render_smoke.cpp)
 target_link_libraries(biupiu_native_render_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_shader_material_smoke tests/native_shader_material_smoke.cpp)
 target_link_libraries(biupiu_native_shader_material_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_asset_pipeline_smoke tests/native_asset_pipeline_smoke.cpp)
 target_link_libraries(biupiu_native_asset_pipeline_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_animation_geometry_smoke tests/native_animation_geometry_smoke.cpp)
 target_link_libraries(biupiu_native_animation_geometry_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_acceleration_smoke tests/native_acceleration_smoke.cpp)
 target_link_libraries(biupiu_native_acceleration_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_regression_provider_smoke tests/native_regression_provider_smoke.cpp)
 target_link_libraries(biupiu_native_regression_provider_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_host_probe_smoke tests/native_host_probe_smoke.cpp)
 target_link_libraries(biupiu_native_host_probe_smoke PRIVATE biupiu_visual_native)
-
 add_executable(biupiu_native_provider_validation_smoke tests/native_provider_validation_smoke.cpp)
 target_link_libraries(biupiu_native_provider_validation_smoke PRIVATE biupiu_visual_native)
+add_executable(biupiu_native_provider_evidence tests/native_provider_evidence.cpp)
+target_link_libraries(biupiu_native_provider_evidence PRIVATE biupiu_visual_native)
 
 enable_testing()
 add_test(NAME native_visual_api_smoke COMMAND biupiu_visual_native_smoke)
@@ -124,3 +115,4 @@ add_test(NAME native_acceleration_smoke COMMAND biupiu_native_acceleration_smoke
 add_test(NAME native_regression_provider_smoke COMMAND biupiu_native_regression_provider_smoke)
 add_test(NAME native_host_probe_smoke COMMAND biupiu_native_host_probe_smoke)
 add_test(NAME native_provider_validation_smoke COMMAND biupiu_native_provider_validation_smoke)
+add_test(NAME native_provider_evidence COMMAND biupiu_native_provider_evidence ${CMAKE_BINARY_DIR}/provider-evidence.json)
