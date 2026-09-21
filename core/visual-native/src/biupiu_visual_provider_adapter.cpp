@@ -7,6 +7,18 @@
 #include <pxr/usd/sdf/path.h>
 #endif
 #include <string>
+#if defined(BIUPIU_HAS_MATERIALX)
+#include <MaterialXCore/Document.h>
+#endif
+#if defined(BIUPIU_HAS_OCIO)
+#include <OpenColorIO/OpenColorIO.h>
+#endif
+#if defined(BIUPIU_HAS_OIIO)
+#include <OpenImageIO/imageio.h>
+#endif
+#if defined(BIUPIU_HAS_OPENEXR)
+#include <OpenEXR/ImfHeader.h>
+#endif
 
 #if defined(BIUPIU_HAS_OPENUSD)
 #include <pxr/usd/usd/stage.h>
@@ -21,6 +33,18 @@ int fill_contract(biupiu_provider_adapter_info* out, const char* n, const char* 
   out->state=BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY;
 #if defined(BIUPIU_HAS_OPENUSD)
   if (std::strcmp(n,"OpenUSD")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_MATERIALX)
+  if (std::strcmp(n,"MaterialX")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_OCIO)
+  if (std::strcmp(n,"OpenColorIO")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_OIIO)
+  if (std::strcmp(n,"OpenImageIO")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_OPENEXR)
+  if (std::strcmp(n,"OpenEXR")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
 #endif
   return 0;
 }
@@ -81,6 +105,7 @@ extern "C" int biupiu_provider_adapter_opensubdiv(biupiu_provider_adapter_info* 
   return fill_contract(out, "OpenSubdiv", "external-provider", 4ULL);
 }
 
+
 extern "C" int biupiu_provider_adapter_execute(const char* provider, char* output, uint32_t capacity, uint32_t* written) {
   if (!provider || !written) return 1;
   const char* canonical = nullptr;
@@ -94,6 +119,36 @@ extern "C" int biupiu_provider_adapter_execute(const char* provider, char* outpu
     std::snprintf(buf, sizeof(buf), "OpenUSD|stage=in-memory|prim=%s|type=%s",
                   prim.GetPath().GetString().c_str(), prim.GetTypeName().GetString().c_str());
     canonical = buf;
+  }
+#endif
+#if defined(BIUPIU_HAS_MATERIALX)
+  if (!std::strcmp(provider, "MaterialX")) {
+    auto doc = MaterialX::createDocument();
+    if (!doc) return 5;
+    auto node = doc->addNode("constant", "BiupiuConstant", "color3");
+    if (!node) return 6;
+    canonical = "MaterialX|document=created|node=BiupiuConstant|type=color3";
+  }
+#endif
+#if defined(BIUPIU_HAS_OCIO)
+  if (!std::strcmp(provider, "OpenColorIO")) {
+    auto config = OCIO::Config::Create();
+    if (!config) return 7;
+    canonical = "OpenColorIO|config=created";
+  }
+#endif
+#if defined(BIUPIU_HAS_OIIO)
+  if (!std::strcmp(provider, "OpenImageIO")) {
+    OIIO::ImageSpec spec(2, 2, 4, OIIO::TypeDesc::FLOAT);
+    if (spec.width != 2 || spec.height != 2 || spec.nchannels != 4) return 8;
+    canonical = "OpenImageIO|spec=2x2x4|float";
+  }
+#endif
+#if defined(BIUPIU_HAS_OPENEXR)
+  if (!std::strcmp(provider, "OpenEXR")) {
+    Imf::Header header(2, 2);
+    if (header.width() != 2 || header.height() != 2) return 9;
+    canonical = "OpenEXR|header=2x2";
   }
 #endif
   if (!canonical) return 4;
