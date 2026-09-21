@@ -1,0 +1,18 @@
+#include "../include/biupiu_visual_render_graph.h"
+#include <algorithm>
+#include <atomic>
+#include <cstdint>
+#include <mutex>
+#include <unordered_map>
+#include <vector>
+struct Pass { biupiu_render_pass_id id; biupiu_render_pass_desc d; };
+struct Graph { std::vector<Pass> passes; std::vector<std::pair<uint64_t,uint64_t>> deps; std::vector<uint64_t> order; bool compiled=false; };
+static std::mutex g_mutex; static std::unordered_map<uint64_t,Graph> g_graphs; static std::atomic<uint64_t> g_next{1};
+static uint64_t mix(uint64_t h,uint64_t v){h^=v+0x9e3779b97f4a7c15ULL+(h<<6)+(h>>2);return h;}
+extern "C" int biupiu_render_graph_create(biupiu_render_graph_id*out){if(!out)return 1;std::lock_guard<std::mutex>l(g_mutex);auto id=g_next++;g_graphs.emplace(id,Graph{});*out=id;return 0;}
+extern "C" int biupiu_render_graph_add_pass(biupiu_render_graph_id id,const biupiu_render_pass_desc*d,biupiu_render_pass_id*out){if(!d||!out||d->kind==0)return 1;std::lock_guard<std::mutex>l(g_mutex);auto it=g_graphs.find(id);if(it==g_graphs.end()||it->second.compiled)return 2;auto pid=g_next++;it->second.passes.push_back({pid,*d});*out=pid;return 0;}
+extern "C" int biupiu_render_graph_add_dependency(biupiu_render_graph_id id,uint64_t before,uint64_t after){if(before==after)return 1;std::lock_guard<std::mutex>l(g_mutex);auto it=g_graphs.find(id);if(it==g_graphs.end()||it->second.compiled)return 2;auto has=[&](uint64_t p){return std::any_of(it->second.passes.begin(),it->second.passes.end(),[&](const Pass&x){return x.id==p;});};if(!has(before)||!has(after))return 3;auto dup=std::find(it->second.deps.begin(),it->second.deps.end(),std::make_pair(before,after));if(dup==it->second.deps.end())it->second.deps.push_back({before,after});return 0;}
+extern "C" int biupiu_render_graph_compile(biupiu_render_graph_id id){std::lock_guard<std::mutex>l(g_mutex);auto it=g_graphs.find(id);if(it==g_graphs.end())return 1;auto&g=it->second;std::unordered_map<uint64_t,uint32_t> indegree;std::unordered_map<uint64_t,std::vector<uint64_t>> edges;for(const auto&p:g.passes)indegree[p.id]=0;for(auto&e:g.deps){edges[e.first].push_back(e.second);++indegree[e.second];}std::vector<uint64_t> ready;for(const auto&p:g.passes)if(indegree[p.id]==0)ready.push_back(p.id);std::sort(ready.begin(),ready.end());g.order.clear();while(!ready.empty()){auto n=ready.front();ready.erase(ready.begin());g.order.push_back(n);for(auto v:edges[n])if(--indegree[v]==0){ready.push_back(v);std::sort(ready.begin(),ready.end());}}if(g.order.size()!=g.passes.size())return 4;g.compiled=true;return 0;}
+extern "C" int biupiu_render_graph_execute(biupiu_render_graph_id id,uint32_t frame,uint64_t*out){if(!out)return 1;std::lock_guard<std::mutex>l(g_mutex);auto it=g_graphs.find(id);if(it==g_graphs.end()||!it->second.compiled)return 2;uint64_t h=1469598103934665603ULL;h=mix(h,frame);for(auto p:it->second.order)h=mix(h,p);*out=h;return 0;}
+extern "C" int biupiu_render_graph_get_info(biupiu_render_graph_id id,biupiu_render_graph_info*out){if(!out)return 1;std::lock_guard<std::mutex>l(g_mutex);auto it=g_graphs.find(id);if(it==g_graphs.end())return 2;out->pass_count=(uint32_t)it->second.passes.size();out->dependency_count=(uint32_t)it->second.deps.size();uint64_t h=1469598103934665603ULL;for(auto p:it->second.order)h=mix(h,p);out->execution_hash=it->second.compiled?h:0;return 0;}
+extern "C" int biupiu_render_graph_destroy(biupiu_render_graph_id id){std::lock_guard<std::mutex>l(g_mutex);return g_graphs.erase(id)?0:1;}
