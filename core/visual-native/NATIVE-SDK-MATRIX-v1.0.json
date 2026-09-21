@@ -1,0 +1,32 @@
+{
+  "schema":"biupiu.native-sdk-matrix.v1",
+  "status":"AUDITED",
+  "primary_language":"C++20",
+  "abi":"C17-compatible",
+  "build":"CMake",
+  "support_languages":["Rust","Python","HLSL","GLSL"],
+  "adapters":["C#","Unreal C++"],
+  "preferred_sdk_stack":[
+    "OpenUSD","OpenSubdiv","OpenTimelineIO","MaterialX","OpenColorIO","OpenImageIO","OpenEXR","Vulkan","DXC","FFmpeg"
+  ],
+  "modules":{
+    "scene_graph":"native_cpp",
+    "transform_math":"native_cpp",
+    "renderer":"native_cpp_open",
+    "gpu_backend":"native_cpp_open",
+    "shader_compiler":"DXC_provider_open",
+    "materials":"MaterialX_adapter_open",
+    "colour":"OpenColorIO_adapter_open",
+    "images":"OpenImageIO_adapter_open",
+    "hdr":"OpenEXR_adapter_open",
+    "usd":"OpenUSD_adapter_open",
+    "subdivision":"OpenSubdiv_adapter_open",
+    "timeline":"OpenTimelineIO_adapter_open",
+    "video":"FFmpeg_adapter_open",
+    "secure_ingest":"rust_candidate",
+    "dcc_tools":"python",
+    "unity":"csharp_adapter",
+    "ue5":"cpp_adapter"
+  },
+  "promotion":"REGISTERED -> IMPLEMENTED -> HOST_TESTED -> REGRESSION_PASS -> VERIFIED"
+}

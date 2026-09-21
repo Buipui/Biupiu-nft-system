@@ -1,0 +1,13 @@
+{
+  "version":"1.0",
+  "gate":"AI-NATIVE-01",
+  "status":"implemented_source_host_verification_pending",
+  "roles":["harvester","architect","researcher","implementer","verifier","security","integrator","auditor"],
+  "protocol":["harvest","map","challenge","propose","implement","verify","regress","audit","promote"],
+  "authority":["ai_proposal","os_validation","authoritative_state"],
+  "promotion":["registered","implemented","host_tested","regression_pass","verified"],
+  "conflicts":["dependency","interface","schema","version","runtime","data","provenance","licence","resource","logic","numerical","integration","unknown"],
+  "housekeeping":["preserve_failures","reuse_before_rebuild","update_indexes","no_secrets","retain_interrupted_work","external_reference_until_approved"],
+  "mini_os_boundary":"controlled_proving_ground",
+  "main_os_promotion":"evidence_and_regression_required"
+}

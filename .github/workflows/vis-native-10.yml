@@ -1,0 +1,55 @@
+name: VIS-NATIVE-18 CI Provider Evidence
+
+on:
+  push:
+    paths:
+      - "core/visual-native/**"
+      - ".github/workflows/vis-native-10.yml"
+  pull_request:
+    paths:
+      - "core/visual-native/**"
+      - ".github/workflows/vis-native-10.yml"
+  workflow_dispatch:
+
+jobs:
+  native-visual:
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
+    steps:
+      - uses: actions/checkout@v4
+      - name: Install Vulkan development package
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libvulkan-dev
+      - name: Configure
+        run: cmake -S core/visual-native -B build/visual-native -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build/visual-native --parallel
+      - name: CTest
+        working-directory: build/visual-native
+        run: ctest -C Debug --output-on-failure -V
+      - name: Host probe smoke
+        if: runner.os == 'Linux'
+        working-directory: build/visual-native
+        run: ./biupiu_native_host_probe_smoke
+      - name: Provider validation smoke
+        if: runner.os == 'Linux'
+        working-directory: build/visual-native
+        run: ./biupiu_native_provider_validation_smoke
+      - name: Generate provider evidence artifact
+        working-directory: build/visual-native
+        run: ${{ runner.os == 'Windows' && '.\\Debug\\biupiu_native_provider_evidence.exe provider-evidence.json' || './biupiu_native_provider_evidence provider-evidence.json' }}
+      - name: Add host promotion report
+        shell: bash
+        run: |
+          mkdir -p build/visual-native/evidence
+          cp build/visual-native/provider-evidence.json build/visual-native/evidence/provider-evidence-${{ matrix.os }}.json
+          printf '# VIS-NATIVE-18 Host Promotion Report\n\n- Host: `${{ matrix.os }}`\n- Commit: `${{ github.sha }}`\n- Evidence file: `provider-evidence-${{ matrix.os }}.json`\n- Promotion remains fail-closed: PASS requires runtime execution and repeated canonical equality; SKIPPED means the optional SDK was unavailable.\n' > build/visual-native/evidence/provider-promotion-report-${{ matrix.os }}.md
+      - name: Upload provider evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: vis-native-18-provider-evidence-${{ matrix.os }}
+          path: build/visual-native/evidence/
+          if-no-files-found: error

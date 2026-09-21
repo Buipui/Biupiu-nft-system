@@ -1,0 +1,17 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"biupiu-native-visual-api-v1.schema.json",
+  "title":"Biupiu Native Visual API Contract",
+  "type":"object",
+  "required":["api_version","job_type","asset_id","provider","provenance"],
+  "properties":{
+    "api_version":{"const":"1.0"},
+    "job_type":{"enum":["capability_probe","render","animation","video","thumbnail"]},
+    "asset_id":{"type":"string","minLength":1},
+    "provider":{"type":"string","minLength":1},
+    "backend":{"type":"string"},
+    "frame_range":{"type":"object","required":["start","end","fps"],"properties":{"start":{"type":"integer","minimum":0},"end":{"type":"integer","minimum":0},"fps":{"type":"number","exclusiveMinimum":0}}},
+    "output":{"type":"object","properties":{"format":{"type":"string"},"width":{"type":"integer","minimum":1},"height":{"type":"integer","minimum":1},"path":{"type":"string"}}},
+    "provenance":{"type":"object","required":["source","input_hash"],"properties":{"source":{"type":"string"},"input_hash":{"type":"string"},"license":{"type":"string"},"provider_version":{"type":"string"}}}
+  }
+}
