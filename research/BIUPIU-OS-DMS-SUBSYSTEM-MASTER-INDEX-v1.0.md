@@ -322,3 +322,6 @@ CI matrix: `.github/workflows/biupiu-gradle-toolchain-gate.yml`.
 
 ## 18. JDK Lifecycle + GitHub Signing Boundary — Gate 31, 21 September 2026
 JDK 17 is the explicit Android CI baseline with major-version assertions and controlled upgrade gates. GitHub Actions signing is fail-closed and secret-only; keystore/private signing material is never committed. Required secret names and lifecycle policy are registered in `research/BIUPIU-JDK-LIFECYCLE-MANIFEST-v1.0.json`. Actual secret configuration and signed-release verification remain open.
+
+## 19. Android Security Harvest — Gate 32, 21 September 2026
+Integrated Android network, backup/data-extraction, runtime-session and security-policy boundaries. Security evidence remains subject to runtime, OEM and workflow verification.
