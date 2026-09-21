@@ -1,0 +1,13 @@
+{
+  "schema":"biupiu.mini-os.task-framework.v1",
+  "status":"IMPLEMENTED",
+  "thread_role":"NATIVE_BUILD_INITIAL_TASK_FRAMEWORK",
+  "authority":"MINI_OS_EXPERIMENTAL",
+  "main_os_authority":"UNCHANGED",
+  "pipeline":["INTAKE","CLASSIFY","DECOMPOSE","TASK_GRAPH","RETRIEVE","CROSS_LINK","PROVENANCE","SPECIALISTS","SANDBOX","SIMULATE","CROSS_CHECK","TEST","REVIEW","INTEGRATE","REGRESS","LEARN","PROMOTE_OR_REJECT","LOG"],
+  "roles":["ARCHITECT","RESEARCH_HARVEST","CODE","SIMULATION_MATH","SECURITY","INTEGRATION","VERIFICATION","RED_TEAM_FAILURE","GOVERNANCE_RELEASE","HUMAN_GATE"],
+  "promotion":["P0_CORE","P1_SERVICE","P2_EXPERIMENTAL","REJECTED"],
+  "fail_closed_rules":["unknown_authority","missing_provenance","failed_required_test","security_failure","unresolved_contract_conflict"],
+  "main_os_boundary":"No silent promotion or authority transfer.",
+  "next_gate":"MINI-OS-G01-NATIVE-CORE-SCAFFOLD"
+}
