@@ -1,0 +1,10 @@
+# Biupiu Quantum Federation runtime
+# Simulator + hybrid layer
+qiskit
+qiskit-machine-learning
+qiskit-ibm-runtime
+pennylane
+pennylane-qiskit
+# Complementary federation systems already registered by Biupiu
+dspy
+vllm
