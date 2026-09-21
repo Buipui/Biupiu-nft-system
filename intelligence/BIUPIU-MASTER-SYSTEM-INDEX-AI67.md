@@ -58,3 +58,17 @@ Current state: ARCHITECTURE + SOURCE SEED IMPLEMENTED / RUNTIME EVIDENCE PENDING
 - Intelligence-core CI: **SUCCESS** (`35537839854`).
 - Exterminate: **SUCCESS** (`35537839866`).
 - Runtime/host integration remains **PENDING** and is not inferred from CI.
+
+
+## UNIFIED DESIGN SYSTEM GATE 26 — 21 September 2026
+
+Biupiu OS design authority is now registered as a system-wide contract rather than an Android-only styling choice.
+
+Canonical formula: **NEUTRAL BASE -> MATERIAL FINISH -> RESTRAINED NATURE ACCENT -> CLEAR INFORMATION**.
+
+This governs OS, DMS, Intelligence, Research/Lab, Workshop, Digital Twin, simulators, configurators and departmental shells. The design goal is premium quality through restraint, not interface complexity.
+
+Canonical record: docs/architecture/BIUPIU-OS-UNIFIED-DESIGN-PHILOSOPHY-v1.0.md.
+Canonical digest: intelligence/BIUPIU-OS-DESIGN-DIGEST-2026-09-21.md.
+
+Status: **IMPLEMENTED / RUNTIME VISUAL EVIDENCE PENDING**.
