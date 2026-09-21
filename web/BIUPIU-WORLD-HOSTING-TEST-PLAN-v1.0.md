@@ -1,4 +1,4 @@
-# Biupiu World — Web Hosting & Online Capability Test Plan v1.1
+# Biupiu World — Web Hosting & Online Capability Test Plan v1.0
 
 ## Scope
 
