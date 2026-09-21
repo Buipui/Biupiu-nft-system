@@ -1,0 +1,24 @@
+package {
+    default_applicable_licenses: ["Android-Apache-2.0"],
+}
+
+cc_binary {
+    name: "buipui-core",
+    srcs: [
+        "core/buipui_core.cpp",
+    ],
+    cflags: [
+        "-Wall",
+        "-Wextra",
+        "-Werror",
+    ],
+    shared_libs: [
+        "libbase",
+        "liblog",
+        "libbinder_ndk",
+    ],
+    init_rc: [
+        "init/buipui-core.rc",
+    ],
+    vendor: true,
+}
