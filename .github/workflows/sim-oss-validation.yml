@@ -5,8 +5,11 @@ on:
     paths:
       - "software/rnd-os-ai/src/simulator_adapters.py"
       - "software/rnd-os-ai/src/simulator_validation.py"
+      - "software/rnd-os-ai/src/simulator_module_registry.py"
       - "software/rnd-os-ai/tests/test_simulator_adapters.py"
       - "software/rnd-os-ai/tests/test_simulator_validation.py"
+      - "software/rnd-os-ai/tests/test_simulator_module_registry.py"
+      - "software/rnd-os-ai/requirements-dev.txt"
   pull_request:
     paths:
       - "software/rnd-os-ai/**"
@@ -20,7 +23,9 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.11"
-      - name: Run SIM-OSS adapter tests
-        run: python -m pytest software/rnd-os-ai/tests/test_simulator_adapters.py software/rnd-os-ai/tests/test_simulator_validation.py
+      - name: Install validation dependencies
+        run: python -m pip install -r software/rnd-os-ai/requirements-dev.txt
+      - name: Run SIM-OSS adapter and registry tests
+        run: PYTHONPATH=software/rnd-os-ai/src python -m pytest -q software/rnd-os-ai/tests/test_simulator_adapters.py software/rnd-os-ai/tests/test_simulator_validation.py software/rnd-os-ai/tests/test_simulator_module_registry.py
       - name: Run non-executing validation probe
         run: PYTHONPATH=software/rnd-os-ai/src python -c "from simulator_validation import validate_backends; print(validate_backends())"

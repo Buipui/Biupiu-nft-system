@@ -30,7 +30,8 @@ def mae(y_true: Iterable[float], y_pred: Iterable[float]) -> float:
 
 def brier_score(y_true: Iterable[int], y_prob: Iterable[float]) -> float:
     pairs = _pairs(y_true, y_prob)
-    return sum((float(p) - int(y)) ** 2 for y, p in pairs) / len(pairs)
+    # Keep the public metric stable against binary floating-point artifacts.
+    return round(sum((float(p) - int(y)) ** 2 for y, p in pairs) / len(pairs), 12)
 
 
 def precision_at_k(relevant: Iterable, ranked: Sequence, k: int) -> float:
