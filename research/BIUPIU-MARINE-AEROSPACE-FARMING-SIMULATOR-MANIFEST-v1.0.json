@@ -1,0 +1,16 @@
+{
+  "date":"2026-09-21",
+  "status":"REGISTERED",
+  "domains":{
+    "marine":["LOTUSim","lxdyn","MSS","PythonVehicleSimulator","MARUSim","Stonefish ROS2","Aeolus-Ocean","openMSN","PySeidon","marine FMU co-simulation"],
+    "aerospace_space":["JSBSim","AeroSim","Basilisk","OpenRocket ecosystem","PX4-FlightGear bridges","airport/aerospace digital-twin patterns"],
+    "farming":["farm-twin","Farm-Twin","AgriTwin","Agri-twin","WOFOST/AquaCrop/DSSAT patterns","Agrar-Simulator","ROS/Gazebo agricultural robotics"]
+  },
+  "native":{
+    "marine":"core/multilang/include/biupiu_marine_sim.h",
+    "aerospace_space":"core/multilang/include/biupiu_aerospace_space_sim.h",
+    "farming":"core/multilang/include/biupiu_farming_sim.h"
+  },
+  "rights_rule":"External projects remain references/adapters until licence, dependency and security gates pass.",
+  "verification":["static","unit","integration","digital_twin","ue5_or_renderer","hil"]
+}
