@@ -4,6 +4,8 @@ on:
   push:
     paths:
       - "core/visual-native/**"
+      - "software/rnd-os-ai/multi_ai/**"
+      - "software/rnd-os-ai/tests/test_multi_ai_framework.py"
       - ".github/workflows/vis-native-10.yml"
   pull_request:
     paths:
@@ -23,6 +25,9 @@ jobs:
       - name: Install Vulkan development package
         if: runner.os == 'Linux'
         run: sudo apt-get update && sudo apt-get install -y libvulkan-dev
+      - name: Multi-AI framework regression
+        run: python -m unittest discover -s software/rnd-os-ai/tests -p "test_multi_ai_framework.py"
+
       - name: Configure
         run: cmake -S core/visual-native -B build/visual-native -DCMAKE_BUILD_TYPE=Release
       - name: Build
