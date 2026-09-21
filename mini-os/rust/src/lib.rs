@@ -1,3 +1,5 @@
+pub mod federation;
+
 #[repr(C)]
 #[derive(Copy, Clone, Eq, PartialEq, Debug)]
 pub enum MiniStatus {
@@ -17,10 +19,7 @@ pub struct MiniCapability {
 
 #[no_mangle]
 pub extern "C" fn biupiu_mini_get_capability(out: *mut MiniCapability) -> MiniStatus {
-    if out.is_null() {
-        return MiniStatus::InvalidArgument;
-    }
-    // SAFETY: non-null is required by the C ABI contract.
+    if out.is_null() { return MiniStatus::InvalidArgument; }
     unsafe {
         (*out).abi_version = 1;
         (*out).struct_size = core::mem::size_of::<MiniCapability>() as u32;
@@ -32,28 +31,14 @@ pub extern "C" fn biupiu_mini_get_capability(out: *mut MiniCapability) -> MiniSt
 #[cfg(test)]
 mod tests {
     use super::*;
-
-    #[test]
-    fn rejects_null_output() {
-        assert_eq!(
-            biupiu_mini_get_capability(core::ptr::null_mut()),
-            MiniStatus::InvalidArgument
-        );
+    #[test] fn rejects_null_output() {
+        assert_eq!(biupiu_mini_get_capability(core::ptr::null_mut()), MiniStatus::InvalidArgument);
     }
-
-    #[test]
-    fn exposes_versioned_capability() {
-        let mut cap = MiniCapability {
-            abi_version: 0,
-            struct_size: 0,
-            capability_bits: 99,
-        };
-        assert_eq!(biupiu_mini_get_capability(&mut cap), MiniStatus::Ok);
-        assert_eq!(cap.abi_version, 1);
-        assert_eq!(
-            cap.struct_size as usize,
-            core::mem::size_of::<MiniCapability>()
-        );
-        assert_eq!(cap.capability_bits, 0);
+    #[test] fn exposes_versioned_capability() {
+        let mut cap=MiniCapability{abi_version:0,struct_size:0,capability_bits:99};
+        assert_eq!(biupiu_mini_get_capability(&mut cap),MiniStatus::Ok);
+        assert_eq!(cap.abi_version,1);
+        assert_eq!(cap.struct_size as usize,core::mem::size_of::<MiniCapability>());
+        assert_eq!(cap.capability_bits,0);
     }
 }
