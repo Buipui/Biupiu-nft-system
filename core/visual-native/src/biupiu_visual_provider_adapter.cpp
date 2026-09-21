@@ -19,6 +19,9 @@ int fill_contract(biupiu_provider_adapter_info* out, const char* n, const char* 
   if (!out) return 1;
   out->name=n; out->version=v; out->capabilities=c;
   out->state=BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY;
+#if defined(BIUPIU_HAS_OPENUSD)
+  if (std::strcmp(n,"OpenUSD")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
   return 0;
 }
 #if defined(BIUPIU_HAS_OPENUSD)
