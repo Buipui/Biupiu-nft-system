@@ -205,22 +205,23 @@ private fun MaterialCard(swatch: MaterialSwatch) {
         shape = RoundedCornerShape(14.dp),
         colors = CardDefaults.cardColors(containerColor = swatch.base)
     ) {
-        Box(
-            Modifier
-                .fillMaxWidth()
-                .height(96.dp)
-                .background(
-                    Brush.linearGradient(
-                        listOf(swatch.base, swatch.accent.copy(alpha = .30f), swatch.base)
-                    )
-                )
-                .padding(16.dp)
-        ) {
-            Column(Modifier.align(Alignment.BottomStart)) {
-                Text(swatch.finish.label, color = BiupiuPalette.WarmWhite, style = MaterialTheme.typography.titleMedium)
-                Spacer(Modifier.height(4.dp))
-                Text(swatch.description, color = BiupiuPalette.WarmWhite.copy(alpha = .80f))
-            }
+        Column {
+            BiupiuMaterialSurface(
+                material = when (swatch.finish) {
+                    MaterialFinish.AnodisedAluminium -> BiupiuMaterial.ANODISED_ALUMINIUM
+                    MaterialFinish.BrushedTitanium -> BiupiuMaterial.BRUSHED_TITANIUM
+                    MaterialFinish.BioComposite -> BiupiuMaterial.BIO_COMPOSITE
+                    MaterialFinish.RecycledGlass -> BiupiuMaterial.RECYCLED_GLASS
+                    MaterialFinish.CarbonWeave -> BiupiuMaterial.CARBON_WEAVE
+                    MaterialFinish.LivingStone -> BiupiuMaterial.LIVING_STONE
+                },
+                showLabel = true
+            )
+            Text(
+                swatch.description,
+                color = BiupiuPalette.WarmWhite.copy(alpha = .80f),
+                modifier = Modifier.padding(start = 16.dp, end = 16.dp, bottom = 14.dp)
+            )
         }
     }
 }
