@@ -1,0 +1,53 @@
+name: Biupiu Local Execution Gates
+
+on:
+  push:
+    branches: ["main"]
+  pull_request:
+    branches: ["main"]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  contract-runtime:
+    runs-on: ubuntu-latest
+    timeout-minutes: 20
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Install dependencies
+        run: npm ci
+
+      - name: Compile contracts
+        run: npm run compile
+
+      - name: Run contract tests
+        run: npm test
+
+      - name: Type/access checks
+        run: npm run test:access
+
+      - name: Verify production secrets are absent
+        run: |
+          test ! -f .env
+          test -z "${DEPLOYER_PRIVATE_KEY:-}"
+
+  federation-manifest:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Verify federation and gate manifests
+        run: |
+          test -s research/FEDERATION-MODULE-MANIFEST-v1.0.md
+          test -s research/LOCAL-EXECUTION-GATES-v1.0.md
