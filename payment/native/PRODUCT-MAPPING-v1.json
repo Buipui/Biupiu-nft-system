@@ -1,0 +1,16 @@
+{
+  "version": "1.0",
+  "status": "architecture-integrated",
+  "rules": {
+    "server_authoritative": true,
+    "default_deny": true,
+    "tier_does_not_grant_department": true,
+    "department_entitlement_is_separate": true
+  },
+  "products": [
+    {"productId":"biupiu_tier_explorer","tier":"TIER-1","entitlements":["WORLD:EXPLORATION","WORLD:EDUCATION","SIMULATION:BASIC"]},
+    {"productId":"biupiu_tier_builder","tier":"TIER-2","entitlements":["SIMULATION:ADVANCED","WORLD:WORKSHOP","WORLD:PROJECT_WORKSPACE"]},
+    {"productId":"biupiu_tier_researcher","tier":"TIER-3","entitlements":["RESEARCH:SANDBOX","RESEARCH:EVIDENCE","SIMULATION:ADVANCED"]},
+    {"productId":"biupiu_tier_creator_developer","tier":"TIER-4","entitlements":["CONTENT:AUTHORING","ASSET:PIPELINE","API:DEVELOPER_TEST"]}
+  ]
+}
