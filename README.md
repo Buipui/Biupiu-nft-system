@@ -262,3 +262,12 @@ Canonical documents: `research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md` and `r
 The Intelligence layer uses these records to improve diagnostic retrieval and preventative-test generation while preserving authoritative OS controls, human release authority and third-party licence/security boundaries.
 
 **README synchronization:** 21 September 2026
+
+
+## Historical Anthropology Federated Search — AI-78
+
+Biupiu's federated research protocol now includes a dedicated anthropology retrieval lane based on the historical lineage of the Yale Cross-Cultural Survey/HRAF system and current anthropological search resources. The protocol supports culture/society, region, time, language, archaeology, ethnography, material culture, technology, agriculture, ecology, subject classification and source-context dimensions. It preserves the distinction between discovery, evidence and interpretation and routes anthropology into the existing multilingual research, ancient-systems, agriculture, water, materials, conservation, computational-geometry, learning and Digital Twin research layers.
+
+Anthropological evidence is not silently promoted into scientific or engineering fact. Licensed database access and runtime connectors remain separate implementation gates.
+
+**AI-78 synchronization:** 21 September 2026
