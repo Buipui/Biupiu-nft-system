@@ -81,3 +81,12 @@ AI-67 now indexes the governed foreign/OEM resource lane through ForeignResource
 AOSP Treble/VINTF, device-tree modularity, partition boundaries and extraction provenance are mapped into Biupiu's hardware/OEM adapter architecture. Chinese/Xiaomi, Japanese/Sony and Korean/Samsung public repository patterns are registered as reference material. XDA remains discovery-only. OpenBooks is treated as a scope-sensitive knowledge reference because multiple unrelated projects share that name.
 
 **Status: SOURCE INTEGRATED / UNIT TEST ADDED / RUNTIME AND PHYSICAL OEM VERIFICATION PENDING.**
+
+
+## OS RESOURCE CONSOLIDATION GATE 29 — 21 September 2026
+
+Repository-wide housekeeping has consolidated the active OS path around existing authorities rather than creating parallel systems. Core ABI/HAL, Android contracts, shared department runtime, intelligence governance, rendering/world packages and resource manifests are now explicitly mapped in the Gate 29 consolidation record.
+
+The gate preserves unresolved runtime, VM, UE5, physical and production evidence as open work. Unknown or competing authorities remain fail-closed.
+
+**Status: IMPLEMENTED / SMOKE WORKFLOW ADDED / RUNTIME EXECUTION PENDING.**
