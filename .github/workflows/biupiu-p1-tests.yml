@@ -8,6 +8,7 @@ on:
     branches:
       - main
       - priority1-native-ai-20260921
+  workflow_dispatch:
 
 jobs:
   p1-tests:
