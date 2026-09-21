@@ -11,6 +11,8 @@ on:
       - "packages/biupiu-rnd-os/src/dms-transport.test.ts"
       - "packages/biupiu-rnd-os/src/federation-transport.ts"
       - "packages/biupiu-rnd-os/src/federation-transport.test.ts"
+      - "dms/core/site-node/federation-sync.ts"
+      - "dms/core/site-node/federation-sync.test.ts"
       - "apps/shared/runtime/runtime-contract-v1.json"
       - ".github/workflows/digital-twin-contract-ci.yml"
   pull_request:
@@ -45,10 +47,11 @@ jobs:
 
       - name: TypeScript compile check
         run: |
-          npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/dms-transport.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts             packages/biupiu-rnd-os/src/dms-transport.test.ts             packages/biupiu-rnd-os/src/federation-transport.ts             packages/biupiu-rnd-os/src/federation-transport.test.ts
+          npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/dms-transport.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts             packages/biupiu-rnd-os/src/dms-transport.test.ts             packages/biupiu-rnd-os/src/federation-transport.ts             packages/biupiu-rnd-os/src/federation-transport.test.ts             dms/core/site-node/federation-sync.ts             dms/core/site-node/federation-sync.test.ts
 
       - name: Execute Digital Twin contract tests
         run: |
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/digital-twin.test.ts
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/dms-transport.test.ts
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/federation-transport.test.ts
+          npx -y tsx@4.20.5 dms/core/site-node/federation-sync.test.ts
