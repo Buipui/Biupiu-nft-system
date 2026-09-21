@@ -20,6 +20,7 @@ int biupiu_provider_adapter_otio(biupiu_provider_adapter_info* out);
 int biupiu_provider_adapter_opensubdiv(biupiu_provider_adapter_info* out);
 int biupiu_provider_adapter_execute(const char* provider, char* output, uint32_t capacity, uint32_t* written);
 int biupiu_provider_adapter_run_usd_fixture(uint64_t* canonical_output_hash);
+int biupiu_provider_adapter_run_materialx_fixture(uint64_t* canonical_output_hash);
 #ifdef __cplusplus
 }
 #endif
