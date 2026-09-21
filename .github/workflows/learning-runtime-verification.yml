@@ -35,3 +35,5 @@ jobs:
           tests/test_federation_registry.py
           tests/test_quantum_federation.py
           tests/test_federated_backends.py
+
+# Verification trigger revision: execute full dependency-light core suite on main.
