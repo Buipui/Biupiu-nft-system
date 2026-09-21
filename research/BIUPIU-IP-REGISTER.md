@@ -1,7 +1,9 @@
 # BIUPIU INTELLECTUAL PROPERTY REGISTER
 
 Version: 1.0 — 21 September 2026
-Classification: CONFIDENTIAL — INTERNAL R&D RECORD
+Classification: PUBLIC INDEX — DO NOT TREAT THIS FILE AS CONFIDENTIAL
+
+A private master invention record has been stored separately in the Biupiu private library. This public repository copy is an index only.
 
 This is an invention and provenance register, not a patent grant. Novelty,
 ownership, inventorship and freedom-to-operate require professional legal review.
