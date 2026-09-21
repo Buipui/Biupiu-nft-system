@@ -47,3 +47,10 @@ Added:
 - federation gate record
 
 Runtime compilation/boot/function/security/device verification remains pending until a real AOSP build host executes the corresponding tests.
+
+
+## ROM family harvest gate — 2026-09-21
+
+**ROM-FED-02: LINEAGEOS + CRDROID + GRAPHENEOS + CALYXOS HARVEST: SOURCE-VERIFIED / OPTIMISATION PLAN SOURCE-INTEGRATED**
+
+Added canonical-source harvest, optimisation matrix, multi-AI promotion protocol, and security exclusions. Candidate modules: GrapheneOS hardened_malloc, CalyxOS SeedVault/Datura architecture, crDroid modular UI/customisation, and LineageOS device/release discipline. No third-party code is marked compiled, boot-verified, function-verified, security-verified, or device-verified until executed on the AOSP build host.
