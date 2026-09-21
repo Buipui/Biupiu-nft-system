@@ -325,3 +325,27 @@ JDK 17 is the explicit Android CI baseline with major-version assertions and con
 
 ## 19. Android Security Harvest — Gate 32, 21 September 2026
 Integrated Android network, backup/data-extraction, runtime-session and security-policy boundaries. Security evidence remains subject to runtime, OEM and workflow verification.
+
+
+## 20. Automotive / Car Mechanic / Racing / Digital-Twin Integration — Gate 33, 21 September 2026
+
+Canonical records:
+- `research/BIUPIU-AUTOMOTIVE-RESOURCE-REGISTRY-v1.1.md`
+- `research/BIUPIU-AUTOMOTIVE-SIMULATOR-RESOURCE-MANIFEST-v1.0.json`
+- `research/BIUPIU-AUTOMOTIVE-SIMULATOR-NATIVE-INTEGRATION-GATE-33.md`
+- `core/multilang/include/biupiu_automotive_sim.h`
+- `core/multilang/cpp/automotive_sim.cpp`
+- `core/multilang/cpp/automotive_sim_smoke.cpp`
+
+The automotive lane now cross-links workshop/diagnostic references, Assetto Corsa, Gran Turismo, Need for Speed, Crash Team Racing, GTA, Forza, CARLA/OpenADS, SODA.Sim/OAS/Rigs of Rods and ISO 23247 automotive Digital Twin research.
+
+External game/mod ecosystems remain rights-gated research references. Proprietary binaries, extracted game assets, copyrighted vehicle models/textures/audio and manufacturer IP are not copied into the repository.
+
+The native Biupiu path now has a dependency-light C ABI + C++ deterministic longitudinal vehicle model and local smoke-test source. This is **SOURCE INTEGRATED**, not runtime-verified.
+
+Integration loop:
+`VEHICLE ASSET -> COMPONENT GRAPH -> DIAGNOSTICS -> PHYSICS -> TELEMETRY -> DIGITAL TWIN -> SIMULATOR ADAPTER -> UE5 -> VALIDATION -> PROVENANCE`
+
+Foreign-language routing covers Chinese, German, Italian, Japanese, French, Spanish, Portuguese and Russian technical discovery. Language is metadata only.
+
+**Gate status: HARVESTED / CROSS-LINKED / NATIVE SOURCE INTEGRATED / BUILD-RUNTIME VERIFICATION PENDING.**
