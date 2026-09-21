@@ -1,0 +1,13 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "title":"Biupiu Compute Federation v1.0",
+  "type":"object","required":["vendor","architecture","units"],
+  "properties":{
+    "vendor":{"type":"string"},"architecture":{"type":"string"},
+    "memory_bytes":{"type":"integer","minimum":0},
+    "simd":{"type":"array","items":{"type":"string"}},
+    "units":{"type":"array","items":{"type":"object","required":["unit_id","kind"],
+      "properties":{"unit_id":{"type":"string"},"kind":{"enum":["performance","efficiency","vector","gpu","npu"]},
+      "capacity":{"type":"number","exclusiveMinimum":0},"available":{"type":"boolean"}}}}
+  }
+}
