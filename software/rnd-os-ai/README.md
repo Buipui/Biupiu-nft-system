@@ -100,3 +100,11 @@ The framework enforces reuse-before-rebuild, failure retention, explicit conflic
 - Tests: software/rnd-os-ai/tests/test_native_main_boundary.py
 - Matrix: research/BIUPIU-NATIVE-MAIN-OS-BOUNDARY-MATRIX-v1.0.json
 - Status: REGISTERED + IMPLEMENTED / HOST VERIFICATION PENDING
+
+
+## AI-NATIVE-03 — Dependency / Regression Graph
+- Engine: software/rnd-os-ai/multi_ai/dependency_graph.py
+- Tests: software/rnd-os-ai/tests/test_dependency_graph.py
+- Audit: software/rnd-os-ai/AI-NATIVE-03-DEPENDENCY-REGRESSION-GRAPH-v1.0.md
+- Matrix: research/BIUPIU-AI-NATIVE-03-DEPENDENCY-MATRIX-v1.0.json
+- Status: REGISTERED + IMPLEMENTED / HOST VERIFICATION PENDING
