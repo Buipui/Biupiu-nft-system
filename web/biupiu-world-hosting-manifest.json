@@ -1,0 +1,29 @@
+{
+  "schema": "biupiu.world.hosting.v1",
+  "world": "Biupiu World",
+  "status": "ARCHITECTURE_READY_NOT_DEPLOYED",
+  "canonicalStateAuthority": "Biupiu OS / server-side gateway",
+  "publicClient": "web-shell",
+  "healthPath": "/healthz",
+  "realtime": {
+    "primary": "websocket",
+    "optional": ["webrtc"],
+    "status": "NOT_VERIFIED"
+  },
+  "immersive": {
+    "targets": ["desktop", "mobile", "WebXR"],
+    "status": "NOT_VERIFIED"
+  },
+  "security": {
+    "httpsRequired": true,
+    "clientIsNotAuthority": true,
+    "secretsInBrowser": false,
+    "auditEvents": true
+  },
+  "promotionStates": ["PLANNED", "IMPLEMENTED", "TESTED", "DEPLOYED", "VERIFIED"],
+  "blockchain": {
+    "mode": "optional registry anchor",
+    "authoritativeRuntimeState": "off-chain",
+    "status": "NOT_REQUIRED_FOR_HOSTING_HEALTH"
+  }
+}
