@@ -15,11 +15,12 @@ Concentrate the current build effort on the native OS/AI path and use the existi
 
 ## Integrated native harness
 
-New:
+Implemented:
 - `software/rnd-os-ai/src/biupiu_ai/native_system_harness.py`
 - `software/rnd-os-ai/tests/test_native_system_harness.py`
+- `.github/workflows/native-ai-harness.yml`
 
-The harness composes existing contracts rather than introducing a second OS authority.
+The harness composes existing contracts rather than introducing a second OS authority. The workflow performs Python compilation and deterministic pytest execution on pushes, pull requests, and manual dispatch.
 
 ## Initial harvested resources
 
@@ -35,12 +36,22 @@ The harness composes existing contracts rather than introducing a second OS auth
 
 ## Gate state
 
-**SOURCE IMPLEMENTED:** native-system integration harness.
+**ARCHITECTURE-ONLY:** simulator, federation, digital-twin, mathematics, physics, quantum and autonomous-AI modules remain integration contracts/candidate resources until their runtime paths are executed in the target environment.
 
-**RUNTIME VERIFIED:** local deterministic tests required before promotion.
+**IMPLEMENTED:** native-system integration harness, deterministic test module, CI workflow, provenance-oriented execution event model.
+
+**RUNTIME VERIFIED:** not yet confirmed in this run. GitHub reported no workflow run attached to commit `78bd4162939a0f535c508d895cdbee7301a14639` at inspection time.
 
 **PRODUCTION VERIFIED:** no.
 
+## Recorded failure / learning event
+
+- `CI_NOT_OBSERVED`: workflow file was committed successfully, but no associated workflow run was observable yet. This is recorded as an evidence gap, not a pass.
+- Learning action: preserve architecture/runtime/production separation; do not promote the harness until a passing run or equivalent local execution evidence is captured.
+
 ## Next execution gate
 
-Run the native harness and its tests; then connect the harness to the existing package/import structure and cross-platform CI. Failures become learning events rather than being silently discarded.
+1. Obtain a successful GitHub Actions run for `native-ai-harness.yml`.
+2. If the run fails, capture the job log and convert the failure into a governed learning record.
+3. After a passing harness run, connect the harness to the existing package/import structure and add cross-platform execution checks.
+4. Only then begin runtime bridges for federation, digital twin, mathematics, physics, quantum and autonomous-AI modules.
