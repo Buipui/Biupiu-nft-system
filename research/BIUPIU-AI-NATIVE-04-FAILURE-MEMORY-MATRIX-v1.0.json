@@ -1,0 +1,8 @@
+{
+  "gate":"AI-NATIVE-04",
+  "status":"implemented_source_host_verification_pending",
+  "failure_identity":"sha256(gate|category|message|evidence_digest)",
+  "behaviour":["retain","deduplicate","resolve_explicitly","regress_unresolved"],
+  "authority_boundary":["ai_classification","os_validation","authoritative_state"],
+  "promotion":["registered","implemented","host_tested","regression_pass","verified"]
+}
