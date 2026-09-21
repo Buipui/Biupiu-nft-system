@@ -1,0 +1,16 @@
+{
+  "record_type":"BIUPIU_RESEARCH_CHANGE_ANCHOR",
+  "version":"AI-78",
+  "date":"2026-09-21",
+  "repository":"Buipui/Biupiu-nft-system",
+  "branch":"ai-78-anthropology-federated-search-2026-09-21",
+  "change":"Historical anthropology search protocol integrated into federated search, learning and research governance",
+  "canonical_provenance":"Git commit",
+  "on_chain_state":"PENDING",
+  "required_anchor_fields":[
+    "release_id","research_id","algorithm_id","algorithm_version",
+    "manifest_hash","commit_sha","timestamp","previous_anchor"
+  ],
+  "rule":"GitHub commit remains canonical until an authorized EVM registry transaction is executed and independently verified",
+  "privacy":"No confidential research, secrets, private datasets or unpublished IP may be placed on-chain"
+}
