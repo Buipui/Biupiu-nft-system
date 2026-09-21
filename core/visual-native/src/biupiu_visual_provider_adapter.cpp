@@ -1,6 +1,11 @@
 #include "../include/biupiu_visual_provider_adapter.h"
 #include "../include/biupiu_visual_regression.h"
 #include <cstring>
+#include <cstdio>
+#if defined(BIUPIU_HAS_OPENUSD)
+#include <pxr/usd/usd/stage.h>
+#include <pxr/usd/sdf/path.h>
+#endif
 #include <string>
 
 #if defined(BIUPIU_HAS_OPENUSD)
@@ -71,4 +76,27 @@ extern "C" int biupiu_provider_adapter_otio(biupiu_provider_adapter_info* out) {
 }
 extern "C" int biupiu_provider_adapter_opensubdiv(biupiu_provider_adapter_info* out) {
   return fill_contract(out, "OpenSubdiv", "external-provider", 4ULL);
+}
+
+extern "C" int biupiu_provider_adapter_execute(const char* provider, char* output, uint32_t capacity, uint32_t* written) {
+  if (!provider || !written) return 1;
+  const char* canonical = nullptr;
+#if defined(BIUPIU_HAS_OPENUSD)
+  if (!std::strcmp(provider, "OpenUSD")) {
+    auto stage = pxr::UsdStage::CreateInMemory();
+    if (!stage) return 2;
+    auto prim = stage->DefinePrim(pxr::SdfPath("/Biupiu"));
+    if (!prim || !prim.IsValid()) return 3;
+    static thread_local char buf[256];
+    std::snprintf(buf, sizeof(buf), "OpenUSD|stage=in-memory|prim=%s|type=%s",
+                  prim.GetPath().GetString().c_str(), prim.GetTypeName().GetString().c_str());
+    canonical = buf;
+  }
+#endif
+  if (!canonical) return 4;
+  const uint32_t n=static_cast<uint32_t>(std::strlen(canonical));
+  *written=n;
+  if (!output || capacity<n+1) return 2;
+  std::memcpy(output, canonical, n+1);
+  return 0;
 }
