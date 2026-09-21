@@ -274,3 +274,12 @@ Canonical rules: premium through restraint; neutral-first surfaces; material fin
 Canonical digest: intelligence/BIUPIU-OS-DESIGN-DIGEST-2026-09-21.md.
 
 Status: **IMPLEMENTED / SOURCE UPDATED / RUNTIME VISUAL VERIFICATION PENDING**.
+
+
+## 14. Shared Material Language — Gate 27, 21 September 2026
+
+Biupiu OS now has a lightweight shared material-surface abstraction for Android. Material finishes remain visual approximations and are deliberately restrained. The abstraction covers anodised aluminium, brushed titanium, bio-composite, recycled glass, carbon weave and living stone.
+
+The material layer is subordinate to information hierarchy and semantic state. It is not a replacement for a future physically based rendering engine in simulators or Digital Twin environments.
+
+Status: **SOURCE IMPLEMENTED / BUILD AND DEVICE VERIFICATION PENDING**.
