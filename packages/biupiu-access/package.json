@@ -1,1 +1,12 @@
-{"name":"@biupiu/access","version":"0.1.0","private":true,"description":"Subscriber tiers, department entitlements and authorization reference package","entry":"src/index.ts"}
+{
+  "name": "@biupiu/access",
+  "version": "0.1.0",
+  "private": true,
+  "description": "Subscriber tiers, department entitlements and authorization reference package",
+  "entry": "src/index.ts",
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts",
+    "./render-entitlements": "./src/render-entitlements.ts"
+  }
+}
