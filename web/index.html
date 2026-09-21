@@ -1,0 +1,6 @@
+<!doctype html>
+<html lang="en">
+<head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><meta name="description" content="Biupiu World — Plant-Based Biotechnology & Regenerative Innovation"><title>Biupiu World</title></head>
+<body><main><h1>Biupiu World</h1><p>Immersive research and innovation environment.</p><p id="state">Gateway state: awaiting server connection.</p></main>
+<script>fetch('/healthz.json',{headers:{accept:'application/json'}}).then(r=>r.ok?r.json():Promise.reject(r.status)).then(x=>document.getElementById('state').textContent='Gateway state: '+(x.status||'unknown')).catch(()=>document.getElementById('state').textContent='Gateway state: offline / not connected');</script>
+</body></html>
