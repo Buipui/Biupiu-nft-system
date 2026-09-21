@@ -28,7 +28,7 @@
     "VIS-NATIVE-20": "registered; executable shader pipeline",
     "VIS-NATIVE-21": "registered; native material runtime",
     "VIS-NATIVE-22": "registered; native asset runtime and streaming",
-    "VIS-NATIVE-23": "registered; render graph and frame scheduler"
+    "VIS-NATIVE-23": "implemented_source; host verification pending"
   },
   "verification": [
     "CMake configure",
