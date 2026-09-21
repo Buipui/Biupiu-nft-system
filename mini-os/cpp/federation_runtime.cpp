@@ -6,7 +6,7 @@ extern "C" biupiu_mini_status biupiu_mini_select_compute(
  const biupiu_compute_unit *best=nullptr;
  for(uint32_t i=0;i<unit_count;++i){
    const auto &u=units[i];
-   if(!u.available || u.capacity==0u || u.compute_class < workload->minimum_class) continue;
+   if(!u.available || u.capacity==0u || u.compute_class != workload->minimum_class) continue;
    if(u.compute_class==workload->preferred_class){ best=&u; break; }
    if(!best || u.capacity>best->capacity) best=&u;
  }
