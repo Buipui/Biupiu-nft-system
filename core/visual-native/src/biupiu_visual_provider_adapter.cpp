@@ -41,27 +41,7 @@ int fill_contract(biupiu_provider_adapter_info* out, const char* n, const char* 
   if (!out) return 1;
   out->name=n; out->version=v; out->capabilities=c;
   out->state=BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY;
-#if defined(BIUPIU_HAS_OPENUSD)
-  if (std::strcmp(n,"OpenUSD")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_OTIO)
-  if (!std::strcmp(n,"OpenTimelineIO")) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_OPENSUBDIV)
-  if (!std::strcmp(n,"OpenSubdiv")) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_MATERIALX)
-  if (std::strcmp(n,"MaterialX")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_OCIO)
-  if (std::strcmp(n,"OpenColorIO")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_OIIO)
-  if (std::strcmp(n,"OpenImageIO")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
-#if defined(BIUPIU_HAS_OPENEXR)
-  if (std::strcmp(n,"OpenEXR")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
-#endif
+undefined
   return 0;
 }
 #if defined(BIUPIU_HAS_OPENUSD)
@@ -115,10 +95,24 @@ extern "C" int biupiu_provider_adapter_usd(biupiu_provider_adapter_info* out) {
 #endif
 }
 extern "C" int biupiu_provider_adapter_otio(biupiu_provider_adapter_info* out) {
-  return fill_contract(out, "OpenTimelineIO", "external-provider", 2ULL);
+  int rc=fill_contract(out, "OpenTimelineIO", "external-provider", 2ULL);
+#if defined(BIUPIU_HAS_OTIO)
+  char buf[256]{}; uint32_t n=0;
+  if (rc==0 && biupiu_provider_adapter_execute("OpenTimelineIO",buf,sizeof(buf),&n)==0) {
+    out->version="runtime-probed"; out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY;
+  }
+#endif
+  return rc;
 }
 extern "C" int biupiu_provider_adapter_opensubdiv(biupiu_provider_adapter_info* out) {
-  return fill_contract(out, "OpenSubdiv", "external-provider", 4ULL);
+  int rc=fill_contract(out, "OpenSubdiv", "external-provider", 4ULL);
+#if defined(BIUPIU_HAS_OPENSUBDIV)
+  char buf[256]{}; uint32_t n=0;
+  if (rc==0 && biupiu_provider_adapter_execute("OpenSubdiv",buf,sizeof(buf),&n)==0) {
+    out->version="runtime-probed"; out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY;
+  }
+#endif
+  return rc;
 }
 
 
