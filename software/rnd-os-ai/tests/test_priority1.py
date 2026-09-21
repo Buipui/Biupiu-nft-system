@@ -38,3 +38,22 @@ def test_algorithm_commitment_is_deterministic():
     a=create_commitment("x","1",code="c",evidence={"e":1},metadata={"m":2})
     b=create_commitment("x","1",code="c",evidence={"e":1},metadata={"m":2})
     assert a.commitment==b.commitment
+
+
+def test_unsupported_and_contradicted_evidence_are_blocked():
+    task=AgentTask("t4","test",("research",),evidence_refs=("e1",))
+    for state in ("UNSUPPORTED","CONTRADICTED"):
+        r=NativeAIRuntime().execute(task,evidence_state=state)
+        assert r.status=="FLAGGED_AI"
+        assert not r.promotion_allowed
+
+def test_learning_rejects_invalid_inputs():
+    with pytest.raises(ValueError):
+        NativeAIRuntime.bounded_learning([0],[1],confidence=1.1)
+    with pytest.raises(ValueError):
+        NativeAIRuntime.bounded_learning([0],[1],confidence=1,drift=-1)
+
+def test_activation_is_fail_closed_by_default():
+    matrix=NativeAIRuntime().activation_matrix()
+    assert matrix
+    assert not any(matrix.values())
