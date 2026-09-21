@@ -33,3 +33,17 @@ Android 17 CDD requires SELinux enforcing and prohibits weakening/replacing upst
 - physical device HAL/device-tree bring-up
 
 No item above is marked verified until the corresponding command/result exists.
+
+
+## Federation gate — 2026-09-21
+
+**FED-01: MULTI-AI FEDERATION + LOGGING PROTOCOL: SOURCE-INTEGRATED**
+
+Added:
+- Multi-AI federation role and authority model
+- evidence envelope and conflict protocol
+- append-only audit/logging protocol
+- failure taxonomy and security classes
+- federation gate record
+
+Runtime compilation/boot/function/security/device verification remains pending until a real AOSP build host executes the corresponding tests.
