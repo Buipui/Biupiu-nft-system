@@ -10,7 +10,12 @@ int main() {
   assert(biupiu_visual_provider_validate("OpenUSD",input,sizeof(input)-1,output,sizeof(output)-1,&v)==0);
   assert(v.input_hash!=0 && v.output_hash!=0);
   assert(v.deterministic_pass==1);
+  assert(v.discovered==1);
+#if defined(BIUPIU_HAS_OPENUSD)
+  assert(v.linked==1 && v.runtime_probe==1 && v.repeat_pass==1 && v.state==3);
+#else
   assert(v.state==1 && v.runtime_probe==0);
+#endif
   assert(biupiu_visual_provider_validate("UnknownProvider",input,sizeof(input)-1,output,sizeof(output)-1,&v)==1);
 
   uint64_t usd_a=0, usd_b=0;
