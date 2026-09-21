@@ -1,6 +1,7 @@
 // SPDX-License-Identifier: MIT
 pragma solidity ^0.8.24;
 
+import {ERC721} from "@openzeppelin/contracts/token/ERC721/ERC721.sol";
 import {ERC721URIStorage} from "@openzeppelin/contracts/token/ERC721/extensions/ERC721URIStorage.sol";
 import {ERC2981} from "@openzeppelin/contracts/token/common/ERC2981.sol";
 import {Ownable} from "@openzeppelin/contracts/access/Ownable.sol";
@@ -28,14 +29,12 @@ contract BiupiuNFT is ERC721URIStorage, ERC2981, Ownable {
     ) ERC721(name_, symbol_) Ownable(msg.sender) {
         if (maxSupply_ == 0) revert MaxSupplyExceeded();
         if (royaltyReceiver_ == address(0)) revert ZeroAddress();
-        if (royaltyBps_ > 1000) revert InvalidRoyaltyBps(); // 10% ceiling for this reference contract
+        if (royaltyBps_ > 1000) revert InvalidRoyaltyBps();
 
         maxSupply = maxSupply_;
         _setDefaultRoyalty(royaltyReceiver_, royaltyBps_);
     }
 
-    /// @notice Mint a single NFT. Only the collection owner may mint.
-    /// @dev The URI is stored directly on-chain as the token URI reference and cannot be edited later.
     function mint(address to, string calldata tokenURI_) external onlyOwner returns (uint256 tokenId) {
         if (to == address(0)) revert ZeroAddress();
         if (_nextTokenId > maxSupply) revert MaxSupplyExceeded();
@@ -47,7 +46,6 @@ contract BiupiuNFT is ERC721URIStorage, ERC2981, Ownable {
         emit BiupiuMinted(to, tokenId, tokenURI_);
     }
 
-    /// @notice Mint multiple NFTs with independent metadata URIs.
     function mintBatch(address[] calldata recipients, string[] calldata tokenURIs)
         external
         onlyOwner
@@ -67,14 +65,12 @@ contract BiupiuNFT is ERC721URIStorage, ERC2981, Ownable {
         }
     }
 
-    /// @notice Update the collection-wide royalty signal under ERC-2981.
     function setDefaultRoyalty(address receiver, uint96 feeNumerator) external onlyOwner {
         if (receiver == address(0)) revert ZeroAddress();
         if (feeNumerator > 1000) revert InvalidRoyaltyBps();
         _setDefaultRoyalty(receiver, feeNumerator);
     }
 
-    /// @notice Remove the default royalty configuration.
     function deleteDefaultRoyalty() external onlyOwner {
         _deleteDefaultRoyalty();
     }
