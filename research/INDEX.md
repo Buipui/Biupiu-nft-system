@@ -45,3 +45,24 @@ Canonical records:
 - `software/native-arcade/MODDING-STATION.md`
 
 **NEXT GATE:** add unit tests -> run TypeScript checks -> implement runtime interface -> create Unreal prototype -> add Unity adapter -> security/sandbox design -> CI and independent verification.
+## GATE 14 — NATIVE ARCADE RUNTIME + EXECUTABLE TEST HARNESS — 21 September 2026
+- Platform-neutral `BiupiuArcadeRuntime` contract: **IMPLEMENTED**.
+- Runtime adapter contract: **IMPLEMENTED**.
+- Session lifecycle model (STARTING/RUNNING/STOPPING/STOPPED/FAILED): **IMPLEMENTED**.
+- Fail-closed launch path now requires the existing registry approval/rights/compatibility/security/verification gates **IMPLEMENTED**.
+- Native registry unit tests: **IMPLEMENTED**.
+- Runtime lifecycle tests: **IMPLEMENTED**.
+- Executable test harness: **IMPLEMENTED**.
+- Dedicated GitHub Actions workflow: **IMPLEMENTED / EXECUTION PENDING**.
+- Unreal/Unity concrete adapters: **PENDING**.
+- Sandbox execution boundary: **PENDING**.
+- External game/ROM redistribution clearance: **NONE CLAIMED**.
+
+Canonical additions:
+- `software/native-arcade/runtime.ts`
+- `software/native-arcade/registry.test.ts`
+- `software/native-arcade/runtime.test.ts`
+- `software/native-arcade/run-tests.ts`
+- `.github/workflows/native-arcade-ci.yml`
+
+**NEXT GATE:** acquire actual CI execution evidence -> remediate any compiler/test failures -> add engine-neutral manifest/provenance interfaces -> controlled Unreal/Unity adapter prototypes -> sandbox/security gate.
