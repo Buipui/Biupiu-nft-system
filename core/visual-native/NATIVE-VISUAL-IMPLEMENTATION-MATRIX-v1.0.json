@@ -1,0 +1,23 @@
+{
+  "schema":"biupiu.native-visual-implementation-matrix.v1",
+  "status":"SOURCE_IMPLEMENTED_HOST_UNVERIFIED",
+  "first_party":{
+    "api_abi":"implemented",
+    "capability_probe":"implemented",
+    "job_lifecycle":"implemented",
+    "render_request_contract":"implemented",
+    "animation_request_contract":"implemented",
+    "video_request_contract":"implemented",
+    "native_render_engine":"open",
+    "native_animation_engine":"open",
+    "native_video_encoder":"open"
+  },
+  "upstream_adapters":{
+    "openusd":"registered",
+    "opensubdiv":"registered",
+    "opentimelineio":"registered",
+    "unity":"adapter_pending",
+    "ue5":"adapter_pending"
+  },
+  "verification":["CMake configure","compile","CTest","host GPU probe","deterministic frame fixture","video encode fixture"]
+}
