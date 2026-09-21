@@ -1,0 +1,27 @@
+{
+  "date": "2026-09-21",
+  "status": "REGISTERED",
+  "purpose": "Rights-gated cross-link registry for automotive simulator and digital-twin research",
+  "families": [
+    {"id":"car-mechanic-simulator-2021","role":"workshop_reference","activation":"external_reference_only"},
+    {"id":"assetto-corsa","role":"vehicle_data_and_suspension_reference","activation":"external_reference_only"},
+    {"id":"gran-turismo","role":"structured_game_data_reference","activation":"external_reference_only"},
+    {"id":"need-for-speed","role":"VLT/AttribSys tooling reference","activation":"external_reference_only"},
+    {"id":"crash-team-racing","role":"native-port_and_modsdk_reference","activation":"external_reference_only"},
+    {"id":"gta","role":"vehicle_metadata_and_package_tooling_reference","activation":"external_reference_only"},
+    {"id":"forza","role":"mod-tooling_reference","activation":"external_reference_only"},
+    {"id":"carla-openads","role":"open_vehicle_physics_sensor_backend_candidate","activation":"adapter_candidate"},
+    {"id":"soda-sim","role":"ue_vehicle_validation_reference","activation":"adapter_candidate"},
+    {"id":"oas-engine","role":"vehicle_dynamics_reference","activation":"adapter_candidate"},
+    {"id":"rigs-of-rods","role":"soft_body_vehicle_reference","activation":"adapter_candidate"},
+    {"id":"iso-23247-automotive-dt","role":"digital_twin_architecture_reference","activation":"architecture_reference"}
+  ],
+  "native_biupiu": {
+    "header": "core/multilang/include/biupiu_automotive_sim.h",
+    "implementation": "core/multilang/cpp/automotive_sim.cpp",
+    "smoke_test": "core/multilang/cpp/automotive_sim_smoke.cpp"
+  },
+  "evidence_rule": "Architecture/source integration is distinct from runtime verification.",
+  "rights_rule": "Do not copy proprietary game assets, binaries, dumps, models, textures, audio or manufacturer IP without explicit permission.",
+  "promotion_gates": ["license","dependency","security","static","unit","integration","digital_twin","ue5","hardware_in_loop"]
+}
