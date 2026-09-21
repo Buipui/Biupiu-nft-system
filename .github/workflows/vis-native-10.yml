@@ -29,7 +29,7 @@ jobs:
         run: cmake --build build/visual-native --parallel
       - name: CTest
         working-directory: build/visual-native
-        run: ctest --output-on-failure
+        run: ctest -C Debug --output-on-failure -V
       - name: Host probe smoke
         if: runner.os == 'Linux'
         working-directory: build/visual-native
