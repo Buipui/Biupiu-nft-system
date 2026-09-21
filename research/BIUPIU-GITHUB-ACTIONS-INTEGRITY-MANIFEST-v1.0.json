@@ -1,17 +1,36 @@
 {
   "schema":"biupiu.github-actions-integrity.v1",
   "gate":"G32-C",
-  "status":"IMPLEMENTED_NOT_VERIFIED",
-  "policy":"pin verified third-party actions to full immutable commit SHAs",
-  "verified_refs":{
-    "actions/checkout":"v4.4.0",
-    "actions/setup-java":"v4.9.1"
-  },
-  "verified_release_sources":[
-    "https://github.com/actions/checkout/releases",
-    "https://github.com/actions/setup-java/releases"
+  "status":"IMPLEMENTED",
+  "policy":"pin promoted third-party actions to full immutable commit SHAs",
+  "verified_actions":[
+    {
+      "action":"actions/checkout",
+      "release":"v4.4.0",
+      "commit_sha":"11d5960a326750d5838078e36cf38b85af677262",
+      "source":"https://github.com/actions/checkout/releases",
+      "verification":"GitHub tag resolves directly to commit",
+      "status":"PINNED_IN_AUDIT_WORKFLOW"
+    },
+    {
+      "action":"actions/setup-java",
+      "release":"v4.9.1",
+      "commit_sha":"cf277c60eb25467037889841efdb72551f06f6c3",
+      "source":"https://github.com/actions/setup-java/releases",
+      "verification":"GitHub tag resolves directly to commit",
+      "status":"ALLOWLIST_VERIFIED_NOT_GLOBAL_PINNED"
+    },
+    {
+      "action":"gradle/actions/setup-gradle",
+      "release":"v4.4.3",
+      "commit_sha":"ed408507eac070d1f99cc633dbcf757c94c7933a",
+      "source":"https://github.com/gradle/actions/releases",
+      "verification":"Signed annotated v4 tag resolves through v4.4.3 to commit",
+      "status":"ALLOWLIST_VERIFIED_NOT_GLOBAL_PINNED"
+    }
   ],
-  "sha_pinning":"OPEN",
-  "reason":"Repository contains a large historical workflow surface; each action must be provenance-checked before mutation.",
+  "sha_pinning":"CONTROLLED_ALLOWLIST",
+  "historical_workflow_surface":"NOT_FULLY_PINNED",
+  "reason":"Repository contains a large historical workflow surface; only provenance-verified actions are promoted incrementally.",
   "next_gate":"G32-D"
 }
