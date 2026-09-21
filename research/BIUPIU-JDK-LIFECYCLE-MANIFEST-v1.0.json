@@ -1,0 +1,8 @@
+{
+  "schema":"biupiu.jdk-lifecycle.v1",
+  "status":"IMPLEMENTED",
+  "androidBaseline":{"distribution":"temurin","major":17,"policy":"explicit-major-version"},
+  "upgradePolicy":{"silentMajorUpgrade":false,"requiredChecks":["AGP compatibility","Gradle compatibility","Kotlin compatibility","Android compile/test","emulator smoke"]},
+  "signing":{"workflowBoundary":".github/workflows/biupiu-android-signing-gate.yml","requiredSecretNames":["BIUPIU_ANDROID_KEYSTORE_B64","BIUPIU_ANDROID_KEYSTORE_PASSWORD","BIUPIU_ANDROID_KEY_ALIAS","BIUPIU_ANDROID_KEY_PASSWORD"],"repositorySecretsVerified":false,"keystoreCommitted":false,"releaseSigningVerified":false},
+  "nextGate":"G31-A"
+}
