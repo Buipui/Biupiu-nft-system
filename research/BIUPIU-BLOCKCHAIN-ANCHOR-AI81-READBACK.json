@@ -1,0 +1,18 @@
+{
+  "protocol": "AI-81",
+  "record": "federation-readback-follow-up",
+  "date": "2026-09-21",
+  "state": "MANIFEST_PREPARED",
+  "anchoring_scope": [
+    "read/read-back consistency record",
+    "learning-log update",
+    "version changelog"
+  ],
+  "transaction": {
+    "submitted": false,
+    "verified": false,
+    "network": null,
+    "transaction_id": null
+  },
+  "integrity_note": "This file is a proposed anchor manifest only. No on-chain transaction is claimed. Authorized wallet/network execution and independent verification remain pending."
+}
