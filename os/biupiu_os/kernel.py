@@ -16,8 +16,7 @@ class BiupiuKernel:
         eid=uuid.uuid4().hex; warnings=challenge_inputs(inputs); status="completed"; outputs={}
         try:
             validate_mapping(inputs); outputs=dict(operation(**inputs) or {}); validate_outputs(outputs)
-        except Exception as exc:
-            status="failed"; warnings.append(f"EXECUTION_ERROR:{type(exc).__name__}:{exc}")
+        except Exception as exc: status="failed"; warnings.append(f"EXECUTION_ERROR:{type(exc).__name__}:{exc}")
         proposed={"execution_id":eid,"module":module,"evidence_state":evidence_state,"measured_evidence_complete":measured_evidence_complete,"review_passed":review_passed}
         guard=guard_evidence(proposed)
         if not guard["valid"]:
