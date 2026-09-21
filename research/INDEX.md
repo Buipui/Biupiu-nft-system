@@ -23,3 +23,10 @@
 - Observation remains read-only; no installation or mutation path added.
 
 Next gate: execute the expanded Windows CI workflow and then capture an actual host evidence bundle from the development workstation.
+
+## Native Multi-AI Architecture Builder
+- AI-NATIVE-01: Multi-AI Architecture Builder
+- Protocol: research/BIUPIU-MULTI-AI-ARCHITECTURE-BUILDER-PROTOCOL-v1.0.md
+- Matrix: research/BIUPIU-MULTI-AI-ARCHITECTURE-BUILDER-MATRIX-v1.0.json
+- Implementation: software/rnd-os-ai/multi_ai/
+- Tests: software/rnd-os-ai/tests/test_multi_ai_framework.py
