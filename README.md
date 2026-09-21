@@ -6,11 +6,40 @@ The Biupiu NFT System is a structured digital-asset, computational-art, crowdfun
 
 The founding phase is designed as a **crowdfunding project to help launch and establish the Biupiu research and development ecosystem**. It connects original artwork and computational outputs to documented research while maintaining a clear boundary between NFT ownership and underlying Biupiu intellectual property.
 
+## Architecture Status
+
+Existing subscriber tiers, DMS entitlement controls, BPU payment interfaces and Web3 provenance architecture remain the canonical layers. Native payment integration is now documented under `payment/native/` and deliberately reuses those systems rather than creating a parallel entitlement model.
+
+### Native payment boundary
+
+`Client -> Payment Gate -> Provider Verification -> DMS Entitlement -> Audit/Trust -> optional Blockchain Anchor`
+
+The client cannot grant paid access. Android digital subscriptions use the appropriate platform billing rail; authoritative entitlement state is server-side. BPU remains disabled until its own launch gates pass.
+
+### Closed-shell real-world deployment boundary
+
+Future physical Biupiu sites may use a private closed-shell server architecture. This is a deployment target, not a claim that the production infrastructure exists today.
+
+Target boundary:
+
+`Public Interface -> Authenticated Gateway -> Biupiu DMS -> Private Service Layer -> Isolated Research/Industrial Systems`
+
+Future production gates include hardware-backed identity, mutual authentication, network segmentation, signed releases, secure boot/TPM-equivalent roots of trust, key rotation, controlled updates, offline/isolated operation and auditable site/device authorization.
+
+### Native payment security documents
+
+- `payment/native/README.md`
+- `payment/native/PRODUCT-MAPPING-v1.json`
+- `payment/native/SECURITY-VERIFICATION-GATES-v1.md`
+- `payment/native/FOREIGN-LANGUAGE-HARVEST-MANIFEST-v1.md`
+
+These documents define architecture and gates. They do **not** falsely mark production payment processing as complete.
+
 ## Research Architecture
 
 Biupiu uses a permanent multi-layer research stack:
 
-**Primary archaeology/history → JSTOR → AnthroSource → ResearchGate → Emerald Insight → ancient texts/scientific data → patents/prior art → public/declassified engineering → GitHub/BIUPIU CODEX → computational validation → physical validation → IP/NFT gate.**
+**Primary archaeology/history -> JSTOR -> AnthroSource -> ResearchGate -> Emerald Insight -> ancient texts/scientific data -> patents/prior art -> public/declassified engineering -> GitHub/BIUPIU CODEX -> computational validation -> physical validation -> IP/NFT gate.**
 
 ## Core Connections
 
@@ -55,10 +84,11 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md` — reusable company algorithm-network architecture.
 - `research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md` — immutable algorithm-family/version registry.
 - `research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md` — planned research/release blockchain anchoring architecture.
+- `payment/native/` — native payment boundary, tier mapping, security gates and harvest manifest.
 
-## Research → Algorithm → NFT → Blockchain Pipeline
+## Research -> Algorithm -> NFT -> Blockchain Pipeline
 
-`Research → source/evidence → Research ID → computational model → algorithm family/version → parameters + seed → 01_PROVENANCE + 02_STANDALONE → release manifest → hashes → metadata → IP/licence gate → blockchain registry anchor → smart contract → testnet → test mint → verification → production record`
+`Research -> source/evidence -> Research ID -> computational model -> algorithm family/version -> parameters + seed -> 01_PROVENANCE + 02_STANDALONE -> release manifest -> hashes -> metadata -> IP/licence gate -> blockchain registry anchor -> smart contract -> testnet -> test mint -> verification -> production record`
 
 Every serious artwork receives a Biupiu Research ID and a separate NFT ID. One research project may generate multiple artworks or editions, and one algorithm family may generate multiple releases.
 
@@ -129,7 +159,7 @@ Artistic interpretation must not be presented as archaeological or scientific pr
 
 Where applicable, each computational artwork preserves Research ID, NFT ID, source/reference genealogy, evidence classification, algorithm name/version, software/dependencies, input data, parameters, generation seed, Git version/commit, artwork version, asset hash, metadata hash, blockchain information and applicable licence.
 
-Provenance chain: **Research Source → Evidence Classification → Model → Algorithm Family/Version → Parameters → Artwork Pair → Metadata → Release Manifest Hash → Registry Anchor → Smart Contract → Blockchain Token.**
+Provenance chain: **Research Source -> Evidence Classification -> Model -> Algorithm Family/Version -> Parameters -> Artwork Pair -> Metadata -> Release Manifest Hash -> Registry Anchor -> Smart Contract -> Blockchain Token.**
 
 ## Crowdfunding
 
@@ -145,24 +175,11 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 ## Master Research Index
 
-`research/INDEX.md` remains the master R&D research index. The new algorithm and blockchain network specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry releases.
+`research/INDEX.md` remains the master R&D research index. The algorithm, blockchain and native payment specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry releases.
 
 ## Blender / Biupiu World Production Layer
 
 The repository now defines two Blender engine paths: the official Blender upstream mirror for Windows desktop production and the reviewed Android Blender fork for mobile. Both consume the Biupiu Digital Twin and asset-provenance contracts. Biupiu World character, environment and product-development showreel pipelines are documented under `world/`, `docs/blender-windows/` and `showcase/`.
-
-## Version
-
-**Biupiu NFT System v1.4 — Intelligence Learning Layer + Blockchain Checkpoints + Company Algorithm Network**  
-**Updated:** 16 September 2026
-
-
-## AI × Blockchain × Algorithm Research Integration
-
-Current reusable research integration is indexed in `research/BIUPIU-AI-BLOCKCHAIN-ALGORITHM-INTEGRATION-v1.0.md` and `research/BIUPIU-AI-BLOCKCHAIN-RESOURCE-MANIFEST-v1.0.json`. The architecture connects persistent AI memory, agent orchestration, hard constraints, Digital Twin simulation, verifiable computation, blockchain provenance and controlled agent transactions across the relevant R&D streams.
-
-Third-party projects remain external references until licence, dependency, security and validation gates are passed. No external code is represented as Biupiu-owned code merely by being indexed.
-
 
 ## Biupiu OS / Biupiu AI separation
 
@@ -174,19 +191,16 @@ Canonical architecture: `research/BIUPIU-OS-AI-SEPARATION-ARCHITECTURE-v1.0.md`.
 
 ## Mathematics / Problem-Solving Layer
 
-As of 19 September 2026, the repository includes a dedicated MATH verification-oriented layer for problem classification, deterministic invariant checking, numerical residual validation and future formal theorem-proving adapters.
+The repository includes a dedicated MATH verification-oriented layer for problem classification, deterministic invariant checking, numerical residual validation and future formal theorem-proving adapters.
 
 Pipeline: PROBLEM -> CLASSIFY -> RETRIEVE -> DECOMPOSE -> SOLVE -> VERIFY -> SIMULATE -> SENSITIVITY -> DIGITAL-TWIN -> VALIDATE -> RECORD.
 
-The layer is integrated with Biupiu Intelligence and routed to COMPUTE, GEOMETRY, ROBOTICS, DIGITAL-TWIN and domain engineering departments. External theorem-proving projects remain references/dependencies pending licence, security and compatibility review.
-
-
 ## Gate-Learning / Conflict-Resolution Architecture
 
-As of 19 September 2026, repeated repository gates are governed by the Gate-Learning Architecture and machine-readable Gate-Learning Matrix. Execute/diagnose/fix/retest cycles preserve failure evidence, regression evidence, dependency impact and promotion lineage rather than treating repeated passes as learning by themselves.
+Repeated repository gates are governed by the Gate-Learning Architecture and machine-readable Gate-Learning Matrix. Execute/diagnose/fix/retest cycles preserve failure evidence, regression evidence, dependency impact and promotion lineage rather than treating repeated passes as learning by themselves.
 
 Canonical documents: `research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md` and `research/BIUPIU-GATE-LEARNING-MATRIX-v1.0.json`.
 
 The Intelligence layer uses these records to improve diagnostic retrieval and preventative-test generation while preserving authoritative OS controls, human release authority and third-party licence/security boundaries.
 
-**README synchronization:** 19 September 2026
+**README synchronization:** 21 September 2026
