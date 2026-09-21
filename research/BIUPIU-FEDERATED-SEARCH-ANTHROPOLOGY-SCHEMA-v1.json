@@ -1,0 +1,39 @@
+{
+  "protocol":"BIUPIU-FEDERATED-SEARCH",
+  "extension":"ANTHROPOLOGY",
+  "version":"1.0",
+  "gate":"AI-78",
+  "status":"HARD-IMPLEMENTED",
+  "historical_reference":"HRAF_CROSS_CULTURAL_SURVEY_1935",
+  "query_dimensions":[
+    "culture_or_society","region","time_period","archaeological_context",
+    "ethnographic_context","language","material_culture","technology",
+    "agriculture","ecology","social_organization","ritual_religion",
+    "migration_contact","biological_anthropology","site","author",
+    "institution","publication","citation","subject_category",
+    "exact_identifier","native_language_terms"
+  ],
+  "record_fields":[
+    "source_id","source_type","author_or_institution","collector",
+    "publication_date","culture_or_society","region","site",
+    "time_period","language","document_id","page_or_paragraph",
+    "subject_code","query_lineage","retrieval_time","licence_state",
+    "evidence_class","corroboration_ids","promotion_state"
+  ],
+  "context_chain":"source->author/collector->date->culture/site->document->passage->subject->evidence",
+  "evidence_classes":["DOCUMENTED","RECONSTRUCTED","EXPERIMENTAL","HYPOTHESIS","SPECULATIVE","REJECTED"],
+  "hard_blocks":[
+    "decontextualized_claim",
+    "missing_provenance",
+    "unknown_rights",
+    "unsupported_scientific_inference",
+    "unresolved_contradiction"
+  ],
+  "integration_targets":[
+    "research_index","multilingual_search","ancient_systems",
+    "computational_geometry","agriculture","water_systems",
+    "materials_history","conservation","learning","digital_twin"
+  ],
+  "runtime_connector_state":"PENDING",
+  "normative_rule":"anthropological evidence may inform a research hypothesis or reconstruction but cannot silently become verified engineering/scientific fact"
+}
