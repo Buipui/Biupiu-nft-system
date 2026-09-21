@@ -1,0 +1,41 @@
+name: Biupiu Native System Integration Gate
+
+on:
+  push:
+    branches:
+      - priority1-native-ai-20260921
+    paths:
+      - 'software/rnd-os-ai/**'
+      - 'intelligence/**'
+      - '.github/workflows/**'
+  pull_request:
+    branches:
+      - main
+      - priority1-native-ai-20260921
+    paths:
+      - 'software/rnd-os-ai/**'
+      - 'intelligence/**'
+      - '.github/workflows/**'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  integration:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Install test dependency
+        run: python -m pip install -r software/rnd-os-ai/requirements-dev.txt
+      - name: Run native integration gate
+        env:
+          PYTHONPATH: software/rnd-os-ai/src
+        run: python -m pytest -q software/rnd-os-ai/tests/test_system_integration_gate.py
+      - name: Run ML subsystem gate
+        env:
+          PYTHONPATH: software/rnd-os-ai/src
+        run: python -m pytest -q software/rnd-os-ai/tests/test_ml_subsystem.py software/rnd-os-ai/tests/test_advanced_learning_algorithms.py
