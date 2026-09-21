@@ -1,6 +1,7 @@
 #include "../include/biupiu_visual_provider_validation.h"
 #include "../include/biupiu_visual_regression.h"
 #include <cstring>
+#include "../include/biupiu_visual_provider_adapter.h"
 namespace {
 int supported(const char* p) {
   return p && (!std::strcmp(p,"OpenUSD") || !std::strcmp(p,"OpenTimelineIO") ||
@@ -20,6 +21,21 @@ extern "C" int biupiu_visual_provider_validate(const char* provider,const void* 
   out->input_hash=biupiu_visual_regression_hash_bytes(input,input_size);
   out->output_hash=biupiu_visual_regression_hash_bytes(canonical_output,output_size);
   out->deterministic_pass=(out->input_hash && out->output_hash)?1:0;
-  out->state=1; // CONTRACT_ONLY until actual provider execution is evidenced.
+  char a[512]{}, b[512]{}; uint32_t an=0,bn=0;
+  const int ra=biupiu_provider_adapter_execute(provider,a,sizeof(a),&an);
+  const int rb=biupiu_provider_adapter_execute(provider,b,sizeof(b),&bn);
+  out->discovered = 1;
+  out->linked = (ra==0 && rb==0) ? 1 : 0;
+  out->runtime_probe = (ra==0 && rb==0) ? 1 : 0;
+  if (ra==0 && rb==0 && an==bn) {
+    out->repeat_hash=biupiu_visual_regression_hash_bytes(b,bn);
+    out->repeat_pass=(std::memcmp(a,b,an)==0 && out->output_hash!=0 && out->repeat_hash==biupiu_visual_regression_hash_bytes(a,an))?1:0;
+    out->deterministic_pass=out->repeat_pass;
+    out->output_hash=biupiu_visual_regression_hash_bytes(a,an);
+    out->state=out->repeat_pass ? 3 : 2;
+    out->version="runtime-probed";
+  } else {
+    out->state=1;
+  }
   return 0;
 }
