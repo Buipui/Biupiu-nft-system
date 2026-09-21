@@ -297,3 +297,12 @@ Canonical harvest record: docs/architecture/BIUPIU-FOREIGN-OEM-RESOURCE-HARVEST-
 Promoted patterns: Treble/VINTF boundary, partition-aware device model, common/target device-tree separation, proprietary extraction provenance, mainline portability, multilingual/localisation and auditable/idempotent workflow concepts. No proprietary blobs, dumps, signing keys, GMS packages or copied third-party implementations are integrated.
 
 **Gate status: IMPLEMENTED / SOURCE TESTS ADDED / BUILD-EMULATOR RUNTIME VERIFICATION PENDING.**
+
+
+## 16. OS Resource Consolidation & Housekeeping — Gate 29, 21 September 2026
+
+Deep repository/history reconciliation identified substantial reusable architecture already present across `core/multilang`, `apps/android`, `apps/shared/runtime`, `intelligence`, `packages`, `world` and governed research manifests. Gate 29 establishes consolidation-first housekeeping: extend existing contracts, avoid parallel authorities, preserve historical/open research, and never promote implementation to runtime verification without evidence.
+
+Canonical consolidation record: `research/BIUPIU-OS-RESOURCE-CONSOLIDATION-GATE-29.md` and `.json`. Smoke/CI: `intelligence/BIUPIU-OS-RESOURCE-CONSOLIDATION-SMOKE.py` and `.github/workflows/biupiu-os-resource-consolidation.yml`.
+
+**Gate status: IMPLEMENTED / CONSOLIDATION REGISTERED / EXECUTION EVIDENCE PENDING.**
