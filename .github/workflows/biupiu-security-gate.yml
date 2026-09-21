@@ -31,7 +31,6 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
-          import re
           manifest = Path("apps/android/app/src/main/AndroidManifest.xml").read_text()
           assert 'android:networkSecurityConfig="@xml/network_security_config"' in manifest
           assert 'android:usesCleartextTraffic="false"' in manifest
@@ -40,8 +39,9 @@ jobs:
           assert Path("apps/android/app/src/main/res/xml/backup_rules.xml").exists()
           assert Path("apps/android/app/src/main/res/xml/data_extraction_rules.xml").exists()
           assert Path("apps/android/app/src/main/java/com/biupiu/rndos/BiupiuSecurityPolicy.kt").exists()
+          workflow_path = Path(".github/workflows/biupiu-security-gate.yml")
           for p in Path(".").rglob("*"):
-              if not p.is_file() or ".git" in p.parts:
+              if not p.is_file() or ".git" in p.parts or p == workflow_path:
                   continue
               if p.suffix.lower() not in {".kt",".java",".kts",".gradle",".yml",".yaml",".properties",".json",".xml"}:
                   continue
