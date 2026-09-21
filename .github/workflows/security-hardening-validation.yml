@@ -1,0 +1,52 @@
+name: Biupiu Security Hardening Validation
+
+on:
+  push:
+    paths:
+      - "security/**"
+      - "research/BIUPIU-SECURITY-*"
+      - "software/rnd-os-ai/src/biupiu_ai/security_guard.py"
+      - "software/rnd-os-ai/tests/test_security_guard.py"
+      - "software/rnd-os-ai/README.md"
+      - "software/RND-OS-V1.0-IMPLEMENTATION.md"
+      - ".github/workflows/security-hardening-validation.yml"
+  pull_request:
+    paths:
+      - "security/**"
+      - "research/BIUPIU-SECURITY-*"
+      - "software/rnd-os-ai/src/biupiu_ai/security_guard.py"
+      - "software/rnd-os-ai/tests/test_security_guard.py"
+      - "software/rnd-os-ai/README.md"
+      - "software/RND-OS-V1.0-IMPLEMENTATION.md"
+
+jobs:
+  security-policy-smoke:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Compile Python sources
+        run: python -m compileall -q software/rnd-os-ai/src software/rnd-os-ai/tests
+
+      - name: Validate security manifest
+        run: python -m json.tool research/BIUPIU-SECURITY-MODULE-MANIFEST-v1.0.json >/dev/null
+
+      - name: Run security guard tests
+        run: python -m pytest -q software/rnd-os-ai/tests/test_security_guard.py
+
+      - name: Scan for obvious committed private-key material
+        shell: bash
+        run: |
+          set -euo pipefail
+          if git grep -nE -- '-----BEGIN (RSA|EC|OPENSSH|PRIVATE) KEY-----|aws_secret_access_key[[:space:]]*=' -- ':!*.example' ':!.github/workflows/security-hardening-validation.yml'; then
+            echo "Potential secret material detected; fail closed."
+            exit 1
+          fi

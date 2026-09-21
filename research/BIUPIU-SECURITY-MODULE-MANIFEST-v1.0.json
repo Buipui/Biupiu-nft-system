@@ -1,0 +1,242 @@
+{
+  "version": "1.0",
+  "date": "2026-09-20",
+  "scope": "Biupiu Core OS + Biupiu AI defensive security integration",
+  "rule": "External code remains reference-only until licence, security, compatibility, deterministic-test and provenance gates pass; authoritative state additionally requires human and Main OS approval.",
+  "modules": [
+    {
+      "id": "SEC-T00",
+      "name": "TPM2-TSS",
+      "class": "ADAPTER",
+      "purpose": "TPM 2.0 software stack for root-of-trust, measured-boot and attestation adapters.",
+      "source_url": "https://github.com/tpm2-software/tpm2-tss",
+      "license": "BSD-style",
+      "integration_mode": "reference_adapter",
+      "default_status": "reference_only",
+      "required_gates": [
+        "licence",
+        "security",
+        "platform_compatibility",
+        "deterministic_test",
+        "provenance",
+        "human_approval",
+        "main_os_approval"
+      ]
+    },
+    {
+      "id": "SEC-T01",
+      "name": "Linux TPM kernel support",
+      "class": "PATTERN",
+      "purpose": "Kernel-level TPM device support and hardware-backed cryptographic operations.",
+      "source_url": "https://www.kernel.org/",
+      "license": "Linux kernel project licensing",
+      "integration_mode": "platform_reference",
+      "default_status": "reference_only",
+      "required_gates": [
+        "platform",
+        "kernel_config",
+        "hardware_test",
+        "security_review"
+      ]
+    },
+    {
+      "id": "SEC-T02",
+      "name": "Landlock",
+      "class": "ADAPTER",
+      "purpose": "Userspace sandboxing and least-privilege restriction for supported Linux targets.",
+      "source_url": "https://www.kernel.org/doc/html/latest/userspace-api/landlock.html",
+      "license": "Linux kernel project licensing",
+      "integration_mode": "platform_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "platform_compatibility",
+        "security_test",
+        "regression"
+      ]
+    },
+    {
+      "id": "SEC-T03",
+      "name": "seL4",
+      "class": "REFERENCE",
+      "purpose": "High-assurance capability-based microkernel research target and isolation model.",
+      "source_url": "https://github.com/seL4/seL4",
+      "license": "GPLv2 for kernel; verify component licenses",
+      "integration_mode": "future_high_assurance_track",
+      "default_status": "reference_only",
+      "required_gates": [
+        "platform_proof",
+        "license_review",
+        "formal_verification",
+        "integration_test"
+      ]
+    },
+    {
+      "id": "SEC-T04",
+      "name": "TUF / python-tuf",
+      "class": "ADAPTER",
+      "purpose": "Secure software-update metadata verification and compromise-resilient update architecture.",
+      "source_url": "https://github.com/theupdateframework/python-tuf",
+      "license": "Apache-2.0",
+      "integration_mode": "update_security_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "license",
+        "security",
+        "compatibility",
+        "tests",
+        "provenance"
+      ]
+    },
+    {
+      "id": "SEC-T05",
+      "name": "Sigstore / Cosign",
+      "class": "ADAPTER",
+      "purpose": "Artifact signing and verification for build/release integrity.",
+      "source_url": "https://github.com/sigstore/cosign",
+      "license": "Apache-2.0",
+      "integration_mode": "artifact_verification_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "license",
+        "key_policy",
+        "security",
+        "CI_test",
+        "provenance"
+      ]
+    },
+    {
+      "id": "SEC-T06",
+      "name": "in-toto",
+      "class": "ADAPTER",
+      "purpose": "Software supply-chain provenance and attestation framework.",
+      "source_url": "https://github.com/in-toto/in-toto",
+      "license": "Apache-2.0",
+      "integration_mode": "provenance_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "license",
+        "schema_compatibility",
+        "security",
+        "test",
+        "provenance"
+      ]
+    },
+    {
+      "id": "SEC-T07",
+      "name": "SPIRE / SPIFFE",
+      "class": "ADAPTER",
+      "purpose": "Workload identity and attestation pattern for zero-trust service-to-service authorization.",
+      "source_url": "https://github.com/spiffe/spire",
+      "license": "Apache-2.0",
+      "integration_mode": "identity_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "identity_model",
+        "security",
+        "platform",
+        "integration_test",
+        "human_approval"
+      ]
+    },
+    {
+      "id": "SEC-T08",
+      "name": "OpenSSF Scorecard",
+      "class": "REFERENCE",
+      "purpose": "Automated security-posture assessment for external repositories.",
+      "source_url": "https://github.com/ossf/scorecard",
+      "license": "Apache-2.0",
+      "integration_mode": "CI_assessment",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "CI_test",
+        "policy_mapping"
+      ]
+    },
+    {
+      "id": "SEC-T09",
+      "name": "Syft",
+      "class": "ADAPTER",
+      "purpose": "SBOM generation to make dependencies and build components auditable.",
+      "source_url": "https://github.com/anchore/syft",
+      "license": "Apache-2.0",
+      "integration_mode": "SBOM_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "license",
+        "CI_test",
+        "provenance"
+      ]
+    },
+    {
+      "id": "SEC-T10",
+      "name": "Grype",
+      "class": "ADAPTER",
+      "purpose": "Dependency/image vulnerability scanning.",
+      "source_url": "https://github.com/anchore/grype",
+      "license": "Apache-2.0",
+      "integration_mode": "vulnerability_scan_adapter",
+      "default_status": "gate_pending",
+      "required_gates": [
+        "license",
+        "CI_test",
+        "false_positive_policy",
+        "provenance"
+      ]
+    },
+    {
+      "id": "SEC-T11",
+      "name": "GmSSL",
+      "class": "ADAPTER",
+      "purpose": "Chinese SM2/SM3/SM4 and related cryptographic interoperability research/backend candidate.",
+      "source_url": "https://github.com/guanzhi/GmSSL",
+      "license": "Apache-2.0",
+      "integration_mode": "optional_crypto_interop_adapter",
+      "default_status": "reference_only",
+      "required_gates": [
+        "license",
+        "cryptographic_policy",
+        "security_review",
+        "test_vectors",
+        "platform_compatibility"
+      ]
+    },
+    {
+      "id": "SEC-T12",
+      "name": "go-gostcrypto",
+      "class": "ADAPTER",
+      "purpose": "GOST-family cryptographic interoperability candidate.",
+      "source_url": "https://github.com/tarantool/go-gostcrypto",
+      "license": "BSD-2-Clause",
+      "integration_mode": "optional_crypto_interop_adapter",
+      "default_status": "reference_only",
+      "required_gates": [
+        "license",
+        "cryptographic_policy",
+        "security_review",
+        "test_vectors",
+        "compatibility"
+      ]
+    },
+    {
+      "id": "SEC-T13",
+      "name": "safeboot",
+      "class": "REFERENCE",
+      "purpose": "UEFI Secure Boot/TPM hardening reference for Linux systems.",
+      "source_url": "https://github.com/osresearch/safeboot",
+      "license": "GPL-2.0",
+      "integration_mode": "boot_security_reference",
+      "default_status": "reference_only",
+      "required_gates": [
+        "license",
+        "platform",
+        "boot_chain_test",
+        "security_review"
+      ]
+    }
+  ],
+  "promotion_policy": {
+    "reference_only": "May inform research and design; not executed or vendored as trusted runtime code.",
+    "gate_pending": "May be evaluated in isolated test environments; not authoritative.",
+    "authoritative": "Only after all required gates plus human and Main OS approval."
+  }
+}

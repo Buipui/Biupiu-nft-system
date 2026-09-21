@@ -151,6 +151,29 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 The repository now defines two Blender engine paths: the official Blender upstream mirror for Windows desktop production and the reviewed Android Blender fork for mobile. Both consume the Biupiu Digital Twin and asset-provenance contracts. Biupiu World character, environment and product-development showreel pipelines are documented under `world/`, `docs/blender-windows/` and `showcase/`.
 
+
+## High-Assurance Security Hardening Track
+
+As of 20 September 2026, the Biupiu Core OS / Biupiu AI security track adds a fail-closed external-resource and authoritative-action gate, a machine-readable security module registry, and CI smoke validation.
+
+The architecture is aligned to zero-trust and secure-development principles: resources are protected independently of network location, and secure-development controls are integrated into the development lifecycle. NIST SP 800-207 defines zero trust around resources rather than implicit network/location trust; NIST SP 800-218 defines a secure software development framework for reducing vulnerabilities and improving supplier/security communication. citeturn0search1turn0search0
+
+The registry tracks TPM/root-of-trust, secure boot, sandboxing, TUF, Sigstore/Cosign, in-toto, SPIFFE/SPIRE, SBOM/vulnerability scanning, post-quantum cryptography and foreign-language cryptographic interoperability as **reference/adapter candidates**, not automatically trusted dependencies.
+
+Post-quantum research is tracked against NIST FIPS 203 ML-KEM and FIPS 205 SLH-DSA, with cryptographic agility preserved rather than replacing the existing provenance contract blindly. citeturn0search14turn0search13
+
+Canonical files:
+- `research/BIUPIU-SECURITY-HARDENING-INTEGRATION-v1.0.md`
+- `research/BIUPIU-SECURITY-MODULE-MANIFEST-v1.0.json`
+- `software/rnd-os-ai/src/biupiu_ai/security_guard.py`
+- `software/rnd-os-ai/tests/test_security_guard.py`
+- `.github/workflows/security-hardening-validation.yml`
+
+Security branch / review: `security-hardening-2026-09-20` / PR #44 (draft).
+
+**Security promotion rule:** external code remains reference-only until licence, security, compatibility, deterministic-test and provenance checks pass; authoritative state additionally requires human and Main OS approval.
+
+
 ## Version
 
 **Biupiu NFT System v1.4 — Intelligence Learning Layer + Blockchain Checkpoints + Company Algorithm Network**  
