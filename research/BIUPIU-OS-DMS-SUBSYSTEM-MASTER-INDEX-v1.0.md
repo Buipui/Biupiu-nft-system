@@ -319,3 +319,6 @@ AGP 8.7.3 systems are pinned to Gradle 8.9; the AGP 8.13.0 mobile system is pinn
 CI matrix: `.github/workflows/biupiu-gradle-toolchain-gate.yml`.
 
 **Gate status: TOOLCHAIN REGISTERED / CI EXECUTION ENABLED / WRAPPER COMPLETION PENDING.**
+
+## 18. JDK Lifecycle + GitHub Signing Boundary — Gate 31, 21 September 2026
+JDK 17 is the explicit Android CI baseline with major-version assertions and controlled upgrade gates. GitHub Actions signing is fail-closed and secret-only; keystore/private signing material is never committed. Required secret names and lifecycle policy are registered in `research/BIUPIU-JDK-LIFECYCLE-MANIFEST-v1.0.json`. Actual secret configuration and signed-release verification remain open.
