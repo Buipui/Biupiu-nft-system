@@ -25,6 +25,7 @@ set(BIUPIU_VISUAL_NATIVE_SOURCES
   src/biupiu_visual_host_probe.cpp
   src/biupiu_visual_provider_validation.cpp
   src/biupiu_visual_memory.cpp
+  src/biupiu_visual_render_graph.cpp
 )
 
 add_library(biupiu_visual_native STATIC ${BIUPIU_VISUAL_NATIVE_SOURCES})
@@ -107,6 +108,8 @@ add_executable(biupiu_native_provider_evidence tests/native_provider_evidence.cp
 target_link_libraries(biupiu_native_provider_evidence PRIVATE biupiu_visual_native)
 add_executable(biupiu_native_memory_resource_smoke tests/native_memory_resource_smoke.cpp)
 target_link_libraries(biupiu_native_memory_resource_smoke PRIVATE biupiu_visual_native)
+add_executable(biupiu_native_render_graph_smoke tests/native_render_graph_smoke.cpp)
+target_link_libraries(biupiu_native_render_graph_smoke PRIVATE biupiu_visual_native)
 
 enable_testing()
 add_test(NAME native_visual_api_smoke COMMAND biupiu_visual_native_smoke)
@@ -120,3 +123,4 @@ add_test(NAME native_host_probe_smoke COMMAND biupiu_native_host_probe_smoke)
 add_test(NAME native_provider_validation_smoke COMMAND biupiu_native_provider_validation_smoke)
 add_test(NAME native_provider_evidence COMMAND biupiu_native_provider_evidence ${CMAKE_BINARY_DIR}/provider-evidence.json)
 add_test(NAME native_memory_resource_smoke COMMAND biupiu_native_memory_resource_smoke)
+add_test(NAME native_render_graph_smoke COMMAND biupiu_native_render_graph_smoke)
