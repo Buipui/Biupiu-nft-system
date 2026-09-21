@@ -21,30 +21,23 @@ import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
 
 /*
- * Gate 25: Biupiu Materiality + Colourway System.
- *
- * "Colourway" is the fashion/product-design term that best matches the
- * requested idea: a deliberate family of colours used across a collection.
- * Biupiu extends that concept into material finishes and nature-derived themes.
+ * Biupiu OS visual principle:
+ * premium quality through material finish, proportion and restraint.
+ * Pagani/Ferrari are reference points for craftsmanship and configuration,
+ * not visual templates. Biupiu uses its own neutral colour system.
  */
 
 private object BiupiuPalette {
-    // Core brand anchors retained, but no longer used as the only UI colours.
-    val DeepGreen = Color(0xFF08251D)
-    val Verdant = Color(0xFF174A36)
-    val OxidisedGold = Color(0xFFC79A35)
-    val Graphite = Color(0xFF171A18)
-    val Porcelain = Color(0xFFF3EFE5)
-
-    // Distinctive colour-wheel families.
-    val Copper = Color(0xFFB56A3B)
-    val Patina = Color(0xFF3D8B83)
-    val MineralBlue = Color(0xFF315D78)
-    val Orchid = Color(0xFF76527E)
-    val Clay = Color(0xFFA86F50)
-    val Lichen = Color(0xFF75854A)
-    val Pollen = Color(0xFFD0A83B)
-    val Basalt = Color(0xFF242A28)
+    val DeepGreen = Color(0xFF10261F)
+    val Graphite = Color(0xFF1B1D1C)
+    val Graphite2 = Color(0xFF252826)
+    val Titanium = Color(0xFF70736F)
+    val Aluminium = Color(0xFFA6AAA5)
+    val WarmWhite = Color(0xFFF1EEE6)
+    val Sand = Color(0xFFC8BFAE)
+    val Bronze = Color(0xFF9B7951)
+    val Patina = Color(0xFF64766F)
+    val Nature = Color(0xFF526255)
 }
 
 private enum class MaterialFinish(val label: String) {
@@ -64,23 +57,23 @@ private data class MaterialSwatch(
 )
 
 private val workshopMaterials = listOf(
-    MaterialSwatch(MaterialFinish.AnodisedAluminium, Color(0xFF4D5B58), BiupiuPalette.Patina, "Cool machined body • subtle directional grain"),
-    MaterialSwatch(MaterialFinish.BrushedTitanium, Color(0xFF6A6D68), BiupiuPalette.MineralBlue, "Low-gloss metal • fine radial brushing"),
-    MaterialSwatch(MaterialFinish.BioComposite, BiupiuPalette.Verdant, BiupiuPalette.Lichen, "Plant-fibre matrix • natural layered depth"),
-    MaterialSwatch(MaterialFinish.RecycledGlass, Color(0xFF344E4A), BiupiuPalette.Pollen, "Translucent mineral character • embedded highlights"),
-    MaterialSwatch(MaterialFinish.CarbonWeave, Color(0xFF202522), BiupiuPalette.OxidisedGold, "Technical weave • restrained metallic accent"),
-    MaterialSwatch(MaterialFinish.LivingStone, Color(0xFF514B43), BiupiuPalette.Clay, "Earth mineral surface • warm organic undertone")
+    MaterialSwatch(MaterialFinish.AnodisedAluminium, BiupiuPalette.Aluminium, BiupiuPalette.Titanium, "Clean machined surface • restrained directional grain"),
+    MaterialSwatch(MaterialFinish.BrushedTitanium, BiupiuPalette.Titanium, BiupiuPalette.Aluminium, "Cool satin metal • fine controlled brushing"),
+    MaterialSwatch(MaterialFinish.BioComposite, Color(0xFF465449), BiupiuPalette.Nature, "Plant-fibre character • quiet natural depth"),
+    MaterialSwatch(MaterialFinish.RecycledGlass, Color(0xFF68736F), BiupiuPalette.Sand, "Mineral translucency • restrained highlight"),
+    MaterialSwatch(MaterialFinish.CarbonWeave, BiupiuPalette.Graphite, BiupiuPalette.Bronze, "Technical weave • subtle metallic edge"),
+    MaterialSwatch(MaterialFinish.LivingStone, Color(0xFF666057), BiupiuPalette.Sand, "Mineral surface • warm natural undertone")
 )
 
 @Composable
 fun BiupiuApp() {
     var selected by rememberSaveable { mutableIntStateOf(0) }
-    val destinations = listOf("Home", "Lab", "Machine", "System")
+    val destinations = listOf("Home", "Lab", "Workshop", "System")
     val icons = listOf(Icons.Filled.Home, Icons.Filled.Park, Icons.Filled.Build, Icons.Filled.Settings)
 
-    MaterialTheme {
+    BiupiuUiTheme {
         Scaffold(
-            containerColor = BiupiuPalette.DeepGreen,
+            containerColor = MaterialTheme.colorScheme.background,
             bottomBar = {
                 NavigationBar(containerColor = BiupiuPalette.Graphite) {
                     destinations.forEachIndexed { i, label ->
@@ -97,7 +90,7 @@ fun BiupiuApp() {
             when (selected) {
                 0 -> HomeSurface(Modifier.padding(padding))
                 1 -> LabSurface(Modifier.padding(padding))
-                2 -> MachineSurface(Modifier.padding(padding))
+                2 -> WorkshopSurface(Modifier.padding(padding))
                 else -> SystemSurface(Modifier.padding(padding))
             }
         }
@@ -107,11 +100,11 @@ fun BiupiuApp() {
 @Composable
 private fun Header(title: String, subtitle: String) {
     Column(Modifier.fillMaxWidth()) {
-        Text("BIUPIU", color = BiupiuPalette.OxidisedGold, style = MaterialTheme.typography.labelLarge)
+        Text("BIUPIU", color = BiupiuPalette.Bronze, style = MaterialTheme.typography.labelLarge)
         Spacer(Modifier.height(4.dp))
-        Text(title, color = BiupiuPalette.Porcelain, style = MaterialTheme.typography.headlineMedium)
+        Text(title, color = MaterialTheme.colorScheme.onBackground, style = MaterialTheme.typography.headlineMedium)
         Spacer(Modifier.height(4.dp))
-        Text(subtitle, color = BiupiuPalette.Porcelain.copy(alpha = .74f))
+        Text(subtitle, color = MaterialTheme.colorScheme.onSurfaceVariant)
     }
 }
 
@@ -119,59 +112,59 @@ private fun Header(title: String, subtitle: String) {
 private fun HomeSurface(m: Modifier) {
     val cards = listOf(
         "System health" to "Runtime ready • session layer available",
-        "Colourway studio" to "Material finishes • nature themes • controlled palette families",
+        "Colourway" to "Neutral palettes • material finishes • nature accents",
         "Research workspace" to "R&D • simulation • Digital Twin",
         "Verification" to "Evidence-first actions • reversible by design"
     )
-    Surface(m.fillMaxSize(), color = BiupiuPalette.DeepGreen) {
+    Surface(m.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         LazyColumn(
             Modifier.fillMaxSize().padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            item { Header("Command Centre", "Premium control built around colour, material and state") }
-            item { StatePill("READY", BiupiuPalette.Lichen) }
-            items(cards) { (a, b) -> StatusCard(a, b, BiupiuPalette.Verdant) }
+            item { Header("Command Centre", "Premium through restraint, clarity and material quality") }
+            item { StatePill("READY", BiupiuPalette.Nature) }
+            items(cards) { (title, detail) -> StatusCard(title, detail, BiupiuPalette.Bronze) }
         }
     }
 }
 
 @Composable
 private fun LabSurface(m: Modifier) {
-    Surface(m.fillMaxSize(), color = BiupiuPalette.DeepGreen) {
+    Surface(m.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(Modifier.fillMaxSize().padding(20.dp)) {
             Header("Biupiu Lab", "Research • simulation • Digital Twin • materials • geometry")
             Spacer(Modifier.height(20.dp))
-            StatusCard("Nature-inspired themes", "Verdant Canopy • Mineral Spring • Fynbos Ember • Forest After Rain", BiupiuPalette.Patina)
+            StatusCard("Nature themes", "Use nature as a restrained accent family, not as a full-screen colour wash.", BiupiuPalette.Nature)
             Spacer(Modifier.height(12.dp))
-            StatusCard("Validation path", "PROPOSE → SIMULATE → VALIDATE → AUTHORISE → EXECUTE", BiupiuPalette.Orchid)
+            StatusCard("Validation path", "PROPOSE → SIMULATE → VALIDATE → AUTHORISE → EXECUTE", BiupiuPalette.Bronze)
         }
     }
 }
 
 @Composable
-private fun MachineSurface(m: Modifier) {
+private fun WorkshopSurface(m: Modifier) {
     Surface(m.fillMaxSize(), color = BiupiuPalette.Graphite) {
         LazyColumn(
             Modifier.fillMaxSize().padding(20.dp),
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
-            item { Header("Biupiu Workshop", "A material-first interface: machines should feel machined, not generic") }
-            item { StatePill("WORKSHOP • MATERIAL PREVIEW", BiupiuPalette.Copper) }
-            items(workshopMaterials) { swatch -> MaterialCard(swatch) }
-            item { StatusCard("Safety boundary", "Discovery is separated from actuation. Physical control remains gated.", BiupiuPalette.OxidisedGold) }
+            item { Header("Biupiu Workshop", "Material quality first • simple controls • clear state") }
+            item { StatePill("MATERIAL PREVIEW", BiupiuPalette.Bronze) }
+            items(workshopMaterials) { MaterialCard(it) }
+            item { StatusCard("Safety boundary", "Discovery is separated from actuation. Physical control remains gated.", BiupiuPalette.Bronze) }
         }
     }
 }
 
 @Composable
 private fun SystemSurface(m: Modifier) {
-    Surface(m.fillMaxSize(), color = BiupiuPalette.DeepGreen) {
+    Surface(m.fillMaxSize(), color = MaterialTheme.colorScheme.background) {
         Column(Modifier.fillMaxSize().padding(20.dp)) {
             Header("Biupiu System", "Security • accounts • storage • network • accessibility")
             Spacer(Modifier.height(20.dp))
-            StatusCard("Colourway engine", "Brand colours remain protected; contextual colour families can change by workspace.", BiupiuPalette.MineralBlue)
+            StatusCard("Design system", "Neutral base + controlled material finish + restrained nature accent.", BiupiuPalette.Bronze)
             Spacer(Modifier.height(12.dp))
-            StatusCard("Accessibility", "Material finishes are decorative layers. Text, state and controls retain accessible contrast.", BiupiuPalette.Lichen)
+            StatusCard("Accessibility", "Finish and decoration never carry meaning alone. Text, state and controls remain explicit.", BiupiuPalette.Nature)
         }
     }
 }
@@ -180,13 +173,13 @@ private fun SystemSurface(m: Modifier) {
 private fun StatePill(label: String, accent: Color) {
     Row(
         Modifier
-            .border(1.dp, accent.copy(alpha = .7f), RoundedCornerShape(50))
+            .border(1.dp, accent.copy(alpha = .75f), RoundedCornerShape(50))
             .padding(horizontal = 12.dp, vertical = 7.dp),
         verticalAlignment = Alignment.CenterVertically
     ) {
         Box(Modifier.size(8.dp).background(accent, RoundedCornerShape(50)))
         Spacer(Modifier.width(8.dp))
-        Text(label, color = BiupiuPalette.Porcelain, style = MaterialTheme.typography.labelLarge)
+        Text(label, color = MaterialTheme.colorScheme.onSurface, style = MaterialTheme.typography.labelLarge)
     }
 }
 
@@ -194,44 +187,39 @@ private fun StatePill(label: String, accent: Color) {
 private fun StatusCard(title: String, detail: String, accent: Color) {
     Card(
         Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(16.dp),
-        colors = CardDefaults.cardColors(containerColor = BiupiuPalette.Basalt)
+        shape = RoundedCornerShape(14.dp),
+        colors = CardDefaults.cardColors(containerColor = BiupiuPalette.Graphite2)
     ) {
         Column(Modifier.padding(16.dp)) {
             Text(title, color = accent, style = MaterialTheme.typography.titleMedium)
             Spacer(Modifier.height(6.dp))
-            Text(detail, color = BiupiuPalette.Porcelain)
+            Text(detail, color = BiupiuPalette.WarmWhite)
         }
     }
 }
 
 @Composable
 private fun MaterialCard(swatch: MaterialSwatch) {
-    val finish = swatch.finish
     Card(
         Modifier.fillMaxWidth(),
-        shape = RoundedCornerShape(18.dp),
+        shape = RoundedCornerShape(14.dp),
         colors = CardDefaults.cardColors(containerColor = swatch.base)
     ) {
         Box(
             Modifier
                 .fillMaxWidth()
-                .height(108.dp)
+                .height(96.dp)
                 .background(
                     Brush.linearGradient(
-                        listOf(
-                            swatch.base,
-                            swatch.base.copy(alpha = .78f),
-                            swatch.accent.copy(alpha = .36f)
-                        )
+                        listOf(swatch.base, swatch.accent.copy(alpha = .30f), swatch.base)
                     )
                 )
                 .padding(16.dp)
         ) {
             Column(Modifier.align(Alignment.BottomStart)) {
-                Text(finish.label, color = BiupiuPalette.Porcelain, style = MaterialTheme.typography.titleMedium)
+                Text(swatch.finish.label, color = BiupiuPalette.WarmWhite, style = MaterialTheme.typography.titleMedium)
                 Spacer(Modifier.height(4.dp))
-                Text(swatch.description, color = BiupiuPalette.Porcelain.copy(alpha = .78f))
+                Text(swatch.description, color = BiupiuPalette.WarmWhite.copy(alpha = .80f))
             }
         }
     }
