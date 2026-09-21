@@ -1,0 +1,34 @@
+name: Biupiu Compute Federation CI
+
+on:
+  push:
+    paths:
+      - "software/rnd-os-ai/**"
+      - "packages/biupiu-rnd-os/**"
+      - "schemas/compute-federation-v1.0.schema.json"
+  pull_request:
+    paths:
+      - "software/rnd-os-ai/**"
+      - "packages/biupiu-rnd-os/**"
+      - "schemas/compute-federation-v1.0.schema.json"
+
+jobs:
+  python-federation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python -m py_compile software/rnd-os-ai/src/biupiu_ai/compute_federation.py software/rnd-os-ai/src/biupiu_ai/machine_capability.py software/rnd-os-ai/src/biupiu_ai/federation_protocol.py
+      - run: PYTHONPATH=software/rnd-os-ai/src python -m pytest -q software/rnd-os-ai/tests/test_compute_federation.py
+
+  platform-contract:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: "22"
+      - run: node --version
+      - run: test -f packages/biupiu-rnd-os/src/platform.ts
