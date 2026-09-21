@@ -16,7 +16,7 @@ jobs:
           python - <<'PY'
           from pathlib import Path
           checks = {
-              "apps/shared/runtime/department-runtime.ts": "@biupiu/rnd-os",
+              "apps/shared/runtime/department-runtime.ts": "route === \\"RND_OS\\"",
               "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt": "@biupiu/smart-farming",
               "apps/windows/DepartmentRuntime.cs": "@biupiu/smart-metallurgy",
           }
