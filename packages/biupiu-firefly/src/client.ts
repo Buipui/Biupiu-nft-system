@@ -314,7 +314,7 @@ export class FireflyApiClient {
           "Content-Type": contentType,
           Accept: "application/json"
         },
-        body: data
+        body: data as unknown as BodyInit
       }
     );
 
