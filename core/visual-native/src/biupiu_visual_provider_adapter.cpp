@@ -41,7 +41,6 @@ int fill_contract(biupiu_provider_adapter_info* out, const char* n, const char* 
   if (!out) return 1;
   out->name=n; out->version=v; out->capabilities=c;
   out->state=BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY;
-undefined
   return 0;
 }
 #if defined(BIUPIU_HAS_OPENUSD)
