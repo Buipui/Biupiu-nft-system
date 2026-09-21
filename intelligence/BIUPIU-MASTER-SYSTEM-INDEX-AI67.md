@@ -103,3 +103,6 @@ The missing wrapper JAR/scripts are recorded as an open integrity gate rather th
 Canonical records: `research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md`, `research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json`.
 
 **Status: IMPLEMENTED / CI GATE ENABLED / WRAPPER COMPLETION AND BUILD VERIFICATION PENDING.**
+
+## Gate 31 — JDK Lifecycle + GitHub Signing Boundary
+Registered JDK 17 lifecycle controls and a fail-closed Android signing workflow. Signing secrets are referenced by name only; no credentials or keystore are stored in the repository. Secret configuration, wrapper completion, and signed-release verification remain pending.
