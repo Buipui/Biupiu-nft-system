@@ -1,0 +1,15 @@
+{
+  "gate":"AI-NATIVE-03",
+  "status":"implemented_source_host_verification_pending",
+  "graph":["VIS-NATIVE-19","VIS-NATIVE-20","VIS-NATIVE-21","VIS-NATIVE-22","VIS-NATIVE-23"],
+  "edges":[
+    ["VIS-NATIVE-20","VIS-NATIVE-19","depends"],
+    ["VIS-NATIVE-21","VIS-NATIVE-20","depends"],
+    ["VIS-NATIVE-22","VIS-NATIVE-19","depends"],
+    ["VIS-NATIVE-22","VIS-NATIVE-21","depends"],
+    ["VIS-NATIVE-23","VIS-NATIVE-19","depends"],
+    ["VIS-NATIVE-23","VIS-NATIVE-22","depends"]
+  ],
+  "failure_policy":"block_missing_or_cyclic_dependencies",
+  "promotion":["registered","implemented","host_tested","regression_pass","verified"]
+}
