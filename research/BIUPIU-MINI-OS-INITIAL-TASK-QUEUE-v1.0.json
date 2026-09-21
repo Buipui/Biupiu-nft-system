@@ -1,0 +1,14 @@
+{
+  "schema":"biupiu.mini-os.task-queue.v1",
+  "status":"REGISTERED",
+  "tasks":[
+    {"id":"MINI-G01","title":"Native core scaffold","priority":"P0","status":"READY","scope":["C_ABI","RUST","CPP"]},
+    {"id":"MINI-G02","title":"Multi-AI federation contract","priority":"P0","status":"READY","scope":["TASK_GRAPH","AGENTS","PROVENANCE","CONFLICT"]},
+    {"id":"MINI-G03","title":"Deterministic verification kernel","priority":"P0","status":"READY","scope":["MATH","REGRESSION","FAILURE_INJECTION"]},
+    {"id":"MINI-G04","title":"DMS event/provenance bridge","priority":"P1","status":"READY","scope":["EVENTS","AUDIT","ROLLBACK"]},
+    {"id":"MINI-G05","title":"Native security/recovery boundary","priority":"P0","status":"READY","scope":["SECURITY","RECOVERY","SECRETS"]},
+    {"id":"MINI-G06","title":"Hardware/Digital Twin adapter boundary","priority":"P1","status":"READY","scope":["CAPABILITY","TELEMETRY","DIGITAL_TWIN"]},
+    {"id":"MINI-G07","title":"Cross-platform shell contract","priority":"P1","status":"READY","scope":["ANDROID","LINUX","WINDOWS","MACOS","WEB"]},
+    {"id":"MINI-G08","title":"Mini-OS vs Main OS evaluation pack","priority":"P0","status":"BLOCKED_UNTIL_BUILD","scope":["BENCHMARK","REGRESSION","ARCHITECTURE_COMPARISON"]}
+  ]
+}
