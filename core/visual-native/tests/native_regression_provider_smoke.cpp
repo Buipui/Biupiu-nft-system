@@ -15,6 +15,23 @@ int main() {
 #else
   assert(info.state==BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY);
 #endif
+  const char* providers[]={"MaterialX","OpenColorIO","OpenImageIO","OpenEXR"};
+  for (const char* p: providers) {
+    char out[256]{}; uint32_t n=0;
+    const int rc=biupiu_provider_adapter_execute(p,out,sizeof(out),&n);
+#if defined(BIUPIU_HAS_MATERIALX)
+    if (std::strcmp(p,"MaterialX")==0) assert(rc==0 && n>0);
+#endif
+#if defined(BIUPIU_HAS_OCIO)
+    if (std::strcmp(p,"OpenColorIO")==0) assert(rc==0 && n>0);
+#endif
+#if defined(BIUPIU_HAS_OIIO)
+    if (std::strcmp(p,"OpenImageIO")==0) assert(rc==0 && n>0);
+#endif
+#if defined(BIUPIU_HAS_OPENEXR)
+    if (std::strcmp(p,"OpenEXR")==0) assert(rc==0 && n>0);
+#endif
+  }
   assert(biupiu_provider_adapter_execute("Unknown",nullptr,0,nullptr)!=0);
   return 0;
 }
