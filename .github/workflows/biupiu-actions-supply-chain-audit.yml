@@ -19,7 +19,7 @@ jobs:
   audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Audit action references
         shell: python
         run: |
@@ -31,9 +31,22 @@ jobs:
                   m = re.search(r'uses:\s*([^\s#]+)', line)
                   if m:
                       refs.append((str(p), n, m.group(1)))
+          allowlist = {
+              "actions/checkout@11d5960a326750d5838078e36cf38b85af677262",
+              "actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3",
+              "gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a",
+          }
           floating = [x for x in refs if "@" in x[2] and not re.fullmatch(r'.+@[0-9a-fA-F]{40}', x[2])]
+          promoted = [x for x in refs if x[2] in allowlist]
+          promoted_unpinned = [x for x in refs if x[2].split("@")[0] in {a.split("@")[0] for a in allowlist} and x[2] not in allowlist]
           print(f"workflow action references: {len(refs)}")
           print(f"non-SHA references: {len(floating)}")
+          print(f"promoted allowlist references: {len(promoted)}")
+          print(f"promoted allowlist violations: {len(promoted_unpinned)}")
+          if promoted_unpinned:
+              for p,n,v in promoted_unpinned:
+                  print(f"PROMOTED_UNPINNED {p}:{n} {v}")
+              raise SystemExit("Promoted action allowlist contains an unpinned reference.")
           for p,n,v in floating[:50]:
               print(f"NON_SHA {p}:{n} {v}")
-          print("Policy audit complete: discovery is PASS; SHA compliance remains a controlled promotion gate.")
+          print("Policy audit complete: promoted allowlist is enforced; unverified historical action references remain reported and are not silently promoted.")
