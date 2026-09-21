@@ -28,6 +28,45 @@ add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
 target_include_directories(biupiu_visual_native PUBLIC include)
 target_compile_features(biupiu_visual_native PUBLIC cxx_std_20)
 
+# Optional host/provider discovery. The native core remains buildable without external SDKs.
+find_package(Vulkan QUIET)
+if (Vulkan_FOUND)
+  target_link_libraries(biupiu_visual_native PRIVATE Vulkan::Vulkan)
+  target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_VULKAN=1)
+endif()
+
+if (WIN32)
+  find_library(BIUPIU_D3D12_LIBRARY NAMES d3d12)
+  find_library(BIUPIU_DXGI_LIBRARY NAMES dxgi)
+  if (BIUPIU_D3D12_LIBRARY AND BIUPIU_DXGI_LIBRARY)
+    target_link_libraries(biupiu_visual_native PRIVATE ${BIUPIU_D3D12_LIBRARY} ${BIUPIU_DXGI_LIBRARY})
+    target_compile_definitions(biupiu_visual_native PRIVATE BIUPIU_HAS_DX12=1)
+  endif()
+endif()
+
+# Provider SDK discovery is deliberately target-based where packages export CMake targets.
+# A discovered target is linked and promoted only by host/runtime evidence.
+set(BIUPIU_PROVIDER_TARGETS
+  "OpenUSD;pxr::usd;BIUPIU_HAS_OPENUSD"
+  "OpenTimelineIO;OpenTimelineIO::opentimelineio;BIUPIU_HAS_OTIO"
+  "OpenSubdiv;OpenSubdiv::osdCPU;BIUPIU_HAS_OPENSUBDIV"
+  "MaterialX;MaterialXCore;BIUPIU_HAS_MATERIALX"
+  "OpenColorIO;OpenColorIO::OpenColorIO;BIUPIU_HAS_OCIO"
+  "OpenImageIO;OpenImageIO::OpenImageIO;BIUPIU_HAS_OIIO"
+  "OpenEXR;OpenEXR::OpenEXR;BIUPIU_HAS_OPENEXR"
+)
+foreach(spec IN LISTS BIUPIU_PROVIDER_TARGETS)
+  string(REPLACE ";" "|" parts "${spec}")
+  list(GET parts 0 package)
+  list(GET parts 1 target)
+  list(GET parts 2 macro)
+  find_package(${package} CONFIG QUIET)
+  if (TARGET ${target})
+    target_link_libraries(biupiu_visual_native PRIVATE ${target})
+    target_compile_definitions(biupiu_visual_native PRIVATE ${macro}=1)
+  endif()
+endforeach()
+
 add_executable(biupiu_visual_native_smoke tests/native_visual_api_smoke.cpp)
 target_link_libraries(biupiu_visual_native_smoke PRIVATE biupiu_visual_native)
 
