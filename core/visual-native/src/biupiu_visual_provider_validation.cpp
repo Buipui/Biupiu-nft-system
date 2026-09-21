@@ -1,7 +1,7 @@
 #include "../include/biupiu_visual_provider_validation.h"
 #include "../include/biupiu_visual_regression.h"
-#include <cstring>
 #include "../include/biupiu_visual_provider_adapter.h"
+#include <cstring>
 namespace {
 int supported(const char* p) {
   return p && (!std::strcmp(p,"OpenUSD") || !std::strcmp(p,"OpenTimelineIO") ||
@@ -17,22 +17,23 @@ extern "C" int biupiu_visual_provider_validate(const char* provider,const void* 
   std::memset(out,0,sizeof(*out));
   out->provider=provider;
   out->version="host-evidence-required";
-  out->discovered=0; out->linked=0; out->runtime_probe=0;
   out->input_hash=biupiu_visual_regression_hash_bytes(input,input_size);
   out->output_hash=biupiu_visual_regression_hash_bytes(canonical_output,output_size);
   out->deterministic_pass=(out->input_hash && out->output_hash)?1:0;
   char a[512]{}, b[512]{}; uint32_t an=0,bn=0;
   const int ra=biupiu_provider_adapter_execute(provider,a,sizeof(a),&an);
   const int rb=biupiu_provider_adapter_execute(provider,b,sizeof(b),&bn);
-  out->discovered = 1;
-  out->linked = (ra==0 && rb==0) ? 1 : 0;
-  out->runtime_probe = (ra==0 && rb==0) ? 1 : 0;
+  out->discovered=1;
+  out->linked=(ra==0 && rb==0)?1:0;
+  out->runtime_probe=(ra==0 && rb==0)?1:0;
   if (ra==0 && rb==0 && an==bn) {
-    out->repeat_hash=biupiu_visual_regression_hash_bytes(b,bn);
-    out->repeat_pass=(std::memcmp(a,b,an)==0 && out->output_hash!=0 && out->repeat_hash==biupiu_visual_regression_hash_bytes(a,an))?1:0;
+    const uint64_t first_hash=biupiu_visual_regression_hash_bytes(a,an);
+    const uint64_t second_hash=biupiu_visual_regression_hash_bytes(b,bn);
+    out->output_hash=first_hash;
+    out->repeat_hash=second_hash;
+    out->repeat_pass=(std::memcmp(a,b,an)==0 && first_hash!=0 && first_hash==second_hash)?1:0;
     out->deterministic_pass=out->repeat_pass;
-    out->output_hash=biupiu_visual_regression_hash_bytes(a,an);
-    out->state=out->repeat_pass ? 3 : 2;
+    out->state=out->repeat_pass?3:2;
     out->version="runtime-probed";
   } else {
     out->state=1;
