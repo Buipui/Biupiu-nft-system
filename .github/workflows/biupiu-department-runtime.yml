@@ -11,10 +11,17 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - run: python -m json.tool apps/shared/runtime/department-runtime-contract-v1.json >/dev/null
-      - run: |
-          test -f apps/shared/runtime/department-runtime.ts
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt
-          test -f apps/windows/DepartmentRuntime.cs
-          grep -q '@biupiu/smart-farming' apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt
-          grep -q '@biupiu/smart-metallurgy' apps/windows/DepartmentRuntime.cs
-          grep -q '@biupiu/rnd-os' apps/shared/runtime/department-runtime.ts
+      - name: Verify department runtime targets
+        run: |
+          python - <<'PY'
+          from pathlib import Path
+          checks = {
+              "apps/shared/runtime/department-runtime.ts": "@biupiu/rnd-os",
+              "apps/android/app/src/main/java/com/biupiu/rndos/DepartmentRuntime.kt": "@biupiu/smart-farming",
+              "apps/windows/DepartmentRuntime.cs": "@biupiu/smart-metallurgy",
+          }
+          for path, marker in checks.items():
+              text = Path(path).read_text(encoding="utf-8")
+              assert marker in text, (path, marker)
+          print("Department runtime target verification: PASS")
+          PY
