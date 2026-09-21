@@ -66,3 +66,24 @@ Canonical additions:
 - `.github/workflows/native-arcade-ci.yml`
 
 **NEXT GATE:** acquire actual CI execution evidence -> remediate any compiler/test failures -> add engine-neutral manifest/provenance interfaces -> controlled Unreal/Unity adapter prototypes -> sandbox/security gate.
+
+
+## GATE AI-78 — HISTORICAL ANTHROPOLOGY FEDERATED SEARCH — 21 September 2026
+- Historical anthropology retrieval lineage harvested: **IMPLEMENTED**.
+- Earliest identified anthropology-specific retrieval reference: Yale Cross-Cultural Survey, 1935 / HRAF lineage.
+- HRAF-style culture + subject + paragraph/context indexing: **IMPLEMENTED AS GOVERNANCE/SCHEMA**.
+- Anthropological bibliography lane: **IMPLEMENTED AS SOURCE CLASS**.
+- AnthroSource/eHRAF-style full-text and thesaurus search patterns: **IMPLEMENTED AS RESEARCH REFERENCE**.
+- Multilingual anthropology expansion: **IMPLEMENTED**.
+- Evidence/context/contradiction controls: **IMPLEMENTED**.
+- Runtime licensed database connectors: **PENDING**.
+- On-chain anchor transaction: **PENDING AUTHORIZED WALLET EXECUTION**.
+
+Canonical records:
+- `research/BIUPIU-SEARCH-PROTOCOL-HISTORICAL-ANTHROPOLOGY-HARVEST-v1.0.md`
+- `research/BIUPIU-FEDERATED-SEARCH-ANTHROPOLOGY-SCHEMA-v1.json`
+- `intelligence/BIUPIU-AI78-ANTHROPOLOGY-FEDERATION-LEARNING-LOG.md`
+- `research/BIUPIU-VERSION-CHANGELOG-AI78-2026-09-21.md`
+- `research/BIUPIU-BLOCKCHAIN-ANCHOR-AI78.json`
+
+**NEXT GATE:** AI-79 repository-wide protocol audit + query-profile implementation + historical search benchmark + controlled connector tests.
