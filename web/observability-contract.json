@@ -1,0 +1,1 @@
+{"schema":"biupiu.world.observability.v1","requiredSignals":["uptime","latency","error_rate","trace_id","correlation_id","audit_event"],"clientSecretsAllowed":false,"status":"IMPLEMENTED_CONTRACT_NOT_LIVE"}
