@@ -1,0 +1,33 @@
+{
+  "system": "Biupiu AI OS",
+  "version": "1.0",
+  "relationship": {
+    "core_os": "separate",
+    "ai_os": "separate",
+    "shared_boundary": "authenticated_command_and_telemetry_contract"
+  },
+  "repository": {
+    "source_of_truth": "Buipui/Biupiu-nft-system",
+    "context_priority": ["repository", "validated_runtime_state", "external_sources"]
+  },
+  "native_modules": [
+    "repository_context",
+    "reasoning_adapter",
+    "command_router",
+    "telemetry",
+    "learning_daemon",
+    "evaluation_and_promotion",
+    "health_monitor",
+    "security_policy",
+    "language_translation",
+    "simulation_adapter"
+  ],
+  "safety": {
+    "default_execution": "read_only",
+    "write_requires_approval": true,
+    "privileged_requires_approval": true,
+    "learning_auto_deploy": false,
+    "rollback_required": true
+  },
+  "status": "architecture-integrated-runtime-skeleton"
+}
