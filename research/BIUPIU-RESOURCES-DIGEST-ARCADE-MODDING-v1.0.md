@@ -67,3 +67,19 @@ No single open-book catalogue is treated as a licence authority. Each source is 
 ## Source notes
 
 The official MAME repository describes MAME as a multi-purpose emulation framework and identifies GPL-2.0+ licensing with additional per-file licences. DOSBox Staging documents GPL-2.0-or-later and third-party exceptions. OpenTTD documents GPL-2.0 with additional component licences. GitHub documentation warns that a public repository without a licence remains under default copyright rules.
+
+## Gate 14 update — 21 September 2026
+
+Implemented:
+- `BiupiuArcadeRuntime` platform-neutral session/runtime contract.
+- Adapter interface with explicit capability matching.
+- Runtime launch remains fail-closed through `NativeResourceRegistry.canLaunch()`.
+- Registry and runtime executable test modules.
+- GitHub Actions workflow that compiles the native arcade TypeScript surface and executes the compiled test harness.
+
+Verification boundary:
+- Source implementation: **IMPLEMENTED**.
+- CI workflow: **IMPLEMENTED**.
+- Actual CI result: **PENDING until a workflow run is observed**.
+- Unreal/Unity concrete adapters: **PENDING**.
+- Sandbox execution: **PENDING**.
