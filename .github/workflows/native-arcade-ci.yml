@@ -27,3 +27,4 @@ jobs:
         run: npx tsc --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --outDir .native-arcade-dist software/native-arcade/*.ts
       - name: Execute native arcade tests
         run: node .native-arcade-dist/run-tests.js
+# Execution-trigger checkpoint: 2026-09-21
