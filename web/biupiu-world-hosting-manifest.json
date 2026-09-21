@@ -4,7 +4,7 @@
   "status": "ARCHITECTURE_READY_NOT_DEPLOYED",
   "canonicalStateAuthority": "Biupiu OS / server-side gateway",
   "publicClient": "web-shell",
-  "healthPath": "/healthz",
+  "healthPath": "/healthz.json",
   "realtime": {
     "primary": "websocket",
     "optional": ["webrtc"],
