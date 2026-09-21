@@ -12,7 +12,7 @@ export class RenderService {
  constructor(private repository:MemoryRenderJobRepository,private broker:RenderExecutionBroker){}
  async create(context:AccessContext,request:CreateRenderRequest){
   const decision=authorizeRender(context,request.capability);if(!decision.allowed)throw new Error("Render capability not entitled");
-  const now=new Date().toISOString();const record:RenderJobRecord={...request,jobId:request.jobId,state:"QUEUED",createdAt:now,updatedAt:now,outputAssetIds:[],provenance:{jobId:request.jobId,sourceAssetIds:request.sourceAssetIds,sourceModelVersion:request.sourceModelVersion,provider:request.provider,createdAt:now,...(request.conversion ? { conversions:[request.conversion] } : {})}};
+  const now=new Date().toISOString();const record:RenderJobRecord={...request,jobId:request.jobId,state:"QUEUED",createdAt:now,updatedAt:now,outputAssetIds:[],provenanceRequired:true,provenance:{jobId:request.jobId,sourceAssetIds:request.sourceAssetIds,sourceModelVersion:request.sourceModelVersion,provider:request.provider,createdAt:now,...(request.conversion ? { conversions:[request.conversion] } : {})}};
   return this.repository.create(record);
  }
  async execute(context:AccessContext,job:RenderJobRecord){
