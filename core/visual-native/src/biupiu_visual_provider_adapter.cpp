@@ -7,6 +7,16 @@
 #include <pxr/usd/sdf/path.h>
 #endif
 #include <string>
+#if defined(BIUPIU_HAS_OTIO)
+#include <opentimelineio/timeline.h>
+#include <opentimelineio/track.h>
+#include <opentimelineio/clip.h>
+#include <opentime/rationalTime.h>
+#include <opentime/timeRange.h>
+#endif
+#if defined(BIUPIU_HAS_OPENSUBDIV)
+#include <opensubdiv/far/topologyRefinerFactory.h>
+#endif
 #if defined(BIUPIU_HAS_MATERIALX)
 #include <MaterialXCore/Document.h>
 #endif
@@ -33,6 +43,12 @@ int fill_contract(biupiu_provider_adapter_info* out, const char* n, const char* 
   out->state=BIUPIU_PROVIDER_ADAPTER_CONTRACT_ONLY;
 #if defined(BIUPIU_HAS_OPENUSD)
   if (std::strcmp(n,"OpenUSD")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_OTIO)
+  if (!std::strcmp(n,"OpenTimelineIO")) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
+#endif
+#if defined(BIUPIU_HAS_OPENSUBDIV)
+  if (!std::strcmp(n,"OpenSubdiv")) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
 #endif
 #if defined(BIUPIU_HAS_MATERIALX)
   if (std::strcmp(n,"MaterialX")==0) { out->state=BIUPIU_PROVIDER_ADAPTER_HOST_READY; out->version="linked-sdk"; }
@@ -119,6 +135,37 @@ extern "C" int biupiu_provider_adapter_execute(const char* provider, char* outpu
     std::snprintf(buf, sizeof(buf), "OpenUSD|stage=in-memory|prim=%s|type=%s",
                   prim.GetPath().GetString().c_str(), prim.GetTypeName().GetString().c_str());
     canonical = buf;
+  }
+#endif
+#if defined(BIUPIU_HAS_OTIO)
+  if (!std::strcmp(provider, "OpenTimelineIO")) {
+    OTIO_NS::SerializableObject::Retainer<OTIO_NS::Timeline> timeline(new OTIO_NS::Timeline("BiupiuFixture"));
+    OTIO_NS::SerializableObject::Retainer<OTIO_NS::Track> track(new OTIO_NS::Track("Visual", OTIO_NS::TimeRange(OTIO_NS::RationalTime(0,24), OTIO_NS::RationalTime(48,24)), OTIO_NS::Track::Kind::video));
+    OTIO_NS::SerializableObject::Retainer<OTIO_NS::Clip> clip(new OTIO_NS::Clip("BiupiuClip", nullptr, OTIO_NS::TimeRange(OTIO_NS::RationalTime(0,24), OTIO_NS::RationalTime(48,24))));
+    track->append_child(clip);
+    timeline->tracks()->append_child(track);
+    if (clip->duration().value() != 48.0 || clip->duration().rate() != 24.0) return 10;
+    canonical = "OpenTimelineIO|timeline=BiupiuFixture|track=Visual|clip=BiupiuClip|duration=48/24";
+  }
+#endif
+#if defined(BIUPIU_HAS_OPENSUBDIV)
+  if (!std::strcmp(provider, "OpenSubdiv")) {
+    typedef OpenSubdiv::Far::TopologyDescriptor Descriptor;
+    static int vertsPerFace[1]={4};
+    static int indices[4]={0,1,2,3};
+    Descriptor desc{};
+    desc.numVertices=4; desc.numFaces=1; desc.numVertsPerFace=vertsPerFace; desc.vertIndicesPerFace=indices;
+    auto* refiner=OpenSubdiv::Far::TopologyRefinerFactory<Descriptor>::Create(
+      desc, OpenSubdiv::Far::TopologyRefinerFactory<Descriptor>::Options(
+        OpenSubdiv::Sdc::SCHEME_CATMARK, OpenSubdiv::Sdc::Options()));
+    if (!refiner) return 11;
+    refiner->RefineUniform(OpenSubdiv::Far::TopologyRefiner::UniformOptions(1));
+    const int total=refiner->GetNumVerticesTotal();
+    delete refiner;
+    if (total <= 4) return 12;
+    static thread_local char buf[128];
+    std::snprintf(buf,sizeof(buf),"OpenSubdiv|scheme=catmark|base_vertices=4|level1_total_vertices=%d",total);
+    canonical=buf;
   }
 #endif
 #if defined(BIUPIU_HAS_MATERIALX)
