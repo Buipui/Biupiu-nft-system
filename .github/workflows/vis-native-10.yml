@@ -40,7 +40,7 @@ jobs:
         run: ./biupiu_native_provider_validation_smoke
       - name: Generate provider evidence artifact
         working-directory: build/visual-native
-        run: ${{ runner.os == 'Windows' && '.\\biupiu_native_provider_evidence.exe provider-evidence.json' || './biupiu_native_provider_evidence provider-evidence.json' }}
+        run: ${{ runner.os == 'Windows' && '.\\Debug\\biupiu_native_provider_evidence.exe provider-evidence.json' || './biupiu_native_provider_evidence provider-evidence.json' }}
       - name: Add host promotion report
         shell: bash
         run: |
