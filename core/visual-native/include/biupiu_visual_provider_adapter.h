@@ -18,6 +18,7 @@ typedef struct {
 int biupiu_provider_adapter_usd(biupiu_provider_adapter_info* out);
 int biupiu_provider_adapter_otio(biupiu_provider_adapter_info* out);
 int biupiu_provider_adapter_opensubdiv(biupiu_provider_adapter_info* out);
+int biupiu_provider_adapter_run_usd_fixture(uint64_t* canonical_output_hash);
 #ifdef __cplusplus
 }
 #endif
