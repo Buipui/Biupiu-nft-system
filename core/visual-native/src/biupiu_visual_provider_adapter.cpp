@@ -97,6 +97,24 @@ extern "C" int biupiu_provider_adapter_run_usd_fixture(uint64_t* canonical_outpu
 #endif
 }
 
+extern "C" int biupiu_provider_adapter_run_materialx_fixture(uint64_t* canonical_output_hash) {
+  if (!canonical_output_hash) return 1;
+#if defined(BIUPIU_HAS_MATERIALX)
+  auto doc = MaterialX::Document::createDocument<MaterialX::Document>();
+  if (!doc) return 2;
+  auto node = doc->addNode("constant", "BiupiuVisualFixture", "float");
+  if (!node) return 3;
+  node->setAttribute("value", "1.0");
+  if (!doc->validate()) return 4;
+  const std::string canonical = "MaterialX|BiupiuVisualFixture|constant|float|value=1.0";
+  *canonical_output_hash = biupiu_visual_regression_hash_bytes(canonical.data(), canonical.size());
+  return *canonical_output_hash ? 0 : 5;
+#else
+  *canonical_output_hash = 0;
+  return 10;
+#endif
+}
+
 extern "C" int biupiu_provider_adapter_usd(biupiu_provider_adapter_info* out) {
 #if defined(BIUPIU_HAS_OPENUSD)
   return fill_usd_runtime(out);
