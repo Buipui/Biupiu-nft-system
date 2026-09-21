@@ -1,23 +1,43 @@
 {
-  "schema":"biupiu.native-visual-implementation-matrix.v1",
-  "status":"SOURCE_IMPLEMENTED_HOST_UNVERIFIED",
-  "first_party":{
-    "api_abi":"implemented",
-    "capability_probe":"implemented",
-    "job_lifecycle":"implemented",
-    "render_request_contract":"implemented",
-    "animation_request_contract":"implemented",
-    "video_request_contract":"implemented",
-    "native_render_engine":"open",
-    "native_animation_engine":"open",
-    "native_video_encoder":"open"
+  "schema": "biupiu.native-visual-implementation-matrix.v1",
+  "status": "SOURCE_IMPLEMENTED_HOST_UNVERIFIED",
+  "first_party": {
+    "api_abi": "implemented",
+    "capability_probe": "implemented",
+    "job_lifecycle": "implemented",
+    "render_request_contract": "implemented",
+    "animation_request_contract": "implemented",
+    "video_request_contract": "implemented",
+    "native_render_engine": "open",
+    "native_animation_engine": "open",
+    "native_video_encoder": "open",
+    "native_resource_memory_runtime": "implemented",
+    "native_gpu_resource_backend": "open",
+    "native_synchronization_runtime": "open",
+    "native_render_graph": "open"
   },
-  "upstream_adapters":{
-    "openusd":"registered",
-    "opensubdiv":"registered",
-    "opentimelineio":"registered",
-    "unity":"adapter_pending",
-    "ue5":"adapter_pending"
+  "upstream_adapters": {
+    "openusd": "registered",
+    "opensubdiv": "registered",
+    "opentimelineio": "registered",
+    "unity": "adapter_pending",
+    "ue5": "adapter_pending"
   },
-  "verification":["CMake configure","compile","CTest","host GPU probe","deterministic frame fixture","video encode fixture"]
+  "gates": {
+    "VIS-NATIVE-19": "source implemented; host verification pending",
+    "VIS-NATIVE-20": "registered; executable shader pipeline",
+    "VIS-NATIVE-21": "registered; native material runtime",
+    "VIS-NATIVE-22": "registered; native asset runtime and streaming",
+    "VIS-NATIVE-23": "registered; render graph and frame scheduler"
+  },
+  "verification": [
+    "CMake configure",
+    "compile",
+    "CTest",
+    "host GPU probe",
+    "deterministic frame fixture",
+    "video encode fixture",
+    "memory lifecycle fixture",
+    "resource budget/invariant checks"
+  ]
 }
