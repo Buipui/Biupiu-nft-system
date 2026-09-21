@@ -23,6 +23,7 @@ set(BIUPIU_VISUAL_NATIVE_SOURCES
   src/biupiu_visual_regression.cpp
   src/biupiu_visual_provider_adapter.cpp
   src/biupiu_visual_host_probe.cpp
+  src/biupiu_visual_provider_validation.cpp
 )
 
 add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
@@ -104,6 +105,12 @@ target_link_libraries(biupiu_native_acceleration_smoke PRIVATE biupiu_visual_nat
 add_executable(biupiu_native_regression_provider_smoke tests/native_regression_provider_smoke.cpp)
 target_link_libraries(biupiu_native_regression_provider_smoke PRIVATE biupiu_visual_native)
 
+add_executable(biupiu_native_host_probe_smoke tests/native_host_probe_smoke.cpp)
+target_link_libraries(biupiu_native_host_probe_smoke PRIVATE biupiu_visual_native)
+
+add_executable(biupiu_native_provider_validation_smoke tests/native_provider_validation_smoke.cpp)
+target_link_libraries(biupiu_native_provider_validation_smoke PRIVATE biupiu_visual_native)
+
 enable_testing()
 add_test(NAME native_visual_api_smoke COMMAND biupiu_visual_native_smoke)
 add_test(NAME native_render_smoke COMMAND biupiu_native_render_smoke)
@@ -112,3 +119,5 @@ add_test(NAME native_asset_pipeline_smoke COMMAND biupiu_native_asset_pipeline_s
 add_test(NAME native_animation_geometry_smoke COMMAND biupiu_native_animation_geometry_smoke)
 add_test(NAME native_acceleration_smoke COMMAND biupiu_native_acceleration_smoke)
 add_test(NAME native_regression_provider_smoke COMMAND biupiu_native_regression_provider_smoke)
+add_test(NAME native_host_probe_smoke COMMAND biupiu_native_host_probe_smoke)
+add_test(NAME native_provider_validation_smoke COMMAND biupiu_native_provider_validation_smoke)
