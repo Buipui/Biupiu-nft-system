@@ -26,7 +26,7 @@ set(BIUPIU_VISUAL_NATIVE_SOURCES
   src/biupiu_visual_provider_validation.cpp
 )
 
-add_library(biupiu_visual_native SHARED ${BIUPIU_VISUAL_NATIVE_SOURCES})
+add_library(biupiu_visual_native STATIC ${BIUPIU_VISUAL_NATIVE_SOURCES})
 target_include_directories(biupiu_visual_native PUBLIC include)
 target_compile_features(biupiu_visual_native PUBLIC cxx_std_20)
 
