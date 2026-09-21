@@ -47,6 +47,13 @@ jobs:
         with:
           distribution: temurin
           java-version: '17'
+          cache: gradle
+      - name: Enforce JDK lifecycle baseline
+        shell: bash
+        run: |
+          set -euo pipefail
+          java -version
+          test "$(java -version 2>&1 | sed -n '1s/.*version "\([0-9]*\).*/\1/p')" = "17"
       - uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: ${{ matrix.gradle }}
