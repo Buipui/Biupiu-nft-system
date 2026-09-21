@@ -55,6 +55,10 @@ The repository currently declares Hardhat, ethers.js, OpenZeppelin Contracts and
 
 **Important:** repository configuration is not runtime proof. Gates remain IMPLEMENTED/BLOCKED until execution evidence is available.
 
+## Execution request
+
+A push-triggered execution was requested against the current `main` revision after verification of this manifest. GitHub Actions is expected to provide the authoritative runtime evidence. A successful workflow run is required before any runtime gate is promoted to VERIFIED.
+
 ## Production lock
 
 Mainnet, production payment, production identity and unrestricted module execution remain explicitly gated.
