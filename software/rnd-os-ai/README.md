@@ -108,3 +108,11 @@ The framework enforces reuse-before-rebuild, failure retention, explicit conflic
 - Audit: software/rnd-os-ai/AI-NATIVE-03-DEPENDENCY-REGRESSION-GRAPH-v1.0.md
 - Matrix: research/BIUPIU-AI-NATIVE-03-DEPENDENCY-MATRIX-v1.0.json
 - Status: REGISTERED + IMPLEMENTED / HOST VERIFICATION PENDING
+
+
+## AI-NATIVE-04 — Failure Learning / Regression Memory
+- Engine: software/rnd-os-ai/multi_ai/failure_memory.py
+- Tests: software/rnd-os-ai/tests/test_failure_memory.py
+- Audit: software/rnd-os-ai/AI-NATIVE-04-FAILURE-LEARNING-REGRESSION-MEMORY-v1.0.md
+- Matrix: research/BIUPIU-AI-NATIVE-04-FAILURE-MEMORY-MATRIX-v1.0.json
+- Status: REGISTERED + IMPLEMENTED / HOST VERIFICATION PENDING
