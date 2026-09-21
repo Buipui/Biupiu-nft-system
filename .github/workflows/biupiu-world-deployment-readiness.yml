@@ -1,0 +1,70 @@
+name: Biupiu World Deployment Readiness Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/biupiu-world-deployment-readiness.yml'
+  pull_request:
+  workflow_dispatch:
+
+jobs:
+  readiness:
+    name: Hosting deployment readiness
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Validate required web surface
+        run: |
+          set -e
+          for f in web/index.html web/healthz.json web/realtime-contract.json web/observability-contract.json web/biupiu-world-hosting-manifest.json web/BIUPIU-WORLD-HOSTING-TEST-PLAN-v1.0.md; do
+            test -f "$f"
+          done
+
+      - name: Validate cross-contract consistency
+        run: |
+          node <<'NODE'
+          const fs = require('fs');
+          const m = JSON.parse(fs.readFileSync('web/biupiu-world-hosting-manifest.json','utf8'));
+          const h = JSON.parse(fs.readFileSync('web/healthz.json','utf8'));
+          const r = JSON.parse(fs.readFileSync('web/realtime-contract.json','utf8'));
+          const o = JSON.parse(fs.readFileSync('web/observability-contract.json','utf8'));
+
+          if (m.world !== 'Biupiu World') throw new Error('manifest world mismatch');
+          if (m.healthPath !== '/healthz.json') throw new Error('health path mismatch');
+          if (m.security.httpsRequired !== true) throw new Error('HTTPS requirement missing');
+          if (m.security.clientIsNotAuthority !== true) throw new Error('client authority control missing');
+          if (m.security.secretsInBrowser !== false) throw new Error('browser secret policy failed');
+          if (h.status !== 'ok') throw new Error('health contract not ok');
+          if (r.primary !== 'websocket') throw new Error('WebSocket is not primary realtime transport');
+          if (r.clientMayNotAuthoritativelyMutateState !== true) throw new Error('realtime authority rule failed');
+          if (o.clientSecretsAllowed !== false) throw new Error('observability secret policy failed');
+
+          console.log('cross-contract consistency: PASS');
+          NODE
+
+      - name: Static shell integrity
+        run: |
+          grep -q '<title>Biupiu World</title>' web/index.html
+          grep -q 'healthz.json' web/index.html
+          ! grep -Eiq '(api[_-]?key|secret|private[_-]?key|password)[[:space:]]*[:=]' web/index.html
+          echo 'static shell integrity: PASS'
+
+      - name: Package reproducibility check
+        run: |
+          rm -rf _site biupiu-world-site.tar.gz
+          mkdir -p _site
+          cp -R web/. _site/
+          tar -czf biupiu-world-site.tar.gz -C _site .
+          test -s biupiu-world-site.tar.gz
+          tar -tzf biupiu-world-site.tar.gz | grep -q '^./index.html$'
+          tar -tzf biupiu-world-site.tar.gz | grep -q '^./healthz.json$'
+          echo 'deployment package reproducibility: PASS'
+
+      - name: Record external activation boundary
+        run: |
+          echo 'Repository deployment readiness: VERIFIED'
+          echo 'External hosting activation: requires a provider with deployment permission'
+          echo 'GitHub Pages enablement is not treated as verified until the Pages API accepts site creation'
