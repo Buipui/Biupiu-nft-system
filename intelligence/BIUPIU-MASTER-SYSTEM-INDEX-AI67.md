@@ -72,3 +72,12 @@ Canonical record: docs/architecture/BIUPIU-OS-UNIFIED-DESIGN-PHILOSOPHY-v1.0.md.
 Canonical digest: intelligence/BIUPIU-OS-DESIGN-DIGEST-2026-09-21.md.
 
 Status: **IMPLEMENTED / RUNTIME VISUAL EVIDENCE PENDING**.
+
+
+## FOREIGN/OEM RESOURCE HARVEST GATE 28 — 21 September 2026
+
+AI-67 now indexes the governed foreign/OEM resource lane through ForeignResourceRegistry. The registry captures provenance class, language, reusable pattern, authority and integration boundary. It explicitly prevents community discovery material from being promoted as authoritative firmware or executable vendor code.
+
+AOSP Treble/VINTF, device-tree modularity, partition boundaries and extraction provenance are mapped into Biupiu's hardware/OEM adapter architecture. Chinese/Xiaomi, Japanese/Sony and Korean/Samsung public repository patterns are registered as reference material. XDA remains discovery-only. OpenBooks is treated as a scope-sensitive knowledge reference because multiple unrelated projects share that name.
+
+**Status: SOURCE INTEGRATED / UNIT TEST ADDED / RUNTIME AND PHYSICAL OEM VERIFICATION PENDING.**
