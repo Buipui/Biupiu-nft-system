@@ -1,0 +1,39 @@
+name: Biupiu Actions Supply-Chain Audit
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - '.github/workflows/**'
+      - 'research/BIUPIU-G32-B-GITHUB-ACTIONS-SECURITY-HARDENING.md'
+  pull_request:
+    paths:
+      - '.github/workflows/**'
+      - 'research/BIUPIU-G32-B-GITHUB-ACTIONS-SECURITY-HARDENING.md'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Audit action references
+        shell: python
+        run: |
+          from pathlib import Path
+          import re
+          refs = []
+          for p in Path(".github/workflows").glob("*.y*ml"):
+              for n, line in enumerate(p.read_text(errors="ignore").splitlines(), 1):
+                  m = re.search(r'uses:\s*([^\s#]+)', line)
+                  if m:
+                      refs.append((str(p), n, m.group(1)))
+          floating = [x for x in refs if "@" in x[2] and not re.fullmatch(r'.+@[0-9a-fA-F]{40}', x[2])]
+          print(f"workflow action references: {len(refs)}")
+          print(f"non-SHA references: {len(floating)}")
+          for p,n,v in floating[:50]:
+              print(f"NON_SHA {p}:{n} {v}")
+          print("Policy audit complete: discovery is PASS; SHA compliance remains a controlled promotion gate.")
