@@ -122,7 +122,7 @@ private fun HomeSurface(m: Modifier) {
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             item { Header("Command Centre", "Premium through restraint, clarity and material quality") }
-            item { StatePill("READY", BiupiuPalette.Nature) }
+            item { BiupiuSemanticStateIndicator(BiupiuSemanticState.READY) }
             items(cards) { (title, detail) -> StatusCard(title, detail, BiupiuPalette.Bronze) }
         }
     }
@@ -149,7 +149,7 @@ private fun WorkshopSurface(m: Modifier) {
             verticalArrangement = Arrangement.spacedBy(12.dp)
         ) {
             item { Header("Biupiu Workshop", "Material quality first • simple controls • clear state") }
-            item { StatePill("MATERIAL PREVIEW", BiupiuPalette.Bronze) }
+            item { BiupiuSemanticStateIndicator(BiupiuSemanticState.INFO) }
             items(workshopMaterials) { MaterialCard(it) }
             item { StatusCard("Safety boundary", "Discovery is separated from actuation. Physical control remains gated.", BiupiuPalette.Bronze) }
         }
