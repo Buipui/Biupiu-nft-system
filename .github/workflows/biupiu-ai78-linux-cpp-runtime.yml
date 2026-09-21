@@ -1,0 +1,23 @@
+name: Biupiu AI-78 Linux C++ Runtime Smoke
+
+on:
+  push:
+    paths:
+      - "intelligence/BIUPIU-AI78-LINUX-CPP-RUNTIME-SMOKE.cpp"
+      - ".github/workflows/biupiu-ai78-linux-cpp-runtime.yml"
+  pull_request:
+    paths:
+      - "intelligence/BIUPIU-AI78-LINUX-CPP-RUNTIME-SMOKE.cpp"
+      - ".github/workflows/biupiu-ai78-linux-cpp-runtime.yml"
+
+jobs:
+  linux-cpp-runtime:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -O2 intelligence/BIUPIU-AI78-LINUX-CPP-RUNTIME-SMOKE.cpp -o /tmp/biupiu-ai78-smoke
+      - name: Run
+        run: /tmp/biupiu-ai78-smoke
