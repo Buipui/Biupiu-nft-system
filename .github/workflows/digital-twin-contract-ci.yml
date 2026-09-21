@@ -55,3 +55,4 @@ jobs:
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/dms-transport.test.ts
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/federation-transport.test.ts
           npx -y tsx@4.20.5 dms/core/site-node/federation-sync.test.ts
+# Federation execution checkpoint: 2026-09-21
