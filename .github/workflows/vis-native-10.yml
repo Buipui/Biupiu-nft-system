@@ -1,4 +1,4 @@
-name: VIS-NATIVE-10 Host Build and CTest
+name: VIS-NATIVE-11 Host Provider and GPU Validation
 
 on:
   push:
@@ -13,9 +13,16 @@ on:
 
 jobs:
   native-visual:
-    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        os: [ubuntu-latest, windows-latest]
+    runs-on: ${{ matrix.os }}
     steps:
       - uses: actions/checkout@v4
+      - name: Install Vulkan development package
+        if: runner.os == 'Linux'
+        run: sudo apt-get update && sudo apt-get install -y libvulkan-dev
       - name: Configure
         run: cmake -S core/visual-native -B build/visual-native -DCMAKE_BUILD_TYPE=Release
       - name: Build
@@ -23,3 +30,7 @@ jobs:
       - name: CTest
         working-directory: build/visual-native
         run: ctest --output-on-failure
+      - name: Host probe smoke
+        if: runner.os == 'Linux'
+        working-directory: build/visual-native
+        run: ./biupiu_native_host_probe_smoke
