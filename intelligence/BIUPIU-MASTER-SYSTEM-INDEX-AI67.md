@@ -106,3 +106,6 @@ Canonical records: `research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md`, `research
 
 ## Gate 31 — JDK Lifecycle + GitHub Signing Boundary
 Registered JDK 17 lifecycle controls and a fail-closed Android signing workflow. Signing secrets are referenced by name only; no credentials or keystore are stored in the repository. Secret configuration, wrapper completion, and signed-release verification remain pending.
+
+## Gate 32 — Android Security Harvest
+Security controls integrated: cleartext denial, backup/data-extraction boundary, runtime-session validation and central security policy. Runtime/OEM/CI security verification remains pending.
