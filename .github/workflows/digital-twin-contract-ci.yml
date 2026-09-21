@@ -6,14 +6,18 @@ on:
     paths:
       - "packages/biupiu-rnd-os/src/digital-twin.ts"
       - "packages/biupiu-rnd-os/src/dms.ts"
+      - "packages/biupiu-rnd-os/src/dms-transport.ts"
       - "packages/biupiu-rnd-os/src/digital-twin.test.ts"
+      - "packages/biupiu-rnd-os/src/dms-transport.test.ts"
       - "apps/shared/runtime/runtime-contract-v1.json"
       - ".github/workflows/digital-twin-contract-ci.yml"
   pull_request:
     paths:
       - "packages/biupiu-rnd-os/src/digital-twin.ts"
       - "packages/biupiu-rnd-os/src/dms.ts"
+      - "packages/biupiu-rnd-os/src/dms-transport.ts"
       - "packages/biupiu-rnd-os/src/digital-twin.test.ts"
+      - "packages/biupiu-rnd-os/src/dms-transport.test.ts"
       - "apps/shared/runtime/runtime-contract-v1.json"
       - ".github/workflows/digital-twin-contract-ci.yml"
 
@@ -31,14 +35,17 @@ jobs:
         run: |
           test -f packages/biupiu-rnd-os/src/digital-twin.ts
           test -f packages/biupiu-rnd-os/src/dms.ts
+          test -f packages/biupiu-rnd-os/src/dms-transport.ts
           test -f packages/biupiu-rnd-os/src/digital-twin.test.ts
+          test -f packages/biupiu-rnd-os/src/dms-transport.test.ts
           test -f apps/shared/runtime/runtime-contract-v1.json
           node -e "JSON.parse(require('fs').readFileSync('apps/shared/runtime/runtime-contract-v1.json','utf8')); console.log('runtime contract JSON OK')"
 
       - name: TypeScript compile check
         run: |
-          npx -y -p typescript@5.8.3 tsc --noEmit             --target ES2022             --module NodeNext             --moduleResolution NodeNext             --strict             --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts
+          npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/dms-transport.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts             packages/biupiu-rnd-os/src/dms-transport.test.ts
 
       - name: Execute Digital Twin contract tests
         run: |
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/digital-twin.test.ts
+          npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/dms-transport.test.ts
