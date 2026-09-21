@@ -90,3 +90,16 @@ Repository-wide housekeeping has consolidated the active OS path around existing
 The gate preserves unresolved runtime, VM, UE5, physical and production evidence as open work. Unknown or competing authorities remain fail-closed.
 
 **Status: IMPLEMENTED / SMOKE WORKFLOW ADDED / RUNTIME EXECUTION PENDING.**
+
+
+## GRADLE TOOLCHAIN HARVEST GATE 30 — 21 September 2026
+
+AI-67 now indexes all three repository Gradle Android systems as governed build authorities: `apps/android`, `smart-farming/android`, and `software/rnd-os-mobile`.
+
+The compatibility matrix is AGP 8.7.3 + Gradle 8.9 for the first two systems and AGP 8.13.0 + Gradle 8.13 for the newer mobile system, with JDK 17 as the common Android execution baseline. Official distribution SHA-256 pins are stored in each wrapper-properties file. CI executes all three systems through explicitly pinned Gradle distributions.
+
+The missing wrapper JAR/scripts are recorded as an open integrity gate rather than fabricated or sourced from an unverified binary. No build result is promoted to runtime/OEM/HIL/production verification without evidence.
+
+Canonical records: `research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md`, `research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json`.
+
+**Status: IMPLEMENTED / CI GATE ENABLED / WRAPPER COMPLETION AND BUILD VERIFICATION PENDING.**
