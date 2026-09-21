@@ -77,3 +77,18 @@ The language registry, validation rules and translation provenance contract are 
 - **SIM-OSS-03:** non-executing backend validation harness implemented; production approval remains gated.
 
 The simulator adapter boundary only probes local availability and constructs safe commands. It does not install or automatically execute external backends.
+
+
+## Multi-AI Architecture Builder — AI-NATIVE-01
+
+The Native build now uses a role-separated, provider-neutral architecture-building protocol:
+HARVEST -> MAP -> CHALLENGE -> PROPOSE -> IMPLEMENT -> VERIFY -> REGRESS -> AUDIT -> PROMOTE.
+
+Canonical records:
+- software/rnd-os-ai/MULTI-AI-ARCHITECTURE-BUILDER-v1.0.md
+- software/rnd-os-ai/multi_ai/biupiu_multi_ai.py
+- software/rnd-os-ai/tests/test_multi_ai_framework.py
+- research/BIUPIU-MULTI-AI-ARCHITECTURE-BUILDER-PROTOCOL-v1.0.md
+- research/BIUPIU-MULTI-AI-ARCHITECTURE-BUILDER-MATRIX-v1.0.json
+
+The framework enforces reuse-before-rebuild, failure retention, explicit conflict classes and the OS authority boundary. It is a coordination contract, not a claim of autonomous multi-model execution.
