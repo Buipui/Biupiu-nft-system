@@ -5,23 +5,16 @@
 
 ## Evidence refresh
 
-### Hypercar — first-generation Audi R8 4.2 FSI quattro
-The published technical data records:
-- 4,163 cc V8
-- 309 kW / 420 bhp
-- 430 Nm
-- 1,560 kg unladen mass excluding driver
-- 1,860 kg gross limit
-- front axle limit 890 kg
-- rear axle limit 1,050 kg
-- aluminium ASF body
-- 4,431 mm length
-- 1,904 mm width
-- 1,252 mm height
-- 2,650 mm wheelbase
-- front/rear track 1,632 / 1,593 mm
+### Hypercar — Porsche Boxster 986 baseline
+The hypercar donor is corrected from Audi R8 to the **Porsche Boxster Type 986**.
 
-These values are donor-reference inputs. They do not establish the mass of the proposed converted vehicle.
+Porsche identifies the 986 as a mid-engine roadster with a water-cooled flat-six. Porsche's current Classic material confirms the 986 model family from model year 1997 onward and the Boxster S introduction in 1999. Porsche's published historical material records the 2.7 L Boxster at 162 kW / 220 PS and later 168 kW / 228 PS, and the 3.2 L Boxster S at 185 kW / 252 PS and later 191 kW / 260 PS. citeturn1search0turn1search22
+
+For the controlled dimensional/mass baseline, the 986 family reference records a **2,415 mm wheelbase** and curb weights varying by derivative/transmission. The 2.7 L 2000–2002 reference is 1,260 kg manual / 1,310 kg Tiptronic; the 3.2 L Boxster S 2000–2002 reference is 1,295 kg manual / 1,335 kg Tiptronic. These are retained as model-family reference values pending exact donor-year/derivative confirmation. citeturn0search0
+
+**Status:** donor family selected; exact 986 model year, engine derivative, transmission and donor condition remain OPEN.
+
+### Overlander — IVECO Daily 4x4 4,175 mm baseline
 
 ### Overlander — IVECO Daily 4x4 4,175 mm baseline
 Current IVECO material records the 4,175 mm wheelbase and 7,000 kg GVM configuration. The current specification records 132 kW and 430 Nm. IVECO also states that final payload varies with body selection.
@@ -30,10 +23,12 @@ A prior IVECO South Africa technical sheet records a 4,175 mm cab/chassis kerbwe
 
 ## Evidence-backed boundary calculations
 
-### R8 donor mass reserve
-Gross limit − unladen mass = 1,860 − 1,560 = **300 kg nominal reserve**.
+### Boxster donor mass reference
+The previous R8 mass-reserve calculation is **superseded and must not be used**.
 
-This is NOT available as a conversion allowance. It is simply the difference between the cited donor unladen mass and gross limit. Any conversion must separately account for occupants, fuel, fluids, retained equipment, replacement bodywork, hybrid hardware and safety systems.
+For the 986 family, published reference curb masses range approximately from 1,250 kg to 1,360 kg depending on derivative/transmission. These are donor-reference values only and are not a conversion mass allowance. citeturn0search0
+
+Any conversion must separately account for occupants, fuel, fluids, retained equipment, replacement bodywork, hybrid hardware and safety systems.
 
 ### Daily reference payload
 7,000 kg GVM − 2,900 kg historical cab/chassis kerb reference = **4,100 kg nominal difference**.
@@ -61,6 +56,12 @@ For the Daily, this gate does not substitute an axle-rating assumption where the
 6. Any change to axle load requires recalculation before structural approval.
 7. CAD clearance is not verified until geometry is measured or imported from a validated source.
 8. FEA remains downstream of the evidence-backed mass/geometry model.
+
+## Correction control
+
+The Audi R8 baseline is **SUPERSEDED for this case study**. All future hypercar calculations in this vehicle track shall use the Porsche Boxster 986 family unless a later user instruction selects a different Boxster generation/derivative.
+
+The prior R8-specific numerical mass and axle-limit inputs are not to be reused as Boxster data.
 
 ## Gate result
 
