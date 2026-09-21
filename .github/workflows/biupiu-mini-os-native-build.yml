@@ -1,0 +1,43 @@
+name: Biupiu Mini-OS Native Build
+
+on:
+  push:
+    paths:
+      - "mini-os/**"
+      - ".github/workflows/biupiu-mini-os-native-build.yml"
+  pull_request:
+    paths:
+      - "mini-os/**"
+      - ".github/workflows/biupiu-mini-os-native-build.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Rust format and tests
+        working-directory: mini-os/rust
+        run: |
+          cargo fmt --check
+          cargo test
+          cargo clippy --all-targets --all-features -- -D warnings
+      - name: C header syntax
+        run: gcc -std=c11 -Wall -Wextra -Werror -Imini-os/include -fsyntax-only -xc /dev/null
+      - name: C++ contract syntax
+        run: g++ -std=c++17 -Wall -Wextra -Werror -Imini-os/include -fsyntax-only mini-os/cpp/contract.cpp
+      - name: Framework contract validation
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          p = Path("mini-os/ai/task_contract.json")
+          data = json.loads(p.read_text())
+          assert data["authority"] == "MINI_OS_EXPERIMENTAL"
+          assert data["main_os_promotion"] == "FAIL_CLOSED"
+          assert len(data["roles"]) >= 8
+          print("Mini-OS task contract: PASS")
