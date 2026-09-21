@@ -1,0 +1,29 @@
+name: Biupiu Native Arcade CI
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - 'software/native-arcade/**'
+      - '.github/workflows/native-arcade-ci.yml'
+  pull_request:
+    paths:
+      - 'software/native-arcade/**'
+      - '.github/workflows/native-arcade-ci.yml'
+
+jobs:
+  native-arcade:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - run: npm install
+      - name: TypeScript compile check
+        run: npx tsc --noEmit
+      - name: Compile native arcade tests
+        run: npx tsc --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck --outDir .native-arcade-dist software/native-arcade/*.ts
+      - name: Execute native arcade tests
+        run: node .native-arcade-dist/run-tests.js
