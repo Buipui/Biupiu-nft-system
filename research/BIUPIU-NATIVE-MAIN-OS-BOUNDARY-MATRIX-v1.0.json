@@ -1,0 +1,8 @@
+{
+  "gate":"AI-NATIVE-02",
+  "status":"implemented_source_host_verification_pending",
+  "authority_model":{"native":"proving_ground","main":"production_authority","shared":"explicit_interface","external":"adapter_only"},
+  "promotion":["registered","implemented","host_tested","regression_pass","verified"],
+  "required_evidence":["repository_harvest","authority_map","challenge","deterministic_test","ci_host_test","regression","audit"],
+  "failure_policy":"retain_and_block"
+}
