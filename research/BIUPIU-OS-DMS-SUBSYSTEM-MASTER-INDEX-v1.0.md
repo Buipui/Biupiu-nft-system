@@ -283,3 +283,17 @@ Biupiu OS now has a lightweight shared material-surface abstraction for Android.
 The material layer is subordinate to information hierarchy and semantic state. It is not a replacement for a future physically based rendering engine in simulators or Digital Twin environments.
 
 Status: **SOURCE IMPLEMENTED / BUILD AND DEVICE VERIFICATION PENDING**.
+
+
+## 15. Foreign/OEM Resource Harvest — Gate 28, 21 September 2026
+
+Foreign-language discovery is now registered as a governed resource lane. Search lanes cover Chinese, Korean, Japanese, German, Italian, French, Spanish, Portuguese and Russian material, with language treated as discovery metadata rather than a trust signal.
+
+Cross-reference authorities: AOSP/OEM/open-device sources first; LineageOS/GitHub for reproducible implementation patterns; XDA for discovery only; OpenBooks only where the specific project and licence/scope are relevant.
+
+Integrated source-level module: apps/android/app/src/main/java/com/biupiu/rndos/ForeignResourceRegistry.kt.
+Canonical harvest record: docs/architecture/BIUPIU-FOREIGN-OEM-RESOURCE-HARVEST-GATE-28.md.
+
+Promoted patterns: Treble/VINTF boundary, partition-aware device model, common/target device-tree separation, proprietary extraction provenance, mainline portability, multilingual/localisation and auditable/idempotent workflow concepts. No proprietary blobs, dumps, signing keys, GMS packages or copied third-party implementations are integrated.
+
+**Gate status: IMPLEMENTED / SOURCE TESTS ADDED / BUILD-EMULATOR RUNTIME VERIFICATION PENDING.**
