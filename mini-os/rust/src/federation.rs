@@ -9,7 +9,7 @@ pub struct Workload { pub workload_id:u32, pub cost:u32, pub preferred_class:Com
 pub fn select_compute(units:&[ComputeUnit], workload:&Workload)->Option<u32>{
  let mut best:Option<ComputeUnit>=None;
  for unit in units.iter().copied(){
-  if unit.available==0 || unit.capacity==0 || (unit.compute_class as u32)<(workload.minimum_class as u32){continue;}
+  if unit.available==0 || unit.capacity==0 || unit.compute_class != workload.minimum_class{continue;}
   if unit.compute_class==workload.preferred_class{return Some(unit.unit_id);}
   if best.map_or(true,|b|unit.capacity>b.capacity){best=Some(unit);}
  }
