@@ -54,3 +54,32 @@ No runtime capability is inferred from this design gate.
 The implementation intentionally avoids complicated procedural rendering. Future high-fidelity rendering belongs to the simulator/render pipeline; normal OS interfaces use restrained finish cues only.
 
 Status: **SOURCE IMPLEMENTED / BUILD AND DEVICE VERIFICATION PENDING**.
+
+
+## Gate 33 — Automotive Simulator / Digital Twin Native Integration
+
+**Status:** SOURCE INTEGRATED / RUNTIME VERIFICATION PENDING.
+
+The automotive simulator lane is now linked into the OS/DMS design system rather than treated as an isolated game-simulation branch. The common visual/system contract applies to workshop, vehicle diagnostics, configurator, Digital Twin, UE5 and future native desktop/embedded clients.
+
+### Canonical integration
+
+`C ABI/HAL -> C++ automotive core -> simulator adapters -> DMS/Digital Twin -> UE5/rendering -> validation/replay`
+
+### Resource families cross-linked
+
+Car Mechanic Simulator 2021, Assetto Corsa, Gran Turismo, Need for Speed, Crash Team Racing, GTA, Forza, CARLA/OpenADS, SODA.Sim/OAS/Rigs of Rods and ISO 23247 automotive Digital Twin research.
+
+Third-party game/mod content remains rights-gated. Proprietary binaries/assets are not copied into the Biupiu repository.
+
+### Native source added
+
+- `core/multilang/include/biupiu_automotive_sim.h`
+- `core/multilang/cpp/automotive_sim.cpp`
+- `core/multilang/cpp/automotive_sim_smoke.cpp`
+
+The initial model is intentionally deterministic and dependency-light. It establishes a native longitudinal force-balance boundary while leaving tyre, suspension, drivetrain, thermal, electrical, aero, FEA/CFD and high-fidelity sensor models as separate validated modules.
+
+### Verification boundary
+
+Source integration is complete for this gate. Host compilation, execution of the C++ smoke test, UE5 integration, external-backend execution and hardware-in-loop remain separate evidence gates.
