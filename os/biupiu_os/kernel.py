@@ -5,11 +5,12 @@ from .guards import challenge_inputs,guard_evidence
 from .models import Capability,EnvironmentState,EvidenceRecord
 from .registry import CapabilityRegistry
 from .schemas import validate_mapping,validate_outputs
+from .cross_domain import CrossDomainValidator
 class BiupiuKernel:
     def __init__(self,repo_root=None):
-        self.repo_root=Path(repo_root or Path(__file__).resolve().parents[2]); self.registry=CapabilityRegistry(); self.environment=EnvironmentEngine(); self.audit=[]; self._register_core()
+        self.repo_root=Path(repo_root or Path(__file__).resolve().parents[2]); self.registry=CapabilityRegistry(); self.environment=EnvironmentEngine(); self.audit=[]; self.cross_domain=CrossDomainValidator(); self._register_core()
     def _register_core(self):
-        for c in [Capability("biupiu-kernel","os","Biupiu"),Capability("evidence-guard","trust","Biupiu"),Capability("environment-engine","simulation","Biupiu"),Capability("audit-ledger","governance","Biupiu"),Capability("schema-guard","trust","Biupiu")]: self.registry.register(c)
+        for c in [Capability("biupiu-kernel","os","Biupiu"),Capability("evidence-guard","trust","Biupiu"),Capability("environment-engine","simulation","Biupiu"),Capability("audit-ledger","governance","Biupiu"),Capability("schema-guard","trust","Biupiu"),Capability("cross-domain-validator","trust","Biupiu")]: self.registry.register(c)
     def discover(self): return self.registry.discover_existing_simulators(self.repo_root)
     def execute(self,module,operation,inputs,*,evidence_state="simulated",measured_evidence_complete=False,review_passed=False,provenance=None):
         eid=uuid.uuid4().hex; warnings=challenge_inputs(inputs); status="completed"; outputs={}
@@ -38,7 +39,7 @@ class BiupiuKernel:
     def execute_pipeline(self,steps,initial_inputs=None,provenance=None):
         state=dict(initial_inputs or {}); records=[]
         for step in steps:
-            module=step["module"]; inputs=dict(step.get("inputs",{})); inputs={**state,**inputs}
+            module=step["module"]; inputs={**state,**dict(step.get("inputs",{}))}
             record=self.execute_registered(module,inputs,provenance=provenance or [])
             records.append(record)
             if record.outputs.get("status")!="completed": break
