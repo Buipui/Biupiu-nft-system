@@ -43,10 +43,17 @@ mod tests {
 
     #[test]
     fn exposes_versioned_capability() {
-        let mut cap = MiniCapability { abi_version: 0, struct_size: 0, capability_bits: 99 };
+        let mut cap = MiniCapability {
+            abi_version: 0,
+            struct_size: 0,
+            capability_bits: 99,
+        };
         assert_eq!(biupiu_mini_get_capability(&mut cap), MiniStatus::Ok);
         assert_eq!(cap.abi_version, 1);
-        assert_eq!(cap.struct_size as usize, core::mem::size_of::<MiniCapability>());
+        assert_eq!(
+            cap.struct_size as usize,
+            core::mem::size_of::<MiniCapability>()
+        );
         assert_eq!(cap.capability_bits, 0);
     }
 }
