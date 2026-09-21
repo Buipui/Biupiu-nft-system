@@ -2,7 +2,7 @@ name: Biupiu Department Runtime
 on:
   workflow_dispatch:
   push:
-    paths: ["apps/shared/runtime/department-runtime.ts","apps/shared/runtime/department-runtime-contract-v1.json","apps/android/**","apps/windows/**",".github/workflows/biupiu-department-runtime.yml"]
+    paths: ["apps/shared/runtime/**","apps/android/**","apps/windows/**",".github/workflows/biupiu-department-runtime.yml"]
   pull_request:
     paths: ["apps/shared/runtime/**","apps/android/**","apps/windows/**",".github/workflows/biupiu-department-runtime.yml"]
 jobs:
