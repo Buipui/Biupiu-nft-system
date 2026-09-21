@@ -36,6 +36,29 @@ int fill_usd_runtime(biupiu_provider_adapter_info* out) {
 #endif
 }
 
+extern "C" int biupiu_provider_adapter_run_usd_fixture(uint64_t* canonical_output_hash) {
+  if (!canonical_output_hash) return 1;
+#if defined(BIUPIU_HAS_OPENUSD)
+  auto stage = pxr::UsdStage::CreateInMemory("biupiu_native_fixture");
+  if (!stage) return 2;
+  const pxr::SdfPath path("/Biupiu/VisualFixture");
+  auto sphere = pxr::UsdGeomSphere::Define(stage, path);
+  if (!sphere) return 3;
+  sphere.CreateRadiusAttr().Set(1.0);
+  const pxr::UsdPrim prim = stage->GetPrimAtPath(path);
+  if (!prim || prim.GetTypeName() != pxr::TfToken("Sphere")) return 4;
+  double radius = 0.0;
+  if (!sphere.GetRadiusAttr().Get(&radius) || radius != 1.0) return 5;
+  const std::string canonical =
+      prim.GetPath().GetString() + "|" + prim.GetTypeName().GetString() + "|radius=1.0";
+  *canonical_output_hash = biupiu_visual_regression_hash_bytes(canonical.data(), canonical.size());
+  return *canonical_output_hash ? 0 : 6;
+#else
+  *canonical_output_hash = 0;
+  return 10;
+#endif
+}
+
 extern "C" int biupiu_provider_adapter_usd(biupiu_provider_adapter_info* out) {
 #if defined(BIUPIU_HAS_OPENUSD)
   return fill_usd_runtime(out);
