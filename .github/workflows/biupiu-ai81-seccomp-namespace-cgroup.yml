@@ -1,0 +1,21 @@
+name: Biupiu AI-81 Seccomp Namespace Cgroup Runtime
+on:
+  push:
+    paths:
+      - "intelligence/BIUPIU-AI81-SECCOMP-NAMESPACE-CGROUP-RUNTIME.cpp"
+      - ".github/workflows/biupiu-ai81-seccomp-namespace-cgroup.yml"
+  pull_request:
+    paths:
+      - "intelligence/BIUPIU-AI81-SECCOMP-NAMESPACE-CGROUP-RUNTIME.cpp"
+      - ".github/workflows/biupiu-ai81-seccomp-namespace-cgroup.yml"
+jobs:
+  confinement-runtime:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -O2 intelligence/BIUPIU-AI81-SECCOMP-NAMESPACE-CGROUP-RUNTIME.cpp -o /tmp/biupiu-ai81
+      - name: Execute controlled confinement checks
+        run: /tmp/biupiu-ai81
