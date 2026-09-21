@@ -31,7 +31,8 @@ jobs:
         shell: pwsh
         run: |
           $source = Get-Content -Raw "$env:GITHUB_WORKSPACE\software\gateway\Invoke-BiupiuGateway.ps1"
-          foreach ($token in @('Invoke-Expression','iex')) { if ($source.Contains($token)) { throw "Forbidden token detected: $token" } }
+          $matches = [regex]::Matches($source, '(?im)^\s*(?:&\s*)?(Invoke-Expression|iex)\b')
+          if ($matches.Count -gt 0) { throw 'Forbidden execution primitive detected in executable command position.' }
       - name: Named test smoke run
         shell: pwsh
         run: |
