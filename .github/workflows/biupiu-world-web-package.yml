@@ -1,0 +1,42 @@
+name: Biupiu World Web Package
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'web/**'
+      - '.github/workflows/biupiu-world-web-package.yml'
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  package:
+    name: Validate and package Biupiu World
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+      - name: Validate deployment package
+        run: |
+          test -f web/index.html
+          test -f web/healthz.json
+          test -f web/realtime-contract.json
+          test -f web/observability-contract.json
+          node -e "const x=require('./web/healthz.json'); if(x.status!=='ok') process.exit(1)"
+          node -e "const x=require('./web/realtime-contract.json'); if(x.primary!=='websocket') process.exit(1)"
+          node -e "const x=require('./web/observability-contract.json'); if(x.clientSecretsAllowed!==false) process.exit(1)"
+      - name: Create deployment bundle
+        run: |
+          rm -rf biupiu-world-site
+          mkdir biupiu-world-site
+          cp -R web/. biupiu-world-site/
+          tar -czf biupiu-world-site.tar.gz biupiu-world-site
+      - uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-world-site
+          path: biupiu-world-site.tar.gz
+          retention-days: 30
