@@ -22,9 +22,11 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
+
       - uses: actions/setup-node@v4
         with:
           node-version: 20
+
       - name: Verify required contracts
         run: |
           test -f packages/biupiu-rnd-os/src/digital-twin.ts
@@ -32,6 +34,11 @@ jobs:
           test -f packages/biupiu-rnd-os/src/digital-twin.test.ts
           test -f apps/shared/runtime/runtime-contract-v1.json
           node -e "JSON.parse(require('fs').readFileSync('apps/shared/runtime/runtime-contract-v1.json','utf8')); console.log('runtime contract JSON OK')"
-      - name: Static TypeScript syntax check
+
+      - name: TypeScript compile check
         run: |
-          node --check packages/biupiu-rnd-os/src/digital-twin.test.ts
+          npx -y -p typescript@5.8.3 tsc --noEmit             --target ES2022             --module NodeNext             --moduleResolution NodeNext             --strict             --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts
+
+      - name: Execute Digital Twin contract tests
+        run: |
+          npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/digital-twin.test.ts
