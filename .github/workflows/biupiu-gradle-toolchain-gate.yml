@@ -1,0 +1,83 @@
+name: Biupiu Gradle Toolchain Gate
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - 'apps/android/**'
+      - 'smart-farming/android/**'
+      - 'software/rnd-os-mobile/**'
+      - 'research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md'
+      - 'research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json'
+      - '.github/workflows/biupiu-gradle-toolchain-gate.yml'
+  pull_request:
+    paths:
+      - 'apps/android/**'
+      - 'smart-farming/android/**'
+      - 'software/rnd-os-mobile/**'
+      - '.github/workflows/biupiu-gradle-toolchain-gate.yml'
+  workflow_dispatch:
+
+jobs:
+  gradle-build:
+    name: ${{ matrix.name }}
+    runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        include:
+          - name: R&D OS Android
+            path: apps/android
+            gradle: '8.9'
+            task: ':app:testDebugUnitTest'
+          - name: Smart Farming Android
+            path: smart-farming/android
+            gradle: '8.9'
+            task: ':app:assembleDebug'
+          - name: R&D OS Mobile
+            path: software/rnd-os-mobile
+            gradle: '8.13'
+            task: ':app:assembleDebug'
+    defaults:
+      run:
+        working-directory: ${{ matrix.path }}
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: '17'
+      - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: ${{ matrix.gradle }}
+      - name: Verify Gradle toolchain
+        run: gradle --version
+      - name: Verify Android build
+        run: gradle ${{ matrix.task }} --stacktrace
+
+  manifest-smoke:
+    name: Gradle system manifest smoke
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate manifest
+        run: python -m json.tool research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json >/dev/null
+      - name: Validate required Gradle systems
+        run: |
+          python - <<'PY'
+          import json
+          from pathlib import Path
+          m = json.loads(Path("research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json").read_text())
+          expected = {
+              "apps/android": "8.9",
+              "smart-farming/android": "8.9",
+              "software/rnd-os-mobile": "8.13",
+          }
+          actual = {x["path"]: x["gradleVersion"] for x in m["systems"]}
+          assert actual == expected, (actual, expected)
+          for path in expected:
+              assert (Path(path) / "settings.gradle.kts").exists(), path
+              assert (Path(path) / "build.gradle.kts").exists(), path
+              assert (Path(path) / "gradle/wrapper/gradle-wrapper.properties").exists(), path
+          print("Gradle system manifest: PASS")
+          PY

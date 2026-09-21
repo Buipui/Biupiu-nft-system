@@ -1,0 +1,53 @@
+{
+  "schema": "biupiu.gradle.system-manifest.v1",
+  "status": "IMPLEMENTED",
+  "systems": [
+    {
+      "path": "apps/android",
+      "role": "canonical native Biupiu R&D OS Android shell",
+      "agp": "8.7.3",
+      "kotlin": "2.0.21",
+      "gradleVersion": "8.9",
+      "javaRuntime": "17",
+      "wrapperProperties": "apps/android/gradle/wrapper/gradle-wrapper.properties",
+      "wrapperJar": "MISSING_PENDING_CI_BOOTSTRAP",
+      "buildTask": ":app:assembleDebug",
+      "testTask": ":app:testDebugUnitTest"
+    },
+    {
+      "path": "smart-farming/android",
+      "role": "smart farming Android client",
+      "agp": "8.7.3",
+      "kotlin": "2.0.21",
+      "gradleVersion": "8.9",
+      "javaRuntime": "17",
+      "wrapperProperties": "smart-farming/android/gradle/wrapper/gradle-wrapper.properties",
+      "wrapperJar": "MISSING_PENDING_CI_BOOTSTRAP",
+      "buildTask": ":app:assembleDebug",
+      "testTask": "NO_DEDICATED_UNIT_TEST_TASK_REGISTERED"
+    },
+    {
+      "path": "software/rnd-os-mobile",
+      "role": "newer standalone R&D OS mobile build",
+      "agp": "8.13.0",
+      "kotlin": "2.2.20",
+      "gradleVersion": "8.13",
+      "javaRuntime": "17",
+      "wrapperProperties": "software/rnd-os-mobile/gradle/wrapper/gradle-wrapper.properties",
+      "wrapperJar": "MISSING_PENDING_CI_BOOTSTRAP",
+      "buildTask": ":app:assembleDebug",
+      "testTask": "NO_DEDICATED_UNIT_TEST_TASK_REGISTERED"
+    }
+  ],
+  "rules": [
+    "AGP 8.7.x uses Gradle 8.9 baseline",
+    "AGP 8.13 uses Gradle 8.13 baseline",
+    "JDK 17 is the common Android execution baseline",
+    "Wrapper distribution checksum must be pinned",
+    "Wrapper JAR must be independently checksum-verified before promotion",
+    "Do not silently merge separate Android applications into one Gradle project",
+    "Shared Biupiu contracts remain outside app-specific Gradle projects until extracted into a tested shared module",
+    "Build success is distinct from emulator, physical OEM, HIL, and production verification"
+  ],
+  "nextGate": "G30-A-WRAPPER-COMPLETION"
+}
