@@ -60,5 +60,20 @@
       "type": "mirrored_by",
       "target": "biupiu://digital-twin"
     }
+  ],
+  "observation_fields": [
+    "OS.Caption",
+    "OS.Version",
+    "OS.BuildNumber",
+    "OS.Architecture",
+    "GPU.Name",
+    "GPU.DriverVersion",
+    "GPU.AdapterRAM",
+    "GPU.DisplayResolution",
+    "GPU.RefreshRate",
+    "Toolchain.CMake",
+    "Toolchain.Git",
+    "Toolchain.DotNet",
+    "Toolchain.Cargo"
   ]
 }
