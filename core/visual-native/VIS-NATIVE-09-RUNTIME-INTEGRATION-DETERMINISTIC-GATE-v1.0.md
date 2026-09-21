@@ -18,8 +18,8 @@ This gate integrates the first-party native visual source set into one CMake tar
 ## Evidence state
 REGISTERED: native modules and provider boundaries.
 IMPLEMENTED: source-level APIs and CMake integration.
-HOST_TESTED: pending a real CMake configure/build/CTest run in the user's host environment.
-REGRESSION_PASS: pending host test results.
+HOST_TESTED: pending. A GitHub-hosted CMake/CTest workflow was added in VIS-NATIVE-10; connector status currently reports no workflow run/status for the gate commit.
+REGRESSION_PASS: pending actual CMake/CTest evidence.
 VERIFIED: not claimed until host regression evidence is returned.
 
 ## Next gate
