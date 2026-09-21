@@ -1,0 +1,27 @@
+name: Biupiu Native AI Harness
+
+on:
+  push:
+    paths:
+      - "software/rnd-os-ai/src/biupiu_ai/native_system_harness.py"
+      - "software/rnd-os-ai/tests/test_native_system_harness.py"
+      - ".github/workflows/native-ai-harness.yml"
+  pull_request:
+    paths:
+      - "software/rnd-os-ai/**"
+      - "research/BIUPIU-NATIVE-SYSTEM-HARVEST-EXECUTION-2026-09-21.md"
+      - ".github/workflows/native-ai-harness.yml"
+  workflow_dispatch:
+
+jobs:
+  native-ai-harness:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.11"
+      - name: Compile native harness
+        run: python -m py_compile software/rnd-os-ai/src/biupiu_ai/native_system_harness.py
+      - name: Run deterministic native harness tests
+        run: PYTHONPATH=software/rnd-os-ai/src python -m pytest -q software/rnd-os-ai/tests/test_native_system_harness.py
