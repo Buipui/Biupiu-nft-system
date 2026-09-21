@@ -1,4 +1,4 @@
-from src.global_language_translation import (
+from biupiu_ai.global_language_translation import (
     SUPPORTED_LANGUAGE_FAMILIES,
     normalise_language,
     translate,
@@ -12,8 +12,10 @@ def test_language_normalisation():
 
 
 def test_global_language_registry_contains_key_world_languages():
-    for code in ("en", "af", "xh", "zu", "ar", "ru", "zh", "ja", "ko",
-                 "hi", "ur", "fr", "de", "es", "pt"):
+    for code in (
+        "en", "af", "xh", "zu", "ar", "ru", "zh", "ja", "ko",
+        "hi", "ur", "fr", "de", "es", "pt",
+    ):
         assert code in SUPPORTED_LANGUAGE_FAMILIES
 
 
