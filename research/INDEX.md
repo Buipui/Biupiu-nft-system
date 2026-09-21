@@ -13,3 +13,13 @@
 - Repository commit: `1650591eaf09db859c56672505126d4ebb64bfec`.
 
 **NEXT GATE:** CI execution -> bug/conflict remediation -> smoke/regression -> adapter capability probes -> controlled activation decisions -> federation learning feedback -> master index reconciliation.
+## GATE 12 — HOST OBSERVATION CI SMOKE / CIM-BASED GPU COLLECTION — 21 September 2026
+- Microsoft documentation review confirms `Get-CimInstance`/CIM is the current PowerShell approach for WMI/CIM queries, and `Win32_VideoController` exposes Windows video-controller capability/management data. citeturn0search0turn0search9
+- Gateway host graphics observation uses `Get-CimInstance Win32_VideoController`: **REGISTERED / IMPLEMENTED**.
+- CI workflow definition for host observation: **COMMITTED**.
+- Gate 11 commit has no visible completed workflow run yet: **CI EXECUTION PENDING**.
+- Physical workstation observation: **UNVERIFIED**.
+- GPU driver/toolchain/UE5/Unity/VS/VS Code promotion: **BLOCKED** until host evidence.
+- Observation remains read-only; no installation or mutation path added.
+
+Next gate: execute the expanded Windows CI workflow and then capture an actual host evidence bundle from the development workstation.
