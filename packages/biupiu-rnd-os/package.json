@@ -1,1 +1,38 @@
-{"name":"@biupiu/rnd-os","version":"0.3.0","private":true,"description":"Biupiu R&D operating environment and shared orchestration package","platforms":["android","windows","macos","linux","web"],"runtimes":["node","java","python","rust"],"entry":"src/index.ts","requires":["@biupiu/access","@biupiu/main-hub"],"adapters":["platform","filesystem","process","secure-storage","repository","simulation","java","linux"]}
+{
+  "name": "@biupiu/rnd-os",
+  "version": "0.3.0",
+  "private": true,
+  "description": "Biupiu R&D operating environment and shared orchestration package",
+  "platforms": [
+    "android",
+    "windows",
+    "macos",
+    "linux",
+    "web"
+  ],
+  "runtimes": [
+    "node",
+    "java",
+    "python",
+    "rust"
+  ],
+  "entry": "src/index.ts",
+  "requires": [
+    "@biupiu/access",
+    "@biupiu/main-hub"
+  ],
+  "adapters": [
+    "platform",
+    "filesystem",
+    "process",
+    "secure-storage",
+    "repository",
+    "simulation",
+    "java",
+    "linux"
+  ],
+  "types": "src/index.ts",
+  "exports": {
+    ".": "./src/index.ts"
+  }
+}
