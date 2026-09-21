@@ -1,0 +1,1 @@
+{"schema":"biupiu.world.realtime.v1","primary":"websocket","optional":["webrtc"],"authority":"server-side gateway","clientMayNotAuthoritativelyMutateState":true,"status":"IMPLEMENTED_CONTRACT_NOT_LIVE"}
