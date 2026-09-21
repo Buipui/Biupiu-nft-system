@@ -9,6 +9,7 @@ on:
     paths:
       - 'software/gateway/**'
       - 'digital-twin/schemas/biupiu_powershell_gateway_twin_v1_0.json'
+  workflow_dispatch:
 
 jobs:
   policy-regression:
