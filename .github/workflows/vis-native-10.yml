@@ -1,0 +1,25 @@
+name: VIS-NATIVE-10 Host Build and CTest
+
+on:
+  push:
+    paths:
+      - "core/visual-native/**"
+      - ".github/workflows/vis-native-10.yml"
+  pull_request:
+    paths:
+      - "core/visual-native/**"
+      - ".github/workflows/vis-native-10.yml"
+  workflow_dispatch:
+
+jobs:
+  native-visual:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Configure
+        run: cmake -S core/visual-native -B build/visual-native -DCMAKE_BUILD_TYPE=Release
+      - name: Build
+        run: cmake --build build/visual-native --parallel
+      - name: CTest
+        working-directory: build/visual-native
+        run: ctest --output-on-failure
