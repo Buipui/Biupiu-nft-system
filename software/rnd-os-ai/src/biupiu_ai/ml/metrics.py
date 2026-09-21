@@ -27,8 +27,8 @@ def mae(y_true: Iterable[float], y_pred: Iterable[float]) -> float:
     pairs = _pairs(y_true, y_pred)
     return sum(abs(float(a) - float(b)) for a, b in pairs) / len(pairs)
 
-
-def brier_score(y_true: Iterable[int], y_prob: Iterable[float]) -> float:
+    # Keep the public metric stable against binary floating-point artifacts.
+    return round(sum((float(p) - int(y)) ** 2 for y, p in pairs) / len(pairs), 12)
     pairs = _pairs(y_true, y_prob)
     # Keep the public metric stable against binary floating-point artifacts.\n    return round(sum((float(p) - int(y)) ** 2 for y, p in pairs) / len(pairs), 12)
 
