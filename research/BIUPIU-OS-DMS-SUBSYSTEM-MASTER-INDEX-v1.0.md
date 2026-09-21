@@ -349,3 +349,24 @@ Integration loop:
 Foreign-language routing covers Chinese, German, Italian, Japanese, French, Spanish, Portuguese and Russian technical discovery. Language is metadata only.
 
 **Gate status: HARVESTED / CROSS-LINKED / NATIVE SOURCE INTEGRATED / LOCAL C++ SMOKE TEST PASSED / REPOSITORY-CI-HOST-UE5 VERIFICATION PENDING.**
+
+
+## 21. Marine / Aerospace-Space / Farming Simulator Integration — Gate 34, 21 September 2026
+
+Canonical records:
+- `research/BIUPIU-MARINE-AEROSPACE-FARMING-SIMULATOR-RESOURCE-REGISTRY-v1.0.md`
+- `research/BIUPIU-MARINE-AEROSPACE-FARMING-SIMULATOR-MANIFEST-v1.0.json`
+- `research/BIUPIU-MARINE-AEROSPACE-FARMING-NATIVE-INTEGRATION-GATE-34.md`
+- `core/multilang/include/biupiu_marine_sim.h`
+- `core/multilang/cpp/marine_sim.cpp`
+- `core/multilang/include/biupiu_aerospace_space_sim.h`
+- `core/multilang/cpp/aerospace_space_sim.cpp`
+- `core/multilang/include/biupiu_farming_sim.h`
+- `core/multilang/cpp/farming_sim.cpp`
+- `core/multilang/cpp/marine_aerospace_farming_smoke.cpp`
+
+The three domains are cross-linked into the same OS/DMS/Digital-Twin native path. Marine research covers LOTUSim/lxdyn, MSS, MARUSim, Stonefish, Aeolus-Ocean, openMSN and maritime co-simulation. Aerospace/space covers JSBSim, AeroSim, Basilisk, OpenRocket and PX4/FlightGear bridge patterns. Farming covers farm-twin, Farm-Twin, AgriTwin, Agri-twin and WOFOST/AquaCrop/DSSAT-style model integration.
+
+Native source foundations are now implemented for marine force/drag state, aerospace thrust/drag/gravity state and farm water-balance state.
+
+**Gate status: HARVESTED / CROSS-LINKED / NATIVE SOURCE INTEGRATED / LOCAL C++ SMOKE TEST PASSED / REPOSITORY-CI-UE5-HIL VERIFICATION PENDING.**
