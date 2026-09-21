@@ -1,0 +1,15 @@
+{
+  "registry_id": "BIUPIU-SEARCH-PROTOCOL-REGISTRY",
+  "version": "1.0",
+  "audit_id": "AI-81",
+  "audit_window": "repository-inception-to-2026-09-21",
+  "semantic_identity_rule": "intent+source_lanes+retrieval_unit+evidence_model+promotion_gate+consumer",
+  "protocol_families": [
+    "repository_first", "github_code", "standards", "scholarly", "anthropology_archaeology", "foreign_language", "oem_industrial", "openbooks", "patent_prior_art", "simulation_validation", "security_audit", "housekeeping"
+  ],
+  "promotion_chain": ["DISCOVERED", "IDENTIFIED", "PROVENANCE_CHECKED", "LICENCE_CHECKED", "SECURITY_CHECKED", "COMPATIBILITY_CHECKED", "TESTED", "REVIEWED", "IMPLEMENTED", "VERIFIED"],
+  "hard_blocks": ["missing_provenance", "unknown_rights", "semantic_collision", "unresolved_contradiction", "unsupported_status", "secret_or_private_data", "unverified_external_code"],
+  "consumers": ["research_index", "Biupiu_Intelligence", "Biupiu_OS_validation", "DMS", "multilingual_search", "learning_layer", "digital_twin", "blockchain_anchor_manifest"],
+  "runtime_state": "governance_and_schema_implemented; repository-wide historical enumeration and runtime adapters require separate verification",
+  "blockchain_state": "manifest_prepared; authorized on-chain transaction pending"
+}
