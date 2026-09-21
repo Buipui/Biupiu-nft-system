@@ -1,0 +1,27 @@
+{
+  "id":"AUTOMOTIVE-SIM-01",
+  "date":"2026-09-21",
+  "status":"implemented-reference-layer",
+  "resources":[
+    "gro-ove/actools",
+    "ac-custom-shaders-patch/acc-lua-sdk",
+    "nendotools/ac-track-tools",
+    "tobi/ac-tracer",
+    "Rgosh/ac-pro-engineer",
+    "nasim-raj-laskar/AC-Datalogger",
+    "gik0geck0/assetto-tools",
+    "OpenTire/OpenTirePython",
+    "Rgosh/ac-setups"
+  ],
+  "tracks":[
+    "AUTO-TEST-01-DYNAMIC-LOOP",
+    "AUTO-TEST-02-HANDLING-CIRCUIT",
+    "AUTO-TEST-03-BRAKE-STABILITY-PAD",
+    "AUTO-TEST-04-ROUGH-ROAD",
+    "AUTO-TEST-05-WET-LOW-MU",
+    "AUTO-TEST-06-AERO-HIGH-SPEED",
+    "AUTO-TEST-07-EV-ENERGY",
+    "AUTO-TEST-08-AUTONOMOUS-SENSOR"
+  ],
+  "ip_boundary":"Third-party code/assets remain external unless licence-compatible and explicitly approved."
+}
