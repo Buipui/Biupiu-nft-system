@@ -92,3 +92,11 @@ Canonical records:
 - research/BIUPIU-MULTI-AI-ARCHITECTURE-BUILDER-MATRIX-v1.0.json
 
 The framework enforces reuse-before-rebuild, failure retention, explicit conflict classes and the OS authority boundary. It is a coordination contract, not a claim of autonomous multi-model execution.
+
+
+## AI-NATIVE-02 — Native/Main OS boundary audit
+- Audit: software/rnd-os-ai/NATIVE-MAIN-OS-BOUNDARY-AUDIT-v1.0.md
+- Implementation: software/rnd-os-ai/multi_ai/native_main_boundary.py
+- Tests: software/rnd-os-ai/tests/test_native_main_boundary.py
+- Matrix: research/BIUPIU-NATIVE-MAIN-OS-BOUNDARY-MATRIX-v1.0.json
+- Status: REGISTERED + IMPLEMENTED / HOST VERIFICATION PENDING
