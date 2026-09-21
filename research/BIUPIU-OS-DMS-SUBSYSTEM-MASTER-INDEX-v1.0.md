@@ -259,3 +259,18 @@ Status: ARCHITECTURE INTEGRATED / HOST RUNTIME VALIDATION PENDING.
 `core/multilang/` is registered as a Core OS boundary package. C defines the durable ABI, Rust supplies the initial safety-oriented kernel boundary implementation, and C++ supplies the native subsystem contract. DMS and subsystem services consume these through OS contracts; they do not bypass the Core OS.
 
 Verification state: SOURCE IMPLEMENTED / BUILD AND RUNTIME PENDING.
+
+
+## 13. Unified Premium Neutral Design System — Gate 26, 21 September 2026
+
+Canonical design authority: docs/architecture/BIUPIU-OS-UNIFIED-DESIGN-PHILOSOPHY-v1.0.md.
+
+Biupiu OS and all subsystems now share a neutral-premium visual principle: **NEUTRAL BASE -> MATERIAL FINISH -> RESTRAINED NATURE ACCENT -> CLEAR INFORMATION**.
+
+Pagani and Ferrari are reference points for craftsmanship, curated configuration, neutral foundations and material quality only; they are not templates and no proprietary assets or branding are copied.
+
+Canonical rules: premium through restraint; neutral-first surfaces; material finish for character; nature as an accent family; semantic colours protected; one visual language across OS/DMS/Intelligence/simulators/configurators; simple and reversible interaction; legibility over ornament; no false claims of physical material accuracy.
+
+Canonical digest: intelligence/BIUPIU-OS-DESIGN-DIGEST-2026-09-21.md.
+
+Status: **IMPLEMENTED / SOURCE UPDATED / RUNTIME VISUAL VERIFICATION PENDING**.
