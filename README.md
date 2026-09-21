@@ -60,6 +60,8 @@ Biupiu uses a permanent multi-layer research stack:
 - **Biupiu Blockchain Registry Network** — planned hash/identity anchoring layer
 - Signed physical works and art-book records
 - Founding crowdfunding releases
+- **Biupiu World Arcade / Mod Hub resource layer**
+- **Biupiu-native game-resource registry and rights classification**
 
 ## Portfolio Boundary
 
@@ -72,7 +74,7 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `FOUNDING-CROWDFUNDING-BRIEF.md` — public project brief for the founding NFT crowdfunding campaign.
 - `metadata/` — NFT metadata records.
 - `artworks/` — artwork records and provenance references.
-- `research/` — indexed research, algorithm and blockchain network records.
+- `research/` — indexed research, algorithm, blockchain, game-resource and rights records.
 - `releases/` — collection and crowdfunding release plans.
 - `contracts/BiupiuNFT.sol` — EVM ERC-721 reference contract.
 - `hardhat.config.js` — Hardhat network/solidity configuration.
@@ -84,6 +86,9 @@ This repository is a dedicated NFT / computational-art / IP / personal R&D track
 - `research/BIUPIU-COMPANY-ALGORITHM-NETWORK-v1.0.md` — reusable company algorithm-network architecture.
 - `research/BIUPIU-ALGORITHM-REGISTRY-v1.0.md` — immutable algorithm-family/version registry.
 - `research/BIUPIU-BLOCKCHAIN-REGISTRY-ARCHITECTURE-v1.0.md` — planned research/release blockchain anchoring architecture.
+- `research/BIUPIU-ARCADE-AND-EMULATION-RESOURCE-ARCHITECTURE-v1.0.md` — rights-aware arcade/emulation and native-runtime architecture.
+- `research/BIUPIU-NATIVE-GAME-RESOURCE-REGISTRY-v1.0.json` — machine-readable game/resource registry schema.
+- `research/BIUPIU-CREATOR-MOD-HUB-ARCHITECTURE-v1.0.md` — free Unreal/Unity/Biupiu creator and modding architecture.
 - `payment/native/` — native payment boundary, tier mapping, security gates and harvest manifest.
 
 ## Research -> Algorithm -> NFT -> Blockchain Pipeline
@@ -130,6 +135,59 @@ The initial Biupiu blockchain architecture is an **EVM anchoring/registry networ
 
 The registry should record commitments such as release ID, Research ID, algorithm ID/version, manifest/artwork/metadata hashes and optional NFT contract/token references. Confidential research, private datasets, secrets and unpublished IP remain off-chain.
 
+## Biupiu Arcade / Game Resource Layer
+
+Biupiu World now has a registered architecture for future virtual arcades, retro-PC rooms, console rooms, digital museums and game-development showcases.
+
+The system deliberately separates:
+
+**emulator/runtime rights -> game/content rights -> Biupiu distribution rights -> creator rights -> provenance.**
+
+No external game is considered commercially distributable merely because it is old, free to download, available in an archive, associated with a closed publisher, or compatible with an open-source emulator.
+
+Canonical documents:
+
+- `research/BIUPIU-ARCADE-AND-EMULATION-RESOURCE-ARCHITECTURE-v1.0.md`
+- `research/BIUPIU-NATIVE-GAME-RESOURCE-REGISTRY-v1.0.json`
+- `research/BIUPIU-CREATOR-MOD-HUB-ARCHITECTURE-v1.0.md`
+
+### Native target
+
+External emulators such as MAME, DOSBox and ScummVM are compatibility/reference resources subject to their licences. The long-term Biupiu target is a **Biupiu Arcade Runtime Interface** and eventually a native Biupiu Engine implementation.
+
+Target interaction:
+
+`Avatar -> Biupiu Arcade -> Rights/Entitlement Gate -> Runtime Adapter -> Game Session -> DMS/Leaderboard/Provenance`
+
+### Rights classification
+
+- **GREEN** — intended Biupiu use/redistribution rights verified.
+- **BLUE** — free/open but scope requires review.
+- **YELLOW** — rights holder identified; permission/licence required.
+- **ORANGE** — ownership/chain-of-title investigation.
+- **RED** — no approved Biupiu use.
+- **GREY** — research/reference only.
+
+Unknown rights remain non-distributable.
+
+## Biupiu Free Creator / Mod Hub
+
+Biupiu will use a free community modding layer as a deliberate give-back to modders and as a creator-acquisition mechanism.
+
+Initial compatibility targets:
+
+**Unreal Engine + Unity + Biupiu-native formats.**
+
+The long-term native layer includes creator identity, asset packaging, dependency resolution, cross-engine metadata, provenance, licence declarations, security scanning, compatibility testing, versioning, rollback and attribution.
+
+Creators retain the rights they actually own. Biupiu should receive only the permissions required by the explicit publishing licence.
+
+The intended growth loop is:
+
+`Free tools -> creators -> mods -> players -> Biupiu World -> social discovery -> more creators -> professional users -> simulation/CAD demand -> Biupiu Engine adoption`
+
+The free layer is not dependent on copyrighted third-party ROM redistribution.
+
 ## Ancient Systems × Computational Geometry
 
 Dedicated stream: `NFT-ATH-GEO`  
@@ -175,7 +233,7 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 ## Master Research Index
 
-`research/INDEX.md` remains the master R&D research index. The algorithm, blockchain and native payment specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry releases.
+`research/INDEX.md` remains the master R&D research index. The algorithm, blockchain, native payment, game-resource and creator specifications are linked into the NFT/Web3 track and should be used as the operating architecture for future computational-geometry and Biupiu World releases.
 
 ## Blender / Biupiu World Production Layer
 
