@@ -28,6 +28,8 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
       - name: Unit contract tests
         run: gradle testDebugUnitTest --stacktrace
       - name: Debug APK build
@@ -47,8 +49,10 @@ jobs:
           distribution: temurin
           java-version: '17'
       - uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: '8.9'
       - name: Assemble debug APK
-        run: ./gradlew assembleDebug --stacktrace
+        run: gradle assembleDebug --stacktrace
       - name: Emulator boot + APK install smoke
         uses: reactivecircus/android-emulator-runner@v2
         with:
