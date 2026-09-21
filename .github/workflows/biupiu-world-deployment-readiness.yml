@@ -52,7 +52,7 @@ jobs:
           ! grep -Eiq '(api[_-]?key|secret|private[_-]?key|password)[[:space:]]*[:=]' web/index.html
           echo 'static shell integrity: PASS'
 
-      - name: Package reproducibility check
+      - name: Package integrity check
         run: |
           rm -rf _site biupiu-world-site.tar.gz
           mkdir -p _site
@@ -61,10 +61,25 @@ jobs:
           test -s biupiu-world-site.tar.gz
           tar -tzf biupiu-world-site.tar.gz | grep -q '^./index.html$'
           tar -tzf biupiu-world-site.tar.gz | grep -q '^./healthz.json$'
-          echo 'deployment package reproducibility: PASS'
+          echo 'deployment package integrity: PASS'
+
+      - name: Optional live hosting probe
+        if: ${{ vars.BIUPIU_WORLD_BASE_URL != '' }}
+        env:
+          BIUPIU_WORLD_BASE_URL: ${{ vars.BIUPIU_WORLD_BASE_URL }}
+          BIUPIU_WORLD_HEALTH_PATH: ${{ vars.BIUPIU_WORLD_HEALTH_PATH }}
+        run: |
+          set -e
+          base="$BIUPIU_WORLD_BASE_URL"
+          health="${BIUPIU_WORLD_HEALTH_PATH:-/healthz.json}"
+          case "$base" in https://*) ;; *) echo "BASE_URL must use HTTPS"; exit 1;; esac
+          curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' --max-redirs 3 --output /tmp/health.json --dump-header /tmp/headers.txt "$base$health"
+          node -e "const h=require('/tmp/health.json'); if(h.status!=='ok') throw new Error('live health status is not ok')"
+          grep -Eiq '^strict-transport-security:' /tmp/headers.txt || { echo 'missing HSTS header'; exit 1; }
+          echo 'live hosting probe: PASS'
 
       - name: Record external activation boundary
         run: |
-          echo 'Repository deployment readiness: VERIFIED'
-          echo 'External hosting activation: requires a provider with deployment permission'
-          echo 'GitHub Pages enablement is not treated as verified until the Pages API accepts site creation'
+          echo 'Repository readiness checks: EXECUTED BY CI'
+          echo 'External hosting activation: requires a configured provider/domain'
+          echo 'No live deployment is promoted to VERIFIED without a successful live probe'
