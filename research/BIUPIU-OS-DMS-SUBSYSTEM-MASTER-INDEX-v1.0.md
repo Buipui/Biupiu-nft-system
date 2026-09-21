@@ -348,4 +348,4 @@ Integration loop:
 
 Foreign-language routing covers Chinese, German, Italian, Japanese, French, Spanish, Portuguese and Russian technical discovery. Language is metadata only.
 
-**Gate status: HARVESTED / CROSS-LINKED / NATIVE SOURCE INTEGRATED / BUILD-RUNTIME VERIFICATION PENDING.**
+**Gate status: HARVESTED / CROSS-LINKED / NATIVE SOURCE INTEGRATED / LOCAL C++ SMOKE TEST PASSED / REPOSITORY-CI-HOST-UE5 VERIFICATION PENDING.**
