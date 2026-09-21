@@ -1,0 +1,25 @@
+{
+  "schema":"biupiu.android-security.v1",
+  "status":"IMPLEMENTED",
+  "controls":{
+    "cleartextTraffic":"DENY",
+    "backupSensitiveData":"DENY",
+    "sessionValidation":"ACTIVE_STATUS_AND_SUBSCRIBER_ID",
+    "keystoreProvider":"AndroidKeyStore",
+    "releaseSigning":"FAIL_CLOSED"
+  },
+  "references":[
+    "Android security best practices",
+    "Android network security configuration",
+    "GitHub Actions secure use reference",
+    "GitHub Actions secrets reference",
+    "GitHub Actions OIDC"
+  ],
+  "verification":{
+    "source":"IMPLEMENTED",
+    "runtime":"PENDING",
+    "physicalOEM":"PENDING",
+    "workflowActionSHA":"PENDING"
+  },
+  "nextGate":"G32-A"
+}
