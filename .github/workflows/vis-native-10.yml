@@ -34,3 +34,6 @@ jobs:
         if: runner.os == 'Linux'
         working-directory: build/visual-native
         run: ./biupiu_native_host_probe_smoke
+      - name: Provider validation smoke
+        working-directory: build/visual-native
+        run: ./biupiu_native_provider_validation_smoke
