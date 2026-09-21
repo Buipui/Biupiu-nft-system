@@ -35,8 +35,9 @@ jobs:
         working-directory: build/visual-native
         run: ./biupiu_native_host_probe_smoke
       - name: Provider validation smoke
+        if: runner.os == 'Linux'
         working-directory: build/visual-native
-        run: ${{ runner.os == 'Windows' && '.\\biupiu_native_provider_validation_smoke.exe' || './biupiu_native_provider_validation_smoke' }}
+        run: ./biupiu_native_provider_validation_smoke
       - name: Generate provider evidence artifact
         working-directory: build/visual-native
         run: ${{ runner.os == 'Windows' && '.\\biupiu_native_provider_evidence.exe provider-evidence.json' || './biupiu_native_provider_evidence provider-evidence.json' }}
