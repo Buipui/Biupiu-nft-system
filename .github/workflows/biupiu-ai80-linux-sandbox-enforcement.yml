@@ -1,0 +1,21 @@
+name: Biupiu AI-80 Linux Sandbox Enforcement Runtime
+on:
+  push:
+    paths:
+      - "intelligence/BIUPIU-AI80-LINUX-SANDBOX-ENFORCEMENT.cpp"
+      - ".github/workflows/biupiu-ai80-linux-sandbox-enforcement.yml"
+  pull_request:
+    paths:
+      - "intelligence/BIUPIU-AI80-LINUX-SANDBOX-ENFORCEMENT.cpp"
+      - ".github/workflows/biupiu-ai80-linux-sandbox-enforcement.yml"
+jobs:
+  sandbox-runtime:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+    steps:
+      - uses: actions/checkout@v4
+      - name: Compile
+        run: g++ -std=c++17 -Wall -Wextra -Wpedantic -O2 intelligence/BIUPIU-AI80-LINUX-SANDBOX-ENFORCEMENT.cpp -o /tmp/biupiu-ai80
+      - name: Execute controlled sandbox enforcement
+        run: /tmp/biupiu-ai80
