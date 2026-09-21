@@ -11,13 +11,32 @@ class BiupiuKernel:
         for c in [Capability("biupiu-kernel","os","Biupiu"),Capability("evidence-guard","trust","Biupiu"),Capability("environment-engine","simulation","Biupiu"),Capability("audit-ledger","governance","Biupiu")]: self.registry.register(c)
     def discover(self): return self.registry.discover_existing_simulators(self.repo_root)
     def execute(self,module,operation,inputs,*,evidence_state="simulated",measured_evidence_complete=False,review_passed=False,provenance=None):
-        eid=uuid.uuid4().hex; warnings=challenge_inputs(inputs); outputs=dict(operation(**inputs) or {})
+        eid=uuid.uuid4().hex; warnings=challenge_inputs(inputs)
+        try:
+            outputs=dict(operation(**inputs) or {})
+            status="completed"
+        except Exception as exc:
+            outputs={}; warnings.append(f"EXECUTION_ERROR:{type(exc).__name__}:{exc}"); status="failed"
         proposed={"execution_id":eid,"module":module,"evidence_state":evidence_state,"measured_evidence_complete":measured_evidence_complete,"review_passed":review_passed}
         guard=guard_evidence(proposed)
         if not guard["valid"]:
             warnings.extend(guard["errors"])
             if evidence_state in ("validated","certified"): evidence_state="simulated"
-        rec=EvidenceRecord(eid,module,evidence_state,inputs,outputs,warnings,provenance or [],review_passed); self.audit.append(rec); return rec
+        rec=EvidenceRecord(eid,module,evidence_state,inputs,{"status":status,**outputs},warnings,provenance or [],review_passed); self.audit.append(rec); return rec
+    def execute_registered(self,module,inputs,**kwargs):
+        target=None
+        for c in self.registry.all():
+            if c.name==module: target=c; break
+        if target is None: raise KeyError(f"capability not registered: {module}")
+        if target.status!="loadable": raise RuntimeError(f"capability not executable: {module} [{target.status}]")
+        path=self.repo_root/target.entrypoint
+        import importlib.util
+        spec=importlib.util.spec_from_file_location(module,path)
+        if spec is None or spec.loader is None: raise RuntimeError(f"cannot load capability: {module}")
+        loaded=importlib.util.module_from_spec(spec); spec.loader.exec_module(loaded)
+        operation=getattr(loaded,"run",None) or getattr(loaded,"execute",None)
+        if operation is None: raise AttributeError(f"{module} exposes no run/execute entrypoint")
+        return self.execute(module,operation,inputs,**kwargs)
     def environment_step(self,env,dt_s,updates=None): return self.environment.step(env,dt_s,updates)
     def audit_json(self): return json.dumps([r.to_dict() for r in self.audit],indent=2,sort_keys=True)
     def health(self): return {"kernel":"operational","capabilities":len(self.registry.all()),"audit_records":len(self.audit),"timestamp":time.time()}

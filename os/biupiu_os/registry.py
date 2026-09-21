@@ -13,13 +13,11 @@ class CapabilityRegistry:
         if not d.exists(): return []
         found=[]
         for p in sorted(d.glob("biupiu_*.py")):
-            name=p.stem
-            status="loadable"; note=""
+            name=p.stem; status="loadable"; note=""
             try:
                 spec=importlib.util.spec_from_file_location(name,p)
-                module=importlib.util.module_from_spec(spec)
-                if spec.loader is None: raise ImportError("no loader")
-                spec.loader.exec_module(module)
+                if spec is None or spec.loader is None: raise ImportError("no loader")
+                module=importlib.util.module_from_spec(spec); spec.loader.exec_module(module)
                 note=module.__doc__.strip().splitlines()[0] if module.__doc__ else ""
             except Exception as exc:
                 status="discovered-but-load-failed"; note=str(exc)
