@@ -1,4 +1,4 @@
-name: VIS-NATIVE-11 Host Provider and GPU Validation
+name: VIS-NATIVE-18 CI Provider Evidence
 
 on:
   push:
@@ -37,3 +37,18 @@ jobs:
       - name: Provider validation smoke
         working-directory: build/visual-native
         run: ./biupiu_native_provider_validation_smoke
+      - name: Generate provider evidence artifact
+        working-directory: build/visual-native
+        run: ./biupiu_native_provider_evidence provider-evidence.json
+      - name: Add host promotion report
+        shell: bash
+        run: |
+          mkdir -p build/visual-native/evidence
+          cp build/visual-native/provider-evidence.json build/visual-native/evidence/provider-evidence-${{ matrix.os }}.json
+          printf '# VIS-NATIVE-18 Host Promotion Report\n\n- Host: `${{ matrix.os }}`\n- Commit: `${{ github.sha }}`\n- Evidence file: `provider-evidence-${{ matrix.os }}.json`\n- Promotion remains fail-closed: PASS requires runtime execution and repeated canonical equality; SKIPPED means the optional SDK was unavailable.\n' > build/visual-native/evidence/provider-promotion-report-${{ matrix.os }}.md
+      - name: Upload provider evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: vis-native-18-provider-evidence-${{ matrix.os }}
+          path: build/visual-native/evidence/
+          if-no-files-found: error
