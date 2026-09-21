@@ -28,3 +28,6 @@ This marker records that the gateway contract is under automated Windows-runner 
 
 ## Gate 05 smoke trigger
 Regression trigger refreshed after Gate 04 hardening. Host promotion remains evidence-gated.
+
+## Gate 14 verification trigger
+This repository-path change intentionally triggers the Windows regression workflow so the current gateway contract can be verified on the hosted Windows runner.
