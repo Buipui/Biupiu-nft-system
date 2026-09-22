@@ -460,3 +460,82 @@ Semantic check requirements:
 adapter identity -> capability/family routing -> evidence gates -> learning scoring -> drift handling -> human promotion -> regression.
 
 Status: IMPLEMENTED / SOURCE CROSS-LINKED / TESTS ADDED / RUNTIME VERIFICATION PENDING.
+
+
+## 24. Multilanguage coding and semantic equivalence extension — 22 September 2026
+
+The native matrix now has a dedicated language-neutral extension: `research/BIUPIU-MULTILANGUAGE-NATIVE-CODING-MATRIX-v1.0.md`.
+
+Hard rule: language syntax may differ; contract semantics, authority boundaries, evidence states, provenance, failure classes and verification meaning MUST remain equivalent.
+
+Canonical sequence:
+SEMANTIC CONTRACT -> LANGUAGE ADAPTER -> LANGUAGE-NATIVE TEST -> CROSS-LANGUAGE FIXTURE -> FEDERATION REGRESSION.
+
+Durable cross-language boundaries use versioned schemas, stable IDs, explicit states, hashes, timestamps, BCP-47 locale identity, units, provenance references and correlation/trace identifiers. Language-specific object layouts do not cross durable boundaries.
+
+The matrix now explicitly covers Python, TypeScript, JavaScript, C, C++, Rust, Kotlin, C#, Solidity, JSON/YAML/schema and CI/shell automation. External language guidance remains reference/pattern material until Biupiu-side validation.
+
+## 25. AI coding hard-implementation gate — 22 September 2026
+
+Every AI coding request MUST be evaluated against `intelligence/BIUPIU-AI-CODING-HARD-GATE-v1.0.json` and `intelligence/BIUPIU-AI-CODING-HARD-GATE.py` before generated/assisted code is treated as implementation.
+
+REQUIREMENT -> OWNER -> LANGUAGE -> CONTRACT -> PROVENANCE -> SECURITY -> DEPENDENCIES -> SEMANTIC_AUDIT -> LANGUAGE_TEST -> CROSS_LANGUAGE_TEST -> REGRESSION -> ROLLBACK -> PROMOTION.
+
+Missing requirement, owner, contract, provenance or test evidence keeps the change non-authoritative. Security or semantic failure blocks the path. Unknown languages are quarantined until a language rule exists. Runtime verification is never inferred from source inspection.
+
+This is an AI control boundary, not a prompt suggestion: it is machine-readable, executable and CI-testable.
+
+## 26. Native-code cleanup and federation implementation rule — 22 September 2026
+
+Native cleanup is now governed as a semantic migration rather than a cosmetic rewrite:
+DETECT -> CLASSIFY -> CROSS-REFERENCE OLD WORK -> PRESERVE LINEAGE -> SMALLEST REPAIR -> LANGUAGE TEST -> CROSS-LANGUAGE TEST -> REGRESSION -> LEARNING RECORD -> PROMOTION.
+
+Duplicate code is consolidated only when canonical ownership is unambiguous. Historical/research lineage is retained or quarantined. External code is never merged merely to make a native subsystem look modern.
+
+Federation harvest must compare existing internal capability before adding an external module. If the internal implementation already satisfies the contract, the external resource remains a reference/benchmark. If a gap exists, add the smallest adapter/contract needed and retain the external version, licence and provenance metadata.
+
+## 27. ML learning-algorithm governance extension — 22 September 2026
+
+Native ML learning now treats coding quality and semantic verification as evidence inputs rather than separate documentation.
+
+For reusable coding/repair patterns, learning evidence MUST include:
+- coding-matrix version;
+- language/runtime version;
+- source commit and changed-component identity;
+- semantic-audit result;
+- language-native test result;
+- cross-language contract result where applicable;
+- regression result;
+- provenance/licence/security state;
+- rollback baseline;
+- residual error/uncertainty;
+- promotion decision.
+
+A learning pattern is reusable only when the verified-fix, regression, provenance, licence and human/OS promotion gates pass. Learning can propose a coding improvement or preventative test; it cannot promote the implementation itself.
+
+## 28. Observability and semantic naming extension — 22 September 2026
+
+Cross-system diagnostics MUST use stable semantic names for events, states, errors, operations and resources. OpenTelemetry's semantic-convention model is adopted as a reference pattern because common naming improves correlation and consumption across codebases and platforms; Biupiu retains its own native contract authority. citeturn0search0turn0search4
+
+Minimum diagnostic identity:
+event_id | operation | component | state | error_type | trace/correlation_id | source_version | provenance_ref | evidence_state.
+
+Language implementations may map these fields idiomatically, but the federation meaning must remain stable.
+
+## 29. External coding-philosophy federation harvest — 22 September 2026
+
+The latest external harvest was reconciled with older Biupiu work instead of replacing it. NASA coding-standard guidance supports explicit structure, error handling, module sizing, library use, types, naming and automated adherence verification; this is now mapped into the universal engineering matrix. citeturn0search12turn0search16
+
+OpenTelemetry cross-language semantic conventions support common operation/data naming and language-specific implementations under a shared specification. citeturn0search0turn0search7
+
+These are external engineering references, not Biupiu authorities. Conflicting practices are preserved as provenance-linked candidates and resolved through the native contract, tests and regression evidence.
+
+## 30. Repository-wide hard implementation status — 22 September 2026
+
+Governance layer: IMPLEMENTED.
+Multilanguage coding matrix: IMPLEMENTED.
+AI coding hard gate: IMPLEMENTED SOURCE + MACHINE-CHECKABLE MANIFEST.
+Semantic audit: IMPLEMENTED SOURCE-LEVEL.
+ML learning cross-link: IMPLEMENTED IN GOVERNANCE + LEARNING BOUNDARY.
+Federation/external harvest: CROSS-LINKED.
+Native runtime/device/hardware/blockchain execution: remains separate and OPEN until directly evidenced.
