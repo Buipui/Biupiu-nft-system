@@ -159,3 +159,67 @@ def make_multilingual_learning_record(
         human_decision=human_decision,
         next_action="TEST",
     )
+
+
+@dataclass(frozen=True)
+class LearningEvidence:
+    """Evidence inputs used to rank a learning candidate without granting authority."""
+    verified_fix: float = 0.0
+    regression_safety: float = 0.0
+    provenance_quality: float = 0.0
+    uncertainty_reduction: float = 0.0
+    recurrence: float = 0.0
+    drift_penalty: float = 0.0
+
+
+def score_governed_learning_candidate(candidate_id: str, evidence: LearningEvidence) -> CandidateScore:
+    """Score reusable-learning candidates using evidence quality and drift.
+
+    This is a deterministic policy/selection layer, not autonomous promotion.
+    Scores are bounded to [0, 1]; Core OS promotion gates remain authoritative.
+    """
+    values = {
+        "information_gain": max(0.0, min(1.0, evidence.recurrence)),
+        "uncertainty_reduction": evidence.uncertainty_reduction,
+        "model_disagreement": evidence.drift_penalty,
+        "feasibility": evidence.provenance_quality,
+        "regression_safety": min(evidence.verified_fix, evidence.regression_safety),
+    }
+    if not all(math.isfinite(float(v)) and 0.0 <= float(v) <= 1.0 for v in values.values()):
+        raise ValueError("learning evidence must be finite values between 0 and 1")
+    base = (
+        0.20 * values["information_gain"]
+        + 0.20 * values["uncertainty_reduction"]
+        + 0.15 * values["model_disagreement"]
+        + 0.20 * values["feasibility"]
+        + 0.25 * values["regression_safety"]
+    )
+    drift_penalty = 0.20 * max(0.0, min(1.0, evidence.drift_penalty))
+    score = max(0.0, min(1.0, base - drift_penalty))
+    return CandidateScore(
+        candidate_id,
+        round(score, 6),
+        values["information_gain"],
+        values["uncertainty_reduction"],
+        values["model_disagreement"],
+        values["feasibility"],
+        values["regression_safety"],
+    )
+
+
+def learning_reuse_ready(pattern: FailurePattern, evidence: LearningEvidence,
+                         *, provenance_verified: bool, licence_checked: bool,
+                         human_approved: bool = False) -> bool:
+    """Require verified fix, regression safety and provenance before reuse."""
+    evidence_ready = (
+        evidence.verified_fix >= 1.0
+        and evidence.regression_safety >= 1.0
+        and evidence.provenance_quality >= 1.0
+        and evidence.drift_penalty < 0.5
+    )
+    return evidence_ready and can_promote_learning(
+        pattern,
+        provenance_verified=provenance_verified,
+        licence_checked=licence_checked,
+        human_approved=human_approved,
+    )
