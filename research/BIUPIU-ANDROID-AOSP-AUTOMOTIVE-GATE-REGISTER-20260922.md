@@ -46,4 +46,32 @@ DEFINE CAPABILITY -> IMPLEMENT NATIVE CONTRACT -> SEMANTIC CHECK -> FAULT FIND -
 - `research/BIUPIU-SYSTEM-CROSS-LINK-DIGEST-v1.1.md`
 - `CHANGELOG.md`
 
-**Status: REGISTERED / IMPLEMENTED SOURCE LAYER / SOURCE-LEVEL VERIFIED / RUNTIME VERIFICATION OPEN.**
+## 2026-09-22 — Accessory / Performance Federation Extension
+
+### Closed implementation checks
+- Motorola MA1: native capability + fail-closed adapter boundary added.
+- Ottocast U2-Air: native capability + fail-closed adapter boundary added.
+- SnapPerf: reference-only root/performance capability registered; no root hooks or tuning are enabled in normal Mini OS.
+- dex2oat Optimizer: reference-only ART optimization capability registered; no global dexopt properties are injected.
+- AX Manager & Nexacore Combo: exact identity not established; registered as UNRESOLVED and rejected by the capability registry.
+- Internal cross-reference against the Native Coding Philosophy & Engineering Matrix completed.
+- Semantic conflict/duplicate check completed for the new capability IDs.
+- Housekeeping retained one capability registry and one accessory adapter factory; no proprietary binaries were vendored.
+
+### External evidence boundary
+AAWireless documents its products as wireless Android Auto adapters and provides an app for device configuration/update/troubleshooting. citeturn1search0
+Ottocast documents U2-AIR as a Bluetooth/Wi-Fi wireless adapter for compatible wired CarPlay/Android Auto systems. citeturn1search1turn1search2
+SnapPerf documents itself as a Snapdragon-only rooted Android performance module for Magisk/KernelSU/APatch. citeturn1search4
+The dex2oat optimizer is documented as a root module that changes ART compilation behavior, so it remains reference-only pending target-version regression testing. citeturn0search2
+
+### New verification boundary
+**SOURCE INTEGRATION: CLOSED**
+**SEMANTIC / FAIL-CLOSED CHECK: CLOSED**
+**LICENSE / PROVENANCE REVIEW: CLOSED FOR REFERENCE-ONLY RECORDS**
+**ANDROID/GRADLE BUILD: OPEN**
+**LIVE ACCESSORY DISCOVERY: OPEN**
+**ROOT/ART PERFORMANCE RUNTIME: OPEN**
+**AX MANAGER/NEXACORE IDENTITY: OPEN / UNRESOLVED**
+**FULL AOSP/PIXEL PLATFORM BUILD: OPEN**
+
+**Status: IMPLEMENTATION CLOSED / RUNTIME-DEVICE-PLATFORM VERIFICATION OPEN.**
