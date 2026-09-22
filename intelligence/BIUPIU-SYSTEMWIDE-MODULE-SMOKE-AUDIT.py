@@ -25,7 +25,7 @@ for path in (ROOT/"software").rglob("*.py"):
     try: ast.parse(path.read_text(encoding="utf-8"), filename=str(path))
     except SyntaxError as exc: fail(f"Python syntax error {path}: {exc}")
 hub=(ROOT/"apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt").read_text(encoding="utf-8")
-if "when (module.screenId)" not in hub or "ACTION_NOT_IMPLEMENTED" not in hub: fail("Android semantic route handler incomplete")
+if "when (module.screenId)" not in hub or "startActivity(Intent(this, activityClass))" not in hub: fail("Android semantic route handler incomplete")
 registry=(ROOT/"apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt").read_text(encoding="utf-8")
 for route in ["SMART_FARMING","SMART_METAL_WORKSHOP","RND_OS","RENDER_PIPELINE","CREATIVE_AI"]:
     if route not in registry: fail(f"missing Android route: {route}")
