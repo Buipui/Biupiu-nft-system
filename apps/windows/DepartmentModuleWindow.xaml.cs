@@ -18,12 +18,37 @@ public partial class DepartmentModuleWindow : System.Windows.Window
             {
                 Content = capability.Replace('_', ' '),
                 Margin = new System.Windows.Thickness(8),
-                Padding = new System.Windows.Thickness(18, 10, 18, 10)
+                Padding = new System.Windows.Thickness(18, 10, 18, 10),
+                MinHeight = 52
             };
-            button.Click += (_, _) => TitleText.Text = $"BIUPIU R&D OS — {_target.ScreenId} — {capability}";
+            button.Click += (_, _) => HandleCapability(capability);
             CapabilityPanel.Children.Add(button);
         }
+
+        StatusText.Text = "READY — choose a capability";
     }
+
+    private void HandleCapability(string capability)
+    {
+        var result = ResolveAction(_target.Route, capability);
+        TitleText.Text = $"BIUPIU R&D OS — {_target.ScreenId} — {capability}";
+
+        StatusText.Text = result switch
+        {
+            "AUTHORIZED" => $"AUTHORIZED — {capability.Replace('_', ' ')}",
+            "SIMULATION_ONLY" => $"SIMULATION ONLY — {capability.Replace('_', ' ')}",
+            "ACTION_NOT_IMPLEMENTED" => $"REGISTERED — {capability.Replace('_', ' ')} has no executable handler yet",
+            _ => $"ACTION BLOCKED — {result}"
+        };
+    }
+
+    private static string ResolveAction(string route, string capability) => capability switch
+    {
+        "WORLD" when route is "SMART_FARMING" or "SMART_METAL_WORKSHOP" or "RND_OS" => "AUTHORIZED",
+        "AI" => "SIMULATION_ONLY",
+        "SETTINGS" => "AUTHORIZED",
+        _ => "ACTION_NOT_IMPLEMENTED"
+    };
 
     private static IReadOnlyList<string> ResolveCapabilities(string route) => route switch
     {
