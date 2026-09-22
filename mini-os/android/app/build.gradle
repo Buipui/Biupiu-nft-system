@@ -1,4 +1,6 @@
-plugins { id 'com.android.application' }
+plugins {
+    id 'com.android.application'
+}
 
 android {
     namespace 'com.biupiu.minios'
@@ -11,6 +13,19 @@ android {
         versionCode 1
         versionName '0.1.0'
     }
+
+    compileOptions {
+        sourceCompatibility JavaVersion.VERSION_17
+        targetCompatibility JavaVersion.VERSION_17
+    }
+
+    androidResources {
+        generateLocaleConfig true
+    }
+
+    lint {
+        abortOnError true
+    }
 }
 
 dependencies {
@@ -18,4 +33,24 @@ dependencies {
     implementation 'androidx.core:core:1.16.0'
     implementation 'androidx.car.app:app:1.7.0'
     implementation 'androidx.car.app:app-projected:1.7.0'
+
+    // Federation stack — versions are controlled centrally in ../build.gradle.
+    implementation "com.squareup.okhttp3:okhttp:${rootProject.ext.biupuiVersions.okhttp}"
+    implementation "net.openid:appauth:${rootProject.ext.biupuiVersions.appauth}"
+    implementation "com.apollographql.apollo:apollo-runtime:${rootProject.ext.biupuiVersions.apollo}"
+
+    implementation "io.coil-kt.coil3:coil:${rootProject.ext.biupuiVersions.coil}"
+    implementation "io.coil-kt.coil3:coil-network-okhttp:${rootProject.ext.biupuiVersions.coil}"
+    implementation "io.coil-kt.coil3:coil-gif:${rootProject.ext.biupuiVersions.coil}"
+    implementation "io.coil-kt.coil3:coil-svg:${rootProject.ext.biupuiVersions.coil}"
+
+    implementation "pl.droidsonroids.gif:android-gif-drawable:${rootProject.ext.biupuiVersions.gif}"
+    implementation "com.caverock:androidsvg-aar:${rootProject.ext.biupuiVersions.androidsvg}"
+    implementation "org.jsoup:jsoup:${rootProject.ext.biupuiVersions.jsoup}"
+
+    // Legacy compatibility provider; AndroidX AppCompat is the primary locale API.
+    compileOnly "com.github.YarikSOffice:lingver:${rootProject.ext.biupuiVersions.lingver}"
+
+    // Forward-facing PDF provider. PdfViewPager remains an adapter-only legacy option.
+    implementation "androidx.pdf:pdf-viewer-fragment:${rootProject.ext.biupuiVersions.pdf}"
 }
