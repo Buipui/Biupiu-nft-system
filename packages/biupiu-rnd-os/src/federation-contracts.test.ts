@@ -2,6 +2,8 @@ import { strict as assert } from "node:assert";
 import type { FederationCapability, FederationObservation } from "./federation-contracts.js";
 
 const capability: FederationCapability = {
+  schemaVersion: "1.0",
+  provenance: "test",
   id: "test.transport",
   version: "1.0.0",
   enabled: true,
