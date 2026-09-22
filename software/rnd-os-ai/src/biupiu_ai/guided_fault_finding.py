@@ -8,6 +8,27 @@ _NEXT={"TRANSPORT":"verify delivery/TTL/backpressure","DEPENDENCY":"compare depe
 _FAILURE_CLASS_MAP={"TRANSPORT":"integration","DEPENDENCY":"dependency","CONTRACT":"interface","VALIDATION":"logic","AUTHORITY":"provenance","MODEL":"numerical","DATA":"data","RUNTIME":"runtime","SECURITY":"provenance"}
 
 @dataclass(frozen=True)
+class FaultFixRule:
+    fault_class:str
+    diagnostic_action:str
+    fix_action:str
+    validation_action:str
+    regression_required:bool=True
+    human_promotion_required:bool=True
+
+_FAULT_FIX_MATRIX={
+    "TRANSPORT": FaultFixRule("TRANSPORT","capture delivery/TTL/backpressure evidence","repair routing/queue policy only after evidence","replay the failing delivery path"),
+    "DEPENDENCY": FaultFixRule("DEPENDENCY","compare dependency/version lock state","restore a compatible pinned version or isolate the dependency","clean-build and dependency regression"),
+    "CONTRACT": FaultFixRule("CONTRACT","validate schema/version/content-type","repair the contract boundary without changing authority","contract and compatibility regression"),
+    "VALIDATION": FaultFixRule("VALIDATION","re-run the failing validation with captured inputs","correct the smallest validated logic defect","unit plus regression test"),
+    "AUTHORITY": FaultFixRule("AUTHORITY","identify canonical owner and conflicting state","reconcile through the owning system; never overwrite silently","authority/reconciliation regression"),
+    "MODEL": FaultFixRule("MODEL","compare assumptions, units and model version","correct model/configuration with explicit assumptions","numerical/model regression"),
+    "DATA": FaultFixRule("DATA","validate provenance/schema/range/unit constraints","quarantine or repair invalid data at the boundary","data-contract regression"),
+    "RUNTIME": FaultFixRule("RUNTIME","capture trace/span and environment","apply the smallest reversible runtime fix","runtime smoke and regression"),
+    "SECURITY": FaultFixRule("SECURITY","quarantine affected path and run integrity checks","do not auto-repair; route to security review","security regression and human release"),
+}
+
+@dataclass(frozen=True)
 class GuidedFault:
     fault_id:str; fault_class:str; state:str; confidence:float; next_step:str
     candidate_causes:Sequence[str]; required_evidence:Sequence[str]
@@ -41,3 +62,12 @@ def federate_fault(log:AppendOnlyLearningLog, event:Mapping[str,object])->dict:
     return {"event_id":envelope.event_id,"fault_id":finding.fault_id,"state":finding.state,
             "failure_fingerprint":learned["failure_fingerprint"],"learning_level":learned["learning_level"],
             "promotion_allowed":False,"requires_os_validation":True}
+
+
+def fault_fix_rule(fault_class:str)->FaultFixRule:
+    """Return the deterministic diagnostic/fix/verification rule for a fault class."""
+    key=str(fault_class).upper()
+    try:
+        return _FAULT_FIX_MATRIX[key]
+    except KeyError as exc:
+        raise ValueError("unsupported fault_class") from exc
