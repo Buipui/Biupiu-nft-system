@@ -51,3 +51,28 @@ UE5/Unity HOST RUNTIME: PENDING
 HARDWARE/PHYSICAL: PENDING
 
 No runtime verification is claimed by this gate.
+
+
+## Native audit update — 2026-09-22
+
+Audit found one governance weakness in the first implementation: the native benchmark record required provenance/evidence but did not enforce licence state and source-version metadata at the ABI contract. This has now been corrected.
+
+New mandatory native fields:
+- `licence_state`
+- `source_version`
+
+The smoke path now supplies both fields. A harvested module therefore cannot pass native validation merely by having a capability name and provenance reference.
+
+This aligns the implementation with the coding matrix's third-party rule: licence verification + provenance + compatibility/build/testing evidence are prerequisites for promotion. Benchmark references remain non-authoritative until validated.
+
+External benchmark evidence remains descriptive: Palantir's Ontology documents objects/properties/links plus actions and governance as an operational layer; NVIDIA documents OpenUSD as an open, extensible scene framework and Omniverse as an application/library layer around it. citeturn0search2turn0search0turn0search1
+
+Updated verification state:
+- STATIC_SOURCE_AUDIT: PASS (contract hardened)
+- CONTRACT_SMOKE: SOURCE UPDATED; execution pending
+- LICENCE/PROVENANCE GATE: ENFORCED AT CONTRACT LEVEL
+- PACKAGE_BUILD: OPEN
+- CROSS_SYSTEM_RUNTIME: OPEN
+- UE5/Unity HOST RUNTIME: OPEN
+- HARDWARE/PHYSICAL: OPEN
+- FINAL VERIFIED: OPEN
