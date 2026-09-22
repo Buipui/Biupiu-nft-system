@@ -61,3 +61,22 @@ The recent module-testing protocols are now consolidated through `research/BIUPI
 Internal harvest consolidated native failure-learning, federation, health, fault-healing and harvest-promotion controls into one guided diagnostic boundary. External harvest added NASA assurance/IV&V and OpenTelemetry trace/context correlation as reference patterns.
 Cross-links: guided-fault-finder.ts; guided_fault_finding.py; existing learning.py; federation_protocol.py; federation-harvest-gate.ts; fault-healing-envelope-v1.json.
 Promotion remains fail-closed. External patterns are not executable dependencies. Fresh CI/runtime evidence is required before VERIFIED-WORKING.
+
+
+## Multilingual / Foreign Coding Harvest — 2026-09-22
+
+New harvest record: research/BIUPIU-FOREIGN-LANGUAGE-CODING-PHILOSOPHY-HARVEST-20260922.md
+
+Cross-linked native modules:
+- apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+- apps/shared/runtime/LanguageSelector.kt
+- apps/android/app/src/main/java/com/biupiu/rndos/BiupiuShell.kt
+- apps/windows/BiupiuLanguageRegistry.cs
+- apps/windows/MainWindow.xaml + MainWindow.xaml.cs
+- software/rnd-os-ai/src/biupiu_ai/global_language_translation.py
+- software/rnd-os-ai/src/biupiu_ai/learning.py
+
+External learning themes:
+CLDR locale identity, support levels, deterministic fallback, controlled multilingual evaluation, runtime locale selection, original-language provenance.
+
+Selection rule remains: reference first; native implementation second; external executable promotion only after the full harvest-testing registry passes.
