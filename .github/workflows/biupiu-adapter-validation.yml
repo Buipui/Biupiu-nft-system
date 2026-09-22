@@ -1,0 +1,30 @@
+name: Biupiu Adapter Repository Validation
+
+on:
+  push:
+    paths:
+      - 'adapters/**'
+      - 'tools/validate_adapter_manifests.py'
+      - 'tools/validate_adapter_manifests.sh'
+      - 'research/BIUPIU-ADAPTER-VALIDATOR-EXECUTION-GATE-v1.0.md'
+      - '.github/workflows/biupiu-adapter-validation.yml'
+      - 'research/BIUPIU-ADAPTER-CI-EXECUTION-TRIGGER-v1.0.md'
+  pull_request:
+    paths:
+      - 'adapters/**'
+      - 'tools/validate_adapter_manifests.py'
+      - 'tools/validate_adapter_manifests.sh'
+      - 'research/BIUPIU-ADAPTER-VALIDATOR-EXECUTION-GATE-v1.0.md'
+  workflow_dispatch:
+
+jobs:
+  repository-validation:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Record runner and toolchain
+        run: |
+          python3 --version
+          uname -a
+      - name: Validate adapter manifests and fixtures
+        run: python3 tools/validate_adapter_manifests.py
