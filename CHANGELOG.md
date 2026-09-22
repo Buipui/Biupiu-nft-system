@@ -1,4 +1,47 @@
-# Biupiu System Change Log
+# 2026-09-22 — Android/AOSP + Automotive Federation Expansion
+
+### External harvest
+- AOSP Mainline and Pixel/GKI architecture cross-reference completed.
+- Android Auto public Car App boundary verified against current Android documentation; stable Car App 1.7.0 selected for the native build. citeturn2search0turn1search5
+- Pixel kernel/GKI separation recorded as a device/platform adapter boundary, not a generic app dependency. citeturn1search2turn1search7
+- Vector CANoe/SIL/HIL capabilities mapped to adapter interfaces; proprietary Vector tooling remains external. citeturn1search4turn1search6
+- LSPosed/LSPlant capability model mapped to an isolated optional instrumentation boundary; no root/Zygisk activation was added to the normal Mini OS path. citeturn0search0turn0search2
+- Motorola MA2, AAWireless TWO and Carlinkit 5.0 (2Air) registered as physical accessory transport adapters; proprietary firmware/binaries are not embedded.
+- GSM Flags 2.0 could not be uniquely identified from the federation search and is therefore explicitly unresolved rather than guessed.
+
+### Native implementation
+- Added Android capability registry and fail-closed state machine.
+- Added Android Auto transport boundary.
+- Added MA2, AAWireless TWO and Carlinkit 2Air accessory adapter boundaries.
+- Added Vector automotive SIL/HIL adapter boundary.
+- Added LSPosed/ART instrumentation adapter boundary.
+- Added external-federation integration, missing-module and housekeeping rules.
+- Added stable `androidx.car.app:app:1.7.0` and `app-projected:1.7.0` dependencies.
+- Removed unused foreground-service permissions from the Android manifest.
+
+### Guided fault finding / semantic check
+- Duplicate authority conflicts: PASS.
+- Proprietary-binary contamination: PASS.
+- Unresolved capability fail-closed behaviour: PASS.
+- Physical accessory false-positive prevention: PASS.
+- OEM/private API separation: PASS.
+- Safety-critical automotive control remains behind existing verified adapter boundary.
+
+### Verification boundary
+**IMPLEMENTED / SOURCE-LEVEL VERIFIED:** registry, adapters, Android Auto dependency integration, fail-closed semantic tests and documentation.
+
+**OPEN:** Gradle/Android SDK execution, live Android Auto projection, physical MA2/AAWireless TWO/Carlinkit hardware discovery, live Vector CAN/HIL, live LSPosed runtime, encrypted persistent notification store, complete AOSP/Pixel platform build.
+
+### Housekeeping / digest
+- Added `mini-os/android/federation/AndroidCapabilityRegistry.md`.
+- Added `mini-os/android/EXTERNAL-FEDERATION-INTEGRATION.md`.
+- Added `mini-os/android/federation/` native adapter/test sources.
+- Repository changelog updated.
+- External source identity, license and verification state are preserved in the federation record.
+
+### Status transition
+**EXTERNAL HARVEST → INTERNAL GAP HARVEST → ADAPTER INTEGRATION → GUIDED FAULT FINDING → SEMANTIC CHECK PASS → HOUSEKEEPING → BUILD/DEVICE VERIFICATION OPEN.**
+
 
 # 2026-09-22 — Native Android RegiStar / One Hand Operation+ / NotiStar Harvest
 
