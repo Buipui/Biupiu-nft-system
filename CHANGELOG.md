@@ -366,3 +366,34 @@ No third-party executable code or proprietary binaries were copied.
 - Updated scientific library registry and cross-link digest.
 - Pass 2 source/reference gate: CLOSED.
 - CI, Android NDK/Gradle, device performance and GSL runtime: OPEN.
+
+
+## 2026-09-22 — OpenDroid Deep External Federation / Identity Correction
+
+### External harvest
+- Re-harvested OpenDroid from current primary repository/release/roadmap evidence.
+- Corrected the prior ambiguous `opendroid.ui-engine` classification: OpenDroid is an autonomous Android agent whose documented UI layer is Compose-based; it is not treated as a standalone UI engine authority.
+- Harvested module boundaries for accessibility automation, action dispatch, agent/planning, LLM routing, memory, Keystore security, Android services/notifications/voice, Room/DataStore, Hilt, Compose UI and ViewModels.
+
+### Native integration
+- Added `mini-os/android/federation/OpenDroidCapabilityAdapter.java`.
+- Registered explicit OpenDroid module capabilities in the Mini OS registry and Main OS federation registry.
+- Added fail-closed semantic tests; adapter availability remains false until external build/device evidence exists.
+
+### Fault finding / conflict resolution
+- Preserved the legacy unresolved `opendroid.ui-engine` identifier for traceability while preventing it from becoming runtime authority.
+- Prevented Compose UI, AccessibilityService, agent logic and external credentials from being interpreted as core OS authority.
+- No external APK, binary, key, credential or source implementation was copied.
+
+### Verification
+- External literature harvest: **PASS**.
+- Identity/module classification: **PASS by source evidence**.
+- Native source integration: **IMPLEMENTED**.
+- Semantic fail-closed boundary: **PASS by source inspection**.
+- Android/Gradle build: **OPEN**.
+- OpenDroid dependency build: **OPEN**.
+- Accessibility/Compose/Room/DataStore/Keystore device verification: **OPEN**.
+- Full CI/native repository audit: **OPEN until executed**.
+
+**Status: OPENDROID SOURCE/ADAPTER GATE COMPLETE / BUILD + DEVICE RUNTIME VERIFICATION OPEN.**
+
