@@ -32,12 +32,48 @@ class TranslationRecord:
 
 
 def normalise_language(language: str) -> str:
-    value = language.strip().lower().replace("_", "-")
-    return value.split("-", 1)[0]
+    """Return a canonical BCP-47-compatible language tag.
+
+    Script and region subtags are retained; the previous implementation
+    discarded them, which made locale selection lossy.
+    """
+    value = language.strip().replace("_", "-")
+    if not value:
+        raise ValueError("language code must not be empty")
+    parts = [part for part in value.split("-") if part]
+    if not parts:
+        raise ValueError("language code must not be empty")
+    parts[0] = parts[0].lower()
+    for i in range(1, len(parts)):
+        part = parts[i]
+        if len(part) == 4 and part.isalpha():
+            parts[i] = part.title()
+        elif len(part) in (2, 3) and part.isalnum():
+            parts[i] = part.upper() if len(part) == 2 else part
+        else:
+            parts[i] = part
+    return "-".join(parts)
+
+
+def language_family(language: str) -> str:
+    return normalise_language(language).split("-", 1)[0]
+
+
+def fallback_chain(language: str, default: str = "en") -> tuple[str, ...]:
+    """Build a deterministic locale fallback chain without losing identity."""
+    canonical = normalise_language(language)
+    family = canonical.split("-", 1)[0]
+    default_tag = normalise_language(default)
+    result = [canonical]
+    if family != canonical:
+        result.append(family)
+    if default_tag not in result:
+        result.append(default_tag)
+    return tuple(result)
 
 
 def validate_language(language: str) -> str:
-    code = normalise_language(language)
+    code = language_family(language)
     if code not in SUPPORTED_LANGUAGE_FAMILIES:
         raise ValueError(f"Unsupported language code: {language}")
     return code
