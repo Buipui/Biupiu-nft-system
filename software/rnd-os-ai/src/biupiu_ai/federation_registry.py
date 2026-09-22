@@ -27,6 +27,7 @@ DEFAULT_SYSTEMS = (
     AgentSystem("biupiu-intelligence", "research-orchestrator", ("retrieval", "evidence", "learning"), "native", "ACTIVE", "VERIFIED"),
     AgentSystem("biupiu-core-os", "authority", ("validation", "compatibility", "release-gates"), "native", "ACTIVE", "VERIFIED"),
     AgentSystem("biupiu-ai-os", "ai-routing", ("reasoning", "models", "adaptation"), "native"),
+    AgentSystem("biupiu-adapter-registry", "interoperability", ("capability-discovery", "protocol-routing", "provenance", "adapter-contracts"), "native", "ACTIVE", "VERIFIED"),
     AgentSystem("langgraph", "workflow-orchestrator", ("state-graphs", "checkpointing", "human-approval"), "adapter"),
     AgentSystem("crewai", "role-coordination", ("role-agents", "workflow"), "adapter"),
     AgentSystem("dspy", "optimization", ("evaluation", "program-optimization"), "adapter"),
