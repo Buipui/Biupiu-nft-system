@@ -228,3 +228,17 @@ External executable code remains unpromoted. Source/runtime evidence is required
 - Native learning now records EXTERNAL_FIX_GAP evidence and compares repeated harvest result sets.
 - Foreign-language fault/FMEA harvest cross-linked to guided diagnostics.
 - Status: SOURCE IMPLEMENTED / TARGETED TESTS ADDED / CI-RUNTIME OPEN.
+
+## Gate 44 — Fault Federation + Harvest Divergence + Housekeeping — 22 September 2026
+
+New cross-links:
+- research/BIUPIU-FEDERATION-FAULT-CHECK-GATE44-2026-09-22.md
+- software/rnd-os-ai/src/biupiu_ai/guided_fault_finding.py
+- software/rnd-os-ai/src/biupiu_ai/learning.py
+- software/rnd-os-ai/tests/test_guided_fault_finding.py
+- software/rnd-os-ai/tests/test_learning.py
+
+Flow:
+INTERNAL FAULT INVENTORY -> EXTERNAL/FORIGN HARVEST -> SEMANTIC MATCH -> EXTERNAL-FIX GAP LEARNING -> GUIDED FAULT PROPOSAL -> TEST -> REGRESSION -> CONTROLLED REUSE.
+
+Housekeeping removed a duplicate ExternalFixGap definition. Runtime and CI evidence remain separate from source implementation.
