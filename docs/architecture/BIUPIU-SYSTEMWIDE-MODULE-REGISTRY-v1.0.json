@@ -18,7 +18,9 @@
       "learning",
       "continual_adaptation",
       "learning_federation_bridge",
-      "federation_protocol"
+      "federation_protocol",
+      "guided_fault_finding",
+      "guided fault federation learning log"
     ],
     "DIGITAL_TWIN": [
       "digital-twin",
@@ -72,7 +74,8 @@
     "federation transport",
     "learning event/provenance contract",
     "federation capability/health/schema/delivery contract",
-    "benchmark-program harvest/native adapter contract"
+    "benchmark-program harvest/native adapter contract",
+    "guided fault-finding federation/learning-log contract"
   ],
   "external_harvest_policy": {
     "OpenUSD": "adapter/pattern only; no source copy",
