@@ -37,7 +37,7 @@ pub fn select_compute(units: &[ComputeUnit], workload: &Workload) -> Option<u32>
             return Some(unit.unit_id);
         }
 
-        if best.map_or(true, |b| unit.capacity > b.capacity) {
+        if best.is_none_or(|b| unit.capacity > b.capacity) {
             best = Some(unit);
         }
     }
