@@ -270,3 +270,28 @@ Cross-links:
 - apps/android/app/src/main/cpp/scientific_android_bridge.cpp
 Guided fault finding fixed the ambiguous Elgen/Eigen naming, provider authority leakage, invalid-input path and missing-provider build risk.
 Status: IMPLEMENTATION COMPLETE / CI, ANDROID NDK, DEVICE AND LIVE PROVIDER VERIFICATION OPEN.
+
+
+## Gate 45 — Chrono / OpenStudio / EnergyPlus / OpenSim federation — 22 September 2026
+
+External capability harvest completed for:
+- Project Chrono: vehicle and multiphysics simulation.
+- OpenStudio: building-model/workflow and design-energy integration.
+- EnergyPlus: building energy simulation solver.
+- OpenSim: movement/biomechanics reference for farming, environment-agent and World scenarios.
+
+Native cross-link:
+Research -> Intelligence -> OS/DMS -> Digital Twin -> Federation -> simulator adapter -> domain simulator -> World/observation.
+
+Native adapter registry:
+software/rnd-os-ai/src/simulator_adapters.py
+
+Android Mini OS registry:
+mini-os/android/federation/SimulatorFederationRegistry.md
+
+Test:
+software/rnd-os-ai/tests/test_simulator_federation_adapters.py
+
+No third-party executable source/binary was copied. External resources remain reference/adapter until dependency, licence, build, smoke, regression and runtime gates pass.
+
+Status: SOURCE INTEGRATED / SEMANTIC SMOKE PASS / ANDROID + HOST RUNTIME OPEN.
