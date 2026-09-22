@@ -256,3 +256,17 @@ Promotion rule: source implementation is not equivalent to runtime verification.
 
 **Status: IMPLEMENTATION CLOSED / RUNTIME-DEVICE-PLATFORM VERIFICATION OPEN.**
 \n\n## 2026-09-22 — Godot + Vulkan Federation Gate\n\nCross-links:\n- `research/BIUPIU-GODOT-VULKAN-FEDERATION-GATE-20260922.md`\n- `mini-os/android/federation/GraphicsCapabilityAdapters.java`\n- `mini-os/android/federation/AndroidCapabilityRegistry.java`\n- `mini-os/android/federation/AndroidCapabilityRegistryTest.java`\n- `research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md`\n\nFlow: INTERNAL HARVEST -> EXTERNAL FEDERATION -> CAPABILITY SPLIT -> NATIVE ADAPTER -> SEMANTIC CHECK -> HOUSEKEEPING -> RUNTIME GATE.\n\nFaults addressed: engine/API presence confused with device capability; validation-layer presence confused with production support; duplicate renderer authority risk.\n\n**Status: IMPLEMENTATION COMPLETE / SOURCE-LEVEL VERIFICATION COMPLETE / BUILD-GPU-GODOT RUNTIME OPEN.**\n
+
+## 2026-09-22 — Scientific Compute Federation
+Eigen and GNU Scientific Library were reconciled against the internal math/geometry/physics/simulator/Digital Twin/AI architecture.
+Flow: INTERNAL GAP HARVEST -> EXTERNAL EIGEN/GSL HARVEST -> LICENCE/PROVENANCE -> NATIVE ADAPTER -> ANDROID HOOK -> SEMANTIC SMOKE -> CI/RUNTIME GATE.
+Cross-links:
+- research/BIUPIU-EIGEN-GSL-SCIENTIFIC-COMPUTE-FEDERATION-GATE-20260922.md
+- research/BIUPIU-NATIVE-CODING-MATRIX-SCIENTIFIC-COMPUTE-EXTENSION-20260922.md
+- library/scientific/BIUPIU-SCIENTIFIC-LIBRARY-REGISTRY-20260922.json
+- core/multilang/include/biupiu_scientific_math_adapter.h
+- core/multilang/cpp/scientific_math_adapter.cpp
+- apps/android/app/CMakeLists.txt
+- apps/android/app/src/main/cpp/scientific_android_bridge.cpp
+Guided fault finding fixed the ambiguous Elgen/Eigen naming, provider authority leakage, invalid-input path and missing-provider build risk.
+Status: IMPLEMENTATION COMPLETE / CI, ANDROID NDK, DEVICE AND LIVE PROVIDER VERIFICATION OPEN.
