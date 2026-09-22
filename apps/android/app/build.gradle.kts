@@ -14,10 +14,9 @@ android {
         versionCode = 2
         versionName = "0.2.0"
     }
-}
-
-sourceSets {
-    getByName("main").java.srcDir("../../shared/runtime")
+    sourceSets {
+        getByName("main").java.srcDir("../../shared/runtime")
+    }
 }
 
 dependencies {
