@@ -2,16 +2,16 @@
 
 Date: 2026-09-20
 Priority: P0
-Status: WORKFLOW REGISTERED / EXECUTION EVIDENCE PENDING
+Status: RUNTIME EXECUTION OPEN / ACTIVE FAULT REMEDIATION
 
 ## Result
-The multi-language workflow is present in the repository, but GitHub reports no workflow run and no commit status for the recorded workflow commit. Therefore this gate cannot honestly be marked runtime-verified.
+The repository now exposes GitHub Actions push-run evidence. The latest federated compute/local execution workflows passed, while the Digital Twin DMS contract workflow exposed a TypeScript environment defect: Node built-in test modules were unavailable to the direct compiler invocation because the workflow installed TypeScript through npx without installing Node type declarations.
 
 ## Required execution
-- Trigger the workflow through GitHub Actions or push a qualifying change.
-- Capture Rust fmt/test/clippy results.
-- Capture C compile result.
-- Capture C++ compile result.
+- Trigger the affected workflow through GitHub Actions or push a qualifying change.
+- Capture TypeScript compile and Digital Twin/DMS contract-test results.
+- Capture Rust fmt/test/clippy results where applicable.
+- Capture C/C++ compile results where applicable.
 - On failure: isolate, patch, rerun, and preserve the failure record.
 - Only then promote components to BUILD_VERIFIED.
 
@@ -21,24 +21,37 @@ No claim of successful compilation, CI, kernel runtime, or hardware validation i
 ## Current state
 Architecture: VERIFIED AT SOURCE/REPOSITORY LEVEL
 Source tests: PRESENT
-CI workflow: PRESENT
-CI execution: PENDING
+CI workflows: PRESENT
+Affected Digital Twin CI: REMEDIATION TRIGGERED
 Hardware runtime: PENDING
 
+## 2026-09-22 — CI runtime evidence recovered
+- Direct GitHub Actions API inspection found push-triggered runs for commit 620faa89f6909ffbe69849ace2e34dc521095382 and the subsequent changelog commit.
+- Biupiu Local Execution Gates completed SUCCESS with federation manifest and contract-runtime jobs passing.
+- Biupiu World Hosting Gate completed SUCCESS, including package/contract validation.
+- The Digital Twin DMS workflow run 35753186710 completed FAILURE at TypeScript compile.
+- Failure evidence: node:test and node:assert/strict type declarations were missing from the compiler environment; the contract-test execution step was skipped as a consequence.
+- This was an environment/dependency-resolution defect, not evidence of a Digital Twin contract semantic failure.
 
-## Conflict remediation — 20 September 2026
-The earlier PR attempt returned GitHub 422 (no commits between main and the trigger branch), despite the trigger commit being discoverable. The branch was therefore treated as a stale/inconsistent execution ref rather than merged blindly. The trigger branch is retained for evidence; no false CI pass is recorded.
-
-Next execution path: create a fresh trigger branch from the verified current main ref, apply a new qualifying verification marker, then query the workflow run for that new commit.
-
-## 2026-09-22 next-gate execution — current-head CI trigger check
-
-- Current federation contract was re-read at the current repository head and confirmed to contain `timestamp`, `evidenceClass`, and `licenceState`.
-- A latent smoke-test defect was found: the timestamp regex had been double-escaped and would test for a literal `\\d` sequence instead of digits.
-- Corrected `packages/biupiu-rnd-os/src/federation-contracts.test.ts`.
-- Verification-trigger commit: `620faa89f6909ffbe69849ace2e34dc521095382`.
-- GitHub connector workflow inspection returned **no PR-associated workflow run** for that commit. The connector does not expose a push-run result here, so CI is **NOT VERIFIED**.
-- No CI/build success is claimed from source inspection alone.
+## 2026-09-22 — Corrective implementation
+- Updated .github/workflows/digital-twin-contract-ci.yml.
+- Added an explicit dependency-install step for typescript@5.8.3 and @types/node@22.10.0.
+- Changed the compile invocation to use the installed TypeScript binary.
+- Verification-trigger commit: 382660881a0cf9fa32fc98c65e94757e21b88a48.
+- Fresh runtime result for this corrective commit remains OPEN pending the new GitHub Actions run.
 
 ### Gate transition
-**LATENT TEST DEFECT FOUND → PATCH IMPLEMENTED → CI TRIGGER COMMIT CREATED → RUNTIME CI EVIDENCE OPEN.**
+CI RUNTIME EVIDENCE RECOVERED → DIGITAL-TWIN COMPILE FAULT ISOLATED → DEPENDENCY FIX IMPLEMENTED → FRESH RUNTIME VERIFICATION OPEN.
+
+## Verification boundary
+VERIFIED
+- Push-triggered GitHub Actions execution is observable.
+- Federation manifest/contract-runtime workflow passed on 620faa89f6909ffbe69849ace2e34dc521095382.
+- World Hosting package/contract validation passed on the same trigger sequence.
+
+OPEN
+- Corrected Digital Twin DMS TypeScript compile.
+- Digital Twin/DMS/federation-sync runtime tests after the dependency fix.
+- Full monorepo package build.
+- Rust live execution where the environment requires Cargo.
+- Physical GPU/NPU discovery, real multicore scaling/contention, platform regression, ECU/CAN-FD HIL, VR timing/input, physical sensor validation, and live fault injection/recovery.
