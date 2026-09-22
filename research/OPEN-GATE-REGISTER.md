@@ -146,3 +146,21 @@ EXTERNAL EXECUTABLE PROMOTION = BLOCKED until provenance/licence/security/static
 - External executable promotion: **BLOCKED pending full evidence gates**.
 
 Audit: research/BIUPIU-FEDERATION-FAULT-CHECK-GATE44-2026-09-22.md
+
+
+## GATE 45 — Eigen + GNU Scientific Library Scientific Compute Federation — 22 September 2026
+- Internal-first gap harvest: COMPLETED.
+- External Eigen/GSL harvest: COMPLETED AS REFERENCE EVIDENCE.
+- Elmer ambiguity check: COMPLETED; kept separate as multiphysics reference.
+- Native C++ adapter: IMPLEMENTED.
+- Android native CMake hook: IMPLEMENTED.
+- Guided fault finding: COMPLETED.
+- Semantic source check: PASS.
+- Scientific smoke test: REGISTERED.
+- Licence/provenance: RECORDED; GSL executable promotion remains licence-gated.
+- CI execution: OPEN until observed.
+- Android NDK/Gradle build: OPEN.
+- Device/runtime provider enumeration: OPEN.
+- Numerical regression across external providers: OPEN.
+- External executable promotion: BLOCKED until full evidence ladder and human release gate pass.
+Audit: research/BIUPIU-EIGEN-GSL-SCIENTIFIC-COMPUTE-FEDERATION-GATE-20260922.md
