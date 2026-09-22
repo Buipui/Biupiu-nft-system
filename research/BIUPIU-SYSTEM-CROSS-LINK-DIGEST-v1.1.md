@@ -173,3 +173,25 @@ Native implementation: packages/biupiu-rnd-os/src/guided-fault-finder.ts and sof
 Internal harvest reuses existing failure fingerprints, learning levels, OS-validation boundaries, federation gates, harvest promotion controls, fault/healing envelopes and render health/failure-learning modules.
 External federation harvest incorporates NASA assurance/IV&V and OpenTelemetry trace/context correlation as reference patterns only. No external executable code is promoted.
 Status: IMPLEMENTED SOURCE LAYER / CROSS-LINKED / FRESH CI VERIFICATION OPEN.
+
+
+## Gate 37 — Native Multilingual Federation Cross-Link — 22 September 2026
+
+Shared language authority:
+apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+
+Consumers:
+- Android OS shell
+- Windows desktop shell
+- Smart Farming domain
+- Biupiu Intelligence translation/retrieval
+- Federation foreign-language harvest
+- Native ML learning layer
+- Coding/engineering matrix
+
+Semantic flow:
+FOREIGN SOURCE -> ORIGINAL TERMINOLOGY -> LOCALE NORMALISATION -> INTERNAL MATCH -> TEST -> RESULT -> LEARNING -> INDEX -> PROMOTION.
+
+The implementation explicitly separates locale selection from translation quality and evidence state. External multilingual code is not merged into the native core by default.
+
+Status: **IMPLEMENTED / SOURCE CHECK PASS / RUNTIME VERIFICATION OPEN.**
