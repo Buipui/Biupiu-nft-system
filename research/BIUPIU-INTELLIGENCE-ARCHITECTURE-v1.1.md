@@ -103,3 +103,7 @@ Learning must preserve:
 The learning layer may generate preventative multilingual tests and retrieval improvements. It may not promote translated code, change evidence state, or overwrite authoritative language contracts without the normal validation and human release gates.
 
 Blockchain boundary remains unchanged: only approved hashes/manifests/IDs may be anchored; private knowledge, raw translation data, credentials and confidential IP remain off-chain.
+
+
+## External-fix gap learning extension — 22 September 2026
+Federation now feeds the pattern EXTERNAL SEARCH -> INTERNAL CROSS-CHECK -> GAP -> SEMANTIC/LICENCE/SECURITY CHECK -> NATIVE FIX PROPOSAL -> GUIDED FAULT FINDING -> TEST -> REGRESSION -> LEARNING. A dedicated comparison primitive records repeated-harvest divergence without assigning an unsupported cause. External executable code remains non-authoritative.
