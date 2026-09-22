@@ -6,10 +6,15 @@ def test_registry_is_deterministic_and_nonempty():
     assert adapter_ids()==tuple(sorted(adapter_ids()))
     assert "ros2-dds" in adapter_ids()
     assert "eclipse-ditto" in adapter_ids()
+    assert "cocos2d-x" in adapter_ids()
+    assert "raylib" in adapter_ids()
+    assert "babylonjs" in adapter_ids()
 
 def test_family_routing():
     assert any(a.adapter_id=="flower" for a in adapters_for_family("federated-ml"))
     assert any(a.adapter_id=="fmi-fmu" for a in adapters_for_family("simulation"))
+    assert any(a.adapter_id=="cocos-engine" for a in adapters_for_family("game-engine"))
+    assert any(a.adapter_id=="ashley-ecs" for a in adapters_for_family("ecs"))
 
 def test_candidate_never_promotes_even_with_complete_evidence():
     adapter=next(a for a in USABLE_ADAPTERS if a.adapter_id=="flower")
