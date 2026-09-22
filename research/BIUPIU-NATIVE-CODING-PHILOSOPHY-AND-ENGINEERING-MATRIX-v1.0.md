@@ -545,3 +545,24 @@ Native runtime/device/hardware/blockchain execution: remains separate and OPEN u
 AI-assisted repair MUST distinguish INTERNAL_PRESENT, MISSING_INTERNAL and PARTIAL_INTERNAL. An externally found fix that is absent internally becomes a governed candidate, not an automatic patch. Required sequence: SOURCE -> INTERNAL MATCH -> SEMANTIC MATCH -> PROVENANCE -> LICENCE -> SECURITY -> NATIVE IMPLEMENTATION -> TEST -> REGRESSION -> ROLLBACK -> PROMOTION.
 Repeated harvests MUST retain pass identity and compare common/unique evidence. Result-set divergence is a diagnostic signal, not proof of a root cause. Foreign-language evidence retains original terminology and provenance.
 \n\n## 23. Graphics / Godot / Vulkan federation extension — 22 September 2026\n\nThe native matrix now explicitly governs graphics API and engine federation.\n\nHard rules:\n- Renderer selection MUST be capability-driven, never name-driven.\n- Engine/API presence MUST NOT be treated as live GPU/device support.\n- Vulkan loader, API version, feature set, device limits and extensions are separate evidence fields.\n- Validation layers are development diagnostics, not production rendering dependencies.\n- Godot remains an external engine/provider boundary; engine source is not silently promoted into the native OS.\n- Renderer fallbacks MUST preserve a known-good path and be observable.\n- GPU resources, synchronization and lifetime ownership MUST remain inside the renderer/provider boundary.\n- Shader/toolchain versions and backend capabilities MUST be versioned before promotion.\n- Android Vulkan support is verified only from device/runtime evidence, not from source dependencies.\n\nVerification mapping: source/contract checks may establish adapter correctness; clean Android builds, live Vulkan enumeration, Godot runtime, frame timing and GPU regression remain higher verification gates.\n
+
+## Federation module semantic extension — 22 September 2026
+
+The native coding matrix now governs multi-provider physics, quantum and graphics federation.
+
+Hard rules:
+- Provider identity, source, licence, capability set, version and evidence state MUST be explicit.
+- External libraries MUST be wrapped by a native contract before system-wide use.
+- External source code MUST NOT be copied merely to satisfy a capability request.
+- Classical physics, quantum simulation and graphics rendering MUST remain semantically distinct domains.
+- Numerical results MUST carry units, assumptions, precision, solver/provider identity, residual/error and provenance.
+- Provider fallback MUST be explicit and observable; a missing provider is not silently replaced.
+- Runtime/device/GPU/HIL evidence MUST NOT be inferred from repository registration or source-level smoke tests.
+- Semantic equivalence across Jolt/Bullet/private physics and QuTiP/OpenFermion providers is a test requirement, not an assumption.
+- OpenGL/OpenGL ES API registration MUST NOT be interpreted as proof of Android device support.
+- Native ML may learn from provider failures and regressions only through the existing evidence, provenance, licence, security, rollback and human-promotion gates.
+
+Canonical federation registry:
+`research/BIUPIU-FEDERATION-JOLT-BULLET-QUTIP-OPENFERMION-OPENGL-20260922.json`.
+
+Status: GOVERNANCE EXTENSION SOURCE-INTEGRATED / RUNTIME VERIFICATION OPEN.
