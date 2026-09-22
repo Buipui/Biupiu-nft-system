@@ -1,5 +1,34 @@
 # Biupiu System Change Log
 
+# 2026-09-22 — Native Android RegiStar / One Hand Operation+ / NotiStar Harvest
+
+### External federation harvest
+- Cross-referenced Samsung's documented RegiStar, One Hand Operation+ and NotiStar capabilities against the Buipui Mini OS architecture.
+- RegiStar capability requirements harvested: settings-home organisation, settings-change history/search, back-tap actions on supported hardware, and side-key actions.
+- One Hand Operation+ capability requirements harvested: left/right edge gesture handles, horizontal/diagonal gesture mapping, app exclusions and one-handed reachability.
+- NotiStar capability requirements harvested: notification capture, history, keyword filtering, app filtering and configurable retention.
+
+### Native integration
+- Added mini-os/android as the native Android application/build skeleton.
+- Added Android notification-listener integration for a Buipui-owned notification history layer.
+- Added keyword and package filtering.
+- Added accessibility-service foundation for Buipui gesture/one-hand controls.
+- Added an explicit integration matrix separating Android-public API capabilities from OEM/privileged capabilities.
+- Added verification-boundary documentation so OEM-specific back-tap and side-key interception are not falsely marked as universally supported.
+- Corrected the notification store to avoid Java record syntax and improve broad Android toolchain compatibility.
+
+### Verification status
+- Repository writes: VERIFIED.
+- Native Android source structure: IMPLEMENTED.
+- Static source inspection: PASS.
+- Physical Gradle/Android SDK build: OPEN until an Android build environment executes the project.
+- True OEM back-tap/side-key interception: OPEN pending target-device/OEM privileged validation.
+- Persistent encrypted notification database/retention UI: OPEN; current store is an in-memory prototype.
+
+### Status transition
+EXTERNAL HARVEST → CAPABILITY CROSS-REFERENCE → NATIVE ANDROID SKELETON IMPLEMENTED → SOURCE CHECK PASS → DEVICE/BUILD VERIFICATION OPEN.
+
+
 #
 ## 2026-09-22 — Gate 36 Universal Simulator Contract Verification
 
