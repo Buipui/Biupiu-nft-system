@@ -50,6 +50,14 @@ export function evaluateHarvestPromotion(record: HarvestRecord): PromotionResult
     reasons.push("identity/version metadata is incomplete");
   }
 
+  if (!nonEmpty(record.evidence.source)) {
+    reasons.push("harvest source is missing");
+  }
+
+  if (record.repositoryPath !== undefined && !nonEmpty(record.repositoryPath)) {
+    reasons.push("repository placement is empty");
+  }
+
   if (record.status === "QUARANTINED" || record.status === "SUPERSEDED") {
     reasons.push(`record status is ${record.status}`);
   }
