@@ -79,3 +79,31 @@ External sources supply protocols, interfaces, reference patterns and candidate 
 - CI/runtime/device/HIL verification remains OPEN.
 
 Status: SOURCE IMPLEMENTED / HOUSEKEEPING PASS / TARGETED TESTS PRESENT / RUNTIME VERIFICATION OPEN.
+
+
+## Gate 36 — Native AI authority hierarchy correction + repository/changelog audit — 22 September 2026
+
+Audit found a documentation-to-architecture mismatch: the Federation Protocol stated that Native Intelligence was the top-level authority, while the Native Coding Matrix and promotion code require Core OS/DMS validation and human/release approval.
+
+Correction:
+- Native Intelligence is now a proposal/classification/routing/learning authority, not an execution or release authority.
+- Core OS/DMS remains the canonical executable validation authority.
+- Domain owners retain domain execution authority.
+- Human/release authority remains the final promotion authority.
+- Federation and external providers remain subordinate coordination/reference layers.
+- Added executable authority contract and focused regression tests.
+
+Repository audit result:
+- mismatch identified: Federation Protocol hierarchy;
+- supporting native code was already fail-closed;
+- corrected protocol and master index;
+- changelog now records the correction;
+- no historical research records were deleted.
+
+Verification:
+- source correction: IMPLEMENTED;
+- authority contract: IMPLEMENTED;
+- regression-test source: IMPLEMENTED;
+- host/CI execution: OPEN;
+- device/runtime: OPEN;
+- human release: OPEN.
