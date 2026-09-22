@@ -1,6 +1,28 @@
 # Biupiu System Change Log
 
 #
+## 2026-09-22 — Gate 36 Universal Simulator Contract Verification
+
+### Fault found
+- Cross-checking Gate 36's universal simulator identifiers against the canonical TypeScript federation contract found a provenance-contract gap.
+- `FederationObservation` did not explicitly carry the required timestamp or licence state, and the evidence field was named `evidence` rather than the Gate 36 contract's `evidenceClass`.
+
+### Corrective implementation
+- Added `timestamp`, `evidenceClass` and `licenceState` to `packages/biupiu-rnd-os/src/federation-contracts.ts`.
+- Added `FederationLicenceState` as an explicit bounded state vocabulary.
+- Extended `federation-contracts.test.ts` with assertions for the new provenance fields.
+
+### Verification
+- Corrected federation contract: **STATIC TYPE CHECK PASS**.
+- Environment: TypeScript 5.8.3; strict mode; ES2022; NodeNext module/module-resolution.
+- Full monorepo package build and fresh CI remain **OPEN**.
+- Simulator-host runtime, UE/Android runtime, cross-simulator execution, hardware/HIL and physical correlation remain **OPEN**.
+
+### Status transition
+**CONTRACT GAP FOUND → PATCH IMPLEMENTED → STATIC TYPE CHECK PASS → RUNTIME FEDERATION OPEN.**
+
+
+#
 ## 2026-09-22 — Next-Gate Scheduler Fault Check
 
 ### Fault found
