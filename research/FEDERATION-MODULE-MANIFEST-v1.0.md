@@ -49,3 +49,19 @@ External source code must remain attributable to its source, version, commit/has
 ## Current integration conclusion
 
 The repository already contains the primary blockchain modules required for the local execution path. The federation layer therefore adds **discovery, quarantine and independent validation**, rather than duplicating the existing EVM stack.
+
+
+## OpenDroid deep harvest — 2026-09-22
+
+OpenDroid is registered as an external Android-agent family rather than a standalone UI engine.
+
+| Candidate | Intended role | Decision |
+|---|---|---|
+| OpenDroid Android agent | accessibility/actions/agent/LLM/memory/security/service/voice | QUARANTINED / ADAPTER_ONLY |
+| OpenDroid Compose UI | presentation surface reference | QUARANTINED / ADAPTER_ONLY |
+| OpenDroid Room/DataStore | persistence reference | QUARANTINED / ADAPTER_ONLY |
+| OpenDroid Hilt | dependency-injection reference | QUARANTINED / ADAPTER_ONLY |
+| `opendroid.ui-engine` | legacy ambiguous identity | BLOCKED / UNRESOLVED |
+
+Canonical harvest: `research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md`.
+
