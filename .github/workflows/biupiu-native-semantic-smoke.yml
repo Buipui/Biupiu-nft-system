@@ -1,0 +1,24 @@
+name: Biupiu native semantic smoke
+
+on:
+  push:
+    paths:
+      - "software/rnd-os-ai/**"
+      - "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md"
+  workflow_dispatch:
+
+jobs:
+  native-semantic-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Compile native AI Python
+        run: python -m compileall -q software/rnd-os-ai/src
+      - name: Run targeted authority and learning tests
+        env:
+          PYTHONPATH: software/rnd-os-ai/src
+        run: |
+          python -m pytest -q             software/rnd-os-ai/tests/test_authority_hierarchy.py             software/rnd-os-ai/tests/test_federation_authority_gate.py             software/rnd-os-ai/tests/test_learning_governance_semantics.py
