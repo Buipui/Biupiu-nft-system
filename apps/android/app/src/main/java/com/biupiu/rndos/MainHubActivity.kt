@@ -10,7 +10,7 @@ import android.widget.LinearLayout
 import android.widget.TextView
 
 class MainHubActivity : Activity() {
-    private val session = RuntimeSession("local-preview", "PUBLIC", "active", emptyList())
+    private val session = RuntimeSession("android", "local-preview", "PUBLIC", "active", emptyList())
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
