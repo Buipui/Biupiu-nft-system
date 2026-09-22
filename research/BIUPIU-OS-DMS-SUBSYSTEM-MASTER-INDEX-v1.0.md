@@ -444,3 +444,11 @@ Primary OS/DMS consumers:
 AI/COMPUTE, DIGITAL-TWIN, ROBOTICS, AUTOMOTIVE, AGRI, WATER, ENERGY, ELECTROMAG, PHOTONICS, ADV-MFG, MATERIALS, MARINE, AERO and BIOMED.
 
 Native ML now receives adapter failure/health evidence through the existing guided-fault-finding and learning-federation path.
+
+
+## 42. Federation Fault Check + External-Fix Learning — 22 September 2026
+- Added ExternalFixGap guided-diagnostic path.
+- Added EXTERNAL-FIX-GAP-LEARNING-v1 and repeated-harvest comparison.
+- Added foreign-language FMEA/fault-diagnosis harvest record.
+- Existing runtime/device/bootstrap/HIL gaps remain OPEN.
+- Status: SOURCE IMPLEMENTED / TESTS ADDED / CI-RUNTIME OPEN.
