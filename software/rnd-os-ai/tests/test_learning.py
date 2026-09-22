@@ -48,3 +48,33 @@ def test_multilingual_learning_record_preserves_locale_metadata():
     assert "locale=zh-Hant-TW" in record.input_refs
     assert "source_language=zh" in record.input_refs
     assert record.target_type == "MULTILINGUAL_ROUTING"
+
+
+def test_governed_learning_score_is_bounded_and_drift_aware():
+    from biupiu_ai.learning import LearningEvidence, score_governed_learning_candidate
+    low = score_governed_learning_candidate("x", LearningEvidence(
+        verified_fix=1.0, regression_safety=1.0, provenance_quality=1.0,
+        uncertainty_reduction=0.8, recurrence=0.7, drift_penalty=0.0))
+    high_drift = score_governed_learning_candidate("x", LearningEvidence(
+        verified_fix=1.0, regression_safety=1.0, provenance_quality=1.0,
+        uncertainty_reduction=0.8, recurrence=0.7, drift_penalty=0.9))
+    assert 0.0 <= low.score <= 1.0
+    assert 0.0 <= high_drift.score <= 1.0
+    assert high_drift.score < low.score
+
+
+def test_learning_reuse_remains_human_gated():
+    from biupiu_ai.learning import (
+        FailureObservation, LearningEvidence, fingerprint_failure,
+        summarize_failure_pattern, learning_reuse_ready,
+    )
+    fp = fingerprint_failure("runtime", "timeout", target_id="core", platform="linux")
+    pattern = summarize_failure_pattern([
+        FailureObservation("core", "runtime", fp, "timeout", True, True, platform="linux"),
+        FailureObservation("core", "runtime", fp, "timeout", True, True, platform="linux"),
+    ])
+    evidence = LearningEvidence(1.0, 1.0, 1.0, 0.5, 0.5, 0.0)
+    assert not learning_reuse_ready(pattern, evidence, provenance_verified=True,
+                                    licence_checked=True, human_approved=False)
+    assert learning_reuse_ready(pattern, evidence, provenance_verified=True,
+                                 licence_checked=True, human_approved=True)
