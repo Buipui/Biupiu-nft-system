@@ -1,4 +1,4 @@
-# BIUPIU NATIVE CODING PHILOSOPHY & ENGINEERING MATRIX v1.0
+# BIUPIU NATIVE CODING PHILOSOPHY & ENGINEERING MATRIX v1.1
 
 Date: 2026-09-22
 Status: HARD-CODED GOVERNANCE STANDARD
@@ -562,3 +562,37 @@ Required sequence:
 INTERNAL GAP HARVEST -> EXTERNAL HARVEST -> LICENCE/PROVENANCE -> NATIVE CONTRACT -> SEMANTIC CHECK -> UNIT/INTEGRATION -> SMOKE -> REGRESSION -> RUNTIME -> PROMOTION.
 
 Status: GOVERNANCE EXTENSION INTEGRATED / RUNTIME VERIFICATION OPEN.
+
+## 22. Secure-native verification extension — 22 September 2026
+
+New hard principles:
+1. Authority validation is an executable contract; documentation alone is insufficient.
+2. Security/licence/provenance gates default to fail-closed.
+3. Risk penalties must reduce, never increase, candidate-selection priority.
+4. Core-OS validation is an explicit federation gate.
+5. Memory safety is a first-class native verification gate.
+6. Privileged native code receives stronger sanitizer, CFI, fuzzing and boundary verification according to risk.
+7. Every discovered defect becomes a permanent regression test.
+8. Third-party components are verified as part of the system.
+9. Clean-build evidence is distinct from source presence.
+10. Canonical architecture, changelog, matrix, implementation and tests must agree.
+
+External engineering references incorporated: NIST SSDF; NIST developer verification guidance; Android Open Source Project native security, memory safety, CFI and Rust guidance; CISA/FBI secure-by-design memory-safety guidance.
+
+References:
+- https://csrc.nist.gov/projects/ssdf
+- https://www.nist.gov/itl/executive-order-14028-improving-nations-cybersecurity/software-supply-chain-security-guidance-3
+- https://source.android.com/docs/security/overview/implement
+- https://source.android.com/docs/security/test/memory-safety
+- https://source.android.com/docs/security/test/cfi
+- https://source.android.com/docs/setup/build/rust/building-rust-modules/overview
+- https://www.cisa.gov/sites/default/files/2025-02/secure-by-design-alert-eliminating-buffer-overflow-vulnerabilities-508c.pdf
+
+Applied corrections:
+- learning.py licence promotion gate defaults fail-closed;
+- learning.py drift penalty no longer increases model-disagreement score;
+- federation_protocol.py F01 explicitly requires Core OS validation;
+- authority hierarchy has executable enforcement and regression tests;
+- identified semantic defects have dedicated regression tests.
+
+Status: v1.1 governance extension implemented at source; host/CI/runtime evidence remains required.
