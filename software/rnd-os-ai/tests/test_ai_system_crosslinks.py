@@ -8,8 +8,14 @@ def run() -> None:
     assert link_for("biupiu-core-os").authority == "native"
     assert link_for("qualcomm.qairt").promotion_state == "FAIL_CLOSED"
     assert link_for("huawei.hiai").promotion_state == "FAIL_CLOSED"
+    assert link_for("onnxruntime.qnn-plugin").promotion_state == "FAIL_CLOSED"
+    assert link_for("litert.qualcomm-qnn").promotion_state == "FAIL_CLOSED"
+    assert link_for("mediatek.neuropilot").promotion_state == "FAIL_CLOSED"
+    assert link_for("samsung.exynos-ailitecore").promotion_state == "FAIL_CLOSED"
     assert "runtime" in link_for("onnxruntime.android").evidence_required
     assert "regression" in link_for("litert.v2").evidence_required
+    assert "device" in link_for("android.camerax").evidence_required
+    assert "runtime" in link_for("android.media3").evidence_required
     for link in AI_SYSTEM_LINKS:
         assert link.system_id
         assert link.authority
