@@ -5,6 +5,7 @@ on:
     paths:
       - "software/rnd-os-ai/**"
       - "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md"
+      - ".github/workflows/biupiu-native-semantic-smoke.yml"
   workflow_dispatch:
 
 jobs:
