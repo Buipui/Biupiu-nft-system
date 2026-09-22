@@ -65,6 +65,20 @@
       "Bentley iTwin",
       "Unreal Engine 5",
       "Unity 6"
+    ],
+    "USABLE_FEDERATION_ADAPTERS": [
+      "mqtt-5",
+      "eclipse-ditto",
+      "opcua-pubsub",
+      "ros2-dds",
+      "openusd",
+      "fmi-fmu",
+      "flower",
+      "nvflare",
+      "opentelemetry",
+      "a2a",
+      "opensharing",
+      "autosar-capi"
     ]
   },
   "shared_contracts": [
@@ -75,7 +89,9 @@
     "learning event/provenance contract",
     "federation capability/health/schema/delivery contract",
     "benchmark-program harvest/native adapter contract",
-    "guided fault-finding federation/learning-log contract"
+    "guided fault-finding federation/learning-log contract",
+    "governed native adapter registry",
+    "evidence-weighted learning reuse contract"
   ],
   "external_harvest_policy": {
     "OpenUSD": "adapter/pattern only; no source copy",
@@ -85,7 +101,8 @@
     "OEM": "adapter/reference only; no proprietary OEM source or restricted material",
     "OPC_UA": "PubSub/information-model adapter pattern only",
     "OpenTelemetry": "semantic/context pattern only; core remains dependency-light",
-    "benchmark-programs": "pattern/adapter only; no vendor source/assets; provenance/licence/security/build/smoke/regression gates required"
+    "benchmark-programs": "pattern/adapter only; no vendor source/assets; provenance/licence/security/build/smoke/regression gates required",
+    "usable-adapters": "interface metadata only until provenance/licence/security/build/smoke/regression/runtime/human gates pass"
   },
   "required_gate_order": [
     "STATIC_SOURCE_AUDIT",
