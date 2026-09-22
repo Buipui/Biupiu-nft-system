@@ -1,0 +1,24 @@
+name: Biupiu AI-73 Governance Closure
+on:
+  push:
+    branches:
+      - gate/AI-73-ci-execution-2026-09-21
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+jobs:
+  ai73:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: AI-72 closure smoke
+        run: python3 intelligence/BIUPIU-AI72-CLOSURE-SMOKE-TEST.py
+      - name: AI-72 static audit
+        run: python3 intelligence/BIUPIU-AI72-DEPENDENCY-INTERFACE-CLOSURE-AUDIT.py
+      - name: Evidence
+        if: always()
+        run: |
+          echo "gate=AI-73"
+          echo "commit=$GITHUB_SHA"
+          python3 --version
