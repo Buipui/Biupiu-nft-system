@@ -1,8 +1,9 @@
 """Safe provider-neutral adapters for validated simulation backends.
 
-Adapters only probe local executables and construct argument-safe commands.
-They never install or execute third-party backends automatically.
+Adapters probe local executables and construct argument-safe commands.
+They never install, vendor, or execute third-party backends automatically.
 """
+
 from dataclasses import dataclass
 from shutil import which
 from typing import Optional, Tuple
@@ -45,8 +46,18 @@ class SimulatorAdapter:
 
 
 GAZEBO = SimulatorAdapter("Gazebo", "gz")
+CHRONO = SimulatorAdapter("Project Chrono", "chrono")
+OPENSTUDIO = SimulatorAdapter("OpenStudio", "openstudio")
+ENERGYPLUS = SimulatorAdapter("EnergyPlus", "energyplus")
+OPENSIM = SimulatorAdapter("OpenSim", "opensim")
 
 
 def backend_matrix() -> dict[str, AdapterResult]:
     """Return non-executing availability probes for registered simulator backends."""
-    return {"gazebo": GAZEBO.probe()}
+    return {
+        "gazebo": GAZEBO.probe(),
+        "chrono": CHRONO.probe(),
+        "openstudio": OPENSTUDIO.probe(),
+        "energyplus": ENERGYPLUS.probe(),
+        "opensim": OPENSIM.probe(),
+    }
