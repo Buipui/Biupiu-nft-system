@@ -109,3 +109,17 @@ Registered JDK 17 lifecycle controls and a fail-closed Android signing workflow.
 
 ## Gate 32 — Android Security Harvest
 Security controls integrated: cleartext denial, backup/data-extraction boundary, runtime-session validation and central security policy. Runtime/OEM/CI security verification remains pending.
+
+
+## 39. Design Language + UI Semantic Enforcement — 22 September 2026
+
+Canonical records:
+- `docs/architecture/BIUPIU-DESIGN-LANGUAGE-CODE-CONTRACT-v1.0.json`
+- `research/BIUPIU-UI-SEMANTIC-ACTION-CONTRACT-v1.0.md`
+- `research/BIUPIU-DESIGN-UI-SIMULATOR-AUDIT-2026-09-22.md`
+
+The unified design philosophy is now represented as a machine-readable contract and a semantic action contract. Native simulator modules are bound to the same design/interaction authorities. Desktop/mobile audit found and corrected a missing Windows capability panel, silent desktop capability handlers, Android no-op handlers and an unregistered Render Pipeline route that silently returned.
+
+Promotion remains fail-closed: source correction is not runtime verification. Build, emulator/device, UE5, host simulator and HIL evidence remain separate gates.
+
+**Status: SOURCE CORRECTED / STATIC AUDIT ADDED / RUNTIME VERIFICATION PENDING.**
