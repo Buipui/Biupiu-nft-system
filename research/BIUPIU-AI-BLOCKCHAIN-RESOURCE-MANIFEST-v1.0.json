@@ -4,26 +4,177 @@
   "status": "indexed",
   "purpose": "Reusable AI, blockchain, verification and algorithm research references identified in the September 2026 cross-source sweep.",
   "resources": [
-    {"name":"LangMem","capability":"persistent agent memory","department":["AI","COMPUTE"]},
-    {"name":"Awesome Efficient Agents","capability":"agent efficiency research index","department":["AI","COMPUTE"]},
-    {"name":"HardFlow","capability":"hard-constrained generative sampling","department":["AI","ROBOTICS","AERO","MARINE","ADV-MFG","PHYS-SYS"]},
-    {"name":"SceneSmith","capability":"simulation-ready 3D scene generation","department":["DIGITAL-TWIN","CG-3D","PRIVATE-RD","ROBOTICS"]},
-    {"name":"EZKL","capability":"zero-knowledge ML inference","department":["VERIFICATION","AI","BLOCKCHAIN"]},
-    {"name":"RISC Zero","capability":"general-purpose verifiable computation","department":["VERIFICATION","COMPUTE","BLOCKCHAIN"]},
-    {"name":"SP1","capability":"RISC-V zkVM","department":["VERIFICATION","COMPUTE","BLOCKCHAIN"]},
-    {"name":"Giza Agents","capability":"verifiable AI and smart-contract interoperability","department":["AI","BLOCKCHAIN"]},
-    {"name":"Google AP2","capability":"agent payment authorization protocols","department":["BLOCKCHAIN","AI"]},
-    {"name":"A2A x402","capability":"agent-to-agent crypto payment extension","department":["BLOCKCHAIN","AI"]},
-    {"name":"Coinbase AgentKit","capability":"agent wallet and on-chain interaction tooling","department":["BLOCKCHAIN","AI"]},
-    {"name":"NASA Prithvi-EO-2.0","capability":"Earth-observation foundation model","department":["AGRICULTURE","CONSERVATION","CLIMATE","DIGITAL-TWIN"]},
-    {"name":"NASA Prithvi-WxC","capability":"weather and climate foundation model","department":["AGRICULTURE","WATER","CLIMATE","DIGITAL-TWIN"]},
-    {"name":"CrysVCD","capability":"constraint-aware generative materials discovery","department":["MATERIALS","ADV-MFG","AI"]},
-    {"name":"CADFit","capability":"mesh-to-CAD reconstruction and optimization","department":["CG-3D","ADV-MFG","DIGITAL-TWIN"]}
+    {
+      "name": "LangMem",
+      "capability": "persistent agent memory",
+      "department": [
+        "AI",
+        "COMPUTE"
+      ]
+    },
+    {
+      "name": "Awesome Efficient Agents",
+      "capability": "agent efficiency research index",
+      "department": [
+        "AI",
+        "COMPUTE"
+      ]
+    },
+    {
+      "name": "HardFlow",
+      "capability": "hard-constrained generative sampling",
+      "department": [
+        "AI",
+        "ROBOTICS",
+        "AERO",
+        "MARINE",
+        "ADV-MFG",
+        "PHYS-SYS"
+      ]
+    },
+    {
+      "name": "SceneSmith",
+      "capability": "simulation-ready 3D scene generation",
+      "department": [
+        "DIGITAL-TWIN",
+        "CG-3D",
+        "PRIVATE-RD",
+        "ROBOTICS"
+      ]
+    },
+    {
+      "name": "EZKL",
+      "capability": "zero-knowledge ML inference",
+      "department": [
+        "VERIFICATION",
+        "AI",
+        "BLOCKCHAIN"
+      ]
+    },
+    {
+      "name": "RISC Zero",
+      "capability": "general-purpose verifiable computation",
+      "department": [
+        "VERIFICATION",
+        "COMPUTE",
+        "BLOCKCHAIN"
+      ]
+    },
+    {
+      "name": "SP1",
+      "capability": "RISC-V zkVM",
+      "department": [
+        "VERIFICATION",
+        "COMPUTE",
+        "BLOCKCHAIN"
+      ]
+    },
+    {
+      "name": "Giza Agents",
+      "capability": "verifiable AI and smart-contract interoperability",
+      "department": [
+        "AI",
+        "BLOCKCHAIN"
+      ]
+    },
+    {
+      "name": "Google AP2",
+      "capability": "agent payment authorization protocols",
+      "department": [
+        "BLOCKCHAIN",
+        "AI"
+      ]
+    },
+    {
+      "name": "A2A x402",
+      "capability": "agent-to-agent crypto payment extension",
+      "department": [
+        "BLOCKCHAIN",
+        "AI"
+      ]
+    },
+    {
+      "name": "Coinbase AgentKit",
+      "capability": "agent wallet and on-chain interaction tooling",
+      "department": [
+        "BLOCKCHAIN",
+        "AI"
+      ]
+    },
+    {
+      "name": "NASA Prithvi-EO-2.0",
+      "capability": "Earth-observation foundation model",
+      "department": [
+        "AGRICULTURE",
+        "CONSERVATION",
+        "CLIMATE",
+        "DIGITAL-TWIN"
+      ]
+    },
+    {
+      "name": "NASA Prithvi-WxC",
+      "capability": "weather and climate foundation model",
+      "department": [
+        "AGRICULTURE",
+        "WATER",
+        "CLIMATE",
+        "DIGITAL-TWIN"
+      ]
+    },
+    {
+      "name": "CrysVCD",
+      "capability": "constraint-aware generative materials discovery",
+      "department": [
+        "MATERIALS",
+        "ADV-MFG",
+        "AI"
+      ]
+    },
+    {
+      "name": "CADFit",
+      "capability": "mesh-to-CAD reconstruction and optimization",
+      "department": [
+        "CG-3D",
+        "ADV-MFG",
+        "DIGITAL-TWIN"
+      ]
+    },
+    {
+      "name": "Biupiu Coding Language Library",
+      "capability": "governed cross-language coding patterns and contracts",
+      "department": [
+        "AI",
+        "OS",
+        "FEDERATION",
+        "DIGITAL-TWIN"
+      ]
+    },
+    {
+      "name": "Biupiu AI Coding Hard Gate",
+      "capability": "machine-checkable fail-closed AI coding promotion boundary",
+      "department": [
+        "AI",
+        "OS",
+        "FEDERATION"
+      ]
+    },
+    {
+      "name": "Biupiu Native Semantic Code Audit",
+      "capability": "repository-wide source semantic/syntax governance audit",
+      "department": [
+        "AI",
+        "OS",
+        "FEDERATION",
+        "ML"
+      ]
+    }
   ],
   "policy": {
     "third_party_code": "reference_only_until_license_review",
     "private_ip": "keep_off_chain_and_out_of_public_release",
     "production_deployment": "separate_approval_required",
-    "physical_validation": "required_for_physical_or_safety_critical_claims"
+    "physical_validation": "required_for_physical_or_safety_critical_claims",
+    "coding_gate": "mandatory_before_native_ai_code_promotion",
+    "cross_language": "semantic_equivalence_required_at_durable_contract_boundaries"
   }
 }
