@@ -30,7 +30,22 @@ public final class AndroidCapabilityRegistryTest {
         if (r.isUsable("huawei.kirin.npu")) throw new AssertionError("Kirin vendor SDK requires licence/device review");
         if (r.isUsable("st.stm32cube-ai")) throw new AssertionError("STM32Cube.AI requires licence/HIL review");
         if (r.isUsable("google.aqt")) throw new AssertionError("AQT historical reference must not become runtime authority");
-        if (r.isUsable("opendroid.ui-engine")) throw new AssertionError("Unresolved OpenDroid identifier must fail closed");
+        if (r.isUsable("opendroid.ui-engine")) throw new AssertionError("Unresolved OpenDroid engine identifier must fail closed");
+        String[] openDroidModules = {
+            "opendroid.android-agent", "opendroid.accessibility-automation", "opendroid.action-dispatch",
+            "opendroid.agent-loop", "opendroid.llm-routing", "opendroid.memory", "opendroid.keystore-security",
+            "opendroid.services", "opendroid.voice", "opendroid.room", "opendroid.datastore",
+            "opendroid.hilt", "opendroid.compose-ui", "opendroid.viewmodel"
+        };
+        for (String id : openDroidModules) {
+            if (!r.isUsable(id)) throw new AssertionError("OpenDroid adapter capability missing: " + id);
+        }
+        if (new OpenDroidCapabilityAdapter().isAvailable()) {
+            throw new AssertionError("OpenDroid adapter must fail closed until external build/device verification");
+        }
+        if (new OpenDroidCapabilityAdapter().modules().size() != OpenDroidCapabilityAdapter.Module.values().length) {
+            throw new AssertionError("OpenDroid module registry must cover the declared module set");
+        }
 
         if (new VulkanCapabilityAdapter(null).isAvailable()) {
             throw new AssertionError("Vulkan adapter must fail closed without Android context");
