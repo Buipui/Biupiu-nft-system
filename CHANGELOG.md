@@ -167,3 +167,23 @@ Biupiu remains **digital-first, then physical**:
 6. Only then promote the implementation into physical machine control or other safety-relevant deployment.
 
 No live hardware or CI result is marked verified unless an execution record exists.
+
+
+## 2026-09-22 — Next Gate: CI-Trigger Smoke Correction
+
+### Fault found
+- Re-read the current federation contract and smoke test before CI verification.
+- Found a latent test defect: the timestamp assertion regex was double-escaped and would not match a valid ISO timestamp.
+
+### Corrective implementation
+- Corrected `packages/biupiu-rnd-os/src/federation-contracts.test.ts`.
+- Created verification-trigger commit `620faa89f6909ffbe69849ace2e34dc521095382`.
+
+### Verification boundary
+- Source correction: **IMPLEMENTED**.
+- GitHub connector returned no PR-associated workflow run for the trigger commit.
+- Push-triggered runtime execution is not exposed by the available workflow inspection path; therefore **CI/BUILD remains UNVERIFIED**.
+- No false CI pass recorded.
+
+### Status transition
+**LATENT TEST DEFECT FOUND → PATCH IMPLEMENTED → CI TRIGGER COMMIT CREATED → RUNTIME CI EVIDENCE OPEN.**
