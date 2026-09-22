@@ -407,3 +407,32 @@ NASA IV&V contributes objective-evidence, traceability and off-nominal verificat
 Failure fingerprints, verified-fix state, regression state, platform/version context and evidence references are learning inputs. A repeated failure becomes reusable only after the existing learning-level, provenance, licence and human-promotion requirements pass. Preventative tests remain proposed until independently passing.
 
 Status: IMPLEMENTED / SOURCE-CROSS-LINKED / CI-RUNTIME VERIFICATION PENDING.
+
+
+## 23. Blockchain-anchor, Digital Twin and semantic-code extension — 22 September 2026
+
+Deep federation harvest identified a missing explicit machine-checkable boundary between deterministic learning/trust checkpoints and external blockchain anchoring. The native boundary is now represented by intelligence/BIUPIU-BLOCKCHAIN-ANCHOR-BOUNDARY.py.
+
+Hard rules:
+- Blockchain is an integrity/provenance anchor, not the Digital Twin state authority and not the AI learning engine.
+- Checkpoint payloads remain off-chain by default; the anchor carries a deterministic checkpoint root plus reference metadata.
+- CANDIDATE, SUBMITTED, and INCLUDED are not equivalent to verified finality.
+- VERIFIED requires both a transaction reference and inclusion proof.
+- No private keys, wallets, credentials or signing secrets enter repository records.
+- Anchor failure/quarantine never invalidates the underlying append-only learning evidence; it creates a new diagnostic event.
+- Real chain execution is a separate runtime gate and must not be inferred from deterministic local hashing.
+
+### Deep external harvest incorporated as reference patterns
+- Sigstore/Rekor: append-only transparency logging, inclusion verification and cryptographic auditability. citeturn0search3turn0search4
+- SLSA: verifiable build provenance linking artifacts to production process. citeturn0search16
+- Blockchain/Digital Twin literature: provenance, lifecycle traceability, cross-validation and fault diagnosis are recurring integration concerns; blockchain should not replace the twin or evidence model. citeturn1search7turn0search0turn1search1
+- AI lifecycle provenance research: Merkle-style provenance structures can connect datasets, features, models, metrics and human approvals while keeping policy evaluation off-chain. citeturn1search9
+- Multilingual harvest included Japanese-language assurance/provenance material and Korean-language 2026 digital-twin/blockchain security research; these were retained as reference patterns only. citeturn1search5turn1search1
+
+### Native semantic-code gate
+intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py checks that key native AI, learning/federation, OS federation-contract, blockchain-anchor and guided-fault modules expose the semantic controls they claim. This is a source-level semantic audit, not runtime certification.
+
+### Internal optimisation harvest
+Existing native optimisation assets are cross-linked rather than duplicated: ML engine capability routing, continual adaptation, math optimisation, simulator adapters, failure learning, federation registry, AI-74 trust/checkpoint logic, rendering/resource optimisation and the research optimization registries. External optimisation engines remain adapter/reference candidates until licence, provenance, security, build, smoke and regression gates pass.
+
+Status: SOURCE IMPLEMENTED / SEMANTIC AUDIT IMPLEMENTED / EXTERNAL HARVEST REGISTERED / LIVE BLOCKCHAIN EXECUTION AND FULL RUNTIME VERIFICATION OPEN.
