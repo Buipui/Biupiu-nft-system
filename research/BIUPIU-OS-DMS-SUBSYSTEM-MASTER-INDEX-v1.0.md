@@ -505,3 +505,8 @@ The OS/DMS graph now cross-links the deep external provider lane covering ARMv8.
 Canonical literature/cross-reference: research/BIUPIU-FEDERATION-LITERATURE-CROSSREF-20260922.md
 
 The literature layer is authoritative for source classification. In particular, Android AppFunctions is experimental and Android 16+; AICore availability varies by device/manufacturer; OpenCL is treated as a device/driver boundary; ncnn supports ARM NEON/FP16 and Vulkan paths; RKNN separates conversion, runtime and driver layers; AQT is historical/end-of-life; and OpenDroid remains unresolved. Source registration does not equal runtime verification.
+
+
+## 2026-09-22 — OpenDroid Deep Federation Correction
+
+OpenDroid was re-harvested from primary external evidence. The identity is classified as an autonomous Android agent with a Compose UI surface, not a standalone UI engine. Main OS and Mini OS now register the agent/module boundaries while retaining the legacy `opendroid.ui-engine` identifier as unresolved and fail-closed. Canonical record: `research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md`. Build, dependency, accessibility, Compose, Keystore, Room/DataStore and physical-device runtime gates remain open until execution evidence exists.
