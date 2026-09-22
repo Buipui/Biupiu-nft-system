@@ -1,0 +1,59 @@
+# Biupiu Game-Engine Federation External Harvest v1.3
+Date: 2026-09-22
+Status: SOURCE-HARVESTED / ARCHITECTURE-INTEGRATED / EXECUTION-GATED
+
+## Integration rule
+External engines are providers behind Biupiu contracts. They are not copied into the OS core and never become authority owners. The native path is:
+CAPABILITY DISCOVERY -> LICENSE/PROVENANCE -> ADAPTER -> SANDBOX/RUNTIME -> TEST -> REGRESSION -> RUNTIME -> PROMOTION.
+
+## Provider registry
+- Cocos2d-x: scene graph, 2D renderer, sprites, physics, audio, input, particles, tilemaps.
+- Cocos Creator Engine: 2D/3D renderer, PBR/materials, physics, UI, animation, audio, resources.
+- MonoGame: framework, content pipeline, importers/processors, graphics/audio/input, localization.
+- libGDX: Android/desktop/headless/GWT backends, Box2D, Bullet, FreeType, tools.
+- Ashley ECS: entity/component/system/family-query.
+- raylib: rlgl, raymath, audio, models/materials, shaders, VR.
+- three.js: WebGL/WebGPU, controls, loaders, postprocessing, animation.
+- GDevelop: event system, behaviors, extensions, 2D/3D, multiplayer.
+- Babylon.js: core, GUI, loaders, materials, postprocess, physics, inspector.
+- Everest/Celeste: mod-loader/API, plugin discovery, dependency isolation; reference-only.
+
+## Missing-module findings
+1. Asset/content pipeline: add a Biupiu asset-provider contract instead of adopting engine-specific binary formats.
+2. Renderer abstraction: explicit backend capability/feature discovery.
+3. Physics: provider-neutral Box2D/Bullet/engine-physics boundary.
+4. ECS: stable world/query/component contract.
+5. Web engines: explicit sandbox boundary; no OS authority.
+6. Managed/JVM engines: optional runtime packaging; never a boot dependency.
+7. Input: normalized device capabilities and deterministic event timestamps.
+8. Audio: common lifecycle/focus contract and provider isolation.
+9. Asset import/export: provenance, hashes, schema/version and licence metadata.
+10. Mod/plugin discovery: quarantine, dependency graph validation and capability restrictions.
+
+## Foreign-language harvest
+Chinese Cocos Creator documentation confirms modular TypeScript/JavaScript organization, ESM imports and engine modules; UI is Canvas-rooted. citeturn1search7turn1search8
+Three.js documentation confirms controls/loaders/post-processing are addons imported separately from core. citeturn0search4
+MonoGame documentation confirms an extensible content pipeline with importers/processors and a framework/content-pipeline split; its 3.8.5 documentation also describes a newer Content Builder approach. citeturn1search0turn1search13
+Raylib documentation confirms modular rlgl/raymath plus rendering/audio/material/shader/VR capabilities. citeturn1search12
+Babylon documentation enumerates separate GUI, loaders, materials, post-process, serializers, inspector and viewer packages. citeturn0search2turn0search6
+LibGDX settings expose separate Android/desktop/headless/GWT backends and Box2D/Bullet/FreeType/tools extensions. citeturn0search16turn0search3
+Everest is treated as reference-only; its repository describes it as a Celeste mod loader/API and MIT-licensed, while Celeste game code/assets are not imported. citeturn0search12
+
+## Fixes implemented
+- Added game-engine and ECS providers to the native adapter registry.
+- Added registry routing regression checks.
+- Hardened mini-OS compute selection: higher capability classes satisfy lower minimum floors; preferred capability is selected only when admissible; ties are deterministic by capacity then unit ID.
+- Added regression cases for capability floors and invalid lower preference.
+- Preserved fail-closed promotion.
+
+## Open gates
+SOURCE/PATH: PASS
+ARCHITECTURE CONTRACT: PASS
+SEMANTIC SOURCE CHECK: PASS
+REGISTRY TESTS: IMPLEMENTED; runtime result pending
+HOST BUILD: OPEN
+ANDROID ABI BUILD: OPEN
+DEVICE/BOOT: OPEN
+RUNTIME SMOKE: OPEN
+SECURITY/LICENCE PACKAGE: OPEN
+UPSTREAM PINNING: OPEN
