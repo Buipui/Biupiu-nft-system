@@ -53,6 +53,16 @@
       "research gate manifests",
       "provenance/IP register",
       "evidence-layer indices"
+    ],
+    "BENCHMARK_ADAPTERS": [
+      "Palantir Ontology",
+      "Siemens Xcelerator",
+      "Dassault 3DEXPERIENCE",
+      "NVIDIA Omniverse/OpenUSD",
+      "PTC ThingWorx",
+      "Bentley iTwin",
+      "Unreal Engine 5",
+      "Unity 6"
     ]
   },
   "shared_contracts": [
@@ -61,7 +71,8 @@
     "digital-twin contract",
     "federation transport",
     "learning event/provenance contract",
-    "federation capability/health/schema/delivery contract"
+    "federation capability/health/schema/delivery contract",
+    "benchmark-program harvest/native adapter contract"
   ],
   "external_harvest_policy": {
     "OpenUSD": "adapter/pattern only; no source copy",
@@ -70,7 +81,8 @@
     "GitHub": "module discovery only until licence, dependency and runtime gates pass",
     "OEM": "adapter/reference only; no proprietary OEM source or restricted material",
     "OPC_UA": "PubSub/information-model adapter pattern only",
-    "OpenTelemetry": "semantic/context pattern only; core remains dependency-light"
+    "OpenTelemetry": "semantic/context pattern only; core remains dependency-light",
+    "benchmark-programs": "pattern/adapter only; no vendor source/assets; provenance/licence/security/build/smoke/regression gates required"
   },
   "required_gate_order": [
     "STATIC_SOURCE_AUDIT",
@@ -91,6 +103,7 @@
     "UE5/host/GPU runtime",
     "physical HIL/actuation",
     "quarantined external candidates",
-    "World repository initialization/migration"
+    "World repository initialization/migration",
+    "benchmark adapter package build/runtime federation"
   ]
 }
