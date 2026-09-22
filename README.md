@@ -262,3 +262,10 @@ Canonical documents: `research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md` and `r
 The Intelligence layer uses these records to improve diagnostic retrieval and preventative-test generation while preserving authoritative OS controls, human release authority and third-party licence/security boundaries.
 
 **README synchronization:** 21 September 2026
+
+
+## Repository organization — 22 September 2026
+
+The canonical navigation map is **[REPOSITORY-ORGANIZATION.md](REPOSITORY-ORGANIZATION.md)**. It defines ownership boundaries across Research, Intelligence, Digital Orchestra, Core OS/DMS, Digital Twin/Federation, simulators, World and NFT/EVM/payment layers.
+
+World material currently retained under `world/` is treated as a controlled staging/reference lane. The dedicated `Buipui/Buipui-World` repository is the destination for independently verified World runtime content. Migration is governed by `research/BIUPIU-WORLD-REPOSITORY-MIGRATION-MANIFEST-v1.0.md`; no duplicate authoritative implementation is created.
