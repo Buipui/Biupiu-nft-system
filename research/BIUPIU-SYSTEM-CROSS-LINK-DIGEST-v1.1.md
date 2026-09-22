@@ -165,3 +165,11 @@ The native validator was also hardened so the executable promotion boundary matc
 CI now has explicit harvest-registry validation, TypeScript type checking and harvest-gate test execution. A green CI workflow is still required before runtime verification is marked complete.
 
 **Status: SOURCE INTEGRATION COMPLETE / TEST PROTOCOL INDEXED / CI EXECUTION OPEN.**
+
+## Guided Fault-Finding Federation — 22 September 2026
+Native guided fault finding is now cross-linked across Core R&D OS, Biupiu Intelligence and native ML. The canonical diagnostic path is:
+Observation -> Classification -> Ownership -> Guided evidence -> Isolation -> Repair proposal -> Independent validation -> Regression -> Learning evidence -> Controlled reuse.
+Native implementation: packages/biupiu-rnd-os/src/guided-fault-finder.ts and software/rnd-os-ai/src/biupiu_ai/guided_fault_finding.py. Native tests accompany both modules.
+Internal harvest reuses existing failure fingerprints, learning levels, OS-validation boundaries, federation gates, harvest promotion controls, fault/healing envelopes and render health/failure-learning modules.
+External federation harvest incorporates NASA assurance/IV&V and OpenTelemetry trace/context correlation as reference patterns only. No external executable code is promoted.
+Status: IMPLEMENTED SOURCE LAYER / CROSS-LINKED / FRESH CI VERIFICATION OPEN.
