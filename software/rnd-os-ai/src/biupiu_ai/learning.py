@@ -223,3 +223,34 @@ def learning_reuse_ready(pattern: FailurePattern, evidence: LearningEvidence,
         licence_checked=licence_checked,
         human_approved=human_approved,
     )
+
+
+CODING_MATRIX_VERSION = "BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0"
+CODING_GATE_VERSION = "biupiu.ai.coding-hard-gate.v1"
+
+
+def coding_learning_evidence(*, coding_matrix_checked: bool, semantic_audit_passed: bool,
+                             language_test_passed: bool, regression_passed: bool,
+                             provenance_verified: bool, security_passed: bool,
+                             rollback_reference: str = "") -> dict:
+    """Return machine-readable coding evidence without granting promotion authority."""
+    return {
+        "coding_matrix_version": CODING_MATRIX_VERSION,
+        "coding_gate_version": CODING_GATE_VERSION,
+        "coding_matrix_checked": bool(coding_matrix_checked),
+        "semantic_audit_passed": bool(semantic_audit_passed),
+        "language_test_passed": bool(language_test_passed),
+        "regression_passed": bool(regression_passed),
+        "provenance_verified": bool(provenance_verified),
+        "security_passed": bool(security_passed),
+        "rollback_reference": str(rollback_reference),
+    }
+
+
+def coding_pattern_reuse_ready(evidence: dict, *, human_approved: bool = False) -> bool:
+    """Gate reusable coding knowledge; Core OS/release authority remains final."""
+    required = (
+        "coding_matrix_checked", "semantic_audit_passed", "language_test_passed",
+        "regression_passed", "provenance_verified", "security_passed",
+    )
+    return bool(human_approved and evidence.get("rollback_reference") and all(evidence.get(k) for k in required))
