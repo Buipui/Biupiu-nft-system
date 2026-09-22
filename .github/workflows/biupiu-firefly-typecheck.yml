@@ -26,6 +26,7 @@ jobs:
           node-version: 20
       - run: npm install
       - run: npm run build:packages
+      - run: node dist/packages/biupiu-rnd-os/src/federation-harvest-gate.test.js
       - run: node packages/biupiu-firefly/smoke-test.mjs
       - run: node packages/biupiu-render-pipeline/blender-adapter.smoke.mjs
       - run: node packages/biupiu-render-pipeline/blender-output-gate.smoke.mjs
