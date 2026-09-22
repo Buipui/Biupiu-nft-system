@@ -17,6 +17,8 @@ class SimulatorModule:
     status: str
     executable_activation: bool
     required_gates: Tuple[str, ...]
+    design_contract: str = "docs/architecture/BIUPIU-DESIGN-LANGUAGE-CODE-CONTRACT-v1.0.json"
+    interaction_contract: str = "research/BIUPIU-UI-SEMANTIC-ACTION-CONTRACT-v1.0.md"
 
 
 MODULES: Tuple[SimulatorModule, ...] = (
