@@ -1,0 +1,16 @@
+{
+  "FileVersion": 3,
+  "Version": 1,
+  "VersionName": "1.0.0",
+  "FriendlyName": "Biupiu Digital Twin",
+  "Description": "Native Unreal Engine integration foundation for Biupiu digital-twin entities.",
+  "Category": "Biupiu",
+  "CanContainContent": false,
+  "Modules": [
+    {
+      "Name": "BiupiuDigitalTwin",
+      "Type": "Runtime",
+      "LoadingPhase": "Default"
+    }
+  ]
+}
