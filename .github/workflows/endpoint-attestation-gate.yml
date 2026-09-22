@@ -1,0 +1,25 @@
+name: Biupiu Endpoint Attestation Gate
+
+on:
+  workflow_dispatch:
+  pull_request:
+    paths:
+      - "security/BIUPIU-ENDPOINT-ATTESTATION-GATE-v1.0.md"
+      - "software/rnd-os-ai/tests/test_endpoint_attestation_gate.py"
+
+permissions:
+  contents: read
+
+jobs:
+  contract-validation:
+    runs-on: ubuntu-latest
+    timeout-minutes: 10
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.x"
+      - name: Run endpoint attestation contract test
+        run: |
+          python -m pip install --upgrade pip pytest
+          pytest -q software/rnd-os-ai/tests/test_endpoint_attestation_gate.py
