@@ -2,16 +2,21 @@
 
 Status: MAINLINE — protocol implemented; external/runtime gates remain evidence-gated.
 
-## Federation hierarchy
-BIUPIU NATIVE INTELLIGENCE
+## Canonical authority hierarchy
+HUMAN RELEASE AUTHORITY
+-> BIUPIU CORE OS / DMS VALIDATION
+-> DOMAIN OWNER
+-> BIUPIU INTELLIGENCE
 -> FEDERATION CONTROL / MULTI-AI LAYER
--> BIUPIU OS / DMS / WORLD / ISOLATED SIMULATORS / DOMAIN SYSTEMS
--> HARDWARE AND PHYSICAL IMPLEMENTATIONS
+-> ADAPTER / PROVIDER
+-> EXTERNAL REFERENCE
 
-Native Biupiu Intelligence remains the promotion and system-level authority. The Federation is an active multi-AI coordination layer, not the top-level authority.
+**Correction applied 22 September 2026:** Native Biupiu Intelligence is not the top-level authority. It may discover, classify, learn, route and propose. Core OS/DMS validation and the owning domain retain execution authority; human/release authority retains final promotion authority.
+
+Executable contract: `software/rnd-os-ai/src/biupiu_ai/authority_hierarchy.py`.
 
 ## Federation sequence
-RESTORE -> REGISTER -> FREEZE IDENTITIES -> DISCOVER AI SYSTEMS -> ROUTE -> VERIFY -> TEST -> FAILURE LEARN -> PROMOTE
+RESTORE -> REGISTER -> FREEZE IDENTITIES -> DISCOVER AI SYSTEMS -> ROUTE -> VERIFY -> TEST -> FAILURE LEARN -> CORE OS/DMS VALIDATE -> HUMAN RELEASE -> PROMOTE
 
 ## AI-system discovery rule
 The Federation must maintain a machine-readable registry of every canonical federation AI system.
@@ -40,25 +45,8 @@ For every identified AI system record:
 
 Do not infer a canonical AI identity from a provider name, adapter, team role, or numbered gate. If evidence is insufficient, record DISCOVERY-PENDING rather than inventing an identity.
 
-## Current deep-search finding
-The repository currently contains a governed multi-AI team manifest with eight specialist team roles and a separate federation/adapter architecture. It also contains the AI-58 through AI-71 governance chain. These records must not be conflated with the user's separately described four canonical federation AI systems.
-
-The four-system identity set is therefore retained as a mandatory discovery target and is NOT replaced by the eight team roles, AI-58..AI-71 gates, or external provider names.
-
-## Required domains
-1. Core authority and release gates
-2. Native AI/ML algorithms
-3. Multilingual/native-language research
-4. Federated learning and privacy
-5. Quantum ML
-6. Specialist AI adapters: LangGraph, CrewAI, DSPy, vLLM
-7. NASA/DARPA research-reference integration
-8. Failure learning and bounded recovery
-9. CI/runtime evidence
-10. Canonical federation-AI identity registry
-
 ## Authority rule
-Specialist systems are adapters/providers. They cannot directly modify authoritative Core OS state. Promotion requires provenance, licence, security, regression/reproducibility and human approval.
+Specialist systems are adapters/providers. They cannot directly modify authoritative Core OS state. AI/federation proposals require Core OS/DMS validation, and executable promotion additionally requires provenance, licence, security, regression/reproducibility and human approval.
 
 ## World boundary
 Biupiu World consumes approved, versioned federation outputs, asset identity, Digital Twin events and approved contracts. World is not OS authority, simulator truth, physical certification authority, AI promotion authority, or NFT/EVM state authority.
