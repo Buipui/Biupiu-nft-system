@@ -63,3 +63,15 @@ Approved learning checkpoints can be anchored through `contracts/BiupiuLearningR
 
 ### Core AI maintenance function
 The Intelligence Layer now treats bug fixes, code updates, technology updates, dependency/security audits, index synchronization, provenance checks and regression evidence as first-class learning events. Human approval remains required for durable promotion, deletion, public release, IP transitions and blockchain anchoring.
+
+
+## Federation Harvest Learning Integration — 22 September 2026
+
+The learning layer now consumes federation harvest events as structured comparison evidence. External resources are treated as candidate knowledge objects until independently verified.
+
+Routing:
+`FEDERATION DISCOVERY -> RESOURCE RECORD -> INTERNAL MATCH -> TEST EVIDENCE -> FAILURE/RESULT -> LEARNING EVENT -> RETRIEVAL INDEX -> PREVENTATIVE TEST -> HUMAN PROMOTION`
+
+The learning layer must preserve both the internal baseline and the external candidate lineage. It may improve retrieval, comparison, diagnostics and test generation; it may not silently replace authoritative code, erase failures or self-authorise promotion.
+
+Linked checkpoint: `research/BIUPIU-LEARNING-CHECKPOINT-FED-HARVEST-20260922.md`.
