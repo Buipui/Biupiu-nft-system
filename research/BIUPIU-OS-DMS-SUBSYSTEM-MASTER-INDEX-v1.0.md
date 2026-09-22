@@ -510,3 +510,12 @@ The literature layer is authoritative for source classification. In particular, 
 ## 2026-09-22 — OpenDroid Deep Federation Correction
 
 OpenDroid was re-harvested from primary external evidence. The identity is classified as an autonomous Android agent with a Compose UI surface, not a standalone UI engine. Main OS and Mini OS now register the agent/module boundaries while retaining the legacy `opendroid.ui-engine` identifier as unresolved and fail-closed. Canonical record: `research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md`. Build, dependency, accessibility, Compose, Keystore, Room/DataStore and physical-device runtime gates remain open until execution evidence exists.
+
+
+## 2026-09-22 — Game-Engine Federation Housekeeping / Semantic Audit
+
+Canonical record: `research/BIUPIU-GAME-ENGINE-FEDERATION-HOUSEKEEPING-SEMANTIC-AUDIT-20260922.md`.
+
+External game-engine federation routing covers Cocos2d-x, Cocos Engine, MonoGame, libGDX, Ashley ECS, raylib, Three.js, GDevelop and Babylon.js, with Celeste retained as reference-only. Internal cross-reference found and corrected a Mini OS federation selector defect where the implementation required `compute_class == minimum_class`, incorrectly rejecting higher-capability units. The corrected implementation treats `minimum_class` as a capability floor and preserves preferred-class selection.
+
+**Status: SOURCE HOUSEKEEPING COMPLETE / SEMANTIC DEFECT FIXED / BUILD + DEVICE RUNTIME VERIFICATION OPEN.**
