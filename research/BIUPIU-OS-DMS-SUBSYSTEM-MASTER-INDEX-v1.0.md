@@ -429,3 +429,18 @@ Added a shared language contract and native selection boundary:
 External evidence was harvested from Unicode CLDR, FLORES/NLLB and multilingual implementation patterns. External implementations remain reference/candidate material until normal licence, dependency, security, build, integration, regression and runtime gates pass.
 
 **Gate status: IMPLEMENTED / SOURCE-SEMANTIC CHECK PASS / TESTS ADDED / CI RESULT OPEN / DEVICE-UI RUNTIME OPEN / FULL TRANSLATION QUALITY OPEN.**
+
+
+## Adapter Federation Integration — 22 September 2026
+
+The OS/DMS master index now cross-links the governed usable-adapter layer:
+- `software/rnd-os-ai/src/biupiu_ai/adapter_registry.py`
+- `software/rnd-os-ai/src/biupiu_ai/federation_registry.py`
+- `research/BIUPIU-USABLE-ADAPTER-FEDERATION-HARVEST-2026-09-22.md`
+
+Adapter routing is capability-first and transport-neutral. External adapters remain non-authoritative until provenance, licence, security, build, regression, runtime and human gates pass.
+
+Primary OS/DMS consumers:
+AI/COMPUTE, DIGITAL-TWIN, ROBOTICS, AUTOMOTIVE, AGRI, WATER, ENERGY, ELECTROMAG, PHOTONICS, ADV-MFG, MATERIALS, MARINE, AERO and BIOMED.
+
+Native ML now receives adapter failure/health evidence through the existing guided-fault-finding and learning-federation path.
