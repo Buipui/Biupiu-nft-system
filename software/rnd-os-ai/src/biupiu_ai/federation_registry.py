@@ -36,6 +36,30 @@ DEFAULT_SYSTEMS = (
     AgentSystem("flower", "federated-learning", ("federated-learning", "federated-analytics", "secure-aggregation", "simulation"), "research-adapter"),
     AgentSystem("qiskit-ml", "quantum-ml", ("quantum-kernels", "qnn"), "optional-adapter"),
     AgentSystem("pennylane", "quantum-ml", ("hybrid-circuits", "differentiation"), "optional-adapter"),
+
+    # 2026-09-22 deep external federation: CPU/GPU/LLM/NPU.
+    AgentSystem("arm-edge", "cpu-acceleration", ("armv8.2-fp16", "arm-neon"), "capability-adapter"),
+    AgentSystem("opencl", "gpu-compute", ("opencl",), "capability-adapter"),
+    AgentSystem("edge-llm-families", "model-routing", ("qwen", "deepseek", "llama", "gemma"), "model-adapter"),
+    AgentSystem("tencent-ncnn", "edge-inference", ("android", "arm", "neon", "vulkan"), "provider-adapter"),
+    AgentSystem("megvii-edge", "edge-ml", ("megcc", "megengine", "arm", "android"), "provider-adapter"),
+    AgentSystem("alibaba-tinynn", "model-optimization", ("pruning", "quantization", "tflite-conversion"), "provider-adapter"),
+    AgentSystem("kirin-npu", "vendor-npu", ("kirin", "npu"), "vendor-adapter", "CANDIDATE", "LICENSE_REVIEW"),
+    AgentSystem("rockchip-rknn", "vendor-npu", ("rknn", "rknpu", "npu"), "provider-adapter"),
+    AgentSystem("android-ai", "android-ai-runtime", ("appfunctions-mcp", "aicore"), "platform-adapter"),
+    AgentSystem("pytorch-edge", "edge-ml", ("pytorch", "executorch", "android", "npu", "vulkan"), "provider-adapter"),
+    AgentSystem("stm32cube-ai", "mcu-ai", ("stm32", "cube-ai"), "vendor-adapter", "CANDIDATE", "LICENSE_REVIEW"),
+    AgentSystem("catboost", "ml", ("catboost", "tree-models"), "provider-adapter"),
+    AgentSystem("dace", "data-centric-optimization", ("sdfg", "cpu", "gpu", "fpga"), "provider-adapter"),
+    AgentSystem("menpo-cupy", "scientific-vision-compute", ("menpo", "cupy", "gpu"), "research-adapter"),
+    AgentSystem("fastnlp", "nlp", ("nlp", "data", "training"), "provider-adapter"),
+
+    # Quantum and graphics providers.
+    AgentSystem("google-aqt", "quantization-reference", ("aqt", "quantization"), "historical-adapter", "CANDIDATE", "HISTORICAL_REFERENCE"),
+    AgentSystem("iqm-quantum", "quantum-provider", ("quantum-sdk", "circuits"), "provider-adapter"),
+    AgentSystem("riken-fujitsu-quantum", "quantum-simulation", ("riken", "fujitsu", "simulation"), "simulation-adapter"),
+    AgentSystem("android-agsl", "graphics-shader", ("agsl", "runtimeshader"), "platform-adapter"),
+    AgentSystem("opendroid-ui", "ui-engine", ("opendroid-ui"), "unresolved-adapter", "BLOCKED", "UNRESOLVED"),
 )
 
 
