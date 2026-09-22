@@ -18,7 +18,7 @@ public final class AndroidCapabilityRegistry {
         capabilities.put("carlinkit.2air.transport", State.DEVICE_REQUIRED);
         capabilities.put("vector.automotive.sil-hil", State.LICENSE_REVIEW);
         capabilities.put("lsposed.art-instrumentation", State.LICENSE_REVIEW);
-        capabilities.put("gsm-flags-2.0", State.UNRESOLVED);
+        capabilities.put("gsm-flags-2.0", State.UNRESOLVED);\n        capabilities.put("godot.renderingdevice", State.ADAPTER_ONLY);\n        capabilities.put("vulkan.android-runtime", State.ADAPTER_ONLY);\n        capabilities.put("vulkan.validation", State.ADAPTER_ONLY);
     }
 
     public Map<String, State> snapshot() {
