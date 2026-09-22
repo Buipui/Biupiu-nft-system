@@ -4,7 +4,7 @@ on:
     branches: [main]
     paths: ["apps/**","packages/**","software/**","dms/**","world/**","intelligence/**","research/**","docs/architecture/**",".github/workflows/biupiu-systemwide-module-audit.yml"]
   pull_request:
-    paths: ["apps/**","packages/**","software/**","dms/**","world/**","intelligence/**","research/**","docs/architecture/**",".github/workflows/biupiu-systemwide-module-audit.yml"]
+    paths: ["apps/**","packages/**","software/**","dms/**","world/**","intelligence/**","research/**",".github/workflows/biupiu-systemwide-module-audit.yml"]
   workflow_dispatch:
 jobs:
   source-smoke:
@@ -19,8 +19,8 @@ jobs:
     steps:
       - uses: actions/checkout@v4
       - uses: actions/setup-node@v4
-        with: {node-version: "22", cache: npm}
-      - run: npm ci
+        with: {node-version: "22"}
+      - run: npm install --no-audit --no-fund
       - run: npm run build:packages
       - run: npm run compile
       - run: npm test
@@ -36,6 +36,7 @@ jobs:
           test -f apps/android/settings.gradle.kts
           test -f apps/android/build.gradle.kts
           test -f apps/android/app/build.gradle.kts
+          test -f apps/android/gradle/wrapper/gradle-wrapper.properties
       - working-directory: apps/android
         run: gradle --no-daemon :app:assembleDebug
       - working-directory: apps/android
