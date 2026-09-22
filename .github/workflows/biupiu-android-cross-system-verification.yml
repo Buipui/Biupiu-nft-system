@@ -60,6 +60,22 @@ jobs:
 
       - name: Validate harvest matrix
         run: python -m json.tool docs/architecture/BIUPIU-CROSS-SYSTEM-MODULE-HARVEST-MATRIX-2026-09-22.json >/dev/null
-\n      - name: Validate harvest testing protocol registry\n        run: python -m json.tool research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json >/dev/null\n\n      - name: Type-check federation harvest gate\n        run: npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck packages/biupiu-rnd-os/src/federation-harvest-gate.ts packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts\n\n      - name: Execute federation harvest gate tests\n        run: npx -y -p tsx@4.19.2 tsx packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts\n
+
+      - name: Validate harvest testing protocol registry
+        run: python -m json.tool research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json >/dev/null
+
+      - name: Type-check federation harvest gate
+        run: npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck packages/biupiu-rnd-os/src/federation-harvest-gate.ts packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts
+
+      - name: Execute federation harvest gate tests
+        run: npx -y -p tsx@4.19.2 tsx packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts
+
+      - name: Run native multilingual and learning tests
+        run: |
+          PYTHONPATH=software/rnd-os-ai/src python -m pytest -q software/rnd-os-ai/tests/test_global_language_translation.py software/rnd-os-ai/tests/test_learning.py
+
+      - name: Validate native language contract
+        run: python -m json.tool apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json >/dev/null
+
       - name: Report verification boundary
         run: echo "CI build/test is the authoritative runtime gate; source inspection alone does not mark device verification."
