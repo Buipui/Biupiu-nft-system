@@ -1,5 +1,7 @@
 name: Biupiu Android Cross-System Verification
 
+# Current main verification touch.
+
 on:
   workflow_dispatch:
   push:
