@@ -201,3 +201,31 @@ Current status:
 - CI smoke workflow: REGISTERED;
 - CI execution: PENDING OBSERVED RUN;
 - Android/device/hardware execution: PENDING.
+
+
+## Gate 38 — Live CI failure-driven remediation — 22 September 2026
+
+The first observed CI execution converted previously theoretical verification gaps into concrete defects.
+
+### Defect A — Android security contract mismatch
+The security workflow required `android:networkSecurityConfig="@xml/network_security_config"`, but the Android manifest did not declare it. The referenced network-security resource already existed. The manifest was corrected to bind the resource explicitly.
+
+### Defect B — Workflow audit enforcement scope
+The repository audit counted 148 action references and 141 non-SHA references, then treated 95 references as blocking promoted-action violations. This enforcement scope was too broad for a security-gate self-integrity check. The gate now:
+- strictly requires immutable SHA references in its own workflow;
+- reports repository-wide floating references as migration inventory;
+- does not silently promote or rewrite historical workflow dependencies.
+
+### Defect C — CI action freshness
+The security and native semantic smoke workflows now use immutable SHA references for current action releases.
+
+### Evidence interpretation
+Observed failing CI jobs are valid execution evidence for the previous revision. Corrective source changes are implemented. A fresh post-fix pass is required before the security and semantic smoke gates can be marked PASS.
+
+Status:
+SOURCE REMEDIATION: IMPLEMENTED
+LIVE FAILURE ANALYSIS: VERIFIED
+POST-FIX CI: PENDING
+ANDROID DEVICE: OPEN
+CROSS-REPOSITORY RUNTIME: OPEN
+HARDWARE/PHYSICAL: OPEN
