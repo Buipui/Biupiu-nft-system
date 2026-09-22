@@ -1,4 +1,10 @@
 #include "../include/biupiu_mini_federation.h"
+
+static bool supports_class(uint32_t available, uint32_t minimum) {
+    // The enum is an ordered capability floor: higher classes satisfy lower floors.
+    return available >= minimum;
+}
+
 extern "C" biupiu_mini_status biupiu_mini_select_compute(
  const biupiu_compute_unit *units, uint32_t unit_count,
  const biupiu_mini_workload *workload, uint32_t *selected_unit_id) {
@@ -6,8 +12,11 @@ extern "C" biupiu_mini_status biupiu_mini_select_compute(
  const biupiu_compute_unit *best=nullptr;
  for(uint32_t i=0;i<unit_count;++i){
    const auto &u=units[i];
-   if(!u.available || u.capacity==0u || u.compute_class != workload->minimum_class) continue;
-   if(u.compute_class==workload->preferred_class){ best=&u; break; }
+   if(!u.available || u.capacity==0u || !supports_class(u.compute_class, workload->minimum_class)) continue;
+   if(u.compute_class==workload->preferred_class){
+     best=&u;
+     break;
+   }
    if(!best || u.capacity>best->capacity) best=&u;
  }
  if(!best) return BIUPIU_MINI_NOT_READY;
