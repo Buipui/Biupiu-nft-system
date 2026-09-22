@@ -1,6 +1,8 @@
 from biupiu_ai.global_language_translation import (
     SUPPORTED_LANGUAGE_FAMILIES,
     normalise_language,
+    fallback_chain,
+    language_family,
     translate,
     validate_language,
 )
@@ -45,3 +47,13 @@ def test_unknown_language_is_rejected():
     except ValueError:
         return
     raise AssertionError("unknown language must be rejected")
+
+
+def test_bcp47_script_and_region_are_preserved():
+    assert normalise_language("zh_Hant_TW") == "zh-Hant-TW"
+    assert language_family("pt-BR") == "pt"
+
+
+def test_locale_fallback_is_deterministic():
+    assert fallback_chain("pt-BR") == ("pt-BR", "pt", "en")
+    assert fallback_chain("en-US") == ("en-US", "en")
