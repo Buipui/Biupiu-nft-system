@@ -6,16 +6,19 @@ public final class AndroidAutoTransportAdapter implements ExternalTransportAdapt
     private final Context context;
 
     public AndroidAutoTransportAdapter(Context context) {
-        this.context = context.getApplicationContext();
+        this.context = context == null ? null : context.getApplicationContext();
     }
 
     @Override public String id() { return "android.auto.projection"; }
 
     @Override public boolean isAvailable() {
-        return context != null;
+        // Source-level adapter presence is not live projection evidence.
+        return false;
     }
 
     @Override public String diagnosticState() {
-        return "PUBLIC_ANDROID_API_BOUNDARY; projection state must be queried through Android Car APIs";
+        return context == null
+                ? "RUNTIME_REQUIRED; Android context unavailable; projection not claimed"
+                : "RUNTIME_REQUIRED; Android Car APIs must confirm live projection state";
     }
 }
