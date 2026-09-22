@@ -123,3 +123,17 @@ No second AI authority is introduced. Existing native Intelligence, Core OS/DMS 
 
 ## Next gate
 RUN THE CANONICAL NATIVE SEMANTIC AUDIT -> RUN AVAILABLE CI -> REPAIR ONLY EVIDENCED FAILURES -> RE-RUN REGRESSION -> UPDATE LEARNING/INDEX RECORDS -> KEEP RUNTIME/DEVICE GATES OPEN UNTIL EXECUTION EVIDENCE EXISTS.
+
+
+## Next Gate Execution — 2026-09-22
+
+Execution requested: native semantic/source gate followed by available CI verification.
+
+Execution order:
+1. Native AI cross-link manifest consistency.
+2. Native Python semantic/source audit.
+3. Available federation/AI/Android CI workflows.
+4. Repair only evidenced failures.
+5. Re-run affected verification.
+
+This marker intentionally does not claim runtime/device verification before execution evidence exists.
