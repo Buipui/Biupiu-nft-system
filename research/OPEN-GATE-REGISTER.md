@@ -95,3 +95,35 @@ A gate is not closed merely because a document, scaffold, adapter or code path e
 All gates that can be executed and verified from the currently available repository/API environment have been processed in chronological order. Gates requiring an actual CI runner, Android/Windows device, UE5/GPU host, physical hardware, or unavailable empty-repository write path remain explicitly open rather than being marked complete.
 
 **Fail-closed rule preserved: CODED ≠ EXECUTED ≠ RUNTIME VERIFIED ≠ PHYSICALLY VERIFIED.**
+
+## GATE 43 — Federation Internal Fault Check + Double-Harvest Reconciliation — 22 September 2026
+
+### Internal fault findings
+- Existing guided fault-finding, learning, semantic audit and harvest gates were found and cross-linked.
+- Previously recorded open modules remain: reproducible Android wrapper/bootstrap, cross-platform health dashboard, automated dependency/licence/provenance inventory, emulator/device evidence, UE5/GPU evidence and HIL/physical validation.
+- New source-level gap identified: no dedicated learning primitive converted an external fix found but not internally implemented into a guided-fault-finding proposal.
+- New source-level gap identified: no deterministic helper recorded/compared repeated harvest result sets to diagnose search divergence.
+
+### Implemented native fixes
+- Added ExternalFixGap and guide_external_fix_gap() to native guided fault finding.
+- Added ExternalFixEvidence, score_external_fix_gap(), make_external_fix_gap_learning_record() and HarvestComparison/compare_harvest_passes() to native learning.
+- Added targeted tests for external-fix learning and double-harvest comparison.
+- External candidates remain fail-closed; the new path proposes a native equivalent only after semantic, licence and security checks and still requires OS validation, regression and promotion gates.
+
+### Double-search result
+- Internal GitHub repository searches were repeated with the same four query strings. The returned top paths were materially stable across the two passes; no internal-index divergence was observed in this check.
+- External multilingual searches were repeated with the same fault-diagnosis/FMEA learning query family. The second pass returned different ranked/source surfaces while retaining the same broad FMEA/fault-learning pattern.
+- The new comparison logic records common/unique result sets and classifies the discrepancy as RESULT_SET_CHANGED_REQUIRES_RECENCY_QUERY_AND_SOURCE_INDEX_REVIEW; it does not invent a root cause.
+
+### Foreign-language harvest
+Japanese sources describe using historical incident/design data to retrieve related failure scenarios and develop learning algorithms; German sources emphasize structured FMEA, interfaces, failure effects and tracking corrective actions; Chinese sources emphasize systematic failure-mode/cause/effect analysis and maintaining failure knowledge. These patterns reinforce the native gap-learning and guided diagnostic loop, but remain reference evidence rather than copied executable code. citeturn2search2turn2search46turn1search0
+
+### Semantic/engineering cross-check
+OpenTelemetry's semantic-convention model supports common names/attributes across languages and correlation of polyglot traces; IEC 60812 describes systematic FMEA/FMECA for software and hardware; NASA's software FMEA guidance emphasizes hidden failure modes, interactions, dependencies, assumptions and requirement/design inconsistencies. These were used as pattern evidence only. citeturn0search0turn0search2turn0search5turn2search13
+
+### Verification boundary
+SOURCE CHANGES = IMPLEMENTED.
+TARGETED TESTS = ADDED.
+REMOTE CI EXECUTION = OPEN.
+RUNTIME/DEVICE/HIL = OPEN.
+EXTERNAL EXECUTABLE PROMOTION = BLOCKED until provenance/licence/security/static/build/test/regression/runtime evidence and human promotion.
