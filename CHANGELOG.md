@@ -187,3 +187,28 @@ No live hardware or CI result is marked verified unless an execution record exis
 
 ### Status transition
 **LATENT TEST DEFECT FOUND → PATCH IMPLEMENTED → CI TRIGGER COMMIT CREATED → RUNTIME CI EVIDENCE OPEN.**
+
+
+## 2026-09-22 — Next Gate: Digital Twin CI Dependency Fault Remediation
+
+### Runtime fault found
+- GitHub Actions push-run evidence was recovered through the Actions API.
+- Federation/local execution and World Hosting validation passed.
+- Digital Twin DMS workflow run 35753186710 failed during TypeScript compilation because node:test and node:assert/strict type declarations were unavailable to the direct compiler invocation.
+- The Digital Twin contract tests were skipped after that compile failure.
+
+### Corrective implementation
+- Updated .github/workflows/digital-twin-contract-ci.yml.
+- Added explicit installation of typescript@5.8.3 and @types/node@22.10.0 before compilation.
+- Switched compilation to the installed TypeScript binary.
+- Corrective commit: 382660881a0cf9fa32fc98c65e94757e21b88a48.
+
+### Verification boundary
+- GitHub Actions execution visibility: VERIFIED.
+- Federation manifest/contract-runtime workflow: VERIFIED PASS.
+- World Hosting package/contract validation: VERIFIED PASS.
+- Corrected Digital Twin DMS compile and runtime tests: OPEN pending fresh run.
+- No semantic contract failure was inferred from the dependency-resolution error.
+
+### Status transition
+**RUNTIME FAULT FOUND → ROOT CAUSE ISOLATED → CI DEPENDENCY FIX IMPLEMENTED → FRESH RUNTIME VERIFICATION OPEN.**
