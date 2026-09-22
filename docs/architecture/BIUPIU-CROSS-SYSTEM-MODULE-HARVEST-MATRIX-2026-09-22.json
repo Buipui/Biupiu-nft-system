@@ -1,0 +1,92 @@
+{
+  "schema": "biupiu.cross-system-module-harvest.v1",
+  "date": "2026-09-22",
+  "status": "MAINLINE_CANDIDATE",
+  "principles": [
+    "metadata-first",
+    "provenance-required",
+    "license-reviewed",
+    "adapter-boundary",
+    "fail-closed",
+    "no silent execution"
+  ],
+  "repositoryModules": [
+    "Android shell and capability routing",
+    "Windows shell and capability routing",
+    "shared runtime contracts",
+    "Digital Twin",
+    "DMS transport",
+    "federation transport",
+    "simulator registry",
+    "learning federation bridge",
+    "failure/drift learning",
+    "design-language contract",
+    "World/OpenUSD development pipeline"
+  ],
+  "missingFunctionalityIdentified": [
+    {
+      "module": "Android reproducible build",
+      "gap": "Gradle wrapper artifacts are documented as pending",
+      "action": "CI uses pinned Gradle 8.9 until wrapper artifacts are supplied and verified"
+    },
+    {
+      "module": "Android route completeness",
+      "gap": "RENDER_PIPELINE was a silent no-op",
+      "action": "route registered, activity declared and launch path implemented"
+    },
+    {
+      "module": "Creative AI route",
+      "gap": "registered but no local activity in the Android shell",
+      "action": "retain fail-closed status; do not invent an activity"
+    },
+    {
+      "module": "Runtime verification",
+      "gap": "source gates exist but device/runtime execution is unavailable in this session",
+      "action": "CI/device gate remains OPEN"
+    }
+  ],
+  "externalHarvest": [
+    {
+      "source": "OpenUSD",
+      "pattern": "layered/composable scene description; domain schemas",
+      "integration": "World/Digital Twin asset composition boundary",
+      "copyCode": false
+    },
+    {
+      "source": "Gazebo Sim",
+      "pattern": "physics/rendering/sensors/plugins/transport separation",
+      "integration": "simulator adapter boundaries",
+      "copyCode": false
+    },
+    {
+      "source": "INTO-CPS DigitalTwins_RoboSim",
+      "pattern": "co-simulation, explicit mappings, logged observations",
+      "integration": "Digital Twin learning event schema",
+      "copyCode": false
+    },
+    {
+      "source": "Yang-Ci ReBot_Arm_DigitalTwin_DM",
+      "pattern": "real2sim, simulation modes, diagnostic entry point, explicit control unlock",
+      "integration": "fault/diagnostic and simulation-only controls",
+      "copyCode": false
+    },
+    {
+      "source": "194048210liang robot-digital-twin-simulator",
+      "pattern": "model → task → simulation → validation → export; clear no-hardware boundary",
+      "integration": "universal simulator validation/export lane",
+      "copyCode": false
+    },
+    {
+      "source": "TUM RobWoT",
+      "pattern": "URDF-driven digital twin and simulation/Thing Description boundary",
+      "integration": "asset/twin identity adapters",
+      "copyCode": false
+    },
+    {
+      "source": "OpenBooks",
+      "pattern": "modular workspaces, explicit contracts, append-only state/change feed and dependency checks",
+      "integration": "learning/audit/event contract patterns only",
+      "copyCode": false
+    }
+  ]
+}
