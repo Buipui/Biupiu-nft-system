@@ -192,3 +192,22 @@ INTERNAL HARVEST: IMPLEMENTED
 CI SMOKE WORKFLOW: REGISTERED
 OBSERVED CI RUN: PENDING
 DEVICE/HARDWARE: PENDING
+
+
+## Gate 38 — Live CI failure-driven remediation — 22 September 2026
+
+Previous Gate 37 CI evidence exposed two blocking defects: an Android manifest/security-contract mismatch and an over-broad repository workflow-action audit. Both were repaired at source.
+
+- Android manifest now declares the existing network security configuration.
+- Security workflow enforces immutable action SHAs for its own execution path.
+- Repository-wide non-SHA action references are retained as a migration inventory rather than treated as an immediate self-gate failure.
+- Security and native semantic smoke workflows now use immutable SHA-pinned action references.
+- Gate 38 remains open until fresh post-fix CI execution is observed.
+
+CURRENT:
+SOURCE REMEDIATION: IMPLEMENTED
+LIVE FAILURE EVIDENCE: OBSERVED
+POST-FIX CI: PENDING
+ANDROID DEVICE RUNTIME: PENDING
+HARDWARE/PHYSICAL: PENDING
+PRODUCTION PROMOTION: BLOCKED pending verification evidence
