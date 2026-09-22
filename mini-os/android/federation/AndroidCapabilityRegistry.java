@@ -21,7 +21,7 @@ public final class AndroidCapabilityRegistry {
         capabilities.put("gsm-flags-2.0", State.UNRESOLVED);
         capabilities.put("godot.renderingdevice", State.ADAPTER_ONLY);
         capabilities.put("vulkan.android-runtime", State.ADAPTER_ONLY);
-        capabilities.put("vulkan.validation", State.ADAPTER_ONLY);
+        capabilities.put("vulkan.validation", State.DEVICE_REQUIRED);
 
         // Deep external federation: CPU/GPU/model/NPU/ML providers.
         capabilities.put("armv8.2.fp16", State.ADAPTER_ONLY);
