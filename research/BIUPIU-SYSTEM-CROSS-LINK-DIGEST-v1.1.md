@@ -130,3 +130,25 @@ No duplicate authoritative implementation is created merely to consume an extern
 - `research/BIUPIU-BLOCKCHAIN-ANCHOR-MANIFEST-FED-HARVEST-20260922.md`
 
 **Status: SOURCE-LEVEL INTEGRATION COMPLETE; executable promotion, runtime verification and release anchoring remain open.**
+
+
+## Federation consolidation + external harvest update — 2026-09-22
+
+### Federation execution rule
+Repository organization is now treated as a federation operation: discover → classify → cross-link → conflict-check → repair → verify → log → promote only with evidence. Federation does not collapse ownership boundaries.
+
+### External harvest incorporated
+**NASA software assurance:** lifecycle-wide assurance, verification/validation planning, defect tracking and evidence retention. Incorporated as a reference pattern for Biupiu's verification ladder and closure records. citeturn0search2turn0search10
+
+**DARPA Assured Autonomy:** continual assurance for learning-enabled cyber-physical systems, including operation-time monitoring and evaluation as systems/environment evolve. Incorporated as a reference pattern for Biupiu learning/failure-learning gates. citeturn0search0turn0search1
+
+**OpenTelemetry:** context propagation using trace/span context to correlate distributed signals across service/process boundaries. Incorporated as a reference pattern for federation correlation IDs and cross-system observability; external implementation remains an adapter/reference, not an authority. citeturn0search3turn0search12
+
+### Conflict-resolution rule
+External material is never promoted merely because it is authoritative elsewhere. Biupiu contracts remain the integration authority. Conflicts are preserved, classified and reconciled through explicit tests/decision records.
+
+### Result
+Repository organization: FEDERATED/IMPLEMENTED.
+External harvest: REGISTERED/INTEGRATED AS REFERENCE PATTERNS.
+Executable external code: NOT PROMOTED without licence, provenance, security, compatibility, build, smoke and regression evidence.
+Runtime/device/hardware verification: remains OPEN.
