@@ -33,3 +33,14 @@ A department may create a local derived cache for performance, but the source-of
 - sensor availability
 - cross-platform packaging
 - repeatable scenario execution
+
+
+## 2026-09-22 — Simulator federation extension
+
+| Department | Added federation references | Integration boundary |
+|---|---|---|
+| AUTO | Project Chrono | vehicle/multibody/terrain adapter; Biupiu owns vehicle authority, sensors and scenarios |
+| ARCHITECTURE / BUILDING / DESIGN | OpenStudio + EnergyPlus | geometry/workflow + energy-solver adapters; Biupiu owns canonical design/geometry |
+| AGRICULTURE / WORLD / ENVIRONMENT | OpenSim | movement/biomechanics/environment-agent reference; Biupiu owns crop, soil, water, climate and World state |
+
+The adapters are capability/probe boundaries only. External source is not vendored. Android receives capability identity/job-state contracts; runtime execution remains evidence-gated.
