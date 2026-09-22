@@ -357,3 +357,12 @@ Promotion rule: source implementation is not equivalent to runtime verification.
 - Hardware/physical correlation: OPEN.
 
 No third-party executable code or proprietary binaries were copied.
+
+# 2026-09-22 — Eigen + GSL Federation Pass 2
+- Reconciled upstream version state: Eigen 5.0.0 stable / 5.0.1 development reference.
+- Added foreign-language reference harvest for official GSL Japanese and Portuguese manuals.
+- Added optimization candidates for ARM NEON/SIMD, sparse/geometry paths, alignment, GSL optimized functions, numeric types and thread-safety.
+- Applied guided fault finding to prevent documentation, SIMD capability or foreign-language material from being promoted to runtime authority.
+- Updated scientific library registry and cross-link digest.
+- Pass 2 source/reference gate: CLOSED.
+- CI, Android NDK/Gradle, device performance and GSL runtime: OPEN.
