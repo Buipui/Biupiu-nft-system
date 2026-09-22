@@ -1,0 +1,3 @@
+import test from "node:test";import assert from "node:assert/strict";import{guideFaultFinding}from"./guided-fault-finder.js";
+test("contract guidance",()=>{const r=guideFaultFinding("F1",{source:"fed",faultClass:"CONTRACT",stateSignature:"schema",severity:"HIGH",message:"mismatch",evidenceRefs:["e"]},"Biupiu Federation",["federation"]);assert.equal(r.nextStep,"validate schema/version/content-type");});
+test("security quarantine",()=>{const r=guideFaultFinding("F2",{source:"runtime",faultClass:"SECURITY",stateSignature:"integrity",severity:"CRITICAL",message:"bad",evidenceRefs:[]},"Core OS",["os"]);assert.equal(r.state,"QUARANTINED");});
