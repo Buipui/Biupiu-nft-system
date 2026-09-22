@@ -5,6 +5,7 @@ export type FederationHealth = "HEALTHY"|"DEGRADED"|"OFFLINE"|"QUARANTINED";
 export type FederationDelivery = "AT_MOST_ONCE"|"AT_LEAST_ONCE"|"EXACTLY_ONCE_REQUESTED";
 export type FederationAuthority = "OBSERVE"|"SIMULATE"|"PROPOSE"|"COMMIT";
 export type FederationEvidence = "OBSERVED"|"COMPUTED"|"SIMULATED"|"INFERRED"|"UNRESOLVED";
+export type FederationLicenceState = "VERIFIED"|"REVIEW"|"RESTRICTED"|"PROHIBITED"|"UNKNOWN";
 
 export interface FederationCapability {
   id:string;
@@ -49,10 +50,12 @@ export interface FederationObservation {
   sourceCommit:string;
   inputHash:string;
   outputHash:string;
+  timestamp:string;
   seed?:string|number;
   units:string[];
   assumptions:string[];
-  evidence:FederationEvidence;
+  evidenceClass:FederationEvidence;
+  licenceState:FederationLicenceState;
   schema:FederationSchemaRef;
   trace:FederationTraceContext;
 }
