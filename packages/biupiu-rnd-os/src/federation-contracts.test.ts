@@ -31,5 +31,5 @@ const observation: FederationObservation = {
 };
 assert.equal(observation.evidenceClass, "SIMULATED");
 assert.equal(observation.licenceState, "VERIFIED");
-assert.match(observation.timestamp, /^\\d{4}-\\d{2}-\\d{2}T/);
+assert.match(observation.timestamp, /^\d{4}-\d{2}-\d{2}T/);
 console.log("PASS federation-contracts smoke");
