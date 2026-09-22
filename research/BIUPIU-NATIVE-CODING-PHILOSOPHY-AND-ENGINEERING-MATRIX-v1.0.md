@@ -337,3 +337,42 @@ Matrix cross-reference:
 - Verification ladder: source cleanup does not elevate CI/runtime/HIL status.
 
 Status: SEMANTIC CODE CLEANUP IMPLEMENTED / SOURCE CROSS-LINKED / RUNTIME VERIFICATION PENDING.
+
+
+## 21. Modern multilingual/native engineering extension — 22 September 2026
+
+Foreign-language federation harvest was reconciled against the native matrix. Compatible principles from Unicode CLDR/UTS #35, FLORES/NLLB evaluation practice, i18next fallback design and multilingual Kotlin/Android implementations were adopted as engineering patterns, not as Biupiu authority.
+
+### New hard rules
+- Locale identity MUST preserve language plus applicable script and region subtags.
+- BCP-47-compatible tags are the canonical exchange form for user-selected locales.
+- Locale selection, translation content, formatting data and language evidence are separate concerns.
+- Fallback MUST be deterministic, ordered and observable.
+- Translation MUST NOT alter evidence state or provenance.
+- Language support claims MUST declare the actual support level: display, input, selection, minimal i18n, full i18n, UI or advanced.
+- Multilingual tests MUST include script, region, RTL/complex-script and fallback cases where applicable.
+- Foreign-language source discovery MUST retain original terminology and source metadata.
+- External multilingual code remains reference/candidate material until licence, dependency, security, build, integration and regression gates pass.
+
+### Native mapping
+- Shared language contract: apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+- Native selector: apps/shared/runtime/LanguageSelector.kt
+- Selector tests: apps/shared/runtime/LanguageSelectorTest.kt
+- Android UI integration: apps/android/app/src/main/java/com/biupiu/rndos/BiupiuShell.kt
+- Windows locale registry: apps/windows/BiupiuLanguageRegistry.cs
+- Windows UI integration: apps/windows/MainWindow.xaml + MainWindow.xaml.cs
+- Intelligence translation: software/rnd-os-ai/src/biupiu_ai/global_language_translation.py
+- Intelligence tests: software/rnd-os-ai/tests/test_global_language_translation.py
+- Smart Farming cross-link: smart-farming/README.md
+- Harvest record: research/BIUPIU-FOREIGN-LANGUAGE-CODING-PHILOSOPHY-HARVEST-20260922.md
+
+### Verification interpretation
+Source-level semantic verification: PASS.
+Native unit-test coverage added: IMPLEMENTED.
+CI execution: OPEN until observed.
+Android/Windows runtime UI verification: OPEN.
+Full multilingual translation quality: OPEN and requires controlled evaluation data plus human/linguistic validation.
+
+### Engineering principle
+**DIGITAL-FIRST, NATIVE-FIRST, EVIDENCE-FIRST, LANGUAGE-NEUTRAL AUTHORITY.**
+External languages expand discovery; they do not change ownership, authority or evidence state.
