@@ -16,6 +16,7 @@ jobs:
       - run: python intelligence/BIUPIU-SYSTEMWIDE-MODULE-SMOKE-AUDIT.py
       - run: python intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py
       - run: python intelligence/BIUPIU-BLOCKCHAIN-ANCHOR-BOUNDARY.py
+      - run: python intelligence/BIUPIU-AI-CODING-HARD-GATE.py
   npm-contracts:
     runs-on: ubuntu-latest
     steps:
