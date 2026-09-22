@@ -4,7 +4,7 @@ set(CMAKE_CXX_STANDARD 17)
 set(CMAKE_CXX_STANDARD_REQUIRED ON)
 add_library(biupiu_native SHARED
     src/main/cpp/scientific_android_bridge.cpp
-    ../../../../core/multilang/cpp/scientific_math_adapter.cpp
+    ../../../core/multilang/cpp/scientific_math_adapter.cpp
 )
 target_include_directories(biupiu_native PRIVATE
     ../../../../core/multilang/include
