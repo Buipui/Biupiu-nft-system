@@ -7,7 +7,13 @@ import { MemoryRenderJobRepository, type RenderJobRecord } from "./job-registry"
 import { validateBlenderOutput } from "../blender-output-gate";
 import { appendConversionLineage } from "./provenance";
 import type { ConversionLineage } from "./provenance";
-export interface CreateRenderRequest extends ProviderJobInput { capability:RenderCapability; provider:ProviderAdapterId; sourceModelVersion:string; conversion?:ConversionLineage; }
+export interface CreateRenderRequest extends Omit<ProviderJobInput, "output"> {
+ capability:RenderCapability;
+ provider:ProviderAdapterId;
+ output:"STILL"|"VIDEO"|"AUDIO"|"SHOWREEL";
+ sourceModelVersion:string;
+ conversion?:ConversionLineage;
+}
 export class RenderService {
  constructor(private repository:MemoryRenderJobRepository,private broker:RenderExecutionBroker){}
  async create(context:AccessContext,request:CreateRenderRequest){
