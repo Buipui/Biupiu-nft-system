@@ -13,7 +13,7 @@ export interface FederationNodeRef {
 
 export interface FederatedTwinEnvelope {
   federationId:string;
-  node: FederationNodeRef;
+  node:FederationNodeRef;
   envelope:TwinEnvelope;
   eventId:string;
   sequence:number;
@@ -74,6 +74,10 @@ export class FederationReplayStore {
       return undefined;
     }
     if(existing){
+      if(existing.state==="CONFLICT" || existing.state==="DEAD_LETTER"){
+        item.state=existing.state;
+        return undefined;
+      }
       item.state=existing.state==="ACKED" ? "ACKED" : "SENT";
       return {federationId:item.federationId,eventId:item.eventId,nodeId:item.node.nodeId,acknowledgedAt:new Date().toISOString(),duplicate:true};
     }
