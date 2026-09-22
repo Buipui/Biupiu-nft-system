@@ -419,3 +419,16 @@ Current structural organization is implemented. World runtime migration, full cr
 
 **Organization version:** 1.1  
 **Last updated:** 22 September 2026
+
+
+## Federation organization update — 22 September 2026
+
+The structure is governed as a federated system rather than a flat monorepo. Each subsystem keeps its own authority while exchanging versioned contracts, provenance and observable events.
+
+**Federation path:** Research/Evidence → Intelligence → Digital Orchestra → Core OS/DMS → Digital Twin/Federation → Simulators/Adapters → Observation → Learning Evidence → Regression → Release/Human Gate.
+
+**External harvest path:** External source → provenance/licence/security classification → reference/pattern/adapter candidate → compatibility/build/smoke/regression → controlled promotion. External material does not bypass native contracts.
+
+**Observability:** Federation events retain trace/span/correlation context so distributed activity can be reconstructed across boundaries. This is an architectural reference pattern derived from OpenTelemetry, not a dependency requirement. citeturn0search3turn0search15
+
+**Assurance:** Verification evidence and defect/closure records remain lifecycle artifacts, consistent with the external assurance pattern reviewed from NASA. citeturn0search2turn0search4
