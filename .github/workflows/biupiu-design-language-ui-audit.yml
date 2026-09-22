@@ -1,0 +1,29 @@
+name: Biupiu Design Language and UI Semantic Audit
+
+on:
+  push:
+    paths:
+      - "docs/architecture/BIUPIU-DESIGN-LANGUAGE-CODE-CONTRACT-v1.0.json"
+      - "research/BIUPIU-UI-SEMANTIC-ACTION-CONTRACT-v1.0.md"
+      - "apps/windows/**"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/**"
+      - "software/rnd-os-ai/src/simulator_module_registry.py"
+      - "intelligence/BIUPIU-DESIGN-LANGUAGE-UI-SMOKE.py"
+  pull_request:
+    paths:
+      - "docs/architecture/BIUPIU-DESIGN-LANGUAGE-CODE-CONTRACT-v1.0.json"
+      - "research/BIUPIU-UI-SEMANTIC-ACTION-CONTRACT-v1.0.md"
+      - "apps/windows/**"
+      - "apps/android/app/src/main/java/com/biupiu/rndos/**"
+      - "software/rnd-os-ai/src/simulator_module_registry.py"
+      - "intelligence/BIUPIU-DESIGN-LANGUAGE-UI-SMOKE.py"
+
+jobs:
+  audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - run: python intelligence/BIUPIU-DESIGN-LANGUAGE-UI-SMOKE.py
