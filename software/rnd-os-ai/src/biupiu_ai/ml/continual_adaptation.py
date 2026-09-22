@@ -8,6 +8,7 @@ first-party code and deliberately model-agnostic.
 from __future__ import annotations
 
 from dataclasses import dataclass
+import math
 from typing import Mapping, Sequence, Tuple
 
 
@@ -78,5 +79,12 @@ def reference_anchored_parameter_update(
         )
         delta = raw - float(current[key])
         delta = max(-max_step, min(max_step, delta))
-        updated[key] = float(current[key]) + delta
+        candidate = float(current[key]) + delta
+        # Guard the mathematical bound against binary floating-point overshoot.
+        if abs(candidate - float(current[key])) > max_step:
+            candidate = math.nextafter(
+                float(current[key]) + math.copysign(max_step, delta),
+                float(current[key]),
+            )
+        updated[key] = candidate
     return updated
