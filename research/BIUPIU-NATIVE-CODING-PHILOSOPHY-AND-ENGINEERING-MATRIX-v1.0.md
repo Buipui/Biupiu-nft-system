@@ -305,3 +305,35 @@ Digital Filing Cabinet is a separate native subsystem. It owns catalogue/filing 
 Digital Twin may compose subsystems into other subsystem contexts, but must preserve canonical owner, canonical parent and subsystem path. Federation links and diagnoses systems without merging their identities or authorities.
 Federated fault/healing must diagnose across boundaries while returning execution to the canonical owning system.
 Status: SOURCE INTEGRATED / RUNTIME VERIFICATION PENDING.
+
+
+## 20. Federation semantic-code gate — 22 September 2026
+
+A Federation semantic coding pass cross-referenced the native engineering matrix against the active federation/AI code paths:
+- `software/rnd-os-ai/src/biupiu_ai/federation_protocol.py`
+- `software/rnd-os-ai/src/biupiu_ai/federation_registry.py`
+- `software/rnd-os-ai/src/biupiu_ai/learning.py`
+- `software/rnd-os-ai/src/biupiu_ai/promotion_router.py`
+- `software/rnd-os-ai/src/simulator_adapters.py`
+- corresponding federation, learning, promotion and simulator tests.
+
+Semantic findings and fixes:
+1. Federation gate evaluation was made explicitly typed at the mapping/sequence boundary and documented as deterministic fail-closed behaviour.
+2. Federation readiness now has an explicit sequence/mapping contract rather than relying on untyped inputs.
+3. Registry activation semantics were clarified with explicit boolean defaults and documentation; blocked systems remain unconditionally ineligible.
+4. Native ML learning-promotion semantics were clarified and formatted as an explicit bounded gate requiring reusable-pattern evidence, verified provenance, licence checking and human approval.
+5. Existing promotion routing remains proposal-only; Digital Twin eligibility does not transfer execution authority.
+6. Simulator adapters remain probe-only until explicitly invoked and reject unsafe argument forms; missing backends remain non-executable.
+7. The stale federation test expectation discovered during the prior pass was replaced with an authoritative registry-derived assertion.
+8. A cross-system federation AI smoke test now connects registry -> promotion -> learning -> federation readiness -> simulator safety.
+
+Matrix cross-reference:
+- Python public APIs: explicit type annotations added at federation boundaries.
+- Errors: fail-closed behaviour retained and made clearer.
+- Testing: semantic regression coverage added.
+- Observability/evidence: federation and learning remain evidence-gated.
+- Learning: promotion remains append-only/evidence-first and human-controlled.
+- Architecture: federation coordinates but does not bypass canonical authority.
+- Verification ladder: source cleanup does not elevate CI/runtime/HIL status.
+
+Status: SEMANTIC CODE CLEANUP IMPLEMENTED / SOURCE CROSS-LINKED / RUNTIME VERIFICATION PENDING.
