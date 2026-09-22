@@ -376,3 +376,34 @@ Full multilingual translation quality: OPEN and requires controlled evaluation d
 ### Engineering principle
 **DIGITAL-FIRST, NATIVE-FIRST, EVIDENCE-FIRST, LANGUAGE-NEUTRAL AUTHORITY.**
 External languages expand discovery; they do not change ownership, authority or evidence state.
+
+
+## 22. Federation guided fault-finding and bug-fix matrix — 22 September 2026
+
+The Federation-led diagnostic pass extends the matrix with a deterministic fault-fix boundary. Internal repository modules are searched and reconciled before external harvest. External material is reference-only unless all existing provenance, licence, security, build, regression, runtime and human-promotion gates pass.
+
+### Diagnostic contract
+OBSERVE -> CLASSIFY -> OWNERSHIP -> GUIDED EVIDENCE -> ISOLATE -> REPAIR PROPOSAL -> INDEPENDENT VALIDATION -> REGRESSION -> LEARNING RECORD -> CONTROLLED REUSE.
+
+### Fault-fix matrix
+| Fault class | Diagnostic focus | Repair boundary | Verification |
+|---|---|---|---|
+| TRANSPORT | delivery, TTL, backpressure | routing/queue policy | replay delivery path + regression |
+| DEPENDENCY | version/lock state | compatible pinned version or quarantine | clean build + dependency regression |
+| CONTRACT | schema/version/content-type | boundary contract only | compatibility regression |
+| VALIDATION | captured failing inputs | smallest validated logic fix | unit + regression |
+| AUTHORITY | canonical owner/conflict | reconcile through owner | authority regression |
+| MODEL | assumptions/units/version | explicit model/config correction | numerical regression |
+| DATA | provenance/schema/range/unit | quarantine or boundary repair | data-contract regression |
+| RUNTIME | trace/environment | reversible runtime fix | smoke + regression |
+| SECURITY | integrity/quarantine | security review only | security regression + human release |
+
+Unknown fault classes fail closed. Security faults remain quarantined. No diagnostic result itself grants execution authority.
+
+### External multilingual engineering patterns
+NASA IV&V contributes objective-evidence, traceability and off-nominal verification principles; Japanese FMEA/IEC 60812 material contributes structured failure-mode/effect analysis; Unicode CLDR/BCP 47 contributes canonical locale validation and deterministic language matching/fallback. Public diagnostic/self-healing repositories are pattern references only.
+
+### Native ML integration
+Failure fingerprints, verified-fix state, regression state, platform/version context and evidence references are learning inputs. A repeated failure becomes reusable only after the existing learning-level, provenance, licence and human-promotion requirements pass. Preventative tests remain proposed until independently passing.
+
+Status: IMPLEMENTED / SOURCE-CROSS-LINKED / CI-RUNTIME VERIFICATION PENDING.
