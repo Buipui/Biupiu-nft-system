@@ -29,3 +29,11 @@ event_id, correlation_id, source, target, schema_version, timestamp, evidence_st
 Never silently retry a semantic failure. Distinguish transport, dependency, contract, validation, authority, model and data failures. Quarantine unknown or unlicensed executable material.
 
 Runtime: source seed committed; host execution, package tests, CI integration and cross-system runtime remain separate gates.
+
+## Filing Cabinet + hierarchy/federation integration — Gate 34
+Orchestra routes filing, twin and federation workflows but does not absorb their authority.
+Digital Filing Cabinet = catalogue authority.
+Digital Twin = contextual composition authority.
+Federation = inter-system discovery/link/reconciliation authority.
+Canonical owner = execution authority for its own subsystem.
+Fault-healing orchestration = federated diagnosis + governed local execution.
