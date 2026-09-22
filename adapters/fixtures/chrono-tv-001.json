@@ -1,0 +1,16 @@
+{
+  "test_vector_id": "CHRONO-TV-001",
+  "system": "mass-spring-damper",
+  "mass": 1,
+  "spring_constant": 4,
+  "damping": 0,
+  "initial_displacement": 1,
+  "initial_velocity": 0,
+  "units": {
+    "mass": "kg",
+    "spring_constant": "N/m",
+    "time": "s"
+  },
+  "expected_angular_frequency": 2,
+  "deterministic": true
+}
