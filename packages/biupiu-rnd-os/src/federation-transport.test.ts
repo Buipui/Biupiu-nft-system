@@ -31,4 +31,19 @@ test("replay is idempotent and conflicting reuse is blocked",()=>{
  assert.equal(store.accept(conflict),undefined);
  assert.equal(conflict.state,"CONFLICT");
  assert.equal(store.state(first.eventId),"CONFLICT");
+ const blocked=store.accept(duplicate);
+ assert.equal(blocked,undefined);
+ assert.equal(duplicate.state,"CONFLICT");
+});
+
+test("dead-letter events cannot be resurrected by replay",()=>{
+ const store=new FederationReplayStore();
+ const first=createFederatedEnvelope(node,{...base,idempotencyKey:"event:dead"},1,"2026-09-21T00:00:00.000Z");
+ assert.equal(store.accept(first),undefined);
+ store.markDeadLetter(first.eventId);
+ const replay=createFederatedEnvelope(node,{...base,idempotencyKey:"event:dead"},2,"2026-09-21T00:01:00.000Z");
+ replay.eventId=first.eventId;
+ assert.equal(store.accept(replay),undefined);
+ assert.equal(replay.state,"DEAD_LETTER");
+ assert.equal(store.state(first.eventId),"DEAD_LETTER");
 });
