@@ -48,3 +48,23 @@
 **NATIVE ANDROID BUILD: OPEN**
 **LIVE DEVICE/ACCESSORY: OPEN**
 **PHYSICAL AUTOMOTIVE HIL: OPEN**
+
+
+## Next Gate — Android Auto Runtime-Availability Semantic Hardening — 2026-09-22
+
+### Fault found
+The Android Auto adapter's source-level `isAvailable()` result could be interpreted as live projection availability merely because an application context existed. That would violate the repository rule that source presence is not runtime/device evidence.
+
+### Corrective implementation
+- Android Auto adapter now safely accepts a null context.
+- `isAvailable()` fails closed until Android Car APIs confirm live projection.
+- Diagnostic state explicitly distinguishes runtime evidence from source-level adapter presence.
+- Static semantic test now asserts that a null-context adapter cannot claim live availability.
+
+### Verification
+- Source correction: **IMPLEMENTED**.
+- Fail-closed semantic test logic: **PASS by source inspection**.
+- Android/Gradle execution: **OPEN** because no executed Android build result is available.
+- Live Android Auto projection: **OPEN** pending device/runtime evidence.
+
+**Status: NEXT-GATE SOURCE HARDENING COMPLETE / BUILD + DEVICE VERIFICATION OPEN.**
