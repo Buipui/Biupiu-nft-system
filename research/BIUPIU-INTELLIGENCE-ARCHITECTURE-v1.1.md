@@ -75,3 +75,31 @@ Routing:
 The learning layer must preserve both the internal baseline and the external candidate lineage. It may improve retrieval, comparison, diagnostics and test generation; it may not silently replace authoritative code, erase failures or self-authorise promotion.
 
 Linked checkpoint: `research/BIUPIU-LEARNING-CHECKPOINT-FED-HARVEST-20260922.md`.
+
+
+## Multilingual Federation Learning Extension — 22 September 2026
+
+The Intelligence Layer now receives a governed multilingual engineering event stream:
+FOREIGN-LANGUAGE DISCOVERY -> ORIGINAL SOURCE RETENTION -> LOCALE/TERMINOLOGY NORMALISATION -> INTERNAL MATCH -> TEST VECTOR -> RESULT/FAILURE -> LEARNING EVENT -> INDEX/DIGEST -> PROMOTION REVIEW.
+
+Native language capability is anchored at:
+- apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+- apps/shared/runtime/LanguageSelector.kt
+- software/rnd-os-ai/src/biupiu_ai/global_language_translation.py
+
+Learning must preserve:
+- original language;
+- canonical locale tag;
+- script/region;
+- source terminology;
+- provenance;
+- licence state;
+- test evidence;
+- translation verification state;
+- fallback behaviour;
+- failure class;
+- source commit.
+
+The learning layer may generate preventative multilingual tests and retrieval improvements. It may not promote translated code, change evidence state, or overwrite authoritative language contracts without the normal validation and human release gates.
+
+Blockchain boundary remains unchanged: only approved hashes/manifests/IDs may be anchored; private knowledge, raw translation data, credentials and confidential IP remain off-chain.
