@@ -171,3 +171,24 @@ CHANGELOG RECONCILIATION: IMPLEMENTED
 HOST/CI EXECUTION: PENDING
 ANDROID/DEVICE RUNTIME: PENDING
 PRODUCTION PROMOTION: BLOCKED pending runtime/release evidence
+
+## Gate 37 — Native semantic smoke / secure coding federation harvest — 22 September 2026
+
+Identified and corrected:
+- learning licence-promotion default made fail-closed;
+- learning drift-penalty scoring semantic error corrected;
+- Federation F01 made explicit about Core OS validation;
+- authority hierarchy executable contract added;
+- targeted regression tests added;
+- native coding matrix advanced to v1.1 with secure-native verification rules;
+- external NIST/Android/CISA engineering practices harvested and translated into internal rules;
+- dedicated CI smoke workflow added.
+
+SOURCE FIXES: IMPLEMENTED
+SEMANTIC TEST SOURCE: IMPLEMENTED
+CODING-MATRIX CROSS-REFERENCE: IMPLEMENTED
+EXTERNAL HARVEST: IMPLEMENTED
+INTERNAL HARVEST: IMPLEMENTED
+CI SMOKE WORKFLOW: REGISTERED
+OBSERVED CI RUN: PENDING
+DEVICE/HARDWARE: PENDING
