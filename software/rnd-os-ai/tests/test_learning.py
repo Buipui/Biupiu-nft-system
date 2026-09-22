@@ -105,3 +105,25 @@ def test_external_fix_gap_learning_and_double_search_comparison():
     assert diff.only_first == ("a",)
     assert diff.only_second == ("c",)
     assert diff.divergence_reason.startswith("RESULT_SET_CHANGED")
+
+def test_federated_provider_learning_record_is_governed():
+    from biupiu_ai.learning import ProviderObservation, make_provider_learning_record
+
+    record = make_provider_learning_record(
+        ProviderObservation(
+            provider_id="jolt-physics",
+            domain="physics",
+            capability="rigid-body-dynamics",
+            version="5.6.0",
+            failure_class="integration",
+            fixed=True,
+            regression_passed=True,
+            provenance_verified=True,
+            licence_checked=True,
+            evidence_refs=("research/BIUPIU-FEDERATION-JOLT-BULLET-QUTIP-OPENFERMION-OPENGL-20260922.json",),
+        ),
+        learning_id="provider-jolt-smoke-001",
+    )
+    assert record.evidence_state == "SUPPORTED"
+    assert record.next_action == "TEST"
+    assert verify_learning_record(record)
