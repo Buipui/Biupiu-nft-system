@@ -254,3 +254,77 @@ def coding_pattern_reuse_ready(evidence: dict, *, human_approved: bool = False) 
         "regression_passed", "provenance_verified", "security_passed",
     )
     return bool(human_approved and evidence.get("rollback_reference") and all(evidence.get(k) for k in required))
+
+@dataclass(frozen=True)
+class ExternalFixEvidence:
+    """Evidence used to learn from an external fix that was not internally implemented."""
+    target_id: str
+    fault_class: str
+    external_fix_id: str
+    internal_present: bool
+    semantic_match: bool
+    source_verified: bool
+    licence_checked: bool
+    security_checked: bool
+    tests_available: bool
+    regression_available: bool
+    search_pass: str
+    source_refs: Tuple[str, ...] = ()
+
+def score_external_fix_gap(evidence: ExternalFixEvidence) -> CandidateScore:
+    """Score an external fix gap for guided investigation, never for auto-promotion."""
+    if evidence.search_pass not in {"PASS-1", "PASS-2"}:
+        raise ValueError("search_pass must be PASS-1 or PASS-2")
+    if not evidence.source_refs:
+        raise ValueError("source_refs are required")
+    values = {
+        "information_gain": 1.0 if not evidence.internal_present else 0.0,
+        "uncertainty_reduction": 1.0 if evidence.semantic_match else 0.0,
+        "model_disagreement": 1.0 if not evidence.internal_present and evidence.semantic_match else 0.0,
+        "feasibility": 1.0 if evidence.source_verified and evidence.licence_checked else 0.0,
+        "regression_safety": 1.0 if evidence.tests_available and evidence.regression_available and evidence.security_checked else 0.0,
+    }
+    return score_learning_candidate(f"external-fix-gap:{evidence.external_fix_id}", **values)
+
+def make_external_fix_gap_learning_record(evidence: ExternalFixEvidence, *, learning_id: str) -> LearningRecord:
+    """Persist an external/internal mismatch as governed learning evidence."""
+    score = score_external_fix_gap(evidence)
+    outcome = (
+        f"external fix {evidence.external_fix_id} absent internally; "
+        f"search={evidence.search_pass}; candidate_score={score.score:.6f}; "
+        f"native implementation required={not evidence.internal_present}"
+    )
+    return make_learning_record(
+        learning_id=learning_id,
+        target_type="EXTERNAL_FIX_GAP",
+        target_id=evidence.target_id,
+        input_refs=tuple(evidence.source_refs) + (f"external_fix_id={evidence.external_fix_id}",),
+        evidence_state="SUPPORTED" if evidence.source_verified else "PRELIMINARY",
+        knowledge_class="FAILURE",
+        result_version="external-fix-gap-learning-v1",
+        observed_outcome=outcome,
+        next_action="TEST" if score.regression_safety else "REVIEW",
+    )
+
+@dataclass(frozen=True)
+class HarvestComparison:
+    search_id: str
+    pass_one_refs: Tuple[str, ...]
+    pass_two_refs: Tuple[str, ...]
+    common_refs: Tuple[str, ...]
+    only_first: Tuple[str, ...]
+    only_second: Tuple[str, ...]
+    divergence_reason: str
+
+def compare_harvest_passes(search_id: str, pass_one_refs: Sequence[str], pass_two_refs: Sequence[str]) -> HarvestComparison:
+    """Explain repeated-harvest differences without assuming the cause."""
+    a, b = set(pass_one_refs), set(pass_two_refs)
+    common = tuple(sorted(a & b))
+    only_a, only_b = tuple(sorted(a - b)), tuple(sorted(b - a))
+    if not only_a and not only_b:
+        reason = "NO_DIVERGENCE"
+    elif not common:
+        reason = "NON_OVERLAPPING_RESULT_SET_REQUIRES_SOURCE_AND_INDEX_REVIEW"
+    else:
+        reason = "RESULT_SET_CHANGED_REQUIRES_RECENCY_QUERY_AND_SOURCE_INDEX_REVIEW"
+    return HarvestComparison(search_id, tuple(pass_one_refs), tuple(pass_two_refs), common, only_a, only_b, reason)
