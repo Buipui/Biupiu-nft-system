@@ -45,9 +45,3 @@ jobs:
       - name: Run Mini OS JVM tests
         working-directory: mini-os/android
         run: gradle --no-daemon --stacktrace :app:testDebugUnitTest
-
-      - name: Publish APK
-        uses: actions/upload-artifact@v4
-        with:
-          name: biupiu-mini-os-debug-apk
-          path: mini-os/android/app/build/outputs/apk/debug/*.apk
