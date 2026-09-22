@@ -102,6 +102,10 @@ export function requiresHumanApproval(action:TwinActionRequest):boolean{
 export function dmsDigitalTwinFeatureId():string{return "digital-twin.advanced";}
 
 export function canLearnFromTwinEvent(event:TwinEvent):boolean {
- return event.provenanceRefs.length>0 && !!event.modelVersion.trim() && (event.eventType==="SIMULATION" || event.eventType==="TEST_RESULT" || event.eventType==="CALIBRATION" || event.eventType==="STATE_UPDATE" || event.eventType==="TELEMETRY");\n}\n\nexport function bindLearningReference(twin:DigitalTwinRef, learningId:string):DigitalTwinRef {
+ return event.provenanceRefs.length>0 && !!event.modelVersion.trim() && (event.eventType==="SIMULATION" || event.eventType==="TEST_RESULT" || event.eventType==="CALIBRATION" || event.eventType==="STATE_UPDATE" || event.eventType==="TELEMETRY");
+}
+
+export function bindLearningReference(twin:DigitalTwinRef, learningId:string):DigitalTwinRef {
  if(!learningId.trim()) throw new Error("learningId is required");
- return {...twin, sourceRefs:[...twin.sourceRefs, learningId]};\n}
+ return {...twin, sourceRefs:[...twin.sourceRefs, learningId]};
+}
