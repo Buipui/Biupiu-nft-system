@@ -2,6 +2,8 @@ import { strict as assert } from "node:assert";
 import type { FederationCapability, FederationObservation } from "./federation-contracts.js";
 
 const capability: FederationCapability = {
+  schemaVersion: "1.0",
+  provenance: "test",
   id: "test.transport",
   version: "1.0.0",
   enabled: true,
@@ -29,5 +31,5 @@ const observation: FederationObservation = {
 };
 assert.equal(observation.evidenceClass, "SIMULATED");
 assert.equal(observation.licenceState, "VERIFIED");
-assert.match(observation.timestamp, /^\\d{4}-\\d{2}-\\d{2}T/);
+assert.match(observation.timestamp, /^\d{4}-\d{2}-\d{2}T/);
 console.log("PASS federation-contracts smoke");

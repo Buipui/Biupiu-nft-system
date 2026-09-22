@@ -596,3 +596,15 @@ Applied corrections:
 - identified semantic defects have dedicated regression tests.
 
 Status: v1.1 governance extension implemented at source; host/CI/runtime evidence remains required.
+
+
+## 2026-09-22 — AI / Multimedia / UI Federation Hardening
+For Android external AI/multimedia/UI federation:
+1. Runtime family identity and concrete executable provider identity MUST remain separate.
+2. Vendor/platform SDKs such as Qualcomm IMSDK/QAIRT and Huawei HiAI MUST remain adapter/device/licence boundaries until external evidence is complete.
+3. TensorFlow Lite compatibility MUST NOT create a competing forward runtime when LiteRT is the current Google runtime path.
+4. API-level features MUST be guarded by runtime capability checks; source availability is not device availability.
+5. Compose-first UI dependencies MUST remain separated from domain/native authority; UI migration does not promote the underlying OS/DMS contract.
+6. Navigation state MUST be typed and serializable when persistence is required.
+7. ONNX/LiteRT/provider dependency presence MUST be recorded separately from runtime, accelerator and model-performance verification.
+8. External SDKs, vendor binaries and restricted source MUST NOT be copied into the repository without explicit provenance/licence approval.

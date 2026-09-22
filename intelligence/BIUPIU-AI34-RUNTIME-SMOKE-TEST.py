@@ -1,9 +1,14 @@
 """AI-34 controlled runtime smoke tests for the existing read-only simulator contract."""
 from pathlib import Path
 import json
-from tests.simulator_machine_capability import ReadOnlyCapabilitySimulator
+import sys
 
 ROOT = Path(__file__).resolve().parents[1]
+if str(ROOT) not in sys.path:
+    sys.path.insert(0, str(ROOT))
+
+from tests.simulator_machine_capability import ReadOnlyCapabilitySimulator
+
 FIXTURE = ROOT / "schemas/fixtures/machine-capability-v1.0.example.json"
 
 def load():

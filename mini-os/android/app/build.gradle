@@ -1,9 +1,12 @@
-plugins { id 'com.android.application' }
+plugins {
+    id 'com.android.application'
+    id 'org.jetbrains.kotlin.android'
+    id 'org.jetbrains.kotlin.plugin.compose'
+}
 
 android {
     namespace 'com.biupiu.minios'
     compileSdk 35
-
     defaultConfig {
         applicationId 'com.biupiu.minios'
         minSdk 29
@@ -11,6 +14,7 @@ android {
         versionCode 1
         versionName '0.1.0'
     }
+    buildFeatures { compose true }
 }
 
 dependencies {
@@ -18,4 +22,12 @@ dependencies {
     implementation 'androidx.core:core:1.16.0'
     implementation 'androidx.car.app:app:1.7.0'
     implementation 'androidx.car.app:app-projected:1.7.0'
+    implementation 'com.microsoft.onnxruntime:onnxruntime-android:1.30.0'
+    implementation 'com.google.ai.edge.litert:litert:2.1.0'
+    implementation 'androidx.compose.runtime:runtime:1.12.1'
+    implementation 'androidx.compose.foundation:foundation:1.12.1'
+    implementation 'androidx.compose.ui:ui:1.12.1'
+    implementation 'androidx.compose.material3:material3:1.4.0'
+    implementation 'androidx.navigation3:navigation3-runtime:1.1.7'
+    implementation 'androidx.navigation3:navigation3-ui:1.1.7'
 }
