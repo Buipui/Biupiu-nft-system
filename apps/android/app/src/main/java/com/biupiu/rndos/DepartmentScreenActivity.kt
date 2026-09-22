@@ -61,13 +61,13 @@ class SmartFarmingActivity : DepartmentScreenActivity() {
 class SmartMetallurgyActivity : DepartmentScreenActivity() {
     override val screenId = "METAL_MAKING_WORLD"
     override val title = "Smart Metal Workshop"
-    override val packageName = "@biupiu/smart-metallurgy"
+    override val modulePackageName = "@biupiu/smart-metallurgy"
     override val route = "SMART_METAL_WORKSHOP"
 }
 
 class RndOsActivity : DepartmentScreenActivity() {
     override val screenId = "RND_OS_HOME"
     override val title = "Biupiu R&D OS"
-    override val packageName = "@biupiu/rnd-os"
+    override val modulePackageName = "@biupiu/rnd-os"
     override val route = "RND_OS"
 }
