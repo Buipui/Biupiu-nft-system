@@ -1,0 +1,33 @@
+{
+  "protocol": "BIUPIU-FEDERATED-REPOSITORY-SEARCH",
+  "version": "1.0",
+  "gate": "AI-70",
+  "status": "HARD-IMPLEMENTED",
+  "source_lanes": [
+    {"id":"BIUPIU_REPO","class":"primary","purpose":"repository-first architecture, code, history and governed research"},
+    {"id":"GITHUB","class":"primary/discovery","purpose":"public repository and code discovery"},
+    {"id":"ISO_STANDARDS","class":"authoritative","purpose":"published standards and lifecycle state"},
+    {"id":"NASA_ADS","class":"authoritative_index","purpose":"scientific literature discovery and metadata"},
+    {"id":"GOV_TECH","class":"authoritative","purpose":"public government technical research"},
+    {"id":"SCHOLARLY_INDEX","class":"metadata","purpose":"cross-publisher scholarly discovery"},
+    {"id":"OPEN_ACCESS_REPO","class":"discovery","purpose":"open technical/scientific documents"},
+    {"id":"OFFICIAL_PROJECT_DOCS","class":"primary","purpose":"project APIs, specifications and implementation documentation"},
+    {"id":"FOREIGN_LANGUAGE","class":"discovery","purpose":"native-language technical discovery"},
+    {"id":"COMMUNITY","class":"discovery_only","purpose":"lead generation and implementation clues"}
+  ],
+  "query_expansion": ["exact_identifier","acronym","long_form","synonym","implementation_term","domain_term","foreign_language","transliteration"],
+  "evidence_classes": ["ESTABLISHED","SUPPORTED","PRELIMINARY","HYPOTHESIS","REJECTED"],
+  "promotion_states": ["DISCOVERED","IDENTIFIED","PROVENANCE_CHECKED","LICENCE_CHECKED","SECURITY_CHECKED","COMPATIBILITY_CHECKED","TESTED","REVIEWED","IMPLEMENTED","VERIFIED"],
+  "hard_blocks": ["missing_provenance","unknown_or_incompatible_license","credential_or_secret_exposure","security_failure","unresolved_dependency_conflict","failed_required_test","unsupported_certification_claim"],
+  "deduplication": {
+    "required": true,
+    "identity_priority": ["canonical_identifier","repository_path_and_revision","document_identifier","content_hash"],
+    "corroboration_is_not_independence": true
+  },
+  "learning": {
+    "emit_on": ["search","fetch","reject","deduplicate","corroborate","adopt","test","fail"],
+    "minimum_fields": ["event_id","query_profile","source_ids","observation","evidence_class","decision","reason","test_result","promotion_state"]
+  },
+  "runtime_state": "NOT_YET_ENABLED",
+  "note": "This manifest defines governance and adapter contracts; it does not claim that every external source is currently connected."
+}
