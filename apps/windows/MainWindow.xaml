@@ -6,6 +6,7 @@
         Width="1280">
     <Grid Margin="48">
         <StackPanel HorizontalAlignment="Center" VerticalAlignment="Center">
+            <ComboBox x:Name="LanguageSelector" Width="220" Margin="8" SelectionChanged="LanguageSelector_SelectionChanged"/>
             <TextBlock Text="Biupiu R&amp;D OS" FontSize="32" HorizontalAlignment="Center" Margin="0,0,0,24"/>
             <Button x:Name="FarmingButton" Content="SMART FARMING" Width="320" Margin="8" Click="FarmingButton_Click"/>
             <Button x:Name="MetallurgyButton" Content="SMART METAL WORKSHOP" Width="320" Margin="8" Click="MetallurgyButton_Click"/>
