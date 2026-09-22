@@ -43,7 +43,7 @@ abstract class DepartmentScreenActivity : Activity() {
 
         CapabilityRegistry.core.filter { it.id == route }.forEach { capability ->
             root.addView(Button(this).apply {
-                text = capability.replace('_', ' ')
+                text = capability.id.replace('_', ' ')
                 setOnClickListener { }
             })
         }
