@@ -519,3 +519,10 @@ Canonical record: `research/BIUPIU-GAME-ENGINE-FEDERATION-HOUSEKEEPING-SEMANTIC-
 External game-engine federation routing covers Cocos2d-x, Cocos Engine, MonoGame, libGDX, Ashley ECS, raylib, Three.js, GDevelop and Babylon.js, with Celeste retained as reference-only. Internal cross-reference found and corrected a Mini OS federation selector defect where the implementation required `compute_class == minimum_class`, incorrectly rejecting higher-capability units. The corrected implementation treats `minimum_class` as a capability floor and preserves preferred-class selection.
 
 **Status: SOURCE HOUSEKEEPING COMPLETE / SEMANTIC DEFECT FIXED / BUILD + DEVICE RUNTIME VERIFICATION OPEN.**
+
+
+## 2026-09-22 — Game-engine federation deep integration / foreign harvest
+- v1.3 harvest adds missing provider modules and maps them into the existing AdapterSpec/Federation contract rather than embedding third-party engines.
+- Native fixes: deterministic compute selection, capability-floor semantics, admissible preferred-class routing, engine/ECS registry entries and regression cases.
+- Foreign-language evidence: Chinese Cocos Creator modular/ESM/UI documentation plus multilingual cross-checks for MonoGame, raylib, three.js, Babylon.js and libGDX.
+- Status: SOURCE INTEGRATED / SEMANTIC CHECK COMPLETE / CI-RUNTIME-ANDROID-DEVICE VERIFICATION OPEN.
