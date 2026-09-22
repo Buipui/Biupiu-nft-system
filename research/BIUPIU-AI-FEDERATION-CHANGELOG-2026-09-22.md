@@ -107,3 +107,14 @@ Verification:
 - host/CI execution: OPEN;
 - device/runtime: OPEN;
 - human release: OPEN.
+
+## Gate 37 — Native semantic smoke / secure coding federation harvest — 22 September 2026
+
+Repository audit found and corrected three substantive native governance/semantic issues:
+1. learning licence promotion defaulted permissively;
+2. drift penalty could incorrectly increase a candidate's model-disagreement score;
+3. federation F01 did not explicitly require Core OS validation.
+
+Added executable authority enforcement, regression tests and a dedicated semantic smoke workflow. Updated the Native Coding Philosophy & Engineering Matrix to v1.1 with memory safety, sanitizer/CFI/fuzzing, fail-closed defaults, previous-defect regression, third-party component verification and cross-repository consistency rules.
+
+CI workflow registered at .github/workflows/biupiu-native-semantic-smoke.yml. No workflow run is yet observable for its commit, so execution is not claimed.
