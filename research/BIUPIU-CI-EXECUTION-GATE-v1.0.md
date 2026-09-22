@@ -30,3 +30,15 @@ Hardware runtime: PENDING
 The earlier PR attempt returned GitHub 422 (no commits between main and the trigger branch), despite the trigger commit being discoverable. The branch was therefore treated as a stale/inconsistent execution ref rather than merged blindly. The trigger branch is retained for evidence; no false CI pass is recorded.
 
 Next execution path: create a fresh trigger branch from the verified current main ref, apply a new qualifying verification marker, then query the workflow run for that new commit.
+
+## 2026-09-22 next-gate execution — current-head CI trigger check
+
+- Current federation contract was re-read at the current repository head and confirmed to contain `timestamp`, `evidenceClass`, and `licenceState`.
+- A latent smoke-test defect was found: the timestamp regex had been double-escaped and would test for a literal `\\d` sequence instead of digits.
+- Corrected `packages/biupiu-rnd-os/src/federation-contracts.test.ts`.
+- Verification-trigger commit: `620faa89f6909ffbe69849ace2e34dc521095382`.
+- GitHub connector workflow inspection returned **no PR-associated workflow run** for that commit. The connector does not expose a push-run result here, so CI is **NOT VERIFIED**.
+- No CI/build success is claimed from source inspection alone.
+
+### Gate transition
+**LATENT TEST DEFECT FOUND → PATCH IMPLEMENTED → CI TRIGGER COMMIT CREATED → RUNTIME CI EVIDENCE OPEN.**
