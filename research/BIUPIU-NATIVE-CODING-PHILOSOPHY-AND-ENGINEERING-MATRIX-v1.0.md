@@ -545,3 +545,20 @@ Native runtime/device/hardware/blockchain execution: remains separate and OPEN u
 AI-assisted repair MUST distinguish INTERNAL_PRESENT, MISSING_INTERNAL and PARTIAL_INTERNAL. An externally found fix that is absent internally becomes a governed candidate, not an automatic patch. Required sequence: SOURCE -> INTERNAL MATCH -> SEMANTIC MATCH -> PROVENANCE -> LICENCE -> SECURITY -> NATIVE IMPLEMENTATION -> TEST -> REGRESSION -> ROLLBACK -> PROMOTION.
 Repeated harvests MUST retain pass identity and compare common/unique evidence. Result-set divergence is a diagnostic signal, not proof of a root cause. Foreign-language evidence retains original terminology and provenance.
 \n\n## 23. Graphics / Godot / Vulkan federation extension — 22 September 2026\n\nThe native matrix now explicitly governs graphics API and engine federation.\n\nHard rules:\n- Renderer selection MUST be capability-driven, never name-driven.\n- Engine/API presence MUST NOT be treated as live GPU/device support.\n- Vulkan loader, API version, feature set, device limits and extensions are separate evidence fields.\n- Validation layers are development diagnostics, not production rendering dependencies.\n- Godot remains an external engine/provider boundary; engine source is not silently promoted into the native OS.\n- Renderer fallbacks MUST preserve a known-good path and be observable.\n- GPU resources, synchronization and lifetime ownership MUST remain inside the renderer/provider boundary.\n- Shader/toolchain versions and backend capabilities MUST be versioned before promotion.\n- Android Vulkan support is verified only from device/runtime evidence, not from source dependencies.\n\nVerification mapping: source/contract checks may establish adapter correctness; clean Android builds, live Vulkan enumeration, Godot runtime, frame timing and GPU regression remain higher verification gates.\n
+
+## 22. Simulator federation extension — 22 September 2026
+
+For harvested simulation libraries:
+- keep solver/model ownership explicit;
+- use provider-neutral adapters rather than copying whole external repositories;
+- separate model results from physical truth;
+- record units, solver/backend, version, provenance and numerical tolerance;
+- expose capability discovery separately from executable availability;
+- fail closed when a backend is absent or incompatible;
+- Android endpoints may exchange jobs/state and visualize controlled results, but may not claim desktop/server solver execution without a compatible native build;
+- cross-domain links must preserve canonical ownership in Vehicle, Architecture/Building, Agriculture, World, Environment and Digital Twin systems.
+
+Required sequence:
+INTERNAL GAP HARVEST -> EXTERNAL HARVEST -> LICENCE/PROVENANCE -> NATIVE CONTRACT -> SEMANTIC CHECK -> UNIT/INTEGRATION -> SMOKE -> REGRESSION -> RUNTIME -> PROMOTION.
+
+Status: GOVERNANCE EXTENSION INTEGRATED / RUNTIME VERIFICATION OPEN.
