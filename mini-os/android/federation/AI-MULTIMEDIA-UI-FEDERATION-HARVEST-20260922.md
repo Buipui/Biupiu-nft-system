@@ -97,3 +97,93 @@ The selector is an orchestration boundary only. It does not claim hardware execu
 - Chinese-language Apache TVM documentation confirms Android deployment through cross-compilation/runtime and RPC mechanisms. citeturn1search14turn1search16
 
 **Gate state: ARCHITECTURE INTEGRATION IMPLEMENTED / SEMANTIC BOUNDARIES CHECKED / CI BUILD AND DEVICE RUNTIME VERIFICATION OPEN.**
+# AI / Multimedia / UI Federation Harvest — 2026-09-22
+
+## Scope
+External federation harvest for Qualcomm IMSDK 2.0, QAIRT/QNN, ONNX Runtime, LiteRT/TensorFlow Lite, Google AI Edge, Huawei HiAI, Paddle Lite NDK, Apache TVM, Jetpack Compose-first, Material 3, RenderEffect and Navigation 3.
+
+## Internal-first reconciliation
+Existing Biupiu Android federation, native coding philosophy/matrix, scientific compute extension, guided fault-finding specification and federation cross-link register were checked before integration.
+
+## Integration matrix
+| Capability | Integration decision | State |
+|---|---|---|
+| Qualcomm IMSDK 2.0 | Platform adapter for Dragonwing/Qualcomm Linux; not a generic Android dependency | PLATFORM_BOUNDARY |
+| QAIRT / QNN | Qualcomm provider boundary; external SDK, licence and target-device evidence required | LICENSE_REVIEW |
+| ONNX Runtime | Android Maven runtime plus explicit CPU/XNNPACK/NNAPI/QNN provider lanes | NATIVE_DEPENDENCY / DEVICE_REQUIRED / LICENSE_REVIEW |
+| LiteRT | Android runtime; CompiledModel is the forward path | NATIVE_DEPENDENCY |
+| TensorFlow Lite | Compatibility identifier; no duplicate forward runtime | ADAPTER_ONLY |
+| Google AI Edge | Family/namespace federation boundary with LiteRT as concrete Android runtime | ADAPTER_ONLY |
+| Huawei HiAI | Vendor/device NPU adapter; generic Android fails closed | DEVICE_REQUIRED |
+| Paddle Lite NDK | Android NDK/provider adapter; no third-party source copied | ADAPTER_ONLY |
+| Apache TVM | Cross-compiled mobile runtime/provider adapter | ADAPTER_ONLY |
+| Compose-first | Kotlin/Compose build capability | NATIVE_DEPENDENCY |
+| Material 3 | Compose Material 3 dependency | NATIVE_DEPENDENCY |
+| RenderEffect | Android API capability with API 31 runtime guard | DEVICE_REQUIRED / AVAILABLE |
+| Navigation 3 | Stable Compose-first Navigation 3 dependency | NATIVE_DEPENDENCY |
+
+## Version decisions
+- AGP 8.7.3 / Gradle 8.9 / JDK 17 remain the Android baseline.
+- Kotlin 2.0.21.
+- Compose runtime/foundation/UI 1.12.1; Material 3 1.4.0.
+- Navigation 3 stable 1.1.7; release candidate not promoted.
+- LiteRT Android updated to 2.2.0 after current Google documentation review.
+- ONNX Runtime Android remains 1.30.0; actual dependency resolution is a build gate.
+- QAIRT/IMSDK/HiAI remain external/device-specific boundaries.
+
+## Literature filing
+Canonical literature register:
+research/BIUPIU-AI-MULTIMEDIA-UI-FEDERATION-LITERATURE-REGISTER-2026-09-22.md
+
+The register files upstream Qualcomm, ONNX Runtime, LiteRT, TVM, AndroidX, Huawei and Paddle documentation; foreign-language corroboration; evidence classification; provenance rules; version decisions; and literature-to-code reconciliation.
+
+## Missing-module findings and fixes
+| Missing/under-integrated capability | Finding | Fix |
+|---|---|---|
+| ONNX Runtime execution-provider lanes | Generic ONNX identity was insufficient | Added CPU, XNNPACK, NNAPI and QNN identities with fail-closed states |
+| LiteRT accelerator-first API | Generic LiteRT identity did not expose CompiledModel | Added litert.compiledmodel |
+| TVM mobile runtime | TVM was only a broad adapter | Added apache.tvm.runtime |
+| Android Mini OS source integration | Federation Java sources were outside Gradle source set | Added federation source set |
+| R8/ProGuard | ONNX Runtime keep rule was absent | Added proguard-rules.pro and wired it to release build configuration |
+| Provider selection | Registry had no architecture-neutral selector | Added AiExecutionProvider and AiProviderSelector |
+| Provider boundary regression | Tests did not exercise concrete provider lanes | Extended semantic test coverage |
+| Android CI build gate | No dedicated current Mini-OS Android build workflow was present | Added .github/workflows/mini-os-android-ci.yml |
+
+## Architecture and fault controls
+1. Dependency presence is not runtime verification.
+2. Unknown capabilities fail closed.
+3. Qualcomm IMSDK 2.0 is not a generic Android dependency.
+4. QAIRT/QNN is not authoritative without SDK provenance, licence review and target-device evidence.
+5. TensorFlow Lite is compatibility-only while LiteRT is the forward runtime.
+6. HiAI remains unavailable unless target-device capability is proven.
+7. RenderEffect is guarded because minSdk is 29 and the API begins at 31.
+8. External executable source and vendor binaries are not copied.
+9. Compose migration is a build/implementation gate, not a runtime claim.
+10. Navigation 3 stable is used instead of a release candidate.
+11. Provider selection is orchestration only; it does not assert hardware execution.
+12. R8 configuration is filed before release minification is enabled.
+
+## Source-level verification
+- Registry and semantic tests implemented.
+- ONNX Runtime and LiteRT Android dependencies integrated.
+- Kotlin/Compose/Material 3/Navigation 3 build integration added.
+- Federation source set integrated.
+- R8 rules wired.
+- Dedicated Android build workflow added.
+- Fresh CI execution remains OPEN until a workflow run is returned.
+
+## Promotion ladder
+REQUIREMENT -> INTERNAL GAP CHECK -> EXTERNAL HARVEST -> PROVENANCE/LICENCE -> ADAPTER/DEPENDENCY -> SEMANTIC TEST -> BUILD -> RUNTIME -> DEVICE -> REGRESSION -> HUMAN PROMOTION.
+
+## Gate state
+LITERATURE FILING: COMPLETE
+FOREIGN-LANGUAGE CORROBORATION: COMPLETE
+ARCHITECTURE INTEGRATION: IMPLEMENTED
+MISSING-MODULE RECONCILIATION: IMPLEMENTED
+SEMANTIC / FAIL-CLOSED CHECKS: IMPLEMENTED
+ANDROID CI WORKFLOW: IMPLEMENTED
+CI BUILD: OPEN
+APK BUILD: OPEN
+REAL ONNX/LiteRT INFERENCE: OPEN
+NNAPI/QNN/NPU DEVICE VERIFICATION: OPEN
+PHYSICAL DEVICE REGRESSION: OPEN
