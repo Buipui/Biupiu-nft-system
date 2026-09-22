@@ -1,0 +1,118 @@
+# Biupiu System Change Log
+
+## 2026-09-22 — Federated Compute / Machine / Mini-OS Integration Consolidation
+
+### Implemented
+
+#### Main Biupiu OS / Intelligence
+- Integrated `FederatedMachineRuntime`.
+- Connected machine-capability validation to heterogeneous compute dispatch.
+- Added capability registration and validated machine samples.
+- Added workload planning and dispatch through the compute federation.
+- Preserved the safety boundary: safety-critical hardware remains behind a separate certified/verified adapter boundary.
+- Exported the integrated runtime and federation types through the Biupiu AI package interface.
+
+#### Heterogeneous Compute Federation
+- CPU, performance-core, efficiency-core, vector, GPU and NPU workload classes are represented through the federation architecture.
+- Runtime topology is capability-driven rather than hard-coded to a fixed processor core count.
+- Workloads can express preferred and minimum compute requirements.
+- Minimum requirements fail closed when the required compute class is unavailable.
+- Preferred compute resources are selected when available.
+- Capacity is used as a fallback scheduling signal.
+- Execution telemetry records dispatch outcomes.
+- Native acceleration contracts cover x86_64, Apple arm64, generic ARM64 and RISC-V64 paths.
+
+#### Machine Capability Architecture
+- Added capability-first machine interfaces independent of vendor-specific application code.
+- Added transport identifiers for CAN, CAN-FD, LIN, Ethernet, SPI, I2C, GPIO, ADC and virtual sources.
+- Capability records include unit/range, update rate, read/write state, safety class, redundancy group and adapter identity.
+- Validation is performed before machine data is trusted by higher layers.
+- Hardware-specific translation remains isolated behind adapter boundaries.
+
+#### Biupiu Mini-OS
+- Added C ABI for federated compute selection.
+- Added native C++ federation runtime.
+- Added Rust federation implementation mirroring the C++ semantics.
+- Added fail-closed minimum-class selection.
+- Added preferred-class selection.
+- Added capacity fallback.
+- Corrected minimum-class semantics so an unrelated accelerator cannot satisfy a required class merely because its enum value is numerically higher.
+- Added C++ contract tests and Rust unit tests for GPU selection and unavailable-NPU rejection.
+
+#### Platform / Spatial Architecture
+- Extended platform model to Windows, macOS, Linux, Android, iOS and Web.
+- Added CPU-family detection for x86_64, ARM64 and RISC-V64.
+- Added GPU/NPU/vector accelerator capability categories.
+- Established the spatial/VR architecture as an endpoint of the authoritative simulation state rather than the source of truth.
+- Heavy simulation may remain on workstation/server federation while desktop/mobile/AR/VR endpoints consume the controlled spatial state.
+- GPU is treated as a first-class compute endpoint for rendering, geometry, simulation support, AI and digital-twin visualization.
+
+#### Federation Gate Architecture
+- F10 Multicore Compute gate added.
+- F11 Machine Capability gate added.
+- F12 Spatial/VR Compute gate added.
+- F13 Native Platform Federation gate added.
+- Additional federation governance gates now represented through the canonical protocol, including design language, digital-twin learning, simulator-learning federation, capability discovery, observability, schema governance, delivery resilience, industrial adapters and World repository boundaries.
+
+#### Verification / CI
+- Registered Main OS Python syntax and pytest coverage for compute federation and federated machine runtime.
+- Registered Mini-OS C++17 compilation/test path with warnings-as-errors.
+- Registered Mini-OS Rust cargo-test path.
+- Registered a federation integration CI workflow.
+- Registered compute-federation CI and schema validation paths.
+- Verification status remains explicitly separated from implementation status.
+
+#### Research / IP Record
+- Updated the federated compute + machine runtime test record.
+- Maintained the Multicore + Spatial Compute gate as:
+  **IMPLEMENTED / STATIC CORE VERIFIED / LIVE HARDWARE PENDING**.
+- Maintained Mini-OS G02 as:
+  **IMPLEMENTED_NOT_VERIFIED**.
+- Recorded the six related compute/machine/spatial IP subjects in the public IP index:
+  BIU-IP-2026-021 through BIU-IP-2026-026.
+- IP records are provenance/invention records only; novelty, patentability, ownership and FTO remain subject to professional legal review.
+
+### Current verification boundary
+
+**REGISTERED**
+- Architecture and interfaces
+- Main OS integration
+- Mini-OS C++ and Rust implementations
+- Test cases
+- CI workflows
+- Schemas
+- Federation gates
+- Research/IP records
+
+**IMPLEMENTED**
+- Main OS federated machine runtime
+- Heterogeneous compute selection
+- Machine capability validation
+- Mini-OS C++ federation runtime
+- Mini-OS Rust federation implementation
+- Platform/native acceleration contracts
+
+**STATIC VERIFIED**
+- Previously recorded compute-federation syntax and two scheduler/fail-closed tests passed on 2026-09-21.
+
+**NOT YET LIVE VERIFIED**
+- Current CI execution result for the newly registered integration workflow
+- Physical GPU/NPU discovery
+- Real multicore topology/scaling/contention
+- Windows/macOS/Linux/Android runtime regression
+- ECU/CAN-FD hardware-in-the-loop
+- VR frame timing/input validation
+- Physical sensor validation
+- Fault injection and recovery under live hardware
+
+### Engineering rule carried forward
+
+Biupiu remains **digital-first, then physical**:
+1. Define the capability and contract digitally.
+2. Validate semantics and failure behaviour.
+3. Federate the appropriate compute resources.
+4. Test in CI/native runtime.
+5. Validate against hardware.
+6. Only then promote the implementation into physical machine control or other safety-relevant deployment.
+
+No live hardware or CI result is marked verified unless an execution record exists.
