@@ -1,5 +1,7 @@
 namespace Biupiu.Desktop;
 
+using System.Globalization;
+
 public partial class MainWindow : System.Windows.Window
 {
     private readonly RuntimeSession _session =
@@ -8,6 +10,8 @@ public partial class MainWindow : System.Windows.Window
     public MainWindow()
     {
         InitializeComponent();
+        LanguageSelector.ItemsSource = BiupiuLanguageRegistry.SupportedTags;
+        LanguageSelector.SelectedItem = BiupiuLanguageRegistry.Normalise(CultureInfo.CurrentUICulture.Name);
         ApplyEntitlements();
     }
 
@@ -38,3 +42,12 @@ public partial class MainWindow : System.Windows.Window
     private void RndButton_Click(object sender, System.Windows.RoutedEventArgs e) =>
         OpenDepartment("RND_OS");
 }
+
+
+    private void LanguageSelector_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
+    {
+        if (LanguageSelector.SelectedItem is not string tag) return;
+        var canonical = BiupiuLanguageRegistry.Normalise(tag);
+        CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(canonical);
+        CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(canonical);
+    }
