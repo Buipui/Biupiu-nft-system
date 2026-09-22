@@ -78,3 +78,21 @@ def test_learning_reuse_remains_human_gated():
                                     licence_checked=True, human_approved=False)
     assert learning_reuse_ready(pattern, evidence, provenance_verified=True,
                                  licence_checked=True, human_approved=True)
+
+def test_external_fix_gap_learning_and_repeated_search_comparison():
+    from biupiu_ai.learning import (
+        ExternalFixEvidence, make_external_fix_gap_learning_record,
+        compare_harvest_passes, verify_learning_record,
+    )
+    evidence = ExternalFixEvidence(
+        target_id="federation", fault_class="RUNTIME", external_fix_id="trace-context",
+        internal_present=False, semantic_match=True, source_verified=True,
+        licence_checked=True, security_checked=True, tests_available=False,
+        regression_available=False, search_pass="PASS-2", source_refs=("source:a","source:b"))
+    record = make_external_fix_gap_learning_record(evidence, learning_id="EXT-GAP-001")
+    assert verify_learning_record(record)
+    diff = compare_harvest_passes("HARVEST-DOUBLE-01", ("a","b"), ("b","c"))
+    assert diff.common_refs == ("b",)
+    assert diff.only_first == ("a",)
+    assert diff.only_second == ("c",)
+    assert diff.divergence_reason.startswith("RESULT_SET_CHANGED")
