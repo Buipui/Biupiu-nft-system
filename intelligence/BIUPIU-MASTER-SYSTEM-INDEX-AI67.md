@@ -123,3 +123,23 @@ SCHEMA/CONTRACTS: IMPLEMENTED
 RUNTIME INDEXER: PENDING
 CROSS-SYSTEM RUNTIME: PENDING
 FAULT/HEALING RUNTIME: PENDING
+
+
+## Gate 35 — Native AI Accelerator + Quantum Federation — 22 September 2026
+
+Registered and integrated governed adapter boundaries for Android AI Core/NNAPI, Qualcomm QNN/SNPE, MediaTek NeuroPilot/Neuron, Huawei HiAI, STM32Cube.AI, NXP eIQ, Intel OpenVINO, NVIDIA TensorRT/Jetson, Jittor, Ray, Apache TVM, FlashAttention, FastNLP, TensorFlow/TFLite and CRFM/Centaur research.
+
+Quantum federation extended with Qiskit Machine Learning, PennyLane, QIR, OpenQASM 3, AWS Braket, Azure Quantum, D-Wave Leap/Ocean and pytket/TKET boundaries. QPU execution remains disabled by default and requires independent evidence.
+
+The native ML layer remains dependency-light. Vendor SDKs are represented as adapters/contracts rather than copied into the core repository. Android NNAPI is retained as a compatibility boundary; current Android documentation marks NNAPI deprecated in Android 15, so future native inference routing must support alternative execution paths.
+
+New source smoke coverage: software/rnd-os-ai/tests/test_ai_accelerator_federation.py.
+Canonical harvest record: research/BIUPIU-AI-ACCELERATOR-QUANTUM-FEDERATION-HARVEST-2026-09-22.md.
+
+SOURCE INTEGRATION: IMPLEMENTED
+REGISTRY SMOKE TEST SOURCE: IMPLEMENTED
+HOST/CI EXECUTION: PENDING
+TARGET NPU/GPU/DSP: PENDING
+QPU/CLOUD EXECUTION: PENDING
+ANDROID NATIVE BUILD: PENDING
+PRODUCTION PROMOTION: BLOCKED pending runtime evidence
