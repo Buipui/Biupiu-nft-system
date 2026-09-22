@@ -56,3 +56,30 @@ L4 = reusable pattern promoted
 L5 = pattern generates preventative tests
 
 L5 is an architectural goal, not a claim that every current subsystem has reached it.
+
+
+## External Harvest Learning Extension — 22 September 2026
+
+External-resource learning is now explicitly a comparison-first process rather than an import-first process.
+
+### Harvest learning loop
+`EXTERNAL DISCOVERY -> INTERNAL MATCH -> VERSION/COMMIT CAPTURE -> LICENCE/IP -> DEPENDENCY -> STATIC -> UNIT -> INTEGRATION -> REGRESSION -> RUNTIME -> COMPARE -> PROMOTE/RETAIN/QUARANTINE -> INDEX -> CHECKPOINT -> OPTIONAL BLOCKCHAIN ANCHOR`
+
+### Comparison evidence
+Each candidate must preserve:
+- internal module tested or considered;
+- external exact version/commit;
+- contract/API equivalence or mismatch;
+- measured performance/behaviour where relevant;
+- failure signature and compatibility impact;
+- licence/security/dependency state;
+- promotion or rejection reason;
+- rollback/supersession lineage.
+
+### Preventative-learning rule
+A promoted fix or adapter should generate a regression fixture or preventative test where practical. Repeated failures without new evidence remain a stalled loop.
+
+### Blockchain checkpoint
+Approved checkpoint hashes may be anchored through the existing registry boundary. Blockchain anchoring records integrity commitments only; it does not convert a candidate into verified code or scientific truth.
+
+New checkpoint: `FED-HARVEST-20260922-01`.
