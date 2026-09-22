@@ -205,3 +205,19 @@ External federation references added: NASA IV&V/software assurance, Japanese FME
 Native ML receives failure fingerprints, fix/regression evidence, platform/version context and provenance references through the existing learning boundary. Reuse remains gated by verified fix, regression, provenance, licence and human approval.
 
 Canonical changelog: `research/BIUPIU-AI-FEDERATION-CHANGELOG-2026-09-22.md`.
+
+
+## Usable Adapter Federation — 22 September 2026
+
+Internal adapter inventory was cross-linked to a governed native registry and expanded through a current external federation harvest.
+
+Native registry:
+- `software/rnd-os-ai/src/biupiu_ai/adapter_registry.py`
+- `software/rnd-os-ai/src/biupiu_ai/federation_registry.py`
+
+Current protocol/resource routes:
+MQTT 5; Eclipse Ditto; OPC UA PubSub; ROS 2/DDS; OpenUSD; FMI/FMU; Flower; NVIDIA FLARE; OpenTelemetry; A2A; OpenSharing; AUTOSAR CAPI reference; COVESA VSS/VISS/Open1722; NASA RAPID/NASA OSS; NIST Digital Twin/VVUQ patterns.
+
+Native ML is now cross-linked to adapter evidence through the evidence-weighted learning policy and drift penalty. Adapter failures enter the existing guided-fault-finding -> failure-learning -> regression -> controlled-reuse path.
+
+External executable code remains unpromoted. Source/runtime evidence is required before a candidate can become a production dependency.
