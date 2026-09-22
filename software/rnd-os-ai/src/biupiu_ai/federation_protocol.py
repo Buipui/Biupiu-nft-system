@@ -26,7 +26,7 @@ REQUIRED_GATES = (
     FederationGate("F10","multicore-compute",("topology-discovery","scheduler-tests","fail-closed","telemetry")),
     FederationGate("F11","machine-capability",("capability-registry","range-validation","adapter-boundary","safety-boundary")),
     FederationGate("F12","spatial-vr-compute",("simulation-authority","gpu-path","endpoint-contract","frame-timing")),
-    FederationGate("F13","native-platform-federation",("x86_64","arm64","apple-silicon","windows","macos","linux","android")),
+    FederationGate("F13","native-platform-federation",("x86_64","arm64","apple-silicon","windows","macos","linux","android")),\n    FederationGate("F14","design-language",("design-contract","semantic-actions","visual-regression")),\n    FederationGate("F15","digital-twin-learning",("twin-events","learning-log","rollback","regression")),\n    FederationGate("F16","simulator-learning-federation",("simulator-registry","observation-schema","learning-bridge","provenance")),
 )
 
 def gate_passes(gate: FederationGate, evidence: dict[str, bool]) -> bool:
