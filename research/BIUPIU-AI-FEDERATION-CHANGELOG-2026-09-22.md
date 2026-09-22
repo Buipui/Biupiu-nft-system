@@ -118,3 +118,24 @@ Repository audit found and corrected three substantive native governance/semanti
 Added executable authority enforcement, regression tests and a dedicated semantic smoke workflow. Updated the Native Coding Philosophy & Engineering Matrix to v1.1 with memory safety, sanitizer/CFI/fuzzing, fail-closed defaults, previous-defect regression, third-party component verification and cross-repository consistency rules.
 
 CI workflow registered at .github/workflows/biupiu-native-semantic-smoke.yml. No workflow run is yet observable for its commit, so execution is not claimed.
+
+
+## Gate 38 — CI failure-driven remediation and semantic smoke re-arm — 22 September 2026
+
+Observed GitHub Actions evidence for the prior revision exposed two concrete failures:
+1. Android security static audit failed because the manifest referenced no `networkSecurityConfig` attribute despite the security gate requiring it.
+2. Repository workflow policy audit failed because its enforcement logic treated all historical non-SHA action references as blocking violations, producing 95 promoted-reference violations; this was broader than the intended gate-local enforcement boundary.
+
+Remediation:
+- Android manifest now explicitly binds `@xml/network_security_config`.
+- Security gate now fails closed on unpinned actions in its own security workflow while retaining repository-wide non-SHA references as a non-blocking migration inventory.
+- Security workflow action references were upgraded to immutable SHA pins for current checkout/setup-java releases.
+- Native semantic smoke workflow action references were upgraded to immutable SHA pins.
+- Existing repository-wide workflow migration debt remains recorded rather than silently rewritten.
+
+Observed evidence:
+- The failing security/audit jobs were real GitHub Actions executions for the previous revision.
+- Corrective commits are now present.
+- Fresh post-fix workflow execution has not yet been observed, so the gate is RE-ARMED, not closed.
+
+Status: BUGS IDENTIFIED FROM LIVE CI / SOURCE FIXES IMPLEMENTED / CI RE-ARMED / FRESH PASS PENDING / ANDROID DEVICE RUNTIME OPEN.
