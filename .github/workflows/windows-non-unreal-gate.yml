@@ -1,0 +1,65 @@
+name: Biupiu Windows Non-Unreal Gate
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "packages/**"
+      - "private-rd-centre/**"
+      - "software/**"
+      - ".github/workflows/windows-non-unreal-gate.yml"
+  pull_request:
+    paths:
+      - "packages/**"
+      - "private-rd-centre/**"
+      - "software/**"
+      - ".github/workflows/windows-non-unreal-gate.yml"
+
+jobs:
+  windows-non-unreal:
+    runs-on: windows-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Windows host inventory
+        shell: pwsh
+        run: |
+          Write-Host "OS: $([System.Environment]::OSVersion.VersionString)"
+          Write-Host "Architecture: $env:PROCESSOR_ARCHITECTURE"
+          Write-Host "PowerShell: $($PSVersionTable.PSVersion)"
+          Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber,OSArchitecture
+          Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install repository dependencies
+        shell: pwsh
+        run: npm install --ignore-scripts
+      - name: TypeScript repository compile gate
+        shell: pwsh
+        run: npm run test:access
+      - name: Package TypeScript build gate
+        shell: pwsh
+        run: npm run build:packages
+      - name: Digital Twin and federation contract tests
+        shell: pwsh
+        run: |
+          npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/digital-twin.test.ts
+          npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/dms-transport.test.ts
+          npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/federation-transport.test.ts
+          npx -y tsx@4.20.5 dms/core/site-node/federation-sync.test.ts
+      - name: Physics kernel smoke and benchmark gates
+        shell: pwsh
+        run: |
+          python private-rd-centre/tests/test_physics_kernel.py
+          python private-rd-centre/tests/test_physics_benchmarks.py
+      - name: Record Windows gate result
+        shell: pwsh
+        run: '"BIUPIU_WINDOWS_NON_UNREAL_GATE=PASS" | Out-File -FilePath windows-gate-result.txt -Encoding utf8'
+      - uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-windows-non-unreal-gate
+          path: windows-gate-result.txt
