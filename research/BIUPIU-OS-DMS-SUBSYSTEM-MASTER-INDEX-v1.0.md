@@ -466,3 +466,16 @@ Promotion rule: source implementation is not equivalent to runtime verification.
 
 **Status: IMPLEMENTATION CLOSED / RUNTIME-DEVICE-PLATFORM VERIFICATION OPEN.**
 \n\n## 2026-09-22 — Godot + Vulkan Federation Gate\n\nCanonical gate: `research/BIUPIU-GODOT-VULKAN-FEDERATION-GATE-20260922.md`.\n\nInternal harvest reconciled existing Godot/Vulkan graphics records before implementation. Native Android federation now distinguishes `godot.renderingdevice`, `vulkan.android-runtime` and `vulkan.validation`. Godot remains an external engine/provider boundary; Vulkan device support is queried from Android runtime capability; validation remains diagnostic-only.\n\nNative files:\n- `mini-os/android/federation/GraphicsCapabilityAdapters.java`\n- `mini-os/android/federation/AndroidCapabilityRegistry.java`\n- `mini-os/android/federation/AndroidCapabilityRegistryTest.java`\n\nNo third-party engine source, driver or binary was vendored.\n\n**Status: SOURCE IMPLEMENTED / SEMANTIC FAIL-CLOSED CHECKED / ANDROID-GODOT-GPU RUNTIME VERIFICATION OPEN.**\n
+
+## 2026-09-22 — Eigen + GSL Scientific Compute Federation
+Canonical gate: research/BIUPIU-EIGEN-GSL-SCIENTIFIC-COMPUTE-FEDERATION-GATE-20260922.md.
+Native scientific provider boundary:
+- core/multilang/include/biupiu_scientific_math_adapter.h
+- core/multilang/cpp/scientific_math_adapter.cpp
+- core/multilang/cpp/scientific_math_adapter_smoke.cpp
+- apps/android/app/CMakeLists.txt
+- apps/android/app/src/main/cpp/scientific_android_bridge.cpp
+Routing covers MATH, GEOMETRY, PHYSICS, SIMULATORS, DIGITAL-TWIN, AI/ML, Biupiu OS, Mini OS and Android.
+Library registry: library/scientific/BIUPIU-SCIENTIFIC-LIBRARY-REGISTRY-20260922.json.
+Coding matrix extension: research/BIUPIU-NATIVE-CODING-MATRIX-SCIENTIFIC-COMPUTE-EXTENSION-20260922.md.
+Status: SOURCE IMPLEMENTED / SEMANTIC SMOKE REGISTERED / CI AND DEVICE RUNTIME OPEN.
