@@ -13,3 +13,14 @@ AI recommendations are advisory by default. Irrigation, nutrient dosing, pumps a
 
 ## Prototype target
 First device: **SF-01 Soil & Microclimate Node** — soil moisture, soil temperature, air temperature/humidity, light and optional electrical-conductivity sensing. The design is modular so additional sensors can be added after calibration.
+
+
+## Native OS Language Selection — 22 September 2026
+Smart Farming remains a domain subsystem and consumes the shared Biupiu language contract rather than defining a separate language authority.
+
+Canonical contract: `apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json`
+Native selector: `apps/shared/runtime/LanguageSelector.kt`
+
+The farming OS must preserve BCP-47 language/script/region identity, use deterministic fallback, retain original-language plant/research terminology, and expose locale selection to the shared OS/Intelligence layer. Translation is not treated as evidence validation.
+
+Status: **CONTRACT INTEGRATED / DOMAIN RUNTIME UI DEPLOYMENT PENDING**.
