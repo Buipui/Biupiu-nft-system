@@ -62,3 +62,36 @@ A gate is not closed merely because a document, scaffold, adapter or code path e
 6. Validate selected material data and powertrain ratings against primary documents.
 7. Update individual gate records only with observed evidence.
 8. Reconcile this register after each evidence-bearing pass.
+
+
+## GATE 41 — Native Multilingual OS / Foreign-Coding Federation — 22 September 2026
+- Shared BCP-47-compatible language contract: **IMPLEMENTED**.
+- Script/region preservation: **IMPLEMENTED / targeted tests added**.
+- Deterministic fallback: **IMPLEMENTED / targeted tests added**.
+- Android selector: **IMPLEMENTED** and now wired into the Android build through the shared runtime source set.
+- Android selector test moved to Android test source set so it cannot be accidentally compiled as production code.
+- Android locale controller: **IMPLEMENTED** for supported API paths.
+- Windows selector/registry: **IMPLEMENTED SOURCE LEVEL**.
+- Intelligence multilingual normalisation: **IMPLEMENTED / targeted tests added**.
+- Learning-event integration: **IMPLEMENTED / targeted test added**.
+- Foreign-language coding philosophy harvest: **IMPLEMENTED**.
+- Coding Matrix/changelog reconciliation: **IMPLEMENTED**.
+- CI workflow: **UPDATED** to execute multilingual, learning, contract and harvest tests.
+- Actual remote CI result: **OPEN** — no status/run evidence is currently exposed for the latest commits.
+- Android device/UI runtime: **OPEN**.
+- Windows runtime: **OPEN**.
+- Full multilingual translation-quality validation: **OPEN**.
+
+## GATE 42 — Biupiu World execution boundary — 22 September 2026
+- World repository existence and authority boundary: **VERIFIED**.
+- World repository currently contains only README.md: **VERIFIED**.
+- Therefore “bootstrap-only” is confirmed: the repository has its boundary/architecture record but no executable World runtime, asset ingestion pipeline, engine project, or World tests yet.
+- Attempted creation of a World-side approved-input contract through the available GitHub file API: **BLOCKED by repository API 404 on the empty repository**; no false implementation claim made.
+- UE5/GPU build/runtime: **OPEN**.
+- World asset ingestion/build/runtime/physics/production-render gates: **OPEN**.
+- Four canonical Federation AI discovery: **OPEN**.
+
+## EXECUTION RECONCILIATION
+All gates that can be executed and verified from the currently available repository/API environment have been processed in chronological order. Gates requiring an actual CI runner, Android/Windows device, UE5/GPU host, physical hardware, or unavailable empty-repository write path remain explicitly open rather than being marked complete.
+
+**Fail-closed rule preserved: CODED ≠ EXECUTED ≠ RUNTIME VERIFIED ≠ PHYSICALLY VERIFIED.**
