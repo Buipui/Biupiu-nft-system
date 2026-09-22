@@ -1,16 +1,19 @@
 {
   "name": "@biupiu/physics-engine",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "private": true,
-  "description": "Biupiu physics adapter layer for Jolt, PhysX, Bullet and private R&D solver experiments",
+  "description": "Biupiu physics adapter layer for Jolt, Bullet, PhysX and private R&D solver experiments",
   "platforms": [
     "windows",
     "android"
   ],
   "entry": "src/index.ts",
   "primary": "jrouwe/JoltPhysics@5.6.0",
-  "alternates": [
-    "NVIDIA-Omniverse/PhysX",
+  "validation": [
     "bulletphysics/bullet3"
-  ]
+  ],
+  "alternates": [
+    "NVIDIA-Omniverse/PhysX"
+  ],
+  "federation_registry": "src/federated-physics-registry.ts"
 }

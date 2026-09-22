@@ -328,3 +328,49 @@ def compare_harvest_passes(search_id: str, pass_one_refs: Sequence[str], pass_tw
     else:
         reason = "RESULT_SET_CHANGED_REQUIRES_RECENCY_QUERY_AND_SOURCE_INDEX_REVIEW"
     return HarvestComparison(search_id, tuple(pass_one_refs), tuple(pass_two_refs), common, only_a, only_b, reason)
+
+@dataclass(frozen=True)
+class ProviderObservation:
+    """Learning input for federated provider selection and failure comparison."""
+    provider_id: str
+    domain: str
+    capability: str
+    version: str
+    failure_class: str
+    fixed: bool
+    regression_passed: bool
+    provenance_verified: bool
+    licence_checked: bool
+    evidence_refs: Tuple[str, ...] = ()
+
+
+def make_provider_learning_record(
+    observation: ProviderObservation, *, learning_id: str
+) -> LearningRecord:
+    """Record provider evidence without granting runtime or promotion authority."""
+    if observation.domain not in {"physics", "quantum", "graphics"}:
+        raise ValueError("unsupported provider domain")
+    if not observation.evidence_refs:
+        raise ValueError("evidence_refs are required")
+    if observation.failure_class not in FAILURE_CLASSES:
+        raise ValueError("invalid failure_class")
+    state = "SUPPORTED" if observation.provenance_verified and observation.licence_checked else "PRELIMINARY"
+    next_action = "TEST" if observation.fixed and observation.regression_passed else "REVIEW"
+    return make_learning_record(
+        learning_id=learning_id,
+        target_type="FEDERATED_PROVIDER",
+        target_id=observation.provider_id,
+        input_refs=tuple(observation.evidence_refs) + (
+            f"domain={observation.domain}",
+            f"capability={observation.capability}",
+            f"version={observation.version}",
+        ),
+        evidence_state=state,
+        knowledge_class="FAILURE" if observation.failure_class != "unknown" else "MODEL_OUTPUT",
+        result_version="provider-federation-learning-v1",
+        observed_outcome=(
+            f"provider={observation.provider_id}; capability={observation.capability}; "
+            f"fixed={observation.fixed}; regression_passed={observation.regression_passed}"
+        ),
+        next_action=next_action,
+    )

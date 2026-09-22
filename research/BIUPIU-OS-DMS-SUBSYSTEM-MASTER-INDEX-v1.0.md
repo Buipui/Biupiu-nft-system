@@ -479,3 +479,19 @@ Routing covers MATH, GEOMETRY, PHYSICS, SIMULATORS, DIGITAL-TWIN, AI/ML, Biupiu 
 Library registry: library/scientific/BIUPIU-SCIENTIFIC-LIBRARY-REGISTRY-20260922.json.
 Coding matrix extension: research/BIUPIU-NATIVE-CODING-MATRIX-SCIENTIFIC-COMPUTE-EXTENSION-20260922.md.
 Status: SOURCE IMPLEMENTED / SEMANTIC SMOKE REGISTERED / CI AND DEVICE RUNTIME OPEN.
+
+## Federation physics / quantum / graphics extension — 22 September 2026
+
+The system-of-systems graph now cross-links the Jolt, Bullet, QuTiP, OpenFermion and OpenGL federation contracts.
+
+Integration loop:
+`OS/DMS -> DIGITAL TWIN -> MATH -> PHYSICS/QUANTUM -> GRAPHICS -> AI/ML -> VALIDATION -> PROVENANCE`.
+
+Canonical native adapter records:
+- `packages/biupiu-physics-engine/src/federated-physics-registry.ts`
+- `software/rnd-os-ai/src/biupiu_ai/quantum_physics_federation.py`
+- `packages/biupiu-3d-engine/src/federated-graphics-registry.ts`
+
+External providers remain bounded behind provider-neutral contracts. Digital Twin state does not inherit truth from a simulator, renderer or quantum provider; observed, computed, simulated and validated states remain distinct.
+
+Status: SOURCE INTEGRATED / CROSS-LINKED / RUNTIME, DEVICE AND HIL VERIFICATION OPEN.
