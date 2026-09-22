@@ -26,3 +26,33 @@ Audit found that the documented harvest pipeline was broader than the native val
 - affected_modules: federation harvest gate, test harness, CI verification, harvest index/digest
 - new evidence: version/dependency/normalisation/integration/rollback gates
 - state: SOURCE-CORRECTED / CI-VERIFICATION-OPEN
+
+
+## Multilingual coding harvest extension — 2026-09-22
+
+Learning event: FED-HARVEST-20260922-MLANG-01
+
+Observed:
+- locale identity was previously lossy in the Python normaliser;
+- foreign-language engineering sources independently reinforced script/region preservation, deterministic fallback and controlled multilingual evaluation;
+- OS language selection belongs at the shared OS contract boundary, not inside individual domain systems.
+
+Corrective learning:
+- preserve BCP-47-compatible tags;
+- test exact locale -> language family -> default fallback;
+- distinguish language selection from translation quality;
+- record original-language evidence and provenance;
+- classify support level before making language-support claims.
+
+Native changes:
+- shared language contract;
+- Android selector;
+- Windows selector/registry;
+- Python translation normalisation/fallback;
+- regression tests;
+- coding-matrix changelog.
+
+Promotion state:
+SOURCE IMPLEMENTED / TESTS ADDED / CI RESULT PENDING / RUNTIME OPEN.
+
+The learning system may reuse these patterns for future multilingual diagnostics and test generation but cannot self-authorise promotion.
