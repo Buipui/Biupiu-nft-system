@@ -1,0 +1,38 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "schema": "biupiu.design-language-code-contract.v1",
+  "status": "MAINLINE_CANDIDATE",
+  "purpose": "Shared semantic contract between Biupiu visual/design language, UI actions and native code.",
+  "principles": [
+    "semantic-action-first",
+    "legible-human-readable",
+    "deterministic-state-transition",
+    "provenance-aware",
+    "fail-closed",
+    "platform-neutral-contract"
+  ],
+  "required_fields": {
+    "component_id": "stable identifier",
+    "surface": "ui|world|simulation|device",
+    "semantic_action": "stable action name",
+    "state": "declared state identifier",
+    "evidence_state": "ESTABLISHED|SUPPORTED|PRELIMINARY|HYPOTHESIS|SPECULATIVE|CONTRADICTED|INCONCLUSIVE",
+    "source_version": "commit/build/model version",
+    "provenance_refs": "array of traceable references"
+  },
+  "rules": {
+    "unknown_action": "reject",
+    "unknown_state": "reject",
+    "missing_provenance": "quarantine",
+    "conflicting_authoritative_state": "preserve-both-and-open-reconciliation",
+    "ai_proposal": "non-authoritative-until-validation",
+    "external_module": "reference-or-adapter-until-licence-security-build-smoke-regression-gates-pass"
+  },
+  "cross_links": [
+    "ui-semantic-action-contract",
+    "digital-twin-contract",
+    "federation-capability-health-schema-delivery-contract",
+    "learning-event-provenance-contract",
+    "repository-placement-contract"
+  ]
+}
