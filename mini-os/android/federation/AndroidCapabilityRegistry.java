@@ -55,6 +55,21 @@ public final class AndroidCapabilityRegistry {
         capabilities.put("fujitsu.quantum-simulator", State.ADAPTER_ONLY);
         capabilities.put("android.agsl", State.ADAPTER_ONLY);
         capabilities.put("opendroid.ui-engine", State.UNRESOLVED);
+        // External OpenDroid is an Android agent; its Compose UI is a surface, not a standalone engine.
+        capabilities.put("opendroid.android-agent", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.accessibility-automation", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.action-dispatch", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.agent-loop", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.llm-routing", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.memory", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.keystore-security", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.services", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.voice", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.room", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.datastore", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.hilt", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.compose-ui", State.ADAPTER_ONLY);
+        capabilities.put("opendroid.viewmodel", State.ADAPTER_ONLY);
     }
 
     public Map<String, State> snapshot() {
