@@ -54,3 +54,5 @@ Prepare an anchor manifest only after repository evidence is frozen. Anchor rele
 FEDERATION-EXTERNAL-HARVEST-2026-09-22-V1.1
 
 State: CANDIDATE HARVEST REGISTERED; INTEGRATION/TEST GATES OPEN.
+## Testing-protocol reconciliation — 22 September 2026
+The recent module-testing protocols are now consolidated through `research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json`. The executable promotion gate and CI workflow are cross-linked to this registry. No candidate may be marked VERIFIED-WORKING from registry presence alone; execution evidence remains required.
