@@ -9,8 +9,8 @@ from biupiu_ai.global_language_translation import (
 
 
 def test_language_normalisation():
-    assert normalise_language("pt-BR") == "pt"
-    assert normalise_language("ZH_cn") == "zh"
+    assert normalise_language("pt-BR") == "pt-BR"
+    assert normalise_language("ZH_cn") == "zh-CN"
 
 
 def test_global_language_registry_contains_key_world_languages():
