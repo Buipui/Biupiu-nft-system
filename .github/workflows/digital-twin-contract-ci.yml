@@ -45,9 +45,13 @@ jobs:
           test -f apps/shared/runtime/runtime-contract-v1.json
           node -e "JSON.parse(require('fs').readFileSync('apps/shared/runtime/runtime-contract-v1.json','utf8')); console.log('runtime contract JSON OK')"
 
+      - name: Install TypeScript compile dependencies
+        run: |
+          npm install --no-save --ignore-scripts typescript@5.8.3 @types/node@22.10.0
+
       - name: TypeScript compile check
         run: |
-          npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/dms-transport.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts             packages/biupiu-rnd-os/src/dms-transport.test.ts             packages/biupiu-rnd-os/src/federation-transport.ts             packages/biupiu-rnd-os/src/federation-transport.test.ts             dms/core/site-node/federation-sync.ts             dms/core/site-node/federation-sync.test.ts
+          ./node_modules/.bin/tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/dms.ts             packages/biupiu-rnd-os/src/dms-transport.ts             packages/biupiu-rnd-os/src/digital-twin.test.ts             packages/biupiu-rnd-os/src/dms-transport.test.ts             packages/biupiu-rnd-os/src/federation-transport.ts             packages/biupiu-rnd-os/src/federation-transport.test.ts             dms/core/site-node/federation-sync.ts             dms/core/site-node/federation-sync.test.ts
 
       - name: Execute Digital Twin contract tests
         run: |
@@ -55,4 +59,4 @@ jobs:
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/dms-transport.test.ts
           npx -y tsx@4.20.5 packages/biupiu-rnd-os/src/federation-transport.test.ts
           npx -y tsx@4.20.5 dms/core/site-node/federation-sync.test.ts
-# Federation execution checkpoint: 2026-09-21
+# Federation execution checkpoint: 2026-09-22
