@@ -53,3 +53,35 @@ RUNTIME/HIL: OPEN
 
 ## Next gate
 Observe fresh GitHub Actions -> resolve any failures -> rerun failed jobs if available -> record build/test evidence -> continue security, regression, runtime and cross-system gates.
+
+
+## Federation guided fault-finding execution — 22 September 2026
+
+Executed the next federation gate using internal-first harvest followed by multilingual external reference harvest.
+
+### Closed in source
+- Added deterministic `FaultFixRule` matrix to `software/rnd-os-ai/src/biupiu_ai/guided_fault_finding.py`.
+- Added fail-closed unknown-fault handling and explicit security quarantine behaviour.
+- Added regression coverage in `software/rnd-os-ai/tests/test_federation_ai_integration.py`.
+- Updated Native Coding Philosophy & Engineering Matrix with guided fault-finding, bug-fix and multilingual reference rules.
+- Added federation-wide AI changelog covering all currently registered AI systems and Native ML.
+- Added external harvest record and cross-link digest entry.
+
+### External reference harvest
+NASA IV&V/software assurance, Japanese FMEA/IEC 60812 material, Unicode CLDR/BCP 47, and bounded public diagnostic/self-healing patterns were harvested as reference patterns. No external executable code was promoted.
+
+### Verification evidence
+GitHub workflow/status queries for the new source commits returned no workflow runs and no combined statuses. Therefore CI/build/security/runtime/HIL are NOT claimed closed.
+
+### Gate state
+SOURCE IMPLEMENTATION: CLOSED
+SEMANTIC CROSS-LINK: CLOSED
+CHANGELOG/LEARNING RECORD: CLOSED
+CI/BUILD EXECUTION: OPEN
+SECURITY VERIFICATION: OPEN
+CROSS-PLATFORM RUNTIME: OPEN
+WORLD/NFT LIVE FEDERATION: OPEN
+HIL/PHYSICAL: OPEN
+HUMAN PROMOTION: OPEN
+
+Principle preserved: clean aggressively, delete conservatively; external material remains quarantined/reference-only until evidence gates pass.
