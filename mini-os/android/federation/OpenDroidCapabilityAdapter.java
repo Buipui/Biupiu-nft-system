@@ -1,6 +1,7 @@
 package com.biupiu.minios.federation;
 
 import java.util.EnumSet;
+import java.util.Collections;
 import java.util.Set;
 
 /**
@@ -36,7 +37,7 @@ public final class OpenDroidCapabilityAdapter implements ExternalTransportAdapte
     }
 
     public Set<Module> modules() {
-        return Set.copyOf(declaredModules);
+        return Collections.unmodifiableSet(EnumSet.copyOf(declaredModules));
     }
 
     @Override
