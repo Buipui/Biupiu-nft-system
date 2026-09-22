@@ -38,7 +38,12 @@ def test_federation_ai_stack_is_fail_closed_and_cross_linked():
         FailureObservation("router", "interface", fp, "federation-contract-v2", True, True, platform="windows"),
     ]
     pattern = summarize_failure_pattern(observations)
-    assert can_promote_learning(pattern, provenance_verified=True, human_approved=True)
+    assert can_promote_learning(
+        pattern,
+        provenance_verified=True,
+        licence_checked=True,
+        human_approved=True,
+    )
 
     verified = [type(g)(g.gate_id, g.component, g.required, "VERIFIED") for g in REQUIRED_GATES]
     evidence = {g.gate_id: {key: True for key in g.required} for g in verified}
