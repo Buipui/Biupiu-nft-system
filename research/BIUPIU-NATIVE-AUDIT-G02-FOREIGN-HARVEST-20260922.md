@@ -8,6 +8,10 @@ Status: IMPLEMENTED / SOURCE-LEVEL VERIFIED / CI RUNTIME PENDING
 Cross-reference the native coding philosophy, multilanguage matrix, Mini-OS compute ABI,
 Rust FFI boundary, heterogeneous compute federation and Android security boundary.
 
+## Literature filing
+
+Complete literature filing is recorded in `research/BIUPIU-G02-LITERATURE-FILING-20260922.md`. The filing audit is recorded in `research/BIUPIU-G02-LITERATURE-FILING-AUDIT-20260922.md`.
+
 ## Foreign-language / international reference harvest
 
 ### Rust FFI and unsafe boundary
