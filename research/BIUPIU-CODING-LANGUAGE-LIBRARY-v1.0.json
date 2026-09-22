@@ -1,0 +1,34 @@
+{
+  "schema": "biupiu.coding-language-library.v1",
+  "status": "GOVERNED_REFERENCE_LIBRARY",
+  "date": "2026-09-22",
+  "canonical_philosophy": "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md",
+  "multilanguage_matrix": "research/BIUPIU-MULTILANGUAGE-NATIVE-CODING-MATRIX-v1.0.md",
+  "ai_hard_gate": "intelligence/BIUPIU-AI-CODING-HARD-GATE-v1.0.json",
+  "audit": "intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py",
+  "languages": {
+    "python": {"roles":["intelligence","ml","research","orchestration"],"tests":"pytest"},
+    "typescript": {"roles":["contracts","federation","web","native-adapters"],"tests":"unit+contract"},
+    "javascript": {"roles":["legacy","browser"],"policy":"minimize new authoritative JS"},
+    "c": {"roles":["abi","hal","device"],"boundary":"stable C ABI"},
+    "cpp": {"roles":["simulation","geometry","graphics","science"],"boundary":"versioned serialization"},
+    "rust": {"roles":["security","memory","concurrency"],"boundary":"C ABI where durable"},
+    "kotlin": {"roles":["android"],"tests":"unit+device-runtime"},
+    "csharp": {"roles":["windows"],"tests":"unit+integration"},
+    "solidity": {"roles":["evm","provenance","accounting"],"tests":"invariant+failure"},
+    "schema": {"roles":["contracts","manifests"],"tests":"schema validation"},
+    "ci-shell": {"roles":["build","test","release"],"policy":"fail-closed"}
+  },
+  "cross_language_contract": [
+    "stable IDs",
+    "versioned schemas",
+    "explicit states",
+    "hashes",
+    "timestamps",
+    "BCP-47 locale",
+    "units",
+    "provenance",
+    "correlation IDs"
+  ],
+  "promotion_rule": "semantic audit + language tests + cross-language regression + provenance + security + rollback + human/OS gate"
+}
