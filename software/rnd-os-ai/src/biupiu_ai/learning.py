@@ -112,7 +112,7 @@ def can_promote_learning(
     pattern: FailurePattern,
     *,
     provenance_verified: bool,
-    licence_checked: bool = True,
+    licence_checked: bool = False,
     human_approved: bool = False,
 ) -> bool:
     """Permit reuse only after verified fix, regression, provenance, licence and human approval."""
@@ -181,7 +181,7 @@ def score_governed_learning_candidate(candidate_id: str, evidence: LearningEvide
     values = {
         "information_gain": max(0.0, min(1.0, evidence.recurrence)),
         "uncertainty_reduction": evidence.uncertainty_reduction,
-        "model_disagreement": evidence.drift_penalty,
+        "model_disagreement": max(0.0, 1.0 - evidence.drift_penalty),
         "feasibility": evidence.provenance_quality,
         "regression_safety": min(evidence.verified_fix, evidence.regression_safety),
     }
