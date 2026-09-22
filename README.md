@@ -269,3 +269,10 @@ The Intelligence layer uses these records to improve diagnostic retrieval and pr
 The canonical navigation map is **[REPOSITORY-ORGANIZATION.md](REPOSITORY-ORGANIZATION.md)**. It defines ownership boundaries across Research, Intelligence, Digital Orchestra, Core OS/DMS, Digital Twin/Federation, simulators, World and NFT/EVM/payment layers.
 
 World material currently retained under `world/` is treated as a controlled staging/reference lane. The dedicated `Buipui/Buipui-World` repository is the destination for independently verified World runtime content. Migration is governed by `research/BIUPIU-WORLD-REPOSITORY-MIGRATION-MANIFEST-v1.0.md`; no duplicate authoritative implementation is created.
+
+
+## Federation repository governance
+
+The repository is organized as a federated engineering system. Canonical ownership remains separated across Research, Intelligence, OS/DMS, Digital Twin/Federation, Simulators, World and NFT/EVM. See `REPOSITORY-STRUCTURE.md` and `research/BIUPIU-SYSTEM-CROSS-LINK-DIGEST-v1.1.md` for the current map and cross-links.
+
+External harvests are integrated only as classified reference patterns, adapters or dependencies after provenance/licence/security/compatibility/build/smoke/regression gates. Learning and runtime changes remain subject to native validation and evidence gates.
