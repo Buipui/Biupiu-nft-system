@@ -8,3 +8,17 @@ pennylane-qiskit
 # Complementary federation systems already registered by Biupiu
 dspy
 vllm
+
+# Extended quantum federation adapters (optional; no hardware activation)
+qiskit-machine-learning
+qiskit-ibm-runtime
+pennylane
+pennylane-qiskit
+amazon-braket-sdk
+azure-quantum
+pytket
+dwave-system
+# Quantum IR / compiler research boundaries
+pyqir
+# Optional CUDA quantum compiler adapter
+cuda-quantum
