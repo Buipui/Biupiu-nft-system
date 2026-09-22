@@ -90,3 +90,11 @@ Canonical additions:
 - Mini OS now compiles federation adapters from `mini-os/android/federation` through its Gradle source set.
 - Added explicit ONNX CPU/XNNPACK/NNAPI/QNN provider lanes, LiteRT CompiledModel lane, TVM runtime lane, fail-closed provider selector and R8 keep rules.
 - Runtime/device/accelerator verification remains open until fresh CI/device evidence is available.
+
+## 2026-09-22 — AI/Multimedia/UI federation literature filing + Android build gate
+- Canonical literature register added: `research/BIUPIU-AI-MULTIMEDIA-UI-FEDERATION-LITERATURE-REGISTER-2026-09-22.md`.
+- Upstream Qualcomm, ONNX Runtime, LiteRT, TVM, AndroidX, Huawei and Paddle sources filed with evidence classes and foreign-language corroboration.
+- LiteRT dependency reconciled to 2.2.0 from current Google documentation.
+- ONNX Runtime Android R8 rule wired into release build configuration.
+- Dedicated Mini-OS Android Gradle build workflow added: `.github/workflows/mini-os-android-ci.yml`.
+- Fresh CI/APK/device execution remains **OPEN** until execution evidence is returned.
