@@ -66,3 +66,16 @@ Canonical additions:
 - `.github/workflows/native-arcade-ci.yml`
 
 **NEXT GATE:** acquire actual CI execution evidence -> remediate any compiler/test failures -> add engine-neutral manifest/provenance interfaces -> controlled Unreal/Unity adapter prototypes -> sandbox/security gate.
+
+## GATE 15 — VERIFIED HARVEST AND PROMOTION PROTOCOL — 22 September 2026
+- Evidence classification, repository cross-linking, version comparison, quarantine and promotion rules: **REGISTERED**.
+- Mandatory test/evidence bundle and fail-closed promotion criteria: **REGISTERED**.
+- Learning-event schema for changes, bug signatures, regression evidence and lineage: **REGISTERED**.
+- Blockchain anchoring boundary for approved non-confidential hashes/metadata: **REGISTERED**.
+- Runtime repository-wide inventory, dependency audit, tests, security review and regression execution: **PENDING**.
+
+Canonical additions:
+- `research/BIUPIU-VERIFIED-HARVEST-AND-PROMOTION-PROTOCOL-v1.0.md`
+- `research/BIUPIU-VERIFIED-HARVEST-CHANGELOG-2026-09-22.md`
+
+**NEXT GATE:** inventory modules across both repositories -> compare versions -> run available CI/tests -> quarantine failures -> produce evidence bundles -> update derived indexes and learning records -> seek human promotion approval.
