@@ -56,6 +56,12 @@ Each specialist record should identify its department code, research question, e
 
 Speculative historical material is retained as hypothesis-generation input only. Creator claims, repeated videos and derivative sources are not independent evidence.
 
+## Gate G02 literature filing
+
+- **`BIUPIU-G02-LITERATURE-FILING-20260922.md`** — complete Rust/FFI, GNU GSL and Android security literature register, including localized/foreign-language references.
+- **`BIUPIU-G02-LITERATURE-FILING-AUDIT-20260922.md`** — filing completeness/provenance/semantic audit and next-gate status.
+- **`BIUPIU-NATIVE-AUDIT-G02-FOREIGN-HARVEST-20260922.md`** — engineering findings, fixes and architecture boundary.
+
 ## Research Record Template
 
 **Research ID:** BPU-RES-YYYY-###  

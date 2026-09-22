@@ -1,8 +1,14 @@
 #include "../include/biupiu_mini_federation.h"
+
+// Mini-OS C ABI semantics:
+// minimum_class is an exact hard requirement. preferred_class can select
+// immediately only inside that required class; otherwise capacity is the
+// deterministic fallback. Enum ordering never implies capability compatibility.
 extern "C" biupiu_mini_status biupiu_mini_select_compute(
  const biupiu_compute_unit *units, uint32_t unit_count,
  const biupiu_mini_workload *workload, uint32_t *selected_unit_id) {
  if (!units || !workload || !selected_unit_id || unit_count==0u) return BIUPIU_MINI_INVALID_ARGUMENT;
+
  const biupiu_compute_unit *best=nullptr;
  for(uint32_t i=0;i<unit_count;++i){
    const auto &u=units[i];

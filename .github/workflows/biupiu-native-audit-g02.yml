@@ -1,0 +1,33 @@
+name: Biupiu native audit G02
+
+on:
+  pull_request:
+    branches: ["main"]
+  push:
+    paths:
+      - "intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py"
+      - "mini-os/rust/**"
+      - "mini-os/cpp/**"
+      - "mini-os/include/**"
+      - "research/BIUPIU-NATIVE-AUDIT-G02-FOREIGN-HARVEST-20260922.md"
+      - ".github/workflows/biupiu-native-audit-g02.yml"
+  workflow_dispatch:
+
+jobs:
+  native-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Run repository-wide native semantic audit
+        run: python intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py
+      - uses: dtolnay/rust-toolchain@stable
+      - name: Run Mini-OS Rust tests
+        run: cargo test --manifest-path mini-os/rust/Cargo.toml
+      - name: Compile Mini-OS C++ contract
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror             mini-os/cpp/federation_runtime.cpp             mini-os/cpp/federation_contract.cpp             -Imini-os/include             -o /tmp/biupiu-mini-federation-test
+      - name: Run Mini-OS C++ contract
+        run: /tmp/biupiu-mini-federation-test
