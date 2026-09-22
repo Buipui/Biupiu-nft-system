@@ -127,3 +127,22 @@ TARGETED TESTS = ADDED.
 REMOTE CI EXECUTION = OPEN.
 RUNTIME/DEVICE/HIL = OPEN.
 EXTERNAL EXECUTABLE PROMOTION = BLOCKED until provenance/licence/security/static/build/test/regression/runtime evidence and human promotion.
+
+## GATE 44 — Federation Fault Check / External-Fix Learning / Double-Harvest Reconciliation — 22 September 2026
+- Internal source audit: **COMPLETED**.
+- Missing source-layer modules identified: **EXTERNAL FIX GAP LEARNING** and **REPEATED HARVEST COMPARISON**.
+- ExternalFixGap guided-fault integration: **IMPLEMENTED**.
+- ExternalFixEvidence learning path: **IMPLEMENTED**.
+- HarvestComparison / compare_harvest_passes: **IMPLEMENTED**.
+- Targeted tests: **ADDED**.
+- Duplicate-definition housekeeping: **COMPLETED**.
+- Foreign-language harvest: **COMPLETED AS REFERENCE EVIDENCE**.
+- Internal repeated-search comparison: **NO MATERIAL DIVERGENCE OBSERVED**.
+- External/foreign repeated-search surfaces: **DIVERGENCE LOGGED; ROOT CAUSE NOT ASSUMED**.
+- CI execution: **OPEN**.
+- Android/Windows runtime: **OPEN**.
+- UE5/GPU runtime: **OPEN**.
+- HIL/physical verification: **OPEN**.
+- External executable promotion: **BLOCKED pending full evidence gates**.
+
+Audit: research/BIUPIU-FEDERATION-FAULT-CHECK-GATE44-2026-09-22.md
