@@ -1,0 +1,12 @@
+{
+  "schema":"biupiu.scientific-library.v1",
+  "date":"2026-09-22",
+  "entries":[
+    {"name":"Eigen","version":"5.0.1","role":"linear_algebra","status":"ADAPTER_INTEGRATED","license":"MPL-2.0","authority":"external_provider"},
+    {"name":"GNU Scientific Library","version":"current-upstream-reference","role":"scientific_numerics","status":"OPTIONAL_ADAPTER_INTEGRATED","license":"GPL","authority":"external_provider"},
+    {"name":"Elmer FEM","version":"26.2.1","role":"multiphysics_solver_reference","status":"REFERENCE_ONLY","license":"GPL/LGPL components","authority":"external_reference"}
+  ],
+  "promotion_rule":"External providers never become authoritative from documentation or presence alone.",
+  "routing":["MATH","GEOMETRY","PHYSICS","SIMULATORS","DIGITAL-TWIN","AI-ML","BIUPIU-OS","BIUPIU-MINI-OS","ANDROID"],
+  "verification":"SOURCE_IMPLEMENTED; CI_AND_RUNTIME_OPEN"
+}
