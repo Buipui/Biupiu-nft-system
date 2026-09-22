@@ -152,3 +152,16 @@ Repository organization: FEDERATED/IMPLEMENTED.
 External harvest: REGISTERED/INTEGRATED AS REFERENCE PATTERNS.
 Executable external code: NOT PROMOTED without licence, provenance, security, compatibility, build, smoke and regression evidence.
 Runtime/device/hardware verification: remains OPEN.
+
+
+## Gate 36 — Harvest Module Testing Protocol Reconciliation — 22 September 2026
+
+The audit found a documentation/indexing gap: recent harvest testing controls were distributed across the Verified Harvest Protocol, hard implementation, benchmark gate, cross-system module matrix, DMS module contract, gate-learning matrix and executable harvest gate, but were not exposed as a single canonical testing registry.
+
+This is now reconciled through `research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json`.
+
+The native validator was also hardened so the executable promotion boundary matches the documented pipeline rather than only a subset of it. New mandatory evidence includes version comparison, dependency validation, normalisation, integration testing and rollback reference.
+
+CI now has explicit harvest-registry validation, TypeScript type checking and harvest-gate test execution. A green CI workflow is still required before runtime verification is marked complete.
+
+**Status: SOURCE INTEGRATION COMPLETE / TEST PROTOCOL INDEXED / CI EXECUTION OPEN.**
