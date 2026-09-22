@@ -13,7 +13,7 @@ typedef enum {
 
 typedef enum { BIUPIU_HARVEST_REFERENCE=1, BIUPIU_HARVEST_PATTERN=2, BIUPIU_HARVEST_ADAPTER=3, BIUPIU_HARVEST_DEPENDENCY=4, BIUPIU_HARVEST_PROHIBITED=5 } BiupiuHarvestClass;
 
-typedef struct { BiupiuBenchmarkId benchmark_id; BiupiuHarvestClass harvest_class; const char* capability; const char* native_target; const char* evidence_state; const char* provenance_ref; } BiupiuBenchmarkModule;
+typedef struct { BiupiuBenchmarkId benchmark_id; BiupiuHarvestClass harvest_class; const char* capability; const char* native_target; const char* evidence_state; const char* provenance_ref; const char* licence_state; const char* source_version; } BiupiuBenchmarkModule;
 int biupiu_benchmark_validate(const BiupiuBenchmarkModule* module);
 int biupiu_benchmark_classify(BiupiuBenchmarkId benchmark_id, BiupiuHarvestClass harvest_class, BiupiuBenchmarkModule* out);
 #ifdef __cplusplus
