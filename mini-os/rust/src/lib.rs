@@ -52,10 +52,7 @@ mod tests {
             capability_bits: 99,
         };
 
-        assert_eq!(
-            biupiu_mini_get_capability(&mut cap),
-            MiniStatus::Ok
-        );
+        assert_eq!(biupiu_mini_get_capability(&mut cap), MiniStatus::Ok);
         assert_eq!(cap.abi_version, 1);
         assert_eq!(
             cap.struct_size as usize,
