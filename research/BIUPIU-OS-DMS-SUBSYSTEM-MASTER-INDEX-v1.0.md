@@ -385,3 +385,17 @@ The universal engineering layer now routes symbolic/numerical mathematics, dimen
 Blockchain remains an integrity anchor, not a data store for private R&D. Learning records and research data stay off-chain by default; approved manifests/digests may be anchored later. Secrets, private keys and confidential datasets remain outside repository learning logs.
 
 **Gate 35-38 status: HARVESTED / SOURCE INTEGRATED / DEFAULT LEARNING PROTOCOL REGISTERED / RUNTIME-CI-FEDERATION-QUANTUM-HIL VERIFICATION PENDING.**
+
+
+## 39. Federation External Harvest Cross-Link — 22 September 2026
+
+New governed harvest register: `research/BIUPIU-FEDERATION-EXTERNAL-HARVEST-CROSSLINK-REGISTER-v1.1.md`.
+
+Current external candidates are cross-linked to internal MATH/PHYS-SYS, GEOMETRY, ROBOTICS, DIGITAL-TWIN, federation observability, provenance, multilingual retrieval, DMS identity/security and release-governance modules. Candidates include Genesis World, DART 6 LTS, CRISP, OpenTelemetry patterns, Agent Flight Recorder, OpenFab, Halofy, Provenance data-mesh patterns, NiuTrans LMT and SHIFT.
+
+Selection rule: existing Biupiu modules are checked first. External code is not promoted by popularity or documentation alone. Licence/IP, dependency, security, static, unit, integration, regression and runtime gates remain open for executable promotion.
+
+Learning checkpoint: `research/BIUPIU-LEARNING-CHECKPOINT-FED-HARVEST-20260922.md`.
+Blockchain anchor-ready manifest: `research/BIUPIU-BLOCKCHAIN-ANCHOR-MANIFEST-FED-HARVEST-20260922.md`.
+
+**Gate status: HARVEST REGISTERED / CROSS-LINKED / CANDIDATES CLASSIFIED / EXECUTABLE PROMOTION PENDING.**
