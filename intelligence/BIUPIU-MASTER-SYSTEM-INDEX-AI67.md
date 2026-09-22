@@ -110,3 +110,16 @@ Registered JDK 17 lifecycle controls and a fail-closed Android signing workflow.
 ## Gate 32 — Android Security Harvest
 Security controls integrated: cleartext denial, backup/data-extraction boundary, runtime-session validation and central security policy. Runtime/OEM/CI security verification remains pending.
 \n## Gate 33 — Digital Orchestra + Digital Filing — 22 September 2026\n\nA separate Digital Orchestra coordination layer is now registered and linked to the Intelligence, Native Coding Matrix, OS/DMS, Digital Twin, Federation and simulator architecture.\n\nCanonical execution path:\nRESEARCH/EVIDENCE -> INTELLIGENCE -> ORCHESTRA -> OS/DMS VALIDATION -> DOMAIN EXECUTION -> VERIFY -> DIGEST/FILE -> LEARN -> PROMOTE\n\nCanonical records:\n- software/digital-orchestra/\n- research/BIUPIU-DIGITAL-ORCHESTRA-ARCHITECTURE-v1.0.md\n- research/BIUPIU-DIGITAL-FILING-SYSTEM-v1.0.md\n- research/BIUPIU-FOREIGN-CODING-PHILOSOPHY-HARVEST-v1.0.md\n- research/BIUPIU-ORCHESTRATION-MATRIX-LINK-v1.0.md\n\nForeign-language repository harvesting is now a governed reference lane. Original source metadata is retained; translated summaries assist discovery; external code is not promoted by discovery alone.\n\nSOURCE IMPLEMENTATION: **IMPLEMENTED**\nSCHEMA: **IMPLEMENTED**\nWORKFLOW DEFINITION: **IMPLEMENTED**\nUNIT TEST SOURCE: **IMPLEMENTED**\nHOST EXECUTION: **PENDING**\nCI INTEGRATION: **PENDING**\nCROSS-SYSTEM RUNTIME: **PENDING**\nREGRESSION: **PENDING**\nRELEASE PROMOTION: **PENDING**\n
+## Gate 34 — Digital Filing Cabinet / Twin hierarchy / Federated healing — 22 September 2026
+Canonical new systems:
+- software/digital-filing-cabinet/
+- software/digital-twin/hierarchy-contract-v1.yaml
+- software/federation/contracts/fault-healing-envelope-v1.json
+- research/BIUPIU-DIGITAL-FILING-CABINET-INDEX-v1.0.md
+- research/BIUPIU-SYSTEM-HIERARCHY-FEDERATION-PROTOCOL-v1.0.md
+The Cabinet is separate but interlinked. The Digital Twin may place a subsystem into another subsystem's contextual view without changing canonical ownership. Federation preserves hierarchy and performs cross-system fault correlation/healing proposals; owning systems retain execution authority.
+SOURCE IMPLEMENTATION: IMPLEMENTED
+SCHEMA/CONTRACTS: IMPLEMENTED
+RUNTIME INDEXER: PENDING
+CROSS-SYSTEM RUNTIME: PENDING
+FAULT/HEALING RUNTIME: PENDING
