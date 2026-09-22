@@ -30,3 +30,10 @@ Everest: mod-loader/API reference only; no Celeste source/assets imported. ci
 IMPLEMENTED = source integration and tests.
 VERIFIED = not yet claimed.
 CI/runtime/Android/device verification = OPEN until direct evidence exists.
+
+
+## Next-gate verification
+- Header enum ordering is explicitly CPU=0, VECTOR=1, GPU=2, NPU=3; capability-floor comparison is therefore consistent with the declared contract.
+- C++ regression coverage now exercises preferred-class selection, minimum capability floor, and admissible fallback.
+- Federation CI workflow exists and is configured for push/dispatch, but GitHub reports no workflow run for the new commits at audit time; CI execution therefore remains OPEN rather than being inferred.
+- Rust manifest is present and the workflow targets it; Rust execution remains OPEN until a CI/device result is observed.
