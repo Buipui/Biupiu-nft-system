@@ -1,0 +1,19 @@
+{
+  "schema": "biupiu.blockchain-anchor-candidate.v1",
+  "anchor_id": "federation-jolt-bullet-qutip-openfermion-opengl-20260922",
+  "checkpoint_root": "git-commit:45507a15d9767cd8359e7b7ecd79441538e6bf11",
+  "chain_id": "NOT_SUBMITTED",
+  "transaction_ref": null,
+  "inclusion_proof": null,
+  "state": "CANDIDATE",
+  "payload_policy": "OFF_CHAIN_ROOT_ONLY",
+  "provenance_refs": [
+    "research/BIUPIU-FEDERATION-JOLT-BULLET-QUTIP-OPENFERMION-OPENGL-20260922.json",
+    "research/BIUPIU-FEDERATION-JOLT-BULLET-QUTIP-OPENFERMION-OPENGL-CHANGELOG-20260922.md",
+    "packages/biupiu-physics-engine/src/federated-physics-registry.ts",
+    "packages/biupiu-3d-engine/src/federated-graphics-registry.ts",
+    "software/rnd-os-ai/src/biupiu_ai/quantum_physics_federation.py",
+    "software/rnd-os-ai/src/biupiu_ai/learning.py"
+  ],
+  "note": "Repository checkpoint only. No blockchain transaction or on-chain finality is claimed."
+}
