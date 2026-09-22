@@ -17,7 +17,7 @@ class FederationGate:
 
 
 REQUIRED_GATES = (
-    FederationGate("F01", "core-authority", ("provenance", "license", "security", "regression", "human")),
+    FederationGate("F01", "core-authority", ("provenance", "license", "security", "regression", "core-os-validation", "human")),
     FederationGate("F02", "ai-ml-algorithms", ("tests", "regression")),
     FederationGate("F03", "multilingual", ("native-source", "provenance", "translation-boundary", "tests")),
     FederationGate("F04", "federated-learning", ("privacy", "aggregation", "security", "tests")),
