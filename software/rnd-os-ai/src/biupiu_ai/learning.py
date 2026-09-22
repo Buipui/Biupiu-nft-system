@@ -123,3 +123,39 @@ def can_promote_learning(
         and licence_checked
         and human_approved
     )
+
+
+def make_multilingual_learning_record(
+    learning_id: str,
+    target_id: str,
+    locale: str,
+    source_language: str,
+    observed_outcome: str,
+    *,
+    input_refs: Sequence[str] = (),
+    result_version: str = "language-contract-v1",
+    model_version: Optional[str] = None,
+    expected_outcome: Optional[str] = None,
+    human_decision: str = "PENDING",
+) -> LearningRecord:
+    """Record multilingual routing/harvest evidence without changing authority.
+
+    Locale and source-language metadata remain explicit so future diagnostics
+    can compare script/region handling and fallback behaviour.
+    """
+    metadata_ref = f"locale={locale};source_language={source_language}"
+    refs = tuple(input_refs) + (metadata_ref,)
+    return make_learning_record(
+        learning_id=learning_id,
+        target_type="MULTILINGUAL_ROUTING",
+        target_id=target_id,
+        input_refs=refs,
+        evidence_state="SUPPORTED",
+        knowledge_class="REPOSITORY_CHANGE",
+        result_version=result_version,
+        observed_outcome=observed_outcome,
+        model_version=model_version,
+        expected_outcome=expected_outcome,
+        human_decision=human_decision,
+        next_action="TEST",
+    )
