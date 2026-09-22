@@ -10,7 +10,7 @@ android {
     defaultConfig {
         applicationId = "com.biupiu.rndos"
         minSdk = 26
-            targetSdk = 35
+        targetSdk = 35
         versionCode = 2
         versionName = "0.2.1"
     }
