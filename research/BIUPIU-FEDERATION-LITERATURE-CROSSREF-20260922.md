@@ -98,3 +98,7 @@ Canonical literature/evidence layer for the deep external federation harvest. Th
 ## Evidence rule
 Literature/source registration -> provenance/licence review -> adapter normalisation -> semantic test -> build -> numerical/AI regression -> device/HIL -> promotion.
 A source citation or successful source-level compilation is never sufficient to mark hardware/runtime capability VERIFIED.
+
+## OpenDroid correction and deep harvest — 2026-09-22
+
+The external evidence resolves the prior ambiguity: OpenDroid is documented as an autonomous Android AI agent with a Compose UI layer, accessibility automation, action dispatch, agent/planning, LLM routing, memory, Keystore security, Android services/voice, Room/DataStore, Hilt and presentation ViewModels. It is not treated as a standalone authoritative UI engine. See `research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md`. The exact legacy `opendroid.ui-engine` identity remains UNRESOLVED/blocked; supported agent and module identities are adapter-only until independent build/device verification.
