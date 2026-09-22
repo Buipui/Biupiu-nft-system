@@ -495,3 +495,11 @@ OS/DMS -> Digital Twin -> Federation -> simulator adapter -> domain simulator.
 The Android Mini OS exposes capability identities and job/state exchange without silently packaging desktop third-party binaries.
 
 Status: SOURCE INTEGRATED / SOURCE-SMOKE PASS / NATIVE BUILD, DEVICE AND RUNTIME OPEN.
+
+
+## 2026-09-22 — AI / Multimedia / UI Federation Harvest
+Canonical record: `mini-os/android/federation/AI-MULTIMEDIA-UI-FEDERATION-HARVEST-20260922.md`.
+Integrated capability registry for Qualcomm IMSDK 2.0, QAIRT/QNN, ONNX Runtime, LiteRT/TensorFlow Lite, Google AI Edge, Huawei HiAI, Paddle Lite NDK, Apache TVM, Compose-first, Material 3, RenderEffect and Navigation 3.
+ONNX Runtime and LiteRT are concrete Android dependencies; Compose/Kotlin/Material 3/Navigation 3 build dependencies are registered. Qualcomm IMSDK, QAIRT/QNN, HiAI, Paddle Lite and TVM remain governed adapter/provider boundaries until their external SDK, licence, build and device evidence is available.
+Semantic registry tests enforce fail-closed vendor/platform states and distinguish source integration from runtime verification.
+Status: SOURCE IMPLEMENTED / SEMANTIC CHECK REGISTERED / ANDROID BUILD + DEVICE RUNTIME OPEN.
