@@ -3,9 +3,14 @@
   "promotion": ["REGISTERED","INTEGRATED","CONNECTED","VERIFIED","BLOCKED"],
   "candidates": [
     {"id":"openxr-sdk","source":"https://github.com/KhronosGroup/OpenXR-SDK","license":"Apache-2.0","role":"xr-loader-api","promotion":"REGISTERED"},
-    {"id":"jolt-physics","source":"https://github.com/jrouwe/JoltPhysics","license":"MIT","role":"rigid-body-collision-provider","promotion":"REGISTERED"},
+    {"id":"jolt-physics","source":"https://github.com/jrouwe/JoltPhysics","license":"MIT","role":"rigid-body-collision-provider","promotion":"INTEGRATED"},
+    {"id":"bullet3","source":"https://github.com/bulletphysics/bullet3","license":"ZLIB","role":"rigid-soft-body-robotics-validation-provider","promotion":"INTEGRATED"},
     {"id":"project-chrono","source":"https://github.com/projectchrono/chrono","license":"BSD-3-Clause","role":"multibody-multiphysics-provider","promotion":"REGISTERED"},
     {"id":"mujoco","source":"https://github.com/google-deepmind/mujoco","license":"Apache-2.0","role":"robotics-control-physics-provider","promotion":"REGISTERED"},
+    {"id":"qutip","source":"https://github.com/qutip/qutip","license":"BSD-3-Clause","role":"open-quantum-system-simulation-provider","promotion":"INTEGRATED"},
+    {"id":"openfermion","source":"https://github.com/quantumlib/OpenFermion","license":"Apache-2.0","role":"fermionic-hamiltonian-and-quantum-algorithm-provider","promotion":"INTEGRATED"},
+    {"id":"opengl-registry","source":"https://registry.khronos.org/OpenGL/","license":"Khronos-component-review-required","role":"graphics-api-and-extension-contract","promotion":"INTEGRATED"},
+    {"id":"opengles-registry","source":"https://registry.khronos.org/OpenGL/index_es.php","license":"Khronos-component-review-required","role":"mobile-graphics-api-contract","promotion":"INTEGRATED"},
     {"id":"openexr","source":"https://github.com/AcademySoftwareFoundation/openexr","license":"BSD-3-Clause","role":"hdr-image-interchange","promotion":"REGISTERED"},
     {"id":"gltf","source":"https://github.com/KhronosGroup/glTF","license":"MIXED_FILE_LEVEL","role":"3d-asset-interchange","promotion":"REGISTERED"},
     {"id":"openstax-physics","source":"https://openstax.org/books/physics/","license":"CC-BY-4.0","role":"physics-reference","promotion":"REGISTERED"}
