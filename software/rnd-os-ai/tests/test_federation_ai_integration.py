@@ -8,6 +8,7 @@ from biupiu_ai.learning import (
 )
 from biupiu_ai.promotion_router import AssetClass, propose_promotion
 from simulator_adapters import SimulatorAdapter
+from biupiu_ai.guided_fault_finding import fault_fix_rule, guide_fault
 
 
 def test_federation_ai_stack_is_fail_closed_and_cross_linked():
@@ -46,3 +47,17 @@ def test_federation_ai_stack_is_fail_closed_and_cross_linked():
     missing = SimulatorAdapter("missing", "__biupiu_missing_executable__").probe()
     assert missing.status == "not-installed"
     assert missing.command == ()
+
+
+def test_guided_fault_fix_matrix_is_deterministic_and_fail_closed():
+    rule = fault_fix_rule("TRANSPORT")
+    assert rule.regression_required and rule.human_promotion_required
+    finding = guide_fault({"fault_id": "f1", "fault_class": "CONTRACT", "evidence_refs": ["ev1"]})
+    assert finding.state == "TRIAGING"
+    assert "schema/version/content-type" in finding.next_step
+    try:
+        fault_fix_rule("UNKNOWN")
+    except ValueError:
+        pass
+    else:
+        raise AssertionError("unknown fault class must fail closed")
