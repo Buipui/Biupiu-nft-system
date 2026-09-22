@@ -35,7 +35,55 @@ PENNYLANE = QuantumProvider(
     capabilities=("hybrid-differentiation", "quantum-neural-network", "benchmarking"),
 )
 
-PROVIDERS = (PENNYLANE, QISKIT)
+QIR = QuantumProvider(
+    provider_id="qir",
+    package="QIR",
+    role="LLVM-based quantum intermediate representation / compiler boundary",
+    execution_modes=("simulator", "compiler"),
+    capabilities=("quantum-ir", "compiler-interoperability", "llvm"),
+)
+
+OPENQASM = QuantumProvider(
+    provider_id="openqasm",
+    package="openqasm",
+    role="hardware-independent quantum assembly / circuit IR",
+    execution_modes=("simulator", "compiler", "hardware"),
+    capabilities=("quantum-ir", "circuit-description", "qpu-portability"),
+)
+
+BRAKET = QuantumProvider(
+    provider_id="aws-braket",
+    package="amazon-braket-sdk",
+    role="managed simulator and multi-provider QPU execution adapter",
+    execution_modes=("simulator", "hardware"),
+    capabilities=("qpu", "circuit-execution", "device-capabilities"),
+)
+
+AZURE_QUANTUM = QuantumProvider(
+    provider_id="azure-quantum",
+    package="azure-quantum",
+    role="cloud quantum execution and QIR target boundary",
+    execution_modes=("simulator", "hardware"),
+    capabilities=("qpu", "qir", "provider-routing"),
+)
+
+DWAVE_LEAP = QuantumProvider(
+    provider_id="dwave-leap",
+    package="dwave-system",
+    role="D-Wave Leap / Ocean hybrid quantum-classical adapter",
+    execution_modes=("simulator", "hardware"),
+    capabilities=("annealing", "hybrid-optimization", "qpu"),
+)
+
+TKET = QuantumProvider(
+    provider_id="pytket",
+    package="pytket",
+    role="Quantinuum quantum circuit compilation and backend abstraction",
+    execution_modes=("simulator", "compiler", "hardware"),
+    capabilities=("quantum-compiler", "circuit-optimization", "qpu-portability"),
+)
+
+PROVIDERS = (PENNYLANE, QISKIT, QIR, OPENQASM, BRAKET, AZURE_QUANTUM, DWAVE_LEAP, TKET)
 
 
 def provider_registry() -> Tuple[QuantumProvider, ...]:
