@@ -1,0 +1,26 @@
+{
+  "schema": "biupiu.systemwide-module-registry.v1",
+  "status": "MAINLINE_CANDIDATE",
+  "principle": "discover -> classify -> provenance/licence -> integrate-by-contract -> static-audit -> smoke -> build -> runtime -> regression -> verify",
+  "verification_rule": "source integration is not runtime verification",
+  "lanes": {
+    "ANDROID": ["CapabilityRouter", "DepartmentModuleRegistry", "DepartmentScreenActivity", "MainHubActivity"],
+    "WINDOWS": ["DepartmentModuleWindow", "semantic capability handlers"],
+    "RND_OS_AI": ["learning", "continual_adaptation", "learning_federation_bridge", "federation_protocol"],
+    "DIGITAL_TWIN": ["digital-twin", "dms-transport", "federation-transport", "site-node federation"],
+    "SIMULATORS": ["simulator registry", "observation/event contracts", "failure-learning adapters"],
+    "WORLD": ["OpenUSD/Blender/UE adapters", "world asset blueprints", "metaverse adapter contract"],
+    "NFT_EVM": ["Hardhat", "ethers.js", "OpenZeppelin", "deployment/minting scripts"],
+    "DMS": ["site-node", "DMS transport", "federated sync"],
+    "RESEARCH": ["research gate manifests", "provenance/IP register", "evidence-layer indices"]
+  },
+  "shared_contracts": ["design-language-code-contract", "ui-semantic-action-contract", "digital-twin contract", "federation transport", "learning event/provenance contract"],
+  "external_harvest_policy": {
+    "OpenUSD": "adapter/pattern only; no source copy",
+    "OpenBooks": "architecture/control-pattern only; no source copy",
+    "foreign_language_repositories": "pattern/protocol harvest only; retain attribution/licence metadata",
+    "GitHub": "module discovery only until licence, dependency and runtime gates pass"
+  },
+  "required_gate_order": ["STATIC_SOURCE_AUDIT", "CONTRACT_SMOKE", "PACKAGE_BUILD", "ANDROID_BUILD", "UNIT_TEST", "EMULATOR_OR_DEVICE", "CROSS_SYSTEM_RUNTIME", "REGRESSION", "VERIFIED"],
+  "known_open_gates": ["Android Gradle wrapper/device runtime", "CI workflow completion evidence", "UE5/host/GPU runtime", "physical HIL/actuation", "quarantined external candidates"]
+}
