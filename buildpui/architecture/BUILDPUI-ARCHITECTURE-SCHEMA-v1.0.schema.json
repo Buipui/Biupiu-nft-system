@@ -1,0 +1,54 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://biupiu.example/schemas/buildpui-architecture-v1.0.schema.json",
+  "title": "BuildPui Architecture Simulator Object",
+  "description": "Canonical BuildPui architecture/digital-twin object envelope. This schema validates data structure only; it is not engineering certification.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["object_id","object_type","schema_version","evidence_state","provenance","licence","created_at","assumptions","uncertainties","open_questions","relations","payload"],
+  "properties": {
+    "object_id": {"type":"string","minLength":1},
+    "object_type": {"type":"string","enum":["SiteTwin","BuildingTwin","SpaceTwin","EnvelopeAssembly","StructuralComponent","CompositeMaterialCard","FabricationProcess","SensorObservation","SimulationModel","SimulationRun","EvidenceRecord","ValidationRecord","ProvenanceRecord","LicensingRecord","SafetyReview"]},
+    "schema_version": {"const":"1.0"},
+    "evidence_state": {"type":"string","enum":["UNREVIEWED","CATALOGUED","RESEARCH-SUPPORTED","SIMULATION-READY","SIMULATION-EXECUTED","PHYSICALLY-TESTED","VALIDATED","REJECTED"]},
+    "provenance": {"$ref":"#/$defs/provenance"},
+    "licence": {"$ref":"#/$defs/licence"},
+    "created_at": {"type":"string","format":"date-time"},
+    "assumptions": {"type":"array","items":{"type":"string"}},
+    "uncertainties": {"type":"array","items":{"type":"string"}},
+    "open_questions": {"type":"array","items":{"type":"string"}},
+    "relations": {"type":"array","items":{"$ref":"#/$defs/relation"}},
+    "payload": {"type":"object"}
+  },
+  "$defs": {
+    "provenance": {
+      "type":"object","additionalProperties":false,
+      "required":["source_type","source_ref","recorded_at"],
+      "properties":{
+        "source_type":{"type":"string"},
+        "source_ref":{"type":"string","minLength":1},
+        "recorded_at":{"type":"string","format":"date-time"},
+        "author":{"type":"string"},
+        "notes":{"type":"string"}
+      }
+    },
+    "licence": {
+      "type":"object","additionalProperties":false,
+      "required":["status"],
+      "properties":{
+        "status":{"type":"string","enum":["VERIFIED","REVIEW_REQUIRED","RESTRICTED","UNKNOWN"]},
+        "name":{"type":"string"},
+        "url":{"type":"string","format":"uri"},
+        "notes":{"type":"string"}
+      }
+    },
+    "relation": {
+      "type":"object","additionalProperties":false,
+      "required":["relation_type","target_id"],
+      "properties":{
+        "relation_type":{"type":"string"},
+        "target_id":{"type":"string","minLength":1}
+      }
+    }
+  }
+}

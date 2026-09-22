@@ -1,0 +1,26 @@
+name: BuildPui architecture schema validation
+
+on:
+  push:
+    paths:
+      - "buildpui/architecture/**"
+      - ".github/workflows/buildpui-architecture-schema.yml"
+  pull_request:
+    paths:
+      - "buildpui/architecture/**"
+      - ".github/workflows/buildpui-architecture-schema.yml"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Set up Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install schema validator
+        run: python -m pip install --disable-pip-version-check jsonschema
+      - name: Validate BuildPui JSON Schema and fixture
+        run: python buildpui/architecture/tests/test_schema.py

@@ -1,0 +1,35 @@
+{
+  "object_id": "BP-COMP-EXAMPLE-001",
+  "object_type": "CompositeMaterialCard",
+  "schema_version": "1.0",
+  "evidence_state": "RESEARCH-SUPPORTED",
+  "provenance": {
+    "source_type": "research",
+    "source_ref": "internal-federated-catalogue",
+    "recorded_at": "2026-09-22T00:00:00Z",
+    "notes": "Illustrative schema fixture; not a measured material dataset."
+  },
+  "licence": {
+    "status": "REVIEW_REQUIRED",
+    "notes": "Licence must be independently confirmed before reuse."
+  },
+  "created_at": "2026-09-22T00:00:00Z",
+  "assumptions": ["Example values are placeholders."],
+  "uncertainties": ["No physical test result is attached."],
+  "open_questions": ["Which independently validated test method and formulation should be used?"],
+  "relations": [],
+  "payload": {
+    "material_id": "BP-COMP-EXAMPLE-001",
+    "constituents": [],
+    "properties": {
+      "density": {
+        "name": "density",
+        "value": null,
+        "unit": "kg/m3",
+        "condition": "unknown",
+        "value_state": "unknown",
+        "uncertainty": null
+      }
+    }
+  }
+}
