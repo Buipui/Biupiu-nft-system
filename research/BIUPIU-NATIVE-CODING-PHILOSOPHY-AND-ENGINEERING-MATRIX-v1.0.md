@@ -539,3 +539,8 @@ Semantic audit: IMPLEMENTED SOURCE-LEVEL.
 ML learning cross-link: IMPLEMENTED IN GOVERNANCE + LEARNING BOUNDARY.
 Federation/external harvest: CROSS-LINKED.
 Native runtime/device/hardware/blockchain execution: remains separate and OPEN until directly evidenced.
+
+
+## 21. External-fix gap and repeated-harvest semantic gate — 22 September 2026
+AI-assisted repair MUST distinguish INTERNAL_PRESENT, MISSING_INTERNAL and PARTIAL_INTERNAL. An externally found fix that is absent internally becomes a governed candidate, not an automatic patch. Required sequence: SOURCE -> INTERNAL MATCH -> SEMANTIC MATCH -> PROVENANCE -> LICENCE -> SECURITY -> NATIVE IMPLEMENTATION -> TEST -> REGRESSION -> ROLLBACK -> PROMOTION.
+Repeated harvests MUST retain pass identity and compare common/unique evidence. Result-set divergence is a diagnostic signal, not proof of a root cause. Foreign-language evidence retains original terminology and provenance.
