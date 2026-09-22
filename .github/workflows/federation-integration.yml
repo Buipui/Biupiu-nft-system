@@ -45,7 +45,4 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: "22"
-      - run: |
-          if [ -f package.json ]; then npm ci; else exit 0; fi
-      - run: |
-          if [ -f packages/biupiu-rnd-os/package.json ]; then npm test --workspace packages/biupiu-rnd-os; else exit 0; fi
+      - run: npx --yes tsx packages/biupiu-rnd-os/src/federation-transport.test.ts
