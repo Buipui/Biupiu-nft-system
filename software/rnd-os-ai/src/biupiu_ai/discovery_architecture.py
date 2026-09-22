@@ -68,7 +68,16 @@ class TaskGraph:
                 and all(self.tasks[d].status in {TaskStatus.COMPLETE, TaskStatus.EXECUTION_DONE}
                         for d in t.dependencies)]
 
-    def branch(self, task_id: str, *new_tasks: DiscoveryTask) -> None:\n        """Spawn dependent research branches without discarding the parent."""\n        if task_id not in self.tasks:\n            raise ValueError(f"unknown parent task: {task_id}")\n        for task in new_tasks:\n            if task_id not in task.dependencies:\n                raise ValueError("branch task must depend on its parent")\n            self.add(task)\n\n    def blocked(self) -> list[DiscoveryTask]:
+    def branch(self, task_id: str, *new_tasks: DiscoveryTask) -> None:
+        """Spawn dependent research branches without discarding the parent."""
+        if task_id not in self.tasks:
+            raise ValueError(f"unknown parent task: {task_id}")
+        for task in new_tasks:
+            if task_id not in task.dependencies:
+                raise ValueError("branch task must depend on its parent")
+            self.add(task)
+
+    def blocked(self) -> list[DiscoveryTask]:
         return [t for t in self.tasks.values()
                 if t.status in {TaskStatus.NEW, TaskStatus.FLAGGED_AI}
                 and any(self.tasks[d].status not in {TaskStatus.COMPLETE, TaskStatus.EXECUTION_DONE}
