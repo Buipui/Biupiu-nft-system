@@ -20,6 +20,7 @@ jobs:
       - uses: actions/setup-python@v5
         with:
           python-version: "3.12"
+      - run: python -m pip install --disable-pip-version-check pytest
       - run: python -m py_compile software/rnd-os-ai/src/biupiu_ai/compute_federation.py software/rnd-os-ai/src/biupiu_ai/machine_capability.py software/rnd-os-ai/src/biupiu_ai/federation_protocol.py
       - run: PYTHONPATH=software/rnd-os-ai/src python -m pytest -q software/rnd-os-ai/tests/test_compute_federation.py
 
