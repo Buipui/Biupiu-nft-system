@@ -399,3 +399,14 @@ Learning checkpoint: `research/BIUPIU-LEARNING-CHECKPOINT-FED-HARVEST-20260922.m
 Blockchain anchor-ready manifest: `research/BIUPIU-BLOCKCHAIN-ANCHOR-MANIFEST-FED-HARVEST-20260922.md`.
 
 **Gate status: HARVEST REGISTERED / CROSS-LINKED / CANDIDATES CLASSIFIED / EXECUTABLE PROMOTION PENDING.**
+
+
+## 40. Harvest Module Testing Protocol Registry — 22 September 2026
+
+Audit identified that the recent module-testing protocols existed across separate records but were not exposed as one canonical harvest-testing registry. Added `research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json`.
+
+The executable harvest gate now enforces version comparison, dependency check, normalisation, unit/static/build/security/integration/regression/runtime evidence, test references and rollback reference before `VERIFIED_WORKING` promotion. Existing native modules remain the comparison baseline.
+
+The cross-system verification workflow now validates the harvest matrix and testing registry, type-checks the harvest gate and executes its test harness in CI. Local/runtime execution is not claimed from repository inspection.
+
+**Gate status: PROTOCOL REGISTERED / NATIVE GATE HARDENED / CI EXECUTION CONFIGURED / CURRENT CI RESULT OPEN.**
