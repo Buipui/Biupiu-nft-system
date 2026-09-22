@@ -1,0 +1,17 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"Biupiu Digital Filing Cabinet Record",
+ "type":"object",
+ "required":["artifact_id","title","artifact_type","source_uri","language","licence","evidence_state","authority_system"],
+ "properties":{
+  "artifact_id":{"type":"string"},"title":{"type":"string"},"artifact_type":{"type":"string"},
+  "source_uri":{"type":"string"},"source_commit":{"type":["string","null"]},
+  "language":{"type":"string"},"licence":{"type":"string"},
+  "evidence_state":{"type":"string"},"validation_level":{"type":"string"},
+  "implementation_state":{"type":"string"},"authority_system":{"type":"string"},
+  "domain":{"type":["string","null"]},"capability_ids":{"type":"array","items":{"type":"string"}},
+  "parent_id":{"type":["string","null"]},"related_ids":{"type":"array","items":{"type":"string"}},
+  "metadata":{"type":"object"}
+ },
+ "additionalProperties":true
+}
