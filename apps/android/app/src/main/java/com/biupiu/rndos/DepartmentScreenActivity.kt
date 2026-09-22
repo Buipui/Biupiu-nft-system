@@ -41,7 +41,7 @@ abstract class DepartmentScreenActivity : Activity() {
             })
         }
 
-        DepartmentCapabilityRegistry.resolve(route).forEach { capability ->
+        CapabilityRegistry.core.filter { it.id == route }.forEach { capability ->
             root.addView(Button(this).apply {
                 text = capability.replace('_', ' ')
                 setOnClickListener { }
