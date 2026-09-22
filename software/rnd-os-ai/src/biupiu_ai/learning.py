@@ -143,8 +143,7 @@ def make_multilingual_learning_record(
     Locale and source-language metadata remain explicit so future diagnostics
     can compare script/region handling and fallback behaviour.
     """
-    metadata_ref = f"locale={locale};source_language={source_language}"
-    refs = tuple(input_refs) + (metadata_ref,)
+    refs = tuple(input_refs) + (f"locale={locale}", f"source_language={source_language}")
     return make_learning_record(
         learning_id=learning_id,
         target_type="MULTILINGUAL_ROUTING",
