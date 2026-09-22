@@ -66,3 +66,16 @@ External sources supply protocols, interfaces, reference patterns and candidate 
 - Tests: ADDED.
 - CI/build/security/runtime/HIL: OPEN pending fresh execution evidence.
 - Executable third-party promotion: BLOCKED until evidence gates pass.
+
+## Gate 44 — Federation Fault Check, External-Fix Learning, Double-Harvest Reconciliation + Housekeeping — 22 September 2026
+
+- Internal-first fault audit identified two source-layer gaps: no dedicated external-fix-gap learning primitive and no deterministic repeated-harvest comparison helper.
+- Native guided fault finding now accepts externally discovered/internal-missing fixes as governed proposals through ExternalFixGap.
+- Native learning now records ExternalFixEvidence and compares PASS-1/PASS-2 harvest sets.
+- Duplicate ExternalFixGap code found during housekeeping was removed; one authoritative definition remains.
+- Foreign-language harvest reinforced evidence correlation, FMEA/fault-mode analysis and testability/observability patterns. External code remains reference-only.
+- Internal repeated searches were materially stable; foreign/external result surfaces changed between passes. Divergence is logged without inventing a root cause.
+- Targeted regression tests are present.
+- CI/runtime/device/HIL verification remains OPEN.
+
+Status: SOURCE IMPLEMENTED / HOUSEKEEPING PASS / TARGETED TESTS PRESENT / RUNTIME VERIFICATION OPEN.
