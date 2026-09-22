@@ -1,0 +1,61 @@
+{
+  "schema": "biupiu.harvest.module-testing-protocol.v1",
+  "date": "2026-09-22",
+  "status": "REGISTERED",
+  "canonicalPipeline": [
+    "INVENTORY",
+    "VERSION-COMPARE",
+    "REPOSITORY-CROSS-LINK",
+    "PROVENANCE",
+    "LICENCE-IP",
+    "DEPENDENCY",
+    "NORMALISE",
+    "STATIC",
+    "UNIT",
+    "INTEGRATION",
+    "SECURITY",
+    "REGRESSION",
+    "RUNTIME",
+    "EVIDENCE-BUNDLE",
+    "LEARNING",
+    "INDEX-DIGEST",
+    "HUMAN-PROMOTION"
+  ],
+  "evidenceStates": [
+    "CANDIDATE",
+    "REPOSITORY_VERIFIED_UNTESTED",
+    "VERIFIED_WORKING",
+    "QUARANTINED",
+    "SUPERSEDED"
+  ],
+  "recentProtocols": [
+    "research/BIUPIU-VERIFIED-HARVEST-AND-PROMOTION-PROTOCOL-v1.0.md",
+    "research/BIUPIU-EXTERNAL-HARVEST-HARD-IMPLEMENTATION-v1.0.md",
+    "research/BIUPIU-BENCHMARK-PROGRAM-HARVEST-GATE-2026-09-22.md",
+    "docs/architecture/BIUPIU-CROSS-SYSTEM-MODULE-HARVEST-MATRIX-2026-09-22.json",
+    "dms/MODULE-CONTRACT-TEMPLATE.md",
+    "research/BIUPIU-GATE-LEARNING-MATRIX-v1.0.json",
+    "research/BIUPIU-GATE-LEARNING-ARCHITECTURE-v1.0.md"
+  ],
+  "executable": [
+    "packages/biupiu-rnd-os/src/federation-harvest-gate.ts",
+    "packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts",
+    "software/digital-orchestra/workflows/core-harvest.yaml"
+  ],
+  "rules": {
+    "external_code": "reference_or_adapter_until_all_gates_pass",
+    "existing_native_module": "compare_first",
+    "failed_gate": "quarantine",
+    "missing_runtime": "REPOSITORY_VERIFIED_UNTESTED",
+    "blockchain": "hashes_and_non_confidential_release_metadata_only",
+    "learning": "append_only_lineage_and_failure_memory"
+  },
+  "verification": {
+    "source_contract_review": "PASS",
+    "test_contract_updated": "PASS",
+    "local_runtime_execution": "NOT_AVAILABLE_IN_GITHUB_CONNECTOR",
+    "CI_execution": "OPEN",
+    "device_hardware": "OPEN",
+    "production_promotion": "OPEN"
+  }
+}
