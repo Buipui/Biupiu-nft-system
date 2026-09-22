@@ -1,5 +1,8 @@
 package com.biupiu.rndos
 
+import android.content.Context
+import android.os.Build
+import android.os.LocaleList
 import java.util.Locale
 
 /**
@@ -51,5 +54,26 @@ object BiupiuLanguageRegistry {
             displayName = Locale.forLanguageTag(canonical).getDisplayName(Locale.ENGLISH),
             supportLevel = "SELECTION"
         )
+    }
+}
+
+
+object BiupiuLocaleController {
+    fun apply(context: Context, tag: String): Boolean {
+        val canonical = BiupiuLanguageRegistry.normalise(tag)
+        if (!BiupiuLanguageRegistry.isSupported(canonical)) return false
+        if (Build.VERSION.SDK_INT >= Build.VERSION_CODES.TIRAMISU) {
+            val manager = context.getSystemService(android.app.LocaleManager::class.java)
+                ?: return false
+            manager.applicationLocales = LocaleList.forLanguageTags(canonical)
+            return true
+        }
+        val locale = Locale.forLanguageTag(canonical)
+        Locale.setDefault(locale)
+        @Suppress("DEPRECATION")
+        context.resources.configuration.setLocale(locale)
+        @Suppress("DEPRECATION")
+        context.resources.updateConfiguration(context.resources.configuration, context.resources.displayMetrics)
+        return true
     }
 }
