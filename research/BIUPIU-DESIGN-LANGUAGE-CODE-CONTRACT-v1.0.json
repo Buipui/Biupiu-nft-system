@@ -1,0 +1,31 @@
+{
+  "schema": "biupiu.design-language-code.v1",
+  "status": "MAINLINE",
+  "formula": "NEUTRAL_BASE -> MATERIAL_FINISH -> RESTRAINED_NATURE_ACCENT -> CLEAR_INFORMATION",
+  "scope": ["OS","OS_AI","DMS","INTELLIGENCE","SIMULATORS","DIGITAL_TWIN","FEDERATION","WORLD","DEPARTMENT_APPS","ML"],
+  "semantic_tokens": {
+    "surfaces": ["neutral_base","graphite","titanium","aluminium","warm_white","stone"],
+    "brand": ["deep_green","bronze"],
+    "nature_accents": ["muted_green","patina","mineral","fynbos"],
+    "materials": ["anodised_aluminium","brushed_titanium","bio_composite","recycled_glass","carbon_weave","living_stone"],
+    "information": ["primary_text","secondary_text","success","warning","error","offline","simulated","locked"]
+  },
+  "rules": [
+    "semantic_state_must_not_depend_on_decorative_colourway",
+    "state_must_have_text_or_icon_semantics",
+    "primary_actions_must_have_one_clear_handler",
+    "disabled_actions_must_explain_why",
+    "simulation_actions_must_not_be_presented_as_physical_execution",
+    "unknown_routes_fail_closed",
+    "every_design_change_is_versioned_and_logged",
+    "every_simulator_observation_can_feed_learning",
+    "learning_proposals_are_bounded_and_rollbackable",
+    "learning_cannot_directly_rewrite_authoritative_source",
+    "federation_does_not_grant_authority",
+    "digital_twin_updates_require_provenance"
+  ],
+  "button_states": ["DEFAULT","HOVER","FOCUS","PRESSED","DISABLED","BUSY","SUCCESS","WARNING","ERROR","OFFLINE","SIMULATED"],
+  "action_result_codes": ["AUTHORIZED","REGISTERED_NOT_ENTITLED","UNKNOWN_CAPABILITY","ACTION_NOT_IMPLEMENTED","ACTION_BLOCKED","SIMULATION_ONLY","SUCCESS","ERROR"],
+  "pipeline": "INTENT -> ROUTE -> AUTHORISE -> VALIDATE -> EXECUTE_OR_SIMULATE -> OBSERVE -> LEARN -> FEEDBACK -> AUDIT",
+  "promotion": "SOURCE -> STATIC_AUDIT -> BUILD -> SMOKE -> RUNTIME -> DEVICE/HOST -> REGRESSION -> VERIFIED"
+}
