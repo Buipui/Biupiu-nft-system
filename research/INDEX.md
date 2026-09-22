@@ -79,3 +79,6 @@ Canonical additions:
 - `research/BIUPIU-VERIFIED-HARVEST-CHANGELOG-2026-09-22.md`
 
 **NEXT GATE:** inventory modules across both repositories -> compare versions -> run available CI/tests -> quarantine failures -> produce evidence bundles -> update derived indexes and learning records -> seek human promotion approval.
+
+
+- AI accelerator + quantum federation harvest (2026-09-22): **SOURCE INTEGRATED; RUNTIME VERIFICATION PENDING** — `research/BIUPIU-AI-ACCELERATOR-QUANTUM-FEDERATION-HARVEST-2026-09-22.md`.
