@@ -1,0 +1,29 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "schema":"biupiu.language-contract.v1",
+  "status":"IMPLEMENTED_SOURCE_LEVEL",
+  "authority":"Biupiu Native OS/DMS language contract",
+  "identifier_standard":"BCP47",
+  "reference_authority":"Unicode CLDR / UTS #35",
+  "principles":[
+    "preserve language-script-region identity",
+    "user selection is explicit and persistent",
+    "fallback is deterministic and observable",
+    "translation never changes evidence status",
+    "original-language evidence is retained",
+    "unsupported locale fails closed to a declared fallback"
+  ],
+  "support_levels":[
+    "DISPLAY","INPUT","SELECTION","MINIMAL_I18N","FULL_I18N","UI","ADVANCED"
+  ],
+  "native_language_families":["af","ar","bn","bg","ca","cs","da","de","el","en","es","et","fa","fi","fil","fr","he","hi","hr","hu","id","is","it","ja","ka","kk","ko","lt","lv","ms","nl","no","pl","pt","ro","ru","sk","sl","sr","sv","sw","ta","te","th","tr","uk","ur","vi","xh","yo","zh","zu","st","tn","ts","so","am","ha","ig","km","my","ne","si","pa","mr","gu","kn","ml","or","as"],
+  "required_runtime_behaviour":[
+    "normalise BCP47-compatible identifiers",
+    "retain script and region subtags",
+    "generate deterministic fallback chain",
+    "persist user-selected locale",
+    "propagate locale to OS applications",
+    "expose selection state to Intelligence/learning",
+    "record unsupported/fallback events"
+  ]
+}
