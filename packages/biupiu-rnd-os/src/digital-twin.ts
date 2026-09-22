@@ -99,4 +99,4 @@ export function requiresHumanApproval(action:TwinActionRequest):boolean{
  return action.humanApprovalRequired || action.confidence<0.90 || action.evidenceState==="T2" || action.evidenceState==="T3";
 }
 
-export function dmsDigitalTwinFeatureId():string{return "digital-twin.advanced";}
+export function dmsDigitalTwinFeatureId():string{return "digital-twin.advanced";}\n\nexport function canLearnFromTwinEvent(event:TwinEvent):boolean {\n return event.provenanceRefs.length>0 && !!event.modelVersion.trim() && (event.eventType==="SIMULATION" || event.eventType==="TEST_RESULT" || event.eventType==="CALIBRATION" || event.eventType==="STATE_UPDATE" || event.eventType==="TELEMETRY");\n}\n\nexport function bindLearningReference(twin:DigitalTwinRef, learningId:string):DigitalTwinRef {\n if(!learningId.trim()) throw new Error("learningId is required");\n return {...twin, sourceRefs:[...twin.sourceRefs, learningId]};\n}
