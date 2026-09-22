@@ -11,6 +11,7 @@ import androidx.compose.material.icons.filled.Build
 import androidx.compose.material.icons.filled.Home
 import androidx.compose.material.icons.filled.Park
 import androidx.compose.material.icons.filled.Settings
+import androidx.compose.material.icons.filled.Language
 import androidx.compose.material3.*
 import androidx.compose.runtime.*
 import androidx.compose.runtime.saveable.rememberSaveable
@@ -68,12 +69,14 @@ private val workshopMaterials = listOf(
 @Composable
 fun BiupiuApp() {
     var selected by rememberSaveable { mutableIntStateOf(0) }
+    var selectedLanguage by rememberSaveable { mutableStateOf("en") }
     val destinations = listOf("Home", "Lab", "Workshop", "System")
     val icons = listOf(Icons.Filled.Home, Icons.Filled.Park, Icons.Filled.Build, Icons.Filled.Settings)
 
     BiupiuUiTheme {
         Scaffold(
             containerColor = MaterialTheme.colorScheme.background,
+            topBar = { BiupiuLanguageSelector(selectedLanguage) { selectedLanguage = it } },
             bottomBar = {
                 NavigationBar(containerColor = BiupiuPalette.Graphite) {
                     destinations.forEachIndexed { i, label ->
@@ -92,6 +95,38 @@ fun BiupiuApp() {
                 1 -> LabSurface(Modifier.padding(padding))
                 2 -> WorkshopSurface(Modifier.padding(padding))
                 else -> SystemSurface(Modifier.padding(padding))
+            }
+        }
+    }
+}
+
+@Composable
+private fun BiupiuLanguageSelector(
+    selectedLanguage: String,
+    onLanguageSelected: (String) -> Unit
+) {
+    var expanded by remember { mutableStateOf(false) }
+    val options = listOf("en", "af", "xh", "zu", "de", "fr", "es", "pt", "ar", "zh", "ja", "ko")
+    Row(
+        Modifier.fillMaxWidth().padding(horizontal = 20.dp, vertical = 8.dp),
+        horizontalArrangement = Arrangement.End
+    ) {
+        Box {
+            OutlinedButton(onClick = { expanded = true }) {
+                Icon(Icons.Filled.Language, contentDescription = "Language")
+                Spacer(Modifier.width(8.dp))
+                Text(selectedLanguage)
+            }
+            DropdownMenu(expanded = expanded, onDismissRequest = { expanded = false }) {
+                options.forEach { tag ->
+                    DropdownMenuItem(
+                        text = { Text(tag) },
+                        onClick = {
+                            onLanguageSelected(tag)
+                            expanded = false
+                        }
+                    )
+                }
             }
         }
     }
