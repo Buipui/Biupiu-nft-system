@@ -1,6 +1,35 @@
 # Biupiu System Change Log
 
-## 2026-09-22 — Federated Compute / Machine / Mini-OS Integration Consolidation
+#
+## 2026-09-22 — Next-Gate Scheduler Fault Check
+
+### Fault found
+- Static execution of the federated planner exposed a semantic mismatch in the preferred-class scheduler.
+- The planner treated `preferred=(GPU, PERFORMANCE)` as an unordered set and could select PERFORMANCE CPU before GPU when both had zero current load.
+- This contradicted the intended ordered preference contract and the existing GPU-selection test.
+
+### Corrective implementation
+- Updated `software/rnd-os-ai/src/biupiu_ai/compute_federation.py`.
+- Preferred compute classes are now evaluated in declared priority order.
+- Once the first available preferred class is found, capacity/load balancing selects within that class.
+- `execute()` and `plan()` therefore share consistent preferred-class semantics.
+- Minimum compute requirements remain fail-closed.
+
+### Gate execution evidence
+- Main federated scheduler smoke test: **PASS**.
+- Missing-required-NPU fail-closed test: **PASS**.
+- Machine capability range validation: **PASS**.
+- Integrated GPU dispatch: **PASS**.
+- Mini-OS C++ federation contract: **PASS**.
+- The C++ test was compiled with `-std=c++17 -Wall -Wextra -Werror` and executed successfully.
+- Repository GitHub Actions workflow has no recorded run for the changelog commit; therefore CI is **NOT** marked verified.
+- Rust live execution remains **PENDING** because the available execution environment does not contain `rustc`/Cargo.
+
+### Status transition
+**FAULT FOUND → PATCH IMPLEMENTED → LOCAL SMOKE TEST PASS → CI/HARDWARE VERIFICATION OPEN.**
+
+
+# 2026-09-22 — Federated Compute / Machine / Mini-OS Integration Consolidation
 
 ### Implemented
 
