@@ -20,3 +20,9 @@
 
 ## Learning principle
 This is retrieval/diagnostic learning evidence, not autonomous model training. It improves future search, comparison and preventative-test generation while preserving authoritative state and old/new lineage.
+## Follow-up correction
+Audit found that the documented harvest pipeline was broader than the native validator's enforced evidence fields and the index did not expose all recent module-testing protocols together. The validator and CI workflow were hardened and the canonical testing registry was added. This is retained as a learning event and regression target.
+- correction_class: governance/enforcement mismatch
+- affected_modules: federation harvest gate, test harness, CI verification, harvest index/digest
+- new evidence: version/dependency/normalisation/integration/rollback gates
+- state: SOURCE-CORRECTED / CI-VERIFICATION-OPEN
