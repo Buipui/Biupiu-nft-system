@@ -1,0 +1,40 @@
+{
+  "schema": "biupiu.ai.coding-hard-gate.v1",
+  "status": "HARD_IMPLEMENT",
+  "purpose": "Force every AI coding request through the native coding philosophy and matrix before code is treated as implementation.",
+  "pipeline": [
+    "REQUIREMENT",
+    "OWNER",
+    "LANGUAGE",
+    "CONTRACT",
+    "PROVENANCE",
+    "SECURITY",
+    "DEPENDENCIES",
+    "SEMANTIC_AUDIT",
+    "LANGUAGE_TEST",
+    "CROSS_LANGUAGE_TEST",
+    "REGRESSION",
+    "ROLLBACK",
+    "PROMOTION"
+  ],
+  "fail_closed": true,
+  "rules": {
+    "ai_generated_code": "NON_AUTHORITATIVE",
+    "external_code": "REFERENCE_OR_CANDIDATE_UNTIL_VALIDATED",
+    "unknown_language": "QUARANTINE",
+    "missing_contract": "REJECT_OR_QUARANTINE",
+    "missing_provenance": "REJECT_OR_QUARANTINE",
+    "security_failure": "QUARANTINE",
+    "semantic_failure": "BLOCK",
+    "test_failure": "BLOCK",
+    "regression_failure": "BLOCK",
+    "runtime_not_verified": "DO_NOT_CLAIM_RUNTIME_VERIFIED"
+  },
+  "authorities": {
+    "coding_philosophy": "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md",
+    "multilanguage_matrix": "research/BIUPIU-MULTILANGUAGE-NATIVE-CODING-MATRIX-v1.0.md",
+    "semantic_audit": "intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py",
+    "learning": "software/rnd-os-ai/src/biupiu_ai/learning.py",
+    "guided_fault_finding": "software/rnd-os-ai/src/biupiu_ai/guided_fault_finding.py"
+  }
+}
