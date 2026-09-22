@@ -12,7 +12,8 @@ public final class AndroidCapabilityRegistry {
     public AndroidCapabilityRegistry() {
         capabilities.put("aosp.mainline", State.AVAILABLE);
         capabilities.put("pixel.gki.vendor-separation", State.ADAPTER_ONLY);
-        capabilities.put("android.auto.projection", State.AVAILABLE);
+        // Projection is an adapter boundary until Android Car APIs provide live runtime evidence.
+        capabilities.put("android.auto.projection", State.ADAPTER_ONLY);
         capabilities.put("motorola.ma2.transport", State.DEVICE_REQUIRED);
         capabilities.put("aawireless.two.transport", State.DEVICE_REQUIRED);
         capabilities.put("carlinkit.2air.transport", State.DEVICE_REQUIRED);
@@ -25,11 +26,22 @@ public final class AndroidCapabilityRegistry {
     }
 
     public Map<String, State> snapshot() {
-        return Collections.unmodifiableMap(capabilities);
+        return Collections.unmodifiableMap(new LinkedHashMap<>(capabilities));
     }
 
+    /** Runtime capability is usable only when the registry has positive runtime evidence. */
     public boolean isUsable(String capability) {
-        State s = capabilities.get(capability);
-        return s == State.AVAILABLE || s == State.ADAPTER_ONLY;
+        return capabilities.get(capability) == State.AVAILABLE;
+    }
+
+    /** True when a native adapter/contract exists, without claiming live runtime availability. */
+    public boolean isAdapterRegistered(String capability) {
+        State state = capabilities.get(capability);
+        return state == State.AVAILABLE || state == State.ADAPTER_ONLY;
+    }
+
+    public State stateOf(String capability) {
+        State state = capabilities.get(capability);
+        return state == null ? State.UNRESOLVED : state;
     }
 }
