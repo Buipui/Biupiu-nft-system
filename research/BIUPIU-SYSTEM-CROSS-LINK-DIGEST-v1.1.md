@@ -108,3 +108,25 @@ LINKED != MERGED: every system retains its own identity, authority, contracts an
 Digital Twin contextual composition uses canonical_owner_id/canonical_parent_id/contextual_parent_id/subsystem_path.
 Federation may discover, correlate, diagnose, reconcile and distribute healing knowledge; execution remains under the canonical owner's authority.
 Status: SOURCE-LEVEL INTEGRATION COMPLETE; runtime federation and healing tests remain open.
+
+
+## Gate 35 — Federation External Harvest + Internal Cross-Link — 22 September 2026
+
+The external harvest lane is now linked directly to the native federation contracts, Digital Orchestra, OS/DMS master index, Gate-Learning architecture, Intelligence learning layer, algorithm network and blockchain registry boundary.
+
+### Selected resource lanes
+- Physics/simulation: Genesis World, DART 6 LTS, CRISP — candidate/reference only until Biupiu-side tests and licence review pass.
+- Observability/provenance: OpenTelemetry, Agent Flight Recorder, OpenFab, Halofy and Provenance — pattern/reference lane; native interfaces remain authoritative.
+- Multilingual retrieval: NiuTrans LMT and SHIFT — candidate research lane; original-language evidence and licence status remain independent gates.
+
+### Internal comparison rule
+`DISCOVER -> IDENTIFY -> INTERNAL MODULE MATCH -> VERSION/COMMIT -> LICENCE/IP -> DEPENDENCY -> STATIC -> UNIT -> INTEGRATION -> REGRESSION -> RUNTIME -> LEARNING -> INDEX -> HUMAN PROMOTION`
+
+No duplicate authoritative implementation is created merely to consume an external project. Where an internal module already satisfies the contract, the external resource remains a comparison/reference source.
+
+### New records
+- `research/BIUPIU-FEDERATION-EXTERNAL-HARVEST-CROSSLINK-REGISTER-v1.1.md`
+- `research/BIUPIU-LEARNING-CHECKPOINT-FED-HARVEST-20260922.md`
+- `research/BIUPIU-BLOCKCHAIN-ANCHOR-MANIFEST-FED-HARVEST-20260922.md`
+
+**Status: SOURCE-LEVEL INTEGRATION COMPLETE; executable promotion, runtime verification and release anchoring remain open.**
