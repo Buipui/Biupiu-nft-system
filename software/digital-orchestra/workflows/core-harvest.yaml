@@ -1,0 +1,26 @@
+version: "1.0"
+name: biupiu-external-harvest
+description: Governed external module and coding-philosophy harvest
+steps:
+  - id: discover
+    action: discover_sources
+  - id: classify
+    action: classify_provenance_and_license
+  - id: extract
+    action: extract_patterns_not_unlicensed_code
+  - id: compare
+    action: compare_with_native_matrix
+  - id: test
+    action: generate_validation_plan
+  - id: digest
+    action: write_digest_and_crosslinks
+  - id: file
+    action: write_canonical_registry
+  - id: promote
+    action: human_release_gate
+guards:
+  unknown_license: quarantine
+  restricted_source: quarantine
+  missing_provenance: quarantine
+  conflicting_authority: reconcile
+  failed_validation: quarantine
