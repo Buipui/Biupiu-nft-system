@@ -6,8 +6,18 @@
     "strict": true,
     "declaration": true,
     "outDir": "dist",
-    "skipLibCheck": true
+    "skipLibCheck": true,
+    "types": [
+      "node",
+      "jest"
+    ]
   },
-  "include": ["software/**/*.ts", "packages/**/*.ts"],
-  "exclude": ["node_modules", "dist"]
+  "include": [
+    "software/**/*.ts",
+    "packages/**/*.ts"
+  ],
+  "exclude": [
+    "node_modules",
+    "dist"
+  ]
 }
