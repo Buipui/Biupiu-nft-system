@@ -385,3 +385,14 @@ The universal engineering layer now routes symbolic/numerical mathematics, dimen
 Blockchain remains an integrity anchor, not a data store for private R&D. Learning records and research data stay off-chain by default; approved manifests/digests may be anchored later. Secrets, private keys and confidential datasets remain outside repository learning logs.
 
 **Gate 35-38 status: HARVESTED / SOURCE INTEGRATED / DEFAULT LEARNING PROTOCOL REGISTERED / RUNTIME-CI-FEDERATION-QUANTUM-HIL VERIFICATION PENDING.**
+
+
+## 39. Design Language / UI Semantic Audit — 22 September 2026
+
+Canonical design and interaction contracts now govern OS, OS AI, DMS, Intelligence, simulators, configurators and World presentation layers:
+- `docs/architecture/BIUPIU-DESIGN-LANGUAGE-CODE-CONTRACT-v1.0.json`
+- `research/BIUPIU-UI-SEMANTIC-ACTION-CONTRACT-v1.0.md`
+
+Housekeeping found concrete UI semantic defects and corrected them on the audit branch. Visible controls must no longer silently do nothing; unknown/unimplemented routes return explicit state. This does not grant runtime capability to unverified backends.
+
+**Status: IMPLEMENTED ON AUDIT BRANCH / RUNTIME AND DEVICE VERIFICATION PENDING.**
