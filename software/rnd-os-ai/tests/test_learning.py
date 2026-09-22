@@ -96,3 +96,12 @@ def test_external_fix_gap_learning_and_repeated_search_comparison():
     assert diff.only_first == ("a",)
     assert diff.only_second == ("c",)
     assert diff.divergence_reason.startswith("RESULT_SET_CHANGED")
+
+
+def test_external_fix_gap_learning_and_double_search_comparison():
+    from biupiu_ai.learning import compare_harvest_passes
+    diff = compare_harvest_passes("HARVEST-DOUBLE-2026-09-22-01", ("a","b"), ("b","c"))
+    assert diff.common_refs == ("b",)
+    assert diff.only_first == ("a",)
+    assert diff.only_second == ("c",)
+    assert diff.divergence_reason.startswith("RESULT_SET_CHANGED")
