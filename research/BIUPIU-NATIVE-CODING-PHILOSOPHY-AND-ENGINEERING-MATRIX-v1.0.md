@@ -562,3 +562,27 @@ Required sequence:
 INTERNAL GAP HARVEST -> EXTERNAL HARVEST -> LICENCE/PROVENANCE -> NATIVE CONTRACT -> SEMANTIC CHECK -> UNIT/INTEGRATION -> SMOKE -> REGRESSION -> RUNTIME -> PROMOTION.
 
 Status: GOVERNANCE EXTENSION INTEGRATED / RUNTIME VERIFICATION OPEN.
+
+
+## 31. Performance-governor and LLVM/Clang federation extension — 22 September 2026
+
+The native matrix now governs federation of zRAM, CPUFreq governors, GPU devfreq governors, LLVM and Clang.
+
+Hard rules:
+- zRAM is a kernel/device capability provider; supported compression algorithms and recompression modes must be discovered from the target rather than assumed.
+- CPUFreq is separated into policy, governor and hardware-driver concerns; governor recommendations cannot bypass thermal, platform or policy limits.
+- GPU frequency control uses the generic devfreq contract where available, while OEM governors remain device-specific providers.
+- CPU/GPU/zRAM tuning models are proposal-only until telemetry, bounds and runtime evidence are verified.
+- LLVM and Clang are toolchain providers; target triple, sysroot, compiler version, IR, optimizer, code generation, linker, runtime libraries and profile data remain separately versioned evidence.
+- Android LLVM/Clang is treated as a rolling toolchain integration; host/toolchain source evidence does not establish target-device execution.
+- Foreign-language compiler documentation may inform terminology and cross-compilation patterns but cannot change Biupiu authority or evidence state.
+- GPL kernel modules are licence-scoped providers and are not silently vendored into the proprietary/native boundary.
+
+Canonical integration records:
+- packages/biupiu-physics-engine/src/performance-governor-registry.ts
+- packages/biupiu-3d-engine/src/llvm-clang-toolchain-registry.ts
+- research/BIUPIU-ZRAM-CPU-GPU-LLVM-CLANG-FEDERATION-MANIFEST-20260922.json
+- research/BIUPIU-ZRAM-CPU-GPU-LLVM-CLANG-INTERNAL-EXTERNAL-CROSS-CHECK-20260922.md
+- research/BIUPIU-ZRAM-CPU-GPU-LLVM-CLANG-SEMANTIC-GATE-20260922.md
+
+Verification interpretation: SOURCE CONTRACTS IMPLEMENTED / SEMANTIC REVIEW PASS BY INSPECTION / HOST BUILD, ANDROID DEVICE, THERMAL-PERFORMANCE CORRELATION AND RELEASE PROMOTION OPEN.
