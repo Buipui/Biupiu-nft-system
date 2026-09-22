@@ -60,3 +60,54 @@ def fault_fix_rule(fault_class:str)->FaultFixRule:
     key=str(fault_class).strip().upper()
     try: return _FAULT_FIX_MATRIX[key]
     except KeyError as exc: raise ValueError("unsupported fault_class") from exc
+
+@dataclass(frozen=True)
+class ExternalFixGap:
+    """Evidence that an external harvest found a remediation absent internally."""
+    target_id: str
+    fault_class: str
+    internal_signature: str
+    external_fix_id: str
+    source_refs: Sequence[str]
+    implementation_state: str
+    semantic_match: bool
+    licence_checked: bool
+    security_checked: bool
+    regression_required: bool = True
+
+def assess_external_fix_gap(gap: ExternalFixGap) -> dict:
+    """Convert an external/internal discrepancy into a governed repair proposal."""
+    if not gap.source_refs:
+        raise ValueError("external source_refs are required")
+    if gap.implementation_state not in {"MISSING_INTERNAL", "PARTIAL_INTERNAL", "IMPLEMENTED_INTERNAL"}:
+        raise ValueError("invalid implementation_state")
+    if gap.implementation_state == "IMPLEMENTED_INTERNAL":
+        disposition = "NO_MISSING_MODULE"
+    elif gap.semantic_match and gap.licence_checked and gap.security_checked:
+        disposition = "NATIVE_IMPLEMENTATION_CANDIDATE"
+    else:
+        disposition = "QUARANTINED_EXTERNAL_CANDIDATE"
+    return {
+        "target_id": gap.target_id,
+        "fault_class": gap.fault_class,
+        "external_fix_id": gap.external_fix_id,
+        "disposition": disposition,
+        "guided_next_step": "implement/test native equivalent from verified pattern" if disposition == "NATIVE_IMPLEMENTATION_CANDIDATE" else "collect missing evidence and keep external candidate quarantined",
+        "promotion_allowed": False,
+        "requires_os_validation": True,
+        "regression_required": gap.regression_required,
+        "source_refs": tuple(gap.source_refs),
+    }
+
+def guide_external_fix_gap(gap: ExternalFixGap) -> dict:
+    """Feed a harvested gap back into the same guided diagnostic loop."""
+    assessment = assess_external_fix_gap(gap)
+    return {
+        "fault_id": f"EXT-FIX-GAP:{gap.external_fix_id}",
+        "fault_class": gap.fault_class,
+        "state": "TRIAGING" if assessment["disposition"] == "NATIVE_IMPLEMENTATION_CANDIDATE" else "QUARANTINED",
+        "next_step": assessment["guided_next_step"],
+        "promotion_allowed": False,
+        "requires_os_validation": True,
+        "source_refs": assessment["source_refs"],
+    }
