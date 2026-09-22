@@ -331,3 +331,29 @@ Promotion rule: source implementation is not equivalent to runtime verification.
 - GSL licence obligations remain an explicit promotion gate; no GSL source or proprietary binary was copied.
 - Source implementation: PASS.
 - CI, Android NDK/Gradle, device/runtime and external-provider numerical correlation: OPEN.
+
+
+# 2026-09-22 — Chrono / OpenStudio / EnergyPlus / OpenSim Simulator Federation
+
+### External federation harvest
+- Project Chrono cross-referenced for vehicle, multibody, terrain and multiphysics simulation.
+- OpenStudio cross-referenced for whole-building energy modelling, geometry/workflow and EnergyPlus integration.
+- EnergyPlus registered as the building-energy solver boundary.
+- OpenSim cross-referenced for movement/biomechanics and environment-agent modelling.
+
+### Native implementation
+- Added provider-neutral CHRONO, OPENSTUDIO, ENERGYPLUS and OPENSIM adapters to the shared simulator adapter registry.
+- Added Mini OS simulator capability registry.
+- Added deterministic fail-closed source smoke tests for registration and unsafe argument rejection.
+- Linked AUTO, ARCHITECTURE/BUILDING/DESIGN, AGRICULTURE, WORLD, ENVIRONMENT and Digital Twin simulator boundaries.
+
+### Verification
+- External source harvest: PASS.
+- Adapter/source semantic check: PASS.
+- Source-level smoke test: PASS by test definition/inspection.
+- Third-party native build: OPEN.
+- Android/Gradle/NDK build: OPEN.
+- Host/UE5 runtime and cross-simulator regression: OPEN.
+- Hardware/physical correlation: OPEN.
+
+No third-party executable code or proprietary binaries were copied.
