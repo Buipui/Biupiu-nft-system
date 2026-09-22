@@ -186,3 +186,18 @@ HUMAN RELEASE -> CORE OS/DMS -> DOMAIN OWNER -> INTELLIGENCE -> FEDERATION -> AD
 The defect was a hierarchy/documentation inconsistency rather than evidence that Native AI had already gained executable authority. The native promotion router already required Core OS approval and the federation protocol already stated that specialist systems could not directly modify authoritative Core OS state.
 
 Source implementation is corrected. Runtime/CI execution remains an open evidence gate.
+
+## Gate 37 audit closure record — 22 September 2026
+
+Native semantic audit and external practice harvest identified three code/governance defects and corrected them at source. The audit also found that source presence and test-source presence cannot be treated as execution evidence.
+
+Current status:
+- authority hierarchy: IMPLEMENTED;
+- learning fail-closed correction: IMPLEMENTED;
+- learning drift semantics: IMPLEMENTED;
+- federation Core OS validation gate: IMPLEMENTED;
+- targeted regression tests: IMPLEMENTED;
+- coding matrix v1.1: IMPLEMENTED;
+- CI smoke workflow: REGISTERED;
+- CI execution: PENDING OBSERVED RUN;
+- Android/device/hardware execution: PENDING.
