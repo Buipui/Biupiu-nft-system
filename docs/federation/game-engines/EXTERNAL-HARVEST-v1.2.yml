@@ -1,0 +1,41 @@
+version: 1
+name: biupiu-game-engine-external-harvest
+status: harvested-metadata
+targets:
+  - BuipuiOS
+  - buipiu-mini-os
+policy:
+  complete_engine_embedding: false
+  optional_runtime_packages: true
+  privileged_boot_dependency: false
+  source_import_requires_pinned_commit: true
+  license_and_notice_required: true
+  celeste_assets_or_code_import: false
+modules:
+  cocos2d-x: {upstream: https://github.com/cocos2d/cocos2d-x, lane: native-2d, targets: [BuipuiOS, buipiu-mini-os], license: MIT, integration: adapter-package}
+  cocos-engine: {upstream: https://github.com/cocos/cocos-engine, lane: native-2d-3d, targets: [BuipuiOS, buipiu-mini-os], license: MIT, integration: adapter-package}
+  monogame: {upstream: https://github.com/MonoGame/MonoGame, lane: managed-runtime, targets: [buipiu-mini-os], license: Microsoft-Public-License, integration: optional-dotnet-runtime}
+  celeste: {upstream: https://www.celestegame.com/, lane: reference-only, targets: [BuipuiOS, buipiu-mini-os], license: rights-review-required, integration: gameplay-architecture-reference}
+  libgdx: {upstream: https://github.com/libgdx/libgdx, lane: java-runtime, targets: [buipiu-mini-os], license: Apache-2.0, integration: optional-gradle-runtime}
+  ashley-ecs: {upstream: https://github.com/libgdx/ashley, lane: ecs, targets: [BuipuiOS, buipiu-mini-os], license: Apache-2.0, integration: ecs-adapter}
+  raylib: {upstream: https://github.com/raysan5/raylib, lane: native-rendering, targets: [BuipuiOS, buipiu-mini-os], license: Zlib, integration: native-adapter}
+  threejs: {upstream: https://github.com/mrdoob/three.js, lane: web-3d, targets: [buipiu-mini-os], license: MIT, integration: sandboxed-web-runtime}
+  gdevelop: {upstream: https://github.com/4ian/GDevelop, lane: web-native-runtime, targets: [buipiu-mini-os], license: MIT, integration: sandboxed-runtime}
+  babylonjs: {upstream: https://github.com/BabylonJS/Babylon.js, lane: web-3d, targets: [buipiu-mini-os], license: Apache-2.0, integration: sandboxed-web-runtime}
+shared_capabilities:
+  render: [GLES, Vulkan, WebGL, WebGPU]
+  input: [touch, keyboard, gamepad, sensors]
+  lifecycle: [initialize, resize, update, render, suspend, resume, shutdown]
+  services: [asset-provider, audio-focus, telemetry, crash-reporting, security-boundary, provenance]
+  ecs: [entity, component, system, world, query]
+verification:
+  metadata-harvest: complete
+  upstream-license-review: recorded
+  source-pinning: pending
+  source-integration: pending
+  host-compile: pending
+  android-abi-compile: pending
+  boot-verification: pending
+  runtime-smoke: pending
+  security-scan: pending
+  device-verification: pending
