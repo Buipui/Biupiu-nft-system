@@ -1,3 +1,5 @@
+import pytest
+
 from biupiu_ai.ml.backends import get_backend
 from biupiu_ai.ml.engine import MLRequest, route_ml_request
 from biupiu_ai.ml.metrics import accuracy, mse, mae, brier_score, precision_at_k, recall_at_k, population_stability_index
@@ -16,7 +18,7 @@ def test_metrics():
     assert accuracy([1,0,1],[1,1,1]) == 2/3
     assert mse([1,2],[2,2]) == 0.5
     assert mae([1,2],[2,4]) == 1.5
-    assert brier_score([1,0],[0.8,0.2]) == 0.04
+    assert brier_score([1,0],[0.8,0.2]) == pytest.approx(0.04)
     assert precision_at_k({"a","b"},["a","c","b"],2) == 0.5
     assert recall_at_k({"a","b"},["a","c","b"],2) == 0.5
 
