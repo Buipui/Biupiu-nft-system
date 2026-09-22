@@ -8,6 +8,8 @@ export type FederationEvidence = "OBSERVED"|"COMPUTED"|"SIMULATED"|"INFERRED"|"U
 export type FederationLicenceState = "VERIFIED"|"REVIEW"|"RESTRICTED"|"PROHIBITED"|"UNKNOWN";
 
 export interface FederationCapability {
+  schemaVersion:string;
+  provenance:string;
   id:string;
   version:string;
   enabled:boolean;
