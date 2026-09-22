@@ -1,0 +1,41 @@
+{
+  "schema": "biupiu.opendroid.federation.registry.v1",
+  "date": "2026-09-22",
+  "source": "research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md",
+  "external_repository": "https://github.com/yashab-cyber/opendroid",
+  "identity": {
+    "legacy": "opendroid.ui-engine",
+    "legacy_state": "UNRESOLVED",
+    "canonical": "opendroid.android-agent",
+    "canonical_state": "ADAPTER_ONLY",
+    "authority": "external provider only"
+  },
+  "modules": [
+    "accessibility-automation",
+    "action-dispatch",
+    "agent-loop",
+    "llm-routing",
+    "memory",
+    "keystore-security",
+    "services",
+    "voice",
+    "room",
+    "datastore",
+    "hilt",
+    "compose-ui",
+    "viewmodel"
+  ],
+  "promotion": {
+    "provenance": true,
+    "licence_review_required": true,
+    "security_review_required": true,
+    "regression_required": true,
+    "build_required": true,
+    "device_runtime_required": true,
+    "human_promotion_required": true
+  },
+  "runtime_verified": false,
+  "copied_external_code": false,
+  "copied_external_binary": false,
+  "credentials_imported": false
+}
