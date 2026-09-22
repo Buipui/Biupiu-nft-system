@@ -195,3 +195,13 @@ FOREIGN SOURCE -> ORIGINAL TERMINOLOGY -> LOCALE NORMALISATION -> INTERNAL MATCH
 The implementation explicitly separates locale selection from translation quality and evidence state. External multilingual code is not merged into the native core by default.
 
 Status: **IMPLEMENTED / SOURCE CHECK PASS / RUNTIME VERIFICATION OPEN.**
+
+
+## Federation Guided Fault-Finding Matrix Extension — 22 September 2026
+Internal-first harvest now precedes external discovery for diagnostic work. Native guided fault finding has a deterministic fault-fix matrix covering transport, dependency, contract, validation, authority, model, data, runtime and security classes. Unknown classes fail closed and security faults remain quarantined.
+
+External federation references added: NASA IV&V/software assurance, Japanese FMEA/IEC 60812 material, Unicode CLDR/BCP 47, and bounded diagnostic/self-healing repository patterns. These remain reference/pattern material only; no external executable code was promoted.
+
+Native ML receives failure fingerprints, fix/regression evidence, platform/version context and provenance references through the existing learning boundary. Reuse remains gated by verified fix, regression, provenance, licence and human approval.
+
+Canonical changelog: `research/BIUPIU-AI-FEDERATION-CHANGELOG-2026-09-22.md`.
