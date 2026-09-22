@@ -379,3 +379,43 @@ collections/
 **Last Updated:** September 16, 2026  
 **Maintainer:** BIU Studio  
 **Version:** 1.0
+
+
+---
+
+## 🧭 System-wide organization and authority boundaries — 22 September 2026
+
+The repository has grown beyond the original NFT-only structure. The following top-level domains are now the maintained organization model:
+
+| Domain | Canonical role | Authority boundary |
+|---|---|---|
+| `research/` | evidence, hypotheses, architecture, governance, provenance | evidence is not executable authority by publication alone |
+| `intelligence/` | retrieval, classification, routing, learning diagnostics, orchestration indexes | AI/proposals cannot bypass OS validation |
+| `software/` | Core OS, AI, mobile/web and Digital Orchestra implementations | executable authority remains versioned and tested |
+| `core/` / `packages/` | native interfaces and shared contracts | contract ownership is explicit; no silent semantic merges |
+| `digital-twin/` | state/twin representations and events | does not become physical truth |
+| `simulators/` | domain models, numerical analysis and adapters | simulation is not physical certification without correlation |
+| `world/` | World research/specifications and current staging material | dedicated World runtime belongs in `Buipui/Buipui-World` after controlled migration |
+| `contracts/` / `payment/` | NFT/EVM, provenance, entitlement/payment boundaries | no client-side authority or unverified production claims |
+| `tests/` / `.github/workflows/` | verification and CI gates | passing source inspection is not equivalent to runtime verification |
+
+### Canonical federation flow
+
+`RESEARCH/EVIDENCE → INTELLIGENCE → DIGITAL ORCHESTRA → CORE OS/DMS VALIDATION → DIGITAL TWIN/FEDERATION → DOMAIN SIMULATOR/ADAPTER → OBSERVATION → LEARNING EVIDENCE → REGRESSION → RELEASE/HUMAN GATE`
+
+### World consolidation rule
+
+Existing `world/` content is classified into runtime, asset, simulation, research, shared-contract, speculative and legacy lanes before migration. It is **not** blindly duplicated into the dedicated World repository. The migration manifest is:
+
+`research/BIUPIU-WORLD-REPOSITORY-MIGRATION-MANIFEST-v1.0.md`
+
+### Evidence / harvest rule
+
+External repositories, foreign-language sources, OEM material, generated code and simulator results remain reference/pattern/adapter candidates until provenance, licence/IP, security, compatibility, build, smoke and regression gates are satisfied. Conflicting semantics are preserved and reconciled explicitly rather than silently merged.
+
+### Verification state
+
+Current structural organization is implemented. World runtime migration, full cross-system runtime execution, device/emulator verification, hardware/physical correlation and release verification remain open until evidence exists.
+
+**Organization version:** 1.1  
+**Last updated:** 22 September 2026
