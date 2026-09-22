@@ -499,3 +499,9 @@ Status: SOURCE INTEGRATED / SOURCE-SMOKE PASS / NATIVE BUILD, DEVICE AND RUNTIME
 
 ## 2026-09-22 — Deep External AI/NPU/Quantum/UI Federation
 The OS/DMS graph now cross-links the deep external provider lane covering ARMv8.2-A FP16/NEON, OpenCL, Qwen/DeepSeek/Llama/Gemma model adapters, ncnn, MegCC/MegEngine, TinyNeuralNetwork, Kirin/RKNN NPU, Android AppFunctions/MCP and AICore, PyTorch/ExecuTorch, STM32Cube.AI, CatBoost, DaCe, Menpo/CuPy, fastNLP, AQT/IQM, RIKEN/Fujitsu quantum simulation, and AGSL. OpenDroid UI Engine remains unresolved and fails closed. Main OS routing is registered in software/rnd-os-ai/src/biupiu_ai/federation_registry.py; Mini OS routing is registered in mini-os/android/federation/AndroidCapabilityRegistry.java. Source integration is distinct from build/device/runtime verification.
+
+
+## Literature evidence and conflict-resolution record
+Canonical literature/cross-reference: research/BIUPIU-FEDERATION-LITERATURE-CROSSREF-20260922.md
+
+The literature layer is authoritative for source classification. In particular, Android AppFunctions is experimental and Android 16+; AICore availability varies by device/manufacturer; OpenCL is treated as a device/driver boundary; ncnn supports ARM NEON/FP16 and Vulkan paths; RKNN separates conversion, runtime and driver layers; AQT is historical/end-of-life; and OpenDroid remains unresolved. Source registration does not equal runtime verification.
