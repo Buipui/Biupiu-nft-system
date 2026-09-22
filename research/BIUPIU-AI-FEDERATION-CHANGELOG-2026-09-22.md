@@ -40,3 +40,29 @@ Reference patterns were harvested from NASA IV&V/software assurance, Japanese FM
 - Human promotion: OPEN.
 
 No authority boundary or historical research lineage was bypassed or deleted.
+
+
+## Adapter Federation + Native ML Upgrade — 22 September 2026
+
+### Added
+- Governed native adapter registry: `software/rnd-os-ai/src/biupiu_ai/adapter_registry.py`.
+- Adapter regression tests.
+- Native federation registry entry for the adapter layer.
+- Cross-domain usable adapters for MQTT 5, Eclipse Ditto, OPC UA PubSub, ROS 2/DDS, OpenUSD, FMI/FMU, Flower, NVIDIA FLARE, OpenTelemetry, A2A, OpenSharing and AUTOSAR CAPI reference routing.
+- Deep external harvest record: `research/BIUPIU-USABLE-ADAPTER-FEDERATION-HARVEST-2026-09-22.md`.
+- Evidence-weighted Native ML learning candidate scoring with drift penalty.
+- Human-gated reusable-learning readiness checks.
+- Native ML regression tests for bounded scoring, drift response and promotion boundaries.
+
+### External sources harvested
+COVESA, AUTOSAR, Eclipse S-CORE/Ditto, NASA, NIST, Linux Foundation, NVIDIA and NEDO were reviewed for current interoperability, Digital Twin, robotics, federated-learning and AI federation patterns.
+
+### Integration rule
+External sources supply protocols, interfaces, reference patterns and candidate adapters. No proprietary/restricted OEM implementation was copied or promoted.
+
+### Verification
+- Source integration: IMPLEMENTED.
+- Semantic cross-linking: IMPLEMENTED.
+- Tests: ADDED.
+- CI/build/security/runtime/HIL: OPEN pending fresh execution evidence.
+- Executable third-party promotion: BLOCKED until evidence gates pass.
