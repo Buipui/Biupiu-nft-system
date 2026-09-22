@@ -250,3 +250,26 @@ Canonical records:
 - `research/BIUPIU-VINYL-CONFIGURATOR-NFS2-BASIS-v1.0.md`
 
 Cross-links: BPU-COL → BPU-MATCOL → resin/adhesive/vinyl/textile/composite → component twin → platform/application → catalogue.
+## ADAPTER-FEDERATION-01 — Cross-domain usable adapter layer
+
+The repository now has a governed native adapter registry connecting internal AI/ML, Digital Twin, simulator, machine-capability, robotics and DMS contracts to external interoperability standards and open-source ecosystems.
+
+Primary adapter families:
+- MQTT 5 / IoT event transport
+- Eclipse Ditto / Digital Twin
+- OPC UA PubSub / industrial automation
+- ROS 2 + DDS / robotics
+- OpenUSD / World and scene interchange
+- FMI/FMU / co-simulation
+- Flower + NVIDIA FLARE / federated ML
+- OpenTelemetry / observability
+- A2A + OpenSharing / AI federation and asset exchange
+- AUTOSAR CAPI / automotive middleware reference
+
+Routing:
+`ADAPTER -> CAPABILITY -> PROVENANCE/LICENCE -> CONTRACT -> SIMULATION/SMOKE -> BUILD -> SECURITY -> REGRESSION -> RUNTIME -> HUMAN PROMOTION`
+
+Department impact:
+AI/COMPUTE owns learning and adapter selection; DIGITAL-TWIN/ROBOTICS/ADV-MFG own simulation and machine interfaces; AUTOMOTIVE owns VSS/VISS/AUTOSAR/COVESA routes; ELECTROMAG/ENERGY/AGRI/WATER/PHOTONICS/BIOMED/MARINE/AERO consume the same capability contract for physical-system integration; IP owns provenance/licence/FTO review.
+
+Status: ARCHITECTURE + SOURCE REGISTRY IMPLEMENTED; external executable promotion remains gated.
