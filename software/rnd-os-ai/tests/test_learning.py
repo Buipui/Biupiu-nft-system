@@ -22,7 +22,7 @@ def test_verified_fix_and_cross_regression_becomes_reusable():
         FailureObservation("router","interface",fp,"adapter-contract-v2",True,True,platform="linux")]
     p=summarize_failure_pattern(xs)
     assert p.learning_level==4
-    assert can_promote_learning(p,provenance_verified=True,human_approved=True)
+    assert can_promote_learning(p,provenance_verified=True,licence_checked=True,human_approved=True)
 
 def test_drift_detector_is_incremental():
     s=None
