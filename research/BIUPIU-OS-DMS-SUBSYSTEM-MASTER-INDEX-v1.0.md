@@ -495,3 +495,7 @@ OS/DMS -> Digital Twin -> Federation -> simulator adapter -> domain simulator.
 The Android Mini OS exposes capability identities and job/state exchange without silently packaging desktop third-party binaries.
 
 Status: SOURCE INTEGRATED / SOURCE-SMOKE PASS / NATIVE BUILD, DEVICE AND RUNTIME OPEN.
+
+
+## 2026-09-22 — Deep External AI/NPU/Quantum/UI Federation
+The OS/DMS graph now cross-links the deep external provider lane covering ARMv8.2-A FP16/NEON, OpenCL, Qwen/DeepSeek/Llama/Gemma model adapters, ncnn, MegCC/MegEngine, TinyNeuralNetwork, Kirin/RKNN NPU, Android AppFunctions/MCP and AICore, PyTorch/ExecuTorch, STM32Cube.AI, CatBoost, DaCe, Menpo/CuPy, fastNLP, AQT/IQM, RIKEN/Fujitsu quantum simulation, and AGSL. OpenDroid UI Engine remains unresolved and fails closed. Main OS routing is registered in software/rnd-os-ai/src/biupiu_ai/federation_registry.py; Mini OS routing is registered in mini-os/android/federation/AndroidCapabilityRegistry.java. Source integration is distinct from build/device/runtime verification.
