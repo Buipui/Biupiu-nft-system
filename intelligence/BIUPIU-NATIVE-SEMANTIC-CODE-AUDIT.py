@@ -40,7 +40,7 @@ REQUIRED_TOKENS = {
         "QUARANTINED", "stopConditions", "evidenceRefs"
     ),
     "packages/biupiu-rnd-os/src/federation-contracts.ts": (
-        "schemaVersion", "provenance", "correlation"
+        "version", "sourceCommit", "correlationId"
     ),
     "intelligence/BIUPIU-BLOCKCHAIN-ANCHOR-BOUNDARY.py": (
         "merkle_root", "promotion_ready", "inclusion_proof"
