@@ -24,3 +24,10 @@ def test_security_or_semantic_failure_blocks():
     result = MODULE.check_coding_request(request)
     assert result["allowed"] is False
     assert result["state"] == "BLOCKED"
+
+
+if __name__ == "__main__":
+    test_manifest_is_fail_closed()
+    test_missing_evidence_is_quarantined()
+    test_security_or_semantic_failure_blocks()
+    print("PASS")
