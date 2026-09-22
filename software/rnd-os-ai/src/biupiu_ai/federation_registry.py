@@ -1,4 +1,5 @@
-"""Fail-closed registry for local and specialist AI adapters."""
+"""Fail-closed registry for native and specialist Biupiu AI adapters."""
+
 from dataclasses import dataclass
 from typing import Tuple
 
@@ -23,51 +24,17 @@ class FederationPolicy:
 
 
 DEFAULT_SYSTEMS = (
-    AgentSystem(
-        "biupiu-intelligence", "research-orchestrator",
-        ("retrieval", "evidence", "learning"), "native", "ACTIVE", "VERIFIED",
-    ),
-    AgentSystem(
-        "biupiu-core-os", "authority",
-        ("validation", "compatibility", "release-gates"), "native", "ACTIVE", "VERIFIED",
-    ),
-    AgentSystem(
-        "biupiu-ai-os", "ai-routing",
-        ("reasoning", "models", "adaptation"), "native",
-    ),
-    AgentSystem(
-        "langgraph", "workflow-orchestrator",
-        ("state-graphs", "checkpointing", "human-approval"), "adapter",
-    ),
-    AgentSystem(
-        "crewai", "role-coordination",
-        ("role-agents", "workflow"), "adapter",
-    ),
-    AgentSystem(
-        "dspy", "optimization",
-        ("evaluation", "program-optimization"), "adapter",
-    ),
-    AgentSystem(
-        "vllm", "inference",
-        ("serving", "batching"), "adapter",
-    ),
-    AgentSystem(
-        "pysyft", "privacy-federated-data",
-        ("remote-data-science", "datasite-access", "privacy"), "research-adapter",
-    ),
-    AgentSystem(
-        "flower", "federated-learning",
-        ("federated-learning", "federated-analytics", "secure-aggregation", "simulation"),
-        "research-adapter",
-    ),
-    AgentSystem(
-        "qiskit-ml", "quantum-ml",
-        ("quantum-kernels", "qnn"), "optional-adapter",
-    ),
-    AgentSystem(
-        "pennylane", "quantum-ml",
-        ("hybrid-circuits", "differentiation"), "optional-adapter",
-    ),
+    AgentSystem("biupiu-intelligence", "research-orchestrator", ("retrieval", "evidence", "learning"), "native", "ACTIVE", "VERIFIED"),
+    AgentSystem("biupiu-core-os", "authority", ("validation", "compatibility", "release-gates"), "native", "ACTIVE", "VERIFIED"),
+    AgentSystem("biupiu-ai-os", "ai-routing", ("reasoning", "models", "adaptation"), "native"),
+    AgentSystem("langgraph", "workflow-orchestrator", ("state-graphs", "checkpointing", "human-approval"), "adapter"),
+    AgentSystem("crewai", "role-coordination", ("role-agents", "workflow"), "adapter"),
+    AgentSystem("dspy", "optimization", ("evaluation", "program-optimization"), "adapter"),
+    AgentSystem("vllm", "inference", ("serving", "batching"), "adapter"),
+    AgentSystem("pysyft", "privacy-federated-data", ("remote-data-science", "datasite-access", "privacy"), "research-adapter"),
+    AgentSystem("flower", "federated-learning", ("federated-learning", "federated-analytics", "secure-aggregation", "simulation"), "research-adapter"),
+    AgentSystem("qiskit-ml", "quantum-ml", ("quantum-kernels", "qnn"), "optional-adapter"),
+    AgentSystem("pennylane", "quantum-ml", ("hybrid-circuits", "differentiation"), "optional-adapter"),
 )
 
 
@@ -75,12 +42,13 @@ def eligible_for_activation(
     system: AgentSystem,
     policy: FederationPolicy,
     *,
-    provenance=False,
-    license=False,
-    security=False,
-    regression=False,
-    human_approved=False,
+    provenance: bool = False,
+    license: bool = False,
+    security: bool = False,
+    regression: bool = False,
+    human_approved: bool = False,
 ) -> bool:
+    """Allow activation only when every policy-required promotion check passes."""
     if system.status == "BLOCKED":
         return False
     checks = (provenance, license, security, regression, human_approved)
@@ -95,4 +63,5 @@ def eligible_for_activation(
 
 
 def capability_names() -> Tuple[str, ...]:
-    return tuple(sorted({cap for system in DEFAULT_SYSTEMS for cap in system.capabilities}))
+    """Return the deterministic union of registered capabilities."""
+    return tuple(sorted({capability for system in DEFAULT_SYSTEMS for capability in system.capabilities}))
