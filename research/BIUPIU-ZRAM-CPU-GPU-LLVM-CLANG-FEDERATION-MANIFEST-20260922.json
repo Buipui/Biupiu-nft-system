@@ -1,0 +1,39 @@
+{
+  "schema": "biupiu.performance-toolchain-federation.v1",
+  "date": "2026-09-22",
+  "status": "CONTRACTS_INTEGRATED_RUNTIME_OPEN",
+  "authority_rule": "native Biupiu contracts remain authoritative; external kernel/toolchain capabilities are providers or reference patterns until all promotion gates pass",
+  "external_harvest": ["zram","cpufreq","gpu-devfreq","llvm","clang","android-llvm-clang"],
+  "foreign_language_harvest": [
+    {"language":"Chinese","source":"https://clang.llvm.org.cn/docs/CrossCompilation.html","use":"cross-compilation and target-triple semantics","state":"REFERENCE"},
+    {"language":"Chinese","source":"https://clang.llvm.org.cn/docs/Toolchain.html","use":"complete-toolchain component terminology","state":"REFERENCE"},
+    {"language":"Japanese","source":"https://developer.android.com/ndk/guides/pgo?hl=ja","use":"Android PGO/profile-data version compatibility","state":"REFERENCE"}
+  ],
+  "internal_first_cross_check": {
+    "zram": "No direct pre-existing native zram provider found by repository search",
+    "cpu_governors": "No direct pre-existing CPUFreq governor provider found by repository search",
+    "gpu_governors": "No direct pre-existing GPU devfreq governor provider found by repository search",
+    "llvm_clang": "Existing compiler and multilingual governance retained as native authority"
+  },
+  "promotion_policy": [
+    "internal capability discovery precedes external promotion",
+    "external source code is not auto-vendored",
+    "GPL kernel components remain optional/licence-scoped providers",
+    "LLVM/Clang components remain version-pinned toolchain providers",
+    "governor tuning is advisory until target telemetry and hardware bounds are verified",
+    "runtime/device/build evidence is required before promotion"
+  ],
+  "cross_links": ["native coding philosophy","multilanguage coding matrix","AI coding hard gate","native semantic audit","native ML learning","Android native build","CPU/GPU performance","maths/physics","graphics","simulators","Digital Twin","Biupiu Intelligence","Biupiu OS","Biupiu Mini OS"],
+  "verification": {
+    "source_review":"PASS",
+    "internal_cross_check":"PASS_BY_REPOSITORY_SEARCH",
+    "contract_integration":"PASS",
+    "source_semantic_review":"PASS_BY_INSPECTION",
+    "host_compiler_execution":"OPEN",
+    "clean_build":"OPEN",
+    "android_build":"OPEN",
+    "device_runtime":"OPEN",
+    "thermal_performance_correlation":"OPEN",
+    "production_promotion":"OPEN"
+  }
+}
