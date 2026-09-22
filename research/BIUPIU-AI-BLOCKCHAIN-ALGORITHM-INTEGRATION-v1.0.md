@@ -137,3 +137,18 @@ Those require their own environment and licence/security/validation gates.
 `Research → Source/License → Algorithm/Model → Agent → Policy/Constraints → Simulation → Verification → Release/Transaction → Provenance`
 
 **Principle:** AI proposes; constraints govern; simulation tests; verification attests; humans control release.
+
+
+## Coding governance integration — 22 September 2026
+
+The AI/blockchain/algorithm architecture is now explicitly governed by the native coding philosophy and multilanguage matrix. Any future implementation of verifiable computation, blockchain anchors, Digital Twin algorithms or agent tooling passes the AI coding hard gate before promotion.
+
+Cross-links:
+- research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md
+- research/BIUPIU-MULTILANGUAGE-NATIVE-CODING-MATRIX-v1.0.md
+- research/BIUPIU-CODING-LANGUAGE-LIBRARY-v1.0.json
+- intelligence/BIUPIU-AI-CODING-HARD-GATE-v1.0.json
+- intelligence/BIUPIU-BLOCKCHAIN-ANCHOR-BOUNDARY.py
+- software/rnd-os-ai/src/biupiu_ai/learning.py
+
+The blockchain layer remains an integrity/provenance anchor. It does not become Digital Twin authority or AI learning authority. AI learning records coding-matrix and regression evidence before a coding pattern can be proposed for controlled reuse.
