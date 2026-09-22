@@ -10,7 +10,7 @@ from __future__ import annotations
 from dataclasses import dataclass
 from typing import Tuple
 
-from biupiu_ai.global_language_translation import validate_language
+from global_language_translation import validate_language
 
 
 @dataclass(frozen=True)
