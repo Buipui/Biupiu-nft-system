@@ -1,0 +1,17 @@
+{
+ "$schema":"https://json-schema.org/draft/2020-12/schema",
+ "title":"Biupiu Federated Fault/Healing Envelope",
+ "type":"object",
+ "required":["event_id","correlation_id","source_system","target_system","canonical_owner","subsystem_path","fault_class","validation_state"],
+ "properties":{
+  "event_id":{"type":"string"},"correlation_id":{"type":"string"},
+  "source_system":{"type":"string"},"target_system":{"type":"string"},
+  "canonical_owner":{"type":"string"},
+  "subsystem_path":{"type":"array","items":{"type":"string"}},
+  "fault_class":{"enum":["TRANSPORT","DEPENDENCY","CONTRACT","VALIDATION","AUTHORITY","MODEL","DATA","RUNTIME","SECURITY"]},
+  "validation_state":{"type":"string"},
+  "healing_proposal":{"type":"object"},
+  "evidence_refs":{"type":"array","items":{"type":"string"}}
+ },
+ "additionalProperties":true
+}
