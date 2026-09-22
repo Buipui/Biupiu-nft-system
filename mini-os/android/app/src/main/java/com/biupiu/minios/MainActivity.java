@@ -8,9 +8,14 @@ import android.widget.Button;
 import android.widget.LinearLayout;
 import android.widget.TextView;
 
+import com.biupiu.minios.notification.NotificationHistoryActivity;
+import com.biupiu.minios.notification.NotificationStore;
+
 public final class MainActivity extends Activity {
     @Override public void onCreate(Bundle state) {
         super.onCreate(state);
+        NotificationStore.initialize(getApplicationContext());
+
         LinearLayout root = new LinearLayout(this);
         root.setOrientation(LinearLayout.VERTICAL);
         root.setPadding(32, 32, 32, 32);
@@ -23,19 +28,19 @@ public final class MainActivity extends Activity {
         Button notifications = new Button(this);
         notifications.setText("Enable Notification History");
         notifications.setOnClickListener(v ->
-            startActivity(new Intent("android.settings.ACTION_NOTIFICATION_LISTENER_SETTINGS")));
+                startActivity(new Intent(Settings.ACTION_NOTIFICATION_LISTENER_SETTINGS)));
         root.addView(notifications);
 
         Button accessibility = new Button(this);
         accessibility.setText("Enable One-Hand / Gesture Service");
         accessibility.setOnClickListener(v ->
-            startActivity(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)));
+                startActivity(new Intent(Settings.ACTION_ACCESSIBILITY_SETTINGS)));
         root.addView(accessibility);
 
         Button notificationHistory = new Button(this);
         notificationHistory.setText("Open Buipui Notification History");
         notificationHistory.setOnClickListener(v ->
-            startActivity(new Intent(this, com.biupiu.minios.notification.NotificationHistoryActivity.class)));
+                startActivity(new Intent(this, NotificationHistoryActivity.class)));
         root.addView(notificationHistory);
 
         setContentView(root);
