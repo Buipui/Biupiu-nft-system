@@ -168,3 +168,21 @@ Integration rule: benchmark capability -> provenance/evidence -> native contract
 Palantir's published Ontology documentation was used for operational-ontology/model-to-real-world mapping patterns; NVIDIA's published Omniverse documentation was used for OpenUSD/physical-AI/digital-twin interoperability patterns. These remain external benchmark references, not Biupiu authority. 
 
 Benchmark source integration status: IMPLEMENTED AT SOURCE / CONTRACT SMOKE SOURCE ADDED / BUILD-RUNTIME-REGRESSION PENDING.
+
+
+## Authority hierarchy reconciliation — 22 September 2026
+
+A repository-vs-changelog audit found one explicit hierarchy defect in `research/BIUPIU-FEDERATION-PROTOCOL-v1.0.md`: Native Intelligence was described as the top-level authority. This contradicted the Native Coding Matrix, `promotion_router.py`, the Digital Twin hierarchy contract and the existing fail-closed promotion design.
+
+### Corrective implementation
+Added:
+- `software/rnd-os-ai/src/biupiu_ai/authority_hierarchy.py`
+- `software/rnd-os-ai/tests/test_authority_hierarchy.py`
+
+Corrected hierarchy:
+HUMAN RELEASE -> CORE OS/DMS -> DOMAIN OWNER -> INTELLIGENCE -> FEDERATION -> ADAPTER/PROVIDER -> EXTERNAL REFERENCE.
+
+### Audit conclusion
+The defect was a hierarchy/documentation inconsistency rather than evidence that Native AI had already gained executable authority. The native promotion router already required Core OS approval and the federation protocol already stated that specialist systems could not directly modify authoritative Core OS state.
+
+Source implementation is corrected. Runtime/CI execution remains an open evidence gate.
