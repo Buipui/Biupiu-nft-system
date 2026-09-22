@@ -479,3 +479,19 @@ Routing covers MATH, GEOMETRY, PHYSICS, SIMULATORS, DIGITAL-TWIN, AI/ML, Biupiu 
 Library registry: library/scientific/BIUPIU-SCIENTIFIC-LIBRARY-REGISTRY-20260922.json.
 Coding matrix extension: research/BIUPIU-NATIVE-CODING-MATRIX-SCIENTIFIC-COMPUTE-EXTENSION-20260922.md.
 Status: SOURCE IMPLEMENTED / SEMANTIC SMOKE REGISTERED / CI AND DEVICE RUNTIME OPEN.
+
+
+## Simulator federation extension — 22 September 2026
+
+The OS/DMS subsystem graph now registers four governed simulator capability adapters:
+- AUTOMOTIVE / PHYSICS -> Project Chrono
+- ARCHITECTURE / BUILDING / DESIGN -> OpenStudio
+- BUILDING ENERGY -> EnergyPlus
+- AGRICULTURE / WORLD / ENVIRONMENT AGENTS -> OpenSim
+
+Routing remains:
+OS/DMS -> Digital Twin -> Federation -> simulator adapter -> domain simulator.
+
+The Android Mini OS exposes capability identities and job/state exchange without silently packaging desktop third-party binaries.
+
+Status: SOURCE INTEGRATED / SOURCE-SMOKE PASS / NATIVE BUILD, DEVICE AND RUNTIME OPEN.
