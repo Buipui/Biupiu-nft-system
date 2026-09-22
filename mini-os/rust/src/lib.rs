@@ -18,6 +18,7 @@ pub struct MiniCapability {
 }
 
 #[no_mangle]
+#[allow(clippy::not_unsafe_ptr_arg_deref)]
 pub extern "C" fn biupiu_mini_get_capability(out: *mut MiniCapability) -> MiniStatus {
     if out.is_null() {
         return MiniStatus::InvalidArgument;
