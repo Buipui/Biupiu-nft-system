@@ -20,6 +20,7 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.graphics.Brush
 import androidx.compose.ui.graphics.Color
 import androidx.compose.ui.unit.dp
+import androidx.compose.ui.platform.LocalContext
 
 /*
  * Biupiu OS visual principle:
@@ -70,13 +71,16 @@ private val workshopMaterials = listOf(
 fun BiupiuApp() {
     var selected by rememberSaveable { mutableIntStateOf(0) }
     var selectedLanguage by rememberSaveable { mutableStateOf("en") }
+    val context = LocalContext.current
     val destinations = listOf("Home", "Lab", "Workshop", "System")
     val icons = listOf(Icons.Filled.Home, Icons.Filled.Park, Icons.Filled.Build, Icons.Filled.Settings)
 
     BiupiuUiTheme {
         Scaffold(
             containerColor = MaterialTheme.colorScheme.background,
-            topBar = { BiupiuLanguageSelector(selectedLanguage) { selectedLanguage = it } },
+            topBar = { BiupiuLanguageSelector(selectedLanguage) { tag ->
+                if (BiupiuLocaleController.apply(context, tag)) selectedLanguage = tag
+            } },
             bottomBar = {
                 NavigationBar(containerColor = BiupiuPalette.Graphite) {
                     destinations.forEachIndexed { i, label ->
