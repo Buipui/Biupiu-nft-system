@@ -47,3 +47,34 @@ DEFINE CAPABILITY -> IMPLEMENT NATIVE CONTRACT -> SEMANTIC CHECK -> FAULT FIND -
 - `CHANGELOG.md`
 
 **Status: REGISTERED / IMPLEMENTED SOURCE LAYER / SOURCE-LEVEL VERIFIED / RUNTIME VERIFICATION OPEN.**
+
+
+## Gate 46 — Mini OS functional-first semantic repair — 22 September 2026
+
+Internal interface/code reconciliation found a semantic mismatch in the Android capability registry: ADAPTER_ONLY capabilities were previously returned as usable by isUsable(). This could turn source-level adapter registration into a runtime capability claim, contrary to the Native Coding Philosophy and verification ladder.
+
+### Corrective implementation
+- isUsable() now means positive runtime-usable evidence only.
+- isAdapterRegistered() explicitly represents source/contract availability without runtime claims.
+- Android Auto projection is classified as ADAPTER_ONLY until Android Car APIs provide live evidence.
+- Godot/Vulkan adapters remain adapter registrations and do not become live capabilities from source presence.
+- Registry snapshots are defensive copies before exposure.
+- Notification history lifecycle was corrected so Android context initialization occurs after Activity/service creation rather than in Activity field initializers.
+- Notification history was upgraded from process-local memory to encrypted Android Keystore-backed persistence with bounded storage and fail-closed unreadable-state handling.
+- Notification title/null handling was hardened.
+
+### Build gate
+A dedicated Mini OS Android Gradle workflow was added with Java 17, Gradle 8.9, Android SDK 35, compile and JVM-test stages. AGP 8.7.x requires Gradle 8.9 and supports API 35. citeturn0search2turn0search0
+
+The repository still intentionally does not vendor an unverified Gradle wrapper JAR. The dedicated CI gate therefore provisions the pinned Gradle toolchain directly. This preserves the repository rule that generated/binary build inputs require provenance and verification.
+
+### Verification state
+SOURCE SEMANTIC REPAIR: IMPLEMENTED
+INTERFACE/IMPLEMENTATION RECONCILIATION: COMPLETED
+FUNCTIONAL NOTIFICATION PATH: IMPLEMENTED
+CI BUILD GATE: REGISTERED / EXECUTION PENDING OBSERVED RESULT
+ANDROID DEVICE/EMULATOR: OPEN
+GPU/GODOT/VULKAN RUNTIME: OPEN
+FULL AOSP/PIXEL PLATFORM BUILD: OPEN
+
+No runtime or release claim is made until the corresponding execution evidence exists.
