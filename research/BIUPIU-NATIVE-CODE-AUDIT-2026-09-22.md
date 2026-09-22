@@ -151,3 +151,20 @@ ANDROID DEVICE SMOKE TEST: OPEN
 HARDWARE/PHYSICAL CORRELATION: OPEN
 
 Status: PARTIALLY VERIFIED — governance and repository architecture updated; runtime-dependent gates remain open.
+
+
+## Benchmark-program harvest / native integration — 2026-09-22
+
+The benchmark-program pass is now integrated through the native coding matrix. Usable patterns from Palantir Ontology, Siemens Xcelerator, Dassault 3DEXPERIENCE, NVIDIA Omniverse/OpenUSD, PTC ThingWorx, Bentley iTwin, Unreal Engine 5 and Unity 6 are represented as governed pattern/adapter targets rather than copied vendor implementations.
+
+Native additions:
+- core/multilang/include/biupiu_benchmark_adapters.h
+- core/multilang/cpp/benchmark_adapters.cpp
+- core/multilang/cpp/benchmark_adapters_smoke.cpp
+- research/BIUPIU-BENCHMARK-PROGRAM-HARVEST-GATE-2026-09-22.md
+
+Integration rule: benchmark capability -> provenance/evidence -> native contract -> adapter/pattern -> static audit -> smoke -> build -> runtime -> regression -> verification.
+
+Palantir's published Ontology documentation was used for operational-ontology/model-to-real-world mapping patterns; NVIDIA's published Omniverse documentation was used for OpenUSD/physical-AI/digital-twin interoperability patterns. These remain external benchmark references, not Biupiu authority. 
+
+Benchmark source integration status: IMPLEMENTED AT SOURCE / CONTRACT SMOKE SOURCE ADDED / BUILD-RUNTIME-REGRESSION PENDING.
