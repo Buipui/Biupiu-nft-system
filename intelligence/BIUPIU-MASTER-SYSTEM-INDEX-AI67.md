@@ -143,3 +143,31 @@ TARGET NPU/GPU/DSP: PENDING
 QPU/CLOUD EXECUTION: PENDING
 ANDROID NATIVE BUILD: PENDING
 PRODUCTION PROMOTION: BLOCKED pending runtime evidence
+
+
+## Gate 36 — Native AI authority hierarchy correction + repository/changelog reconciliation — 22 September 2026
+
+Repository/changelog audit identified one hierarchy wording defect in the federation protocol: the protocol placed BIUPIU NATIVE INTELLIGENCE above OS/DMS. This conflicted with the Native Coding Matrix, promotion router, Digital Twin hierarchy contract and the documented fail-closed rule that AI may propose but Core OS/DMS validates.
+
+Corrected canonical hierarchy:
+HUMAN RELEASE AUTHORITY
+-> CORE OS / DMS VALIDATION
+-> DOMAIN OWNER
+-> INTELLIGENCE
+-> FEDERATION
+-> ADAPTER / PROVIDER
+-> EXTERNAL REFERENCE
+
+Native executable enforcement added:
+- `software/rnd-os-ai/src/biupiu_ai/authority_hierarchy.py`
+- `software/rnd-os-ai/tests/test_authority_hierarchy.py`
+
+The federation protocol was corrected to require CORE OS/DMS validation before executable promotion. Historical authority boundaries were preserved; no research lineage was deleted.
+
+SOURCE FIX: IMPLEMENTED
+AUTHORITY CONTRACT: IMPLEMENTED
+TARGETED REGRESSION SOURCE: IMPLEMENTED
+CHANGELOG RECONCILIATION: IMPLEMENTED
+HOST/CI EXECUTION: PENDING
+ANDROID/DEVICE RUNTIME: PENDING
+PRODUCTION PROMOTION: BLOCKED pending runtime/release evidence
