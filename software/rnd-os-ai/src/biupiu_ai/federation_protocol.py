@@ -27,6 +27,12 @@ REQUIRED_GATES = (
     FederationGate("F11","machine-capability",("capability-registry","range-validation","adapter-boundary","safety-boundary")),
     FederationGate("F12","spatial-vr-compute",("simulation-authority","gpu-path","endpoint-contract","frame-timing")),
     FederationGate("F13","native-platform-federation",("x86_64","arm64","apple-silicon","windows","macos","linux","android")),\n    FederationGate("F14","design-language",("design-contract","semantic-actions","visual-regression")),\n    FederationGate("F15","digital-twin-learning",("twin-events","learning-log","rollback","regression")),\n    FederationGate("F16","simulator-learning-federation",("simulator-registry","observation-schema","learning-bridge","provenance")),
+    FederationGate("F17","capability-discovery",("capability-registry","version-negotiation","fail-closed")),
+    FederationGate("F18","federation-observability",("trace-context","correlation-id","health","queue-depth")),
+    FederationGate("F19","schema-governance",("schema-ref","content-type","schema-hash","compatibility")),
+    FederationGate("F20","delivery-resilience",("delivery-policy","retry","ttl","backpressure","dead-letter")),
+    FederationGate("F21","industrial-adapters",("opcua-boundary","mqtt-boundary","oem-boundary","transport-neutral")),
+    FederationGate("F22","world-repository-boundary",("core-world-separation","simulator-authority","provenance","migration-plan")),
 )
 
 def gate_passes(gate: FederationGate, evidence: dict[str, bool]) -> bool:
