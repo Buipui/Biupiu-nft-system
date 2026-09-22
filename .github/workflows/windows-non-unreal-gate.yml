@@ -19,7 +19,7 @@ jobs:
   windows-non-unreal:
     runs-on: windows-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
       - name: Windows host inventory
         shell: pwsh
         run: |
@@ -28,10 +28,10 @@ jobs:
           Write-Host "PowerShell: $($PSVersionTable.PSVersion)"
           Get-CimInstance Win32_OperatingSystem | Select-Object Caption,Version,BuildNumber,OSArchitecture
           Get-CimInstance Win32_Processor | Select-Object Name,NumberOfCores,NumberOfLogicalProcessors
-      - uses: actions/setup-node@v4
+      - uses: actions/setup-node@49933ea5288caeca8642d1e84afbd3f7d6820020
         with:
-          node-version: 20
-      - uses: actions/setup-python@v5
+          node-version: 22
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065
         with:
           python-version: "3.12"
       - name: Install repository dependencies
@@ -58,7 +58,7 @@ jobs:
       - name: Record Windows gate result
         shell: pwsh
         run: '"BIUPIU_WINDOWS_NON_UNREAL_GATE=PASS" | Out-File -FilePath windows-gate-result.txt -Encoding utf8'
-      - uses: actions/upload-artifact@v4
+      - uses: actions/upload-artifact@ea165f8d65b6e75b540449e92b4886f43607fa02
         with:
           name: biupiu-windows-non-unreal-gate
           path: windows-gate-result.txt
