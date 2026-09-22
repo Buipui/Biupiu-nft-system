@@ -19,3 +19,13 @@ def test_federation_logs_and_remains_fail_closed(tmp_path):
     assert r["state"]=="TRIAGING"
     assert r["promotion_allowed"] is False
     assert len(log.read())==1
+
+def test_external_fix_gap_enters_guided_fault_finding_without_promotion():
+    from biupiu_ai.guided_fault_finding import ExternalFixGap, guide_external_fix_gap
+    r = guide_external_fix_gap(ExternalFixGap(
+        target_id="federation", fault_class="RUNTIME", internal_signature="missing-adapter",
+        external_fix_id="otel-context-pattern", source_refs=("source:a",),
+        implementation_state="MISSING_INTERNAL", semantic_match=True,
+        licence_checked=True, security_checked=True))
+    assert r["state"] == "TRIAGING"
+    assert r["promotion_allowed"] is False
