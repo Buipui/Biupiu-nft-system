@@ -56,3 +56,8 @@ FEDERATION-EXTERNAL-HARVEST-2026-09-22-V1.1
 State: CANDIDATE HARVEST REGISTERED; INTEGRATION/TEST GATES OPEN.
 ## Testing-protocol reconciliation — 22 September 2026
 The recent module-testing protocols are now consolidated through `research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json`. The executable promotion gate and CI workflow are cross-linked to this registry. No candidate may be marked VERIFIED-WORKING from registry presence alone; execution evidence remains required.
+
+## Guided Fault-Finding Harvest — 22 September 2026
+Internal harvest consolidated native failure-learning, federation, health, fault-healing and harvest-promotion controls into one guided diagnostic boundary. External harvest added NASA assurance/IV&V and OpenTelemetry trace/context correlation as reference patterns.
+Cross-links: guided-fault-finder.ts; guided_fault_finding.py; existing learning.py; federation_protocol.py; federation-harvest-gate.ts; fault-healing-envelope-v1.json.
+Promotion remains fail-closed. External patterns are not executable dependencies. Fresh CI/runtime evidence is required before VERIFIED-WORKING.
