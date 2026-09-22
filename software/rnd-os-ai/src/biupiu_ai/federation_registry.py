@@ -59,7 +59,12 @@ DEFAULT_SYSTEMS = (
     AgentSystem("iqm-quantum", "quantum-provider", ("quantum-sdk", "circuits"), "provider-adapter"),
     AgentSystem("riken-fujitsu-quantum", "quantum-simulation", ("riken", "fujitsu", "simulation"), "simulation-adapter"),
     AgentSystem("android-agsl", "graphics-shader", ("agsl", "runtimeshader"), "platform-adapter"),
-    AgentSystem("opendroid-ui", "ui-engine", ("opendroid-ui"), "unresolved-adapter", "BLOCKED", "UNRESOLVED"),
+    # OpenDroid identity correction: external autonomous Android agent; Compose is its UI surface.
+    AgentSystem("opendroid-ui", "ui-engine", ("opendroid-ui",), "unresolved-adapter", "BLOCKED", "UNRESOLVED"),
+    AgentSystem("opendroid-android-agent", "android-agent", ("accessibility", "actions", "agent-loop", "llm-routing"), "provider-adapter"),
+    AgentSystem("opendroid-memory-security", "agent-state", ("memory", "keystore", "room", "datastore"), "provider-adapter"),
+    AgentSystem("opendroid-services-voice", "android-services", ("foreground-service", "notification-listener", "voice", "tts"), "platform-adapter"),
+    AgentSystem("opendroid-compose-ui", "ui-surface", ("compose-ui", "viewmodel", "theme", "components"), "ui-adapter"),
 )
 
 
