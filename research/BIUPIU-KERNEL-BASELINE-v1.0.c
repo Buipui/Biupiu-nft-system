@@ -1,22 +1,10 @@
-/* Biupiu OS kernel base contract skeleton.
- * Contract layer only: no privileged hardware operations are implemented here.
- * Architecture-specific HALs must satisfy these interfaces.
+/* Biupiu OS kernel baseline contract.
+ * The boot ABI is shared with Mini-OS; architecture-specific HALs implement
+ * the privileged operations behind these interfaces.
  */
+#include "../mini-os/include/biupiu_boot_contract.h"
 #include <stdint.h>
 #include <stddef.h>
-
-typedef enum { BIU_FW_BIOS, BIU_FW_UEFI, BIU_FW_DEVICE_TREE, BIU_FW_UNKNOWN } biu_firmware_t;
-typedef enum { BIU_ARCH_X86, BIU_ARCH_X86_64, BIU_ARCH_ARM64, BIU_ARCH_RISCV64, BIU_ARCH_UNKNOWN } biu_arch_t;
-
-typedef struct {
-    biu_firmware_t firmware;
-    biu_arch_t arch;
-    uint64_t memory_map;
-    uint64_t memory_map_count;
-    uint64_t framebuffer;
-    uint64_t acpi_or_dt;
-    uint64_t boot_params;
-} biu_boot_info_t;
 
 typedef struct {
     void* (*alloc_pages)(size_t pages);
