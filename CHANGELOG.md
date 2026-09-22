@@ -297,3 +297,23 @@ Runtime/device/platform gates remain **OPEN**: Android/Gradle build, live Androi
 Promotion rule: source implementation is not equivalent to runtime verification. No open gate is marked verified without execution evidence.
 
 **Status: IMPLEMENTATION CLOSED / RUNTIME-DEVICE-PLATFORM VERIFICATION OPEN.**
+
+
+# 2026-09-22 — Next Gate: Android Auto Availability Fail-Closed Hardening
+
+### Guided fault finding
+- Found a semantic false-positive risk: the Android Auto adapter could report availability from application-context presence rather than live Android Auto projection evidence.
+
+### Corrective implementation
+- Made the adapter null-context safe.
+- Changed runtime availability to fail closed until Android Car APIs confirm projection.
+- Added a semantic test for the fail-closed runtime boundary.
+- Recorded the correction in `mini-os/android/EXTERNAL-FEDERATION-INTEGRATION.md`.
+
+### Verification boundary
+- Source implementation: **PASS**.
+- Semantic fail-closed logic: **PASS by source inspection**.
+- Android/Gradle build: **OPEN**.
+- Live Android Auto/device verification: **OPEN**.
+
+**Status: SOURCE HARDENING COMPLETE / BUILD + DEVICE VERIFICATION OPEN.**
