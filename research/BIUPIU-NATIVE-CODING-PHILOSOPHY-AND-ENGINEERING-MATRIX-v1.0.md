@@ -436,3 +436,27 @@ intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py checks that key native AI, lea
 Existing native optimisation assets are cross-linked rather than duplicated: ML engine capability routing, continual adaptation, math optimisation, simulator adapters, failure learning, federation registry, AI-74 trust/checkpoint logic, rendering/resource optimisation and the research optimization registries. External optimisation engines remain adapter/reference candidates until licence, provenance, security, build, smoke and regression gates pass.
 
 Status: SOURCE IMPLEMENTED / SEMANTIC AUDIT IMPLEMENTED / EXTERNAL HARVEST REGISTERED / LIVE BLOCKCHAIN EXECUTION AND FULL RUNTIME VERIFICATION OPEN.
+
+## 23. Usable adapter federation + Native ML optimisation — 22 September 2026
+
+Internal-first adapter discovery was completed before external federation harvest.
+
+Native adapter registry:
+- `software/rnd-os-ai/src/biupiu_ai/adapter_registry.py`
+- `software/rnd-os-ai/tests/test_adapter_registry.py`
+- `software/rnd-os-ai/src/biupiu_ai/federation_registry.py`
+
+Current adapter families normalised into one contract include MQTT 5, Eclipse Ditto, OPC UA PubSub, ROS 2/DDS, OpenUSD, FMI/FMU, Flower, NVIDIA FLARE, OpenTelemetry, A2A, OpenSharing and AUTOSAR CAPI.
+
+Hard rule: adapter presence is never equivalent to executable verification. Promotion requires provenance, licence, security, build, regression, runtime and human evidence.
+
+Native ML upgrade:
+- `LearningEvidence` captures verified-fix, regression-safety, provenance-quality, uncertainty-reduction, recurrence and drift.
+- `score_governed_learning_candidate()` provides deterministic bounded candidate prioritisation.
+- `learning_reuse_ready()` keeps reusable learning behind the existing Core OS/human promotion boundary.
+- Drift is treated as a penalty/review signal rather than an authority bypass.
+
+Semantic check requirements:
+adapter identity -> capability/family routing -> evidence gates -> learning scoring -> drift handling -> human promotion -> regression.
+
+Status: IMPLEMENTED / SOURCE CROSS-LINKED / TESTS ADDED / RUNTIME VERIFICATION PENDING.
