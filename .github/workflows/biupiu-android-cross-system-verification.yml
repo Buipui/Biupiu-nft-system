@@ -1,0 +1,66 @@
+name: Biupiu Android Cross-System Verification
+
+on:
+  workflow_dispatch:
+  push:
+    paths:
+      - "apps/android/**"
+      - "apps/shared/**"
+      - "packages/biupiu-rnd-os/**"
+      - "software/rnd-os-ai/**"
+      - "docs/architecture/BIUPIU-ANDROID-CROSS-SYSTEM-FUNCTION-GRAPH-2026-09-22.md"
+      - ".github/workflows/biupiu-android-cross-system-verification.yml"
+  pull_request:
+    paths:
+      - "apps/android/**"
+      - "apps/shared/**"
+      - "packages/biupiu-rnd-os/**"
+      - "software/rnd-os-ai/**"
+      - "docs/architecture/BIUPIU-ANDROID-CROSS-SYSTEM-FUNCTION-GRAPH-2026-09-22.md"
+
+jobs:
+  android-cross-system:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Set up JDK 17
+        uses: actions/setup-java@v4
+        with:
+          distribution: temurin
+          java-version: "17"
+
+      - name: Set up pinned Gradle
+        uses: gradle/actions/setup-gradle@v4
+        with:
+          gradle-version: "8.9"
+
+      - name: Validate Android source contract
+        shell: bash
+        run: |
+          test -f apps/android/settings.gradle.kts
+          test -f apps/android/build.gradle.kts
+          test -f apps/android/app/build.gradle.kts
+          test -f apps/android/app/src/main/AndroidManifest.xml
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainActivity.kt
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/CapabilityRouter.kt
+          test -f apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt
+
+      - name: Build Android debug APK
+        working-directory: apps/android
+        run: gradle --no-daemon :app:assembleDebug
+
+      - name: Run Android unit tests
+        working-directory: apps/android
+        run: gradle --no-daemon :app:testDebugUnitTest
+
+      - name: Cross-system TypeScript contract check
+        run: |
+          npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck             packages/biupiu-rnd-os/src/digital-twin.ts             packages/biupiu-rnd-os/src/federation-transport.ts
+
+      - name: Validate harvest matrix
+        run: python -m json.tool docs/architecture/BIUPIU-CROSS-SYSTEM-MODULE-HARVEST-MATRIX-2026-09-22.json >/dev/null
+
+      - name: Report verification boundary
+        run: echo "CI build/test is the authoritative runtime gate; source inspection alone does not mark device verification."
