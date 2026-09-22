@@ -70,3 +70,22 @@ HUMAN PROMOTION OF EXTERNAL EXECUTABLES: OPEN
 
 Principle preserved:
 DIGITAL FIRST -> DIGITAL VERIFY -> PHYSICAL IMPLEMENT -> PHYSICAL CORRELATE -> FEED VERIFIED EVIDENCE BACK INTO LEARNING.
+
+
+## Smoke-test fault fixes — 2026-09-22
+
+Source-level smoke review identified and corrected two boundary defects before runtime closure:
+
+1. **Guided fault input normalization** — guide_fault() now strips whitespace and normalizes fault classes to uppercase at the federation boundary. Lower-case/mixed-case inputs therefore follow the same canonical matrix instead of being rejected unexpectedly.
+2. **Adapter promotion conflict** — promotion_safe() previously allowed complete evidence to override a registry adapter's own candidate policy. It now requires both status == VERIFIED_WORKING and executable_promotion_allowed == True, in addition to provenance, licence, security, build, regression, runtime and human approval. The smoke test now explicitly covers candidate rejection and verified-adapter acceptance.
+
+These are source fixes only. The repository still does not claim CI/runtime PASS until an executable workflow result is observed.
+
+Fix commits:
+- 0401ffa5734ee26b6da9a1148fb2eaf78549de0d — fault-class normalization.
+- ccd3fa0b8edebace65fea81a119b86278f65d4ab — fail-closed adapter promotion.
+- 59f7c8dae7eac90ee044e0af8abfd14ee9ce74ce — aligned adapter smoke regression tests.
+
+Updated gate state:
+SOURCE SMOKE REVIEW: CLOSED / DEFECTS CORRECTED
+RUNTIME SMOKE: OPEN — workflow execution result not yet observable through the available GitHub run query.
