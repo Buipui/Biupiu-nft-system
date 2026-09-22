@@ -37,3 +37,8 @@ jobs:
         run: gcc -std=c11 -Wall -Wextra -Werror -Icore/multilang/include -fsyntax-only core/multilang/c/abi_smoke.c
       - name: C++ contract compile check
         run: g++ -std=c++17 -Wall -Wextra -Werror -Icore/multilang/cpp -fsyntax-only core/multilang/cpp/contract_compile.cpp
+
+      - name: Scientific adapter semantic compile
+        run: |
+          g++ -std=c++17 -Wall -Wextra -Werror -Icore/multilang/include             core/multilang/cpp/scientific_math_adapter.cpp             core/multilang/cpp/scientific_math_adapter_smoke.cpp             -o /tmp/biupiu-scientific-smoke
+          /tmp/biupiu-scientific-smoke
