@@ -22,5 +22,13 @@ public final class AiMultimediaUiFederationRegistryTest {
         if (!registry.isUsable("navigation3")) throw new AssertionError("Navigation 3 integration missing");
         if (registry.isRuntimeVerified("onnxruntime.android")) throw new AssertionError("Dependency presence is not runtime verification");
         if (registry.isRuntimeVerified("litert.v2")) throw new AssertionError("Dependency presence is not runtime verification");
+
+        AiProviderSelector selector = new AiProviderSelector();
+        if (!selector.candidates("vision").contains("litert.compiledmodel"))
+            throw new AssertionError("LiteRT CompiledModel provider missing");
+        if (selector.candidates("vision").contains("onnxruntime.qnn"))
+            throw new AssertionError("QNN provider crossed licence boundary");
+        if (selector.candidates("vision").contains("huawei.hiai"))
+            throw new AssertionError("HiAI provider crossed device boundary");
     }
 }
