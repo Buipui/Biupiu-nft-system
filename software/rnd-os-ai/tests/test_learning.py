@@ -32,3 +32,19 @@ def test_drift_detector_is_incremental():
 def test_candidate_score_is_bounded():
     r=score_learning_candidate("candidate-1",information_gain=1,uncertainty_reduction=.8,model_disagreement=.5,feasibility=.9,regression_safety=1)
     assert 0<r.score<=1 and r.information_gain==1
+
+
+def test_multilingual_learning_record_preserves_locale_metadata():
+    from biupiu_ai.learning import make_multilingual_learning_record, verify_learning_record
+    record = make_multilingual_learning_record(
+        "mlang-001",
+        "language-selector",
+        "zh-Hant-TW",
+        "zh",
+        "fallback chain verified",
+        input_refs=("harvest://foreign-language-20260922",),
+    )
+    assert verify_learning_record(record)
+    assert "locale=zh-Hant-TW" in record.input_refs
+    assert "source_language=zh" in record.input_refs
+    assert record.target_type == "MULTILINGUAL_ROUTING"
