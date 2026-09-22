@@ -68,3 +68,32 @@ REQUIREMENT -> INTERNAL GAP CHECK -> EXTERNAL HARVEST -> PROVENANCE/LICENCE -> A
 - Material 3: https://developer.android.com/jetpack/androidx/releases/compose-material3
 - RenderEffect: https://developer.android.com/reference/android/graphics/RenderEffect
 - Navigation 3: https://developer.android.com/jetpack/androidx/releases/navigation3
+
+## 2026-09-22 — Foreign-language federation harvest and architecture reconciliation
+
+Foreign-language source checks were performed against Chinese-language mirrors/documentation for LiteRT, ONNX Runtime and Apache TVM, alongside current English upstream documentation. The Chinese ONNX Runtime Android documentation independently confirms NNAPI and QNN build lanes; the Chinese LiteRT documentation confirms the CompiledModel API; Apache TVM Chinese documentation confirms Android deployment through a cross-compiled runtime/RPC path. These sources were used as corroborating implementation evidence, not as substitutes for upstream authority.
+
+### Missing-module findings and fixes
+| Missing/under-integrated capability | Finding | Fix |
+|---|---|---|
+| ONNX Runtime execution-provider lanes | Registry had only generic ONNX Runtime | Added CPU, XNNPACK, NNAPI and QNN provider identities with fail-closed states |
+| LiteRT accelerator-first API | Generic LiteRT identity did not expose CompiledModel lane | Added litert.compiledmodel provider identity |
+| TVM mobile runtime | TVM was only a broad adapter entry | Added apache.tvm.runtime mobile-runtime boundary |
+| Android Mini OS source integration | Federation Java sources lived outside the Gradle Java source set | Added mini-os/android/federation to the Mini OS main Java source set |
+| R8/ProGuard protection | ONNX Runtime reflection keep rule was absent | Added mini-os/android/app/proguard-rules.pro |
+| Provider selection | Registry described capabilities but had no architecture-neutral selector | Added AiExecutionProvider and fail-closed AiProviderSelector |
+| Provider boundary regression | Existing registry test did not exercise concrete provider lanes | Extended AiMultimediaUiFederationRegistryTest |
+
+### Architecture rule
+The selector is an orchestration boundary only. It does not claim hardware execution. QAIRT/QNN remains licence/SDK/device gated; NNAPI remains device gated; HiAI remains device gated; Qualcomm IMSDK remains a platform boundary. LiteRT CompiledModel is the forward LiteRT Android lane, while TensorFlow Lite remains compatibility-only.
+
+### External evidence
+- Qualcomm AI Engine Direct documents lower-level accelerator APIs and delegation from ONNX Runtime/TFLite. citeturn0search0
+- Qualcomm AI Hub documents QAIRT as the overall SDK and QNN as the runtime API layer. citeturn0search1
+- LiteRT Android currently documents CompiledModel as the modern API and lists v2.2.0 as latest. citeturn0search5
+- ONNX Runtime documents extensible Execution Providers including XNNPACK, NNAPI and Qualcomm QNN. citeturn0search8turn1search0
+- Chinese-language ONNX Runtime Android documentation independently confirms NNAPI and QNN build lanes. citeturn1search3
+- Chinese-language LiteRT documentation confirms the CompiledModel Android path. citeturn1search1
+- Chinese-language Apache TVM documentation confirms Android deployment through cross-compilation/runtime and RPC mechanisms. citeturn1search14turn1search16
+
+**Gate state: ARCHITECTURE INTEGRATION IMPLEMENTED / SEMANTIC BOUNDARIES CHECKED / CI BUILD AND DEVICE RUNTIME VERIFICATION OPEN.**
