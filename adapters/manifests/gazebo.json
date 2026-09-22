@@ -1,0 +1,26 @@
+{
+  "resource_id": "Gazebo",
+  "capability": "robotics/sensor/physics simulation",
+  "version": "PIN_REQUIRED",
+  "licence_boundary": "EXTERNAL_RESOURCE_BOUNDARY",
+  "input_schema": {
+    "world_fixture": "path_or_bytes",
+    "initial_pose": "declared",
+    "initial_velocity": "declared"
+  },
+  "output_schema": {
+    "pose": "declared",
+    "messages": "declared"
+  },
+  "units": {
+    "gravity": "m/s^2"
+  },
+  "coordinate_frame": "declared",
+  "provenance_required": true,
+  "security": {
+    "os_authority": false,
+    "fail_closed": true
+  },
+  "test_vector_id": "GAZEBO-TV-001",
+  "promotion_state": "ADAPTER-READY"
+}

@@ -1,0 +1,25 @@
+{
+  "resource_id": "Assimp",
+  "capability": "model import/interchange",
+  "version": "PIN_REQUIRED",
+  "licence_boundary": "EXTERNAL_RESOURCE_BOUNDARY",
+  "input_schema": {
+    "mesh_fixture": "path_or_bytes"
+  },
+  "output_schema": {
+    "vertices": "integer",
+    "faces": "integer",
+    "round_trip": "boolean"
+  },
+  "units": {
+    "coordinates": "declared"
+  },
+  "coordinate_frame": "declared",
+  "provenance_required": true,
+  "security": {
+    "os_authority": false,
+    "fail_closed": true
+  },
+  "test_vector_id": "ASSIMP-TV-001",
+  "promotion_state": "ADAPTER-READY"
+}
