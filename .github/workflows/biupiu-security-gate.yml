@@ -21,8 +21,8 @@ jobs:
   security-static-audit:
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-      - uses: actions/setup-java@cf277c60eb25467037889841efdb72551f06f6c3
+      - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+      - uses: actions/setup-java@de7274f081f381c8f8158605e0321c36c376e2e6 # v6.0.1
         with:
           distribution: temurin
           java-version: '17'
@@ -31,6 +31,8 @@ jobs:
         shell: python
         run: |
           from pathlib import Path
+          import re
+
           manifest = Path("apps/android/app/src/main/AndroidManifest.xml").read_text()
           assert 'android:networkSecurityConfig="@xml/network_security_config"' in manifest
           assert 'android:usesCleartextTraffic="false"' in manifest
@@ -39,7 +41,30 @@ jobs:
           assert Path("apps/android/app/src/main/res/xml/backup_rules.xml").exists()
           assert Path("apps/android/app/src/main/res/xml/data_extraction_rules.xml").exists()
           assert Path("apps/android/app/src/main/java/com/biupiu/rndos/BiupiuSecurityPolicy.kt").exists()
+
           workflow_path = Path(".github/workflows/biupiu-security-gate.yml")
+          sha_pattern = re.compile(r"^.+@[0-9a-fA-F]{40}$")
+          own_refs = []
+          for line in workflow_path.read_text(errors="ignore").splitlines():
+              m = re.search(r"uses:\s*([^\s#]+)", line)
+              if m:
+                  own_refs.append(m.group(1))
+          unpinned_own_refs = [ref for ref in own_refs if not sha_pattern.fullmatch(ref)]
+          assert not unpinned_own_refs, f"Security gate has unpinned actions: {unpinned_own_refs}"
+
+          repo_refs = []
+          for p in Path(".github/workflows").glob("*.y*ml"):
+              for line in p.read_text(errors="ignore").splitlines():
+                  m = re.search(r"uses:\s*([^\s#]+)", line)
+                  if m:
+                      repo_refs.append((str(p), m.group(1)))
+          floating = [x for x in repo_refs if "@" in x[1] and not sha_pattern.fullmatch(x[1])]
+          print(f"Repository workflow references observed: {len(repo_refs)}")
+          print(f"Repository-wide non-SHA references reported (non-blocking migration inventory): {len(floating)}")
+          if floating:
+              for p, ref in floating[:50]:
+                  print(f"NON_SHA {p} {ref}")
+
           for p in Path(".").rglob("*"):
               if not p.is_file() or ".git" in p.parts or p == workflow_path:
                   continue
@@ -48,6 +73,7 @@ jobs:
               text = p.read_text(errors="ignore")
               assert "BEGIN PRIVATE KEY" not in text, p
               assert "BIUPIU_ANDROID_KEYSTORE_PASSWORD=" not in text, p
+
           print("Biupiu security static audit: PASS")
       - name: Configure verified Gradle action
         uses: gradle/actions/setup-gradle@ed408507eac070d1f99cc633dbcf757c94c7933a
