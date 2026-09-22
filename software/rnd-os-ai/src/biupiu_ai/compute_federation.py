@@ -80,9 +80,13 @@ class ComputeFederation:
         for work in sorted(workloads, key=lambda w: (-w.cost, w.workload_id)):
             candidates = self.eligible_units(work)
             if work.preferred:
-                preferred = [u for u in candidates if u.kind in work.preferred]
-                if preferred:
-                    candidates = preferred
+                # Preferred classes are ordered by priority, not treated as an unordered set.
+                # This keeps planning semantics aligned with execute()/eligible_units().
+                for preferred_class in work.preferred:
+                    preferred = [u for u in candidates if u.kind == preferred_class]
+                    if preferred:
+                        candidates = preferred
+                        break
             if not candidates:
                 raise RuntimeError(f"No eligible compute unit for workload {work.workload_id}")
             unit = min(candidates, key=lambda u: (loads[u.unit_id] / u.capacity, u.unit_id))
