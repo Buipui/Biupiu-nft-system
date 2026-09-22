@@ -295,3 +295,11 @@ software/rnd-os-ai/tests/test_simulator_federation_adapters.py
 No third-party executable source/binary was copied. External resources remain reference/adapter until dependency, licence, build, smoke, regression and runtime gates pass.
 
 Status: SOURCE INTEGRATED / SEMANTIC SMOKE PASS / ANDROID + HOST RUNTIME OPEN.
+
+## 2026-09-22 — Eigen + GSL Federation Pass 2
+Cross-links:
+- research/BIUPIU-EIGEN-GSL-PASS2-FEDERATION-GATE-20260922.md
+- library/scientific/BIUPIU-SCIENTIFIC-LIBRARY-REGISTRY-20260922.json
+Flow: UPSTREAM RECONCILIATION -> FOREIGN-LANGUAGE REFERENCE HARVEST -> OPTIMIZATION CANDIDATES -> GUIDED FAULT FINDING -> SEMANTIC/CODING-MATRIX CHECK.
+Version-state correction: Eigen stable 5.0.0; 5.0.1 represented as development/reference state.
+Optimization remains benchmark-gated. CI/Android/device runtime remain open.
