@@ -1,0 +1,31 @@
+{
+  "resource_id": "SUNDIALS",
+  "capability": "ODE/DAE/nonlinear/time integration",
+  "version": "PIN_REQUIRED",
+  "licence_boundary": "EXTERNAL_RESOURCE_BOUNDARY",
+  "input_schema": {
+    "equation": "dy/dt=-k*y",
+    "initial_value": "float",
+    "k": "float",
+    "time": "float"
+  },
+  "output_schema": {
+    "y": "float"
+  },
+  "units": {
+    "time": "s",
+    "k": "1/s",
+    "y": "dimensionless"
+  },
+  "coordinate_frame": null,
+  "provenance_required": true,
+  "security": {
+    "os_authority": false,
+    "fail_closed": true
+  },
+  "test_vector_id": "SUNDIALS-TV-001",
+  "expected": {
+    "y_at_2": 0.3678794412
+  },
+  "promotion_state": "ADAPTER-READY"
+}
