@@ -54,3 +54,13 @@ Identity could not be established with sufficient confidence from the external f
 - Capability adapters may be implemented natively from public Android APIs/protocols.
 - Root/hooking functionality is opt-in and isolated from the normal Mini OS execution path.
 - Safety-critical automotive control remains behind the existing verified adapter boundary.
+
+
+### Simulator federation
+The Android build registers governed capability identities for:
+- Project Chrono / vehicle-multiphysics
+- OpenStudio / architecture-building-design
+- EnergyPlus / building-energy
+- OpenSim / movement-biomechanics-environment agents
+
+The Android boundary is capability discovery and job/state exchange. Desktop/server simulator binaries are not embedded. Runtime promotion requires Android-compatible native build, ABI/dependency verification, smoke, regression and device evidence.
