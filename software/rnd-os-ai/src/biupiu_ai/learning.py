@@ -108,5 +108,5 @@ def score_learning_candidate(candidate_id:str,**signals)->CandidateScore:
     score=.30*vals["information_gain"]+.25*vals["uncertainty_reduction"]+.15*vals["model_disagreement"]+.15*vals["feasibility"]+.15*vals["regression_safety"]
     return CandidateScore(candidate_id,round(score,6),**vals)
 
-def can_promote_learning(pattern:FailurePattern,*,provenance_verified:bool,licence_checked:bool=True,human_approved:bool=False)->bool:
-    return pattern.learning_level>=4 and not pattern.stalled and provenance_verified and licence_checked and human_approved
+def can_promote_learning(\n    pattern: FailurePattern,\n    *,\n    provenance_verified: bool,\n    licence_checked: bool = True,\n    human_approved: bool = False,\n) -> bool:
+    """Permit reuse only after verified fix, regression, provenance, licence and human approval."""\n    return (\n        pattern.learning_level >= 4\n        and not pattern.stalled\n        and provenance_verified\n        and licence_checked\n        and human_approved\n    )
