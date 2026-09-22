@@ -10,7 +10,10 @@ android {
     defaultConfig {
         applicationId = "com.biupiu.rndos"
         minSdk = 26
-        targetSdk = 35
+            targetSdk = 35
+        versionCode = 2
+        versionName = "0.2.1"
+    }
     compileOptions {
         sourceCompatibility = JavaVersion.VERSION_17
         targetCompatibility = JavaVersion.VERSION_17
@@ -18,13 +21,10 @@ android {
     kotlinOptions {
         jvmTarget = "17"
     }
-        versionCode = 2
-        versionName = "0.2.1"
     externalNativeBuild {
         cmake {
             cppFlags += listOf("-std=c++17", "-Wall", "-Wextra", "-Werror")
         }
-    }
     }
     externalNativeBuild {
         cmake {
@@ -46,4 +46,5 @@ dependencies {
     implementation("androidx.compose.material:material-icons-extended")
     debugImplementation("androidx.compose.ui:ui-tooling")
     testImplementation("junit:junit:4.13.2")
+    testImplementation(kotlin("test"))
 }
