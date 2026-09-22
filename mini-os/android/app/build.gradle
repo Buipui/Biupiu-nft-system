@@ -53,4 +53,6 @@ dependencies {
 
     // Forward-facing PDF provider. PdfViewPager remains an adapter-only legacy option.
     implementation "androidx.pdf:pdf-viewer-fragment:${rootProject.ext.biupuiVersions.pdf}"
+
+    testImplementation "junit:junit:4.13.2"
 }
