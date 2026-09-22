@@ -11,7 +11,7 @@ import android.widget.TextView
 abstract class DepartmentScreenActivity : Activity() {
     protected abstract val screenId: String
     protected abstract val title: String
-    protected abstract val packageName: String
+    protected abstract val modulePackageName: String
     protected abstract val route: String
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ abstract class DepartmentScreenActivity : Activity() {
             setTextColor(Color.BLACK)
         })
         root.addView(TextView(this).apply {
-            text = "$screenId  •  $packageName"
+            text = "$screenId  •  $modulePackageName"
             gravity = Gravity.CENTER
             setPadding(0, 12, 0, 16)
         })
@@ -54,7 +54,7 @@ abstract class DepartmentScreenActivity : Activity() {
 class SmartFarmingActivity : DepartmentScreenActivity() {
     override val screenId = "FARMING_WORLD"
     override val title = "Smart Farming"
-    override val packageName = "@biupiu/smart-farming"
+    override val modulePackageName = "@biupiu/smart-farming"
     override val route = "SMART_FARMING"
 }
 
