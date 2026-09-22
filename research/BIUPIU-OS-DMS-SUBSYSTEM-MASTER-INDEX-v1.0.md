@@ -410,3 +410,22 @@ The executable harvest gate now enforces version comparison, dependency check, n
 The cross-system verification workflow now validates the harvest matrix and testing registry, type-checks the harvest gate and executes its test harness in CI. Local/runtime execution is not claimed from repository inspection.
 
 **Gate status: PROTOCOL REGISTERED / NATIVE GATE HARDENED / CI EXECUTION CONFIGURED / CURRENT CI RESULT OPEN.**
+
+
+## 41. Native Multilingual OS + Foreign Coding Federation Harvest — 22 September 2026
+
+Added a shared language contract and native selection boundary:
+- apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+- apps/shared/runtime/LanguageSelector.kt
+- apps/shared/runtime/LanguageSelectorTest.kt
+- Android selector integrated into BiupiuShell
+- Windows selector integrated into MainWindow with native locale registry
+- Smart Farming cross-linked to the shared contract
+- Intelligence translation now preserves BCP-47-compatible script/region identity and deterministic fallback
+- Foreign-language coding philosophy harvest recorded in research/BIUPIU-FOREIGN-LANGUAGE-CODING-PHILOSOPHY-HARVEST-20260922.md
+- Coding matrix changelog recorded in research/BIUPIU-CODING-MATRIX-CHANGELOG-20260922.md
+- Intelligence learning checkpoint and blockchain anchor metadata updated
+
+External evidence was harvested from Unicode CLDR, FLORES/NLLB and multilingual implementation patterns. External implementations remain reference/candidate material until normal licence, dependency, security, build, integration, regression and runtime gates pass.
+
+**Gate status: IMPLEMENTED / SOURCE-SEMANTIC CHECK PASS / TESTS ADDED / CI RESULT OPEN / DEVICE-UI RUNTIME OPEN / FULL TRANSLATION QUALITY OPEN.**
