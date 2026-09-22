@@ -1,0 +1,15 @@
+{
+  "version":"1.0",
+  "families":[
+    {"id":"automotive-paint-composite","applications":["vehicle bodies","body kits","downforce parts","interiors"]},
+    {"id":"marine-coating","applications":["hulls","marine concepts","waterline components"]},
+    {"id":"aerospace-finish","applications":["eVTOL","helicopter","aircraft concepts"]},
+    {"id":"microturbine-metal-thermal","applications":["rotors","housings","thermal zones"]},
+    {"id":"hemp-fibre-composite","applications":["panels","structures","bio-composite parts"]},
+    {"id":"bio-resin-adhesive","applications":["lamination","bonding","protective coatings"]},
+    {"id":"textile-fibre","applications":["technical textiles","interiors","fibre products"]},
+    {"id":"ceramic","applications":["technical ceramics","filters","components"]},
+    {"id":"glass","applications":["covers","optical/product components"]},
+    {"id":"packaging-product","applications":["consumer products","packaging","showcase assets"]}
+  ]
+}
