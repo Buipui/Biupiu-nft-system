@@ -12,7 +12,17 @@ android {
         minSdk = 26
         targetSdk = 35
         versionCode = 2
-        versionName = "0.2.0"
+        versionName = "0.2.1"
+    externalNativeBuild {
+        cmake {
+            cppFlags += listOf("-std=c++17", "-Wall", "-Wextra", "-Werror")
+        }
+    }
+    }
+    externalNativeBuild {
+        cmake {
+            path = file("CMakeLists.txt")
+        }
     }
     sourceSets {
         getByName("main").java.srcDir("../../shared/runtime")
