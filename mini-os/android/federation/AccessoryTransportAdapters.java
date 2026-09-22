@@ -3,12 +3,20 @@ package com.biupiu.minios.federation;
 public final class AccessoryTransportAdapters {
     private AccessoryTransportAdapters() {}
 
+    public static ExternalTransportAdapter motorolaMA1() {
+        return fixed("motorola.ma1.transport");
+    }
+
     public static ExternalTransportAdapter motorolaMA2() {
         return fixed("motorola.ma2.transport");
     }
 
     public static ExternalTransportAdapter aawirelessTwo() {
         return fixed("aawireless.two.transport");
+    }
+
+    public static ExternalTransportAdapter ottocastU2Air() {
+        return fixed("ottocast.u2-air.transport");
     }
 
     public static ExternalTransportAdapter carlinkit2Air() {

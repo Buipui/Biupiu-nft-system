@@ -5,7 +5,7 @@ import java.util.LinkedHashMap;
 import java.util.Map;
 
 public final class AndroidCapabilityRegistry {
-    public enum State { AVAILABLE, ADAPTER_ONLY, DEVICE_REQUIRED, LICENSE_REVIEW, UNRESOLVED }
+    public enum State { AVAILABLE, ADAPTER_ONLY, DEVICE_REQUIRED, LICENSE_REVIEW, UNRESOLVED, REFERENCE_ONLY }
 
     private final Map<String, State> capabilities = new LinkedHashMap<>();
 
@@ -13,11 +13,16 @@ public final class AndroidCapabilityRegistry {
         capabilities.put("aosp.mainline", State.AVAILABLE);
         capabilities.put("pixel.gki.vendor-separation", State.ADAPTER_ONLY);
         capabilities.put("android.auto.projection", State.AVAILABLE);
+        capabilities.put("motorola.ma1.transport", State.DEVICE_REQUIRED);
         capabilities.put("motorola.ma2.transport", State.DEVICE_REQUIRED);
         capabilities.put("aawireless.two.transport", State.DEVICE_REQUIRED);
+        capabilities.put("ottocast.u2-air.transport", State.DEVICE_REQUIRED);
         capabilities.put("carlinkit.2air.transport", State.DEVICE_REQUIRED);
         capabilities.put("vector.automotive.sil-hil", State.LICENSE_REVIEW);
         capabilities.put("lsposed.art-instrumentation", State.LICENSE_REVIEW);
+        capabilities.put("snapperf.magisk.performance", State.REFERENCE_ONLY);
+        capabilities.put("android.dex2oat.optimizer", State.REFERENCE_ONLY);
+        capabilities.put("ax-manager.nexacore.combo", State.UNRESOLVED);
         capabilities.put("gsm-flags-2.0", State.UNRESOLVED);
     }
 

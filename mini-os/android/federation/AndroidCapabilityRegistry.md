@@ -1,56 +1,35 @@
-# Buipui Mini OS — Android External Federation Capability Registry
+# Android Capability Registry — 2026-09-22
 
-## Sources / capability families
+## New federation records
 
-### AOSP / Pixel
-Harvested as open-source architecture references:
-- AOSP Mainline modular system model: stable API/AIDL boundaries, APEX/APK modularity, atomic update/rollback.
-- Pixel/GKI kernel architecture: generic kernel + vendor modules behind KMI.
-- Pixel device/kernel manifests are treated as device-specific build inputs, not copied into the generic Mini OS app.
+| Capability | State | Native treatment |
+|---|---|---|
+| Motorola MA1 | DEVICE_REQUIRED | Native transport boundary; no firmware copied |
+| AAWireless TWO | DEVICE_REQUIRED | Existing transport boundary retained |
+| Ottocast U2-Air | DEVICE_REQUIRED | Native transport boundary; no firmware copied |
+| Motorola MA2 | DEVICE_REQUIRED | Existing transport boundary retained |
+| Carlinkit 5.0 (2Air) | DEVICE_REQUIRED | Existing transport boundary retained |
+| SnapPerf | REFERENCE_ONLY | Root/kernel tuning reference; not enabled by default |
+| dex2oat Optimizer | REFERENCE_ONLY | ART compilation reference; no global properties injected |
+| AX Manager & Nexacore Combo | UNRESOLVED | Exact project identity not established; fail closed |
+| GSM Flags 2.0 | UNRESOLVED | Existing unresolved identity retained |
 
-Native integration target:
-- capability registry
-- stable AIDL/API boundaries
-- GKI/vendor separation
-- device-profile adapters
-- fail-closed feature detection
+## Selection rule
 
-### Android Auto
-Native Android Car App APIs are the supported application boundary. Projection and Automotive targets remain distinct capabilities.
+External products/modules are capability references, not binaries to vendor into Mini OS. Public protocol/API behavior can inform a native adapter. Proprietary firmware, private APIs, root hooks and vendor binaries remain outside the authoritative tree.
 
-### Motorola MA2 / MA1 family
-The external accessory is treated as a wireless Android Auto transport/reference device. No proprietary Motorola firmware or binary is embedded. Integration is an accessory transport adapter boundary.
+## Evidence
 
-### AAWireless TWO
-Capability adapter boundary:
-- wireless Android Auto transport discovery
-- connection state
-- transport diagnostics
-- accessory profile metadata
+- AAWireless describes its adapter as a wireless Android Auto bridge and provides an app for configuration, updates and troubleshooting. citeturn1search0
+- AAWireless' 2026 comparison material identifies MA1 alongside AAWireless TWO/TWO+ and MA2 as wireless Android Auto adapters. citeturn1search5
+- Ottocast documents U2-AIR as a Bluetooth/Wi-Fi wireless adapter for wired CarPlay/Android Auto-capable vehicles. citeturn1search1turn1search2
+- SnapPerf identifies itself as a Snapdragon-only rooted Android performance module supporting Magisk, KernelSU and APatch; it is therefore isolated from the normal non-root Mini OS path. citeturn1search4
+- The dex2oat optimizer reference is an ART optimization module for Magisk/KernelSU/APatch and can change compilation behavior; no such system-wide change is promoted without target-version testing. citeturn0search2
 
-No proprietary AAWireless firmware/binaries are embedded.
+## Verification boundary
 
-### Carlinkit 5.0 (2Air)
-Capability adapter boundary:
-- wireless projection transport
-- accessory discovery
-- connection diagnostics
-- profile/firmware metadata
-
-No proprietary Carlinkit firmware/binaries are embedded.
-
-### Vector automotive framework
-Vector tooling is proprietary. Buipui therefore integrates the **interface concepts** needed for CAN/CAN-FD/LIN/Ethernet simulation, SIL/HIL test orchestration, trace/diagnostic adapters and virtual ECU boundaries. Proprietary Vector libraries are not copied into the repository.
-
-### LSPosed / modern ART-hooking ecosystem
-LSPosed is GPL-3 and is a Zygisk/ART-hooking framework with LSPlant at its core. Buipui integration is isolated behind an optional instrumentation adapter. The native Android build does not silently enable root, Zygisk or application hooking.
-
-### GSM Flags 2.0
-Identity could not be established with sufficient confidence from the external federation search. It is registered as an unresolved source identifier rather than inventing an implementation. Integration remains OPEN pending the exact project/package/repository reference.
-
-## Governance
-- External proprietary code/binaries: NOT COPIED.
-- Open-source code: license review required before vendoring.
-- Capability adapters may be implemented natively from public Android APIs/protocols.
-- Root/hooking functionality is opt-in and isolated from the normal Mini OS execution path.
-- Safety-critical automotive control remains behind the existing verified adapter boundary.
+SOURCE STRUCTURE: PASS
+SEMANTIC FAIL-CLOSED CHECK: PASS
+ANDROID/GRADLE BUILD: OPEN
+DEVICE/ACCESSORY RUNTIME: OPEN
+ROOT/ART PERFORMANCE RUNTIME: OPEN

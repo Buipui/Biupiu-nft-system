@@ -1,3 +1,31 @@
+# 2026-09-22 — Android Accessory / Performance Federation Extension
+
+### External federation harvest
+- AAWireless TWO lineage retained and cross-referenced with the existing wireless Android Auto transport boundary. citeturn1search0turn1search5
+- Motorola MA1 added as a separate accessory capability; it is represented as a physical transport boundary rather than copied firmware.
+- Ottocast U2-Air added as a separate physical accessory capability; Bluetooth/Wi-Fi transport behavior is recorded as reference material. citeturn1search1turn1search2
+- SnapPerf added as a Snapdragon/root-only performance reference. No Magisk/KernelSU/APatch hooks are activated in the standard Mini OS path. citeturn1search4
+- dex2oat Optimizer added as an ART optimization reference. No system-wide dexopt properties are injected without target-version evidence. citeturn0search2
+- AX Manager & Nexacore Combo could not be uniquely identified; it is explicitly unresolved rather than guessed.
+
+### Native integration
+- Extended `AndroidCapabilityRegistry` with MA1, U2-Air, SnapPerf, dex2oat and unresolved AX/Nexacore records.
+- Added fail-closed MA1/U2-Air accessory boundaries to `AccessoryTransportAdapters`.
+- Added `PerformanceModuleAdapters` for reference-only SnapPerf/dex2oat and unresolved AX/Nexacore.
+- Extended semantic registry tests to reject physical, root-only and unresolved capabilities as usable.
+- Updated Android capability registry documentation and canonical gate register.
+
+### Coding philosophy cross-reference
+- Applied the hard rules: internal implementation first, external code as reference, explicit provenance/licence state, least authority, fail-closed unknowns, deterministic adapter contracts, semantic tests, and runtime verification separation.
+- No proprietary firmware, vendor binaries, private APIs or root hooks were copied into the authoritative Mini OS source tree.
+
+### Verification
+**SOURCE/SEMANTIC INTEGRATION: PASS**
+**ANDROID/GRADLE BUILD: OPEN**
+**LIVE ACCESSORY DISCOVERY: OPEN**
+**ROOT/ART RUNTIME: OPEN**
+**AX MANAGER/NEXACORE IDENTITY: OPEN / UNRESOLVED**
+
 # 2026-09-22 — Android/AOSP + Automotive Federation Expansion
 
 ### External harvest
