@@ -23,3 +23,17 @@ Only approved non-confidential identifiers/hashes and release metadata may be an
 
 ## Promotion condition
 Repository verification + licence/IP review + security/dependency review + tests + regression + human release approval must precede an actual anchor transaction.
+
+## Multilingual extension — 2026-09-22
+
+Additional anchor-ready identifiers:
+- change_id: CHG-2026-09-22-MLANG-001
+- learning_event_id: FED-HARVEST-20260922-MLANG-01
+- language_contract: apps/shared/runtime/BIUPIU-LANGUAGE-CONTRACT-v1.json
+- harvest_record: research/BIUPIU-FOREIGN-LANGUAGE-CODING-PHILOSOPHY-HARVEST-20260922.md
+- coding_matrix_changelog: research/BIUPIU-CODING-MATRIX-CHANGELOG-20260922.md
+- native_android_selector: apps/shared/runtime/LanguageSelector.kt
+- native_windows_registry: apps/windows/BiupiuLanguageRegistry.cs
+- intelligence_language_module: software/rnd-os-ai/src/biupiu_ai/global_language_translation.py
+
+Anchor scope remains metadata-only. Hashes/IDs/manifests may be anchored after release approval; raw translations, private learning data, credentials, private research and source code are not written to the blockchain.
