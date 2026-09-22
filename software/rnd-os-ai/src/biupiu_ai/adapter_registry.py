@@ -34,6 +34,17 @@ USABLE_ADAPTERS=(
     AdapterSpec("autosar-capi","automotive","AUTOSAR Adaptive CAPI","automotive middleware reference",("communication","execution-management","logging","diagnostics"),"https://www.autosar.org/capi","partner/source-access conditions apply; reference/candidate only"),
 )
 
+    AdapterSpec("cocos2d-x","game-engine","Cocos2d-x","native 2D engine adapter",("scene-graph","2d-render","sprites","physics","audio","input","particles","tilemaps"),"https://github.com/cocos2d/cocos2d-x/","MIT; verify pinned release notices"),
+    AdapterSpec("cocos-engine","game-engine","Cocos Creator Engine","native 2D/3D engine adapter",("scene-graph","2d-render","3d-render","pbr","physics","ui","animation","audio","resources"),"https://github.com/cocos/cocos-engine/","MIT; verify pinned release notices"),
+    AdapterSpec("monogame","game-engine","MonoGame","managed runtime adapter",("graphics","audio","input","content-pipeline","localization","templates"),"https://github.com/MonoGame/MonoGame/","Microsoft Public License; third-party components require separate review"),
+    AdapterSpec("libgdx","game-engine","libGDX","JVM/mobile game runtime adapter",("graphics","audio","input","android-backend","desktop-backends","gwt","tools","box2d","bullet","freetype"),"https://github.com/libgdx/libgdx/","Apache-2.0; component/third-party notices must be retained"),
+    AdapterSpec("ashley-ecs","ecs","Ashley","entity-component-system adapter",("entity","component","system","engine","family-query"),"https://github.com/libgdx/ashley/","Apache-2.0; verify pinned release"),
+    AdapterSpec("raylib","game-engine","raylib","native rendering adapter",("window","input","audio","textures","models","materials","shaders","rlgl","raymath","vr"),"https://github.com/raysan5/raylib/","Zlib; retain upstream notice"),
+    AdapterSpec("threejs","game-engine","three.js","sandboxed web 3D adapter",("webgl","webgpu","scene-graph","controls","loaders","postprocessing","animation"),"https://github.com/mrdoob/three.js/","MIT; addons remain separately attributable"),
+    AdapterSpec("gdevelop","game-engine","GDevelop","sandboxed web/native runtime adapter",("event-system","behaviors","extensions","2d","3d","multiplayer"),"https://github.com/4ian/GDevelop/","MIT; extension licences must be reviewed individually"),
+    AdapterSpec("babylonjs","game-engine","Babylon.js","sandboxed web 3D adapter",("webgl","webgpu","scene-graph","gui","loaders","materials","postprocess","physics","inspector"),"https://github.com/BabylonJS/Babylon.js/","Apache-2.0; package-level dependencies require review"),
+    AdapterSpec("celeste-everest","game-reference","Everest","reference-only mod/runtime architecture",("mod-loader","mod-api","plugin-discovery","dependency-isolation"),"https://github.com/EverestAPI/Everest/","MIT for Everest; Celeste game assets/code remain rights-restricted and are not imported"),
+
 def adapter_ids()->Tuple[str,...]:
     return tuple(sorted(a.adapter_id for a in USABLE_ADAPTERS))
 
