@@ -284,3 +284,16 @@ No live hardware or CI result is marked verified unless an execution record exis
 
 ### Status transition
 **RUNTIME FAULT FOUND → ROOT CAUSE ISOLATED → CI DEPENDENCY FIX IMPLEMENTED → FRESH RUNTIME VERIFICATION OPEN.**
+
+
+## 2026-09-22 — Android/AOSP/Automotive Gate Register Cross-Link
+
+Canonical gate register: `research/BIUPIU-ANDROID-AOSP-AUTOMOTIVE-GATE-REGISTER-20260922.md`.
+
+Implementation-phase gates are **CLOSED**: external harvest, internal gap harvest, native adapter integration, guided fault finding, semantic checks, conflict/duplicate housekeeping, fail-closed boundaries, and documentation/changelog integration.
+
+Runtime/device/platform gates remain **OPEN**: Android/Gradle build, live Android Auto projection, MA2/AAWireless TWO/Carlinkit 2Air hardware, Vector CAN/CAN-FD HIL, LSPosed/Zygisk runtime, encrypted persistent notification storage, full AOSP/Pixel platform build, and unresolved GSM Flags 2.0 identity.
+
+Promotion rule: source implementation is not equivalent to runtime verification. No open gate is marked verified without execution evidence.
+
+**Status: IMPLEMENTATION CLOSED / RUNTIME-DEVICE-PLATFORM VERIFICATION OPEN.**
