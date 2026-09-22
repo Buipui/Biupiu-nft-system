@@ -1,0 +1,18 @@
+version: "1.0"
+name: biupiu-digital-twin-hierarchy
+principle: linked_subsystems_preserve_system_hierarchy
+rules:
+  - id: parent_authority
+    rule: parent_system_remains_authority_over_attached_subsystem
+  - id: non_destructive_mount
+    rule: subsystem_can_be_instantiated_in_multiple_parent_contexts_without_changing_canonical_owner
+  - id: explicit_attachment
+    rule: every_attachment_has_parent_id_and_canonical_owner_id
+  - id: no_authority_escalation
+    rule: attachment_does_not_transfer_control_authority
+  - id: cross_link_not_merge
+    rule: federation_links_systems_without_merging_identity_or_hierarchy
+  - id: fault_scope
+    rule: fault_is_scoped_to_owning_system_and_propagation_is_explicit
+  - id: healing_authority
+    rule: healing_proposal_must_return_to_owning_system_for_authorized_execution
