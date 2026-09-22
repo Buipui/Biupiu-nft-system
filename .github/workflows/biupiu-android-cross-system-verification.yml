@@ -60,6 +60,6 @@ jobs:
 
       - name: Validate harvest matrix
         run: python -m json.tool docs/architecture/BIUPIU-CROSS-SYSTEM-MODULE-HARVEST-MATRIX-2026-09-22.json >/dev/null
-
+\n      - name: Validate harvest testing protocol registry\n        run: python -m json.tool research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json >/dev/null\n\n      - name: Type-check federation harvest gate\n        run: npx -y -p typescript@5.8.3 tsc --noEmit --target ES2022 --module NodeNext --moduleResolution NodeNext --strict --skipLibCheck packages/biupiu-rnd-os/src/federation-harvest-gate.ts packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts\n\n      - name: Execute federation harvest gate tests\n        run: npx -y -p tsx@4.19.2 tsx packages/biupiu-rnd-os/src/federation-harvest-gate.test.ts\n
       - name: Report verification boundary
         run: echo "CI build/test is the authoritative runtime gate; source inspection alone does not mark device verification."
