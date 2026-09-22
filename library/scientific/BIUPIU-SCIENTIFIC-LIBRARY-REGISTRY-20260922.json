@@ -2,11 +2,12 @@
   "schema":"biupiu.scientific-library.v1",
   "date":"2026-09-22",
   "entries":[
-    {"name":"Eigen","version":"5.0.1","role":"linear_algebra","status":"ADAPTER_INTEGRATED","license":"MPL-2.0","authority":"external_provider"},
-    {"name":"GNU Scientific Library","version":"current-upstream-reference","role":"scientific_numerics","status":"OPTIONAL_ADAPTER_INTEGRATED","license":"GPL","authority":"external_provider"},
-    {"name":"Elmer FEM","version":"26.2.1","role":"multiphysics_solver_reference","status":"REFERENCE_ONLY","license":"GPL/LGPL components","authority":"external_reference"}
+    {"name":"Eigen","stable":"5.0.0","development":"5.0.1-dev","role":"linear_algebra","status":"ADAPTER_INTEGRATED","license":"MPL-2.0","authority":"external_provider"},
+    {"name":"GNU Scientific Library","stable":"2.8","role":"scientific_numerics","status":"OPTIONAL_ADAPTER_INTEGRATED","license":"GPL","authority":"external_provider"},
+    {"name":"Elmer FEM","role":"multiphysics_solver_reference","status":"REFERENCE_ONLY","authority":"external_reference"}
   ],
+  "optimization_candidates":["ARM_NEON","SIMD","SPARSE_LINEAR_ALGEBRA","GEOMETRY","ALIGNMENT","GSL_OPTIMIZED_FUNCTIONS","GSL_NUMERIC_TYPES","THREAD_SAFETY"],
+  "foreign_reference_surfaces":["GSL_JAPANESE_MANUAL","GSL_PORTUGUESE_MANUAL"],
   "promotion_rule":"External providers never become authoritative from documentation or presence alone.",
-  "routing":["MATH","GEOMETRY","PHYSICS","SIMULATORS","DIGITAL-TWIN","AI-ML","BIUPIU-OS","BIUPIU-MINI-OS","ANDROID"],
-  "verification":"SOURCE_IMPLEMENTED; CI_AND_RUNTIME_OPEN"
+  "verification":"PASS2_SOURCE_REFERENCE_CLOSED; CI_ANDROID_DEVICE_RUNTIME_OPEN"
 }
