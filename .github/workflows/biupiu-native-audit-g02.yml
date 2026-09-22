@@ -1,6 +1,8 @@
 name: Biupiu native audit G02
 
 on:
+  pull_request:
+    branches: ["main"]
   push:
     paths:
       - "intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py"
