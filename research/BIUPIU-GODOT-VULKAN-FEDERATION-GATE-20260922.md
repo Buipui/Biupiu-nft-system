@@ -95,3 +95,16 @@ Applied the hard-coded Native Coding Philosophy & Engineering Matrix:
 `SOURCE -> STATIC/SEMANTIC -> CLEAN BUILD -> RUNTIME -> GPU DEVICE -> BENCHMARK/REGRESSION -> PROMOTION`
 
 **Status: REGISTERED / IMPLEMENTED SOURCE LAYER / SOURCE-LEVEL VERIFIED / RUNTIME VERIFICATION OPEN.**
+
+
+## Final source-hardening pass
+A source-write encoding defect was detected during the semantic read-back: two Java files initially contained literal newline escape sequences from the repository mutation layer. The affected files were immediately corrected and re-read.
+
+### Read-back verification
+- `AndroidCapabilityRegistry.java`: Java structure restored; capability entries are syntactically separated.
+- `AndroidCapabilityRegistryTest.java`: assertions restored to normal Java source lines.
+- `GraphicsCapabilityAdapters.java`: package/import/class structure and Android Vulkan feature query are internally consistent.
+- Android `PackageManager.FEATURE_VULKAN_HARDWARE_LEVEL` is an official API-level feature for hardware-accelerated Vulkan capability and physical-device enumeration evidence. citeturn1search0
+
+**Source semantic hardening: PASS by read-back inspection.**
+**Actual Android compilation/runtime: OPEN.**
