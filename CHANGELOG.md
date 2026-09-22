@@ -366,3 +366,15 @@ No third-party executable code or proprietary binaries were copied.
 - Updated scientific library registry and cross-link digest.
 - Pass 2 source/reference gate: CLOSED.
 - CI, Android NDK/Gradle, device performance and GSL runtime: OPEN.
+
+
+# 2026-09-22 — AI / Multimedia / UI Federation Harvest
+- Internal-first harvest reconciled the Android federation registry, native coding philosophy/matrix and existing Mini OS external-integration rules.
+- Added `AiMultimediaUiFederationRegistry` and source-level semantic coverage for all requested AI/multimedia/UI capability families.
+- Integrated Android ONNX Runtime 1.30.0 and LiteRT 2.1.0 dependencies.
+- Added Kotlin 2.0.21, Compose 1.12.1, Material 3 1.4.0 and Navigation 3 1.1.7 build dependencies.
+- Kept Qualcomm IMSDK 2.0 as a Dragonwing/Qualcomm Linux platform boundary; QAIRT/QNN as licence-reviewed external provider; Huawei HiAI as device-required; Paddle Lite and Apache TVM as adapter-only providers.
+- Added RenderEffect capability guard for API 31+ because Mini OS minSdk remains 29.
+- TensorFlow Lite is retained as a compatibility identifier rather than a duplicate forward runtime; LiteRT is the forward Android runtime.
+- No third-party executable source, proprietary SDK binary or vendor driver was copied.
+- Source integration: IMPLEMENTED. Semantic fail-closed logic: REGISTERED/PASS BY SOURCE INSPECTION. Android/Gradle build, runtime, device and accelerator verification: OPEN.
