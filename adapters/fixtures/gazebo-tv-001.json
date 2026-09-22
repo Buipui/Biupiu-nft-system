@@ -1,0 +1,21 @@
+{
+  "test_vector_id": "GAZEBO-TV-001",
+  "world": "single_rigid_body_gravity",
+  "initial_pose": [
+    0,
+    0,
+    1
+  ],
+  "initial_velocity": [
+    0,
+    0,
+    0
+  ],
+  "gravity": [
+    0,
+    0,
+    -9.81
+  ],
+  "reset_must_restore_initial_state": true,
+  "deterministic": true
+}

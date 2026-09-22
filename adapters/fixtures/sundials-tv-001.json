@@ -1,0 +1,12 @@
+{
+  "test_vector_id": "SUNDIALS-TV-001",
+  "equation": "dy/dt=-k*y",
+  "y0": 1,
+  "k": 0.5,
+  "t": 2,
+  "expected": {
+    "y": 0.3678794412
+  },
+  "tolerance": 1e-10,
+  "deterministic": true
+}

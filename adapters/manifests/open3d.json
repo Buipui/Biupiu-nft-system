@@ -1,0 +1,25 @@
+{
+  "resource_id": "Open3D",
+  "capability": "point-cloud/3D geometry",
+  "version": "PIN_REQUIRED",
+  "licence_boundary": "EXTERNAL_RESOURCE_BOUNDARY",
+  "input_schema": {
+    "points": "Nx3 float"
+  },
+  "output_schema": {
+    "point_count": "integer",
+    "centroid": "3-vector",
+    "bounding_box": "min/max 3-vectors"
+  },
+  "units": {
+    "coordinates": "declared"
+  },
+  "coordinate_frame": "declared",
+  "provenance_required": true,
+  "security": {
+    "os_authority": false,
+    "fail_closed": true
+  },
+  "test_vector_id": "OPEN3D-TV-001",
+  "promotion_state": "ADAPTER-READY"
+}
