@@ -17,11 +17,16 @@ export interface HarvestEvidence {
   source: string;
   licenceReviewed: boolean;
   provenanceRecorded: boolean;
+  versionCompared: boolean;
+  dependencyCheckPassed: boolean;
+  normalisationPassed: boolean;
   staticTestPassed: boolean;
   buildPassed: boolean;
   securityReviewPassed: boolean;
+  integrationTestPassed: boolean;
   regressionPassed: boolean;
   runtimeTestPassed: boolean;
+  rollbackReference?: string;
   testReferences: string[];
 }
 
@@ -65,13 +70,18 @@ export function evaluateHarvestPromotion(record: HarvestRecord): PromotionResult
   const evidence = record.evidence;
   const checks: Array<[boolean, string]> = [
     [evidence.provenanceRecorded, "provenance is not recorded"],
+    [evidence.versionCompared, "version comparison is incomplete"],
     [evidence.licenceReviewed, "licence/IP review is incomplete"],
+    [evidence.dependencyCheckPassed, "dependency check has not passed"],
+    [evidence.normalisationPassed, "normalisation has not passed"],
     [evidence.staticTestPassed, "static tests have not passed"],
     [evidence.buildPassed, "build has not passed"],
     [evidence.securityReviewPassed, "security review has not passed"],
+    [evidence.integrationTestPassed, "integration tests have not passed"],
     [evidence.regressionPassed, "regression tests have not passed"],
     [evidence.runtimeTestPassed, "runtime verification has not passed"],
     [evidence.testReferences.length > 0, "test evidence references are missing"],
+    [nonEmpty(evidence.rollbackReference ?? ""), "rollback reference is missing"],
   ];
 
   for (const [passed, reason] of checks) {
