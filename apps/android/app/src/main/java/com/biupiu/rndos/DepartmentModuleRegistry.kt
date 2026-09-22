@@ -12,6 +12,7 @@ object DepartmentModuleRegistry {
         "SMART_FARMING" -> DepartmentModuleTarget(route, "@biupiu/smart-farming", "biupiu://department/smart-farming", "FARMING_WORLD")
         "SMART_METAL_WORKSHOP" -> DepartmentModuleTarget(route, "@biupiu/smart-metallurgy", "biupiu://department/smart-metal-workshop", "METAL_MAKING_WORLD")
         "RND_OS" -> DepartmentModuleTarget(route, "@biupiu/rnd-os", "biupiu://department/rnd-os", "RND_OS_HOME")
+        "RENDER_PIPELINE" -> DepartmentModuleTarget(route, "@biupiu/render-pipeline", "biupiu://department/render-pipeline", "RENDER_PIPELINE")
         "CREATIVE_AI" -> DepartmentModuleTarget(route, "@biupiu/firefly", "biupiu://department/creative-ai", "CREATIVE_AI_HOME")
         else -> null
     }

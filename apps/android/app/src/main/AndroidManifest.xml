@@ -8,9 +8,7 @@
         android:allowBackup="false"
         android:fullBackupContent="@xml/backup_rules"
         android:dataExtractionRules="@xml/data_extraction_rules">
-        <activity
-            android:name=".MainActivity"
-            android:exported="true">
+        <activity android:name=".MainActivity" android:exported="true">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
                 <category android:name="android.intent.category.LAUNCHER" />
@@ -27,5 +25,6 @@
         <activity android:name=".SmartFarmingActivity" android:exported="false" />
         <activity android:name=".SmartMetallurgyActivity" android:exported="false" />
         <activity android:name=".RndOsActivity" android:exported="false" />
+        <activity android:name=".RenderPipelineActivity" android:exported="false" />
     </application>
 </manifest>
