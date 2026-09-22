@@ -1,0 +1,42 @@
+name: Biupiu Systemwide Module Audit
+on:
+  push:
+    branches: [main]
+    paths: ["apps/**","packages/**","software/**","dms/**","world/**","intelligence/**","research/**","docs/architecture/**",".github/workflows/biupiu-systemwide-module-audit.yml"]
+  pull_request:
+    paths: ["apps/**","packages/**","software/**","dms/**","world/**","intelligence/**","research/**","docs/architecture/**",".github/workflows/biupiu-systemwide-module-audit.yml"]
+  workflow_dispatch:
+jobs:
+  source-smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - run: python intelligence/BIUPIU-SYSTEMWIDE-MODULE-SMOKE-AUDIT.py
+  npm-contracts:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-node@v4
+        with: {node-version: "22", cache: npm}
+      - run: npm ci
+      - run: npm run build:packages
+      - run: npm run compile
+      - run: npm test
+  android:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-java@v4
+        with: {distribution: temurin, java-version: "17"}
+      - uses: gradle/actions/setup-gradle@v4
+        with: {gradle-version: "8.9"}
+      - run: |
+          test -f apps/android/settings.gradle.kts
+          test -f apps/android/build.gradle.kts
+          test -f apps/android/app/build.gradle.kts
+      - working-directory: apps/android
+        run: gradle --no-daemon :app:assembleDebug
+      - working-directory: apps/android
+        run: gradle --no-daemon :app:testDebugUnitTest
