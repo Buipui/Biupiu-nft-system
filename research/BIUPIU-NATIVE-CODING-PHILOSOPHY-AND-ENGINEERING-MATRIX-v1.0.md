@@ -632,3 +632,25 @@ Canonical supporting records:
 - `intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py`
 
 **Status: GOVERNANCE EXTENSION IMPLEMENTED / SOURCE-LEVEL CROSS-LINKED / RUNTIME VERIFICATION SEPARATE.**
+
+## 25. Spelling, Unicode and Semantic Integrity Gate — 23 September 2026
+
+Spelling is treated as a functional engineering concern where names, keys, paths, symbols, enum values, configuration fields and contract identifiers affect program behaviour. Documentation terminology is also checked because terminology drift can propagate into generated code and AI retrieval.
+
+Mandatory sequence:
+DETECT -> SPELL-CHECK -> UNICODE/NORMALIZATION CHECK -> CANONICAL TERMINOLOGY CHECK -> SEMANTIC REGISTRY CROSS-CHECK -> FOREIGN-LANGUAGE/LOCALE CHECK -> LANGUAGE SYNTAX CHECK -> CONTRACT TEST -> REGRESSION.
+
+Hard rules:
+- High-confidence misspellings in executable identifiers, keys, paths, contract names or configuration are BLOCKING.
+- Unicode bidi controls, zero-width controls and suspicious normalization changes in executable/configuration material are BLOCKING.
+- Canonical system IDs, contract IDs and capability names must match their registries exactly.
+- Foreign-language research/code is preserved rather than mechanically translated. Original language, locale where known, source provenance and intended semantic meaning must be retained.
+- A translated term must never silently replace a source-language technical identifier.
+- Foreign-language code is reviewed against that language's own lexical/semantic rules before promotion. Unicode identifier support is language-specific; Unicode normalization and identifier syntax must follow the applicable language standard.
+- AI must not correct an unfamiliar foreign term by guessing; it must cross-reference the source language, research record and canonical Biupiu registry.
+
+Unicode UAX #31 provides a normative reference model for identifier syntax and normalization. NASA software-engineering guidance likewise treats coding standards, naming, structure, error handling and verification as engineering controls rather than cosmetic style.
+
+Audit authority: intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
+
+The audit is repository-wide at CI execution time and remains source-level. Passing it does not imply runtime, hardware or UE5 verification.
