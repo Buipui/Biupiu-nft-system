@@ -450,5 +450,66 @@
       "evidence_state"
     ],
     "rule": "Generate differences on request; do not infer runtime capability or promotion authority from source diff."
+  },
+  "external_harvest_20260924": {
+    "status": "HARVESTED_REFERENCE_ONLY_UNTIL_GATES_PASS",
+    "lanes": [
+      "Chinese",
+      "Russian",
+      "German",
+      "localized AOSP"
+    ],
+    "findings": [
+      {
+        "id": "EXT-ANDROID-MAINLINE-APEX",
+        "source": "AOSP localized Mainline documentation",
+        "status": "REFERENCE_INTEGRATED",
+        "use": "APEX/APK modularity and atomic update/rollback",
+        "promotion": "architecture pattern only"
+      },
+      {
+        "id": "EXT-ANDROID-BUILD-HARDENING",
+        "source": "Gitee aosp-riscv platform_build",
+        "status": "CANDIDATE_PATTERN",
+        "use": "missing-module checks, host/target package separation, reproducible build-path restrictions",
+        "promotion": "validation candidate; no source import"
+      },
+      {
+        "id": "EXT-WAYDROID-PC-RUNNER",
+        "source": "Gitee Android component projects",
+        "status": "QUARANTINED_REFERENCE",
+        "use": "PC/Waydroid configuration and capability-difference observations",
+        "promotion": "adapter research only"
+      },
+      {
+        "id": "EXT-ANDROID-STRESS-TEST",
+        "source": "Gitee AndroidStressTest listing",
+        "status": "CANDIDATE_TEST_MATRIX",
+        "use": "CPU, memory, video, Wi-Fi, Bluetooth, airplane, reboot, sleep, factory-reset stress categories",
+        "promotion": "test-plan candidate; device verification required"
+      },
+      {
+        "id": "EXT-AOSP-BUILD-PROJECT-LIST",
+        "source": "Habr Russian AOSP build article",
+        "status": "HISTORICAL_REFERENCE",
+        "use": "repo/project.list and module inspection workflow",
+        "promotion": "research workflow only"
+      },
+      {
+        "id": "EXT-AOSP-RELEASE-CADENCE",
+        "source": "Heise German Android/AOSP reporting",
+        "status": "CONTEXT_REFERENCE",
+        "use": "AOSP source-release cadence awareness",
+        "promotion": "planning context only"
+      }
+    ],
+    "missing_module_candidates": [
+      "Android system-module inventory and rollback controller",
+      "host/target module separation validator",
+      "missing-required-module fail-closed validator",
+      "Android stress-test matrix",
+      "PC/Waydroid capability-difference adapter"
+    ],
+    "integration_rule": "No foreign-language source is promoted by language or novelty. Candidates require provenance, licence, dependency, static, unit, integration, regression, runtime and compatibility gates."
   }
 }
