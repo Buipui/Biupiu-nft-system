@@ -446,3 +446,11 @@ Executed the controlled continuation protocol in the available deterministic sof
 - Included mini-os/android/federation as an Android app Java source set so federation contracts participate in the Gradle build configuration.
 - Added machine-readable integration state under research/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.json.
 - Runtime/device/build verification remains OPEN; no source-level change is treated as physical Android verification.
+
+## 2026-09-24 — Android Build Audit + Foreign-Language Module Harvest + Housekeeping
+- Audited the Mini OS Android CI configuration: JDK 17, SDK 35, Gradle 8.9, unit tests, assembleDebug and source sanity are configured; current integration commit remains PENDING with no reported CI result.
+- Harvested Chinese, Russian and German Android/AOSP sources and localized AOSP documentation.
+- Added candidate patterns for Mainline/APEX rollback, missing-required-module validation, host/target separation, Android stress testing and PC/Waydroid capability differences.
+- No foreign-language source or executable was vendored or promoted.
+- Updated native system catalogue with provenance/status/promotion gates and added the foreign-language harvest record.
+- Added Android housekeeping/extermination/smoke/fault log. Ambiguous duplicates were retained and classified rather than destructively deleted.
