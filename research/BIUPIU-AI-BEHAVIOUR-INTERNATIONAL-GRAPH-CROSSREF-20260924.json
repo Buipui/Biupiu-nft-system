@@ -1,0 +1,100 @@
+{
+  "schema": "biupiu.ai-behaviour-crossref.v1",
+  "date": "2026-09-24",
+  "baseline": "13c6237fa04f558e4943719bcd2260e15fe13987",
+  "status": "SOURCE_LEVEL_CROSS_REFERENCE_COMPLETED",
+  "authority": "BIUPIU_NATIVE_CODING_PHILOSOPHY_AND_ENGINEERING_MATRIX",
+  "international_reference": [
+    {
+      "name": "NIST AI RMF",
+      "role": "AI risk/trustworthiness lifecycle reference",
+      "authority": "REFERENCE_ONLY"
+    },
+    {
+      "name": "ISO/IEC 42001:2023",
+      "role": "AI management-system reference",
+      "authority": "REFERENCE_ONLY"
+    },
+    {
+      "name": "W3C PROV",
+      "role": "machine-readable provenance/interoperability reference",
+      "authority": "REFERENCE_ONLY"
+    }
+  ],
+  "layers": [
+    {
+      "id": "BIUPIU_INTELLIGENCE",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "NATIVE_AI",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "ML",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "QUANTUM_INSPIRED",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "FEDERATION",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "KNOWLEDGE_GRAPH",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "CODING_PHILOSOPHY",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "CODING_MATRIX",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "DIGITAL_TWIN",
+      "result": "ALIGNED"
+    },
+    {
+      "id": "GRAPH_HARVEST",
+      "result": "ALIGNED"
+    }
+  ],
+  "behaviour_fault_classes": [
+    "AUTHORITY_LEAK",
+    "EVIDENCE_LEAK",
+    "PROVENANCE_BREAK",
+    "MODEL_FACT_COLLAPSE",
+    "RUNTIME_EQUIVALENCE_ERROR",
+    "QUANTUM_CLAIM_LEAK",
+    "OPTIMISATION_CLAIM_LEAK",
+    "GRAPH_EDGE_UNSUPPORTED",
+    "LICENCE_AUTHORITY_LEAK",
+    "HISTORICAL_RECORD_MUTATION"
+  ],
+  "verification": {
+    "internal_matrix": "PASS_SOURCE_INSPECTION",
+    "international_reference_mapping": "PASS",
+    "graph_cross_reference": "PASS",
+    "intelligence": "PASS_SOURCE_ALIGNMENT",
+    "native_ai": "PASS_SOURCE_CONTRACT_ALIGNMENT",
+    "ml": "PASS_GOVERNANCE_ALIGNMENT",
+    "quantum": "PASS_BOUNDARY_PRESERVED",
+    "federation": "PASS_BOUNDARY_PRESERVED",
+    "runtime": "OPEN",
+    "hardware": "OPEN",
+    "ue5": "OPEN",
+    "qpu": "OPEN",
+    "promotion": "NOT_PERFORMED"
+  },
+  "changes": [
+    "Registered canonical AI behaviour interpretation.",
+    "Added behaviour/evidence overlay to knowledge-graph governance.",
+    "Added explicit behaviour fault classes for future audits.",
+    "Mapped international references to existing Biupiu controls without granting external authority.",
+    "Preserved source/runtime/physical/QPU evidence boundaries."
+  ]
+}
