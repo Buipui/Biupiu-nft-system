@@ -489,3 +489,54 @@ Executed the controlled continuation protocol in the available deterministic sof
 - Added `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-20260924.md`.
 - Preserved existing implementations and failure lineage; no destructive deletion was justified by the source-only comparison.
 - The audit result is an evidence boundary and integration hypothesis, not a performance verdict.
+
+
+## 2026-09-24 — Native Blind Audit: Quantum vs Federation + Optimisation Modules
+
+### Audit
+- Repeated the native blind Quantum-vs-Federation audit with optimisation modules introduced as a common controlled candidate layer.
+- Architecture identities remained blinded as ARM-A / ARM-B during test definition.
+- Optimisation candidates were classified without granting them independent authority.
+
+### Optimisation surfaces audited
+- Compute scheduling/routing and capacity selection.
+- ARM NEON/SIMD and accelerator capability selection.
+- Sparse linear algebra and computational-geometry paths.
+- Numerical/alignment optimisation and scientific-library optimisation candidates.
+- ML hyperparameter/search optimisation and portable/federated inference boundaries.
+- Smart-farming and Digital-Twin optimisation loops.
+
+### Controls
+- Baseline A remains unchanged and is the common native control.
+- Matched optimisation candidates must use the same eligibility conditions and measurement criteria on both blind arms where applicable.
+- Non-applicable candidates are recorded as NOT_APPLICABLE rather than treated as failures.
+- Optimisation retention requires reproducibility, correctness, security, provenance, compatibility and regression evidence.
+- No optimiser, Quantum module or Federation module can self-authorise promotion.
+
+### Findings
+- Federation provides the broadest existing orchestration/evidence seam for capability-aware optimisation.
+- Quantum already contains candidate-selection logic using classical score, simulator score, uncertainty and resource pressure; this remains a routing/validation decision.
+- Existing scheduler fault/recovery evidence is retained as a regression case for optimisation of compute routing.
+- SIMD/NEON, sparse/geometry, numerical and ML optimisation candidates remain runtime-dependent.
+- Domain optimisation protocols already require measurement and human review before implementation.
+- No source-level evidence was sufficient to claim optimisation improvement, quantum advantage or comparative architectural superiority.
+
+### Repository record
+- Added `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md`.
+- Existing implementations and failure lineage preserved.
+- Optimisation candidates remain REGISTERED / CANDIDATE pending matched execution.
+
+### Verification boundary
+**SOURCE AUDIT:** COMPLETE.
+
+**OPTIMISATION INVENTORY:** COMPLETE.
+
+**BLIND EXECUTION:** OPEN.
+
+**RUNTIME/HARDWARE BENCHMARK:** OPEN.
+
+**QPU:** DISABLED.
+
+**PROMOTION:** NOT PERFORMED.
+
+**Status: QUANTUM + FEDERATION + OPTIMISATION SOURCE AUDIT COMPLETE / MATCHED EXECUTION OPEN.**
