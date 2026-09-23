@@ -50,3 +50,20 @@ ANDROID DEVICE/HARDWARE: OPEN
 UE5 LOCAL RUNTIME: OPEN
 PHYSICAL/HIL: OPEN
 PRODUCTION PROMOTION: OPEN
+
+## Native AI / Federation Evolution Baseline — 23 September 2026
+
+New canonical controls added after the current-system audit:
+- Native system catalogue with deterministic `BPU.SYS.*` IDs.
+- Native system tag schema for VSS/Codex disambiguation.
+- Static native-system catalogue validator.
+- CI workflow for catalogue validation.
+- Federation native-evolution philosophy.
+- Current scientific learning literature registry.
+
+The catalogue maps native implementation authorities and required capability sets for OS Core, DMS, Native Intelligence, Federation, Digital Orchestra, Digital Twin, Universal Simulator Federation, Math/Physics, Photonics, Crystal/Materials, Supercapacitor/Energy Storage, Hemp/Biomass Materials, AI Accelerator Federation, Android Mini OS, Windows Shell, Smart Farming, Automotive Simulation, World/UE integration, Blockchain/Provenance and NFT/Provenance.
+
+Evidence interpretation remains unchanged: source implementation is not runtime verification; source/runtime/hardware/device/UE5/live-chain gates remain distinct.
+
+**New source-level baseline: REGISTERED / IMPLEMENTED.**
+**Fresh CI/runtime execution: PENDING until observed.**
