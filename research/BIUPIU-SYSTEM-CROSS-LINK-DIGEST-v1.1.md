@@ -329,3 +329,17 @@ RESEARCH -> CLASSIFY -> CROSS-LINK -> INTERNAL CAPABILITY MATCH -> NATIVE DESIGN
 Blockchain remains an integrity anchor. Local/native systems remain the learning and computation authority; a blockchain transaction is not claimed until transaction identity and inclusion evidence are independently available.
 
 **Status: SOURCE ARCHITECTURE REGISTERED / CATALOGUED / LITERATURE REGISTERED / RUNTIME AND LIVE-CHAIN VERIFICATION OPEN.**
+
+## 2026-09-23 — Spelling / Unicode / Semantic Integrity
+
+Repository-wide semantic hygiene is now a first-class native coding gate.
+
+Authority: intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
+Execution workflow: .github/workflows/biupiu-repository-spelling-semantic-audit.yml
+Native semantic smoke integration: .github/workflows/biupiu-native-semantic-smoke.yml
+
+Checks include high-confidence spelling defects, Unicode control hazards, normalization review, canonical terminology, native-system registry paths, multilingual locale/provenance review and semantic cross-link integrity.
+
+Foreign-language harvest is preserved as source material. AI must not translate or 'correct' a foreign identifier without source-language and contract cross-reference.
+
+Remote search found no matches for the initial high-confidence typo set. Full repository execution remains the authoritative gate.
