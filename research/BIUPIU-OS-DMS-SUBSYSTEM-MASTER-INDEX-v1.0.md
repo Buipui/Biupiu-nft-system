@@ -541,3 +541,16 @@ Canonical records:
 - research/BIUPIU-FOREIGN-LANGUAGE-ANDROID-MODULE-HARVEST-20260924.md
 - research/BIUPIU-ANDROID-HOUSEKEEPING-EXTERMINATION-SMOKE-FAULT-LOG-20260924.md
 - research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json
+
+
+## 2026-09-24 — System-Wide Federation + Optimisation Integration Update
+
+Canonical integration record: `research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md`.
+
+The 2026-09-24 blind Quantum-vs-Federation audit, matched optimisation protocol, Android Mini OS Native Intelligence/Federation bridge, Digital Twin, computational-geometry, Digital Filing and UE5 runtime boundaries are now cross-linked as one governed source-level integration state.
+
+Optimisation is registered as a common controlled candidate layer covering compute routing, ARM NEON/SIMD/accelerator selection, sparse/geometry, numerical/alignment, ML search and domain optimisation. It does not become an independent authority and cannot self-promote. Baseline A remains unchanged.
+
+Authority remains: HUMAN RELEASE -> CORE OS/DMS -> DOMAIN OWNER -> NATIVE INTELLIGENCE -> FEDERATION -> ADAPTER/PROVIDER -> EXTERNAL REFERENCE.
+
+Source integration is complete for the documented changes. Matched blind execution, fresh CI, Android/device runtime, GPU/NPU/NEON correlation, UE5 runtime/build, HIL, production security/signing and QPU execution remain OPEN. No optimisation improvement, quantum advantage, runtime superiority or production readiness is claimed.
