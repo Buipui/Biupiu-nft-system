@@ -511,5 +511,51 @@
       "PC/Waydroid capability-difference adapter"
     ],
     "integration_rule": "No foreign-language source is promoted by language or novelty. Candidates require provenance, licence, dependency, static, unit, integration, regression, runtime and compatibility gates."
+  },
+  "native_blind_audit_quantum_vs_federation_20260924": {
+    "status": "SOURCE_AUDIT_COMPLETE_EXECUTION_OPEN",
+    "record": "research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-20260924.md",
+    "control": "FEDERATION_BASELINE_A_20260923",
+    "blind_arms": [
+      "ARM-A",
+      "ARM-B"
+    ],
+    "criteria": [
+      "capability_equivalence",
+      "correctness",
+      "deterministic_replay",
+      "resource_cost",
+      "failure_handling",
+      "provenance",
+      "regression",
+      "uncertainty",
+      "scalability",
+      "promotion_safety"
+    ],
+    "findings": {
+      "quantum": "specialised simulator/algorithm/provider capability; QPU disabled",
+      "federation": "governed orchestration/evidence boundary",
+      "overlap": [
+        "selection",
+        "validation",
+        "provenance",
+        "routing"
+      ],
+      "integration_hypothesis": "quantum provider logic may operate inside Federation orchestration/evidence contracts"
+    },
+    "verdict": {
+      "winner": "NOT_ASSIGNED",
+      "quantum_advantage": "NOT_CLAIMED",
+      "federation_superiority": "NOT_CLAIMED",
+      "promotion": "NOT_PERFORMED"
+    },
+    "open_gates": [
+      "blind_execution",
+      "live_federation_runtime",
+      "QPU",
+      "UE5",
+      "Android",
+      "hardware_correlation"
+    ]
   }
 }
