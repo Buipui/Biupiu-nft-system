@@ -7,17 +7,91 @@
   "ai_hard_gate": "intelligence/BIUPIU-AI-CODING-HARD-GATE-v1.0.json",
   "audit": "intelligence/BIUPIU-NATIVE-SEMANTIC-CODE-AUDIT.py",
   "languages": {
-    "python": {"roles":["intelligence","ml","research","orchestration"],"tests":"pytest"},
-    "typescript": {"roles":["contracts","federation","web","native-adapters"],"tests":"unit+contract"},
-    "javascript": {"roles":["legacy","browser"],"policy":"minimize new authoritative JS"},
-    "c": {"roles":["abi","hal","device"],"boundary":"stable C ABI"},
-    "cpp": {"roles":["simulation","geometry","graphics","science"],"boundary":"versioned serialization"},
-    "rust": {"roles":["security","memory","concurrency"],"boundary":"C ABI where durable"},
-    "kotlin": {"roles":["android"],"tests":"unit+device-runtime"},
-    "csharp": {"roles":["windows"],"tests":"unit+integration"},
-    "solidity": {"roles":["evm","provenance","accounting"],"tests":"invariant+failure"},
-    "schema": {"roles":["contracts","manifests"],"tests":"schema validation"},
-    "ci-shell": {"roles":["build","test","release"],"policy":"fail-closed"}
+    "python": {
+      "roles": [
+        "intelligence",
+        "ml",
+        "research",
+        "orchestration"
+      ],
+      "tests": "pytest"
+    },
+    "typescript": {
+      "roles": [
+        "contracts",
+        "federation",
+        "web",
+        "native-adapters"
+      ],
+      "tests": "unit+contract"
+    },
+    "javascript": {
+      "roles": [
+        "legacy",
+        "browser"
+      ],
+      "policy": "minimize new authoritative JS"
+    },
+    "c": {
+      "roles": [
+        "abi",
+        "hal",
+        "device"
+      ],
+      "boundary": "stable C ABI"
+    },
+    "cpp": {
+      "roles": [
+        "simulation",
+        "geometry",
+        "graphics",
+        "science"
+      ],
+      "boundary": "versioned serialization"
+    },
+    "rust": {
+      "roles": [
+        "security",
+        "memory",
+        "concurrency"
+      ],
+      "boundary": "C ABI where durable"
+    },
+    "kotlin": {
+      "roles": [
+        "android"
+      ],
+      "tests": "unit+device-runtime"
+    },
+    "csharp": {
+      "roles": [
+        "windows"
+      ],
+      "tests": "unit+integration"
+    },
+    "solidity": {
+      "roles": [
+        "evm",
+        "provenance",
+        "accounting"
+      ],
+      "tests": "invariant+failure"
+    },
+    "schema": {
+      "roles": [
+        "contracts",
+        "manifests"
+      ],
+      "tests": "schema validation"
+    },
+    "ci-shell": {
+      "roles": [
+        "build",
+        "test",
+        "release"
+      ],
+      "policy": "fail-closed"
+    }
   },
   "cross_language_contract": [
     "stable IDs",
@@ -30,5 +104,10 @@
     "provenance",
     "correlation IDs"
   ],
-  "promotion_rule": "semantic audit + language tests + cross-language regression + provenance + security + rollback + human/OS gate"
+  "promotion_rule": "semantic audit + language tests + cross-language regression + provenance + security + rollback + human/OS gate",
+  "native_system_identity": "research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md",
+  "native_system_catalogue": "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json",
+  "native_evolution_philosophy": "research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md",
+  "scientific_learning_registry": "research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md",
+  "vss_rule": "Use canonical BPU.SYS.* system identity and contract IDs before filename or package similarity; never infer runtime capability from source presence."
 }
