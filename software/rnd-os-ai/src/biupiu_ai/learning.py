@@ -328,3 +328,69 @@ def compare_harvest_passes(search_id: str, pass_one_refs: Sequence[str], pass_tw
     else:
         reason = "RESULT_SET_CHANGED_REQUIRES_RECENCY_QUERY_AND_SOURCE_INDEX_REVIEW"
     return HarvestComparison(search_id, tuple(pass_one_refs), tuple(pass_two_refs), common, only_a, only_b, reason)
+
+
+@dataclass(frozen=True)
+class PassiveLearningObservation:
+    """Low-cost observation captured while a module is PASSIVE.
+
+    Passive learning records observations without activating the target module
+    or granting authority to modify production code.
+    """
+    target_id: str
+    signal_type: str
+    value: float
+    confidence: float
+    resource_state: str = "PASSIVE"
+    source_ref: str = ""
+
+def make_passive_learning_record(
+    observation: PassiveLearningObservation,
+    *,
+    learning_id: str,
+    model_version: str = "passive-learning-v1",
+) -> LearningRecord:
+    """Convert passive telemetry into governed learning evidence."""
+    if observation.resource_state != "PASSIVE":
+        raise ValueError("passive learning requires PASSIVE resource state")
+    if not all(math.isfinite(float(x)) and 0.0 <= float(x) <= 1.0
+               for x in (observation.value, observation.confidence)):
+        raise ValueError("passive observation value/confidence must be between 0 and 1")
+    refs = (observation.source_ref,) if observation.source_ref else ()
+    return make_learning_record(
+        learning_id=learning_id,
+        target_type="PASSIVE_MODULE",
+        target_id=observation.target_id,
+        input_refs=refs,
+        evidence_state="SUPPORTED" if observation.confidence >= 0.5 else "PRELIMINARY",
+        knowledge_class="MEASUREMENT",
+        result_version="passive-learning-v1",
+        model_version=model_version,
+        expected_outcome=None,
+        observed_outcome=f"{observation.signal_type}={observation.value:.6f};confidence={observation.confidence:.6f}",
+        next_action="TEST",
+    )
+
+
+def passive_learning_candidate(
+    observation_count: int,
+    *,
+    uncertainty: float,
+    recurrence: float,
+    regression_safety: float = 0.0,
+) -> CandidateScore:
+    """Rank a passive observation for later active validation.
+
+    This improves future scheduling/optimisation decisions without activating
+    the module solely for learning.
+    """
+    if observation_count < 0:
+        raise ValueError("observation_count must be non-negative")
+    return score_learning_candidate(
+        "passive-observation",
+        information_gain=min(1.0, observation_count / 100.0),
+        uncertainty_reduction=max(0.0, min(1.0, 1.0 - uncertainty)),
+        model_disagreement=max(0.0, min(1.0, recurrence)),
+        feasibility=1.0,
+        regression_safety=max(0.0, min(1.0, regression_safety)),
+    )
