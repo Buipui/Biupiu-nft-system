@@ -81,6 +81,7 @@ def audit():
     findings = []
     counts = {"files": 0, "non_ascii_files": 0, "foreign_review_files": 0}
 
+    audit_script = Path(__file__).resolve()
     for p in files():
         counts["files"] += 1
         try:
@@ -93,7 +94,7 @@ def audit():
         if any(ord(ch) > 127 for ch in text):
             counts["non_ascii_files"] += 1
 
-        for bad, good in MISSPELLINGS.items():
+        # The audit authority contains the canonical typo->correction dictionary itself.\n        # Do not report the dictionary as a repository defect.\n        if p.resolve() != audit_script:\n            typo_items = MISSPELLINGS.items()\n        else:\n            typo_items = ()\n        for bad, good in typo_items:
             pattern = re.compile(r"(?<![A-Za-z])" + re.escape(bad) + r"(?![A-Za-z])", re.I)
             for n, line in line_hits(text, pattern):
                 findings.append(("BLOCK", rel, n, f"spelling: {bad} -> {good}: {line}"))
@@ -105,7 +106,7 @@ def audit():
         # Executable identifiers: allow language syntax to decide later, but flag
         # non-ASCII identifier characters for explicit review rather than silently
         # normalising harvested foreign-language code.
-        if p.suffix.lower() in {".py", ".ts", ".tsx", ".js", ".jsx", ".c", ".h", ".cc", ".cpp", ".cxx", ".hpp", ".rs", ".kt", ".kts", ".java", ".cs", ".sol"}:
+        if p.suffix.lower() in {".py", ".ts", ".tsx", ".js", ".jsx", ".c", ".h", ".cc", ".cpp", ".cxx", ".hpp", ".rs", ".kt", ".kts", ".java", ".cs", ".sol"} and p.resolve() != audit_script:
             for n, line in line_hits(text, re.compile(r"\b[A-Za-z_][A-Za-z0-9_]*[^\x00-\x7F\s,;(){}\[\].:+*/=<>!?&|%-]")):
                 findings.append(("REVIEW", rel, n, f"non-ASCII executable-token candidate: {line}"))
 
