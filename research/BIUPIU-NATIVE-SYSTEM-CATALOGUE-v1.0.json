@@ -557,5 +557,34 @@
       "Android",
       "hardware_correlation"
     ]
+  },
+  "native_blind_audit_quantum_vs_federation_optimisation_20260924": {
+    "status": "SOURCE_AUDIT_COMPLETE_MATCHED_EXECUTION_OPEN",
+    "record": "research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md",
+    "blind_arms": [
+      "ARM-A",
+      "ARM-B"
+    ],
+    "optimisation_layer": [
+      "compute_scheduling",
+      "arm_neon_simd",
+      "sparse_geometry",
+      "numerical_alignment",
+      "ml_hyperparameter_search",
+      "domain_digital_twin_farming"
+    ],
+    "control": "FEDERATION_BASELINE_A_20260923",
+    "result": {
+      "optimisation_improvement": "NOT_CLAIMED",
+      "quantum_advantage": "NOT_CLAIMED",
+      "comparative_winner": "NOT_ASSIGNED",
+      "promotion": "NOT_PERFORMED"
+    },
+    "open_gates": [
+      "matched_blind_execution",
+      "runtime_benchmark",
+      "hardware_correlation",
+      "qpu"
+    ]
   }
 }
