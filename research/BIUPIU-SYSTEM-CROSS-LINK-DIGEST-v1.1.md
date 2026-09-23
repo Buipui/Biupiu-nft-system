@@ -343,3 +343,25 @@ Checks include high-confidence spelling defects, Unicode control hazards, normal
 Foreign-language harvest is preserved as source material. AI must not translate or 'correct' a foreign identifier without source-language and contract cross-reference.
 
 Remote search found no matches for the initial high-confidence typo set. Full repository execution remains the authoritative gate.
+
+
+## Gate 46 — Native Federation Function Difference / Changelog Layer — 23 September 2026
+
+Native ML now has a deterministic, request-driven difference tracker:
+- implementation: software/rnd-os-ai/src/biupiu_ai/federation_change_tracker.py
+- regression test: software/rnd-os-ai/tests/test_federation_change_tracker.py
+- catalogue: research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json
+- language/library index: research/BIUPIU-CODING-LANGUAGE-LIBRARY-v1.0.json
+
+Request contract:
+COMPARE(system_id, function_id, before_snapshot, after_snapshot)
+
+Output:
+FROM_HASH -> TO_HASH -> ADDED -> REMOVED -> CHANGED -> UNCHANGED -> SEMANTIC_STATE -> EVIDENCE_STATE.
+
+This is the canonical changelog/difference layer for questions such as "what changed in function X of AI system Y?" It is deterministic and evidence-preserving. It does not grant Native ML authority to modify or promote the owning system.
+
+Smoke sequence now includes:
+SPELLING/UNICODE/SEMANTICS -> COMPILE -> AUTHORITY TESTS -> LEARNING TESTS -> FUNCTION DIFFERENCE TEST.
+
+Status: SOURCE INTEGRATED / INDEXED / SMOKE DEFINED / FRESH EXECUTION PENDING.
