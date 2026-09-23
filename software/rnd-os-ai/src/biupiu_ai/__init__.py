@@ -1,5 +1,5 @@
-"""Biupiu R&D OS AI core foundation."""
+from .adaptive_federation import (CapabilityEvidence, DispatchDecision, ExecutionPath, ModuleContract, ModuleState, ResourceSnapshot, TelemetryEvent, compatibility_manifest, record_telemetry, select_path)\n"""Biupiu R&D OS AI core foundation."""
 from .compute_federation import ComputeClass, ComputeFederation, ComputeUnit, HostTopology, Workload
 from .machine_capability import CapabilityRegistry, CapabilitySample, MachineCapability, Transport
 from .federated_machine_runtime import FederatedMachineRuntime, MachineValidation
-__all__ = ["CapabilityRegistry","CapabilitySample","ComputeClass","ComputeFederation","ComputeUnit","FederatedMachineRuntime","HostTopology","MachineCapability","MachineValidation","Transport","Workload"]
+__all__ = ["CapabilityEvidence","DispatchDecision","ExecutionPath","ModuleContract","ModuleState","ResourceSnapshot","TelemetryEvent","compatibility_manifest","record_telemetry","select_path","CapabilityRegistry","CapabilitySample","ComputeClass","ComputeFederation","ComputeUnit","FederatedMachineRuntime","HostTopology","MachineCapability","MachineValidation","Transport","Workload"]
