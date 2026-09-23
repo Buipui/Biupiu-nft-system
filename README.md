@@ -239,6 +239,10 @@ Third-party images, code, datasets and research outputs require rights/licence r
 
 The repository now defines two Blender engine paths: the official Blender upstream mirror for Windows desktop production and the reviewed Android Blender fork for mobile. Both consume the Biupiu Digital Twin and asset-provenance contracts. Biupiu World character, environment and product-development showreel pipelines are documented under `world/`, `docs/blender-windows/` and `showcase/`.
 
+## Android Mini OS standalone integration
+
+The Android Mini OS now has a standalone development/integration record at `mini-os/android/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.md` with machine-readable state in `research/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.json`. The Android build configuration includes the native federation source boundary, and the Biupiu Native Intelligence/Federation bridge returns execution and promotion authority to Core OS/DMS. Android build/device/runtime gates remain separately verified.
+
 ## Biupiu OS / Biupiu AI separation
 
 As of 19 September 2026, the original R&D OS v1.0 implementation is the **Core OS Baseline**. Biupiu AI is a separate modular intelligence layer under `software/rnd-os-ai/`.
