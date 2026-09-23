@@ -19,8 +19,7 @@ TOKEN_MAP={
 }
 def validate():
  data=json.loads(MANIFEST.read_text(encoding="utf-8"))
- source="
-".join(p.read_text(errors="ignore") for p in INT.glob("*.py"))
+ source="\n".join(p.read_text(errors="ignore") for p in INT.glob("*.py"))
  findings=[]
  for domain, spec in data["domains"].items():
   for iface in spec["interfaces"]:
