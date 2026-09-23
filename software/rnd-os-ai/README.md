@@ -77,3 +77,13 @@ The language registry, validation rules and translation provenance contract are 
 - **SIM-OSS-03:** non-executing backend validation harness implemented; production approval remains gated.
 
 The simulator adapter boundary only probes local availability and constructs safe commands. It does not install or automatically execute external backends.
+
+
+## Federated adaptive runtime — 2026-09-23
+
+- **F23:** REGISTERED — Digital Twin performance federation, passive-state policy, adaptive acceleration/deceleration and runtime telemetry.
+- **F24:** REGISTERED — OEM/shared-development-resource compatibility registry with provider-neutral adapters.
+- **F25:** REGISTERED — cross-matrix capability/dependency/resource/backpressure/fail-closed contract.
+- Runtime telemetry now feeds governed learning records without autonomous promotion.
+- External compatibility harvest integrated for ONNX Runtime EPs, Qualcomm QNN, Intel OpenVINO, NVIDIA CUDA, AMD MIGraphX, Epic NNE and OpenXR.
+- Local/physical verification remains separately gated.
