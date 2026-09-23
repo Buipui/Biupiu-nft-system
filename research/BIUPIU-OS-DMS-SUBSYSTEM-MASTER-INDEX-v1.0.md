@@ -530,3 +530,14 @@ Each record carries required capabilities, canonical authority, native-code path
 
 **Rule:** source implementation establishes an implementation record; it does not establish runtime capability. Unknown capability and authority remain fail-closed.
 **Status: CATALOGUE IMPLEMENTED / TAG SCHEMA IMPLEMENTED / STATIC VALIDATOR IMPLEMENTED / RUNTIME VERIFICATION OPEN.**
+
+
+## 2026-09-24 — Android Build Audit + Foreign-Language Module Harvest
+
+Android Mini OS federation state is cross-linked to the standalone integration record. Foreign-language Chinese/Russian/German harvest produced reference/candidate modules only; no external executable or source was promoted. Candidate gates include Mainline/APEX rollback modelling, missing-required-module validation, host/target separation, Android stress-test matrix and PC/Waydroid capability-difference analysis. Build/device/runtime evidence remains separate from source registration.
+
+Canonical records:
+- mini-os/android/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.md
+- research/BIUPIU-FOREIGN-LANGUAGE-ANDROID-MODULE-HARVEST-20260924.md
+- research/BIUPIU-ANDROID-HOUSEKEEPING-EXTERMINATION-SMOKE-FAULT-LOG-20260924.md
+- research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json
