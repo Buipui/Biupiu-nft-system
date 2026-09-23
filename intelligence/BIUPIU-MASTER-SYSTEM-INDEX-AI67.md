@@ -211,3 +211,24 @@ POST-FIX CI: PENDING
 ANDROID DEVICE RUNTIME: PENDING
 HARDWARE/PHYSICAL: PENDING
 PRODUCTION PROMOTION: BLOCKED pending verification evidence
+
+## Gate 39 — Native System Identity + Scientific Learning Baseline — 23 September 2026
+
+Canonical native-system identity and capability catalogue:
+- `research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+- `research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md`
+- `intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py`
+- `.github/workflows/biupiu-native-system-catalogue.yml`
+
+Canonical evolution/scientific learning records:
+- `research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md`
+- `research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md`
+
+The federation now maintains explicit capability requirements across native system families and routes current quantum, physics, photonics, materials, supercapacitor, hemp/biomass and heterogeneous-compute literature into the existing research -> model -> simulation -> verification -> provenance -> controlled-promotion loop.
+
+VSS/Codex must resolve system identity by `BPU.SYS.*` ID and canonical owner before package/path similarity. No source-presence record is treated as runtime proof.
+
+SOURCE: IMPLEMENTED
+STATIC CATALOGUE VALIDATION: VERIFIED by repository-level structural validation
+CI EXECUTION: PENDING fresh run
+RUNTIME/DEVICE/HARDWARE/UE5/LIVE-BLOCKCHAIN: OPEN
