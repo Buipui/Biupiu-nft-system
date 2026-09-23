@@ -58,3 +58,34 @@ EXPERIMENTAL EVIDENCE only when actual measurements exist;
 VERIFIED CAPABILITY only after the applicable execution/measurement gate.
 
 No literature source, agency, paper, codebase or model becomes first-party Biupiu code merely because it is high quality or authoritative externally.
+
+## Primary-source routing register
+
+NASA:
+- https://www.nasa.gov/intelligent-systems-division/software-management-office/nasa-software-engineering-procedural-requirements-standards-and-related-resources/
+- https://www.nasa.gov/ivv-overview/
+- https://fprime.jpl.nasa.gov/devel/
+
+DARPA:
+- https://www.darpa.mil/about/offices/mxo/expertise
+- https://www.darpa.mil/research/programs/heterogeneous-architectures-for-quantum
+- https://www.darpa.mil/research/programs/lasers-for-universal-microscale-optical-systems
+- https://www.darpa.mil/research/programs/photon-efficient-nanoscale-optical-metrology
+- https://www.darpa.mil/research/programs/intensity-squeezed-photonic
+- https://www.darpa.mil/research/programs/accelerating-discovery-of-tunable-optical-material
+- https://www.darpa.mil/research/programs/perrseus
+
+NIST:
+- https://www.nist.gov/quantum-information-science
+- https://www.nist.gov/quantum-science
+- https://www.nist.gov/programs-projects/advanced-microwave-photonics
+- https://www.nist.gov/pml/microsystems-and-nanotechnology-division/photonics-and-optomechanics-group
+
+DOE:
+- https://www.energy.gov/sites/default/files/2023-09/10_Technology%20Strategy%20Assessment%20-%20%2310%20Supercapacitors_508.pdf
+
+## 2026-09-23 update classification
+
+The current harvest adds a stronger manufacturing/scaling lane for quantum and photonic systems, including heterogeneous quantum architectures, photonic integration, quantum sensing, optical materials, and manufacturability. These sources strengthen the research-routing baseline but do not constitute evidence that Biupiu has those physical capabilities.
+
+DOE's supercapacitor assessment explicitly identifies hemp stalks as a potential agricultural feedstock for activated-carbon supercapacitor materials. This is a research pathway, not a performance claim for a Biupiu material.
