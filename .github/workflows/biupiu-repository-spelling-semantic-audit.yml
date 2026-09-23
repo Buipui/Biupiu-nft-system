@@ -1,0 +1,49 @@
+name: Biupiu repository spelling and semantic audit
+
+on:
+  push:
+    paths:
+      - "**/*.py"
+      - "**/*.ts"
+      - "**/*.tsx"
+      - "**/*.js"
+      - "**/*.jsx"
+      - "**/*.c"
+      - "**/*.h"
+      - "**/*.cc"
+      - "**/*.cpp"
+      - "**/*.hpp"
+      - "**/*.rs"
+      - "**/*.kt"
+      - "**/*.java"
+      - "**/*.cs"
+      - "**/*.sol"
+      - "**/*.json"
+      - "**/*.yaml"
+      - "**/*.yml"
+      - "**/*.md"
+      - "intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py"
+  pull_request:
+    paths:
+      - "intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py"
+      - "research/**"
+      - "intelligence/**"
+      - "software/**"
+      - "packages/**"
+      - "core/**"
+      - "simulators/**"
+      - "smart-farming/**"
+      - "apps/**"
+      - "world/**"
+  workflow_dispatch:
+
+jobs:
+  spelling-semantic-audit:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11bd71901bbe5b1630ceea73d27597364c9af683 # v4.2.2
+      - uses: actions/setup-python@a26af69be951a213d495a4c3e4e4022e16d87065 # v5.6.0
+        with:
+          python-version: "3.12"
+      - name: Repository-wide spelling and semantic audit
+        run: python intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
