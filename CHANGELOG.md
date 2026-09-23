@@ -1,3 +1,16 @@
+## 2026-09-24 — AI Behaviour × International Knowledge × Graph Harvest Cross-Reference
+
+- Cross-referenced Biupiu AI behaviour against federated international knowledge/reference patterns and the existing Knowledge Graph.
+- Mapped NIST AI RMF, ISO/IEC 42001 and W3C PROV as reference-only anchors for AI governance, lifecycle management and provenance interoperability; no external source receives Biupiu authority.
+- Cross-referenced Biupiu Intelligence, Native AI, ML, quantum/quantum-inspired systems, Federation, Digital Twin, Native Coding Philosophy and Coding Matrix.
+- Registered the behavioural state distinction: OBSERVE -> CLASSIFY -> INFER -> PROPOSE -> SIMULATE -> VALIDATE -> AUTHORISE -> EXECUTE.
+- Added explicit behaviour fault classes for authority leakage, evidence leakage, provenance breaks, model/fact collapse, runtime-equivalence errors, quantum-claim leakage, optimisation-claim leakage, unsupported graph edges, licence-authority leakage and historical-record mutation.
+- Added a machine-readable behaviour/evidence graph overlay while preserving the canonical Knowledge Graph and existing authority hierarchy.
+- No external implementation was imported or promoted; no historical authoritative record was rewritten.
+- Added research/BIUPIU-AI-BEHAVIOUR-INTERNATIONAL-GRAPH-CROSSREF-20260924.md.
+- Added research/BIUPIU-AI-BEHAVIOUR-INTERNATIONAL-GRAPH-CROSSREF-20260924.json.
+- Source cross-reference: PASS. Runtime/device/build/hardware/UE5/QPU verification remains OPEN.
+
 # 2026-09-22 — Android/AOSP + Automotive Federation Expansion
 
 ### External harvest
