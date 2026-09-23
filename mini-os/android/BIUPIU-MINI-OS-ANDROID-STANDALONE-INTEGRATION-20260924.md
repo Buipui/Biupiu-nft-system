@@ -119,3 +119,19 @@ Source implementation != runtime verification.
 - mini-os/android/federation/AndroidCapabilityRegistry.java
 
 Current gate: ANDROID MINI OS SOURCE INTEGRATION EXPANDED / BUILD + DEVICE VERIFICATION OPEN.
+
+
+## 10. System-wide integration cross-link — 2026-09-24
+
+Canonical record: `research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md`.
+
+The Android Mini OS standalone section is now explicitly connected to the system-wide Native Intelligence/Federation optimisation state. Android remains an endpoint/runtime surface under Core OS/DMS authority. The same blind-baseline, optimisation, provenance, quarantine and promotion rules apply.
+
+Integrated references:
+- `research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+- `research/BIUPIU-OS-DMS-SUBSYSTEM-MASTER-INDEX-v1.0.md`
+- `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md`
+- `research/BIUPIU-BLIND-BASELINE-SELF-OPTIMISATION-PROTOCOL-20260924.md`
+- `research/BIUPIU-QUANTUM-INSPIRED-DEEP-AUDIT-HARVEST-20260924.md`
+
+**Status:** ANDROID SOURCE INTEGRATION CROSS-LINKED / BUILD + DEVICE RUNTIME OPEN.
