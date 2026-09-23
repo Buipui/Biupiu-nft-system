@@ -86,3 +86,34 @@ Native semantic smoke now invokes the same repository-wide audit before native A
 Initial remote code-search pass found no matches for the high-confidence misspelling set used by the new gate. This is not a substitute for executing the repository-wide script; fresh CI execution remains the authoritative result.
 
 Status: GATE REGISTERED / IMPLEMENTED; REMOTE SEARCH SCREEN CLEAN FOR CHECKED TYPO SET; CI EXECUTION OPEN.
+
+
+## Gate 41 — Federation System Audit + Native Function Difference Tracking — 23 September 2026
+
+Federation audit reconciliation completed at source level across the native system catalogue, coding-language library, spelling/semantic gate, native semantic smoke and Native ML learning boundary.
+
+### New native capability
+- software/rnd-os-ai/src/biupiu_ai/federation_change_tracker.py
+- software/rnd-os-ai/tests/test_federation_change_tracker.py
+- research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json
+- research/BIUPIU-CODING-LANGUAGE-LIBRARY-v1.0.json
+
+The Native ML tracker performs deterministic function-level comparison using system_id + function_id, canonical snapshot hashes and field-level semantic differences:
+ADDED / REMOVED / CHANGED / UNCHANGED.
+
+Requested function reports include source hashes, semantic state and evidence state. The tracker is explicitly non-authoritative: it records differences and does not promote code, infer runtime capability, or bypass Core OS/DMS/release gates.
+
+### Smoke integration
+Native semantic smoke now includes the federation change-tracker regression test after spelling/Unicode/semantic audit and Python compilation.
+
+Current observed repository HEAD after this change set:
+7aef4fcdd834ce0761b67f35762c49c2ace0a748.
+
+### Verification state
+- Source implementation: IMPLEMENTED
+- Catalogue/library cross-link: IMPLEMENTED
+- Smoke-test definition: IMPLEMENTED
+- Fresh GitHub Actions execution for the new HEAD: PENDING / NOT OBSERVED
+- Android/device/hardware/UE5/HIL/live-chain gates: OPEN
+
+No runtime or promotion status is inferred from source changes.
