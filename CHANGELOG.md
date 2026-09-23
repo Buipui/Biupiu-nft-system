@@ -540,3 +540,12 @@ Executed the controlled continuation protocol in the available deterministic sof
 **PROMOTION:** NOT PERFORMED.
 
 **Status: QUANTUM + FEDERATION + OPTIMISATION SOURCE AUDIT COMPLETE / MATCHED EXECUTION OPEN.**
+
+
+## 2026-09-24 — System-Wide Integration / Optimisation Cross-Link
+- Added canonical system-wide integration record: `research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md`.
+- Cross-linked OS Core, DMS, Native Intelligence, Federation, Digital Orchestra, Digital Twin, Universal Simulator, Math/Physics/Geometry, optimisation, Android Mini OS, Quantum-inspired audit, Digital Filing and UE5 runtime boundary.
+- Registered a common optimisation evidence contract and preserved Baseline A as the immutable control.
+- Preserved the authority chain and fail-closed promotion boundary; no subsystem gained silent ownership or self-authorisation.
+- Updated the native system catalogue and consolidated harvest record with the integration state.
+- Source integration is recorded; matched execution and runtime verification remain open.
