@@ -397,3 +397,25 @@ No third-party executable code or proprietary binaries were copied.
 
 **Status: OPENDROID SOURCE/ADAPTER GATE COMPLETE / BUILD + DEVICE RUNTIME VERIFICATION OPEN.**
 
+
+## 2026-09-23 — Native System Identity + Scientific Learning Baseline
+
+Implemented the native-system catalogue, deterministic `BPU.SYS.*` identity schema, static catalogue validator and CI validation workflow.
+
+Canonical records:
+- `research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+- `research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md`
+- `intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py`
+- `.github/workflows/biupiu-native-system-catalogue.yml`
+- `research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md`
+- `research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md`
+
+The federation learning baseline now explicitly routes quantum mechanics/information, physics/mathematics, photonics, crystal/materials science, supercapacitors, hemp/biomass materials, computational geometry and heterogeneous AI/accelerator research into native design, simulation, evidence and controlled promotion.
+
+External research remains classified reference evidence. External code remains adapter/reference until the existing licence, security, compatibility, build, smoke, regression and runtime gates pass.
+
+VSS/Codex identity rule: use `BPU.SYS.*` system IDs and explicit contract ownership before filename/package similarity.
+
+Runtime/device/UE5/hardware/live-blockchain verification remains separate and open until execution evidence exists.
+
+Status: SOURCE IMPLEMENTATION **REGISTERED / IMPLEMENTED**; RUNTIME VERIFICATION **OPEN**.
