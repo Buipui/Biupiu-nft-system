@@ -101,3 +101,21 @@ If a required field/evidence item is missing, the code remains a PROPOSAL or QUA
 ## 8. Verification status
 
 This matrix is a governance contract. It does not claim that every language/runtime has passed execution. Runtime, device, hardware, blockchain and physical verification remain separate gates.
+
+## 8. Foreign-language artifact integrity
+
+Foreign-language harvesting is a first-class research input, not an error condition. The repository must preserve:
+- original source text/code;
+- source language and BCP-47 locale where known;
+- transliteration/translation only as a linked derivative;
+- original technical identifiers where required by the source language;
+- provenance and source location;
+- semantic mapping into the Biupiu canonical vocabulary.
+
+Automated checks must distinguish legitimate multilingual content from accidental misspellings or Unicode hazards. Executable identifiers receive stricter review than prose. Unicode normalization, bidi controls and confusable characters are checked before promotion.
+
+Rule: never repair a foreign-language identifier by English spell-check inference. Cross-reference the source language and canonical contract first.
+
+## 9. Repository-wide spelling/semantic gate
+
+intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py checks high-confidence spelling errors, Unicode hazards, canonical registry references, native-code paths and multilingual metadata. Blocking findings prevent promotion; review findings require semantic inspection.
