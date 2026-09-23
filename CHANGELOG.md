@@ -419,3 +419,23 @@ VSS/Codex identity rule: use `BPU.SYS.*` system IDs and explicit contract owners
 Runtime/device/UE5/hardware/live-blockchain verification remains separate and open until execution evidence exists.
 
 Status: SOURCE IMPLEMENTATION **REGISTERED / IMPLEMENTED**; RUNTIME VERIFICATION **OPEN**.
+
+
+## 2026-09-23 — Controlled Experiment Suite / Learning Update
+
+Executed the controlled continuation protocol in the available deterministic software environment.
+
+- Re-ran the five-level federation benchmark with the prescribed iteration counts; all levels recorded **0 failures**.
+- Re-ran matched native vs assisted-analysis A/B using the same workload and iteration counts; correctness remained unchanged, with small environment-sensitive timing deltas recorded.
+- Executed mirrored computational-geometry / computational-biology harnesses: geometry 200/200 invariant cases; synthetic biology 190/200 perturbation-classification cases.
+- Executed controlled words/semantics vs numbers/code representation test: both 200/200 on the deterministic task set; numeric/code representation used fewer representation units in this harness.
+- Added a governed learning rule: choose representation by measured task suitability, correctness, uncertainty, robustness and resource cost rather than assuming a universal winner.
+- External literature refresh reinforced the need for domain-specific biological representation tests and multilingual/codeswitching retrieval tests.
+- New record: `research/BIUPIU-CONTROLLED-EXPERIMENT-RUN-20260923-1015.md`.
+
+### Verification boundary
+**VERIFIED FOR THIS RUN:** deterministic software harness, matched A/B execution, geometry checks, learning-record evidence.
+
+**OPEN:** CI execution for this new record, physical CPU/GPU/NPU validation, UE5, Android/device runtime, QPU, real biological datasets/assays and large-scale multilingual model benchmarks.
+
+**Status: CONTROLLED EXPERIMENTS EXECUTED / LEARNING UPDATED / HARDWARE + RUNTIME PROMOTION OPEN.**
