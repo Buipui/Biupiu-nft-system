@@ -1,0 +1,22 @@
+name: Biupiu Native System Catalogue
+
+on:
+  push:
+    paths:
+      - "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json"
+      - "research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md"
+      - "intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py"
+  pull_request:
+    paths:
+      - "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json"
+      - "research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md"
+      - "intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py"
+  workflow_dispatch:
+
+jobs:
+  validate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Validate native system catalogue
+        run: python intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py
