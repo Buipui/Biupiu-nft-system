@@ -10,6 +10,8 @@ export type FederationLicenceState = "VERIFIED"|"REVIEW"|"RESTRICTED"|"PROHIBITE
 export interface FederationCapability {
   id:string;
   version:string;
+  schemaVersion:string;
+  provenance:string;
   enabled:boolean;
   authority:FederationAuthority;
   supportedSchemas:string[];
