@@ -1,0 +1,62 @@
+version: 1
+name: biupiu-game-engine-federation
+status: scaffolded
+tracks:
+  - BuipuiOS
+  - buipiu-mini-os
+policy:
+  engines_optional: true
+  boot_dependency: false
+  sandbox_web_runtimes: true
+  celeste_content_import: prohibited_without_rights_review
+engines:
+  cocos2d-x:
+    adapter: native-2d
+    target: [os, mini-os]
+    status: source-pinning-required
+  cocos:
+    adapter: native-2d
+    target: [os, mini-os]
+    status: source-pinning-required
+  monogame:
+    adapter: managed-runtime
+    target: [mini-os]
+    status: source-pinning-required
+  celeste:
+    adapter: reference-only
+    target: [os, mini-os]
+    status: rights-and-reference-review-required
+  libgdx:
+    adapter: java-runtime
+    target: [mini-os]
+    status: source-pinning-required
+  ashley-ecs:
+    adapter: ecs
+    target: [os, mini-os]
+    status: source-pinning-required
+  raylib:
+    adapter: native-2d
+    target: [os, mini-os]
+    status: source-pinning-required
+  threejs:
+    adapter: web-3d
+    target: [mini-os]
+    status: source-pinning-required
+  gdevelop:
+    adapter: web-runtime
+    target: [mini-os]
+    status: source-pinning-required
+  babylonjs:
+    adapter: web-3d
+    target: [mini-os]
+    status: source-pinning-required
+contracts:
+  - IBiupuiRenderBackend
+  - IBiupuiInput
+  - IBiupuiAssetProvider
+  - IBiupuiScene
+  - IBiupuiAudio
+  - IBiupuiTelemetry
+  - IBiupuiSecurityBoundary
+verification:
+  required: [compile, smoke, security, license, device]
