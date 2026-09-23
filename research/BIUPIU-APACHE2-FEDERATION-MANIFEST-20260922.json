@@ -1,0 +1,35 @@
+{
+  "schema": "biupiu.apache-federation-manifest.v1",
+  "date": "2026-09-22",
+  "status": "CONTRACTS_INTEGRATED_RUNTIME_OPEN",
+  "internal_external_cross_check": {
+    "rule": "internal native capability is authoritative baseline; external Apache projects are optional providers/contracts until dependency, licence, build, security, semantic, regression and runtime gates pass",
+    "duplicate_capabilities_are_merged": true,
+    "external_code_is_not_auto_vendored": true,
+    "silent_fallback_forbidden": true
+  },
+  "modules": [
+    {"id":"apache-httpd-module-family","source":"https://httpd.apache.org/docs/trunk/mod/","role":"HTTP/server-module ecosystem","state":"REGISTERED"},
+    {"id":"apache-apr","source":"https://apr.apache.org/","role":"portable runtime abstraction","release_reference":"1.7.6","state":"REGISTERED"},
+    {"id":"apache-apr-util","source":"https://apr.apache.org/","role":"APR companion utilities","release_reference":"1.6.5","state":"REGISTERED"},
+    {"id":"apache-arrow","source":"https://arrow.apache.org/","role":"columnar in-memory data/interchange","state":"REGISTERED"},
+    {"id":"apache-parquet","source":"https://parquet.apache.org/","role":"columnar storage format and implementations","release_reference":"parquet-java 1.18.1","state":"REGISTERED"}
+  ],
+  "cross_links": [
+    "native coding philosophy",
+    "maths and physics engines",
+    "digital twin",
+    "all simulators",
+    "native ML learning",
+    "blockchain provenance boundary",
+    "federated provider registry"
+  ],
+  "verification": {
+    "source_and_provenance_review": "PASS",
+    "native_contract_update": "PASS",
+    "repository_smoke": "OPEN",
+    "runtime": "OPEN",
+    "android_device": "OPEN",
+    "production_promotion": "OPEN"
+  }
+}
