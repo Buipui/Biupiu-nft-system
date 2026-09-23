@@ -549,3 +549,11 @@ Executed the controlled continuation protocol in the available deterministic sof
 - Preserved the authority chain and fail-closed promotion boundary; no subsystem gained silent ownership or self-authorisation.
 - Updated the native system catalogue and consolidated harvest record with the integration state.
 - Source integration is recorded; matched execution and runtime verification remain open.
+
+
+## 2026-09-24 — Native System Functionality Test
+- Logged source-contract functionality test: `research/BIUPIU-NATIVE-SYSTEM-FUNCTIONALITY-TEST-20260924.md`.
+- Native Intelligence/Federation Android boundary: PASS — execution/promotion self-authorisation blocked; unresolved evidence fails closed; capabilities return to OS/DMS validation.
+- Compute Federation optimisation behaviour: PASS — capability selection, ordered preferences, capacity handling and controlled no-eligible failure exercised.
+- Governance boundary: PASS — OS/DMS/human release authority preserved; no promotion performed.
+- Runtime/device, production Gradle, GPU/NPU/NEON hardware, UE5, HIL and QPU gates remain open.
