@@ -454,3 +454,38 @@ Executed the controlled continuation protocol in the available deterministic sof
 - No foreign-language source or executable was vendored or promoted.
 - Updated native system catalogue with provenance/status/promotion gates and added the foreign-language harvest record.
 - Added Android housekeeping/extermination/smoke/fault log. Ambiguous duplicates were retained and classified rather than destructively deleted.
+
+
+## 2026-09-24 — Native Blind Audit: Quantum vs Federation
+
+### Audit
+- Executed a source-level blind comparison protocol using anonymous ARM-A / ARM-B test identities before architectural unblinding.
+- Locked the common criteria: capability equivalence, correctness, deterministic replay, resource cost, failure handling, provenance, regression, uncertainty, scalability and promotion safety.
+- Cross-referenced the native Quantum Federation contracts, Universal Simulator Federation, canonical Federation evidence contracts, Gate-Learning Architecture and Baseline A.
+- Confirmed that the existing Baseline A remains the appropriate native control for a later matched execution; QPU remains disabled.
+- No comparative winner, quantum-advantage claim or federation-superiority claim was assigned.
+
+### Findings
+- Quantum path is currently a specialised simulator/algorithm/provider capability with classical-baseline and fail-closed promotion requirements.
+- Federation is the broader governed orchestration/evidence boundary covering providers, simulators, provenance, health, delivery, comparison and reconciliation.
+- Candidate overlap exists in selection, validation, provenance and routing; this is to be reconciled through contracts rather than duplicated authority.
+- A possible integration seam was recorded: Quantum capability/provider logic can operate inside Federation's governed orchestration and evidence boundary.
+- This is an architecture-compatibility finding only; runtime performance and superiority remain unverified.
+
+### Verification boundary
+**SOURCE AUDIT:** COMPLETE.
+
+**BLIND EXECUTION:** OPEN pending matched runtime execution.
+
+**QPU / PHYSICAL QUANTUM:** DISABLED / UNVERIFIED.
+
+**LIVE FEDERATION RUNTIME:** OPEN.
+
+**UE5 / Android / HARDWARE CORRELATION:** OPEN.
+
+**PROMOTION:** NOT PERFORMED.
+
+### Repository record
+- Added `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-20260924.md`.
+- Preserved existing implementations and failure lineage; no destructive deletion was justified by the source-only comparison.
+- The audit result is an evidence boundary and integration hypothesis, not a performance verdict.
