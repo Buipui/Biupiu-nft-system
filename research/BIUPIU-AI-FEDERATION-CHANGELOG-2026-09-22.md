@@ -139,3 +139,23 @@ Observed evidence:
 - Fresh post-fix workflow execution has not yet been observed, so the gate is RE-ARMED, not closed.
 
 Status: BUGS IDENTIFIED FROM LIVE CI / SOURCE FIXES IMPLEMENTED / CI RE-ARMED / FRESH PASS PENDING / ANDROID DEVICE RUNTIME OPEN.
+
+
+## 23 September 2026 — Native Function Difference Tracking
+
+Federation audit identified a reusable requirement: when a specific AI-system federation function is requested, Native ML must be able to report what changed without confusing source differences with runtime capability.
+
+Added:
+- software/rnd-os-ai/src/biupiu_ai/federation_change_tracker.py
+- software/rnd-os-ai/tests/test_federation_change_tracker.py
+
+Method:
+canonical snapshot -> SHA-256 -> field-level semantic comparison -> deterministic changelog.
+
+Tracked states:
+ADDED, REMOVED, CHANGED, UNCHANGED.
+
+Evidence boundary:
+SOURCE_COMPARISON_ONLY until build, smoke, regression, runtime and other applicable evidence gates are observed.
+
+Promotion/authority remains unchanged: Native ML records and analyses differences; the owning subsystem/Core OS/DMS/release gates retain authority.
