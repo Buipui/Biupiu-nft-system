@@ -5,6 +5,9 @@ on:
     paths:
       - "software/rnd-os-ai/**"
       - "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md"
+      - "research/BIUPIU-MULTILANGUAGE-NATIVE-CODING-MATRIX-v1.0.md"
+      - "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json"
+      - "intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py"
       - ".github/workflows/biupiu-native-semantic-smoke.yml"
   workflow_dispatch:
 
@@ -16,6 +19,8 @@ jobs:
       - uses: actions/setup-python@5fda3b95a4ea91299a34e894583c3862153e4b97 # v7.0.0
         with:
           python-version: "3.12"
+      - name: Repository spelling, Unicode and semantic audit
+        run: python intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
       - name: Compile native AI Python
         run: python -m compileall -q software/rnd-os-ai/src
       - name: Run targeted authority and learning tests
