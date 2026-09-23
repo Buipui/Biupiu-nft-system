@@ -510,3 +510,23 @@ The literature layer is authoritative for source classification. In particular, 
 ## 2026-09-22 — OpenDroid Deep Federation Correction
 
 OpenDroid was re-harvested from primary external evidence. The identity is classified as an autonomous Android agent with a Compose UI surface, not a standalone UI engine. Main OS and Mini OS now register the agent/module boundaries while retaining the legacy `opendroid.ui-engine` identifier as unresolved and fail-closed. Canonical record: `research/BIUPIU-OPENDROID-DEEP-EXTERNAL-FEDERATION-HARVEST-20260922.md`. Build, dependency, accessibility, Compose, Keystore, Room/DataStore and physical-device runtime gates remain open until execution evidence exists.
+
+
+## 43. Native System Catalogue + Deterministic VSS Identity — 23 September 2026
+
+The federation now has a canonical machine-readable native-system catalogue and deterministic tag vocabulary so VS Code/Codex tooling can distinguish system identity, ownership, native implementation, adapter/reference status and verification state without relying on filename similarity.
+
+Canonical records:
+- `research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+- `research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md`
+- `intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py`
+
+Tag form:
+`BPU.SYS.<DOMAIN>.<SYSTEM>.<LAYER>`
+
+The catalogue currently maps the canonical native system families: OS Core, DMS Control, Native Intelligence, Federation Core, Digital Orchestra, Digital Twin, Universal Simulator Federation, Math/Physics, Photonics, Crystal/Materials, Supercapacitor/Energy Storage, Hemp/Biomass Materials, AI Accelerator Federation, Android Mini OS, Windows Shell, Smart Farming, Automotive Simulation, World/UE integration, Blockchain/Provenance and NFT/Provenance.
+
+Each record carries required capabilities, canonical authority, native-code paths, parent/child relationship intent, licence/provenance boundary and verification state.
+
+**Rule:** source implementation establishes an implementation record; it does not establish runtime capability. Unknown capability and authority remain fail-closed.
+**Status: CATALOGUE IMPLEMENTED / TAG SCHEMA IMPLEMENTED / STATIC VALIDATOR IMPLEMENTED / RUNTIME VERIFICATION OPEN.**
