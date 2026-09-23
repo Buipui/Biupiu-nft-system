@@ -303,3 +303,29 @@ Cross-links:
 Flow: UPSTREAM RECONCILIATION -> FOREIGN-LANGUAGE REFERENCE HARVEST -> OPTIMIZATION CANDIDATES -> GUIDED FAULT FINDING -> SEMANTIC/CODING-MATRIX CHECK.
 Version-state correction: Eigen stable 5.0.0; 5.0.1 represented as development/reference state.
 Optimization remains benchmark-gated. CI/Android/device runtime remain open.
+
+
+## 2026-09-23 — Native Evolution + Scientific Learning Federation
+
+Biupiu's federation is now explicitly treated as a continuously updated scientific learning and native-development layer.
+
+Canonical philosophy:
+`research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md`
+
+Canonical native catalogue:
+`research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+
+Canonical tag schema:
+`research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md`
+
+Canonical scientific literature register:
+`research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md`
+
+The learning lanes now explicitly cover quantum mechanics/information, physics/mathematics, photonics/optical computing, crystal/materials science, supercapacitors/electrochemical storage, hemp/biomass carbon, computational geometry/metamaterials and heterogeneous AI/accelerator architectures.
+
+Native development loop:
+RESEARCH -> CLASSIFY -> CROSS-LINK -> INTERNAL CAPABILITY MATCH -> NATIVE DESIGN -> MATHEMATICAL MODEL -> SIMULATION -> TEST -> REGRESSION -> EVIDENCE CHECKPOINT -> OPTIONAL BLOCKCHAIN ANCHOR -> CONTROLLED PROMOTION -> FAILURE/PERFORMANCE LEARNING.
+
+Blockchain remains an integrity anchor. Local/native systems remain the learning and computation authority; a blockchain transaction is not claimed until transaction identity and inclusion evidence are independently available.
+
+**Status: SOURCE ARCHITECTURE REGISTERED / CATALOGUED / LITERATURE REGISTERED / RUNTIME AND LIVE-CHAIN VERIFICATION OPEN.**
