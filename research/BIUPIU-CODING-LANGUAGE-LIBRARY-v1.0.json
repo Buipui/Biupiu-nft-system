@@ -109,5 +109,17 @@
   "native_system_catalogue": "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json",
   "native_evolution_philosophy": "research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md",
   "scientific_learning_registry": "research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md",
-  "vss_rule": "Use canonical BPU.SYS.* system identity and contract IDs before filename or package similarity; never infer runtime capability from source presence."
+  "vss_rule": "Use canonical BPU.SYS.* system identity and contract IDs before filename or package similarity; never infer runtime capability from source presence.",
+  "repository_spelling_semantic_audit": "intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py",
+  "semantic_promotion_order": [
+    "SPELLING",
+    "UNICODE",
+    "TERMINOLOGY",
+    "REGISTRY_SEMANTICS",
+    "LANGUAGE_SYNTAX",
+    "CONTRACT",
+    "CROSS_LANGUAGE",
+    "REGRESSION"
+  ],
+  "foreign_language_rule": "Preserve original identifiers and source language; require locale/provenance cross-reference; never auto-correct foreign identifiers using English spell-check."
 }
