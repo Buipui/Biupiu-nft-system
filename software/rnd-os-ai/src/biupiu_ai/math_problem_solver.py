@@ -35,6 +35,10 @@ def classify_problem(problem: Problem) -> tuple[str, ...]:
     tags = []
     keywords = {
         'geometry': ('geometry', 'polygon', 'triangle', 'circle', 'mesh', 'transform'),
+        'biology': ('biology', 'biological', 'genome', 'genomics', 'dna', 'rna', 'gene', 'cell', 'microorganism'),
+        'molecular': ('molecular', 'protein', 'peptide', 'enzyme', 'ligand', 'folding'),
+        'multi_omics': ('multi-omics', 'omics', 'transcriptome', 'proteome', 'metabolome', 'epigenome'),
+        'quantum_algorithm': ('quantum algorithm', 'qaoa', 'vqe', 'grover', 'quantum annealing', 'quantum optimization'),
         'optimization': ('optim', 'minimize', 'maximize', 'constraint'),
         'algebra': ('equation', 'polynomial', 'matrix', 'linear'),
         'calculus': ('derivative', 'integral', 'gradient', 'differential'),
