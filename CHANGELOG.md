@@ -439,3 +439,10 @@ Executed the controlled continuation protocol in the available deterministic sof
 **OPEN:** CI execution for this new record, physical CPU/GPU/NPU validation, UE5, Android/device runtime, QPU, real biological datasets/assays and large-scale multilingual model benchmarks.
 
 **Status: CONTROLLED EXPERIMENTS EXECUTED / LEARNING UPDATED / HARDWARE + RUNTIME PROMOTION OPEN.**
+
+## 2026-09-24 — Android Mini OS Standalone + Native Intelligence Federation Integration
+- Added standalone Android Mini OS development/integration record preserving prior AOSP, automotive, UI, graphics, AI/NPU, simulator, Digital Twin, learning, blind-baseline and quantum-inspired work.
+- Added native Biupiu Intelligence + Federation bridge with fail-closed execution/promotion authority.
+- Included mini-os/android/federation as an Android app Java source set so federation contracts participate in the Gradle build configuration.
+- Added machine-readable integration state under research/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.json.
+- Runtime/device/build verification remains OPEN; no source-level change is treated as physical Android verification.
