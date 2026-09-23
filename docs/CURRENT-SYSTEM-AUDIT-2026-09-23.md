@@ -67,3 +67,22 @@ Evidence interpretation remains unchanged: source implementation is not runtime 
 
 **New source-level baseline: REGISTERED / IMPLEMENTED.**
 **Fresh CI/runtime execution: PENDING until observed.**
+
+## Gate 40 — Repository Spelling / Unicode / Semantic Integrity — 23 September 2026
+
+Added a repository-wide source audit and CI gate covering:
+- high-confidence coding/documentation misspellings;
+- Unicode bidi and zero-width hazards;
+- normalization/confusable review;
+- canonical Biupiu terminology and system identity;
+- native-code authority paths in the system catalogue;
+- foreign-language artifact locale/provenance review;
+- registry cross-reference semantics.
+
+Canonical audit: intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
+CI workflow: .github/workflows/biupiu-repository-spelling-semantic-audit.yml
+Native semantic smoke now invokes the same repository-wide audit before native AI compilation/tests.
+
+Initial remote code-search pass found no matches for the high-confidence misspelling set used by the new gate. This is not a substitute for executing the repository-wide script; fresh CI execution remains the authoritative result.
+
+Status: GATE REGISTERED / IMPLEMENTED; REMOTE SEARCH SCREEN CLEAN FOR CHECKED TYPO SET; CI EXECUTION OPEN.
