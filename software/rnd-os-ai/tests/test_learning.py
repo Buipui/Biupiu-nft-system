@@ -105,3 +105,18 @@ def test_external_fix_gap_learning_and_double_search_comparison():
     assert diff.only_first == ("a",)
     assert diff.only_second == ("c",)
     assert diff.divergence_reason.startswith("RESULT_SET_CHANGED")
+
+
+def test_runtime_telemetry_learning_record_preserves_trace_and_bounds():
+    from biupiu_ai.learning import (
+        RuntimeTelemetryObservation,
+        make_runtime_telemetry_learning_record,
+        verify_learning_record,
+    )
+    record = make_runtime_telemetry_learning_record(
+        RuntimeTelemetryObservation("twin.render", "ACTIVE", "GPU", 4.5, .2, True, "trace-001"),
+        learning_id="TEL-001",
+        input_refs=("test:adaptive-federation",),
+    )
+    assert verify_learning_record(record)
+    assert "correlation=trace-001" in record.input_refs
