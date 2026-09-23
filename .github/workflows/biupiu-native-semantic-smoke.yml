@@ -30,4 +30,4 @@ jobs:
           python -m pytest -q \
             software/rnd-os-ai/tests/test_authority_hierarchy.py \
             software/rnd-os-ai/tests/test_federation_authority_gate.py \
-            software/rnd-os-ai/tests/test_learning_governance_semantics.py
+            software/rnd-os-ai/tests/test_learning_governance_semantics.py \\\n            software/rnd-os-ai/tests/test_federation_change_tracker.py
