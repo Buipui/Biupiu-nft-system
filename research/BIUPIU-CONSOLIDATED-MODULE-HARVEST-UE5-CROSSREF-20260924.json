@@ -1,0 +1,46 @@
+{
+  "record_type": "federation_consolidation",
+  "timestamp": "2026-09-24",
+  "source_branch": "federation/deep-harvest-geometry-learning-20260923",
+  "consolidation_branch": "federation/consolidation-blind-baseline-quantum-audit-20260924",
+  "baseline": {
+    "id": "FEDERATION_BASELINE_A_20260923",
+    "mode": "SOFTWARE_MODEL_NATIVE_LOGIC_EQUIVALENT_HARNESS",
+    "assisted_analysis": false,
+    "failures": 0,
+    "levels": {"L0":10000,"L1":5000,"L2":3000,"L3":2000,"L4":1000},
+    "geometry_checks": ["polygon_area_invariance","pairwise_distance_invariance","finite_centroid"],
+    "quantum_policy": "SIMULATOR_VALIDATE",
+    "qpu": "DISABLED"
+  },
+  "harvest": {
+    "state": "CONSOLIDATED_CANDIDATE_SET",
+    "required_evidence": ["source","version_or_commit","licence","dependency","security","static","unit","integration","regression","runtime"],
+    "promotion_authority": "OS_DMS_AND_HUMAN_RELEASE"
+  },
+  "blind_optimisation": {
+    "control": "BASELINE_A_UNCHANGED",
+    "candidate_arm": "ASSISTED_ANALYSIS",
+    "self_authorisation": false,
+    "required_comparison": ["performance","correctness","failure_delta","regression_delta","overhead"]
+  },
+  "quantum_inspired_audit": {
+    "enabled": true,
+    "hardware_claim": false,
+    "qpu_execution": false,
+    "purpose": "search_and_cross-check optimisation candidates"
+  },
+  "ue5": {
+    "status": "QUARANTINED_RUNTIME_GATE",
+    "cross_reference": "UE5.8.x build/runtime evidence remains separate from source-level module consolidation",
+    "rule": "do_not_promote_or_replace_ue5_runtime_components without build/runtime evidence",
+    "known_open_checks": ["UE5_runtime","GPU/NPU_correlation","clean_build","cross_system_runtime"]
+  },
+  "digital_filing": {
+    "status": "FILED_CANDIDATE",
+    "preserve_lineage": true,
+    "preserve_failures": true,
+    "delete_only_with_unambiguous_lineage": true
+  },
+  "overall_state": "CONSOLIDATED_SOURCE_LEVEL_PENDING_EXECUTION_VERIFICATION"
+}
