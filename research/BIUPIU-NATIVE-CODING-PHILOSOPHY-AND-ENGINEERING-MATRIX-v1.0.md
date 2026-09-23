@@ -596,3 +596,39 @@ Applied corrections:
 - identified semantic defects have dedicated regression tests.
 
 Status: v1.1 governance extension implemented at source; host/CI/runtime evidence remains required.
+
+
+## 24. Native Evolution / Scientific Learning / System Identity Extension — 23 September 2026
+
+The native coding standard is extended so future AI-generated implementations must strengthen the existing infrastructure rather than create parallel authorities.
+
+### Native-first rule
+External research informs design; external code remains reference/adapter material until it passes the existing evidence ladder. When an internal implementation satisfies the contract, it remains the preferred authoritative implementation.
+
+### Scientific learning rule
+Quantum mechanics, physics, photonics, crystal/materials science, supercapacitor energy storage, hemp/biomass materials, computational geometry and heterogeneous compute are continuous learning domains. Every imported claim is classified by evidence state and linked to a reproducible model, experiment or source record.
+
+### Mathematics/physics baseline
+Where applicable, new algorithms should expose equations, units, assumptions, boundary conditions, solver/precision information, parameter ranges and validation fixtures. Simulation results remain simulation evidence until correlation/experimental gates pass.
+
+### Native system identity
+Every system must have a deterministic `BPU.SYS.*` identity and a canonical owner. Files, packages and AI prompts are implementation surfaces; they are not system identity.
+
+### AI implementation cleanliness
+AI-generated code is accepted only through:
+REQUIREMENT -> OWNER -> SYSTEM_ID -> LANGUAGE -> CONTRACT -> PROVENANCE -> SECURITY -> DEPENDENCIES -> SEMANTIC_AUDIT -> TEST -> CROSS-SYSTEM REGRESSION -> ROLLBACK -> PROMOTION.
+
+### Heterogeneous behaviour
+Capability discovery, negotiation and routing must be capability-first. CPU/GPU/NPU/DSP/embedded/cloud and simulator differences remain explicit. Unsupported capabilities fail closed rather than being silently emulated.
+
+### First-party evolution
+The long-term objective is progressive replacement of external implementation dependencies with Biupiu-native algorithms and services where measurable requirements are satisfied. This is an engineering trajectory, not permission for autonomous uncontrolled self-modification.
+
+Canonical supporting records:
+- `research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md`
+- `research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json`
+- `research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md`
+- `research/BIUPIU-SCIENTIFIC-LEARNING-LITERATURE-REGISTRY-20260923.md`
+- `intelligence/BIUPIU-NATIVE-SYSTEM-TAG-VALIDATOR.py`
+
+**Status: GOVERNANCE EXTENSION IMPLEMENTED / SOURCE-LEVEL CROSS-LINKED / RUNTIME VERIFICATION SEPARATE.**
