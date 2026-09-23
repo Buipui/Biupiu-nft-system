@@ -1,3 +1,18 @@
+## 2026-09-24 — Repeated Foreign-Language Site Harvest × AI Behaviour Cross-Reference
+
+- Repeated external-language harvest across Chinese, Traditional Chinese, Japanese, Korean, Portuguese and Russian Android/AOSP sources; German lane checked with no new sufficiently authoritative module finding.
+- Cross-referenced harvested material against Biupiu Coding Philosophy, Coding Matrix, Knowledge Graph, Biupiu Intelligence, Native AI, ML, Quantum/quantum-inspired and Federation.
+- Chinese/Traditional Chinese AOSP material reinforced android-latest-release/android17-release lineage, Mainline modularity, stable interfaces and atomic update/rollback.
+- Japanese and Korean AOSP/Android 17 material added release, compatibility, security-patch and dated security evidence patterns.
+- Portuguese Mainline documentation reinforced stable API/AIDL/C boundaries and atomic module update/revert behaviour.
+- Russian Habr material retained as attributed secondary reporting for release/source-cadence context; it is not treated as primary implementation authority.
+- Added multilingual provenance rule: SOURCE_LANGUAGE -> ORIGINAL_SOURCE -> TRANSLATION/INTERPRETATION -> CLAIM -> EVIDENCE_CLASS -> INTERNAL_MATCH -> MODULE/CAPABILITY -> TEST -> RESULT -> PROVENANCE -> PROMOTION_STATE.
+- Added foreign-language behaviour fault classes covering translation/fact collapse, language provenance loss, secondary-source authority leakage, version-lineage collapse, licence translation gaps, security-date collapse, module-scope overclaim and runtime-from-document error.
+- No external-language implementation was silently imported or promoted.
+- Added research/BIUPIU-FOREIGN-LANGUAGE-SITE-HARVEST-AI-CROSSREF-20260924.md.
+- Added research/BIUPIU-FOREIGN-LANGUAGE-SITE-HARVEST-AI-CROSSREF-20260924.json.
+- Source cross-reference PASS; Android build/device, hardware accelerator, UE5 and QPU gates remain OPEN.
+
 ## 2026-09-24 — AI Behaviour × International Knowledge × Graph Harvest Cross-Reference
 
 - Cross-referenced Biupiu AI behaviour against federated international knowledge/reference patterns and the existing Knowledge Graph.
