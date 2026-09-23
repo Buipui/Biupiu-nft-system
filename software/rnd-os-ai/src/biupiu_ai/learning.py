@@ -225,6 +225,55 @@ def learning_reuse_ready(pattern: FailurePattern, evidence: LearningEvidence,
     )
 
 
+@dataclass(frozen=True)
+class RuntimeTelemetryObservation:
+    """Normalised runtime evidence suitable for passive learning."""
+    module_id: str
+    state: str
+    path: str
+    latency_ms: float
+    resource_pressure: float
+    success: bool
+    correlation_id: str
+
+
+def make_runtime_telemetry_learning_record(
+    observation: RuntimeTelemetryObservation,
+    *,
+    learning_id: str,
+    input_refs: Sequence[str] = (),
+    result_version: str = "runtime-telemetry-v1",
+) -> LearningRecord:
+    """Convert runtime telemetry into governed evidence without promotion."""
+    if observation.latency_ms < 0:
+        raise ValueError("latency_ms must be non-negative")
+    if not 0.0 <= observation.resource_pressure <= 1.0:
+        raise ValueError("resource_pressure must be between 0 and 1")
+    if not observation.correlation_id.strip():
+        raise ValueError("correlation_id is required")
+    refs = tuple(input_refs) + (
+        f"correlation={observation.correlation_id}",
+        f"path={observation.path}",
+        f"state={observation.state}",
+    )
+    return make_learning_record(
+        learning_id=learning_id,
+        target_type="RUNTIME_TELEMETRY",
+        target_id=observation.module_id,
+        input_refs=refs,
+        evidence_state="SUPPORTED",
+        knowledge_class="MEASUREMENT",
+        result_version=result_version,
+        observed_outcome=(
+            f"success={observation.success};latency_ms={observation.latency_ms:.6f};"
+            f"resource_pressure={observation.resource_pressure:.6f}"
+        ),
+        error=0.0 if observation.success else 1.0,
+        uncertainty=None,
+        next_action="TEST",
+    )
+
+
 CODING_MATRIX_VERSION = "BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0"
 CODING_GATE_VERSION = "biupiu.ai.coding-hard-gate.v1"
 
