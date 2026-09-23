@@ -39,6 +39,9 @@ REQUIRED_GATES = (
     FederationGate("F20", "delivery-resilience", ("delivery-policy", "retry", "ttl", "backpressure", "dead-letter")),
     FederationGate("F21", "industrial-adapters", ("opcua-boundary", "mqtt-boundary", "oem-boundary", "transport-neutral")),
     FederationGate("F22", "world-repository-boundary", ("core-world-separation", "simulator-authority", "provenance", "migration-plan")),
+    FederationGate("F23", "digital-twin-performance-federation", ("twin-schema", "module-capability-map", "performance-policy", "passive-state", "acceleration-policy", "deceleration-policy", "telemetry", "regression")),
+    FederationGate("F24", "oem-shared-development-resources", ("oem-family-registry", "sdk-adapter-registry", "runtime-version-matrix", "shared-resource-policy", "provenance")),
+    FederationGate("F25", "cross-matrix-scalability", ("capability-matrix", "dependency-graph", "resource-budget", "backpressure", "fail-closed")),
 )
 
 
