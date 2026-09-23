@@ -633,5 +633,27 @@
     "research/BIUPIU-QUANTUM-INSPIRED-DEEP-AUDIT-HARVEST-20260924.md",
     "mini-os/android/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.md",
     "research/BIUPIU-OS-DMS-SUBSYSTEM-MASTER-INDEX-v1.0.md"
-  ]
+  ],
+  "native_functionality_test_20260924": {
+    "status": "SOURCE_CONTRACT_FUNCTIONALITY_PASS",
+    "record": "research/BIUPIU-NATIVE-SYSTEM-FUNCTIONALITY-TEST-20260924.md",
+    "tests": {
+      "native_intelligence_federation_boundary": "PASS",
+      "compute_federation_optimisation": "PASS",
+      "governance_boundary": "PASS"
+    },
+    "execution_environment": "isolated_source_contract_execution",
+    "runtime_verification": "OPEN",
+    "promotion": "NOT_PERFORMED",
+    "claims_excluded": [
+      "android_device_runtime",
+      "production_gradle_build",
+      "gpu_npu_neon_hardware_performance",
+      "ue5_runtime",
+      "hil",
+      "qpu",
+      "optimisation_improvement",
+      "quantum_advantage"
+    ]
+  }
 }
