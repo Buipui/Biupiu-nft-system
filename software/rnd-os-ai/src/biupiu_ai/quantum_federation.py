@@ -67,3 +67,59 @@ def quantum_capability_names() -> Tuple[str, ...]:
             }
         )
     )
+
+
+@dataclass(frozen=True)
+class QuantumLearningObservation:
+    """A bounded observation usable by the quantum-learning service while idle."""
+    observation_id: str
+    signal: str
+    value: float
+    confidence: float
+    backend: str = "classical"
+    passive: bool = True
+
+def record_quantum_learning_observation(
+    observation: QuantumLearningObservation,
+) -> dict:
+    """Record learning evidence without activating QPU execution.
+
+    Passive quantum learning means the service can update its knowledge of
+    workloads, baselines, simulator behaviour and provider capability while
+    quantum hardware remains disabled.
+    """
+    if not observation.passive:
+        raise ValueError("this observation path is for passive learning only")
+    if not all(0.0 <= float(x) <= 1.0 for x in (observation.value, observation.confidence)):
+        raise ValueError("value and confidence must be between 0 and 1")
+    return {
+        "observation_id": observation.observation_id,
+        "signal": observation.signal,
+        "value": observation.value,
+        "confidence": observation.confidence,
+        "backend": observation.backend,
+        "execution": "PASSIVE",
+        "qpu_activation": "DISABLED",
+        "next_action": "REVIEW" if observation.confidence < 0.8 else "BENCHMARK",
+    }
+
+
+def select_quantum_candidate(
+    *,
+    classical_score: float,
+    quantum_simulator_score: float,
+    uncertainty: float,
+    resource_pressure: float,
+) -> str:
+    """Choose whether a candidate merits later quantum validation.
+
+    This is a routing/learning decision, not a claim of quantum advantage.
+    """
+    vals = (classical_score, quantum_simulator_score, uncertainty, resource_pressure)
+    if not all(0.0 <= float(x) <= 1.0 for x in vals):
+        raise ValueError("candidate scores must be between 0 and 1")
+    if resource_pressure > 0.9:
+        return "DEFER"
+    if quantum_simulator_score > classical_score and uncertainty < 0.5:
+        return "SIMULATOR_VALIDATE"
+    return "CLASSICAL_BASELINE"
