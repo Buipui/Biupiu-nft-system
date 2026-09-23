@@ -1,0 +1,71 @@
+{
+  "schema": "biupiu.federation.deep-harvest.v1",
+  "date": "2026-09-23",
+  "status": "IMPLEMENTED_ON_BRANCH_PENDING_CI",
+  "objective": "Discover internal AI systems, harvest reusable verified modules, map software-family compatibility, integrate stable patterns, and create graph-based learning evidence.",
+  "source_of_truth": [
+    "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json",
+    "research/BIUPIU-HARVEST-MODULE-TESTING-PROTOCOL-REGISTRY-2026-09-22.json",
+    "software/rnd-os-ai/src/biupiu_ai/federation_registry.py",
+    "software/digital-orchestra/orchestra.py",
+    "research/BIUPIU-NATIVE-CODING-PHILOSOPHY-AND-ENGINEERING-MATRIX-v1.0.md"
+  ],
+  "execution_order": [
+    "DISCOVER_AI_SYSTEMS",
+    "INVENTORY_TASKS",
+    "CROSS_REFERENCE_NATIVE_CODE",
+    "MAP_SOFTWARE_FAMILY_TREE",
+    "RUN_COMPATIBILITY_CHECK",
+    "HARVEST_VERIFIED_PATTERNS",
+    "ADAPT_TO_NATIVE_CONTRACTS",
+    "BUILD_GRAPH_LEARNING_MAP",
+    "UPDATE_FAULT_FINDING",
+    "UPDATE_ARCHIVE",
+    "BUILD_TEST",
+    "HUMAN_PROMOTION"
+  ],
+  "hard_rules": [
+    "CHAT_IS_INTERFACE",
+    "TXT_JSON_IS_STATE",
+    "GIT_IS_SOURCE",
+    "BUILD_TEST_IS_EVIDENCE",
+    "HANDOFF_IS_MACHINE_READABLE",
+    "VERIFIED_SOURCE_IS_REUSABLE_BUT_NOT_AUTO_PROMOTED",
+    "EXTERNAL_CODE_REMAINS_REFERENCE_OR_ADAPTER_UNTIL_GATES_PASS",
+    "FAILURE_AND_CONFLICT_ARE_QUARANTINED",
+    "RAW_NUMERIC_LOGS_ARE_RETAINED",
+    "GRAPH_AND_GEOMETRY_DERIVATIONS_ARE_ADDED_TO_LOGS",
+    "QUANTUM_STATE_MODEL_IS_MATHEMATICAL_AND_DEPENDENCY_FREE"
+  ],
+  "log_schema": {
+    "required": [
+      "timestamp",
+      "node",
+      "task_id",
+      "parent_task",
+      "role",
+      "input",
+      "action",
+      "output",
+      "build",
+      "test",
+      "evidence",
+      "validation",
+      "failure",
+      "dependencies",
+      "software_family",
+      "cross_department_links",
+      "geometry_map_ref",
+      "learning_state_ref"
+    ],
+    "visualisation": [
+      "time_series",
+      "dependency_graph",
+      "computational_geometry",
+      "cross_department_network",
+      "state_vector_growth"
+    ]
+  },
+  "promotion_boundary": "DISCOVER -> COMPATIBILITY -> TEST -> EVIDENCE -> CORE_OS_DMS_VALIDATION -> HUMAN_RELEASE",
+  "quantum_note": "The growth model is quantum-state-inspired mathematics; it must not be represented as quantum hardware execution or empirical quantum advantage."
+}
