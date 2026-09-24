@@ -37,3 +37,18 @@ Digital Twin = contextual composition authority.
 Federation = inter-system discovery/link/reconciliation authority.
 Canonical owner = execution authority for its own subsystem.
 Fault-healing orchestration = federated diagnosis + governed local execution.
+
+
+
+## Deep external harvest integration — 2026-09-24
+
+The Orchestra evidence envelope is extended to preserve parent task, canonical authority owner, schema version, validation state, provenance references, source commit, build/test state, rollback reference and payload hash. This makes orchestration state resumable and machine-auditable rather than chat-only.
+
+Digital Twin routing now recognises three composition modes from the 2026 ISO 23247-6 reference: integrated, unified and federated. Composition never transfers execution authority away from the canonical owner.
+
+The Orchestra therefore routes:
+RESEARCH -> EVIDENCE CLASSIFICATION -> CAPABILITY DISCOVERY -> OWNER/CONTEXT -> DIGITAL TWIN COMPOSITION -> FEDERATION -> DOMAIN EXECUTION -> VVUQ/REGRESSION -> DIGEST/FILING -> LEARNING -> GOVERNED PROMOTION.
+
+External standards and research remain reference evidence until Biupiu-side provenance, licence, security, compatibility, build, smoke, regression and promotion gates pass.
+
+Status: SOURCE UPDATED / FRESH RUNTIME AND CI VERIFICATION PENDING.
