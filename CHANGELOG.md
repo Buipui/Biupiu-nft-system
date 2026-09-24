@@ -1,3 +1,28 @@
+## 2026-09-24 — PC Build: Foreign-Language Harvest Integration
+
+Implemented the 2026-09-24 foreign-language site harvest as a native Windows PC evidence boundary.
+
+### PC implementation
+- Added `apps/windows/ForeignLanguageHarvestRegistry.cs`.
+- Added `apps/windows/ForeignLanguageHarvestRegistryTests.cs`.
+- Integrated the registry into `apps/windows/MainWindow.xaml.cs`.
+- Added a PC-shell status surface in `apps/windows/MainWindow.xaml`.
+- Preserved the shared BCP-47 language registry and explicit locale selection.
+- Registered Chinese, Traditional Chinese, Japanese, Korean, Portuguese and Russian harvest lanes with evidence class and executable-promotion state.
+- Added the eight foreign-language fault checks to the PC-side gate.
+- Enforced fail-closed executable promotion: harvested foreign-language evidence cannot authorise executable promotion.
+- Preserved the provenance chain:
+  `SOURCE_LANGUAGE -> ORIGINAL_SOURCE -> TRANSLATION/INTERPRETATION -> CLAIM -> EVIDENCE_CLASS -> INTERNAL_MATCH -> MODULE/CAPABILITY -> TEST -> RESULT -> PROVENANCE -> PROMOTION_STATE`.
+
+### Verification boundary
+- Source integration: IMPLEMENTED.
+- PC registry self-checks: IMPLEMENTED.
+- Windows build: PENDING local PC execution.
+- Windows runtime/UI: PENDING local PC execution.
+- Foreign-language translation quality: not claimed.
+- External executable promotion: NONE.
+- Android/device/hardware/UE5/QPU gates remain separate.
+
 ## 2026-09-24 — Repeated Foreign-Language Site Harvest × AI Behaviour Cross-Reference
 
 - Repeated external-language harvest across Chinese, Traditional Chinese, Japanese, Korean, Portuguese and Russian Android/AOSP sources; German lane checked with no new sufficiently authoritative module finding.
