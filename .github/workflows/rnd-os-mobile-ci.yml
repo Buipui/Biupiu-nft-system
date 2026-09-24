@@ -4,11 +4,11 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - 'software/rnd-os-mobile/**'
+      - 'mini-os/android/apps/rnd-os-mobile/**'
       - '.github/workflows/rnd-os-mobile-ci.yml'
   pull_request:
     paths:
-      - 'software/rnd-os-mobile/**'
+      - 'mini-os/android/apps/rnd-os-mobile/**'
       - '.github/workflows/rnd-os-mobile-ci.yml'
 
 jobs:
@@ -16,7 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     defaults:
       run:
-        working-directory: software/rnd-os-mobile
+        working-directory: mini-os/android/apps/rnd-os-mobile
     steps:
       - uses: actions/checkout@v4
       - name: Set up JDK 17
@@ -29,7 +29,7 @@ jobs:
         with:
           gradle-version: '8.13'
       - name: Set up Android SDK
-        uses: android-actions/setup-android@v3
+        uses: android-actions/setup-android@v4
       - name: Install Android SDK 36
         run: sdkmanager "platforms;android-36"
       - name: Verify project
