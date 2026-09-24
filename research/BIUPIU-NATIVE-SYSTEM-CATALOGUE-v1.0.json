@@ -31,8 +31,7 @@
       "name": "Biupiu DMS Control Plane",
       "layer": "SERVICE",
       "native_code": [
-        "dms/",
-        "software/digital-filing-cabinet/"
+        "dms/"
       ],
       "capabilities": [
         "identity/access",
@@ -301,8 +300,8 @@
       "name": "Android Mini OS",
       "layer": "APP",
       "native_code": [
-        "mini-os/android/",
-        "apps/android/"
+        "apps/android/",
+        "mini-os/android/"
       ],
       "capabilities": [
         "Android shell",
@@ -310,7 +309,8 @@
         "federation adapters",
         "language/runtime integration",
         "graphics capability discovery",
-        "device interfaces"
+        "device interfaces",
+        "canonical-shell-vs-federation-build split"
       ],
       "authority": "Android subsystem",
       "status": "IMPLEMENTED",
@@ -427,6 +427,68 @@
         "release manifests"
       ],
       "authority": "NFT/EVM domain",
+      "status": "IMPLEMENTED",
+      "runtime": "OPEN"
+    },
+    {
+      "id": "BPU.SYS.DIGITALFILE.CABINET",
+      "name": "Digital Filing Cabinet",
+      "layer": "SERVICE",
+      "native_code": [
+        "software/digital-filing-cabinet/",
+        "research/BIUPIU-DIGITAL-FILING-CABINET-INDEX-v1.0.md"
+      ],
+      "capabilities": [
+        "catalogue metadata",
+        "filing/index metadata",
+        "hash/provenance references",
+        "classify/cross-link/verify",
+        "retain/quarantine"
+      ],
+      "authority": "Digital Filing Cabinet owns filing/catalogue metadata; source systems retain artifact authority",
+      "status": "IMPLEMENTED",
+      "runtime": "OPEN"
+    },
+    {
+      "id": "BPU.SYS.QUANTUM.FEDERATION",
+      "name": "Quantum Federation Capability",
+      "layer": "DOMAIN",
+      "native_code": [
+        "software/rnd-os-ai/src/biupiu_ai/quantum_federation.py",
+        "software/rnd-os-ai/tests/test_quantum_federation.py"
+      ],
+      "capabilities": [
+        "quantum capability registry",
+        "classical baseline",
+        "simulator routing",
+        "passive quantum learning",
+        "promotion evidence"
+      ],
+      "authority": "Specialist capability under Native Intelligence/Federation; Core OS/DMS validates promotion",
+      "status": "IMPLEMENTED",
+      "runtime": "OPEN"
+    },
+    {
+      "id": "BPU.SYS.AI.OPTIMISATION",
+      "name": "Native AI Optimisation Federation",
+      "layer": "SERVICE",
+      "native_code": [
+        "software/rnd-os-ai/src/biupiu_ai/compute_federation.py",
+        "software/rnd-os-ai/src/biupiu_ai/ml/engine.py",
+        "software/rnd-os-ai/src/biupiu_ai/ml/backends.py"
+      ],
+      "capabilities": [
+        "compute scheduling/routing",
+        "SIMD/NEON capability routing",
+        "GPU/NPU routing",
+        "sparse/geometry optimisation candidates",
+        "numerical/alignment candidates",
+        "ML hyperparameter search",
+        "portable inference",
+        "resource optimisation",
+        "reversible candidate evaluation"
+      ],
+      "authority": "Native Intelligence proposes/routes; Federation orchestrates evidence; Core OS/DMS controls promotion",
       "status": "IMPLEMENTED",
       "runtime": "OPEN"
     }
@@ -655,5 +717,152 @@
       "optimisation_improvement",
       "quantum_advantage"
     ]
+  },
+  "external_foreign_language_harvest_20260924": {
+    "status": "HARVESTED / INTERNAL CROSS-REFERENCE COMPLETE / EXECUTABLE PROMOTION BLOCKED",
+    "sources": [
+      {
+        "language": "zh-CN/zh-TW",
+        "source": "AOSP localized Android documentation",
+        "finding": "NNAPI deprecated; GPU/CPU/accelerator routing; Mainline APEX/APK atomic update/rollback; Vulkan/validation boundaries",
+        "state": "REFERENCE"
+      },
+      {
+        "language": "ja",
+        "source": "Japanese Android Developers NNAPI documentation",
+        "finding": "hardware acceleration and CPU/GPU/DSP routing semantics; NNAPI deprecated",
+        "state": "REFERENCE"
+      },
+      {
+        "language": "ko",
+        "source": "Korean Android Developers graphics documentation",
+        "finding": "Vulkan preferred GPU interface and ANGLE compatibility layer",
+        "state": "REFERENCE"
+      },
+      {
+        "language": "pt-BR",
+        "source": "Portuguese AOSP Mainline and AutoFDO documentation",
+        "finding": "stable C/AIDL contracts, atomic rollback, AutoFDO profile-guided native optimisation",
+        "state": "REFERENCE/CANDIDATE"
+      },
+      {
+        "language": "ru",
+        "source": "Russian-language AOSP ecosystem search lane",
+        "finding": "secondary ecosystem/context evidence retained as attributed reference",
+        "state": "SECONDARY_REFERENCE"
+      },
+      {
+        "language": "de",
+        "source": "German lane",
+        "finding": "no new sufficiently authoritative module implementation promoted in this pass",
+        "state": "NO_NEW_PROMOTION"
+      }
+    ],
+    "missing_or_new_module_candidates": [
+      "Android 17 NPU HAL / NPU Manager scheduling boundary",
+      "Motion Context HAL",
+      "secure execution / SEE interfaces",
+      "wrapfd protected NPU buffer boundary",
+      "Berberis heavy optimizer / lite translator architecture",
+      "AutoFDO profile-guided native optimisation evidence path",
+      "stable AIDL/C module contract and atomic rollback pattern"
+    ],
+    "rule": "External-language evidence identifies candidates and contracts only. No external executable source is promoted without provenance/licence/security/static/unit/integration/regression/runtime gates."
+  },
+  "ai_federation_allocation_20260924": {
+    "status": "ALLOCATED TO EXISTING SPECIALIST FEDERATION TEAMS / FOUR-CANONICAL-IDENTITY LOOKUP STILL OPEN",
+    "teams": {
+      "AI-ORCHESTRATOR": [
+        "learning_daemon.py",
+        "federation_registry.py",
+        "Digital Orchestra",
+        "capability routing",
+        "worktree orchestration"
+      ],
+      "MATH-PHYSICS": [
+        "Eigen/GSL records",
+        "Jolt/PhysX/Bullet adapters",
+        "geometry optimisation",
+        "numerical/alignment optimisation",
+        "universal simulator"
+      ],
+      "CODE-SYSTEMS": [
+        "native semantic audit",
+        "Coding Matrix",
+        "language matrix",
+        "LLVM/Clang/AutoFDO references",
+        "Berberis translation/optimizer reference"
+      ],
+      "RESEARCH-EVIDENCE": [
+        "foreign-language harvest",
+        "Digital Filing Cabinet",
+        "provenance/licence evidence",
+        "external module gap detection"
+      ],
+      "SIMULATION-DIGITAL-TWIN": [
+        "Digital Twin optimisation",
+        "passive telemetry",
+        "failure/replay/regression learning",
+        "physics/graphics adapter contracts"
+      ],
+      "SECURITY-EXTERMINATE": [
+        "fail-closed promotion",
+        "quarantine",
+        "secure execution/SEE reference",
+        "wrapfd protection reference",
+        "rollback/security gates"
+      ],
+      "BLOCKCHAIN-PROVENANCE": [
+        "hash/checkpoint manifests",
+        "provenance lineage",
+        "approved evidence anchors"
+      ],
+      "MULTIMODAL-CONFIGURATION": [
+        "Android hardware adapters",
+        "Vulkan/OpenCL/NEON",
+        "OEM provider boundaries",
+        "language/UI capability routing"
+      ]
+    },
+    "optimisation_families": [
+      "compute scheduling",
+      "ARM NEON/SIMD",
+      "GPU/NPU/DSP routing",
+      "sparse/geometry",
+      "numerical/alignment",
+      "hyperparameter optimisation",
+      "portable inference",
+      "profile-guided optimisation",
+      "Digital Twin resource optimisation"
+    ],
+    "learning_families": [
+      "failure learning",
+      "passive learning",
+      "federated learning",
+      "continual/drift learning",
+      "Digital Twin active learning",
+      "multilingual evidence learning",
+      "quantum passive learning",
+      "regression/replay learning"
+    ],
+    "authority_rule": "Do not relabel the eight specialist teams as the unresolved canonical four Federation AI identities. Canonical four identity recovery remains a separate gate."
+  },
+  "digicat_digifile_repository_scope_20260924": {
+    "status": "SOURCE-LEVEL RECONCILIATION",
+    "repositories": [
+      {
+        "repo": "Buipui/Biupiu-nft-system",
+        "scope": "full indexed GitHub repository; DigiFile implementation and research catalogue checked",
+        "state": "PASS_WITH_CATALOGUE_CORRECTIONS"
+      },
+      {
+        "repo": "Buipui/Buipui-World",
+        "scope": "README/bootstrap boundary only; no DigiCat/DigiFile implementation found",
+        "state": "PASS_BOOTSTRAP_ONLY"
+      }
+    ],
+    "canonical_filing_owner": "software/digital-filing-cabinet/",
+    "source_authority_rule": "DigiFile/Digital Filing Cabinet indexes metadata; executable source remains owned by its canonical subsystem.",
+    "pc_execution": "DEFERRED_UNTIL_CURRENT_GATES_CLOSE"
   }
 }
