@@ -70,3 +70,11 @@ This is intentionally a small semantic change: it establishes a verified resourc
 - OEM/physical hardware verification: **OPEN**
 
 Promotion rule: implementation is not runtime verification. No Android build/device gate is marked verified without execution evidence.
+
+## Execution record
+- Locale resource commits: `f4e30b447b67bcac112eb4c702aeba140dfcad94`, `34afc23910745e3f0fb0eddfc692cef79c1557c0`, `f7baf6dc12cb98e3a0129fdc1c22af7cb250e53e`, `867ed40ca8517bb17e604b3459e1de10319eed2b`, `07a9ff81451cd0c390cee1d004c350dd126c57b5`, `eb30c4a6d9735bfda9a33210ee602f5d00a90904`.
+- Manifest localization commit: `0add91e7fce60d8ffd70004863d21d899ad01343`.
+- Changelog/audit commit: `95db871f2b984b7a76e0e4ce87931e869607e452`.
+- GitHub combined-status query for the changelog commit currently returned no statuses; commit-associated workflow-run query also returned no runs.
+- Therefore the repository has been updated and the CI gate is triggered by repository state, but **fresh build execution evidence is not yet available**.
+- Local container execution was attempted but the environment could not resolve GitHub, so a local Gradle/SDK build could not be started from the remote repository.
