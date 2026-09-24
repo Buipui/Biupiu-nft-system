@@ -1,0 +1,26 @@
+{
+  "schema":"biupiu.intelligence.systems-within-systems.matrix.v2",
+  "date":"2026-09-24",
+  "status":"REGISTERED_RETEST_REQUIRED",
+  "canonical_flow":["observe","map","intersect","decompile","defragment","anchor_metadata","recompile_candidate","regression","learn","optimise","promote"],
+  "representation":{
+    "executable_truth":"source/code/build/runtime evidence",
+    "canonical_relationship_model":"computational_geometry",
+    "provenance":"DigiFile+metadata+hash+event chain",
+    "catalogue":"DigiCat",
+    "learning":"shared_Biupiu_Intelligence_learning_layer",
+    "controlled_intersection":"Quanticor_referee",
+    "simulation":"Buipui_simulator_contract"
+  },
+  "philosophy_modes":[
+    {"id":"NATIVE","role":"family-native execution and direct contracts","selection_inputs":["functional_equivalence","latency","resource","fault_recovery","traceability"]},
+    {"id":"FEDERATION","role":"capability-driven adapter/interoperability path","selection_inputs":["compatibility","adapter_health","integration_cost","recovery","traceability"]},
+    {"id":"QUANTUM_MODEL","role":"computational/research alternative-state model","selection_inputs":["state-space_coverage","uncertainty","search_diversity","resource_model","evidence"]},
+    {"id":"FAMILY_AI","role":"per-family specialised AI observer/learner sharing the common intelligence core","selection_inputs":["semantic_coverage","local_context","regression_learning","evidence_quality"]}
+  ],
+  "path_rule":"Do not choose a path from geometry alone. Geometry proposes relationship/behaviour paths; executable regression remains the acceptance gate.",
+  "promotion_rule":"Only reproducible evidence may promote a candidate; failed or experimental paths remain quarantined and traceable.",
+  "families":["mini-os","apps/android","mini-os/android","smart-farming/android","software/rnd-os-mobile","apps/windows"],
+  "layers":["DigiCat","DigiFile","Learning","semantic contracts","modules","adapters","Quanticor","computational geometry","simulators","family AI","federation","quantum-model"],
+  "pc_ue5":"HOLD"
+}
