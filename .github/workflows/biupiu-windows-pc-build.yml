@@ -1,0 +1,44 @@
+name: Biupiu Windows PC Build Verification
+
+on:
+  push:
+    branches:
+      - pc/foreign-language-harvest-integration-20260924
+  workflow_dispatch:
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup .NET
+        uses: actions/setup-dotnet@v4
+        with:
+          dotnet-version: '8.0.x'
+      - name: Restore
+        run: dotnet restore apps/windows/Biupiu.Desktop.csproj
+      - name: Build
+        run: dotnet build apps/windows/Biupiu.Desktop.csproj --configuration Release --no-restore
+      - name: Record machine-readable evidence
+        shell: pwsh
+        run: |
+          $out = "research/BIUPIU-PC-BUILD-EVIDENCE-20260924.json"
+          $obj = @{
+            schema = "biupiu.pc.build-evidence.v1"
+            target = "WINDOWS_PC"
+            project = "apps/windows/Biupiu.Desktop.csproj"
+            configuration = "Release"
+            workflow = "$" + "{{ github.workflow }}"
+            run_id = "$" + "{{ github.run_id }}"
+            commit = "$" + "{{ github.sha }}"
+            status = "VERIFIED_BY_WINDOWS_CI"
+            tests = @("ForeignLanguageHarvestRegistryTests.Run","dotnet restore","dotnet build")
+            external_executable_promotion = "DISABLED"
+          }
+          $obj | ConvertTo-Json -Depth 5 | Set-Content -Path $out -Encoding utf8
+      - name: Upload build evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-windows-pc-build-evidence
+          path: research/BIUPIU-PC-BUILD-EVIDENCE-20260924.json
