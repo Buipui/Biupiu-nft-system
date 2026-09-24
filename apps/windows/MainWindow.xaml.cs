@@ -10,8 +10,10 @@ public partial class MainWindow : System.Windows.Window
     public MainWindow()
     {
         InitializeComponent();
+        ForeignLanguageHarvestRegistryTests.Run();
         LanguageSelector.ItemsSource = BiupiuLanguageRegistry.SupportedTags;
         LanguageSelector.SelectedItem = BiupiuLanguageRegistry.Normalise(CultureInfo.CurrentUICulture.Name);
+        ForeignHarvestStatus.Text = ForeignLanguageHarvestRegistry.Status;
         ApplyEntitlements();
     }
 
@@ -41,8 +43,6 @@ public partial class MainWindow : System.Windows.Window
 
     private void RndButton_Click(object sender, System.Windows.RoutedEventArgs e) =>
         OpenDepartment("RND_OS");
-}
-
 
     private void LanguageSelector_SelectionChanged(object sender, System.Windows.Controls.SelectionChangedEventArgs e)
     {
@@ -51,3 +51,4 @@ public partial class MainWindow : System.Windows.Window
         CultureInfo.CurrentUICulture = CultureInfo.GetCultureInfo(canonical);
         CultureInfo.CurrentCulture = CultureInfo.GetCultureInfo(canonical);
     }
+}
