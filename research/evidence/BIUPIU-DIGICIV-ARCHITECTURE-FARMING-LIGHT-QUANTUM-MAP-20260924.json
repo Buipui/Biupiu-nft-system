@@ -1,0 +1,199 @@
+{
+  "schema": "biupiu.digiciv.native-quantum-mapping.v1",
+  "title": "Biupui DigiCiv Architecture and Farming Simulator Integration Map",
+  "date": "2026-09-24",
+  "status": "ARCHITECTURE_REGISTERED_IMPLEMENTATION_GATE_REQUIRED",
+  "scope": "Digital-civilisation simulation, observed-map generation, architecture/farming system modelling, and light-based information-transfer research.",
+  "governance": {
+    "digiCat": "Catalogue capabilities, entities, relationships, simulator interfaces, observed maps and benchmark dimensions.",
+    "digiFile": "Record source identity, simulator inputs/outputs, hashes, observations, experiments, provenance and promotion state.",
+    "learning": "Learn from simulated and observed behaviour; propose changes only after regression/evidence gates.",
+    "quanticor": "Controlled referee for native, federated and quantum-model intersections. No uncontrolled production collision.",
+    "computational_geometry": "Canonical machine-readable relationship/behaviour representation; does not replace executable truth.",
+    "executable_truth": "Source, simulator execution, build/test/runtime evidence remain acceptance authority."
+  },
+  "digiciv": {
+    "definition": "A machine-readable digital-civilisation matrix representing interacting built, ecological, agricultural, technological, information and energy systems.",
+    "map_types": [
+      "architecture_map",
+      "farm_ecology_map",
+      "resource_flow_map",
+      "sensor_telemetry_map",
+      "infrastructure_map",
+      "light_path_map",
+      "information_transfer_map",
+      "observed_environment_map",
+      "simulated_environment_map",
+      "native_quantum_protocol_map"
+    ],
+    "dimensions": [
+      "space",
+      "time",
+      "geometry",
+      "materials",
+      "energy",
+      "water",
+      "biology",
+      "agriculture",
+      "infrastructure",
+      "sensors",
+      "computation",
+      "communications",
+      "light",
+      "information",
+      "quantum_model",
+      "provenance",
+      "fault_state",
+      "resource_state"
+    ]
+  },
+  "simulator_integrations": [
+    {
+      "id": "SIM-ARCH",
+      "existing_source": "world/simulation/BIUPIU-ARCHITECTURE-SIMULATOR-v1.0.md",
+      "role": "Built-environment and system architecture simulation.",
+      "native_outputs": [
+        "architecture topology",
+        "spatial relationships",
+        "resource interfaces",
+        "infrastructure nodes",
+        "candidate optical line-of-sight paths"
+      ],
+      "digiciv_layer": "architecture_map"
+    },
+    {
+      "id": "SIM-FARM",
+      "existing_sources": [
+        "world/environments/BIUPIU-FARMING-SIMULATION-ARCHITECTURE-v1.0.md",
+        "core/multilang/cpp/farming_sim.cpp",
+        "core/multilang/include/biupiu_farming_sim.h"
+      ],
+      "role": "Agricultural/ecological system simulation and telemetry model.",
+      "native_outputs": [
+        "soil state",
+        "water demand",
+        "rainfall",
+        "irrigation",
+        "evapotranspiration",
+        "farm-zone state",
+        "plant/growth observations"
+      ],
+      "digiciv_layer": "farm_ecology_map"
+    }
+  ],
+  "light_information_transfer": {
+    "status": "RESEARCH_MODEL",
+    "purpose": "Map light-based information paths through simulated architecture and agricultural environments.",
+    "information_layers": [
+      "source",
+      "encoding",
+      "optical_path",
+      "environmental_state",
+      "receiver",
+      "decoded_information",
+      "measurement",
+      "fault",
+      "recovery",
+      "provenance"
+    ],
+    "candidate_modes": [
+      "FSO",
+      "VLC",
+      "structured_light",
+      "spatial_encoding",
+      "phase_encoding",
+      "polarization_encoding",
+      "OAM_or_topological_encoding"
+    ],
+    "observed_map_rule": "Observed optical/environmental measurements must be stored separately from simulated predictions.",
+    "simulation_rule": "Simulation may generate candidate paths and expected behaviour but cannot be promoted as measured physical performance."
+  },
+  "native_quantum_protocol": {
+    "status": "ARCHITECTURE_REGISTERED_RESEARCH_MODEL",
+    "pipeline": [
+      "observe",
+      "map",
+      "encode",
+      "intersect",
+      "referee",
+      "decompose",
+      "defragment",
+      "anchor_metadata",
+      "recompile_candidate",
+      "regression",
+      "learn",
+      "optimise",
+      "promote"
+    ],
+    "quantum_boundary": "Quantum states, routing and photonic-quantum behaviour remain computational/research models unless physical hardware evidence exists.",
+    "native_priority": "Use native computational geometry, simulator and executable paths first; federation/adapters are introduced only when capability evidence requires them."
+  },
+  "cross_system_matrix": [
+    {
+      "source": "SIM-ARCH",
+      "target": "SIM-FARM",
+      "relationship": "architecture_to_agriculture",
+      "map": "spatial/resource/telemetry"
+    },
+    {
+      "source": "SIM-FARM",
+      "target": "SIM-ARCH",
+      "relationship": "agriculture_to_infrastructure",
+      "map": "water/energy/sensor/optical-node"
+    },
+    {
+      "source": "SIM-ARCH",
+      "target": "LIGHT",
+      "relationship": "built-environment_to-optical-path",
+      "map": "line-of-sight/reflection/occlusion/node-placement"
+    },
+    {
+      "source": "SIM-FARM",
+      "target": "LIGHT",
+      "relationship": "agricultural-environment_to-optical-path",
+      "map": "vegetation/weather/water/dust/terrain/occlusion"
+    },
+    {
+      "source": "LIGHT",
+      "target": "QUANTICOR",
+      "relationship": "information-path_to-controlled-referee",
+      "map": "path-quality/fault/recovery/resource/provenance"
+    },
+    {
+      "source": "QUANTICOR",
+      "target": "DIGICIV",
+      "relationship": "controlled-system-intersection",
+      "map": "multidimensional-system-state"
+    }
+  ],
+  "performance_dimensions": [
+    "functional_equivalence",
+    "path_availability",
+    "latency",
+    "throughput",
+    "information_integrity",
+    "bandwidth_density",
+    "energy_per_information_unit",
+    "environmental_loss",
+    "occlusion",
+    "fault_recovery",
+    "resource_availability",
+    "routing_quality",
+    "measurement_quality",
+    "simulation_reproducibility",
+    "build_reproducibility",
+    "provenance_completeness"
+  ],
+  "promotion": {
+    "production_promotion": false,
+    "required_evidence": [
+      "deterministic simulator test",
+      "common cross-system benchmark",
+      "DigiFile provenance",
+      "source/content hashes",
+      "regression evidence",
+      "physical measurement for any physical performance claim",
+      "licence/IP review for external models"
+    ]
+  }
+}
