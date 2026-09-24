@@ -1,0 +1,18 @@
+{
+  "schema": "biupiu.android.worktree.v1",
+  "date": "2026-09-24",
+  "canonical": "apps/android/",
+  "federation_compatibility": "mini-os/android/",
+  "shared": [
+    "apps/shared/runtime/",
+    "packages/",
+    "software/rnd-os-ai/",
+    "core/multilang/"
+  ],
+  "consolidation": "NON_DESTRUCTIVE_UNTIL_RECONCILED",
+  "build": "OPEN",
+  "device": "OPEN",
+  "hardware": "OPEN",
+  "runtime": "OPEN",
+  "pc_execution": "DEFERRED"
+}
