@@ -77,3 +77,16 @@ OPEN: continuous runtime telemetry integration; hardware benchmark validation; Q
 - https://dev.epicgames.com/documentation/unreal-engine/neural-network-engine-overview-in-unreal-engine
 - https://www.sciencedirect.com/science/article/pii/S0304397526001829
 - https://link.springer.com/article/10.1007/s42484-026-00363-y
+
+## DigiCat + DigiFile cross-reference — 2026-09-24
+
+DigiCat is the catalogue/index role for capabilities, systems, interfaces, dependencies, Digital Twin relationships and Quantum AI relevance.
+
+DigiFile is the evidence/filing role mapped to DMS and `software/digital-filing-cabinet/`, preserving provenance, source version/commit, validation, regression, failure, release and rollback lineage.
+
+Core OS/DMS remains authoritative. Federation routes/contracts and reconciles. Digital Twin models context/state. Quantum AI remains simulator/classical-baseline first. DigiCat indexes these relationships; DigiFile records their evidence.
+
+Cross-system rule:
+DigiCat DISCOVER → Intelligence CLASSIFY/PROPOSE → Federation ROUTE → Core/DMS VALIDATE → DigiFile RECORD → Twin/Quantum SIMULATE → REGRESSION → LEARN → DigiCat UPDATE.
+
+No catalogue entry, evidence file, federation observation, Digital Twin simulation or quantum result independently grants promotion authority.
