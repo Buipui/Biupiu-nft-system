@@ -1,7 +1,7 @@
 {
   "schema": "biupiu.native-system-catalogue.v1",
-  "date": "2026-09-23",
-  "status": "CANONICAL REGISTRY / SOURCE IMPLEMENTATION MAPPED / RUNTIME EVIDENCE SEPARATE",
+  "date": "2026-09-24",
+  "status": "CANONICAL REGISTRY / DIGICAT-DIGIFILE CROSS-LINKED / RUNTIME EVIDENCE SEPARATE",
   "tag_schema": "research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md",
   "philosophy": "research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md",
   "systems": [
@@ -429,10 +429,54 @@
       "authority": "NFT/EVM domain",
       "status": "IMPLEMENTED",
       "runtime": "OPEN"
+    },
+    {
+      "id": "BPU.SYS.DIGICAT.CATALOGUE",
+      "name": "DigiCat — Digital Capability & Knowledge Catalogue",
+      "layer": "INTELLIGENCE",
+      "native_code": [
+        "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json",
+        "intelligence/"
+      ],
+      "capabilities": [
+        "system/module catalogue",
+        "capability taxonomy",
+        "cross-reference graph",
+        "Core/Federation/Quantum mapping",
+        "Digital Twin routing metadata",
+        "version/status tracking",
+        "provenance pointers"
+      ],
+      "authority": "Native Intelligence catalogue; canonical subsystem owners retain execution authority",
+      "status": "REGISTERED",
+      "runtime": "OPEN"
+    },
+    {
+      "id": "BPU.SYS.DIGIFILE.EVIDENCE",
+      "name": "DigiFile — Digital Evidence & Filing Layer",
+      "layer": "SERVICE",
+      "native_code": [
+        "software/digital-filing-cabinet/",
+        "dms/"
+      ],
+      "capabilities": [
+        "machine-readable evidence filing",
+        "research/source records",
+        "provenance",
+        "hash/version lineage",
+        "release manifests",
+        "failure/regression records",
+        "Digital Twin evidence",
+        "quantum experiment evidence",
+        "cross-system audit trail"
+      ],
+      "authority": "DMS evidence/file authority; does not promote content",
+      "status": "REGISTERED",
+      "runtime": "OPEN"
     }
   ],
   "capability_rule": "Source presence registers a capability requirement; capability availability requires execution evidence.",
-  "authority_rule": "Every subsystem keeps one canonical owner; Federation/Digital Twin may compose but cannot silently acquire ownership.",
+  "authority_rule": "Every subsystem keeps one canonical owner. DigiCat indexes and relates knowledge/capabilities; DigiFile stores evidence and filing lineage; Federation routes/contracts; Core OS/DMS validates authoritative promotion; Quantum AI remains simulator/classical-baseline first.",
   "external_rule": "External systems remain REFERENCE/ADAPTER until licence, security, compatibility, build, smoke, regression and runtime gates pass.",
   "function_change_tracking": {
     "authority": "software/rnd-os-ai/src/biupiu_ai/federation_change_tracker.py",
