@@ -1,3 +1,14 @@
+## 2026-09-24 — DigiCat / DigiFile Core-Federation-Quantum Cross-reference
+
+- Formalised **DigiCat** as the catalogue/index role for capabilities, systems, interfaces, dependencies, Digital Twin relationships and Quantum AI relevance.
+- Formalised **DigiFile** as the evidence/filing role mapped to the existing DMS and `software/digital-filing-cabinet/`.
+- Cross-referenced DigiCat/DigiFile with Core OS/DMS, Native Intelligence, Federation, Digital Twin, Universal Simulator and Quantum Federation.
+- Preserved authority boundaries: Core OS/DMS validates authoritative promotion; Federation routes/contracts/reconciles; DigiCat indexes; DigiFile records evidence; Digital Twin models context; Quantum AI remains simulator/classical-baseline first.
+- Added machine-readable evidence: `research/evidence/BIUPIU-DIGICAT-DIGIFILE-CROSSREF-20260924.json`.
+- Added architecture record: `research/BIUPIU-DIGICAT-DIGIFILE-CORE-FEDERATION-QUANTUM-CROSSREF-v1.0.md`.
+- Updated Native System Catalogue and the Quantum, Native Evolution, Digital Twin, Deep Learning Harvest and Master System Index records.
+- Runtime/build/CI/device/QPU verification remains separate and is not claimed by this source-level update.
+
 ## 2026-09-24 — Digital Orchestra + Federation + Digital Twin Deep Harvest
 
 - Extended the Digital Orchestra evidence envelope for parent-task lineage, canonical authority, schema/validation state, provenance, source commit, build/test state, rollback and payload hashing.
