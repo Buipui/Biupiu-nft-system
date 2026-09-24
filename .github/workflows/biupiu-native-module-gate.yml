@@ -1,0 +1,58 @@
+name: Buipui Native Module Gate
+
+on:
+  push:
+    paths:
+      - 'apps/android/**'
+      - 'mini-os/**'
+      - 'smart-farming/android/**'
+      - 'software/rnd-os-mobile/**'
+      - 'apps/windows/**'
+      - 'research/tools/biupiu_native_module_gate.py'
+      - '.github/workflows/biupiu-native-module-gate.yml'
+  pull_request:
+    paths:
+      - 'apps/android/**'
+      - 'mini-os/**'
+      - 'smart-farming/android/**'
+      - 'software/rnd-os-mobile/**'
+      - 'apps/windows/**'
+      - 'research/tools/biupiu_native_module_gate.py'
+      - '.github/workflows/biupiu-native-module-gate.yml'
+  workflow_dispatch:
+
+jobs:
+  source_gate:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Python source/module gate
+        run: python3 research/tools/biupiu_native_module_gate.py
+      - name: Android Mini OS build/test
+        working-directory: mini-os/android
+        run: |
+          gradle wrapper
+          ./gradlew testDebugUnitTest --stacktrace
+          ./gradlew assembleDebug --stacktrace
+      - name: Native Mini OS Rust tests
+        working-directory: mini-os/rust
+        run: cargo test --all-targets --locked
+      - name: Native Mini OS Rust format/check
+        working-directory: mini-os/rust
+        run: |
+          cargo fmt -- --check
+          cargo clippy --all-targets --all-features -- -D warnings
+      - name: Evidence
+        if: always()
+        run: |
+          mkdir -p native-module-gate-evidence
+          cp research/evidence/BIUPIU-NATIVE-MODULE-GATE-20260924.json native-module-gate-evidence/
+          git status --short > native-module-gate-evidence/git-status.txt || true
+          git log -1 --format='%H%n%s%n%ad' --date=iso > native-module-gate-evidence/head.txt
+      - name: Upload evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-native-module-gate-evidence
+          path: native-module-gate-evidence/
+          if-no-files-found: error
