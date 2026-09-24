@@ -654,3 +654,14 @@ Unicode UAX #31 provides a normative reference model for identifier syntax and n
 Audit authority: intelligence/BIUPIU-REPOSITORY-SPELLING-SEMANTIC-AUDIT.py
 
 The audit is repository-wide at CI execution time and remains source-level. Passing it does not imply runtime, hardware or UE5 verification.
+
+
+
+## 2026-09-24 — Internal Optimisation / Hardware / Foreign-Language Consolidation
+The coding matrix now explicitly treats optimisation and hardware-adapter families as cross-cutting capability records rather than duplicated implementation authorities.
+
+Required dimensions for harvested modules: source language, runtime family, architecture/ABI, API/contract version, module boundary, dependency/licence state, security state, optimisation class, hardware capability class, build/test state, runtime/device state, rollback path, provenance and promotion state.
+
+Android 17 reference findings are mapped to stable AIDL/C contracts; Mainline atomic update/rollback; NPU scheduling; motion-context events; secure-execution/TEE boundaries; protected NPU buffers; Berberis binary-translation optimisation; and AutoFDO profile-guided optimisation. These are reference/candidate inputs until Biupiu-native semantic, dependency, licence, security, build, regression and runtime gates pass.
+
+No PC execution is authorised by this consolidation gate. PC build/runtime remains downstream of closure of current non-PC gates.
