@@ -4,17 +4,17 @@ on:
   push:
     branches: [main]
     paths:
-      - 'apps/android/**'
-      - 'smart-farming/android/**'
-      - 'software/rnd-os-mobile/**'
+      - 'mini-os/android/apps/rnd-os/**'
+      - 'mini-os/android/apps/world/**'
+      - 'mini-os/android/apps/rnd-os-mobile/**'
       - 'research/BIUPIU-GRADLE-SYSTEM-HARVEST-GATE-30.md'
       - 'research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json'
       - '.github/workflows/biupiu-gradle-toolchain-gate.yml'
   pull_request:
     paths:
-      - 'apps/android/**'
-      - 'smart-farming/android/**'
-      - 'software/rnd-os-mobile/**'
+      - 'mini-os/android/apps/rnd-os/**'
+      - 'mini-os/android/apps/world/**'
+      - 'mini-os/android/apps/rnd-os-mobile/**'
       - '.github/workflows/biupiu-gradle-toolchain-gate.yml'
   workflow_dispatch:
 
@@ -27,15 +27,15 @@ jobs:
       matrix:
         include:
           - name: R&D OS Android
-            path: apps/android
+            path: mini-os/android/apps/rnd-os
             gradle: '8.9'
             task: ':app:testDebugUnitTest'
           - name: Smart Farming Android
-            path: smart-farming/android
+            path: mini-os/android/apps/world
             gradle: '8.9'
             task: ':app:assembleDebug'
           - name: R&D OS Mobile
-            path: software/rnd-os-mobile
+            path: mini-os/android/apps/rnd-os-mobile
             gradle: '8.13'
             task: ':app:assembleDebug'
     defaults:
@@ -76,9 +76,9 @@ jobs:
           from pathlib import Path
           m = json.loads(Path("research/BIUPIU-GRADLE-SYSTEM-MANIFEST-v1.0.json").read_text())
           expected = {
-              "apps/android": "8.9",
-              "smart-farming/android": "8.9",
-              "software/rnd-os-mobile": "8.13",
+              "mini-os/android/apps/rnd-os": "8.9",
+              "mini-os/android/apps/world": "8.9",
+              "mini-os/android/apps/rnd-os-mobile": "8.13",
           }
           actual = {x["path"]: x["gradleVersion"] for x in m["systems"]}
           assert actual == expected, (actual, expected)
