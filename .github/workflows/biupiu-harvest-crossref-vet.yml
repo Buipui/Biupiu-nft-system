@@ -1,0 +1,26 @@
+name: Buipui Harvest CrossRef Vet
+
+on:
+  push:
+    paths:
+      - 'research/tools/biupiu_harvest_crossref_vet.py'
+      - 'research/**'
+      - '.github/workflows/biupiu-harvest-crossref-vet.yml'
+  pull_request:
+    paths:
+      - 'research/**'
+      - '.github/workflows/biupiu-harvest-crossref-vet.yml'
+  workflow_dispatch:
+
+jobs:
+  crossref:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run harvest cross-reference and vet
+        run: python3 research/tools/biupiu_harvest_crossref_vet.py
+      - name: Upload DigiFile evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-harvest-crossref-vet
+          path: research/evidence/BIUPIU-HARVEST-CROSSREF-VET-20260924.json
