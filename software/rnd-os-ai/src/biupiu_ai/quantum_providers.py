@@ -17,6 +17,10 @@ class QuantumProvider:
     execution_modes: Tuple[str, ...]
     capabilities: Tuple[str, ...]
     hardware_enabled: bool = False
+    authority_owner: str = "BIUPIU_FEDERATION_QUANTUM"
+    execution_policy: str = "SIMULATOR_VALIDATE"
+    learning_mode: str = "PASSIVE_OBSERVATION"
+    promotion_state: str = "REFERENCE_ONLY"
 
 
 QISKIT = QuantumProvider(
@@ -89,6 +93,11 @@ PROVIDERS = (PENNYLANE, QISKIT, QIR, OPENQASM, BRAKET, AZURE_QUANTUM, DWAVE_LEAP
 def provider_registry() -> Tuple[QuantumProvider, ...]:
     """Stable provider registry; hardware remains disabled by default."""
     return PROVIDERS
+
+
+def hardware_capable_providers() -> Tuple[QuantumProvider, ...]:
+    """Return hardware-capable declarations without granting execution authority."""
+    return tuple(provider for provider in PROVIDERS if "hardware" in provider.execution_modes)
 
 
 def provider_for_capability(capability: str) -> Tuple[QuantumProvider, ...]:
