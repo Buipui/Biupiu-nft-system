@@ -1,0 +1,70 @@
+{
+  "schema": "biupiu.system-family-benchmark-standard.v1",
+  "date": "2026-09-24",
+  "status": "CANONICAL STANDARD / SOURCE-ONLY AUDIT FIRST",
+  "purpose": "Every Biupiu application and system family is measured against the same native DigiCat, DigiFile, Learning, semantic, module, adapter, functionality and performance contracts.",
+  "baseline_rule": "Current build remains the immutable functional baseline/control until audit evidence is complete.",
+  "mandatory_layers": {
+    "DigiCat": "capability/system/module/interface/dependency/platform catalogue and graph index",
+    "DigiFile": "evidence/provenance/manifest/hash/audit filing layer",
+    "Learning": "failure/observation/regression learning record and governed proposal flow",
+    "semantic": "machine-readable capability/interface/ownership semantics",
+    "modules": "module inventory, dependency graph, implementation and test state",
+    "adapters": "adapter inventory, contract, provider/platform boundary and health state",
+    "benchmarks": "same workload/functionality suite plus platform-specific performance metrics"
+  },
+  "status_model": [
+    "REGISTERED",
+    "IMPLEMENTED",
+    "COMPILES",
+    "UNIT_TESTED",
+    "INTEGRATION_TESTED",
+    "RUNTIME_TESTED",
+    "VERIFIED",
+    "BENCHMARKED",
+    "QUARANTINED",
+    "ARCHIVED"
+  ],
+  "rules": [
+    "DigiCat indexes; it does not become execution authority.",
+    "DigiFile records evidence; it does not promote code.",
+    "Learning proposes and records; Core/DMS validates promotion.",
+    "Native functionality is preferred; federation/adapters are used when required by platform or protocol.",
+    "Every family must expose the same canonical capability vocabulary even when implementations differ by language/platform.",
+    "AS-IS and FULL-INTEGRATION trees are measured with the same functionality suite.",
+    "Performance optimization is evaluated only after functional equivalence is demonstrated.",
+    "Historical builds are archived by immutable commit/provenance and remain regression references.",
+    "PC/Windows/UE5 remain HOLD for this Android/native audit phase."
+  ],
+  "benchmark_dimensions": [
+    "functional coverage",
+    "semantic compatibility",
+    "module completeness",
+    "adapter completeness",
+    "build reproducibility",
+    "unit/integration/runtime evidence",
+    "startup/boot latency",
+    "capability dispatch latency",
+    "memory footprint",
+    "CPU utilisation",
+    "native computation throughput",
+    "I/O/network transport latency",
+    "failure recovery",
+    "learning/evidence throughput",
+    "DigiCat/DigiFile traceability",
+    "cross-platform portability"
+  ],
+  "system_families": [
+    "apps/android",
+    "mini-os",
+    "mini-os/android",
+    "smart-farming/android",
+    "software/rnd-os-mobile",
+    "apps/windows"
+  ],
+  "target_architecture": {
+    "functionality_tree": "preserve existing systems and maximise verified functionality",
+    "integrated_tree": "federate/core-integrate proven functionality for performance experiments",
+    "archive_tree": "immutable historical builds used as control/reference"
+  }
+}
