@@ -1,0 +1,28 @@
+{
+  "schema": "biupiu.quanticor.native-controlled-test-log.v1",
+  "date": "2026-09-24",
+  "baseline": "99d338cfed4457fbf03be66e742cd788a172a0a4",
+  "scope": ["mini-os", "apps/android", "mini-os/android"],
+  "mode": "controlled_non_destructive",
+  "authority": "Native BUIPUI system families",
+  "pc_ue5": "HOLD",
+  "source_mutation": false,
+  "protocol": ["observe","map","intersect","decompile","defragment","anchor_metadata","recompile","regression","learn"],
+  "controlled_collision": {
+    "mode": "quarantine_only",
+    "target": "in_memory_candidate",
+    "production_source": "untouched"
+  },
+  "expected_gate": {
+    "native_inputs_present": "PASS",
+    "geometry_mapping": "PASS",
+    "collision_detection": "PASS",
+    "decomposition": "PASS",
+    "defragmentation": "PASS",
+    "code_anchor_metadata": "PASS",
+    "recompile_candidate": "PASS",
+    "regression_hash_stability": "PASS",
+    "promotion": "NOT_CLAIMED"
+  },
+  "purpose": "First executable controlled test of the v1.1 Quanticor semantics using real Native BUIPUI repository inputs while keeping all collision and transformation states quarantined and non-destructive."
+}
