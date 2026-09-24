@@ -1,0 +1,149 @@
+{
+  "task_id": "DT-SIM-BENCH-20260924",
+  "timestamp_utc": "2026-09-24T01:30:03.216289Z",
+  "status": "EXECUTED_SCREENING_BENCHMARK",
+  "authority_owner": "BIUPIU_CORE_OS_DMS",
+  "domain_owner": "SIMULATION-DIGITAL-TWIN",
+  "evidence_class": "plausible_model",
+  "validation_status": "screening",
+  "promotion_status": "research_only",
+  "execution_boundary": {
+    "environment": "isolated local Python runtime",
+    "repository_checkout": "not_available",
+    "source_runner": "research/simulators/test_digital_twin_benchmark_20260924.py",
+    "physical_hardware": false,
+    "hil": false,
+    "qpu": false,
+    "ue5_runtime": false,
+    "purpose": "digital benchmark fixture for later physical correlation"
+  },
+  "model": {
+    "type": "cantilever_beam_reduced_order_digital_twin",
+    "geometry": {
+      "length_m": 1,
+      "width_m": 0.1,
+      "thickness_m": 0.01
+    },
+    "boundary": "fixed-free",
+    "loads_N": [
+      50,
+      100,
+      150
+    ],
+    "safety_factor": 2.5,
+    "solver": "closed_form_Euler-Bernoulli_beam_modal_Euler_buckling",
+    "solver_version": "DT-BENCH-1.0",
+    "units": "SI",
+    "material_cards": "synthetic screening cards; replace with measured cards before physical correlation"
+  },
+  "repeatability": {
+    "iterations_per_candidate": 10000,
+    "all_candidates_deterministic": true,
+    "failure_count": 0
+  },
+  "candidates": {
+    "BMG-H01": {
+      "material": "hemp/epoxy synthetic screening card",
+      "E_Pa": 25000000000,
+      "density_kg_m3": 1250,
+      "result": {
+        "mass_kg": 1.25,
+        "tip_deflection_mm": 160,
+        "max_stress_MPa": 60,
+        "first_frequency_Hz": 7.224290926846418,
+        "buckling_margin": 2.056167583560283
+      },
+      "benchmark_mean_us": 6.1536431
+    },
+    "BMG-F01": {
+      "material": "flax/epoxy synthetic screening card",
+      "E_Pa": 30000000000,
+      "density_kg_m3": 1200,
+      "result": {
+        "mass_kg": 1.2,
+        "tip_deflection_mm": 133.33333333333331,
+        "max_stress_MPa": 60,
+        "first_frequency_Hz": 8.077002800831776,
+        "buckling_margin": 2.46740110027234
+      },
+      "benchmark_mean_us": 5.8149772
+    },
+    "BMG-HF01": {
+      "material": "hemp/flax/epoxy synthetic screening card",
+      "E_Pa": 32000000000,
+      "density_kg_m3": 1220,
+      "result": {
+        "mass_kg": 1.22,
+        "tip_deflection_mm": 124.99999999999996,
+        "max_stress_MPa": 60,
+        "first_frequency_Hz": 8.273233902622101,
+        "buckling_margin": 2.6318945069571624
+      },
+      "benchmark_mean_us": 5.7706955
+    },
+    "BMG-HFB01": {
+      "material": "hemp/flax/basalt/epoxy synthetic screening card",
+      "E_Pa": 40000000000,
+      "density_kg_m3": 1350,
+      "result": {
+        "mass_kg": 1.35,
+        "tip_deflection_mm": 99.99999999999997,
+        "max_stress_MPa": 60,
+        "first_frequency_Hz": 8.793126894697082,
+        "buckling_margin": 3.2898681336964537
+      },
+      "benchmark_mean_us": 6.8295132
+    }
+  },
+  "load_sweep_H01": [
+    {
+      "load_N": 50,
+      "mass_kg": 1.25,
+      "tip_deflection_mm": 80,
+      "max_stress_MPa": 30,
+      "first_frequency_Hz": 7.224290926846418,
+      "buckling_margin": 4.112335167120566
+    },
+    {
+      "load_N": 100,
+      "mass_kg": 1.25,
+      "tip_deflection_mm": 160,
+      "max_stress_MPa": 60,
+      "first_frequency_Hz": 7.224290926846418,
+      "buckling_margin": 2.056167583560283
+    },
+    {
+      "load_N": 150,
+      "mass_kg": 1.25,
+      "tip_deflection_mm": 240,
+      "max_stress_MPa": 90,
+      "first_frequency_Hz": 7.224290926846418,
+      "buckling_margin": 1.3707783890401888
+    }
+  ],
+  "uncertainty_sweep": {
+    "E_factor": [
+      0.9,
+      1,
+      1.1
+    ],
+    "density_factor": [
+      0.95,
+      1,
+      1.05
+    ],
+    "cases_per_candidate": 9
+  },
+  "physical_handoff": {
+    "measure_first": [
+      "mass",
+      "static_tip_deflection_vs_load",
+      "strain/stress_response",
+      "first_natural_frequency",
+      "buckling_or_stability_margin_where_safe",
+      "environmental_state"
+    ],
+    "calibration_rule": "measured calibration and independent validation datasets remain separate",
+    "promotion_rule": "simulation result remains research-only until measured correlation, uncertainty bounds and required physical gates are satisfied"
+  }
+}
