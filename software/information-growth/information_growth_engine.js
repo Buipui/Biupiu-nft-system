@@ -13,7 +13,8 @@ function archiveUnit(source, metadata = {}) {
   if (!source || typeof source !== "object") throw new Error("source object required");
   const id = String(source.id || crypto.createHash("sha256").update(JSON.stringify(source)).digest("hex").slice(0,16));
   const dimensions = Object.fromEntries(DIMENSIONS.map(d => [d, metadata[d] ?? null]));
-  return { archive_unit_id:id, source:{...source}, dimensions,
+  const geometry_behavior = geometryBehaviorEnvelope(metadata.geometry_behavior || {});
+  return { archive_unit_id:id, source:{...source}, dimensions, geometry_behavior,
     provenance:metadata.provenance || {}, evidence_state:metadata.evidence_state || "DISCOVERED",
     validation_state:metadata.validation_state || "PENDING" };
 }
@@ -62,4 +63,4 @@ function geometryBehaviorEnvelope(input={}) {
   const applicable = input.applicability || "NONE";
   return {applicability:applicable, ...Object.fromEntries(SEARCH_HARD_ELEMENTS.map(k=>[k,input[k] ?? null]))};
 }
-\nmodule.exports = {DIMENSIONS,SEARCH_HARD_ELEMENTS,geometryBehaviorEnvelope,archiveUnit,graphMetrics,snapshot,scaleSynthetic,featureVector};
+module.exports = {DIMENSIONS,SEARCH_HARD_ELEMENTS,geometryBehaviorEnvelope,archiveUnit,graphMetrics,snapshot,scaleSynthetic,featureVector};
