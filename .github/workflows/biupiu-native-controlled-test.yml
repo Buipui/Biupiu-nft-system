@@ -1,0 +1,46 @@
+name: Biupiu Native Controlled Quanticor Test
+
+on:
+  push:
+    paths:
+      - "mini-os/**"
+      - "apps/android/**"
+      - "mini-os/android/**"
+      - "research/tools/biupiu_native_controlled_test.py"
+      - "research/evidence/BIUPIU-QUANTICOR-NATIVE-CONTROLLED-TEST-LOG-20260924.json"
+      - ".github/workflows/biupiu-native-controlled-test.yml"
+  pull_request:
+    paths:
+      - "mini-os/**"
+      - "apps/android/**"
+      - "mini-os/android/**"
+      - "research/tools/biupiu_native_controlled_test.py"
+      - ".github/workflows/biupiu-native-controlled-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  controlled-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run native controlled Quanticor test
+        run: |
+          python3 research/tools/biupiu_native_controlled_test.py | tee native-controlled-test.json
+      - name: Validate JSON evidence
+        shell: python
+        run: |
+          import json
+          from pathlib import Path
+          data = json.loads(Path("native-controlled-test.json").read_text())
+          assert data["status"] == "VERIFIED"
+          assert data["regression"]["source_unchanged"] is True
+          assert data["collision"]["mode"] == "quarantine_only"
+          print("Native controlled Quanticor test: VERIFIED")
+      - name: Upload controlled-test evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-native-controlled-quanticor-evidence
+          path: native-controlled-test.json
