@@ -65,6 +65,13 @@ DEFAULT_SYSTEMS = (
     AgentSystem("opendroid-memory-security", "agent-state", ("memory", "keystore", "room", "datastore"), "provider-adapter"),
     AgentSystem("opendroid-services-voice", "android-services", ("foreground-service", "notification-listener", "voice", "tts"), "platform-adapter"),
     AgentSystem("opendroid-compose-ui", "ui-surface", ("compose-ui", "viewmodel", "theme", "components"), "ui-adapter"),
+    # 2026-09-24 Android 17 foreign-language/AOSP harvest candidates. Reference contracts only; no executable promotion.
+    AgentSystem("android17-npu-manager", "npu-scheduling", ("npu", "priority", "scheduling", "status-callback"), "platform-reference", "CANDIDATE", "REFERENCE"),
+    AgentSystem("android17-motion-context", "motion-context", ("motioncontext", "subscription", "events", "callbacks"), "platform-reference", "CANDIDATE", "REFERENCE"),
+    AgentSystem("android17-secure-execution", "secure-execution", ("see", "secure-storage", "hwcrypto", "trusted-hal"), "platform-reference", "CANDIDATE", "REFERENCE"),
+    AgentSystem("android17-wrapfd", "protected-memory", ("wrapfd", "npu-buffer-protection", "mmap-policy"), "platform-reference", "CANDIDATE", "REFERENCE"),
+    AgentSystem("android17-berberis", "binary-translation-optimization", ("interpreter", "lite-translator", "heavy-optimizer", "riscv64", "arm64"), "platform-reference", "CANDIDATE", "REFERENCE"),
+    AgentSystem("android17-autofdo", "profile-guided-optimization", ("autofdo", "pgo", "clang", "arm64", "x86_64"), "platform-reference", "CANDIDATE", "REFERENCE"),
 )
 
 
