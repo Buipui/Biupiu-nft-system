@@ -276,3 +276,22 @@ World material currently retained under `world/` is treated as a controlled stag
 The repository is organized as a federated engineering system. Canonical ownership remains separated across Research, Intelligence, OS/DMS, Digital Twin/Federation, Simulators, World and NFT/EVM. See `REPOSITORY-STRUCTURE.md` and `research/BIUPIU-SYSTEM-CROSS-LINK-DIGEST-v1.1.md` for the current map and cross-links.
 
 External harvests are integrated only as classified reference patterns, adapters or dependencies after provenance/licence/security/compatibility/build/smoke/regression gates. Learning and runtime changes remain subject to native validation and evidence gates.
+
+
+## Multidimensional Information / Quantum AI Services Protocol
+
+The repository now defines the **Biupiu Multidimensional Information / Quantum AI Services Protocol (QAISP)** for every authorized information run and knowledge harvest.
+
+Canonical protocol:
+- `research/BIUPIU-MULTIDIMENSIONAL-INFORMATION-QUANTUM-AI-SERVICES-PROTOCOL-v1.0.md`
+- `research/evidence/BIUPIU-QAISP-MULTIDIMENSIONAL-METADATA-SCHEMA-v1.0.json`
+
+The protocol converts run metadata into multidimensional graph records spanning identity, knowledge, mathematics, computational physics, quantum physics, computation, Digital Twin, Federation, evidence and blockchain commitment layers.
+
+The blockchain layer is an integrity/lineage anchor only. It stores deterministic commitments rather than raw confidential research, and a blockchain anchor does not constitute scientific verification. Quantum evidence remains simulator-first until actual QPU execution and independent evidence exist.
+
+Per-run flow:
+
+`Authorized Request -> Harvest -> Metadata -> Multidimensional Graph -> Evidence/Provenance -> Hash Roots -> Optional Blockchain Anchor -> Learning -> DigiCat Index`
+
+This extends the existing Research -> Algorithm -> NFT -> Blockchain provenance architecture without replacing Core OS/DMS authority or the established verification gates.
