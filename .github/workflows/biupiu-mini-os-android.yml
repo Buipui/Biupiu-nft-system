@@ -54,3 +54,37 @@ jobs:
           grep -q 'com.apollographql.apollo:apollo-runtime' mini-os/android/app/build.gradle
           grep -q 'io.coil-kt.coil3:coil' mini-os/android/app/build.gradle
           grep -q 'org.jsoup:jsoup' mini-os/android/app/build.gradle
+
+      - name: Generate regression evidence
+        if: always()
+        run: |
+          mkdir -p android-regression-evidence
+          cat > android-regression-evidence/regression-state.json <<EOF
+          {
+            "schema": "biupiu.android.regression.evidence.v1",
+            "repository": "${GITHUB_REPOSITORY}",
+            "commit": "${GITHUB_SHA}",
+            "workflow": "${GITHUB_WORKFLOW}",
+            "run_id": "${GITHUB_RUN_ID}",
+            "run_attempt": "${GITHUB_RUN_ATTEMPT}",
+            "scope": "mini-os/android",
+            "pc_execution": "DEFERRED",
+            "ue5_execution": "DEFERRED",
+            "evidence": {
+              "unit_tests": "executed",
+              "debug_apk_build": "executed",
+              "repository_sanity": "executed"
+            },
+            "promotion_allowed": false
+          }
+          EOF
+          git status --short > android-regression-evidence/git-status.txt || true
+          git log -1 --format='%H%n%s%n%ad' --date=iso > android-regression-evidence/head.txt
+
+      - name: Upload regression evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-mini-os-android-regression-evidence
+          path: android-regression-evidence/
+          if-no-files-found: error
