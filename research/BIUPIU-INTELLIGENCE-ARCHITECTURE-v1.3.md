@@ -47,3 +47,15 @@ Biupiu Intelligence now treats the C/C++/Rust core boundary as a structured engi
 
 Executable seed: `core/multilang/`.
 Learning promotion remains `REFERENCE_ONLY -> ANALYZED -> LICENCE_CLEARED -> BUILD_VERIFIED -> SMOKE_TESTED -> REGRESSION_VERIFIED -> PROMOTED_ADAPTER -> PROMOTED_CORE`.
+
+
+
+## 2026-09-24 — Intelligence Allocation / Optimisation Learning Graph
+Native Intelligence now cross-links all discovered optimisation, hardware-adapter and learning families through the Federation allocation manifest. Learning remains evidence-producing and proposal-producing; it does not acquire execution authority.
+
+Allocation path:
+INTERNAL MODULE -> SEMANTIC IDENTITY -> CAPABILITY NORMALISATION -> FEDERATION TEAM -> LEARNING GRAPH -> TEST/REGRESSION -> PROVENANCE -> OS/DMS VALIDATION -> CONTROLLED PROMOTION.
+
+Optimisation families include compute scheduling, ARM NEON/SIMD, GPU/NPU/DSP routing, sparse/geometry, numerical/alignment, hyperparameter search, portable inference, profile-guided optimisation and Digital Twin resource optimisation. Learning families include failure, passive, federated, continual/drift, Digital Twin active, multilingual evidence, quantum-passive and replay/regression learning.
+
+The repository's eight specialist Federation teams are used for allocation. They are not relabelled as the unresolved canonical four Federation AI identities.
