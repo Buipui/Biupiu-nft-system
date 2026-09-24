@@ -1,0 +1,30 @@
+{
+  "schema":"biupiu.quanticor.digicat-digifile.blockchain-collision-baseline-log.v1",
+  "baseline_id":"QC-DIGICAT-DIGIFILE-NATIVE-BLOCKCHAIN-BASELINE-20260924",
+  "status":"VERIFIED_CONTROLLED_BASELINE",
+  "branch":"quanticor-native-controlled-test-20260924",
+  "test_commit":"a9d51d2b6a0bd0e4bea4c0212d8e3fde02e6d5c6",
+  "workflow_run_id":35980830046,
+  "workflow_result":"success",
+  "scope":["mini-os","apps/android","mini-os/android"],
+  "DigiCat":"research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json",
+  "DigiFile":"research/evidence/BIUPIU-DIGICAT-DIGIFILE-CROSSREF-20260924.json",
+  "controlled_collision":"quarantine_only_in_memory",
+  "native_source_mutated":false,
+  "Merkle_root":"generated_and_verified_by_CI_artifact",
+  "anchor_chain":"generated_and_verified_by_CI_artifact",
+  "verification":{
+    "native_inputs_present":"PASS",
+    "DigiCat_registry_hashed":"PASS",
+    "DigiFile_manifest_hashed":"PASS",
+    "Merkle_root_stable":"PASS",
+    "anchor_chain_valid":"PASS",
+    "collision_quarantined":"PASS",
+    "source_hashes_unchanged":"PASS",
+    "promotion":"NOT_PROMOTED"
+  },
+  "artifact":"quanticor-digicat-digifile-blockchain-baseline",
+  "future_baseline_rule":"Compare future native Quanticor tests against this baseline or register a superseding baseline.",
+  "public_chain_transaction":false,
+  "pc_ue5":"HOLD"
+}
