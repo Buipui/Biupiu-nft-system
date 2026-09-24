@@ -232,3 +232,8 @@ SOURCE: IMPLEMENTED
 STATIC CATALOGUE VALIDATION: VERIFIED by repository-level structural validation
 CI EXECUTION: PENDING fresh run
 RUNTIME/DEVICE/HARDWARE/UE5/LIVE-BLOCKCHAIN: OPEN
+
+
+
+## 2026-09-24 — Consolidated Module Harvest / Optimisation / Android Worktree
+Native Intelligence now indexes the consolidated optimisation, hardware-adapter and learning allocation. Android source authority is explicitly split between canonical `apps/android/` and Mini-OS federation/compatibility `mini-os/android/`. New Android 17 reference candidates include NPU scheduling, Motion Context, Secure Execution Environment, wrapfd protected buffers, Berberis optimisation and AutoFDO. No external implementation was promoted. PC execution remains deferred until current non-PC gates close.
