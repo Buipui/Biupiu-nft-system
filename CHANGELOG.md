@@ -652,3 +652,16 @@ Executed the controlled continuation protocol in the available deterministic sof
 - No external executable implementation was promoted.
 
 Status: SOURCE CONSOLIDATION COMPLETE / RUNTIME VERIFICATION OPEN / PC DEFERRED.
+
+
+## 2026-09-24 — Family Orchestra + Information-Stack Resource Split
+
+- Updated Digital Orchestra to allocate resources by complete software-family tree rather than isolated module names.
+- Preserved the authority chain: Human Release -> Core OS/DMS -> Native Biupiu Intelligence -> Digital Orchestra -> four canonical Federation AI slots -> family owner -> domain/provider -> hardware/runtime.
+- Added information-stack resource layers for Evidence/Provenance, Intelligence, Federation, OS/DMS, Math/Physics, Digital Twin, Code Systems, Security, Hardware/OEM, Blockchain/Provenance, Digital Filing and World/UE.
+- Bound optimisers and learning graphs to their owning family while retaining shared canonical contracts and preventing resource cloning.
+- Added machine-readable resource split: `research/BIUPIU-FAMILY-ORCHESTRA-RESOURCE-SPLIT-20260924.json`.
+- Explicitly preserved the canonical four Federation AI identities; the eight specialist resource groups are allocation teams, not replacement identities.
+- PC family is registered but execution remains deferred until current non-PC gates close.
+
+Status: SOURCE ARCHITECTURE UPDATED / SEMANTIC RESOURCE SPLIT REGISTERED / PC DEFERRED.
