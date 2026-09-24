@@ -1,7 +1,7 @@
 {
   "schema": "biupiu.pc.foreign-language-harvest.v1",
   "date": "2026-09-24",
-  "status": "SOURCE_IMPLEMENTED_BUILD_PENDING",
+  "status": "SOURCE_IMPLEMENTED_AUTOMATED_BUILD_ATTEMPTED_LOCAL_WINDOWS_EXECUTION_OPEN",
   "target": "WINDOWS_PC",
   "implementation": [
     "apps/windows/ForeignLanguageHarvestRegistry.cs",
@@ -9,7 +9,14 @@
     "apps/windows/MainWindow.xaml.cs",
     "apps/windows/MainWindow.xaml"
   ],
-  "languages": ["zh", "zh-Hant", "ja", "ko", "pt", "ru"],
+  "languages": [
+    "zh",
+    "zh-Hant",
+    "ja",
+    "ko",
+    "pt",
+    "ru"
+  ],
   "fault_checks": [
     "TRANSLATION_FACT_COLLAPSE",
     "LANGUAGE_PROVENANCE_LOSS",
@@ -22,5 +29,14 @@
   ],
   "executable_promotion": "DISABLED",
   "provenance_flow": "SOURCE_LANGUAGE -> ORIGINAL_SOURCE -> TRANSLATION/INTERPRETATION -> CLAIM -> EVIDENCE_CLASS -> INTERNAL_MATCH -> MODULE/CAPABILITY -> TEST -> RESULT -> PROVENANCE -> PROMOTION_STATE",
-  "open_gates": ["LOCAL_WINDOWS_BUILD", "LOCAL_WINDOWS_RUNTIME_UI"]
+  "open_gates": [
+    "LOCAL_WINDOWS_BUILD",
+    "LOCAL_WINDOWS_RUNTIME_UI"
+  ],
+  "verification": {
+    "windows_ci": "NO_RUN_REPORTED",
+    "local_windows_build": "OPEN",
+    "local_windows_runtime_ui": "OPEN",
+    "promotion": "NONE"
+  }
 }
