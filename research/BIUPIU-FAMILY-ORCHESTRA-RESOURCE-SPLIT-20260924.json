@@ -1,0 +1,46 @@
+{
+  "schema": "biupiu.family-resource-split.v1",
+  "date": "2026-09-24",
+  "status": "REGISTERED_SOURCE_LEVEL",
+  "authority_chain": [
+    "HUMAN_RELEASE_AUTHORITY",
+    "CORE_OS_DMS_VALIDATION",
+    "NATIVE_BIUPIU_INTELLIGENCE",
+    "DIGITAL_ORCHESTRA",
+    "FEDERATION_FOUR_AI_SLOTS",
+    "SOFTWARE_FAMILY_OWNER",
+    "DOMAIN_SPECIALIST",
+    "OEM_PROVIDER_ADAPTER",
+    "HARDWARE_RUNTIME"
+  ],
+  "families": [
+    {"id":"CORE-OS-DMS","tree":["core/multilang/","dms/"],"languages":["C","Rust","C++"],"resource_groups":["CODE-SYSTEMS","SECURITY-EXTERMINATE"],"optimisation":["ABI","memory","concurrency","security","native-kernel"],"learning":["failure","build","regression","security"]},
+    {"id":"NATIVE-INTELLIGENCE-ML","tree":["software/rnd-os-ai/"],"languages":["Python","native adapters"],"resource_groups":["AI-ORCHESTRATOR","RESEARCH-EVIDENCE"],"optimisation":["scheduling","hyperparameter","portable-inference"],"learning":["continual","drift","federated","failure"]},
+    {"id":"FEDERATION","tree":["packages/biupiu-rnd-os/"],"languages":["TypeScript"],"resource_groups":["FEDERATION"],"optimisation":["routing","parallelism","resource selection"],"learning":["cross-family evidence","replay","regression"]},
+    {"id":"ANDROID","tree":["apps/android/","mini-os/android/"],"languages":["Kotlin","Java","C/C++"],"resource_groups":["MULTIMODAL-CONFIGURATION","CODE-SYSTEMS"],"optimisation":["NEON/SIMD","GPU/NPU/DSP","Vulkan/OpenCL","AutoFDO candidate"],"learning":["device capability","OEM","runtime","hardware"]},
+    {"id":"MATH-PHYSICS-GEOMETRY","tree":["packages/biupiu-physics-engine/","geometry records"],"languages":["C++","C ABI","Rust boundary"],"resource_groups":["MATH-PHYSICS"],"optimisation":["sparse","geometry","numerical","alignment"],"learning":["numerical","physics","geometry","benchmark"]},
+    {"id":"DIGITAL-TWIN-SIMULATION","tree":["software/digital-twin/","simulator adapters"],"languages":["contract-defined"],"resource_groups":["SIMULATION-DIGITAL-TWIN"],"optimisation":["resource","model","simulation"],"learning":["calibration","replay","failure","active/passive"]},
+    {"id":"DIGITAL-ORCHESTRA","tree":["software/digital-orchestra/"],"languages":["Python"],"resource_groups":["AI-ORCHESTRATOR"],"optimisation":["workflow parallelism"],"learning":["workflow success/failure"]},
+    {"id":"DIGITAL-FILING","tree":["software/digital-filing-cabinet/"],"languages":["Python/schema"],"resource_groups":["RESEARCH-EVIDENCE"],"optimisation":["indexing"],"learning":["provenance","classification"]},
+    {"id":"WINDOWS-PC","tree":["apps/windows/"],"languages":["C#/.NET"],"resource_groups":["CODE-SYSTEMS"],"optimisation":["desktop runtime"],"learning":["build","UI","runtime"],"execution":"DEFERRED_UNTIL_NON_PC_GATES_CLOSE"},
+    {"id":"WORLD-UE","tree":["world/","Buipui-World"],"languages":["UE/provider-defined"],"resource_groups":["SIMULATION-DIGITAL-TWIN"],"optimisation":["render","simulation"],"learning":["visual/runtime/regression"],"authority":"presentation/runtime boundary"}
+  ],
+  "shared_resources": {
+    "provenance":"BLOCKCHAIN-PROVENANCE",
+    "security":"SECURITY-EXTERMINATE",
+    "foreign_language_evidence":"RESEARCH-EVIDENCE",
+    "catalogue":"DIGITAL-FILING",
+    "native_math":"MATH-PHYSICS"
+  },
+  "canonical_four_federation_slots": {
+    "status":"ACTIVE_CANONICAL_IDENTITIES",
+    "identity_to_family_mapping":"DISCOVERY_CONTROLLED_NOT_INVENTED",
+    "rule":"specialist resource groups must not be relabelled as the four AI identities"
+  },
+  "no_clone_rule": "shared resources are referenced through canonical contracts; complete software-family stacks remain together where practical",
+  "verification": {
+    "semantic_source_check":"PASS",
+    "runtime":"OPEN",
+    "pc_execution":"DEFERRED"
+  }
+}
