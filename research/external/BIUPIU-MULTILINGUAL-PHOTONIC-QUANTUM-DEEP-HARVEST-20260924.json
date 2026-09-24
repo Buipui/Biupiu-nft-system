@@ -1,0 +1,87 @@
+{
+  "schema": "biupiu.external-deep-harvest.multilingual.v1",
+  "date": "2026-09-24",
+  "status": "RESEARCH_ONLY_UNTIL_GATED",
+  "languages": ["English","Japanese","Chinese","French","German"],
+  "sources": [
+    {
+      "id":"JA-NICT-PHOTONIC-2026",
+      "language":"Japanese",
+      "institution":"NICT",
+      "topic":"photonic networks",
+      "url":"https://www.nict.go.jp/photonic/",
+      "mapped_capabilities":["optical_networking","high_bandwidth","photonic_infrastructure","measurement"]
+    },
+    {
+      "id":"JA-NICT-QINTERFACE-2026",
+      "language":"Japanese",
+      "institution":"NICT / Osaka University",
+      "topic":"multiplexed quantum photonic interface",
+      "url":"https://origin-www.nict.go.jp/press/2026/09/01-1.html",
+      "mapped_capabilities":["multi_channel_quantum_interface","integrated_waveguide","photon_detection","networked_quantum_nodes"]
+    },
+    {
+      "id":"ZH-PKU-QNETWORK-2026",
+      "language":"Chinese",
+      "institution":"Peking University",
+      "topic":"integrated photonic quantum communication network",
+      "url":"https://skl-ammp.pku.edu.cn/info/1054/6048.htm",
+      "mapped_capabilities":["integrated_photonics","QKD_network","multi_user_network","optical_microcomb"]
+    },
+    {
+      "id":"ZH-SIM-QNETWORK-2026",
+      "language":"Chinese",
+      "institution":"Chinese Academy of Sciences",
+      "topic":"cryogenic-node integrated photonic entanglement distribution",
+      "url":"https://www.sim.cas.cn/xwzx2016/kyjz/202607/t20260722_8253474.html",
+      "mapped_capabilities":["cryogenic_quantum_nodes","integrated_photonics","entanglement_distribution"]
+    },
+    {
+      "id":"ZH-TSINGHUA-QPHOTONICS-2026",
+      "language":"Chinese",
+      "institution":"Tsinghua University",
+      "topic":"integrated optics quantum computing and networks",
+      "url":"https://www.phys.tsinghua.edu.cn/info/1063/6672.htm",
+      "mapped_capabilities":["quantum_chip","quantum_network","graph_architecture","topological_photonics"]
+    },
+    {
+      "id":"JA-NATURE-DOP-2026",
+      "language":"Japanese",
+      "institution":"Nature",
+      "topic":"high-dimensional optical computing via polarization modulation",
+      "url":"https://www.natureasia.com/ja-jp/nature/657/8131/s41586-026-10891-z/",
+      "mapped_capabilities":["high_dimensional_encoding","polarization","spatial_modes","photonic_neural_network"]
+    },
+    {
+      "id":"FR-CEA-LETI-QPHOTONICS-2026",
+      "language":"French",
+      "institution":"CEA-Leti",
+      "topic":"silicon quantum photonics",
+      "url":"https://www.cea.fr/cea-tech/leti/Pages/innovation-industrielle/Demonstrateurs/Photonique_quantique_sur_silicium.aspx",
+      "mapped_capabilities":["silicon_photonics","qubit_encoding","coherent_manipulation","photonic_detection"]
+    },
+    {
+      "id":"DE-FRAUNHOFER-PICPAM-2026",
+      "language":"German/English",
+      "institution":"Fraunhofer IOF",
+      "topic":"integrated photonics quantum communications",
+      "url":"https://www.iof.fraunhofer.de/en/pressrelease/2026/PIC-PAM.html",
+      "mapped_capabilities":["polarization_analysis","single_photon_detection","timestamping","integrated_photonics"]
+    },
+    {
+      "id":"DE-FRAUNHOFER-QUNET-2026",
+      "language":"German/English",
+      "institution":"Fraunhofer HHI",
+      "topic":"quantum network photonic integration",
+      "url":"https://www.hhi.fraunhofer.de/en/departments/inp-and-rf/projects/qunet.html",
+      "mapped_capabilities":["QKD","PIC","single_photon_detection","real_time_quantum_networking"]
+    }
+  ],
+  "integration_policy": {
+    "external_material_is_hypothesis": true,
+    "external_claims_are_not_biupui_measurements": true,
+    "licence_and_ip_review_required": true,
+    "physical_hardware_claim_requires_measurement": true,
+    "promotion_requires_regression": true
+  }
+}
