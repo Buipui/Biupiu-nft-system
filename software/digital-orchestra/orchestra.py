@@ -37,7 +37,7 @@ class WorkItem:
     correlation_id: str = field(default_factory=lambda: str(uuid.uuid4()))
     inputs: dict[str, Any] = field(default_factory=dict)
     outputs: dict[str, Any] = field(default_factory=dict)
-    history: list[dict[str, Any]] = field(default_factory=list)
+    history: list[dict[str, Any]] = field(default_factory=list)\n    parent_task_id: str | None = None\n    source_commit: str | None = None\n    schema_version: str = "1.1"\n    validation_state: str = "PENDING"\n    provenance_refs: list[str] = field(default_factory=list)\n    rollback_ref: str | None = None\n    authority_owner: str = "canonical-owner"\n    build_state: str = "PENDING"\n    test_state: str = "PENDING"
 
     def transition(self, target: WorkState, reason: str = "") -> None:
         allowed = {
