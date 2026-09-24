@@ -1,0 +1,50 @@
+name: Biupui Quanticor DigiCat DigiFile Blockchain Collision Baseline
+
+on:
+  push:
+    paths:
+      - "research/tools/biupiu_quanticor_digicat_digifile_blockchain_collision.py"
+      - "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json"
+      - "research/evidence/BIUPIU-DIGICAT-DIGIFILE-CROSSREF-20260924.json"
+      - "research/BIUPIU-QUANTICOR-OPTIMISED-PROTOCOL-v1.1.json"
+      - "research/BIUPIU-SYSTEM-FAMILY-BENCHMARK-STANDARD-v1.0.json"
+      - "mini-os/**"
+      - "apps/android/**"
+      - "mini-os/android/**"
+      - ".github/workflows/biupiu-quanticor-digicat-digifile-blockchain-collision.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  native_blockchain_collision:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - name: Run controlled Quanticor DigiCat/DigiFile anchor collision
+        run: |
+          python3 -m py_compile research/tools/biupiu_quanticor_digicat_digifile_blockchain_collision.py
+          python3 research/tools/biupiu_quanticor_digicat_digifile_blockchain_collision.py > quanticor-digicat-digifile-blockchain-baseline.json
+      - name: Validate baseline
+        run: |
+          python3 - <<'PY'
+          import json
+          p="quanticor-digicat-digifile-blockchain-baseline.json"
+          x=json.load(open(p))
+          assert x["status"]=="VERIFIED_CONTROLLED_BASELINE"
+          assert x["controlled_collision"]["mode"]=="quarantine_only"
+          assert x["blockchain_anchor"]["public_chain_transaction"] is False
+          assert x["verification"]["source_and_registry_hashes_unchanged"] is True
+          assert x["verification"]["merkle_root_stable"] is True
+          assert x["verification"]["anchor_chain_valid"] is True
+          assert x["verification"]["promotion"]=="NOT_PROMOTED"
+          print("BASELINE_GATE=PASS")
+          PY
+      - name: Upload baseline evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: quanticor-digicat-digifile-blockchain-baseline
+          path: quanticor-digicat-digifile-blockchain-baseline.json
