@@ -1,3 +1,15 @@
+## 2026-09-24 — Quantum AI Information-Stack Governance Update
+
+- Formalised `BIUPIU_FEDERATION_QUANTUM` as a specialist capability subordinate to Human Release Authority, Core OS/DMS, Native Biupiu Intelligence and Federation.
+- Updated the Quantum provider registry with explicit authority owner, `SIMULATOR_VALIDATE` execution policy, `PASSIVE_OBSERVATION` learning mode and `REFERENCE_ONLY` promotion state.
+- Reconciled the provider test contract with the registered Qiskit, PennyLane, QIR, OpenQASM, AWS Braket, Azure Quantum, D-Wave Leap/Ocean and pytket/TKET boundaries.
+- Added explicit hardware-capability versus hardware-execution separation; provider declarations do not grant QPU authority.
+- Added machine-readable Quantum AI information-stack governance records: `research/BIUPIU-QUANTUM-AI-INFORMATION-STACK-20260924.md` and `.json`.
+- Added fault classes for quantum-claim leakage, hardware-authority leakage, missing classical baselines, provider-scope overclaim, learning-authority leakage and provenance collapse.
+- Quantum learning remains passive and evidence-driven: observe → normalise → compare classical baseline → simulate → measure uncertainty/resource value → regression → propose → validate → promote.
+- **SOURCE IMPLEMENTED / STATIC TEST CONTRACT UPDATED.**
+- **OPEN:** host/CI execution, simulator benchmark execution, cloud/QPU execution, physical hardware validation, Android/UE5/device runtime and production promotion.
+
 ## 2026-09-24 — Digital Orchestra + Federation + Digital Twin Deep Harvest
 
 - Extended the Digital Orchestra evidence envelope for parent-task lineage, canonical authority, schema/validation state, provenance, source commit, build/test state, rollback and payload hashing.
