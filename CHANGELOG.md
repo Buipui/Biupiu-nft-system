@@ -1,3 +1,15 @@
+## 2026-09-24 — ML Self-Diagnostics + Bounded Self-Healing
+
+- Audited the Native ML stack across learning/provenance, failure learning, guided fault finding, continual adaptation, quantum ML, multilingual ML, backend registry and federation bridge.
+- Added `biupiu_ai/ml/self_diagnostics.py` for deterministic ML health checks and bounded repair proposals.
+- Added ML self-diagnostic regression tests.
+- Updated ML subsystem CI workflow to include the new tests.
+- Added machine-readable evidence: `research/evidence/BIUPIU-ML-SELF-DIAGNOSTICS-SELF-HEALING-20260924.json`.
+- Added audit record: `research/BIUPIU-ML-SELF-DIAGNOSTICS-SELF-HEALING-LOG-20260924.md`.
+- Self-healing is deliberately fail-closed: detect → classify → quarantine → reversible repair proposal → validation → regression → Core/human approval → apply.
+- No autonomous authoritative source rewrite, silent model-policy mutation or physical actuation is permitted.
+- Fresh CI/runtime/device validation remains open and is not claimed by this source update.
+
 ## 2026-09-24 — DigiCat / DigiFile Core-Federation-Quantum Cross-reference
 
 - Formalised **DigiCat** as the catalogue/index role for capabilities, systems, interfaces, dependencies, Digital Twin relationships and Quantum AI relevance.
