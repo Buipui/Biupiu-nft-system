@@ -55,4 +55,11 @@ function featureVector(metrics) {
     metrics.archive_units,metrics.graph_density,metrics.metadata_density,metrics.growth_rate];
 }
 
-module.exports = {DIMENSIONS,archiveUnit,graphMetrics,snapshot,scaleSynthetic,featureVector};
+
+
+const SEARCH_HARD_ELEMENTS = Object.freeze(["intent","coordinate_frame","units","relations","invariants","tolerance","transformations","behavioral_tests","provenance","evidence_state"]);
+function geometryBehaviorEnvelope(input={}) {
+  const applicable = input.applicability || "NONE";
+  return {applicability:applicable, ...Object.fromEntries(SEARCH_HARD_ELEMENTS.map(k=>[k,input[k] ?? null]))};
+}
+\nmodule.exports = {DIMENSIONS,SEARCH_HARD_ELEMENTS,geometryBehaviorEnvelope,archiveUnit,graphMetrics,snapshot,scaleSynthetic,featureVector};
