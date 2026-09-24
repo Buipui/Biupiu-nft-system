@@ -1,0 +1,13 @@
+{
+  "task_id":"ORCH-INFO-GROWTH-002-20260924",
+  "parent_task_id":"INFO-GROWTH-MODEL-001-20260924",
+  "protocol_id":"BPU.PROTOCOL.QAISP.MI.1.0",
+  "status":"SOURCE_IMPLEMENTED_TESTS_ADDED_EXECUTION_OPEN",
+  "orchestra_route":["REQUEST","CLASSIFY","PLAN","ROUTE","EXECUTE","OBSERVE","VERIFY","DIGEST","FILE","LEARN"],
+  "lanes":["native-individual-systems","quantum-federation","native-computational-mathematics-geometry-ml","all-together-federated"],
+  "scales":[10,100,1000],
+  "common_features":["source_objects","metadata_records","graph_nodes","graph_edges","archive_units","graph_density","metadata_density","growth_rate"],
+  "quantum_boundary":{"qpu_execution":false,"quantum_advantage_assumed":false,"simulator_or_classical_baseline_required":true},
+  "execution_state":{"source_implementation":"COMMITTED","synthetic_test_definition":"COMMITTED","test_execution":"OPEN","hardware_benchmark":"OPEN","qpu_benchmark":"OPEN","runtime_regression":"OPEN"},
+  "governance":{"same_workload_across_lanes":true,"no_synthetic_performance_multiplier":true,"modelled_is_not_verified":true,"promotion_fail_closed":true}
+}
