@@ -1,0 +1,59 @@
+{
+  "schema": "biupiu.android.repo.audit.v1",
+  "date": "2026-09-24",
+  "scope": {
+    "android_mini_os": true,
+    "pc": false,
+    "ue5": false,
+    "pc_commits": "HOLD"
+  },
+  "repository": "Buipui/Biupiu-nft-system",
+  "audited_revision": "cede587fc5bfa18f0c645537d7c136dc7acb119c",
+  "findings": [
+    {
+      "id": "ANDROID-REPO-001",
+      "state": "CONFIRMED",
+      "finding": "mini-os/android is present at the audited revision and contains a complete Android application structure including build.gradle, settings.gradle, app module and manifest."
+    },
+    {
+      "id": "ANDROID-REPO-002",
+      "state": "OPEN",
+      "finding": "Repository history contains both apps/android and mini-os/android worktrees; their canonical relationship must not be inferred from names alone."
+    },
+    {
+      "id": "ANDROID-REPO-003",
+      "state": "OPEN",
+      "finding": "The previously recorded consolidation metadata identifies apps/android as canonical and mini-os/android as secondary, while the audited revision exposes mini-os/android directly. This is a repository-state reconciliation issue."
+    },
+    {
+      "id": "ANDROID-REPO-004",
+      "state": "OPEN",
+      "finding": "Runtime/build verification remains open. Repository source presence is not treated as proof of a working APK."
+    },
+    {
+      "id": "ANDROID-REPO-005",
+      "state": "CONFIRMED",
+      "finding": "Android CI workflow targets mini-os/android, uses JDK 17, Android SDK 35, Gradle 8.9, unit tests, debug APK build and repository sanity checks."
+    },
+    {
+      "id": "ANDROID-REPO-006",
+      "state": "CONFIRMED",
+      "finding": "The Android manifest in mini-os/android defines the MiniOS launcher, AppAuth callback, notification listener and accessibility service."
+    },
+    {
+      "id": "ANDROID-REPO-007",
+      "state": "OPEN_QUARANTINED",
+      "finding": "Earlier repository evidence recorded unresolved runtime/transport reconciliation issues; these remain evidence-state items until reproduced and verified."
+    }
+  ],
+  "required_next_gate": [
+    "reconcile worktree hashes and dependency graphs",
+    "identify last known working Android revision",
+    "run Android regression/build verification",
+    "capture machine-readable evidence",
+    "only then consider promotion/consolidation"
+  ],
+  "promotion_allowed": false,
+  "pc_execution": "DEFERRED",
+  "ue5_execution": "DEFERRED"
+}
