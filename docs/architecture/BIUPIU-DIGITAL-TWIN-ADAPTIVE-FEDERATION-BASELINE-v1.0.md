@@ -57,3 +57,16 @@ No benchmark value is treated as verified until measured in the stated environme
 REGISTERED: digital-twin adaptive federation protocol; passive/active resource state model; acceleration/deceleration/fallback policy; OEM/shared-development-resource priority; cross-matrix scalability model; native ML learning schema extension; performance-matrix field contract.
 INTEGRATION PENDING: direct modification of existing federation_protocol.py gate table (GitHub contents write returned 404 in this pass); executable scheduler/resource-controller implementation; local UE 5.8.3 runtime verification; physical OEM/NPU/GPU benchmark validation; HIL/ECU validation; production blockchain transaction.
 This document is therefore a native baseline contract, not a claim that hardware/runtime benchmarks have already been executed.
+
+## DigiCat + DigiFile cross-reference — 2026-09-24
+
+DigiCat is the catalogue/index role for capabilities, systems, interfaces, dependencies, Digital Twin relationships and Quantum AI relevance.
+
+DigiFile is the evidence/filing role mapped to DMS and `software/digital-filing-cabinet/`, preserving provenance, source version/commit, validation, regression, failure, release and rollback lineage.
+
+Core OS/DMS remains authoritative. Federation routes/contracts and reconciles. Digital Twin models context/state. Quantum AI remains simulator/classical-baseline first. DigiCat indexes these relationships; DigiFile records their evidence.
+
+Cross-system rule:
+DigiCat DISCOVER → Intelligence CLASSIFY/PROPOSE → Federation ROUTE → Core/DMS VALIDATE → DigiFile RECORD → Twin/Quantum SIMULATE → REGRESSION → LEARN → DigiCat UPDATE.
+
+No catalogue entry, evidence file, federation observation, Digital Twin simulation or quantum result independently grants promotion authority.
