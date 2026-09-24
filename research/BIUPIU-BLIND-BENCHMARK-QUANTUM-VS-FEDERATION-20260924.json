@@ -1,0 +1,12 @@
+{
+  "schema":"biupiu.blind-benchmark.quantum-vs-federation.v1",
+  "date":"2026-09-24",
+  "status":"IMPLEMENTED_EXECUTION_PENDING",
+  "blind_arms":["ARM-A","ARM-B"],
+  "identity_unsealed_until":"after_raw_metrics",
+  "baseline":"BIUPIU-FEDERATION-BENCHMARK-BASELINE-A-2026-09-23",
+  "control":{"iterations":{"L0":10000,"L1":5000,"L2":3000,"L3":2000,"L4":1000},"failures":0,"geometry_invariants":["polygon_area","pairwise_distance","finite_centroid"],"qpu":"DISABLED","quantum_policy":"SIMULATOR_VALIDATE"},
+  "matched_tests":["capability_contract","decision_correctness","latency","deterministic_replay","failure_injection","provenance","promotion_boundary"],
+  "rules":["same inputs","same iteration counts","same host process","identity hidden in raw result labels","no one-sided optimisation","no winner assignment","no quantum-advantage claim","no executable promotion"],
+  "execution_evidence":"PENDING"
+}
