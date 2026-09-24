@@ -1,16 +1,117 @@
 {
-  "$schema":"https://json-schema.org/draft/2020-12/schema",
-  "title":"Biupiu Digital Orchestra Work Item",
-  "type":"object",
-  "required":["title","capability","evidence","provenance","state","correlation_id"],
-  "properties":{
-    "title":{"type":"string","minLength":1},
-    "capability":{"type":"string","minLength":1},
-    "evidence":{"enum":["ESTABLISHED","SUPPORTED","PRELIMINARY","HYPOTHESIS","SPECULATIVE","CONTRADICTED","INCONCLUSIVE"]},
-    "state":{"enum":["DISCOVERED","CLASSIFIED","PLANNED","ROUTED","EXECUTING","OBSERVED","VERIFIED","DIGESTED","FILED","LEARNED","PROMOTED","QUARANTINED"]},
-    "correlation_id":{"type":"string"},
-    "provenance":{"type":"object","required":["source_uri","source_kind","language","licence"],"additionalProperties":true},
-    "inputs":{"type":"object"},"outputs":{"type":"object"},"history":{"type":"array"}
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "title": "Biupiu Digital Orchestra Work Item",
+  "type": "object",
+  "required": [
+    "title",
+    "capability",
+    "evidence",
+    "provenance",
+    "state",
+    "correlation_id",
+    "schema_version",
+    "validation_state",
+    "authority_owner"
+  ],
+  "properties": {
+    "title": {
+      "type": "string",
+      "minLength": 1
+    },
+    "capability": {
+      "type": "string",
+      "minLength": 1
+    },
+    "evidence": {
+      "enum": [
+        "ESTABLISHED",
+        "SUPPORTED",
+        "PRELIMINARY",
+        "HYPOTHESIS",
+        "SPECULATIVE",
+        "CONTRADICTED",
+        "INCONCLUSIVE"
+      ]
+    },
+    "state": {
+      "enum": [
+        "DISCOVERED",
+        "CLASSIFIED",
+        "PLANNED",
+        "ROUTED",
+        "EXECUTING",
+        "OBSERVED",
+        "VERIFIED",
+        "DIGESTED",
+        "FILED",
+        "LEARNED",
+        "PROMOTED",
+        "QUARANTINED"
+      ]
+    },
+    "correlation_id": {
+      "type": "string"
+    },
+    "provenance": {
+      "type": "object",
+      "required": [
+        "source_uri",
+        "source_kind",
+        "language",
+        "licence"
+      ],
+      "additionalProperties": true
+    },
+    "inputs": {
+      "type": "object"
+    },
+    "outputs": {
+      "type": "object"
+    },
+    "history": {
+      "type": "array"
+    },
+    "schema_version": {
+      "type": "string"
+    },
+    "parent_task_id": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "source_commit": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "validation_state": {
+      "type": "string"
+    },
+    "provenance_refs": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "rollback_ref": {
+      "type": [
+        "string",
+        "null"
+      ]
+    },
+    "authority_owner": {
+      "type": "string"
+    },
+    "build_state": {
+      "type": "string"
+    },
+    "test_state": {
+      "type": "string"
+    }
   },
-  "additionalProperties":true
+  "additionalProperties": true,
+  "$id": "biupiu://digital-orchestra/work-item.schema/1.1",
+  "description": "Governed, provenance-aware, resumable work item. External knowledge is reference-only until independent gates pass."
 }
