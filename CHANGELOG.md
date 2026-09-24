@@ -1,3 +1,13 @@
+## 2026-09-24 — Multidimensional Information Growth Model v1.0
+
+- Registered `INFO-GROWTH-MODEL-001-20260924` under QAISP v1.0.
+- Added machine-readable multidimensional information-growth schema.
+- Added growth engine with 12 canonical dimensions, archive units, graph metrics, growth snapshots and fixed-width ML feature vectors.
+- Added synthetic scaling tests at 10, 100 and 1000 archive units, including monotonicity, density, growth-rate, invalid-input and metadata-vs-validation checks.
+- Added machine-readable evidence log.
+- Status: SOURCE IMPLEMENTED / TESTS ADDED / RUNTIME OPEN.
+- No CI or repository-runtime PASS is claimed until an actual runner executes the tests.
+
 ## 2026-09-24 — Capability Test One: Multidimensional Information Archive Capacity
 
 - Registered `CAP-ARCHIVE-001-20260924` under QAISP v1.0.
