@@ -1,0 +1,14 @@
+{
+  "task_id":"GEO-ARCHIVE-BASELINE-001-20260924",
+  "protocol_id":"BPU.PROTOCOL.QAISP.MI.1.0",
+  "model_id":"BPU.MODEL.BEHAVIOR.GEOMETRY.ARCHIVE",
+  "status":"REGISTERED_SOURCE_IMPLEMENTED_TESTS_ADDED_RUNTIME_OPEN",
+  "hard_elements_for_every_search":true,
+  "behaviors":["DISTANCE","CONTAINMENT","INTERSECTION","ADJACENCY","SYMMETRY","TOPOLOGY","CURVATURE","TRANSFORM","SCALE","FLOW","COLLISION","NETWORK"],
+  "search_contract":["intent","coordinate_frame","units","relations","invariants","tolerance","transformations","behavioral_tests","provenance","evidence_state"],
+  "archive_dimensions":["identity","knowledge","mathematics","physics","quantum","computation","geometry_behavior","digital_twin","federation","evidence","temporal","security_trust","blockchain"],
+  "ai_learning_features":["pairwise_distance_sum","orientation_sum","area","centroid","bounding_box","relation_types","invariant_results","transformation_response","tolerance","evidence_state"],
+  "tests_defined":["translation_area_invariance","rotation_distance_invariance","scale_area_law","deterministic_archive_identity","hard-search-field-presence"],
+  "execution_state":{"source_implementation":"COMMITTED","test_definition":"COMMITTED","test_execution":"OPEN","runtime_benchmark":"OPEN","physical_correlation":"OPEN","ml_training_execution":"OPEN"},
+  "governance":{"geometry_is_behavioral_feature_space":true,"metadata_is_not_validation":true,"hash_is_not_truth":true,"promotion_fail_closed":true}
+}
