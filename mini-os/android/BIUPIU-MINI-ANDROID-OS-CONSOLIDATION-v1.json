@@ -1,37 +1,12 @@
 {
-  "schema": "biupiu.mini-android-os-consolidation.v1",
-  "status": "IMPLEMENTED_SOURCE_RELOCATION / RUNTIME_BUILD_PENDING",
-  "base_commit": "6af64fd23042edd5a1aca58cc7435d0a6445b886",
-  "target_root": "mini-os/android",
-  "moved_roots": [
-    {
-      "from": "apps/android",
-      "to": "mini-os/android/apps/rnd-os",
-      "role": "Native R&D OS Android shell"
-    },
-    {
-      "from": "smart-farming/android",
-      "to": "mini-os/android/apps/world",
-      "role": "Biupiu World / smart-farming Android client"
-    },
-    {
-      "from": "software/rnd-os-mobile",
-      "to": "mini-os/android/apps/rnd-os-mobile",
-      "role": "R&D OS mobile/API client"
-    },
-    {
-      "from": "apps/shared/runtime",
-      "to": "mini-os/android/shared/runtime",
-      "role": "Shared Android runtime source"
-    }
+  "schema":"biupiu.mini-android-os-consolidation.v1",
+  "status":"IMPLEMENTED_SOURCE_RELOCATION / PATH_RECONCILIATION / RUNTIME_BUILD_PENDING",
+  "target_root":"mini-os/android",
+  "moved_roots":[
+    {"from":"apps/android","to":"mini-os/android/apps/rnd-os"},
+    {"from":"smart-farming/android","to":"mini-os/android/apps/world"},
+    {"from":"software/rnd-os-mobile","to":"mini-os/android/apps/rnd-os-mobile"}
   ],
-  "retained_root": "mini-os/android",
-  "external_android_resources": [
-    {
-      "path": "engines/blender-android",
-      "state": "REFERENCE/EXTERNAL",
-      "rule": "not copied into app runtime without licence/build verification"
-    }
-  ],
-  "evidence_rule": "Relocation is source-tree evidence only. Android SDK/Gradle/device/APK/runtime gates remain separate until executed."
+  "retained_canonical_roots":["apps/shared/runtime","core","packages","software/rnd-os-ai","world","research","intelligence"],
+  "removed_duplicate_root":"mini-os/android/shared/runtime"
 }
