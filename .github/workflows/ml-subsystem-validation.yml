@@ -5,6 +5,7 @@ on:
     paths:
       - 'software/rnd-os-ai/src/biupiu_ai/ml/**'
       - 'software/rnd-os-ai/tests/test_ml_subsystem.py'
+      - 'software/rnd-os-ai/tests/test_ml_self_diagnostics.py'
       - 'software/rnd-os-ai/ML-SUBSYSTEM-FOUNDATION-v1.0.md'
   pull_request:
     paths:
@@ -22,4 +23,4 @@ jobs:
       - name: Run ML subsystem tests
         working-directory: software/rnd-os-ai
         run: |
-          PYTHONPATH=src python -m pytest tests/test_ml_subsystem.py
+          PYTHONPATH=src python -m pytest tests/test_ml_subsystem.py tests/test_ml_self_diagnostics.py
