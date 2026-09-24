@@ -159,3 +159,27 @@ Evidence boundary:
 SOURCE_COMPARISON_ONLY until build, smoke, regression, runtime and other applicable evidence gates are observed.
 
 Promotion/authority remains unchanged: Native ML records and analyses differences; the owning subsystem/Core OS/DMS/release gates retain authority.
+
+
+
+## Deep Digital Twin / Orchestra / external knowledge integration — 24 September 2026
+
+### Added
+- F26 Digital Twin composition gate.
+- F27 Digital Twin verification, validation and uncertainty-quantification gate.
+- F28 adaptive heterogeneous execution gate.
+- Orchestra evidence envelope linkage: parent task, authority owner, schema version, validation state, provenance refs, source commit, build/test state, rollback and payload hash.
+- ISO 23247-6:2026 composition reference pattern: integrated, unified and federated Digital Twin composition.
+- NIST interoperability, trustworthiness and VVUQ reference patterns.
+- Hybrid physics + data-driven Digital Twin reference pattern.
+- Machine-readable semantic interoperability requirement for Twin metadata.
+
+### Native rule
+External standards/research improve discovery and contract design but do not become Biupiu authority. External executable code remains PATTERN/ADAPTER until independent gates pass.
+
+### Verification
+SOURCE: UPDATED
+F26-F28: REGISTERED
+RUNTIME/CI: PENDING
+HARDWARE/HIL: OPEN
+PROMOTION: OPEN
