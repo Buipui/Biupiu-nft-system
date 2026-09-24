@@ -1,3 +1,17 @@
+## 2026-09-24 — Multidimensional Information / Quantum AI Services Protocol
+
+- Registered **BPU.PROTOCOL.QAISP.MI.1.0**, defining the machine-readable metadata contract for every authorized information run and knowledge harvest.
+- Added multidimensional graph dimensions covering identity, knowledge, mathematics, computational physics, quantum physics, computation, Digital Twin, Federation, evidence, temporal lineage, security/trust and blockchain commitments.
+- Added the Quantum AI evidence ladder: theory -> model/equation -> numerical solution -> classical baseline -> quantum simulation -> controlled experiment -> independent replication -> QPU execution -> production capability.
+- Added required per-run metadata for provenance, source commit, mathematics/physics/quantum context, runtime/hardware state, uncertainty, evidence classification, graph nodes/edges, hashes, rollback and promotion authority.
+- Added Core/Federation/DigiCat/DigiFile/Digital Twin/Quantum AI ownership boundaries.
+- Added blockchain commitment rules: hashes and graph roots may be anchored; private/confidential/raw research remains off-chain; an anchor is not scientific proof.
+- Added explicit fail-closed rules preventing translation, hashing, blockchain anchoring or simulator output from being treated as validation or QPU evidence.
+- Added machine-readable schema: `research/evidence/BIUPIU-QAISP-MULTIDIMENSIONAL-METADATA-SCHEMA-v1.0.json`.
+- Added protocol specification: `research/BIUPIU-MULTIDIMENSIONAL-INFORMATION-QUANTUM-AI-SERVICES-PROTOCOL-v1.0.md`.
+- Source commits: `a73c498fe03fec59cafab1dd7a9017cc5e59ffc8`, `16d343b9b4466d2a67af4a277d241950c1d311a0`.
+- Runtime, live blockchain transaction, QPU and wider repository integration remain open until execution evidence exists.
+
 ## 2026-09-24 — ML Self-Diagnostics + Bounded Self-Healing
 
 - Audited the Native ML stack across learning/provenance, failure learning, guided fault finding, continual adaptation, quantum ML, multilingual ML, backend registry and federation bridge.
