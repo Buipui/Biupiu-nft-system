@@ -1,0 +1,78 @@
+{
+  "schema": "biupiu.semantic-location-audit.v1",
+  "date": "2026-09-24",
+  "status": "SOURCE_SEMANTIC_AUDIT_COMPLETE",
+  "checks": {
+    "coding_semantics": "PASS",
+    "native_ai": "PASS",
+    "federation": "PASS",
+    "quantum": "PASS",
+    "digifile": "PASS_WITH_OWNERSHIP_CORRECTION",
+    "digicat": "PASS_WITH_3_CORRECTIONS_REQUIRED"
+  },
+  "corrections": [
+    {
+      "id": "CAT-001",
+      "type": "ownership",
+      "system": "BPU.SYS.DMS.CONTROL",
+      "issue": "software/digital-filing-cabinet/ is listed as DMS native code although Cabinet has independent catalogue authority",
+      "action": "split Digital Filing Cabinet into distinct canonical subsystem"
+    },
+    {
+      "id": "CAT-002",
+      "type": "identity",
+      "system": "Quantum Federation",
+      "issue": "no BPU.SYS.QUANTUM.* entry found",
+      "action": "register dedicated specialist identity subordinate to OS/DMS/Federation"
+    },
+    {
+      "id": "LOC-003",
+      "type": "location-role",
+      "system": "Android Mini OS",
+      "issue": "mini-os/android/ and apps/android/ are both mapped without explicit active/reference role distinction",
+      "action": "clarify build target versus Mini-OS source/contract/reference roles"
+    }
+  ],
+  "validated_locations": [
+    [
+      "Windows Native Shell",
+      "apps/windows/",
+      "PASS"
+    ],
+    [
+      "Native Intelligence",
+      "software/rnd-os-ai/ + intelligence/",
+      "PASS"
+    ],
+    [
+      "Federation contracts",
+      "packages/biupiu-rnd-os/src/",
+      "PASS"
+    ],
+    [
+      "Digital Filing Cabinet",
+      "software/digital-filing-cabinet/",
+      "PASS"
+    ],
+    [
+      "Digital Filing schema",
+      "software/digital-filing-cabinet/schema/",
+      "PASS"
+    ],
+    [
+      "Digital Orchestra",
+      "software/digital-orchestra/",
+      "PASS"
+    ]
+  ],
+  "authority_rules": [
+    "source presence != runtime capability",
+    "external documentation != executable authority",
+    "simulator != QPU evidence",
+    "Intelligence proposal != execution authority",
+    "Federation routing != subsystem ownership",
+    "filing metadata != executable source ownership"
+  ],
+  "evidence_boundary": "No runtime/build/device/UE5/hardware/QPU execution performed",
+  "promotion": "NONE"
+}
