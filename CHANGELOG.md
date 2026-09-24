@@ -507,3 +507,20 @@ Executed the controlled continuation protocol in the available deterministic sof
 Canonical audit record: `research/BIUPIU-ANDROID-MULTILINGUAL-FEDERATION-HARVEST-20260924.md`.
 
 Promotion rule remains: implementation is not runtime verification; no Android build/device gate is marked verified without execution evidence.
+
+
+# 2026-09-24 — Digital Twin Simulation Benchmark / Physical-Test Baseline
+
+Executed a deterministic Digital Twin screening benchmark to establish a machine-readable baseline for later physical correlation.
+
+- Added `research/simulators/test_digital_twin_benchmark_20260924.py` as the reproducible reduced-order benchmark runner.
+- Added `research/BIUPIU-DIGITAL-TWIN-SIMULATION-BENCHMARK-20260924.md` with protocol, measured outputs, uncertainty boundary and physical-test handoff.
+- Added `research/evidence/BIUPIU-DIGITAL-TWIN-SIMULATION-BENCHMARK-20260924.json` as the machine-readable evidence record.
+- Executed four material-family screening fixtures: BMG-H01, BMG-F01, BMG-HF01 and BMG-HFB01 using the same geometry and load model.
+- Executed 10,000 deterministic iterations per candidate with zero execution failures.
+- Executed 50/100/150 N load sweep and 9-case E/density uncertainty sweep per candidate.
+- Recorded mass, static tip deflection, stress response, first-mode frequency and buckling-margin proxy.
+- Synthetic material cards are explicitly classified as plausible-model screening inputs; they are not measured allowables.
+- Physical correlation remains open. Simulation output does not certify, qualify or authorise hardware actuation.
+
+**Status: DIGITAL SIMULATION BENCHMARK EXECUTED / REPEATABILITY PASS / PHYSICAL CORRELATION OPEN.**
