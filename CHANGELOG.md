@@ -439,3 +439,37 @@ Executed the controlled continuation protocol in the available deterministic sof
 **OPEN:** CI execution for this new record, physical CPU/GPU/NPU validation, UE5, Android/device runtime, QPU, real biological datasets/assays and large-scale multilingual model benchmarks.
 
 **Status: CONTROLLED EXPERIMENTS EXECUTED / LEARNING UPDATED / HARDWARE + RUNTIME PROMOTION OPEN.**
+
+
+# 2026-09-24 — Android Foreign-Language Federation Harvest + Locale Build Gate
+
+### External harvest
+- Re-harvested Android/AOSP documentation through German, Japanese, Simplified Chinese and Korean language lanes.
+- German Android documentation reinforced ICU/CLDR Unicode and internationalization boundaries.
+- Japanese and Korean AOSP build documentation independently reinforced Soong/Kati/Ninja and Android.bp build semantics.
+- Simplified Chinese Android documentation independently reinforced ICU/CLDR and API-level internationalization behaviour.
+- External material was retained as reference evidence; no third-party executable code or proprietary binary was copied.
+
+### Coding framework reconciliation
+- Cross-checked the foreign-language findings against the Native Coding Philosophy, Multilanguage Native Coding Matrix and AI Coding Hard Gate.
+- Confirmed BCP-47 locale identity, Unicode/bidi/confusable checks, provenance, licence, capability-first selection, fail-closed behaviour and verification-ladder rules remain consistent.
+- Preserved the distinction between Android platform/Soong build authority and application Gradle build authority.
+
+### Android implementation update
+- Added canonical `apps/android` application-name string resource.
+- Added locale resource scaffolds for `de`, `ja`, `zh-rCN`, `ko` and `ru`.
+- Changed AndroidManifest application label from a hard-coded literal to `@string/app_name`.
+- Kept the change intentionally minimal: this establishes the localization boundary without claiming full UI translation.
+
+### Gate execution boundary
+- Repository writes: **VERIFIED**.
+- Foreign-language harvest: **REFERENCE PASS**.
+- Coding-framework reconciliation: **PASS**.
+- Android localization scaffold: **IMPLEMENTED**.
+- Fresh Gradle/Android SDK execution: **TRIGGERED / RESULT PENDING**.
+- APK artifact verification: **OPEN until fresh CI evidence**.
+- Emulator/device/OEM runtime: **OPEN**.
+
+Canonical audit record: `research/BIUPIU-ANDROID-MULTILINGUAL-FEDERATION-HARVEST-20260924.md`.
+
+Promotion rule remains: implementation is not runtime verification; no Android build/device gate is marked verified without execution evidence.
