@@ -1,0 +1,84 @@
+{
+  "schema": "biupiu.foreign-language-harvest-crossref.v2",
+  "date": "2026-09-24",
+  "status": "HARVEST_AND_SOURCE_CROSSREF_COMPLETE",
+  "branch": "federation/ai-behaviour-foreign-language-harvest-20260924",
+  "languages": {
+    "zh_cn": {
+      "status": "REFERENCE_CANDIDATE",
+      "signals": [
+        "android-latest-release",
+        "android17-release",
+        "AOSP modular/update architecture"
+      ]
+    },
+    "zh_tw": {
+      "status": "REFERENCE_CANDIDATE",
+      "signals": [
+        "Mainline APEX/APK",
+        "atomic update/rollback",
+        "stable interfaces"
+      ]
+    },
+    "ja": {
+      "status": "REFERENCE",
+      "signals": [
+        "Android 17 release",
+        "ARM/x86-64 compatibility",
+        "security/release timing"
+      ]
+    },
+    "ko": {
+      "status": "REFERENCE",
+      "signals": [
+        "Android 17 security release",
+        "patch level",
+        "vulnerability classification"
+      ]
+    },
+    "pt_br": {
+      "status": "REFERENCE_CANDIDATE",
+      "signals": [
+        "Mainline modules",
+        "stable API/AIDL/C interfaces",
+        "atomic update/revert"
+      ]
+    },
+    "ru": {
+      "status": "SECONDARY_REFERENCE",
+      "signals": [
+        "AOSP release cadence",
+        "trunk-stable context"
+      ]
+    },
+    "de": {
+      "status": "NO_NEW_VERIFIED_MODULE",
+      "signals": []
+    }
+  },
+  "crossrefs": {
+    "coding_philosophy": "ALIGNED",
+    "coding_matrix": "ALIGNED",
+    "biupiu_intelligence": "ALIGNED",
+    "native_ai": "ALIGNED",
+    "ml": "ALIGNED",
+    "quantum_inspired": "ALIGNED",
+    "federation": "ALIGNED",
+    "knowledge_graph": "ALIGNED"
+  },
+  "fault_classes": [
+    "TRANSLATION_FACT_COLLAPSE",
+    "LANGUAGE_PROVENANCE_LOSS",
+    "SECONDARY_SOURCE_AUTHORITY_LEAK",
+    "VERSION_LINEAGE_COLLAPSE",
+    "LICENCE_TRANSLATION_GAP",
+    "SECURITY_DATE_COLLAPSE",
+    "MODULE_SCOPE_OVERCLAIM",
+    "RUNTIME_FROM_DOC_ERROR"
+  ],
+  "promotion": "NOT_PERFORMED",
+  "runtime": "OPEN",
+  "hardware": "OPEN",
+  "ue5": "OPEN",
+  "qpu": "OPEN"
+}

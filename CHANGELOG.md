@@ -1,3 +1,56 @@
+## 2026-09-24 — PC Build: Foreign-Language Harvest Integration
+
+Implemented the 2026-09-24 foreign-language site harvest as a native Windows PC evidence boundary.
+
+### PC implementation
+- Added `apps/windows/ForeignLanguageHarvestRegistry.cs`.
+- Added `apps/windows/ForeignLanguageHarvestRegistryTests.cs`.
+- Integrated the registry into `apps/windows/MainWindow.xaml.cs`.
+- Added a PC-shell status surface in `apps/windows/MainWindow.xaml`.
+- Preserved the shared BCP-47 language registry and explicit locale selection.
+- Registered Chinese, Traditional Chinese, Japanese, Korean, Portuguese and Russian harvest lanes with evidence class and executable-promotion state.
+- Added the eight foreign-language fault checks to the PC-side gate.
+- Enforced fail-closed executable promotion: harvested foreign-language evidence cannot authorise executable promotion.
+- Preserved the provenance chain:
+  `SOURCE_LANGUAGE -> ORIGINAL_SOURCE -> TRANSLATION/INTERPRETATION -> CLAIM -> EVIDENCE_CLASS -> INTERNAL_MATCH -> MODULE/CAPABILITY -> TEST -> RESULT -> PROVENANCE -> PROMOTION_STATE`.
+
+### Verification boundary
+- Source integration: IMPLEMENTED.
+- PC registry self-checks: IMPLEMENTED.
+- Windows build: PENDING local PC execution.
+- Windows runtime/UI: PENDING local PC execution.
+- Foreign-language translation quality: not claimed.
+- External executable promotion: NONE.
+- Android/device/hardware/UE5/QPU gates remain separate.
+
+## 2026-09-24 — Repeated Foreign-Language Site Harvest × AI Behaviour Cross-Reference
+
+- Repeated external-language harvest across Chinese, Traditional Chinese, Japanese, Korean, Portuguese and Russian Android/AOSP sources; German lane checked with no new sufficiently authoritative module finding.
+- Cross-referenced harvested material against Biupiu Coding Philosophy, Coding Matrix, Knowledge Graph, Biupiu Intelligence, Native AI, ML, Quantum/quantum-inspired and Federation.
+- Chinese/Traditional Chinese AOSP material reinforced android-latest-release/android17-release lineage, Mainline modularity, stable interfaces and atomic update/rollback.
+- Japanese and Korean AOSP/Android 17 material added release, compatibility, security-patch and dated security evidence patterns.
+- Portuguese Mainline documentation reinforced stable API/AIDL/C boundaries and atomic module update/revert behaviour.
+- Russian Habr material retained as attributed secondary reporting for release/source-cadence context; it is not treated as primary implementation authority.
+- Added multilingual provenance rule: SOURCE_LANGUAGE -> ORIGINAL_SOURCE -> TRANSLATION/INTERPRETATION -> CLAIM -> EVIDENCE_CLASS -> INTERNAL_MATCH -> MODULE/CAPABILITY -> TEST -> RESULT -> PROVENANCE -> PROMOTION_STATE.
+- Added foreign-language behaviour fault classes covering translation/fact collapse, language provenance loss, secondary-source authority leakage, version-lineage collapse, licence translation gaps, security-date collapse, module-scope overclaim and runtime-from-document error.
+- No external-language implementation was silently imported or promoted.
+- Added research/BIUPIU-FOREIGN-LANGUAGE-SITE-HARVEST-AI-CROSSREF-20260924.md.
+- Added research/BIUPIU-FOREIGN-LANGUAGE-SITE-HARVEST-AI-CROSSREF-20260924.json.
+- Source cross-reference PASS; Android build/device, hardware accelerator, UE5 and QPU gates remain OPEN.
+
+## 2026-09-24 — AI Behaviour × International Knowledge × Graph Harvest Cross-Reference
+
+- Cross-referenced Biupiu AI behaviour against federated international knowledge/reference patterns and the existing Knowledge Graph.
+- Mapped NIST AI RMF, ISO/IEC 42001 and W3C PROV as reference-only anchors for AI governance, lifecycle management and provenance interoperability; no external source receives Biupiu authority.
+- Cross-referenced Biupiu Intelligence, Native AI, ML, quantum/quantum-inspired systems, Federation, Digital Twin, Native Coding Philosophy and Coding Matrix.
+- Registered the behavioural state distinction: OBSERVE -> CLASSIFY -> INFER -> PROPOSE -> SIMULATE -> VALIDATE -> AUTHORISE -> EXECUTE.
+- Added explicit behaviour fault classes for authority leakage, evidence leakage, provenance breaks, model/fact collapse, runtime-equivalence errors, quantum-claim leakage, optimisation-claim leakage, unsupported graph edges, licence-authority leakage and historical-record mutation.
+- Added a machine-readable behaviour/evidence graph overlay while preserving the canonical Knowledge Graph and existing authority hierarchy.
+- No external implementation was imported or promoted; no historical authoritative record was rewritten.
+- Added research/BIUPIU-AI-BEHAVIOUR-INTERNATIONAL-GRAPH-CROSSREF-20260924.md.
+- Added research/BIUPIU-AI-BEHAVIOUR-INTERNATIONAL-GRAPH-CROSSREF-20260924.json.
+- Source cross-reference: PASS. Runtime/device/build/hardware/UE5/QPU verification remains OPEN.
+
 # 2026-09-22 — Android/AOSP + Automotive Federation Expansion
 
 ### External harvest
@@ -439,3 +492,121 @@ Executed the controlled continuation protocol in the available deterministic sof
 **OPEN:** CI execution for this new record, physical CPU/GPU/NPU validation, UE5, Android/device runtime, QPU, real biological datasets/assays and large-scale multilingual model benchmarks.
 
 **Status: CONTROLLED EXPERIMENTS EXECUTED / LEARNING UPDATED / HARDWARE + RUNTIME PROMOTION OPEN.**
+
+## 2026-09-24 — Android Mini OS Standalone + Native Intelligence Federation Integration
+- Added standalone Android Mini OS development/integration record preserving prior AOSP, automotive, UI, graphics, AI/NPU, simulator, Digital Twin, learning, blind-baseline and quantum-inspired work.
+- Added native Biupiu Intelligence + Federation bridge with fail-closed execution/promotion authority.
+- Included mini-os/android/federation as an Android app Java source set so federation contracts participate in the Gradle build configuration.
+- Added machine-readable integration state under research/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.json.
+- Runtime/device/build verification remains OPEN; no source-level change is treated as physical Android verification.
+
+## 2026-09-24 — Android Build Audit + Foreign-Language Module Harvest + Housekeeping
+- Audited the Mini OS Android CI configuration: JDK 17, SDK 35, Gradle 8.9, unit tests, assembleDebug and source sanity are configured; current integration commit remains PENDING with no reported CI result.
+- Harvested Chinese, Russian and German Android/AOSP sources and localized AOSP documentation.
+- Added candidate patterns for Mainline/APEX rollback, missing-required-module validation, host/target separation, Android stress testing and PC/Waydroid capability differences.
+- No foreign-language source or executable was vendored or promoted.
+- Updated native system catalogue with provenance/status/promotion gates and added the foreign-language harvest record.
+- Added Android housekeeping/extermination/smoke/fault log. Ambiguous duplicates were retained and classified rather than destructively deleted.
+
+
+## 2026-09-24 — Native Blind Audit: Quantum vs Federation
+
+### Audit
+- Executed a source-level blind comparison protocol using anonymous ARM-A / ARM-B test identities before architectural unblinding.
+- Locked the common criteria: capability equivalence, correctness, deterministic replay, resource cost, failure handling, provenance, regression, uncertainty, scalability and promotion safety.
+- Cross-referenced the native Quantum Federation contracts, Universal Simulator Federation, canonical Federation evidence contracts, Gate-Learning Architecture and Baseline A.
+- Confirmed that the existing Baseline A remains the appropriate native control for a later matched execution; QPU remains disabled.
+- No comparative winner, quantum-advantage claim or federation-superiority claim was assigned.
+
+### Findings
+- Quantum path is currently a specialised simulator/algorithm/provider capability with classical-baseline and fail-closed promotion requirements.
+- Federation is the broader governed orchestration/evidence boundary covering providers, simulators, provenance, health, delivery, comparison and reconciliation.
+- Candidate overlap exists in selection, validation, provenance and routing; this is to be reconciled through contracts rather than duplicated authority.
+- A possible integration seam was recorded: Quantum capability/provider logic can operate inside Federation's governed orchestration and evidence boundary.
+- This is an architecture-compatibility finding only; runtime performance and superiority remain unverified.
+
+### Verification boundary
+**SOURCE AUDIT:** COMPLETE.
+
+**BLIND EXECUTION:** OPEN pending matched runtime execution.
+
+**QPU / PHYSICAL QUANTUM:** DISABLED / UNVERIFIED.
+
+**LIVE FEDERATION RUNTIME:** OPEN.
+
+**UE5 / Android / HARDWARE CORRELATION:** OPEN.
+
+**PROMOTION:** NOT PERFORMED.
+
+### Repository record
+- Added `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-20260924.md`.
+- Preserved existing implementations and failure lineage; no destructive deletion was justified by the source-only comparison.
+- The audit result is an evidence boundary and integration hypothesis, not a performance verdict.
+
+
+## 2026-09-24 — Native Blind Audit: Quantum vs Federation + Optimisation Modules
+
+### Audit
+- Repeated the native blind Quantum-vs-Federation audit with optimisation modules introduced as a common controlled candidate layer.
+- Architecture identities remained blinded as ARM-A / ARM-B during test definition.
+- Optimisation candidates were classified without granting them independent authority.
+
+### Optimisation surfaces audited
+- Compute scheduling/routing and capacity selection.
+- ARM NEON/SIMD and accelerator capability selection.
+- Sparse linear algebra and computational-geometry paths.
+- Numerical/alignment optimisation and scientific-library optimisation candidates.
+- ML hyperparameter/search optimisation and portable/federated inference boundaries.
+- Smart-farming and Digital-Twin optimisation loops.
+
+### Controls
+- Baseline A remains unchanged and is the common native control.
+- Matched optimisation candidates must use the same eligibility conditions and measurement criteria on both blind arms where applicable.
+- Non-applicable candidates are recorded as NOT_APPLICABLE rather than treated as failures.
+- Optimisation retention requires reproducibility, correctness, security, provenance, compatibility and regression evidence.
+- No optimiser, Quantum module or Federation module can self-authorise promotion.
+
+### Findings
+- Federation provides the broadest existing orchestration/evidence seam for capability-aware optimisation.
+- Quantum already contains candidate-selection logic using classical score, simulator score, uncertainty and resource pressure; this remains a routing/validation decision.
+- Existing scheduler fault/recovery evidence is retained as a regression case for optimisation of compute routing.
+- SIMD/NEON, sparse/geometry, numerical and ML optimisation candidates remain runtime-dependent.
+- Domain optimisation protocols already require measurement and human review before implementation.
+- No source-level evidence was sufficient to claim optimisation improvement, quantum advantage or comparative architectural superiority.
+
+### Repository record
+- Added `research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md`.
+- Existing implementations and failure lineage preserved.
+- Optimisation candidates remain REGISTERED / CANDIDATE pending matched execution.
+
+### Verification boundary
+**SOURCE AUDIT:** COMPLETE.
+
+**OPTIMISATION INVENTORY:** COMPLETE.
+
+**BLIND EXECUTION:** OPEN.
+
+**RUNTIME/HARDWARE BENCHMARK:** OPEN.
+
+**QPU:** DISABLED.
+
+**PROMOTION:** NOT PERFORMED.
+
+**Status: QUANTUM + FEDERATION + OPTIMISATION SOURCE AUDIT COMPLETE / MATCHED EXECUTION OPEN.**
+
+
+## 2026-09-24 — System-Wide Integration / Optimisation Cross-Link
+- Added canonical system-wide integration record: `research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md`.
+- Cross-linked OS Core, DMS, Native Intelligence, Federation, Digital Orchestra, Digital Twin, Universal Simulator, Math/Physics/Geometry, optimisation, Android Mini OS, Quantum-inspired audit, Digital Filing and UE5 runtime boundary.
+- Registered a common optimisation evidence contract and preserved Baseline A as the immutable control.
+- Preserved the authority chain and fail-closed promotion boundary; no subsystem gained silent ownership or self-authorisation.
+- Updated the native system catalogue and consolidated harvest record with the integration state.
+- Source integration is recorded; matched execution and runtime verification remain open.
+
+
+## 2026-09-24 — Native System Functionality Test
+- Logged source-contract functionality test: `research/BIUPIU-NATIVE-SYSTEM-FUNCTIONALITY-TEST-20260924.md`.
+- Native Intelligence/Federation Android boundary: PASS — execution/promotion self-authorisation blocked; unresolved evidence fails closed; capabilities return to OS/DMS validation.
+- Compute Federation optimisation behaviour: PASS — capability selection, ordered preferences, capacity handling and controlled no-eligible failure exercised.
+- Governance boundary: PASS — OS/DMS/human release authority preserved; no promotion performed.
+- Runtime/device, production Gradle, GPU/NPU/NEON hardware, UE5, HIL and QPU gates remain open.

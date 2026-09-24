@@ -1,21 +1,33 @@
-version: "1.0"
+version: "1.1"
 name: biupiu-external-harvest
-description: Governed external module and coding-philosophy harvest
+description: Governed internal/external module harvest, compatibility, learning-map generation and promotion
 steps:
   - id: discover
     action: discover_sources
-  - id: classify
-    action: classify_provenance_and_license
+  - id: inventory_ai
+    action: enumerate_federation_ai_systems_and_task_manifests
+  - id: cross_reference
+    action: cross_reference_native_code_and_coding_matrix
+  - id: family_map
+    action: map_software_family_tree_and_oem_relationships
+  - id: compatibility
+    action: run_native_federation_compatibility_check
   - id: extract
-    action: extract_patterns_not_unlicensed_code
-  - id: compare
-    action: compare_with_native_matrix
+    action: extract_verified_patterns_not_unlicensed_code
+  - id: adapt
+    action: adapt_to_native_contracts_and_owner_boundaries
+  - id: graph
+    action: generate_computational_geometry_learning_map
+  - id: state_model
+    action: generate_growth_scaled_state_vector
+  - id: fault_learning
+    action: update_graph_based_fault_finding_and_preventative_tests
   - id: test
-    action: generate_validation_plan
+    action: generate_and_execute_validation_plan
   - id: digest
-    action: write_digest_and_crosslinks
+    action: write_numeric_and_graph_learning_digest
   - id: file
-    action: write_canonical_registry
+    action: write_canonical_registry_and_archive
   - id: promote
     action: human_release_gate
 guards:
@@ -24,3 +36,7 @@ guards:
   missing_provenance: quarantine
   conflicting_authority: reconcile
   failed_validation: quarantine
+  runtime_missing: repository_verified_untested
+  graph_without_raw_evidence: reject
+  state_model_without_normalization: reject
+  quantum_dependency_without_requirement: reject

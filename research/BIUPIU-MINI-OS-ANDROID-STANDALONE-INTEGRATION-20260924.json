@@ -1,0 +1,9 @@
+{
+  "record_id":"BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924",
+  "status":"REGISTERED_SOURCE_IMPLEMENTED_BUILD_VERIFICATION_OPEN",
+  "authority":{"release":"HUMAN","execution":"CORE_OS_DMS","intelligence":"BIUPIU_NATIVE_INTELLIGENCE","federation":"BIUPIU_FEDERATION"},
+  "integration":{"android_gradle_project":"IMPLEMENTED","federation_source_in_build":"IMPLEMENTED_SOURCE_CONFIGURATION","native_intelligence_bridge":"IMPLEMENTED_SOURCE_CONTRACT","capability_registry":"IMPLEMENTED","fail_closed":"IMPLEMENTED_SOURCE_LEVEL"},
+  "history":["OS/DMS baseline","OS/AI separation","AOSP/Pixel/GKI","Android Auto","automotive accessory adapters","Vector SIL/HIL boundary","LSPosed/ART boundary","RegiStar/OHO/NotiStar","Godot/Vulkan","AI/NPU/model federation","simulator federation","Digital Twin","gate learning","blind baseline","quantum-inspired audit"],
+  "evidence_boundary":{"source":true,"static_semantic":true,"gradle_execution":false,"device_runtime":false,"hardware":false,"aosp_platform_build":false,"qpu":false},
+  "open_gates":["android_gradle_build","android_device_runtime","android_auto_live_projection","gpu_vulkan_runtime","npu_device_correlation","physical_accessories","vector_can_hil","lsposed_art_runtime","full_aosp_pixel_build","persistent_encrypted_notification_store","production_security_signing_updates"]
+}

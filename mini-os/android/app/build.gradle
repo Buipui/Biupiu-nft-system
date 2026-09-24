@@ -23,6 +23,11 @@ android {
         generateLocaleConfig true
     }
 
+    // Federation contracts live in mini-os/android/federation and are compiled as part of the Mini OS app.
+    sourceSets {
+        main.java.srcDirs += ['../federation']
+    }
+
     lint {
         abortOnError true
     }

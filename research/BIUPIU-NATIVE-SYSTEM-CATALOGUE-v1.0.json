@@ -1,6 +1,6 @@
 {
   "schema": "biupiu.native-system-catalogue.v1",
-  "date": "2026-09-23",
+  "date": "2026-09-24",
   "status": "CANONICAL REGISTRY / SOURCE IMPLEMENTATION MAPPED / RUNTIME EVIDENCE SEPARATE",
   "tag_schema": "research/BIUPIU-NATIVE-SYSTEM-TAG-SCHEMA-v1.0.md",
   "philosophy": "research/BIUPIU-FEDERATION-NATIVE-EVOLUTION-PHILOSOPHY-v1.0.md",
@@ -450,5 +450,210 @@
       "evidence_state"
     ],
     "rule": "Generate differences on request; do not infer runtime capability or promotion authority from source diff."
+  },
+  "external_harvest_20260924": {
+    "status": "HARVESTED_REFERENCE_ONLY_UNTIL_GATES_PASS",
+    "lanes": [
+      "Chinese",
+      "Russian",
+      "German",
+      "localized AOSP"
+    ],
+    "findings": [
+      {
+        "id": "EXT-ANDROID-MAINLINE-APEX",
+        "source": "AOSP localized Mainline documentation",
+        "status": "REFERENCE_INTEGRATED",
+        "use": "APEX/APK modularity and atomic update/rollback",
+        "promotion": "architecture pattern only"
+      },
+      {
+        "id": "EXT-ANDROID-BUILD-HARDENING",
+        "source": "Gitee aosp-riscv platform_build",
+        "status": "CANDIDATE_PATTERN",
+        "use": "missing-module checks, host/target package separation, reproducible build-path restrictions",
+        "promotion": "validation candidate; no source import"
+      },
+      {
+        "id": "EXT-WAYDROID-PC-RUNNER",
+        "source": "Gitee Android component projects",
+        "status": "QUARANTINED_REFERENCE",
+        "use": "PC/Waydroid configuration and capability-difference observations",
+        "promotion": "adapter research only"
+      },
+      {
+        "id": "EXT-ANDROID-STRESS-TEST",
+        "source": "Gitee AndroidStressTest listing",
+        "status": "CANDIDATE_TEST_MATRIX",
+        "use": "CPU, memory, video, Wi-Fi, Bluetooth, airplane, reboot, sleep, factory-reset stress categories",
+        "promotion": "test-plan candidate; device verification required"
+      },
+      {
+        "id": "EXT-AOSP-BUILD-PROJECT-LIST",
+        "source": "Habr Russian AOSP build article",
+        "status": "HISTORICAL_REFERENCE",
+        "use": "repo/project.list and module inspection workflow",
+        "promotion": "research workflow only"
+      },
+      {
+        "id": "EXT-AOSP-RELEASE-CADENCE",
+        "source": "Heise German Android/AOSP reporting",
+        "status": "CONTEXT_REFERENCE",
+        "use": "AOSP source-release cadence awareness",
+        "promotion": "planning context only"
+      }
+    ],
+    "missing_module_candidates": [
+      "Android system-module inventory and rollback controller",
+      "host/target module separation validator",
+      "missing-required-module fail-closed validator",
+      "Android stress-test matrix",
+      "PC/Waydroid capability-difference adapter"
+    ],
+    "integration_rule": "No foreign-language source is promoted by language or novelty. Candidates require provenance, licence, dependency, static, unit, integration, regression, runtime and compatibility gates."
+  },
+  "native_blind_audit_quantum_vs_federation_20260924": {
+    "status": "SOURCE_AUDIT_COMPLETE_EXECUTION_OPEN",
+    "record": "research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-20260924.md",
+    "control": "FEDERATION_BASELINE_A_20260923",
+    "blind_arms": [
+      "ARM-A",
+      "ARM-B"
+    ],
+    "criteria": [
+      "capability_equivalence",
+      "correctness",
+      "deterministic_replay",
+      "resource_cost",
+      "failure_handling",
+      "provenance",
+      "regression",
+      "uncertainty",
+      "scalability",
+      "promotion_safety"
+    ],
+    "findings": {
+      "quantum": "specialised simulator/algorithm/provider capability; QPU disabled",
+      "federation": "governed orchestration/evidence boundary",
+      "overlap": [
+        "selection",
+        "validation",
+        "provenance",
+        "routing"
+      ],
+      "integration_hypothesis": "quantum provider logic may operate inside Federation orchestration/evidence contracts"
+    },
+    "verdict": {
+      "winner": "NOT_ASSIGNED",
+      "quantum_advantage": "NOT_CLAIMED",
+      "federation_superiority": "NOT_CLAIMED",
+      "promotion": "NOT_PERFORMED"
+    },
+    "open_gates": [
+      "blind_execution",
+      "live_federation_runtime",
+      "QPU",
+      "UE5",
+      "Android",
+      "hardware_correlation"
+    ]
+  },
+  "native_blind_audit_quantum_vs_federation_optimisation_20260924": {
+    "status": "SOURCE_AUDIT_COMPLETE_MATCHED_EXECUTION_OPEN",
+    "record": "research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md",
+    "blind_arms": [
+      "ARM-A",
+      "ARM-B"
+    ],
+    "optimisation_layer": [
+      "compute_scheduling",
+      "arm_neon_simd",
+      "sparse_geometry",
+      "numerical_alignment",
+      "ml_hyperparameter_search",
+      "domain_digital_twin_farming"
+    ],
+    "control": "FEDERATION_BASELINE_A_20260923",
+    "result": {
+      "optimisation_improvement": "NOT_CLAIMED",
+      "quantum_advantage": "NOT_CLAIMED",
+      "comparative_winner": "NOT_ASSIGNED",
+      "promotion": "NOT_PERFORMED"
+    },
+    "open_gates": [
+      "matched_blind_execution",
+      "runtime_benchmark",
+      "hardware_correlation",
+      "qpu"
+    ]
+  },
+  "system_wide_integration_update": {
+    "status": "INTEGRATED_SOURCE_LEVEL_EXECUTION_OPEN",
+    "record": "research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md",
+    "baseline": "FEDERATION_BASELINE_A_20260923",
+    "integrated_layers": [
+      "OS_CORE",
+      "DMS",
+      "NATIVE_INTELLIGENCE",
+      "FEDERATION",
+      "DIGITAL_ORCHESTRA",
+      "DIGITAL_TWIN",
+      "UNIVERSAL_SIMULATOR",
+      "MATH_PHYSICS_GEOMETRY",
+      "OPTIMISATION",
+      "ANDROID_MINI_OS",
+      "QUANTUM_INSPIRED",
+      "DIGITAL_FILING",
+      "UE5_RUNTIME_BOUNDARY"
+    ],
+    "optimisation_contract": [
+      "capability",
+      "workload",
+      "candidate",
+      "before_metric",
+      "after_metric",
+      "correctness",
+      "failure_delta",
+      "regression_delta",
+      "overhead",
+      "reproducibility",
+      "provenance",
+      "disposition"
+    ],
+    "authority_chain": "HUMAN_RELEASE -> CORE_OS_DMS -> DOMAIN_OWNER -> NATIVE_INTELLIGENCE -> FEDERATION -> ADAPTER_PROVIDER -> EXTERNAL_REFERENCE",
+    "source_integration": "COMPLETE",
+    "matched_execution": "OPEN",
+    "runtime_verification": "OPEN",
+    "promotion": "NOT_PERFORMED"
+  },
+  "cross_system_links": [
+    "research/BIUPIU-SYSTEM-WIDE-INTEGRATION-UPDATE-20260924.md",
+    "research/BIUPIU-BLIND-BASELINE-SELF-OPTIMISATION-PROTOCOL-20260924.md",
+    "research/BIUPIU-NATIVE-BLIND-AUDIT-QUANTUM-VS-FEDERATION-OPTIMISATION-20260924.md",
+    "research/BIUPIU-QUANTUM-INSPIRED-DEEP-AUDIT-HARVEST-20260924.md",
+    "mini-os/android/BIUPIU-MINI-OS-ANDROID-STANDALONE-INTEGRATION-20260924.md",
+    "research/BIUPIU-OS-DMS-SUBSYSTEM-MASTER-INDEX-v1.0.md"
+  ],
+  "native_functionality_test_20260924": {
+    "status": "SOURCE_CONTRACT_FUNCTIONALITY_PASS",
+    "record": "research/BIUPIU-NATIVE-SYSTEM-FUNCTIONALITY-TEST-20260924.md",
+    "tests": {
+      "native_intelligence_federation_boundary": "PASS",
+      "compute_federation_optimisation": "PASS",
+      "governance_boundary": "PASS"
+    },
+    "execution_environment": "isolated_source_contract_execution",
+    "runtime_verification": "OPEN",
+    "promotion": "NOT_PERFORMED",
+    "claims_excluded": [
+      "android_device_runtime",
+      "production_gradle_build",
+      "gpu_npu_neon_hardware_performance",
+      "ue5_runtime",
+      "hil",
+      "qpu",
+      "optimisation_improvement",
+      "quantum_advantage"
+    ]
   }
 }

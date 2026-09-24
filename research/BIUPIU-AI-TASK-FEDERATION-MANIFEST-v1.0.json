@@ -1,0 +1,39 @@
+{
+  "schema": "biupiu.ai.task.federation-manifest.v1",
+  "date": "2026-09-23",
+  "status": "CANONICAL_TASK_LANGUAGE_ON_BRANCH_PENDING_CI",
+  "task_language": "BPU.<SYSTEM>.<DEPARTMENT>.<TASK>",
+  "systems": [
+    {"system_id":"biupiu-intelligence","department":"INTELLIGENCE","tasks":["BPU.INTELLIGENCE.DISCOVER","BPU.INTELLIGENCE.CLASSIFY","BPU.INTELLIGENCE.LEARN","BPU.INTELLIGENCE.PROPOSE","BPU.INTELLIGENCE.TEST"]},
+    {"system_id":"biupiu-core-os","department":"CORE_OS","tasks":["BPU.CORE_OS.VALIDATE","BPU.CORE_OS.COMPATIBILITY","BPU.CORE_OS.RELEASE_GATE"]},
+    {"system_id":"biupiu-ai-os","department":"AI_OS","tasks":["BPU.AI_OS.ROUTE","BPU.AI_OS.MODEL_ADAPT","BPU.AI_OS.RUNTIME_CHECK"]},
+    {"system_id":"biupiu-adapter-registry","department":"FEDERATION","tasks":["BPU.FEDERATION.DISCOVER","BPU.FEDERATION.NEGOTIATE","BPU.FEDERATION.ADAPT","BPU.FEDERATION.PROVENANCE"]},
+    {"system_id":"langgraph","department":"ORCHESTRA","tasks":["BPU.ORCHESTRA.GRAPH_ROUTE","BPU.ORCHESTRA.CHECKPOINT","BPU.ORCHESTRA.HUMAN_GATE"]},
+    {"system_id":"crewai","department":"ORCHESTRA","tasks":["BPU.ORCHESTRA.ROLE_COORDINATE","BPU.ORCHESTRA.WORKFLOW"]},
+    {"system_id":"dspy","department":"ML","tasks":["BPU.ML.EVALUATE","BPU.ML.OPTIMISE"]},
+    {"system_id":"vllm","department":"INFERENCE","tasks":["BPU.INFERENCE.SERVE","BPU.INFERENCE.BATCH"]},
+    {"system_id":"pysyft","department":"FEDERATED_ML","tasks":["BPU.FEDML.PRIVACY","BPU.FEDML.REMOTE_DATA"]},
+    {"system_id":"flower","department":"FEDERATED_ML","tasks":["BPU.FEDML.TRAIN","BPU.FEDML.ANALYTICS"]},
+    {"system_id":"qiskit-ml","department":"QUANTUM_ML","tasks":["BPU.QML.KERNEL","BPU.QML.QNN"]},
+    {"system_id":"pennylane","department":"QUANTUM_ML","tasks":["BPU.QML.HYBRID","BPU.QML.DIFFERENTIATION"]},
+    {"system_id":"android-ai","department":"ANDROID","tasks":["BPU.ANDROID.AI_RUNTIME","BPU.ANDROID.CAPABILITY_ROUTE"]},
+    {"system_id":"pytorch-edge","department":"EDGE_ML","tasks":["BPU.EDGE.INFERENCE","BPU.EDGE.OPTIMISE"]},
+    {"system_id":"catboost","department":"ML","tasks":["BPU.ML.TREE_MODEL","BPU.ML.EVALUATE"]},
+    {"system_id":"dace","department":"HETEROGENEOUS_COMPUTE","tasks":["BPU.HETERO.SDFG","BPU.HETERO.OPTIMISE"]},
+    {"system_id":"opendroid-android-agent","department":"ANDROID_AGENT","tasks":["BPU.OPENDROID.ACCESSIBILITY","BPU.OPENDROID.ACTION","BPU.OPENDROID.AGENT_LOOP"]},
+    {"system_id":"opendroid-memory-security","department":"ANDROID_AGENT","tasks":["BPU.OPENDROID.MEMORY","BPU.OPENDROID.KEYSTORE","BPU.OPENDROID.STATE"]},
+    {"system_id":"opendroid-services-voice","department":"ANDROID_AGENT","tasks":["BPU.OPENDROID.SERVICE","BPU.OPENDROID.VOICE","BPU.OPENDROID.NOTIFY"]},
+    {"system_id":"opendroid-compose-ui","department":"ANDROID_UI","tasks":["BPU.OPENDROID.UI","BPU.OPENDROID.VIEWMODEL","BPU.OPENDROID.THEME"]}
+  ],
+  "cross_department_tasks": [
+    {"code":"BPU.XREF.AI_TO_FEDERATION","systems":["biupiu-intelligence","biupiu-adapter-registry"],"departments":["INTELLIGENCE","FEDERATION"]},
+    {"code":"BPU.XREF.FEDERATION_TO_ORCHESTRA","systems":["biupiu-adapter-registry","langgraph","crewai"],"departments":["FEDERATION","ORCHESTRA"]},
+    {"code":"BPU.XREF.ORCHESTRA_TO_ANDROID","systems":["langgraph","android-ai"],"departments":["ORCHESTRA","ANDROID"]},
+    {"code":"BPU.XREF.ML_TO_GEOMETRY","systems":["dspy","biupiu-intelligence"],"departments":["ML","INTELLIGENCE"]},
+    {"code":"BPU.XREF.FEDML_TO_LEARNING","systems":["flower","pysyft","biupiu-intelligence"],"departments":["FEDERATED_ML","INTELLIGENCE"]},
+    {"code":"BPU.XREF.QML_TO_MATH","systems":["qiskit-ml","pennylane","biupiu-intelligence"],"departments":["QUANTUM_ML","MATH_PHYSICS"]},
+    {"code":"BPU.XREF.ANDROID_TO_NATIVE","systems":["android-ai","pytorch-edge","biupiu-core-os"],"departments":["ANDROID","EDGE_ML","CORE_OS"]},
+    {"code":"BPU.XREF.WORLD_TO_TWIN","systems":["biupiu-intelligence","biupiu-adapter-registry"],"departments":["WORLD","DIGITAL_TWIN"]}
+  ],
+  "rule": "Task manifests describe canonical responsibilities; evidence remains attached per task and runtime execution is not inferred."
+}
