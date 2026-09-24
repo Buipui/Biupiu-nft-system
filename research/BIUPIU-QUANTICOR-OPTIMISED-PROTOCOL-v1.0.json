@@ -1,0 +1,235 @@
+{
+  "schema": "biupiu.quanticor.optimised-protocol.v1",
+  "date": "2026-09-24",
+  "name": "Buipui Full-System AI-Assisted Optimised Protocol",
+  "layer": "Quanticor / Buipui Intelligence",
+  "status": "ARCHITECTURE_REGISTERED_IMPLEMENTATION_NOT_CLAIMED",
+  "scope": "All Buipui system families, engines, native cores, federation layers, ML systems, digital twins, evidence systems and future computational/quantum research engines.",
+  "control_principle": "Observe -> map -> model -> cross-test -> fault-learn -> optimise -> verify -> anchor -> promote.",
+  "canonical_representation": {
+    "rule": "Code remains an executable implementation artifact; computational geometry is the canonical machine-readable representation for system analysis, relationships, behaviour and optimisation.",
+    "geometry_model": "Represent every system as a multidimensional computational graph/hypergraph whose nodes and edges encode code units, interfaces, capabilities, dependencies, states, behaviour, resources, evidence and provenance.",
+    "dimensions": [
+      "source",
+      "module",
+      "interface",
+      "capability",
+      "dependency",
+      "runtime_state",
+      "fault_state",
+      "performance",
+      "resource",
+      "platform",
+      "learning_state",
+      "provenance",
+      "federation_state",
+      "temporal_revision"
+    ],
+    "rule_for_mapping": "Every mapped code element must resolve to a semantic geometry node and its relationships must resolve to typed edges.",
+    "negative_space": "Absent, blocked, unavailable, forbidden, quarantined and unverified paths are first-class geometry states rather than omitted information."
+  },
+  "shared_engine_model": {
+    "principle": "All ML systems share a common Buipui Intelligence core engine and scale through modular engines, datasets, geometry maps and platform adapters.",
+    "core_engine": [
+      "semantic interpretation",
+      "computational geometry mapping",
+      "learning and regression",
+      "fault analysis",
+      "optimisation",
+      "evidence/provenance",
+      "capability reasoning"
+    ],
+    "scaling": {
+      "horizontal": "Add independent system families, modules and federation participants without changing the core contract.",
+      "vertical": "Move the same semantic model from application level through native core, hardware interface and future specialised engines.",
+      "heterogeneous": "Permit different languages, runtimes, platforms and architectures to participate through typed contracts and adapters."
+    }
+  },
+  "engine_stack": {
+    "buipui_intelligence": {
+      "role": "Primary reasoning, learning, optimisation and orchestration layer.",
+      "function": "Optimise all registered engines and system families against common functionality, evidence and resource objectives."
+    },
+    "computational_geometry_engine": {
+      "role": "Canonical multidimensional representation and traversal layer.",
+      "function": "Map code and system behaviour into geometry rather than treating source text as the only representation.",
+      "outputs": [
+        "system geometry",
+        "dependency geometry",
+        "behaviour geometry",
+        "fault geometry",
+        "performance geometry",
+        "provenance geometry",
+        "cross-system intersection maps"
+      ]
+    },
+    "quantum_physics_engine": {
+      "role": "Quantum-inspired computational/research engine.",
+      "function": "Evaluate superposition-like alternative states, multidimensional paths, optimisation spaces and constrained state transitions.",
+      "boundary": "Software simulation or abstraction must not be represented as proof of physical quantum behaviour."
+    },
+    "quanticor": {
+      "role": "Quantum-level observation, fault-learning, multidimensional mapping and optimisation controller.",
+      "functions": [
+        "unfinished-state observation",
+        "fault-state mapping",
+        "regressive fault-learning maps",
+        "negative-space gates",
+        "multidimensional path analysis",
+        "controlled federation collision testing",
+        "clean-path extraction",
+        "evidence anchoring",
+        "multi-system optimisation"
+      ]
+    },
+    "buipui_heterogeneous_system": {
+      "role": "Digital-twin layer.",
+      "function": "Maintain a machine-readable model of heterogeneous systems so AI can traverse, compare and test system states without assuming a single implementation language or platform."
+    },
+    "learning_engine": {
+      "role": "Shared ML learning and regression layer.",
+      "function": "Learn from observed behaviour, test evidence, faults, recoveries and performance rather than inferring correctness from source structure alone."
+    }
+  },
+  "quantum_federation_control": {
+    "role": "Controlled federation protocol for multi-system state exploration.",
+    "principles": [
+      "Systems remain independently operable.",
+      "Federation is capability-driven and contract-governed.",
+      "Alternative system states may be represented simultaneously in the computational model.",
+      "Conflicting implementations are compared before promotion.",
+      "Intentional collisions occur only in sandbox/quarantine environments.",
+      "Verified clean paths are separated from experimental and failed paths."
+    ],
+    "control_functions": [
+      "register_system",
+      "map_geometry",
+      "register_capabilities",
+      "bind_contracts",
+      "generate_alternative_states",
+      "intersect_system_paths",
+      "detect_conflicts",
+      "simulate_collision",
+      "observe_failure",
+      "decompose_redundancy",
+      "preserve_provenance",
+      "extract_clean_path",
+      "regression_test",
+      "optimise_global_objectives",
+      "promote_after_evidence"
+    ],
+    "collision_protocol": {
+      "mode": "quarantine_only",
+      "goal": "Expose interface, semantic, dependency, resource and behavioural conflicts.",
+      "production_rule": "No destructive collision is permitted against an authoritative build."
+    }
+  },
+  "code_decomposition": {
+    "principle": "Non-required, redundant or conflicting code is decomposed and classified before any deletion or replacement.",
+    "states": [
+      "required",
+      "duplicate",
+      "alternative",
+      "experimental",
+      "unreachable",
+      "conflicting",
+      "quarantined",
+      "archived",
+      "candidate_for_reuse"
+    ],
+    "promotion_rule": "No code is deleted solely because an optimiser labels it redundant; evidence, provenance and human-approved promotion remain required."
+  },
+  "system_interlinking": {
+    "principle": "Buipui systems are interlinked through machine-readable contracts and multidimensional geometry while preserving independent operation.",
+    "required_links": [
+      "DigiCat",
+      "DigiFile",
+      "Learning",
+      "Quanticor",
+      "semantic capability contracts",
+      "provenance",
+      "benchmark evidence"
+    ],
+    "architecture_trees": {
+      "as_is_functionality_tree": "Preserve existing systems and maximise verified functionality without premature restructuring.",
+      "buipui_native_systems_tree": "Core-integrated performance and optimisation tree built only from verified functionality.",
+      "archive_tree": "Immutable historical builds and evidence retained as control references."
+    }
+  },
+  "evidence_and_blockchain": {
+    "blockchain_role": "Integrity/provenance anchor for geometry-map snapshots, experiment events, regression states and promotion evidence.",
+    "rule": "Blockchain is an anchor and audit layer, not the sole data store.",
+    "preferred_records": [
+      "content hashes",
+      "Merkle roots",
+      "event identifiers",
+      "revision identifiers",
+      "geometry snapshot identifiers",
+      "test/evidence references"
+    ]
+  },
+  "optimisation_protocol": {
+    "sequence": [
+      "functional_equivalence",
+      "semantic_compatibility",
+      "fault_recovery",
+      "resource_measurement",
+      "native_vs_federated_comparison",
+      "global_multi-engine optimisation",
+      "regression",
+      "provenance_anchor",
+      "promotion"
+    ],
+    "objective_vector": [
+      "functionality",
+      "correctness",
+      "latency",
+      "memory",
+      "CPU/GPU utilisation",
+      "throughput",
+      "energy",
+      "recovery",
+      "interoperability",
+      "traceability",
+      "learning throughput"
+    ],
+    "constraint": "Performance optimisation cannot override functional correctness, safety gates or provenance."
+  },
+  "machine_readable_principles": [
+    "Observe before modifying.",
+    "Map before optimising.",
+    "Geometry represents system relationships; source code remains the executable implementation.",
+    "Learn from behaviour and evidence, not source assumptions alone.",
+    "Every negative-space state is information.",
+    "Every system can evaluate another system through controlled contracts.",
+    "Native functionality is preferred when it satisfies the contract.",
+    "Federation is used when independent systems must interoperate.",
+    "All ML systems share the Buipui Intelligence core engine and scale through modular extensions.",
+    "Quantum models are computational/research abstractions unless physical evidence establishes otherwise.",
+    "Destructive experiments are quarantined.",
+    "Clean paths and failed paths remain separately traceable.",
+    "Blockchain anchors provenance but does not replace the evidence store.",
+    "No promotion occurs without reproducible evidence.",
+    "Historical builds remain immutable controls."
+  ],
+  "research_tracks": {
+    "photonic_intelligence": "Research only until physical architecture and evidence exist.",
+    "crystal_intelligence": "Research only until physical architecture and evidence exist.",
+    "microbial_mapping": "Cross-reference existing Biupui research/IP evidence without claiming capabilities beyond recorded evidence."
+  },
+  "implementation_gate": {
+    "current": "ARCHITECTURE_REGISTERED_IMPLEMENTATION_NOT_CLAIMED",
+    "next": [
+      "recursive semantic audit",
+      "recursive module/adapter audit",
+      "geometry mapping prototype",
+      "shared-engine interface definition",
+      "Quanticor observer integration",
+      "common cross-system benchmark",
+      "sandbox federation collision tests",
+      "Android regression evidence",
+      "AS-IS versus BUIPUI Native Systems comparison"
+    ],
+    "pc_ue5_status": "HOLD during current Android/native audit phase"
+  }
+}
