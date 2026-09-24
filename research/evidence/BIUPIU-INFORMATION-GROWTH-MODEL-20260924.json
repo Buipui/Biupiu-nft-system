@@ -1,0 +1,16 @@
+{
+  "task_id":"INFO-GROWTH-MODEL-001-20260924",
+  "protocol_id":"BPU.PROTOCOL.QAISP.MI.1.0",
+  "model_id":"BPU.MODEL.INFORMATION.GROWTH",
+  "version":"1.0",
+  "status":"SOURCE_IMPLEMENTED_TESTS_ADDED_RUNTIME_OPEN",
+  "purpose":"Machine-learnable, multidimensionally scalable model for information growth and graph expansion.",
+  "dimensions":["identity","knowledge","mathematics","physics","quantum","computation","digital_twin","federation","evidence","temporal","security_trust","blockchain"],
+  "state_model":"G_t=(V_t,E_t,X_t)",
+  "growth_observation":"DeltaG=(DeltaV,DeltaE,DeltaX,DeltaH,DeltaL)",
+  "learning_features":["source_objects","metadata_records","graph_nodes","graph_edges","archive_units","graph_density","metadata_density","growth_rate"],
+  "scaling":"MULTIDIMENSIONAL",
+  "synthetic_test_scales":[10,100,1000],
+  "execution_state":{"source_review":"IMPLEMENTED_FROM_REPOSITORY_SOURCE","synthetic_execution":"TESTS_ADDED_NOT_EXECUTED_IN_CONNECTOR_RUNTIME","ci_result":"PENDING","local_runtime":"OPEN"},
+  "governance":{"metadata_is_not_validation":true,"hash_is_not_truth":true,"blockchain_is_not_scientific_proof":true,"promotion_fail_closed":true}
+}
