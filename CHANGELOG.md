@@ -610,3 +610,15 @@ Executed the controlled continuation protocol in the available deterministic sof
 - Compute Federation optimisation behaviour: PASS — capability selection, ordered preferences, capacity handling and controlled no-eligible failure exercised.
 - Governance boundary: PASS — OS/DMS/human release authority preserved; no promotion performed.
 - Runtime/device, production Gradle, GPU/NPU/NEON hardware, UE5, HIL and QPU gates remain open.
+
+
+## 2026-09-24 — Repository Native-Code Audit + Blind Quantum/Federation Benchmark
+- Cross-referenced the native code changed by the current PC/Android/Federation work, including Windows C#, Android Java and R&D Python native logic plus associated tests/orchestration.
+- Added native audit record: research/BIUPIU-NATIVE-CODE-AUDIT-CROSSREF-20260924.md.
+- Rechecked the foreign-language evidence boundary against current Android/AOSP September 2026 documentation; external evidence remains reference/candidate material only.
+- Added matched blind benchmark harness: scripts/Benchmark-BlindQuantumFederation.py.
+- Added benchmark control record: research/BIUPIU-BLIND-BENCHMARK-QUANTUM-VS-FEDERATION-20260924.json.
+- Added GitHub Actions benchmark workflow: .github/workflows/blind-quantum-federation-benchmark.yml.
+- Benchmark arms remain anonymous ARM-A / ARM-B until raw metrics are recorded; QPU remains disabled.
+- The benchmark measures governed decision-path correctness, deterministic replay, latency, failure boundary and provenance. It does not assume Quantum and Federation expose identical capabilities and therefore does not assign a winner from source inspection.
+- Current workflow inspection returned no run for the benchmark commit; execution evidence remains OPEN and no benchmark PASS, winner, quantum advantage or promotion is claimed.
