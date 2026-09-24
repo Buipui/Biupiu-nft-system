@@ -1,0 +1,19 @@
+{
+  "task_id":"GEO-FAULT-FIX-002-20260924",
+  "protocol_id":"BPU.PROTOCOL.QAISP.MI.1.0",
+  "status":"SOURCE_AUDIT_COMPLETED_FIXES_APPLIED_RUNTIME_OPEN",
+  "faults":[
+    {"id":"F1","class":"CONTRACT","state":"FIXED","finding":"geometry behaviour archive layer absent from original growth model"},
+    {"id":"F2","class":"CONTRACT","state":"FIXED","finding":"growth engine lacked geometry hard-search metadata"},
+    {"id":"F3","class":"VALIDATION","state":"FIXED","finding":"non-geometric searches could omit explicit geometry applicability"},
+    {"id":"F4","class":"RUNTIME","state":"OPEN","finding":"JavaScript tests have not been executed in the available connector runtime"},
+    {"id":"F5","class":"TRANSPORT","state":"OPEN_QUARANTINED","finding":"GitHub contents endpoint returned 404 when reconciling older canonical files"},
+    {"id":"F6","class":"MODEL","state":"FIXED","finding":"geometry correlations must remain features/observations rather than automatically promoted laws"}
+  ],
+  "safe_fixes":["behaviour_geometry.js","biupiu-behavior-geometry-archive-v1.0.schema.json","behavior-geometry-archive.test.js","information_growth_engine.js"],
+  "hard_search_elements":["applicability","intent","coordinate_frame","units","relations","invariants","tolerance","transformations","behavioral_tests","provenance","evidence_state"],
+  "federation_loop":["DETECT","CLASSIFY","QUARANTINE","SAFE_FIX","TEST","RUNTIME","REGRESSION","CORE_HUMAN_APPROVAL","PROMOTION"],
+  "promotion_allowed":false,
+  "runtime_verified":false,
+  "qpu_verified":false
+}
