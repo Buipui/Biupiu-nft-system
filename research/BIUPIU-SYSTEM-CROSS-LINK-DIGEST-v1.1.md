@@ -365,3 +365,36 @@ Smoke sequence now includes:
 SPELLING/UNICODE/SEMANTICS -> COMPILE -> AUTHORITY TESTS -> LEARNING TESTS -> FUNCTION DIFFERENCE TEST.
 
 Status: SOURCE INTEGRATED / INDEXED / SMOKE DEFINED / FRESH EXECUTION PENDING.
+
+
+
+## Deep Orchestra/Federation/Digital Twin harvest — Gate 36 — 24 September 2026
+
+New chain:
+RESEARCH/EVIDENCE
+-> INTELLIGENCE
+-> DIGITAL ORCHESTRA
+-> OWNER/CONTEXT RESOLUTION
+-> DIGITAL TWIN COMPOSITION
+-> FEDERATION
+-> DOMAIN EXECUTION
+-> VVUQ/REGRESSION
+-> DIGEST/FILING
+-> LEARNING
+-> GOVERNED PROMOTION
+
+New federation gates:
+F26 = Digital Twin composition
+F27 = Digital Twin VVUQ
+F28 = adaptive heterogeneous execution
+
+New Orchestra evidence fields:
+parent_task_id, authority_owner, schema_version, validation_state, provenance_refs, source_commit, build_state, test_state, rollback_ref, payload_hash.
+
+External reference patterns added from ISO 23247-6:2026 and current NIST Digital Twin standardisation/VVUQ work. These are SUPPORTING/REFERENCE knowledge only.
+
+Cross-link rule:
+LINKED != MERGED. Digital Twin may compose context, Federation may correlate/reconcile, Orchestra may coordinate, but canonical subsystem ownership remains unchanged.
+
+Verification state:
+SOURCE INTEGRATED; FRESH CI/UNIT/RUNTIME/DEVICE/HIL/RELEASE GATES REMAIN OPEN.
