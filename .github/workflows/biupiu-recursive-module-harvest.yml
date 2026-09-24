@@ -1,0 +1,40 @@
+name: Biupui Recursive Module Harvest Smoke Gate
+on:
+  push:
+    paths:
+      - 'research/tools/biupiu_recursive_module_harvest.py'
+      - 'research/external/**'
+      - 'research/evidence/**'
+      - '.github/workflows/biupiu-recursive-module-harvest.yml'
+  workflow_dispatch:
+jobs:
+  harvest_smoke:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Python smoke
+        run: |
+          python3 -m py_compile research/tools/biupiu_recursive_module_harvest.py
+          python3 research/tools/biupiu_recursive_module_harvest.py
+      - name: JSON housekeeping
+        run: |
+          python3 - <<'PY'
+          import json, pathlib
+          paths=list(pathlib.Path("research").rglob("*.json"))
+          for p in paths:
+              json.loads(p.read_text())
+          print(f"JSON_VALID={len(paths)}")
+          PY
+      - name: C++ farming simulator smoke
+        run: |
+          test -f core/multilang/cpp/farming_sim.cpp
+          test -f core/multilang/include/biupiu_farming_sim.h
+          g++ -std=c++17 -Wall -Wextra -Werror -Icore/multilang/include -fsyntax-only core/multilang/cpp/farming_sim.cpp
+      - name: Source mutation guard
+        run: |
+          git diff --exit-code --             ':!research/evidence/BIUPIU-RECURSIVE-MODULE-NODE-ADAPTER-MATRIX-20260924.json'             || (echo "SOURCE_MUTATION_DETECTED=true" && exit 1)
+      - name: Upload evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-recursive-module-harvest
+          path: research/evidence/BIUPIU-RECURSIVE-MODULE-NODE-ADAPTER-MATRIX-20260924.json
