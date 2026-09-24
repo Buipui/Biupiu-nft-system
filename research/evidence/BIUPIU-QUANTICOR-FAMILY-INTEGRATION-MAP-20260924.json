@@ -1,0 +1,52 @@
+{
+  "schema": "biupiu.quanticor.family-integration-map.v1",
+  "date": "2026-09-24",
+  "families": [
+    "apps/android",
+    "mini-os",
+    "mini-os/android",
+    "smart-farming/android",
+    "software/rnd-os-mobile",
+    "apps/windows"
+  ],
+  "mapping": {
+    "apps/android": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "observer+map+benchmark"
+    },
+    "mini-os": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "native-core observer+fault map"
+    },
+    "mini-os/android": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "federation observer+adapter map"
+    },
+    "smart-farming/android": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "domain behaviour map"
+    },
+    "software/rnd-os-mobile": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "mobile intelligence map"
+    },
+    "apps/windows": {
+      "DigiCat": "required",
+      "DigiFile": "required",
+      "Learning": "required",
+      "Quanticor": "PC comparison map"
+    }
+  },
+  "rule": "All families use one vocabulary and evidence model; implementations remain independent until verified integration.",
+  "current_state": "Architecture registered; implementation gaps must be audited before source changes."
+}
