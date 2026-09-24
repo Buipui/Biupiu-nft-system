@@ -631,3 +631,24 @@ Executed the controlled continuation protocol in the available deterministic sof
 - Identified three catalogue corrections required before the native catalogue can be considered clean: Digital Filing Cabinet is currently listed under DMS native code despite independent Cabinet catalogue authority; Quantum Federation has implementation but no dedicated BPU.SYS.QUANTUM.* identity; Android Mini OS maps both mini-os/android/ and apps/android/ without an explicit active/build versus source/reference role distinction.
 - No destructive relocation or code promotion performed.
 - Runtime/build/device/UE5/hardware/QPU verification remains OPEN.
+
+
+## 2026-09-24 — Consolidated Internal Module + Foreign-Language Harvest / Android Worktree
+
+- Completed repository-first internal module harvest and semantic cross-reference across Native Intelligence, Federation, Coding Matrix and Biupiu/Federation philosophy.
+- Integrated legacy optimisation and hardware-adapter allocation into the existing Federation specialist split without creating duplicate authority.
+- Registered Native AI Optimisation Federation and Quantum Federation identities in the native system catalogue.
+- Separated Digital Filing Cabinet ownership from DMS implementation ownership: the Cabinet owns filing/catalogue metadata; source systems retain executable authority.
+- Deep foreign-language/localized harvest added Android 17 candidate references for NPU scheduling, Motion Context, Secure Execution Environment, protected NPU buffers/wrapfd, Berberis translation/optimisation and AutoFDO profile-guided optimisation.
+- Added machine-readable consolidated harvest and Android worktree architecture records:
+  - `research/BIUPIU-CONSOLIDATED-INTERNAL-FOREIGN-MODULE-HARVEST-20260924.md`
+  - `research/BIUPIU-CONSOLIDATED-INTERNAL-FOREIGN-MODULE-HARVEST-20260924.json`
+  - `research/BIUPIU-ANDROID-WORKTREE-CONSOLIDATION-20260924.md`
+  - `research/BIUPIU-ANDROID-WORKTREE-CONSOLIDATION-20260924.json`
+- Canonical Android authority: `apps/android/`; Mini-OS federation/compatibility surface: `mini-os/android/`.
+- DigiCat/DigiFile repository reconciliation completed for the GitHub repositories visible to the connected account. Buipui-World remains bootstrap-only with no DigiFile implementation.
+- Semantic checks PASS; Android build/device/hardware/runtime remain OPEN.
+- PC execution is explicitly DEFERRED until current non-PC gates are closed.
+- No external executable implementation was promoted.
+
+Status: SOURCE CONSOLIDATION COMPLETE / RUNTIME VERIFICATION OPEN / PC DEFERRED.
