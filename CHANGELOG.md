@@ -1,3 +1,13 @@
+## 2026-09-24 — Digital Orchestra Information-Growth Comparison
+
+- Registered ORCH-INFO-GROWTH-002-20260924 as a QAISP-governed comparison task.
+- Added four common-model lanes: Native individual systems, Quantum Federation, Native computational mathematics/geometry ML, and All-together federated.
+- Applied identical synthetic workloads at 10, 100 and 1,000 archive units and a fixed-width ML feature interface.
+- Added comparison harness, synthetic regression tests and machine-readable evidence.
+- Quantum execution and quantum advantage are explicitly not assumed; QPU/hardware/runtime evidence remains open.
+- No synthetic performance multiplier is used to manufacture a result.
+- Status: SOURCE IMPLEMENTED / TESTS ADDED / EXECUTION EVIDENCE OPEN.
+
 ## 2026-09-24 — Multidimensional Information Growth Model v1.0
 
 - Registered `INFO-GROWTH-MODEL-001-20260924` under QAISP v1.0.
