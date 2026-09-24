@@ -38,7 +38,7 @@ android {
     }
 
     sourceSets {
-        getByName("main").java.srcDir("../../shared/runtime")
+        getByName("main").java.srcDir("../../../shared/runtime")
     }
 }
 
