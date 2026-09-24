@@ -1,0 +1,25 @@
+{
+  "schema":"biupiu.external-harvest.photonic-information-transfer.v1",
+  "date":"2026-09-24",
+  "status":"RESEARCH_ONLY_NOT_IMPLEMENTED",
+  "purpose":"External knowledge harvest for testing photonic information-transfer, photonic AI, optical interconnect and quantum-photonic networking concepts against the Native BUIPUI architecture.",
+  "sources":[
+    {"id":"PH-001","title":"Integrating silicon photonics with complementary metal–oxide–semiconductor technologies","url":"https://www.nature.com/articles/s44287-025-00223-0","class":"established_review","relevance":["optical_interconnect","energy_per_bit","CMOS_integration","AI_HPC","quantum_photonics"]},
+    {"id":"PH-002","title":"Three-dimensional photonic integration for ultra-low-energy, high-bandwidth interchip data links","url":"https://www.nature.com/articles/s41566-025-01633-0","class":"experimental_demonstration","relevance":["interchip_transfer","high_bandwidth","3D_integration"]},
+    {"id":"PH-003","title":"Programmable integrated quantum photonics","url":"https://www.nature.com/articles/s41566-025-01830-x","class":"established_review","relevance":["programmable_quantum_photonics","optical_interconnects","detectors","resonators"]},
+    {"id":"PH-004","title":"Scalable photonic quantum technologies","url":"https://www.nature.com/articles/s41563-025-02306-7","class":"established_review","relevance":["quantum_communications","quantum_computation","metrology"]},
+    {"id":"PH-005","title":"Probabilistic photonic computing for AI","url":"https://www.nature.com/articles/s43588-025-00800-1","class":"perspective","relevance":["probabilistic_computing","physical_information_encoding","parallel_transfer","AI"]},
+    {"id":"PH-006","title":"Quantum Networks Architecture and Protocols Group","url":"https://www.nist.gov/ctl/quantum-communications-division/quantum-networks-architecture-and-protocols-group","class":"government_research_program","relevance":["quantum_optical_networks","routing","control_plane","measurement"]},
+    {"id":"PH-007","title":"Practical quantum-enhanced receivers for classical communication","url":"https://www.nist.gov/publications/practical-quantum-enhanced-receivers-classical-communication","class":"government_research","relevance":["optical_information_transfer","quantum_measurement","receiver_efficiency"]}
+  ],
+  "harvested_capabilities":[
+    "optical_interconnect as a candidate transport boundary",
+    "photonic parallelism and wavelength/spatial/phase encoding as simulation dimensions",
+    "photonic hardware/software co-design",
+    "quantum-photonic control-plane and routing abstractions",
+    "photonic probabilistic computation as a research model",
+    "measurement/impairment metadata for end-to-end evidence"
+  ],
+  "integration_rule":"External material remains adapter/reference input until licence, semantic, security, build, smoke, regression and runtime evidence gates pass.",
+  "physical_claim_boundary":"No physical photonic or quantum hardware implementation is claimed by this harvest."
+}
