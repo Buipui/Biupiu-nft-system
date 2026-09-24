@@ -1,0 +1,12 @@
+{
+  "schema":"biupiu.mini-android-os-consolidation.v1",
+  "status":"IMPLEMENTED_SOURCE_RELOCATION / PATH_RECONCILIATION / RUNTIME_BUILD_PENDING",
+  "target_root":"mini-os/android",
+  "moved_roots":[
+    {"from":"apps/android","to":"mini-os/android/apps/rnd-os"},
+    {"from":"smart-farming/android","to":"mini-os/android/apps/world"},
+    {"from":"software/rnd-os-mobile","to":"mini-os/android/apps/rnd-os-mobile"}
+  ],
+  "retained_canonical_roots":["apps/shared/runtime","core","packages","software/rnd-os-ai","world","research","intelligence"],
+  "removed_duplicate_root":"mini-os/android/shared/runtime"
+}

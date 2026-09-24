@@ -34,8 +34,8 @@ jobs:
           test -f core/multilang/include/biupiu_abi.h
           test -f core/multilang/rust/biupiu_kernel_boundary/src/lib.rs
           test -f core/multilang/cpp/biupiu_native_contract.hpp
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/SharedContracts.kt
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/CapabilityRouter.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/SharedContracts.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/CapabilityRouter.kt
           test -f apps/shared/runtime/department-runtime.ts
           test -f intelligence/BIUPIU-SYSTEM-INTEGRITY-MANIFEST-v1.json
           test -f research/BIUPIU-HOUSEKEEPING-AND-GATE-RECONCILIATION-PROTOCOL-v1.0.md

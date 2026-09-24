@@ -37,11 +37,11 @@ jobs:
       - uses: gradle/actions/setup-gradle@v4
         with: {gradle-version: "8.9"}
       - run: |
-          test -f apps/android/settings.gradle.kts
-          test -f apps/android/build.gradle.kts
-          test -f apps/android/app/build.gradle.kts
-          test -f apps/android/gradle/wrapper/gradle-wrapper.properties
-      - working-directory: apps/android
+          test -f mini-os/android/apps/rnd-os/settings.gradle.kts
+          test -f mini-os/android/apps/rnd-os/build.gradle.kts
+          test -f mini-os/android/apps/rnd-os/app/build.gradle.kts
+          test -f mini-os/android/apps/rnd-os/gradle/wrapper/gradle-wrapper.properties
+      - working-directory: mini-os/android/apps/rnd-os
         run: gradle --no-daemon :app:assembleDebug
-      - working-directory: apps/android
+      - working-directory: mini-os/android/apps/rnd-os
         run: gradle --no-daemon :app:testDebugUnitTest

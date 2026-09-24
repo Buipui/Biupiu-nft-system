@@ -6,7 +6,7 @@ on:
   workflow_dispatch:
   push:
     paths:
-      - "apps/android/**"
+      - "mini-os/android/apps/rnd-os/**"
       - "apps/shared/**"
       - "packages/biupiu-rnd-os/**"
       - "software/rnd-os-ai/**"
@@ -14,7 +14,7 @@ on:
       - ".github/workflows/biupiu-android-cross-system-verification.yml"
   pull_request:
     paths:
-      - "apps/android/**"
+      - "mini-os/android/apps/rnd-os/**"
       - "apps/shared/**"
       - "packages/biupiu-rnd-os/**"
       - "software/rnd-os-ai/**"
@@ -44,17 +44,17 @@ jobs:
           test -f apps/android/build.gradle.kts
           test -f apps/android/app/build.gradle.kts
           test -f apps/android/app/src/main/AndroidManifest.xml
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainActivity.kt
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/CapabilityRouter.kt
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/MainActivity.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/MainHubActivity.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/CapabilityRouter.kt
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/DepartmentModuleRegistry.kt
 
       - name: Build Android debug APK
-        working-directory: apps/android
+        working-directory: mini-os/android/apps/rnd-os
         run: gradle --no-daemon :app:assembleDebug
 
       - name: Run Android unit tests
-        working-directory: apps/android
+        working-directory: mini-os/android/apps/rnd-os
         run: gradle --no-daemon :app:testDebugUnitTest
 
       - name: Cross-system TypeScript contract check
