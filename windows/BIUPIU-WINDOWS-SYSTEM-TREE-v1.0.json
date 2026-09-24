@@ -1,0 +1,36 @@
+{
+  "schema": "biupiu.windows-development-system-tree.v1",
+  "version": "1.0",
+  "status": "IMPLEMENTED_SOURCE_TREE / RUNTIME_EVIDENCE_SEPARATE",
+  "platform": "Windows",
+  "authority": {
+    "repository": "Git",
+    "governance": "research/LOCAL-EXECUTION-GATES-v1.0.md",
+    "native_catalogue": "research/BIUPIU-NATIVE-SYSTEM-CATALOGUE-v1.0.json"
+  },
+  "nodes": [
+    {"id":"BPU.WIN.HOST","path":"windows","role":"Windows orchestration root","status":"REQUIRED"},
+    {"id":"BPU.WIN.BUILD","path":"windows/Invoke-BiupiuBuild.ps1","role":"Build/test orchestrator","status":"REQUIRED"},
+    {"id":"BPU.WIN.TREE","path":"windows/Invoke-BiupiuSystemTree.ps1","role":"System-tree validator","status":"REQUIRED"},
+    {"id":"BPU.WIN.MANIFEST","path":"windows/BIUPIU-WINDOWS-SYSTEM-TREE-v1.0.json","role":"Machine-readable topology","status":"REQUIRED"},
+    {"id":"BPU.CORE.RESEARCH","path":"research","role":"Governance/research authority","status":"REQUIRED"},
+    {"id":"BPU.INTELLIGENCE","path":"intelligence","role":"Audit/intelligence layer","status":"REQUIRED"},
+    {"id":"BPU.CONTRACTS","path":"contracts","role":"Smart-contract layer","status":"REQUIRED"},
+    {"id":"BPU.PACKAGES","path":"packages","role":"Workspace/package layer","status":"OPTIONAL"},
+    {"id":"BPU.WORLD","path":"web","role":"Biupiu World web/hosting boundary","status":"OPTIONAL"},
+    {"id":"BPU.UE","path":"D:/UnrealEngine/UnrealEngine-release","role":"External UE source candidate","status":"EXTERNAL_RUNTIME"},
+    {"id":"BPU.EVIDENCE","path":"build/evidence/windows","role":"Local machine-readable build evidence","status":"GENERATED"}
+  ],
+  "build_flow": [
+    "HOST_INVENTORY",
+    "REPOSITORY_IDENTITY",
+    "SEMANTIC_AUDIT",
+    "NODE_DEPENDENCY_RESTORE",
+    "SOLIDITY_COMPILE",
+    "CONTRACT_TEST",
+    "PACKAGE_BUILD_IF_PRESENT",
+    "UNREAL_SOURCE_DETECTION",
+    "MACHINE_READABLE_EVIDENCE"
+  ],
+  "promotion_rule": "PASS evidence promotes only the executed gate; missing hardware/runtime evidence remains open."
+}

@@ -1,0 +1,62 @@
+name: Biupiu Windows Development
+
+on:
+  push:
+    branches: [main]
+    paths:
+      - "windows/**"
+      - "contracts/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "research/**"
+      - "intelligence/**"
+  pull_request:
+    branches: [main]
+    paths:
+      - "windows/**"
+      - "contracts/**"
+      - "scripts/**"
+      - "package.json"
+      - "package-lock.json"
+      - "research/**"
+      - "intelligence/**"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  windows-build:
+    runs-on: windows-latest
+    timeout-minutes: 30
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+          cache: npm
+
+      - name: Setup Python
+        uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+
+      - name: Validate system tree
+        shell: pwsh
+        run: .\windows\Invoke-BiupiuSystemTree.ps1 -Strict
+
+      - name: Execute Windows build orchestrator
+        shell: pwsh
+        run: .\windows\Invoke-BiupiuBuild.ps1
+
+      - name: Upload machine-readable evidence
+        if: always()
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-windows-build-evidence
+          path: build/evidence/windows/windows-build-evidence.json
+          if-no-files-found: warn
