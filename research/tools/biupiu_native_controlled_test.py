@@ -18,11 +18,11 @@ FAMILIES = {
     ],
     "apps/android": [
         "apps/android/build.gradle.kts",
-        "apps/android/src/main/AndroidManifest.xml",
+        "apps/android/app/src/main/AndroidManifest.xml",
     ],
     "mini-os/android": [
         "mini-os/android/build.gradle",
-        "mini-os/android/src/main/AndroidManifest.xml",
+        "mini-os/android/app/src/main/AndroidManifest.xml",
     ],
 }
 
