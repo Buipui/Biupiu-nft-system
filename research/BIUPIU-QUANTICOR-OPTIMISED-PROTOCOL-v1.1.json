@@ -1,0 +1,249 @@
+{
+  "schema": "biupiu.quanticor.optimised-protocol.v1.1",
+  "date": "2026-09-24",
+  "name": "Buipui Full-System AI-Assisted Optimised Protocol",
+  "layer": "Quanticor / Buipui Intelligence",
+  "status": "ARCHITECTURE_REGISTERED_IMPLEMENTATION_NOT_CLAIMED",
+  "scope": "All Buipui system families, engines, native cores, federation layers, ML systems, digital twins, evidence systems and future computational/quantum research engines.",
+  "control_principle": "Observe -> map -> model -> intersect -> decompile -> defragment -> anchor -> recompile -> verify -> learn -> optimise -> promote.",
+  "semantic_update": {
+    "crashing_referees": {
+      "meaning": "Federated systems are deliberately brought into controlled intersection/collision states so the referee layer can identify semantic, interface, dependency, resource and behavioural conflicts.",
+      "not_literal": "This does not mean uncontrolled production crashes."
+    },
+    "decompilation": {
+      "meaning": "After a collision or fault state, the affected executable/source relationship is decomposed into semantic units and mapped geometry so the system can inspect what actually happened.",
+      "purpose": "Recover structure, dependencies, behaviour and provenance before defragmentation."
+    },
+    "defrag_protocol": {
+      "meaning": "Reorganise decomposed code/system fragments into coherent semantic paths while retaining every fragment's provenance and relationship to the original state.",
+      "blockchain_anchor": "The defragmentation event, source/content hashes, geometry snapshot, parent state, resulting state and evidence references are anchored to the provenance chain.",
+      "rule": "Blockchain anchors the transformation record; it is not the executable storage layer."
+    },
+    "code_anchor_metadata": {
+      "meaning": "Every executable or mapped code unit receives machine-readable metadata linking implementation identity to geometry node, semantic contract, dependency graph, revision, evidence and provenance.",
+      "minimum_metadata": [
+        "code_identity",
+        "content_hash",
+        "geometry_node_id",
+        "semantic_contract_id",
+        "parent_geometry_state",
+        "dependency_edges",
+        "runtime_state",
+        "fault_state",
+        "revision",
+        "evidence_refs",
+        "provenance_anchor"
+      ]
+    },
+    "recompile_after": {
+      "meaning": "Recompilation occurs only after decompilation, mapping, defragmentation and semantic reconciliation have produced a candidate clean path.",
+      "sequence": [
+        "decompile",
+        "map",
+        "classify",
+        "defragment",
+        "reconcile",
+        "generate_candidate",
+        "recompile",
+        "test",
+        "regression",
+        "anchor_result",
+        "promote_if_verified"
+      ]
+    },
+    "multidimensional_path_logging": {
+      "purpose": "Every transformation path is retained so the AI can compare the original, faulted, decomposed, defragmented, recompiled and verified states.",
+      "principle": "The path is evidence, not discarded intermediate history.",
+      "dimensions": [
+        "code",
+        "geometry",
+        "semantics",
+        "behaviour",
+        "dependencies",
+        "runtime",
+        "fault",
+        "performance",
+        "provenance",
+        "time",
+        "federation",
+        "learning"
+      ]
+    }
+  },
+  "canonical_representation": {
+    "rule": "Code remains executable implementation; computational geometry is the canonical machine-readable representation for system relationships, behaviour, state transitions and optimisation.",
+    "geometry_model": "Represent systems as multidimensional computational graphs/hypergraphs whose nodes and edges encode code units, interfaces, capabilities, dependencies, states, behaviour, resources, evidence and provenance.",
+    "negative_space": "Absent, blocked, unavailable, forbidden, quarantined and unverified paths are first-class geometry states.",
+    "code_mapping": "Every mapped code element resolves to a semantic geometry node and typed relationship edges."
+  },
+  "shared_engine_model": {
+    "principle": "All ML systems share the Buipui Intelligence core engine and scale through modular engines, datasets, geometry maps and platform adapters.",
+    "core_engine": [
+      "semantic interpretation",
+      "computational geometry mapping",
+      "observation",
+      "decompilation analysis",
+      "defragmentation planning",
+      "learning and regression",
+      "fault analysis",
+      "optimisation",
+      "evidence/provenance",
+      "capability reasoning"
+    ]
+  },
+  "quantum_federation_control": {
+    "role": "Controlled multi-system state exploration and transformation protocol.",
+    "control_functions": [
+      "register_system",
+      "map_geometry",
+      "register_capabilities",
+      "bind_contracts",
+      "generate_alternative_states",
+      "intersect_system_paths",
+      "invoke_referee",
+      "detect_conflicts",
+      "simulate_collision",
+      "observe_failure",
+      "decompile_state",
+      "partition_code",
+      "defragment_state",
+      "anchor_metadata",
+      "generate_recompile_candidate",
+      "recompile",
+      "regression_test",
+      "extract_clean_path",
+      "optimise_global_objectives",
+      "promote_after_evidence"
+    ],
+    "referee": {
+      "role": "Neutral semantic/control layer that compares intersecting system states and records conflicts.",
+      "outputs": [
+        "conflict_map",
+        "fault_map",
+        "dependency_map",
+        "semantic_mismatch_map",
+        "resource_conflict_map",
+        "candidate_resolution_paths"
+      ]
+    },
+    "collision_protocol": {
+      "mode": "quarantine_only",
+      "goal": "Expose conflicts through controlled intersection.",
+      "production_rule": "No destructive collision is permitted against an authoritative build."
+    }
+  },
+  "defragmentation_protocol": {
+    "trigger": "Verified collision/fault evidence requiring decomposition or restructuring.",
+    "steps": [
+      "freeze_parent_state",
+      "capture_hashes",
+      "capture_geometry_snapshot",
+      "decompile_or_semantically_decompose",
+      "classify_fragments",
+      "retain provenance",
+      "build_relationship graph",
+      "identify coherent paths",
+      "generate candidate defragmented state",
+      "anchor transformation metadata",
+      "recompile candidate",
+      "run common functionality suite",
+      "run regression",
+      "compare geometry before/after",
+      "promote or quarantine"
+    ],
+    "fragment_states": [
+      "required",
+      "duplicate",
+      "alternative",
+      "experimental",
+      "unreachable",
+      "conflicting",
+      "quarantined",
+      "archived",
+      "candidate_for_reuse"
+    ],
+    "deletion_rule": "No fragment is deleted solely because it appears redundant; it is retained, classified and provenance-linked until an evidence-backed promotion decision."
+  },
+  "evidence_and_blockchain": {
+    "role": "Integrity and provenance anchor for every significant geometry transformation.",
+    "events": [
+      "observation",
+      "collision",
+      "fault",
+      "decompilation",
+      "defragmentation",
+      "recompile",
+      "test",
+      "regression",
+      "promotion",
+      "archive"
+    ],
+    "preferred_records": [
+      "content_hash",
+      "Merkle_root",
+      "event_id",
+      "parent_state_id",
+      "geometry_snapshot_id",
+      "code_anchor_metadata",
+      "test_evidence_refs",
+      "promotion_state"
+    ],
+    "rule": "The blockchain anchor preserves transformation integrity; the full evidence and executable artifacts remain in the appropriate evidence/repository systems."
+  },
+  "optimisation_protocol": {
+    "sequence": [
+      "functional_equivalence",
+      "semantic_compatibility",
+      "controlled_collision",
+      "fault_observation",
+      "decomposition",
+      "defragmentation",
+      "recompilation",
+      "resource_measurement",
+      "native_vs_federated_comparison",
+      "global_multi-engine optimisation",
+      "regression",
+      "provenance_anchor",
+      "promotion"
+    ],
+    "constraint": "Optimisation cannot override functional correctness, safety gates or provenance."
+  },
+  "machine_readable_principles": [
+    "Observe before modifying.",
+    "Map before optimising.",
+    "Code is executable; geometry is the canonical relationship model.",
+    "Bring systems into controlled intersections to reveal conflicts.",
+    "Decompile/decompose observed states before restructuring.",
+    "Defragment according to semantic geometry, not arbitrary source order.",
+    "Anchor code identity and transformation metadata to provenance.",
+    "Recompile only from an explicitly mapped candidate state.",
+    "Log every multidimensional transformation path.",
+    "Learn from behaviour and evidence, not source assumptions alone.",
+    "Negative space is information.",
+    "All ML systems share the Buipui Intelligence core engine.",
+    "Native functionality is preferred when it satisfies the contract.",
+    "Federation is capability-driven.",
+    "Quantum models remain computational/research abstractions unless physical evidence establishes otherwise.",
+    "Destructive experiments remain quarantined.",
+    "Clean, failed, experimental and archived paths remain separately traceable.",
+    "Blockchain anchors provenance but does not replace the evidence store.",
+    "No promotion occurs without reproducible evidence."
+  ],
+  "implementation_gate": {
+    "current": "ARCHITECTURE_REGISTERED_IMPLEMENTATION_NOT_CLAIMED",
+    "next": [
+      "recursive semantic audit",
+      "recursive module/adapter audit",
+      "geometry mapping prototype",
+      "code-anchor metadata schema",
+      "Quanticor referee prototype",
+      "decomposition/defragmentation sandbox",
+      "recompile-and-regression gate",
+      "common cross-system benchmark",
+      "Android regression evidence",
+      "AS-IS versus BUIPUI Native Systems comparison"
+    ],
+    "pc_ue5_status": "HOLD during current Android/native audit phase"
+  }
+}
