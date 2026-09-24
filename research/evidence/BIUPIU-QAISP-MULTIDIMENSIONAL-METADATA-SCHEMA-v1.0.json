@@ -1,0 +1,63 @@
+{
+  "protocol_id": "BPU.PROTOCOL.QAISP.MI.1.0",
+  "name": "Biupiu Multidimensional Information / Quantum AI Services Protocol",
+  "version": "1.0",
+  "date": "2026-09-24",
+  "status": "REGISTERED_SOURCE_IMPLEMENTED_RUNTIME_OPEN",
+  "scope": {
+    "every_authorized_information_run": true,
+    "every_authorized_knowledge_harvest": true,
+    "graph_dimensions": [
+      "identity","knowledge","physics","quantum","mathematics","computation",
+      "digital_twin","federation","evidence","temporal","security_trust","blockchain"
+    ]
+  },
+  "lifecycle": ["authorize","harvest","normalize","classify","graph","cross_link","verify","hash","anchor","learn","index"],
+  "evidence_states": [
+    "DISCOVERED","REFERENCE","SUPPORTED","MODELLED","EXPERIMENTAL","VERIFIED",
+    "REPLICATED","RUNTIME_VERIFIED","QPU_VERIFIED","PROMOTED",
+    "UNRESOLVED","CONTRADICTED","REJECTED"
+  ],
+  "quantum_evidence_ladder": [
+    "THEORY","EQUATION_MODEL","NUMERICAL_SOLUTION","CLASSICAL_BASELINE",
+    "QUANTUM_SIMULATION","CONTROLLED_EXPERIMENT","INDEPENDENT_REPLICATION",
+    "QPU_EXECUTION","PRODUCTION_CAPABILITY"
+  ],
+  "required_metadata": [
+    "run_id","parent_task_id","timestamp","source","source_commit","request",
+    "service","model_or_algorithm","inputs","outputs","mathematics","physics_context",
+    "quantum_context","runtime","hardware_target","expected_result","observed_result",
+    "uncertainty","provenance","licence","evidence_state","graph_nodes","graph_edges",
+    "manifest_hash","graph_root_hash","evidence_root_hash","rollback_ref",
+    "validation_state","promotion_authority","blockchain_anchor_status"
+  ],
+  "ownership": {
+    "core_os_dms": "authoritative_state_security_validation_release",
+    "native_intelligence": "retrieval_reasoning_graph_construction_learning_proposals",
+    "digicat": "catalogue_and_graph_index",
+    "digifile": "evidence_manifest_hash_and_audit_layer",
+    "federation": "routing_contracts_reconciliation_and_transport",
+    "digital_twin": "contextual_model_and_vvuaq_relationships",
+    "quantum_ai": "quantum_and_quantum_ml_service_boundary_simulator_first",
+    "blockchain_registry": "integrity_and_lineage_commitment",
+    "human_core": "promotion_authority"
+  },
+  "blockchain": {
+    "mode": "commitment_only",
+    "raw_private_data_off_chain": true,
+    "anchor_payload": [
+      "protocol_version","run_id","parent_task_id","source_commit",
+      "manifest_hash","graph_root_hash","evidence_root_hash","schema_version"
+    ],
+    "anchor_status_values": ["NOT_REQUESTED","PENDING","SUBMITTED","CONFIRMED","FAILED"],
+    "confirmed_requires_transaction_evidence": true
+  },
+  "governance": {
+    "translation_is_not_validation": true,
+    "hashing_is_not_validation": true,
+    "blockchain_anchor_is_not_scientific_proof": true,
+    "simulator_is_not_qpu": true,
+    "quantum_advantage_not_assumed": true,
+    "promotion_fail_closed": true
+  }
+}
