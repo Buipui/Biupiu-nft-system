@@ -25,11 +25,11 @@ jobs:
 
       - name: Validate Android foundation
         run: |
-          test -f apps/android/settings.gradle.kts
-          test -f apps/android/build.gradle.kts
-          test -f apps/android/app/build.gradle.kts
-          test -f apps/android/app/src/main/AndroidManifest.xml
-          test -f apps/android/app/src/main/java/com/biupiu/rndos/MainActivity.kt
+          test -f mini-os/android/apps/rnd-os/settings.gradle.kts
+          test -f mini-os/android/apps/rnd-os/build.gradle.kts
+          test -f mini-os/android/apps/rnd-os/app/build.gradle.kts
+          test -f mini-os/android/apps/rnd-os/app/src/main/AndroidManifest.xml
+          test -f mini-os/android/apps/rnd-os/app/src/main/java/com/biupiu/rndos/MainActivity.kt
 
       - name: Validate Windows foundation
         run: |
