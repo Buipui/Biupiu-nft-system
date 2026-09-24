@@ -1,0 +1,14 @@
+const assert=require("assert");
+const {BEHAVIORS,behaviorSignature,transformPolygon,behavioralTest,archiveGeometryBehavior}=require("../software/information-growth/behavior_geometry");
+const tri=[{x:0,y:0},{x:4,y:0},{x:0,y:3}];
+const base=behaviorSignature({polygon:tri}),moved=behaviorSignature({polygon:transformPolygon(tri,{tx:12,ty:-7})});
+const rotated=behaviorSignature({points:transformPolygon(tri,{rotation:Math.PI/5})});
+assert.strictEqual(BEHAVIORS.length,12);assert.strictEqual(base.area,6);assert(Math.abs(base.area-moved.area)<1e-8);
+assert(Math.abs(behaviorSignature({points:tri}).pairwise_distance_sum-rotated.pairwise_distance_sum)<1e-8);
+assert.strictEqual(behavioralTest(tri).area_scale_ratio,4);assert.strictEqual(behavioralTest(tri).invariant_pass,true);
+const record=archiveGeometryBehavior({id:"search-geometry-baseline"},{polygon:tri,points:tri},{evidence_state:"MODELLED",validation_state:"PENDING"});
+assert(record.geometry_archive_id);assert(record.behavior_signature.behaviors.includes("TOPOLOGY"));assert.strictEqual(record.evidence_state,"MODELLED");assert.strictEqual(record.validation_state,"PENDING");
+const hardFields=["intent","coordinate_frame","units","relations","invariants","tolerance","transformations","behavioral_tests","provenance","evidence_state"];
+const searchRecord={geometry_behavior:Object.fromEntries(hardFields.map(k=>[k,null]))};
+assert.deepStrictEqual(Object.keys(searchRecord.geometry_behavior).sort(),hardFields.sort());
+console.log("behavior geometry archive tests: PASS");
