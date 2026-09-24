@@ -554,3 +554,14 @@ Optimisation is registered as a common controlled candidate layer covering compu
 Authority remains: HUMAN RELEASE -> CORE OS/DMS -> DOMAIN OWNER -> NATIVE INTELLIGENCE -> FEDERATION -> ADAPTER/PROVIDER -> EXTERNAL REFERENCE.
 
 Source integration is complete for the documented changes. Matched blind execution, fresh CI, Android/device runtime, GPU/NPU/NEON correlation, UE5 runtime/build, HIL, production security/signing and QPU execution remain OPEN. No optimisation improvement, quantum advantage, runtime superiority or production readiness is claimed.
+
+
+
+## 2026-09-24 — Consolidated Native Module / Android Worktree / Foreign-Language Update
+Canonical Digital Filing ownership is now separated from DMS execution ownership. The Digital Filing Cabinet owns filing/catalogue metadata; DMS integrates through contracts.
+
+Native AI optimisation is registered as a cross-cutting service under Native Intelligence. Quantum Federation is registered as a specialist domain capability subordinate to Federation/OS/DMS.
+
+Android source authority is split explicitly: apps/android/ is the canonical native Biupiu R&D OS Android shell/build authority; mini-os/android/ is retained for Mini-OS federation/build compatibility/reference material. Shared contracts and capability registries must be reused rather than duplicated.
+
+Current Android worktree architecture is recorded in research/BIUPIU-ANDROID-WORKTREE-CONSOLIDATION-20260924.md and its machine-readable manifest.
