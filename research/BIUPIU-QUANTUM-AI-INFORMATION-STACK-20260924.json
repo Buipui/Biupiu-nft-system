@@ -1,0 +1,69 @@
+{
+  "date": "2026-09-24",
+  "subsystem": "BIUPIU_FEDERATION_QUANTUM",
+  "status": {
+    "registered": true,
+    "source_implemented": true,
+    "static_test_updated": true,
+    "runtime_verified": false,
+    "qpu_verified": false
+  },
+  "authority": [
+    "HUMAN_RELEASE_AUTHORITY",
+    "CORE_OS_DMS_VALIDATION",
+    "NATIVE_BIUPIU_INTELLIGENCE",
+    "DIGITAL_ORCHESTRA",
+    "FEDERATION_FOUR_AI_SLOTS",
+    "QUANTUM_SPECIALIST",
+    "PROVIDER_ADAPTER",
+    "HARDWARE_RUNTIME"
+  ],
+  "policy": {
+    "learning_mode": "PASSIVE_OBSERVATION",
+    "execution_policy": "SIMULATOR_VALIDATE",
+    "promotion_state": "REFERENCE_ONLY",
+    "hardware_enabled_by_default": false,
+    "quantum_advantage_claims": false
+  },
+  "providers": [
+    "qiskit",
+    "pennylane",
+    "qir",
+    "openqasm",
+    "aws-braket",
+    "azure-quantum",
+    "dwave-leap",
+    "pytket"
+  ],
+  "resource_split": {
+    "evidence": "RESEARCH-EVIDENCE",
+    "intelligence": "AI-ORCHESTRATOR",
+    "federation": "FEDERATION",
+    "math_physics": "MATH-PHYSICS",
+    "digital_twin": "SIMULATION-DIGITAL-TWIN",
+    "hardware": "MULTIMODAL-CONFIGURATION",
+    "security": "SECURITY-EXTERMINATE",
+    "provenance": "BLOCKCHAIN-PROVENANCE"
+  },
+  "learning_graph": [
+    "OBSERVE",
+    "NORMALISE",
+    "COMPARE_CLASSICAL_BASELINE",
+    "SIMULATE",
+    "MEASURE_UNCERTAINTY_RESOURCE_VALUE",
+    "REGRESSION",
+    "PROPOSE",
+    "HUMAN_CORE_VALIDATION",
+    "PROMOTION"
+  ],
+  "open_gates": [
+    "HOST_EXECUTION",
+    "CI_EXECUTION",
+    "SIMULATOR_BENCHMARKS",
+    "CLOUD_QPU_EXECUTION",
+    "PHYSICAL_QPU_VALIDATION",
+    "ANDROID_RUNTIME",
+    "UE5_RUNTIME",
+    "PRODUCTION_PROMOTION"
+  ]
+}\n
