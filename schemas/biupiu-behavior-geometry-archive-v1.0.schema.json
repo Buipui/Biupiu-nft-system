@@ -1,0 +1,18 @@
+{
+  "$schema":"https://json-schema.org/draft/2020-12/schema",
+  "$id":"BPU.SCHEMA.BEHAVIOR.GEOMETRY.ARCHIVE.1.0",
+  "title":"Biupiu Behaviour-Based Computational Geometry Archive Baseline",
+  "type":"object",
+  "required":["model_id","version","state","coordinate_frame","behaviors","invariants","archive_record","search_hard_elements","governance"],
+  "properties":{
+    "model_id":{"const":"BPU.MODEL.BEHAVIOR.GEOMETRY.ARCHIVE"},
+    "version":{"const":"1.0"},
+    "state":{"enum":["REGISTERED","SOURCE_IMPLEMENTED","TESTS_ADDED","RUNTIME_OPEN","VERIFIED"]},
+    "coordinate_frame":{"type":"string"},
+    "behaviors":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "invariants":{"type":"array","items":{"type":"string"}},
+    "archive_record":{"type":"object","required":["geometry_archive_id","behavior_signature","evidence_state","validation_state"]},
+    "search_hard_elements":{"type":"array","minItems":1,"items":{"type":"string"}},
+    "governance":{"type":"object","required":["geometry_is_behavioral_feature_space","metadata_is_not_validation","promotion_fail_closed"],"properties":{"geometry_is_behavioral_feature_space":{"const":true},"metadata_is_not_validation":{"const":true},"promotion_fail_closed":{"const":true}}}
+  }
+}
