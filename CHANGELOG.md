@@ -1,3 +1,14 @@
+## 2026-09-24 — Capability Test One: Multidimensional Information Archive Capacity
+
+- Registered `CAP-ARCHIVE-001-20260924` under QAISP v1.0.
+- Defined the canonical Archive Unit: source object + metadata + graph relationships + evidence/provenance + hash + lineage + validation state.
+- Added capacity metrics for source objects, metadata records, graph nodes/edges, evidence, lineage, bytes, compression, archive density, indexing/retrieval and blockchain commitment payload size.
+- Added capability test record: `research/BIUPIU-CAPABILITY-TEST-ONE-INFORMATION-ARCHIVE-CAPACITY-20260924.md`.
+- Added machine-readable evidence: `research/evidence/BIUPIU-CAPABILITY-TEST-ONE-ARCHIVE-CAPACITY-20260924.json`.
+- The first test deliberately does not invent a total repository byte count; recursive inventory and actual storage/graph-engine benchmarks remain OPEN.
+- Established the rule that archive representation capacity is distinct from physical storage capacity.
+- No information deletion, scientific-validation shortcut or automatic promotion is permitted.
+
 ## 2026-09-24 — Multidimensional Information / Quantum AI Services Protocol
 
 - Registered **BPU.PROTOCOL.QAISP.MI.1.0**, defining the machine-readable metadata contract for every authorized information run and knowledge harvest.
