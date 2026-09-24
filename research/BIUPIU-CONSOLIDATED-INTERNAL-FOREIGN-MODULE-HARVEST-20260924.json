@@ -1,0 +1,26 @@
+{
+  "schema": "biupiu.consolidated-module-harvest.v1",
+  "date": "2026-09-24",
+  "status": "SOURCE_CONSOLIDATION_COMPLETE_RUNTIME_GATES_OPEN_PC_DEFERRED",
+  "repositories": [
+    "Buipui/Biupiu-nft-system",
+    "Buipui/Buipui-World"
+  ],
+  "semantic_checks": "PASS",
+  "digicat": "PASS_WITH_CATALOGUE_CORRECTIONS",
+  "digifile": "PASS",
+  "android_worktree": {
+    "canonical": "apps/android/",
+    "compatibility": "mini-os/android/"
+  },
+  "external_candidates": [
+    "android17-npu-manager",
+    "android17-motion-context",
+    "android17-secure-execution",
+    "android17-wrapfd",
+    "android17-berberis",
+    "android17-autofdo"
+  ],
+  "promotion": "NONE",
+  "pc_execution": "DEFERRED"
+}
