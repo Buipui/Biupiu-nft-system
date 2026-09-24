@@ -83,3 +83,12 @@ A promoted fix or adapter should generate a regression fixture or preventative t
 Approved checkpoint hashes may be anchored through the existing registry boundary. Blockchain anchoring records integrity commitments only; it does not convert a candidate into verified code or scientific truth.
 
 New checkpoint: `FED-HARVEST-20260922-01`.
+
+
+
+## 2026-09-24 — Cross-Federation Optimisation / Hardware / Learning Allocation
+The learning gate now consumes module-allocation evidence from Native Intelligence, including legacy optimisers, OEM/hardware adapters, Android platform candidates and foreign-language evidence. A learning record may recommend a candidate, but execution remains with the owning subsystem and promotion remains OS/DMS/human controlled.
+
+External Android 17 findings added to the candidate graph: NPU scheduling, Motion Context, Secure Execution Environment, wrapfd protected-memory boundary, Berberis heavy/lite translation optimisation and AutoFDO profile-guided optimisation. All remain reference/candidate until local evidence gates close.
+
+Repeated harvests must retain source identity, language, version/tag, licence state and evidence class; translation cannot collapse into authority.
