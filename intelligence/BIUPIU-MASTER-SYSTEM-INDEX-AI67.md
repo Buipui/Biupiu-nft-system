@@ -232,3 +232,28 @@ SOURCE: IMPLEMENTED
 STATIC CATALOGUE VALIDATION: VERIFIED by repository-level structural validation
 CI EXECUTION: PENDING fresh run
 RUNTIME/DEVICE/HARDWARE/UE5/LIVE-BLOCKCHAIN: OPEN
+
+
+## Gate 36 — Deep Orchestra + Digital Twin + Federation Knowledge Harvest — 24 September 2026
+
+SOURCE UPDATE:
+- Digital Orchestra evidence envelope extended with parent-task, authority owner, schema version, validation, provenance, source commit, build/test, rollback and payload hash.
+- Federation F26 Digital Twin composition registered.
+- Federation F27 Digital Twin VVUQ registered.
+- Federation F28 adaptive heterogeneous execution registered.
+- Digital Twin composition now distinguishes integrated/unified/federated composition while preserving canonical ownership.
+- NIST/ISO Digital Twin interoperability, composition, trustworthiness and VVUQ patterns cross-linked.
+- Hybrid physics/data-driven Twin architecture recorded as a reference pattern.
+- Passive continual learning and adaptive acceleration/deceleration/fallback rules remain evidence-gated.
+
+STATUS:
+SOURCE IMPLEMENTATION: UPDATED
+SCHEMA: UPDATED
+EXTERNAL HARVEST: REGISTERED
+F26-F28: REGISTERED
+HOST/CI EXECUTION: PENDING
+ANDROID DEVICE: OPEN
+PC/WINDOWS: HOLD
+UE5: HOLD
+HARDWARE/HIL: OPEN
+PROMOTION: PENDING
