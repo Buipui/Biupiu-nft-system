@@ -1,0 +1,61 @@
+{
+  "task_id": "CAP-ARCHIVE-001-20260924",
+  "protocol_id": "BPU.PROTOCOL.QAISP.MI.1.0",
+  "test_name": "Information Archive Capacity — Test One",
+  "objective": "Measure native representational capacity for repository information using multidimensional metadata and graph records.",
+  "status": "REGISTERED_PROTOCOL_ALIGNED_MEASUREMENT_OPEN",
+  "archive_unit": "source object + metadata + graph nodes/relationships + evidence/provenance + hash + lineage + validation state",
+  "dimensions": [
+    "identity",
+    "knowledge",
+    "mathematics",
+    "computational_physics",
+    "quantum_physics",
+    "computation",
+    "digital_twin",
+    "federation",
+    "evidence",
+    "temporal",
+    "security_trust",
+    "blockchain"
+  ],
+  "metrics": [
+    "source_objects",
+    "metadata_records",
+    "graph_nodes",
+    "graph_edges",
+    "evidence_records",
+    "lineage_records",
+    "bytes_before",
+    "bytes_after",
+    "compression_ratio",
+    "bytes_per_archive_unit",
+    "indexing_time",
+    "retrieval_time",
+    "hash_time",
+    "anchor_payload_size"
+  ],
+  "formulas": {
+    "archive_density": "archive_units / stored_bytes",
+    "metadata_density": "metadata_fields / archive_unit",
+    "graph_density": "graph_edges / graph_nodes",
+    "evidence_density": "evidence_records / archive_unit"
+  },
+  "evidence": {
+    "protocol_source_implementation": "VERIFIED_FROM_REPOSITORY_SOURCE",
+    "schema_source_implementation": "VERIFIED_FROM_REPOSITORY_SOURCE",
+    "recursive_repository_byte_inventory": "OPEN",
+    "full_graph_materialization": "OPEN",
+    "local_storage_benchmark": "OPEN",
+    "graph_database_benchmark": "OPEN",
+    "live_blockchain_anchor": "OPEN"
+  },
+  "governance": {
+    "no_silent_deletion": true,
+    "preserve_lineage": true,
+    "metadata_is_not_validation": true,
+    "blockchain_is_not_scientific_proof": true,
+    "simulator_is_not_qpu": true,
+    "promotion_fail_closed": true
+  }
+}
