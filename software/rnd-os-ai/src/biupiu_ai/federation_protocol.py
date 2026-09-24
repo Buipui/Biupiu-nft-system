@@ -41,7 +41,7 @@ REQUIRED_GATES = (
     FederationGate("F22", "world-repository-boundary", ("core-world-separation", "simulator-authority", "provenance", "migration-plan")),
     FederationGate("F23", "digital-twin-performance-federation", ("twin-schema", "module-capability-map", "performance-policy", "passive-state", "acceleration-policy", "deceleration-policy", "telemetry", "regression")),
     FederationGate("F24", "oem-shared-development-resources", ("oem-family-registry", "sdk-adapter-registry", "runtime-version-matrix", "shared-resource-policy", "provenance")),
-    FederationGate("F25", "cross-matrix-scalability", ("capability-matrix", "dependency-graph", "resource-budget", "backpressure", "fail-closed")),
+    FederationGate("F25", "cross-matrix-scalability", ("capability-matrix", "dependency-graph", "resource-budget", "backpressure", "fail-closed")),\n    FederationGate("F26", "digital-twin-composition", ("composition-mode", "canonical-owner", "contextual-parent", "interoperability", "provenance", "regression")),\n    FederationGate("F27", "digital-twin-vvuaq", ("model-assumptions", "uncertainty", "validation-method", "correlation-state", "evidence-state", "rollback")),\n    FederationGate("F28", "adaptive-heterogeneous-execution", ("capability-discovery", "runtime-version", "resource-state", "acceleration-policy", "fallback-policy", "telemetry", "regression")),
 )
 
 
