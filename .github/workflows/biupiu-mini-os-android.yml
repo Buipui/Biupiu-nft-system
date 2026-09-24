@@ -17,44 +17,39 @@ jobs:
     timeout-minutes: 30
     steps:
       - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
-
       - name: Set up JDK 17
         uses: actions/setup-java@v4
         with:
           distribution: temurin
           java-version: '17'
-
       - name: Set up Android SDK
         uses: android-actions/setup-android@v3
-
       - name: Install Android SDK 35
         run: |
           yes | sdkmanager --licenses >/dev/null || true
           sdkmanager "platforms;android-35" "build-tools;35.0.0"
-
       - name: Set up Gradle 8.9
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.9'
-
       - name: Unit tests
         working-directory: mini-os/android
         run: gradle testDebugUnitTest --stacktrace
-
       - name: Debug APK build
         working-directory: mini-os/android
         run: gradle assembleDebug --stacktrace
-
       - name: Repository source sanity
         run: |
-          test -f mini-os/android/app/src/main/java/com/biupiu/minios/federation/NetworkTransport.java
+          test -f mini-os/android/app/src/main/java/com/biupui/minios/federation/NetworkTransport.java
+          test -f mini-os/android/app/src/main/java/com/biupui/minios/federation/ExternalTransportAdapter.java
+          test -f mini-os/android/app/src/main/java/com/biupui/minios/federation/OkHttpNetworkTransport.java
+          grep -q 'ExternalTransportAdapter' mini-os/android/app/src/main/java/com/biupui/minios/federation/OkHttpNetworkTransport.java
           test ! -f mini-os/android/federation/ExternalTransportAdapter.java
           grep -q 'com.squareup.okhttp3:okhttp' mini-os/android/app/build.gradle
           grep -q 'net.openid:appauth' mini-os/android/app/build.gradle
           grep -q 'com.apollographql.apollo:apollo-runtime' mini-os/android/app/build.gradle
           grep -q 'io.coil-kt.coil3:coil' mini-os/android/app/build.gradle
           grep -q 'org.jsoup:jsoup' mini-os/android/app/build.gradle
-
       - name: Generate regression evidence
         if: always()
         run: |
@@ -80,7 +75,6 @@ jobs:
           EOF
           git status --short > android-regression-evidence/git-status.txt || true
           git log -1 --format='%H%n%s%n%ad' --date=iso > android-regression-evidence/head.txt
-
       - name: Upload regression evidence
         if: always()
         uses: actions/upload-artifact@v4
