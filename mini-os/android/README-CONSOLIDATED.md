@@ -1,26 +1,12 @@
-# Biupiu Mini Android OS — Consolidated Android Build Tree v1.0
+# Biupiu Mini Android OS — Consolidated Android Build Tree v1.1
 
-All first-party Android application build roots formerly split across:
-- apps/android
-- smart-farming/android
-- software/rnd-os-mobile
+- `mini-os/android/apps/rnd-os/` — native R&D OS Android shell
+- `mini-os/android/apps/world/` — Biupiu World / smart-farming Android client
+- `mini-os/android/apps/rnd-os-mobile/` — R&D OS mobile client
+- `apps/shared/runtime/` — canonical cross-platform runtime
 
-are now consolidated beneath this Mini OS tree.
+The earlier relocation of the shared runtime into `mini-os/android/shared/runtime/` was identified by the deep audit as an integration defect and removed.
 
-```
-mini-os/android/
-├── app/                         # Mini OS host application
-├── apps/
-│   ├── rnd-os/                  # former apps/android
-│   ├── world/                   # former smart-farming/android
-│   └── rnd-os-mobile/           # former software/rnd-os-mobile
-├── federation/                  # capability/adapters
-├── shared/runtime/              # shared runtime code
-└── BIUPIU-MINI-ANDROID-OS-CONSOLIDATION-v1.json
-```
+External Android/Blender resources remain attributed and quarantined/reference-only unless build, dependency, runtime and licence gates pass.
 
-The moved projects retain their own Gradle project files so their original build boundaries remain explicit. The R&D OS shell's shared-runtime path was corrected for the new location.
-
-External Android/Blender resources remain attributed and quarantined/reference-only unless their build, dependency and licence gates are passed.
-
-No APK/device/runtime verification is implied by this source relocation.
+Source-tree consolidation does not imply APK, emulator, OEM-device, HIL or production verification.
