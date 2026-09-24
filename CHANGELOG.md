@@ -1,3 +1,14 @@
+## 2026-09-24 — Spot-Test Protocol + Measurements
+
+- Executed a controlled Quantum AI provider-registry spot test: 10,000 iterations, 0 failures, mean 104.8 ns, P95 120.0 ns.
+- Verified eight registered quantum provider boundaries, passive learning policy, simulator-first execution policy, reference-only promotion state and fail-closed hardware behaviour.
+- Executed Compute Federation scheduler spot tests: 5,000 iterations, 0 failures, mean 2,962.6 ns, P95 2,975.0 ns.
+- Verified ordered preferred-class routing and minimum-class filtering.
+- Preserved the existing Baseline A measurements as the authoritative benchmark because the new spot tests measure different operations.
+- Checked GitHub Actions evidence for the Quantum AI branch; no workflow run was exposed for the latest branch commit, so CI PASS was not claimed.
+- Added `research/BIUPIU-SPOT-TEST-PROTOCOL-20260924.md` with measurements, environment, evidence boundary and outstanding gates.
+- Android, Windows, UE5/GPU, NPU/DSP, Digital Twin runtime, HIL/physical and QPU gates remain OPEN pending their actual execution environments.
+
 ## 2026-09-24 — Quantum AI Information-Stack Governance Update
 
 - Formalised `BIUPIU_FEDERATION_QUANTUM` as a specialist capability subordinate to Human Release Authority, Core OS/DMS, Native Biupiu Intelligence and Federation.
