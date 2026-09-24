@@ -1,0 +1,36 @@
+name: Biupiu Blind Systems Path Cross-Test
+
+on:
+  push:
+    paths:
+      - "research/tools/biupiu_blind_system_path_test.py"
+      - "research/evidence/BIUPIU-SYSTEMS-WITHIN-SYSTEMS-MATRIX-v2-20260924.json"
+      - ".github/workflows/biupiu-blind-system-path-test.yml"
+  workflow_dispatch:
+
+permissions:
+  contents: read
+
+jobs:
+  blind-cross-test:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@11d5960a326750d5838078e36cf38b85af677262
+      - name: Run blind cross-test
+        run: python3 research/tools/biupiu_blind_system_path_test.py > blind-test.json
+      - name: Validate blind evidence
+        run: |
+          python3 - <<'PY'
+          import json
+          d=json.load(open("blind-test.json"))
+          assert d["status"] == "VERIFIED_SIMULATED"
+          assert d["source_mutated"] is False
+          assert d["physical_quantum_claim"] is False
+          assert d["photonic_claim"] is False
+          assert len(d["blind_cases"]) == 4
+          print("Blind systems path cross-test: VERIFIED_SIMULATED")
+          PY
+      - uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-blind-system-path-evidence
+          path: blind-test.json
