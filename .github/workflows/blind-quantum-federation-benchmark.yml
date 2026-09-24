@@ -1,0 +1,25 @@
+name: Biupiu Blind Quantum vs Federation Benchmark
+on:
+  push:
+    paths:
+      - scripts/Benchmark-BlindQuantumFederation.py
+      - software/rnd-os-ai/src/biupiu_ai/compute_federation.py
+      - software/rnd-os-ai/src/biupiu_ai/quantum_federation.py
+      - research/BIUPIU-BLIND-BENCHMARK-QUANTUM-VS-FEDERATION-20260924.json
+      - .github/workflows/blind-quantum-federation-benchmark.yml
+  workflow_dispatch:
+jobs:
+  benchmark:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - uses: actions/setup-python@v5
+        with: {python-version: "3.12"}
+      - name: Run blind benchmark
+        env: {PYTHONPATH: software/rnd-os-ai/src}
+        run: python scripts/Benchmark-BlindQuantumFederation.py
+      - name: Upload raw benchmark evidence
+        uses: actions/upload-artifact@v4
+        with:
+          name: biupiu-blind-quantum-federation-20260924
+          path: research/BIUPIU-BLIND-BENCHMARK-QUANTUM-VS-FEDERATION-RESULT-20260924.json
