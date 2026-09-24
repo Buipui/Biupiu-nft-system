@@ -1,3 +1,14 @@
+## 2026-09-24 — Digital Orchestra + Federation + Digital Twin Deep Harvest
+
+- Extended the Digital Orchestra evidence envelope for parent-task lineage, canonical authority, schema/validation state, provenance, source commit, build/test state, rollback and payload hashing.
+- Registered Federation F26 Digital Twin composition, F27 Digital Twin VVUQ, and F28 adaptive heterogeneous execution.
+- Cross-referenced Digital Twin knowledge through 2026-09-23 with ISO 23247 and current NIST Digital Twin interoperability/composition/VVUQ reference material.
+- Added machine-readable evidence: `research/evidence/BIUPIU-FEDERATION-ORCHESTRA-DT-HARVEST-20260924.json`.
+- Added deep harvest record: `research/BIUPIU-DEEP-ORCHESTRA-FEDERATION-DIGITAL-TWIN-HARVEST-20260924.md`.
+- Updated Orchestra architecture, orchestration matrix, Federation changelog/baseline, system cross-link digest and Native System Master Index.
+- External material remains reference/pattern/adapter knowledge until independent provenance, licence, security, compatibility, build, smoke, regression and human-promotion evidence exists.
+- Runtime/CI/device/hardware verification remains separate and unclaimed.
+
 # 2026-09-22 — Android/AOSP + Automotive Federation Expansion
 
 ### External harvest
