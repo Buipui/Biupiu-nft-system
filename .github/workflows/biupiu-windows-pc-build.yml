@@ -1,6 +1,7 @@
 name: Biupiu Windows PC Build Verification
 
 on:
+  pull_request:
   push:
     branches:
       - pc/foreign-language-harvest-integration-20260924
