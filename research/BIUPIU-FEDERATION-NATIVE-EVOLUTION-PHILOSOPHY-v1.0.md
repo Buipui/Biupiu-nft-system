@@ -81,3 +81,17 @@ Native AI may research, compare, generate proposals, optimise models, produce te
 Strengthen the core coding substrate so later designs can be produced faster because the system already contains reusable mathematics, physics, geometry, material models, simulation primitives, ML capabilities, contracts, provenance and verified failure knowledge.
 
 This is an architectural objective, not a claim that every scientific or runtime capability is already verified.
+
+
+## DigiCat + DigiFile cross-reference — 2026-09-24
+
+DigiCat is the catalogue/index role for capabilities, systems, interfaces, dependencies, Digital Twin relationships and Quantum AI relevance.
+
+DigiFile is the evidence/filing role mapped to DMS and `software/digital-filing-cabinet/`, preserving provenance, source version/commit, validation, regression, failure, release and rollback lineage.
+
+Core OS/DMS remains authoritative. Federation routes/contracts and reconciles. Digital Twin models context/state. Quantum AI remains simulator/classical-baseline first. DigiCat indexes these relationships; DigiFile records their evidence.
+
+Cross-system rule:
+DigiCat DISCOVER → Intelligence CLASSIFY/PROPOSE → Federation ROUTE → Core/DMS VALIDATE → DigiFile RECORD → Twin/Quantum SIMULATE → REGRESSION → LEARN → DigiCat UPDATE.
+
+No catalogue entry, evidence file, federation observation, Digital Twin simulation or quantum result independently grants promotion authority.
