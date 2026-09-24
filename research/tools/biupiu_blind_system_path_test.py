@@ -53,3 +53,5 @@ def main():
 
 if __name__=="__main__":
  print(json.dumps(main(),indent=2,sort_keys=True))
+
+# CI trigger: deterministic blind cross-test retained as non-production simulator evidence.
