@@ -1,0 +1,56 @@
+{
+  "schema": "biupiu.system-family-native-audit.v1",
+  "date": "2026-09-24",
+  "repository": "Buipui/Biupiu-nft-system",
+  "baseline_ref": "ad1a04a7cb6ccb3981ab1dbb422e40acbfc53fc4",
+  "scope": [
+    "apps/android",
+    "mini-os",
+    "mini-os/android",
+    "smart-farming/android",
+    "software/rnd-os-mobile",
+    "apps/windows"
+  ],
+  "result": "PRELIMINARY SOURCE AUDIT",
+  "findings": [
+    {
+      "id": "STD-001",
+      "finding": "DigiCat/DigiFile/Learning are already defined centrally in the repository architecture and native system catalogue.",
+      "status": "SOURCE_INTEGRATED"
+    },
+    {
+      "id": "STD-002",
+      "finding": "The searched application/system trees do not currently expose direct DigiCat/DigiFile/Learning implementation files under each family path.",
+      "status": "INTEGRATION_REQUIRED"
+    },
+    {
+      "id": "STD-003",
+      "finding": "Central learning implementations exist under intelligence/ and software/rnd-os-ai/ and are governed by Core/DMS promotion boundaries.",
+      "status": "IMPLEMENTED_SOURCE"
+    },
+    {
+      "id": "STD-004",
+      "finding": "DigiCat and DigiFile are currently registered as catalogue/evidence roles rather than per-application duplicated implementations.",
+      "status": "ARCHITECTURALLY_VALID"
+    },
+    {
+      "id": "STD-005",
+      "finding": "Runtime/build evidence remains open for Android and other system families; source presence must not be promoted to runtime verification.",
+      "status": "OPEN"
+    },
+    {
+      "id": "STD-006",
+      "finding": "A common benchmark contract is required before comparing AS-IS functionality and full native integration performance.",
+      "status": "REQUIRED"
+    }
+  ],
+  "next_gate": [
+    "complete recursive semantic/module/adapter audit",
+    "map every application to canonical DigiCat/DigiFile/Learning interfaces",
+    "identify missing native bridges/adapters",
+    "run common functionality smoke/integration matrix",
+    "run available CI/build evidence",
+    "only then create AS-IS functionality tree and full-integration performance tree"
+  ],
+  "mutation_policy": "No application source rename/merge/delete in this audit stage."
+}
